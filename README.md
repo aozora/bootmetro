@@ -11,3 +11,8 @@ The framework integrate and extend the work first done by other great people:
    - HTML5 Boilerplate 
    - Twitter Bootstrap v2.0.3
    - Metro UI CSS v 1.0.1 by Sergey Pimenov
+
+
+
+**Beta version will be released soon, please be patient.**
+
