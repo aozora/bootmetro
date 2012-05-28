@@ -17,19 +17,21 @@ The framework integrate and extend the work first done by other great people:
 **Beta version will be released soon, please be patient.**
 
 
-Metro UI Guidelines
-   - UX guidelines for Metro style apps                    http://msdn.microsoft.com/en-us/library/windows/apps/hh465424
-   
-   - Navigation design for Metro style apps             http://msdn.microsoft.com/en-us/library/windows/apps/hh761500
-   
-   - Guidelines and checklist for search                http://msdn.microsoft.com/en-us/library/windows/apps/hh465233
+### Metro UI Guidelines
 
-   - Commanding design for Metro style apps             http://msdn.microsoft.com/en-us/library/windows/apps/hh761499
+* [UX guidelines for Metro style apps](http://msdn.microsoft.com/en-us/library/windows/apps/hh465424)
 
-   - Guidelines and checklist for text and typography   http://msdn.microsoft.com/en-us/library/windows/apps/hh700394
+* [Navigation design for Metro style apps](http://msdn.microsoft.com/en-us/library/windows/apps/hh761500)
+
+* [Guidelines and checklist for search](http://msdn.microsoft.com/en-us/library/windows/apps/hh465233)
+
+* [Commanding design for Metro style apps](http://msdn.microsoft.com/en-us/library/windows/apps/hh761499)
+
+* [Guidelines and checklist for text and typography](http://msdn.microsoft.com/en-us/library/windows/apps/hh700394)
+
+* [Choosing the right UI surfaces](http://msdn.microsoft.com/en-us/library/windows/apps/hh465304(v=VS.85).aspx/)
+
+* [Choosing a tile template](http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx)
    
-   - Choosing the right UI surfaces                     http://msdn.microsoft.com/en-us/library/windows/apps/hh465304(v=VS.85).aspx/
-   
-   - Tile image sizes                                   http://msdn.microsoft.com/en-us/library/windows/apps/hh781198.aspx
-   
-   - Choosing a tile template                           http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx
+* [Tile image sizes](http://msdn.microsoft.com/en-us/library/windows/apps/hh781198.aspx)
+
