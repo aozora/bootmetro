@@ -22,8 +22,9 @@ Typographic color definitions.
 html,
 body {
     color: #888;
-    background-color: rgb(255, 255, 255);
+    background-color: #F1F1F1;
 }
+
 .win-type-interactive:hover {
     color: rgb(50, 154, 163);
 }
@@ -256,6 +257,23 @@ input[type=file] {
     color: transparent;
 }
 
+
+
+/*
+Headers colors.
+*/
+.accent-color,
+header h1,
+header h2,
+table th {color: #24A0DA;}
+.accent-bg {background:#24A0DA;}
+
+a#user-info h3,
+a#user-info h4 { color: rgb(0, 130, 135); }
+a#user-info:hover { background-color: rgb(0, 130, 135); }
+a#user-info:hover h3,
+a#user-info:hover h4 { color: rgb(255, 255, 255); }
+
 /*
 Link colors.
 */
@@ -272,10 +290,10 @@ Link colors.
     color: rgba(255, 255, 255, 0.4);
 }
 a {
-    color: rgb(0, 130, 135);
+    color: #24A0DA;
 }
 a:hover {
-    color: rgb(50, 154, 163);
+    color: #24D2FF;
 }
 a:hover:active {
     color: rgb(37, 187, 196);
@@ -283,6 +301,7 @@ a:hover:active {
 a[disabled], a[disabled]:active { /* :disabled pseudo-class doesn't apply to a, even though disabled attribute stops navigation */
     color: rgba(0, 0, 0, 0.4);
 }
+
 
 /*
 Option for select control (all colors are same for both light and dark).
@@ -396,16 +415,16 @@ progress {
     background-color: rgba(0, 0, 0, 0.19);
     color: rgb(0, 130, 135);
 }
-progress::-ms-fill {
-    background-color: currentColor;
-}
+/*progress::-ms-fill {*/
+    /*background-color: currentColor;*/
+/*}*/
 /* 
 Explicitly define indeterminate for dark and light because expanded rule ".win-ui-light progress"
 has higher specificity than "progress:indeterminate".
 */
-.win-ui-dark progress:indeterminate, progress:indeterminate {
-    background-color: transparent;
-}
+/*.win-ui-dark progress:indeterminate, progress:indeterminate {*/
+    /*background-color: transparent;*/
+/*}*/
 
 /*
 FlipView control colors.
@@ -522,6 +541,7 @@ Back button control colors.
 .win-backbutton:hover {
     background-color: rgba(0, 0, 0, 0.13);
     border-color: rgb(0, 0, 0);
+   color: rgb(0, 0, 0);
    text-decoration: none;
 }
 .win-backbutton:hover:active {

@@ -83,7 +83,11 @@
  */
 .metro {
    overflow: hidden;
-   width: 940px;
+   /*width: 940px;*/
+}
+
+.metro-sections-container {
+
 }
 .metro-sections {
    width: 10000px !important;
@@ -94,12 +98,18 @@
    height: auto;
    position: relative;
    overflow: hidden;
-   width: 100%;
+   /*width: 100%;*/
+   width: auto;
 }
 
 .metro-section {
    width: 810px !important;
 }
+   .metro-sections h2 {
+      font-family: "Segoe UI",Arial,Helvetica,Sans-Serif;
+      font-weight: 100;
+      text-transform: lowercase;
+   }
 
 .metro .metro-sections .metro-section {
    float: left;
@@ -108,6 +118,7 @@
    width: 960px;
    position: relative;
 }
+
 .metro .metro-sections .metro-section .next-section {
    position: absolute;
    top: 0px;

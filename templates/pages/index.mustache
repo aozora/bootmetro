@@ -1,169 +1,172 @@
-<header id="nav-bar" class="container">
-   <h1>Application Name</h1>
-   {{>loggeduser}}
+<header id="nav-bar" class="container-fluid">
+   <div class="row-fluid">
+      <div class="span12">
+         <h1>Application Name</h1>
+         {{>loggeduser}}
+      </div>
+   </div>
 </header>
 
 
-<div class="container">
+<div class="container-fluid">
+   <div class="row-fluid">
+      <div class="metro span12">
+         <div class="metro-sections">
 
-   <div  class="metro metro-theme-light">
+            <div class="metro-section" id="section1">
 
-      <div class="metro-sections">
+               <a data-next="#section2" data-prior="#section1" href="#" class="next-section"></a>
 
-         <div class="metro-section" id="section1">
+               <h2>Dashboard</h2>
 
-            <a data-next="#section2" data-prior="#section1" href="#" class="next-section"></a>
+               <a class="tile bg-color-orange" href="./appbar-demo.html">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Desktop alt.png" />
+                  </div>
+                  <span class="tile-label">DEMO APP-BAR</span>
+               </a>
 
-            <h2>Dashboard</h2>
+               <a class="tile tile-double bg-color-green" href="./table-simple.html">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Microsoft Store.png" />
+                  </div>
+                  <span class="tile-label">DEMO SIMPLE TABLE </span>
+               </a>
 
-            <a class="tile bg-color-orange" href="./appbar-demo.html">
-               <div class="tile-icon-large">
-                  <img src="content/img/Desktop alt.png" />
-               </div>
-               <span class="tile-label">DEMO APP-BAR</span>
-            </a>
+               <a class="tile tile-double bg-color-green" href="./table-filtered.html">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Microsoft Store.png" />
+                  </div>
+                  <span class="tile-label">DEMO TABLE FILTERED</span>
+               </a>
 
-            <a class="tile tile-double bg-color-green" href="./table-simple.html">
-               <div class="tile-icon-large">
-                  <img src="content/img/Microsoft Store.png" />
-               </div>
-               <span class="tile-label">DEMO SIMPLE TABLE </span>
-            </a>
+               <a class="tile bg-color-blueDark" href="./tiles-templates.html">
+                  <div class="tile-icon-large">
+                     <img src="content/img/metro-tiles.jpg" />
+                  </div>
+                  <span class="tile-label">TILE TEMPLATES</span>
+               </a>
 
-            <a class="tile tile-double bg-color-green" href="./table-filtered.html">
-               <div class="tile-icon-large">
-                  <img src="content/img/Microsoft Store.png" />
-               </div>
-               <span class="tile-label">DEMO TABLE FILTERED</span>
-            </a>
-
-            <a class="tile bg-color-blueDark" href="./tiles-templates.html">
-               <div class="tile-icon-large">
-                  <img src="content/img/metro-tiles.jpg" />
-               </div>
-               <span class="tile-label">TILE TEMPLATES</span>
-            </a>
-
-            <div class="tile tile-double bg-color-blue">
-               <div class="tile-content-main">
-                  <div style="padding: 10px;">
-                     <img class="place-left" style="height: 96px; margin-right: 20px" src="content/img/Notifications.png" />
-                     <div style="margin-left: 115px; margin-top: 10px">
-                        <p style="font-size: 36px; margin-top: 0px;">12</p>
-                        <p style="font-size: 18px; margin-top: 0px;">Documenti da approvare</p>
-                        <p style="font-size: 12px; margin-top: 5px">lorem ipsum</p>
+               <div class="tile tile-double bg-color-blue">
+                  <div class="tile-content-main">
+                     <div style="padding: 10px;">
+                        <img class="place-left" style="height: 96px; margin-right: 20px" src="content/img/Notifications.png" />
+                        <div style="margin-left: 115px; margin-top: 10px">
+                           <p style="font-size: 36px; margin-top: 0px;">12</p>
+                           <p style="font-size: 18px; margin-top: 0px;">Documenti da approvare</p>
+                           <p style="font-size: 12px; margin-top: 5px">lorem ipsum</p>
+                        </div>
                      </div>
                   </div>
+                  <span class="tile-label">NOTIFICATIONS</span>
                </div>
-               <span class="tile-label">NOTIFICATIONS</span>
-            </div>
 
-            <div class="tile tile-double tile-multi-content">
-               <div class="tile-content-main">
-                  <div style="padding: 10px;">
-                     <img src="content/img/Sunny.png" style="height: 96px; margin-right: 20px" class="place-left"/>
-                     <div style="margin-left: 115px; margin-top: 10px">
-                        <p style="font-size: 36px; margin-top: 0px;">12&#186;</p>
-                        <p style="font-size: 18px; margin-top: 0px;">Milano, Italia</p>
-                        <p style="font-size: 12px; margin-top: 5px">Soleggiato</p>
+               <div class="tile tile-double tile-multi-content">
+                  <div class="tile-content-main">
+                     <div style="padding: 10px;">
+                        <img src="content/img/Sunny.png" style="height: 96px; margin-right: 20px" class="place-left"/>
+                        <div style="margin-left: 115px; margin-top: 10px">
+                           <p style="font-size: 36px; margin-top: 0px;">12&#186;</p>
+                           <p style="font-size: 18px; margin-top: 0px;">Milano, Italia</p>
+                           <p style="font-size: 12px; margin-top: 5px">Soleggiato</p>
+                        </div>
                      </div>
+                     <span class="tile-label">Meteo</span>
                   </div>
-                  <span class="tile-label">Meteo</span>
-               </div>
-               <div class="tile-content-sub bg-color-blueDark">
-                  Ehi! What a surprise!
-               </div>
-            </div>
-
-         </div>
-
-         <div class="metro-section" id="section2">
-
-            <a data-next="#section3" data-prior="#section2" href="#" class="next-section"></a>
-
-            <h2>Bootstrap Metro</h2>
-
-            <a class="tile tile-double bg-color-blue" href="./bootstrap-scaffolding.html">
-               <div class="tile-content-main">
-                  <div style="padding: 10px;">
-                     <img class="place-left" style="height: 96px; margin-right: 20px" src="content/img/My Apps.png" />
-                     <div style="margin-left: 115px; margin-top: 10px">
-                        <p style="font-size: 18px; margin-top: 0px;">Grid system</p>
-                        <p style="font-size: 18px; margin-top: 0px;">Layouts</p>
-                        <p style="font-size: 18px; margin-top: 5px">Responsive design</p>
-                     </div>
+                  <div class="tile-content-sub bg-color-blueDark">
+                     Ehi! What a surprise!
                   </div>
                </div>
-               <span class="tile-label"><strong>SCAFFOLDING</strong></span>
-            </a>
 
-            <a class="tile tile-double bg-color-blue" href="./bootstrap-base-css.html">
-               <div class="tile-content-main">
-                  <div style="padding: 10px;">
-                     <img class="place-left" style="height: 96px; margin-right: 20px" src="content/img/Coding app.png" />
-                     <div style="margin-left: 115px; margin-top: 10px">
-                        <p style="font-size: 18px; margin-top: 0px;">Typography</p>
-                        <p style="font-size: 18px; margin-top: 0px;">Tables</p>
-                        <p style="font-size: 18px; margin-top: 5px">Forms &amp; Buttons</p>
+            </div>
+
+            <div class="metro-section" id="section2">
+
+               <a data-next="#section3" data-prior="#section2" href="#" class="next-section"></a>
+
+               <h2>Bootstrap Metro</h2>
+
+               <a class="tile tile-double bg-color-blue" href="./bootstrap-scaffolding.html">
+                  <div class="tile-content-main">
+                     <div style="padding: 10px;">
+                        <img class="place-left" style="height: 96px; margin-right: 20px" src="content/img/My Apps.png" />
+                        <div style="margin-left: 115px; margin-top: 10px">
+                           <p style="font-size: 18px; margin-top: 0px;">Grid system</p>
+                           <p style="font-size: 18px; margin-top: 0px;">Layouts</p>
+                           <p style="font-size: 18px; margin-top: 5px">Responsive design</p>
+                        </div>
                      </div>
                   </div>
-               </div>
-               <span class="tile-label"><strong>BASE CSS</strong></span>
-            </a>
+                  <span class="tile-label"><strong>SCAFFOLDING</strong></span>
+               </a>
 
-            <a class="tile bg-color-orange" href="./bootstrap-components.html">
-               <div class="tile-icon-large">
-                  <img src="content/img/RegEdit.png" />
-               </div>
-               <span class="tile-label"><strong>COMPONENTS</strong></span>
-            </a>
+               <a class="tile tile-double bg-color-blue" href="./bootstrap-base-css.html">
+                  <div class="tile-content-main">
+                     <div style="padding: 10px;">
+                        <img class="place-left" style="height: 96px; margin-right: 20px" src="content/img/Coding app.png" />
+                        <div style="margin-left: 115px; margin-top: 10px">
+                           <p style="font-size: 18px; margin-top: 0px;">Typography</p>
+                           <p style="font-size: 18px; margin-top: 0px;">Tables</p>
+                           <p style="font-size: 18px; margin-top: 5px">Forms &amp; Buttons</p>
+                        </div>
+                     </div>
+                  </div>
+                  <span class="tile-label"><strong>BASE CSS</strong></span>
+               </a>
 
-            <a class="tile bg-color-orange" href="./bootstrap-javascript.html">
-               <div class="tile-icon-large">
-                  <img src="content/img/Devices.png" />
-               </div>
-               <span class="tile-label"><strong>JAVASCRIPT</strong></span>
-            </a>
+               <a class="tile bg-color-orange" href="./bootstrap-components.html">
+                  <div class="tile-icon-large">
+                     <img src="content/img/RegEdit.png" />
+                  </div>
+                  <span class="tile-label"><strong>COMPONENTS</strong></span>
+               </a>
 
-         </div>
+               <a class="tile bg-color-orange" href="./bootstrap-javascript.html">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Devices.png" />
+                  </div>
+                  <span class="tile-label"><strong>JAVASCRIPT</strong></span>
+               </a>
 
-         <div class="metro-section" id="section3">
-            <h2>Category 3</h2>
-            <div class="tile tile-double bg-color-blue">
-               <div class="tile-icon-large">
-                  <img src="content/img/Live%20SkyDrive.png" />
-               </div>
-               <span class="tile-label">Live SkyDrive</span>
             </div>
-            <div class="tile bg-color-blueDark">
-               <div class="tile-icon-large">
-                  <img src="content/img/Bluetooth.png" />
+
+            <div class="metro-section" id="section3">
+               <h2>Category 3</h2>
+               <div class="tile tile-double bg-color-blue">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Live%20SkyDrive.png" />
+                  </div>
+                  <span class="tile-label">Live SkyDrive</span>
                </div>
-               <span class="tile-label">Bluetooth</span>
-            </div>
-            <div class="tile bg-color-red">
-               <div class="tile-icon-large">
-                  <img src="content/img/Control%20Panel.png" />
+               <div class="tile bg-color-blueDark">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Bluetooth.png" />
+                  </div>
+                  <span class="tile-label">Bluetooth</span>
                </div>
-               <span class="tile-label">Control Panel</span>
-            </div>
-            <div class="tile bg-color-green">
-               <div class="tile-icon-large">
-                  <img src="content/img/Signal.png" />
+               <div class="tile bg-color-red">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Control%20Panel.png" />
+                  </div>
+                  <span class="tile-label">Control Panel</span>
                </div>
-               <span class="tile-label">WiFi Settings</span>
-            </div>
-            <div class="tile bg-color-yellow">
-               <div class="tile-icon-large">
-                  <img src="content/img/Computer%20alt%202.png" />
+               <div class="tile bg-color-green">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Signal.png" />
+                  </div>
+                  <span class="tile-label">WiFi Settings</span>
                </div>
-               <span class="tile-label">My Computer</span>
+               <div class="tile bg-color-yellow">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Computer%20alt%202.png" />
+                  </div>
+                  <span class="tile-label">My Computer</span>
+               </div>
             </div>
+
          </div>
       </div>
-
    </div>
-
 </div>
 
 

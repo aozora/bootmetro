@@ -1,0 +1,289 @@
+/*!
+ * Bootstrap Metro
+ *
+ * This stylesheet contains only rules to customize the default appearence of Bootstrap,
+ * like navbar, dropdowns, etc...
+ *
+ * Must be referenced after bootstrap.css & bootstrap-responsive.css
+ *
+ */
+@font-face {
+   font-family: "Segoe UI";
+   font-weight: 200;
+   src: url('../font/segoeui.ttf') format('truetype');
+}
+@font-face {
+   font-family: "Segoe UI";
+   font-weight: 300;
+   src: url('../font/segoeuisl.ttf') format('truetype');
+}
+@font-face {
+   font-family: "Segoe UI";
+   font-weight: 400;
+   src: url('../font/segoeui.ttf') format('truetype');
+}
+@font-face {
+   font-family: "Segoe UI";
+   font-weight: 600;
+   src: url('../font/seguisb.ttf') format('truetype');
+}
+@font-face {
+   font-family: "Segoe UI";
+   font-weight: 700;
+   src: url('../font/segoeuib.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Segoe UI Symbol';
+   src: url('../font/seguisym.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+
+/* Body & Footer & headers
+-------------------------------------------------- */
+html {
+   background-color: #FFF;
+}
+
+body {
+   font-family: "Segoe UI Semilight",Arial,Helvetica,Sans-Serif;
+   color: #4A4A4A;
+   /*font-size: 0.65em;*/
+   font-size: 11pt;
+   font-weight: normal;
+   padding-left: 64px; /* this is to ensure space for the heder backbutton*/
+}
+
+
+footer {
+   text-align: center;
+}
+
+h1
+{
+   padding: 0;
+   margin: 0 0 10px 0;
+   font-family: "Segoe UI Light", Arial, Helvetica, Sans-Serif;
+   font-weight: normal;
+   /*font-size:350%;*/
+   font-size: 42pt;
+   line-height: 56px;
+   color: #385b69;
+   /*text-transform:lowercase;*/
+}
+h2
+{
+   padding: 0;
+   margin: 0 0 7px 0;
+   font-family: "Segoe UI Light", Arial, Helvetica, Sans-Serif;
+   /*font-size: 250%;*/
+   font-size: 20pt;
+   /*text-transform:lowercase;*/
+   font-weight: normal;
+}
+h3
+{
+   margin-top: 0px;
+   margin-bottom: 8px;
+   font-family: "Segoe UI Light", Arial, Helvetica, Sans-Serif;
+   /*font-weight: bold;*/
+   /*font-size:135%;*/
+   font-size: 20pt;
+   /*text-transform: lowercase;*/
+}
+h4
+{
+   font-family: "Segoe UI Semibold", Arial, Helvetica, Sans-Serif;
+   margin: 0;
+   padding: 0;
+   /*font-size: 135%;*/
+   font-size: 11pt;
+}
+
+
+h1, .win-type-xx-large {
+   font-size: 42pt;
+   font-weight: 200;
+   line-height: 1.1429; /* 64px when font-size is 42pt */
+}
+h2, .win-type-x-large {
+   font-size: 20pt;
+   font-weight: 200;
+   line-height: 1.2; /* 32px when font-size is 20pt */
+}
+h3, .win-type-large {
+   font-size: 11pt;
+   font-weight: 600;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+h4, .win-type-medium, code, pre, samp {
+   font-size: 11pt;
+   font-weight: 400;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+body, h5, .win-type-small, legend {
+   font-size: 11pt;
+   font-weight: 300;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+.win-type-x-small {
+   font-size: 11pt;
+   font-weight: 300;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+h6, caption, figcaption, small, .win-type-xx-small {
+   font-size: 9pt;
+   font-weight: 400;
+   line-height: 1.6667; /* 20px when font-size is 9pt */
+}
+h1, h2, h3, h4, h5, h6 {
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+
+
+
+
+a, a:link, a:visited
+{
+   color: #e28221;
+   text-decoration: none;
+}
+a:hover, a:active
+{
+   text-decoration: none;
+   color: #8e5924;
+}
+
+
+/* Navigation
+-------------------------------------------------- */
+
+
+
+/* validation fields
+-------------------------------------------------- */
+.controls .field-validation-error {
+   color: #F00;
+   font-weight: bold;
+}
+
+/* modal overrides */
+.modal .modal-body .field-validation-error {
+   display: block;
+   color: #F00;
+   font-weight: bold;
+}
+.modal { max-height: 600px; }
+   
+.modal-backdrop, .modal-backdrop.fade.in {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+
+/* Forms
+-------------------------------------------------- */
+
+input,
+textarea {
+   background: #d2d2d2;
+   border: 2px #d2d2d2 solid;
+   color: #646464;
+   border-radius: 0;
+   font-size: 11pt;
+   padding: 5px 8px;
+}
+
+input:focus,
+textarea:focus {
+   background: #fff;
+   border-color: #fff;
+   color: #000;
+   outline: 0;
+}
+
+
+
+
+.btn {
+   display: inline-block;
+   position: relative;
+   text-decoration: none;
+   border: 2px #e2e2e2 solid;
+   padding: 5px 20px;
+   margin: 10px 10px 0 10px;
+   color: #fff !important;
+   background: #1d1d1d;
+   cursor: pointer;
+   min-width: 50px;
+   text-align: center;
+   border-radius: 0;
+   background: #cccccc;
+   border-color: #cccccc;
+   color: #1d1d1d !important;
+   font-size: 11px;
+
+   *zoom: 1;
+   -webkit-box-shadow: 0;
+   -moz-box-shadow: 0;
+   box-shadow: 0;
+}
+
+.btn:hover {
+   background: #d8d8d8;
+   border-color: #d8d8d8;
+}
+
+.btn-primary {
+   background: #008287;
+   border-color: #008287;
+   color: #fff !important;
+}
+.btn-primary:active {
+   background: #fff;
+}
+.btn-primary:hover {
+   background: #219297;
+   border-color: #219297;
+   color: #fff !important;
+}
+
+.btn:active {
+   background: #ffffff;
+   color: #1d1d1d !important;
+   top: 2px;
+   left: 2px;
+}
+
+.btn.disabled,
+.btn[disabled] {
+   border-color: #777777;
+   color: #777777 !important;
+   cursor: default;
+   background: #1d1d1d !important;
+   opacity: 1;
+   filter: alpha(opacity=100);
+}
+
+
+
+/* Tables
+-------------------------------------------------- */
+.table thead {
+   border-bottom: 1px solid #BEBEBE;
+}
+
+.table th {
+   font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;
+   font-size: 9pt;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+.table th, .table td {
+   border-top: 0;
+
+}

@@ -1,12 +1,10 @@
 <!-- Header
 ================================================== -->
-<header id="nav-bar" class="container">
-   <div class="row">
-      <div class="span1 align-right">
-         <a id="backbutton" class="win-backbutton" href="./index.html"></a>
-      </div>
+<header id="nav-bar" class="container-fluid">
+   <div class="row-fluid">
       <div class="span8">
          <div id="header-container">
+            <a id="backbutton" class="win-backbutton" href="./index.html"></a>
             <h5>Application Name</h5>
             <div class="dropdown">
                <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
@@ -17,22 +15,19 @@
             </div>
          </div>
       </div>
-      <div class="span3">
-         {{>loggeduser}}
-      </div>
+      {{>loggeduser}}
    </div>
 </header>
 
-<div class="container">
-   <div class="row">
-      <div class="span1">&nbsp;</div>
-      <div class="span10">
+<div class="container-fluid">
+   <div class="row-fluid">
+      <div class="span12">
 
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
          <br/>
 
-         <div class="row">
-            <div class="span10">
+         <div class="row-fluid">
+            <div class="span12">
             <table class="table table-condensed">
                <thead>
                <tr>

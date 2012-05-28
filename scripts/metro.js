@@ -51,10 +51,10 @@
             /* for a better antialiasing */
 
             if(el.css('box-shadow')=='none') el.css({'box-shadow':'0 0 1px transparent'});
-            el.parent().css({'-webkit-perspective':el.outerWidth()*20});
-            el.parent().css({'-o-perspective':el.outerWidth()*20});
-            el.parent().css({'-moz-perspective':el.outerWidth()*20});
-            el.parent().css({'-ms-perspective':el.outerWidth()*20});
+//            el.parent().css({'-webkit-perspective':el.outerWidth()*20});
+//            el.parent().css({'-o-perspective':el.outerWidth()*20});
+//            el.parent().css({'-moz-perspective':el.outerWidth()*20});
+//            el.parent().css({'-ms-perspective':el.outerWidth()*20});
 
 //            el.mousedown(function(e){
 //

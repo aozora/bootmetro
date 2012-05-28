@@ -50,7 +50,6 @@ body {
    font-weight: normal;
 }
 
-
 .clearfix:after {
    content: ".";
    display: block;
@@ -70,6 +69,12 @@ html[xmlns] .clearfix {
    height: 1%;
 }
 
+
+
+.container-fluid {
+   padding-left: 70px;
+   padding-right: 70px;
+}
 
 
 /* General alignment styles
@@ -568,6 +573,9 @@ AppBar/Flyout z-index values:
 Back button.
 */
 .win-backbutton {
+   position: absolute;
+   left: 10px;
+   top: 8px;
    display: inline-block;
    min-width: 0;
    min-height: 0;
@@ -1774,10 +1782,6 @@ header h1 {display: inline;}
 
 
 #user-info {
-   position: absolute;
-   top: 0;
-   right: 0;
-   padding: 0 8px 4px 4px;
 }
 .user-info-block {
    display: block;

@@ -1,12 +1,10 @@
 <!-- Header
 ================================================== -->
-<header id="nav-bar" class="container">
-   <div class="row">
-      <div class="span1 align-right">
-         <a id="backbutton" class="win-backbutton" href="./tiles-templates.html"></a>
-      </div>
+<header id="nav-bar" class="container-fluid">
+   <div class="row-fluid">
       <div class="span8">
          <div id="header-container">
+            <a id="backbutton" class="win-backbutton" href="./index.html"></a>
             <h5>Application Name</h5>
             <div class="dropdown">
                <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
@@ -17,14 +15,11 @@
             </div>
          </div>
       </div>
-      <div class="span3">
-         {{>loggeduser}}
-      </div>
+      {{>loggeduser}}
    </div>
 </header>
 
-
-<div class="container">
+<div class="container-fluid">
    <div class="subnav">
       <ul class="nav nav-pills">
          <li><a href="#textonly">{{_i}}Wide Text Only Tiles{{/i}}</a></li>
@@ -34,18 +29,17 @@
    </div>
 </div>
 
-<div class="container metro">
-   <div class="row">
-      <div class="span1">&nbsp;</div>
-      <div class="span10">
+<div class="container-fluid metro">
+   <div class="row-fluid">
+      <div class="span12">
 
          <table id="textonly" class="table">
             <caption><h3>Wide Text Only Tiles</h3></caption>
             <thead>
                <tr>
-                  <th class="span2">Template Name</th>
-                  <th class="span4">Description</th>
-                  <th class="span4">Tile</th>
+                  <th>Template Name</th>
+                  <th>Description</th>
+                  <th>Tile</th>
                </tr>
                </thead>
                <tbody>
@@ -242,9 +236,9 @@
             <caption><h3>Wide Image Only Tiles</h3></caption>
             <thead>
             <tr>
-               <th class="span2">Template Name</th>
-               <th class="span4">Description</th>
-               <th class="span4">Tile</th>
+               <th>Template Name</th>
+               <th>Description</th>
+               <th>Tile</th>
             </tr>
             </thead>
             <tbody>
@@ -280,9 +274,9 @@
             <caption><h3>Wide image-and-text templates</h3></caption>
             <thead>
             <tr>
-               <th class="span2">Template Name</th>
-               <th class="span4">Description</th>
-               <th class="span4">Tile</th>
+               <th>Template Name</th>
+               <th>Description</th>
+               <th>Tile</th>
             </tr>
             </thead>
             <tbody>
@@ -328,6 +322,5 @@
          </table>
 
       </div>
-      <div class="span1">&nbsp;</div>
    </div>
 </div>

@@ -1,9 +1,22 @@
 <!-- Header
 ================================================== -->
-<header id="nav-bar" class="container">
-   <a id="backbutton" class="win-backbutton" href="./index.html"></a>
-   <h1>{{_i}}Components{{/i}}</h1>
-   {{>loggeduser}}
+<header id="nav-bar" class="container-fluid">
+   <div class="row-fluid">
+      <div class="span8">
+         <div id="header-container">
+            <a id="backbutton" class="win-backbutton" href="./index.html"></a>
+            <h5>Bootstrap</h5>
+            <div class="dropdown">
+               <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
+                  {{_i}}Components{{/i}}
+                  <b class="caret" href="#"></b>
+               </a>
+               {{>headermenu}}
+            </div>
+         </div>
+      </div>
+      {{>loggeduser}}
+   </div>
 </header>
 
 <div class="container">
