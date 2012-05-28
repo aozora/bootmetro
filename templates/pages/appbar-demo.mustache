@@ -1,0 +1,147 @@
+<!-- Header
+================================================== -->
+<header id="nav-bar" class="container">
+   <div class="row">
+      <div class="span1 align-right">
+         <a id="backbutton" class="win-backbutton" href="./index.html"></a>
+      </div>
+      <div class="span8">
+         <div id="header-container">
+            <h5>Application Name</h5>
+            <div class="dropdown">
+               <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
+                  {{_i}}ApplicationBar Demo{{/i}}
+                  <b class="caret" href="#"></b>
+               </a>
+               {{>headermenu}}
+            </div>
+         </div>
+      </div>
+      <div class="span3">
+         {{>loggeduser}}
+      </div>
+   </div>
+</header>
+
+
+<div class="container">
+   <div class="row">
+      <div class="span1">&nbsp;</div>
+      <div class="span10">
+
+         <h6>This page show a full Application Bar stacked on the bottom of the page with plenty of commands.</h6>
+         <br />
+
+         <form class="">
+            <label for="appbar-theme-select">Change ApplicationBar theme:</label>
+            <select id="appbar-theme-select" class="">
+               <option value="win-ui-light">Light</option>
+               <option value="win-ui-dark">Dark</option>
+            </select>
+         </form>
+
+      </div>
+      <div class="span1">&nbsp;</div>
+   </div>
+</div>
+
+
+<footer class="win-commandlayout navbar-fixed-bottom">
+   <div class="container">
+      <div class="row">
+         <div class="span6 align-left">
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE10F;</span>
+               <span class="win-label">Home</span>
+            </button>
+
+            <hr class="win-command" />
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE109;</span>
+               <span class="win-label">Aggiungi</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE105;</span>
+               <span class="win-label">Salva</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE117;</span>
+               <span class="win-label">Ricarica</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE10B;</span>
+               <span class="win-label">Conferma</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE10A;</span>
+               <span class="win-label">Annulla</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE112;</span>
+               <span class="win-label">Precedente</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE111;</span>
+               <span class="win-label">Successivo</span>
+            </button>
+
+         </div>
+
+         <div class="span6 align-right">
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE115;</span>
+               <span class="win-label">Impostazioni</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE118;</span>
+               <span class="win-label">Download</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE11C;</span>
+               <span class="win-label">Upload</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE119;</span>
+               <span class="win-label">Invia Email</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE11A;</span>
+               <span class="win-label">Cerca</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE107;</span>
+               <span class="win-label">Elimina</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE188;</span>
+               <span class="win-label">Cartelle</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE13D;</span>
+               <span class="win-label">Utente</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE125;</span>
+               <span class="win-label">Gruppi</span>
+            </button>
+         </div>
+      </div>
+   </div>
+</footer>

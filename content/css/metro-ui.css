@@ -1,0 +1,1910 @@
+/* Common css rules for metro-ui-light & metro-ui-dark */
+
+/* Font Face for Windows 8 Fonts
+-------------------------------------------------- */
+@font-face {
+   font-family: "Segoe UI";
+   font-weight: 200;
+   src: url('../font/segoeui.ttf') format('truetype');
+}
+@font-face {
+   font-family: "Segoe UI";
+   font-weight: 300;
+   src: url('../font/segoeuisl.ttf') format('truetype');
+}
+@font-face {
+   font-family: "Segoe UI";
+   font-weight: 400;
+   src: url('../font/segoeui.ttf') format('truetype');
+}
+@font-face {
+   font-family: "Segoe UI";
+   font-weight: 600;
+   src: url('../font/seguisb.ttf') format('truetype');
+}
+@font-face {
+   font-family: "Segoe UI";
+   font-weight: 700;
+   src: url('../font/segoeuib.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Segoe UI Symbol';
+   src: url('../font/seguisym.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+
+/* Body & Footer & headers
+-------------------------------------------------- */
+html {
+   background-color: #FFF;
+}
+
+body {
+   padding-top: 24px;
+   position: relative;
+   font-family: "Segoe UI Semilight",Arial,Helvetica,Sans-Serif;
+   /*font-family: Segoe UI, Tahoma, Arial, Verdana, sans-serif;*/
+   font-size: 11px;
+   font-weight: normal;
+}
+
+
+.clearfix:after {
+   content: ".";
+   display: block;
+   clear: both;
+   visibility: hidden;
+   line-height: 0;
+   height: 0;
+}
+.clearfix {
+   display: inline-block;
+   zoom: 1;
+}
+html[xmlns] .clearfix {
+   display: block;
+}
+* html .clearfix {
+   height: 1%;
+}
+
+
+
+/* General alignment styles
+-------------------------------------------------- */
+/*.text-left {*/
+   /*text-align: left;*/
+/*}*/
+/*.text-right {*/
+   /*text-align: right;*/
+/*}*/
+/*.text-center {*/
+   /*text-align: center;*/
+/*}*/
+/*.text-justify {*/
+   /*text-align: justify;*/
+/*}*/
+.align-right {text-align: right}
+.align-left {text-align: left}
+.align-center {text-align: center}
+
+td.align-right {text-align: right}
+td.align-left {text-align: left}
+td.align-center {text-align: center}
+
+
+
+/* Weight and size definitions for typographic classes and elements.
+-------------------------------------------------- */
+h1, .win-type-xx-large {
+   font-weight: 200;
+   font-size: 40px;
+   line-height: 48px;
+   /*font-size: 42pt;*/
+   /*line-height: 1.1429; *//* 64px when font-size is 42pt */
+}
+h2, .win-type-x-large {
+   font-weight: 200;
+   font-size: 26px;
+   line-height: 34px;
+   /*font-size: 20pt;*/
+   /*line-height: 1.2; *//* 32px when font-size is 20pt */
+}
+h3, .win-type-large {
+   font-weight: 600;
+   font-size: 20px;
+   line-height: 26px;
+   /*font-size: 11pt;*/
+   /*line-height: 1.3636; *//* 20px when font-size is 11pt */
+}
+h4, .win-type-medium /*, code, pre, samp*/ {
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 20px;
+   /*font-size: 11pt;*/
+   /*line-height: 1.3636; *//* 20px when font-size is 11pt */
+}
+body, h5, .win-type-small, legend {
+   font-weight: 300;
+   font-size: 13px;
+   line-height: 20px;
+   /*font-size: 11pt;*/
+   /*line-height: 1.3636; *//* 20px when font-size is 11pt */
+}
+.win-type-x-small {
+   font-weight: 300;
+   font-size: 11pt;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+h6, caption, figcaption, small, .win-type-xx-small {
+   font-weight: 400;
+   font-size: 11px;
+   line-height: 11px;
+   /*font-size: 9pt;*/
+   /*line-height: 1.6667; *//* 20px when font-size is 9pt */
+}
+h1, h2, h3, h4, h5, h6 {
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+/* This is the header H2 with a dropdown for the page menu */
+a.header-dropdown {
+   font-size: 26px;
+   font-weight: 200;
+   line-height: 34px;
+   text-decoration: none;
+}
+   #header-container .dropdown-menu .divider {
+      background-color: #717171;
+   }
+
+.win-type-ellipsis {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+h1.win-type-ellipsis, .win-type-xx-large.win-type-ellipsis {
+   line-height: 1.4286; /* 80px when font-size is 42pt */
+}
+h2.win-type-ellipsis, .win-type-x-large.win-type-ellipsis {
+   line-height: 1.5; /* 40px when font-size is 20pt */
+}
+
+dt, th {
+   font-size: 15px;
+   font-weight: 700;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+
+abbr, acronym, address, blockquote, cite, dl, dd, li, ol, p, q, td, tr {
+   font-weight: 300;
+}
+
+b, strong {
+   font-weight: 700;
+}
+
+em {
+   font-style: italic;
+}
+
+p {
+   font-family: "Segoe UI Semilight",Arial,Helvetica,Sans-Serif;
+}
+
+
+
+/* Additional letter-spacing for the document and its controls.
+-------------------------------------------------- */
+
+body,
+button, input,
+textarea, .win-textarea,
+select, option {
+   letter-spacing: 0.02em;
+}
+
+input, button, select, textarea {
+   font-family: "Segoe UI Semilight",Arial,Helvetica,Sans-Serif;
+   /*font-size: 11px;*/
+   height: 28px;
+   line-height: 30px;
+
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+}
+
+/*
+Text input controls.
+*/
+textarea, .win-textarea {
+   width: 260px;
+   height: 39px;
+   padding: 4px 8px;
+   overflow-y: scroll;
+   word-wrap: break-word;
+}
+input[type=text], input[type=password], input[type=email], input[type=number],
+input[type=tel], input[type=url], input[type=search], textarea, .win-textarea {
+   /*width: 276px;*/
+   /*min-height: 28px;*/
+   min-height: 22px; /* AGS */
+   min-width: 64px;
+   margin: 0;
+   padding: 0;
+   border-width: 2px;
+   border-style: solid;
+   background-clip: padding-box;
+   /*font-size: 11pt;*/
+   font-weight: 400;
+   /*line-height: 1.3636; *//* 20px when font-size is 11pt */
+   line-height: 15px; /* AGS */
+}
+input::-ms-value {
+   margin: 4px 8px;
+}
+input::-ms-clear, input::-ms-reveal {
+   display: inline-block;
+   margin-left: 2px;
+}
+
+.input-prepend .add-on, .input-append .add-on {
+   height: 16px;
+   line-height: 15px;
+}
+.input-prepend .add-on:first-child,
+.input-prepend .btn:first-child {
+   border-style: solid;
+   border-width: 2px;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+.input-append .add-on:last-child,
+.input-append .btn:last-child {
+   border-style: solid;
+   border-width: 2px;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+.input-append .btn {
+   height: 28px;
+   min-height: 28px;
+}
+
+
+/*
+Button control.
+*/
+button, input[type=button], input[type=reset], input[type=submit] {
+   min-height: 32px; /* content (20px) + padding + border */
+   min-width: 90px;
+   padding: 4px 8px;
+   margin-bottom: 0;
+   border-width: 2px;
+   border-style: solid;
+   background-clip: padding-box;
+   /*font-size: 11pt;*/
+   font-weight: 600;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+
+/*
+File upload control.
+*/
+input[type=file] {
+   /*border: none;*/
+   min-width: 100px;
+   min-height: 20px;
+   width: 340px;
+   height: 32px;
+   padding: 0;
+   margin: 7px 8px 21px 8px;
+   background-clip: padding-box;
+}
+input[type=file]::-ms-value {
+   margin: 0;
+   border-width: 2px;
+   border-style: solid;
+   border-right-style: none;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   background-clip: padding-box;
+   /*font-size: 11pt;*/
+   font-weight: 400;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+input[type=file]::-ms-browse {
+   margin: 0;
+   padding: 0 18px;
+   border-width: 2px;
+   border-style: solid;
+   background-clip: padding-box;
+   /*font-size: 11pt;*/
+   font-weight: 600;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+
+/*
+No underline or special cursor on links.
+*/
+a {
+   text-decoration: none;
+   /*cursor: default;*/
+}
+
+/*
+No border on images when in a link.
+*/
+img {
+   border-style: none;
+}
+
+/*
+Select control.
+*/
+select {
+   padding: 2px;
+   min-height: 24px;
+   min-width: 80px;
+   border-width: 2px;
+   border-style: solid;
+   background-clip: padding-box;
+   /*margin: 4px 0;*/
+   /*font-size: 11pt;*/
+   /*font-weight: 400;*/
+   /*line-height: 1.3636; *//* 20px when font-size is 11pt */
+}
+select::-ms-value {
+   padding: 4px 8px;
+   margin: 0;
+}
+select::-ms-expand {
+   border: 0;
+   padding-left: 6px;
+   padding-right: 6px;
+   background-color: transparent;
+}
+
+/*
+Radio button and checkbox shared styles.
+*/
+input::-ms-check {
+   border-width: 2px;
+   border-style: solid;
+   display: inline-block;
+   background-clip: padding-box;
+}
+
+/*
+Radio button.
+input[type=radio] {
+   width: 23px;
+   height: 23px;
+   margin-left: -1px;
+   margin-right: 3px;
+   margin-bottom: -2px;
+}
+*/
+
+/*
+Checkbox.
+input[type=checkbox] {
+   width: 21px;
+   height: 21px;
+   margin-right: 5px;
+}
+*/
+
+/*
+Range control.
+*/
+input[type=range] {
+   width: 280px;
+   height: auto;
+   padding: 17px 0 32px 0;
+}
+input[type=range]::-ms-track {
+   padding: 0;
+   width: auto;
+   height: 11px;
+   border-style: none;
+   color: transparent; /* ticks hidden by default */
+}
+input[type=range]::-ms-thumb {
+   width: 11px;
+   height: 11px;
+   border-style: none;
+}
+input[type=range]::-ms-ticks-before, input[type=range]::-ms-ticks-after {
+   width: 100%;
+   height: 5px;
+   display: none;
+}
+input[type=range]:disabled::-ms-fill-lower {
+   margin-right: 5px;
+}
+input[type=range]:disabled::-ms-fill-upper {
+   margin-left: 6px;
+}
+
+/*
+Vertical range control.
+*/
+input[type=range].win-vertical {
+   width: auto;
+   height: 191px;
+   padding: 0 17px;
+   writing-mode: bt-lr;
+}
+input[type=range].win-vertical::-ms-track {
+   width: 11px;
+   height: auto;
+}
+input[type=range].win-vertical:disabled::-ms-fill-lower {
+   margin-right: 0;
+   margin-top: 6px;
+}
+input[type=range].win-vertical:disabled::-ms-fill-upper {
+   margin-left: 0;
+   margin-bottom: 5px;
+}
+
+input[type=range].win-vertical::-ms-ticks-before,
+input[type=range].win-vertical::-ms-ticks-after {
+   width: 5px;
+   height: 100%;
+   display: none;
+}
+
+/*
+Progress control.
+progress {
+   width: 180px;
+   height: 6px;
+   border-style: none;
+}
+progress.win-medium {
+   width: 280px;
+}
+progress.win-large {
+   width: 100%;
+}
+progress::-ms-fill {
+   border-style: none;
+}
+progress:indeterminate {
+   height: 4px;
+   padding: 1px 0;  Indeterminate dots should be 4px tall, but overall control stays 6px.
+}
+@-ms-keyframes win-progress-fade-out {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+progress.win-paused:not(:indeterminate) {
+   -ms-animation-name: win-progress-fade-out;
+   -ms-animation-duration: 3s;
+   -ms-animation-timing-function: cubic-bezier(0.03, 0.76, 0.31, 1.0);
+   opacity: 0.5;
+}
+progress.win-error::-ms-fill {
+   background-color: transparent;
+}
+progress.win-ring:indeterminate::-ms-fill {
+   -ms-animation-name: -ms-ring;
+}
+progress.win-ring {
+   width: 20px;
+   height: 20px;
+}
+progress.win-medium.win-ring {
+   width: 40px;
+   height: 40px;
+}
+progress.win-large.win-ring {
+   width: 60px;
+   height: 60px;
+}
+*/
+
+/*form {*/
+   /*margin: 0;*/
+   /*padding: 0;*/
+/*}*/
+/*legend {*/
+   /*margin: 0 0 10px 0;*/
+   /*padding: 0;*/
+   /*color: inherit;*/
+/*}*/
+
+
+
+
+/*
+AppBar/Flyout z-index values:
+    1000 - AppBar/settings click-eating div
+    1001 - AppBar
+    1002 - Flyout click-eating div
+    1003 - Flyout
+*/
+.win-appbarclickeater {
+   z-index: 1000;
+   opacity: 0;
+   background-color: Purple;
+   display: none;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+   position: fixed;
+}
+.win-flyoutmenuclickeater {
+   z-index: 1002;
+   opacity: 0;
+   background-color: Purple;
+   display: none;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+   position: fixed;
+}
+
+
+
+/*
+Back button.
+*/
+.win-backbutton {
+   display: inline-block;
+   min-width: 0;
+   min-height: 0;
+   background-clip: border-box;
+   box-sizing: border-box;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+   border-width: 2px;
+   border-style: solid;
+   padding: 0;
+   text-align: center;
+
+   /* Normal sizing. */
+   width: 38px;
+   height: 38px;
+   font-size: 20px;
+   line-height: 35px; /* line-height must match the content box height. */
+   vertical-align: baseline;
+}
+/*.win-backbutton:hover, .win-backbutton:hover:active {*/
+   /*border-width: 2px;*/
+   /*border-style: solid;*/
+   /*border-radius: 50%;*/
+/*}*/
+.win-backbutton::before {
+   font-family: "Segoe UI Symbol";
+   font-weight: normal;
+   content: "\E0D5";
+   vertical-align: 24%;
+}
+.win-backbutton:disabled, .win-backbutton:disabled:active {
+   background-clip: padding-box;
+   visibility: hidden;
+}
+
+
+
+/*
+Command buttons.
+*/
+button.win-command {
+   background: none;
+   height: auto; /* height is 88px (label) or 68px (no label) */
+   padding: 12px 0; /* bottom dependent on label/img, 2px margin */
+   margin: 2px; /* allow room for focus */
+   border: 0;
+   min-width: 40px;
+   text-align: center;
+   font-size: 9pt;
+   line-height: 16px;
+   font-weight: normal;
+
+   /* Commands are lrtb */
+   writing-mode: lr-tb;
+}
+
+button.win-command:focus {
+   outline: 2px solid;
+}
+
+button.win-hidefocus:focus {
+   outline: none;
+}
+
+
+
+/*
+Command button icons.
+*/
+.win-commandicon {
+   display: inline-block;
+   margin: 0 28px; /* padding for command buttons, 2px/side for focus */
+   min-width: 0;
+   min-height: 0;
+   padding: 0;
+
+   /* Normal sizing */
+   width: 40px;
+   height: 40px;
+   box-sizing: border-box;
+   cursor: default;
+}
+.win-commandimage {
+   /* Default font for glyphs. */
+   font-family: "Segoe UI Symbol";
+   letter-spacing: 0;
+
+   /* Applications provide their own content, like &#xE0D5;. */
+   vertical-align: middle;
+   font-size: 14pt;
+   margin: -2px;
+   line-height: 40px; /* line-height must match the content box height */
+   background-position: 0 0;
+   /*background-origin: border-box;*/
+   display: inline-block;
+   /* Still 40px */
+   width: 40px;
+   height: 40px;
+   background-size: 160px 80px;
+}
+
+/*
+Offsets for sprite versions.
+*/
+button:hover .win-commandimage, button:active .win-commandimage {
+   background-position: -40px 0;
+}
+button:hover:active .win-commandimage {
+   background-position: -80px 0;
+}
+button:disabled .win-commandimage,
+button:disabled:active .win-commandimage {
+   background-position: -120px 0;
+}
+
+/*
+Offsets for sprite versions in selected state.
+*/
+button[aria-selected=true] .win-commandimage {
+   background-position: 0 -40px;
+}
+button[aria-selected=true]:hover .win-commandimage,
+button[aria-selected=true]:active .win-commandimage {
+   background-position: -40px -40px;
+}
+button[aria-selected=true]:hover:active .win-commandimage {
+   background-position: -80px -40px;
+}
+button[aria-selected=true]:disabled .win-commandimage,
+button[aria-selected=true]:disabled:active .win-commandimage {
+   background-position: -120px -40px;
+}
+
+/*
+Command button "ring".
+*/
+.win-commandring,
+button:hover .win-commandring,
+button:active .win-commandring,
+button.win-command:disabled .win-commandring,
+button.win-command:disabled:active .win-commandring {
+   border-width: 2px;
+   border-style: solid;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+   background-clip: border-box;
+}
+button:hover:active .win-commandring,
+button[aria-selected=true] .win-commandring,
+button[aria-selected=true]:active .win-commandring,
+button[aria-selected=true]:disabled .win-commandring,
+button[aria-selected=true]:disabled:active .win-commandring {
+   background-clip: border-box;
+}
+
+/*
+Command button labels.
+*/
+button.win-command .win-label {
+   position: relative;
+   line-height: 20px;
+   display: block;
+   max-width: 88px; /* 100px button, but allow for 2px margins and 4px padding on each side */
+   padding-left: 4px;  /* 12px between buttons, 6px per side, minus 2px margins */
+   padding-right: 4px;
+   overflow: hidden;
+   top: 1px;
+   -ms-hyphens: auto;
+}
+
+/*
+AppBarCommand separator.
+*/
+hr.win-command {
+   display: inline-block;
+   padding: 0;
+   margin: 14px 29px 34px 30px;
+   width: 1px;
+   height: 40px;
+   border: 0;
+   vertical-align: top;
+
+   /* Same color in both light and dark. */
+   background-color: rgb(112, 112, 112);
+}
+
+/*
+AppBar Edgy Container
+*/
+.win-appbar {
+   z-index: 1001;
+   border-width: 0;
+   width: 100%;
+   height: auto;
+   left: 0;
+   position: fixed;
+}
+
+/*
+AppBar control.
+*/
+.win-commandlayout {
+   /*text-align: right;*/
+   padding-left: 10px;
+   /*padding-right: calc(((100% + 5px) mod 20px) + 5px);*/
+   /*width: calc(100% - 10px - (((100% + 5px) mod 20px) + 5px));*/
+
+   /* Hide whitespace between buttons. */
+   font-size: 0;
+
+   min-height: 88px;
+}
+.win-commandlayout .win-selection {
+   float: left;
+}
+
+
+/* Narrow buttons and no labels when < 1024px. */
+@media (max-width: 1023px) {
+   button.win-command .win-label {
+      display: none;
+   }
+   button.win-command .win-commandicon {
+      margin: 0 8px; /* 2px margin for focus */
+   }
+   .win-commandlayout {
+      min-height: 68px;
+   }
+   hr.win-command {
+      margin-bottom: 14px;
+   }
+}
+
+
+/*
+Flyout control.
+*/
+.win-flyout {
+   z-index: 1003;
+   position: fixed;
+   padding: 25px 20px 20px 20px;
+   border-style: solid;
+   border-width: 2px;
+   margin: 5px;
+   min-width: 30px; /* 70px - padding = 30px */
+   -ms-hyphens: auto;
+   min-height: 9px; /* 54px - padding = 9px */
+   max-width: 470px; /* 510px - padding = 470px */
+   /*max-height: calc(100% - 55px); *//* 768px - margin - padding = 713px */
+   overflow: auto;
+   font-size: 11pt;
+   font-weight: 400;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+.win-flyout.win-leftalign {
+   margin-left: 0;
+}
+.win-flyout.win-rightalign {
+   margin-right: 0;
+}
+.win-flyout.win-scrolls {
+   overflow: auto;
+}
+
+
+
+/*
+Menu control.
+*/
+.win-menu {
+   padding: 5px 0 7px 0;
+   line-height: 33px;
+   text-align: left; /* Set explicitly in case our parent has different alignment, like appbar overflow. */
+}
+
+/*
+Menu commands.
+*/
+.win-menu button.win-command {
+   display: block;
+   border: none;
+   padding: 0 16px;
+   margin-left: 0;
+   margin-right: 0;
+   line-height: 33px;
+   float: none;
+   background-color: transparent;
+   text-align: left;
+   font-size: 11pt;
+   width: 100%;
+}
+.win-menu button.win-command:focus {
+   outline: none;
+}
+.win-menu hr.win-command {
+   display: block;
+   height: 1px;
+   width: auto;
+   border: 0;
+
+   /* Same in both light and dark themes */
+   background-color: rgb(112, 112, 112);
+
+   padding: 0;
+   margin: 11px 16px 8px 16px;
+}
+
+/*
+Menu toggle buttons.
+*/
+.win-menu-toggle button.win-command::before {
+   font-family: 'Segoe UI Symbol';
+   content: "\E0E7\2003";
+   visibility: hidden;
+   letter-spacing: 0;
+}
+.win-menu-toggle button[aria-selected=true].win-command::before {
+   /* Display a checkbox if aria-selected is set */
+   visibility: visible;
+}
+
+
+
+/*
+Settings Pane
+*/
+.win-settingsflyout {
+   z-index: 1001;  /* Same as appbar so flyouts can show above it */
+   border-left-style: solid;
+   border-left-width: 2px;
+   position: fixed;
+   top: 0;
+   right: 0;
+   height: 100%;
+   width: 346px; /* 350px - border (4px) */
+}
+.win-settingsflyout.win-wide {
+   width: 646px; /* 650px - border (4px) */
+}
+.win-settingsflyout .win-header {
+   padding-left: 40px;
+   padding-right: 40px;
+   padding-top: 32px;
+   height: 48px;
+}
+/* Settings back button is slightly smaller. */
+.win-settingsflyout .win-backbutton {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   font-size: 8pt;
+   line-height: 26px;
+   margin-top: 3px;
+}
+.win-settingsflyout .win-header .win-label {
+   display: inline-block;
+   padding-left: 40px;
+   font-size: 20pt;
+   line-height: 33px;
+}
+.win-settingsflyout .win-content {
+   overflow: auto;
+   padding-left: 40px;
+   padding-right: 40px;
+   /*height: calc(100% - 112px);*/
+}
+.win-settingsflyout .win-label {
+   font-size: 20pt;
+   font-weight: 200;
+   line-height: normal;
+}
+
+
+
+
+/*
+Rating control.
+*/
+.win-rating {
+   display: -ms-inline-box;
+   height: auto;
+   width: auto;
+   -ms-box-align: stretch;
+   -ms-box-pack: center;
+   -ms-touch-action: none;
+}
+
+.win-rating .win-star {
+   -ms-box-flex: 1;
+   height: 28px;
+   width: 28px;
+   padding: 0 6px;
+   font-family: "Segoe UI Symbol";
+   font-size: 28px;
+   overflow: hidden;
+   text-indent: 0;
+   line-height: 1;
+   cursor: default;
+}
+.win-rating.win-small .win-star {
+   width: 14px;
+   height: 14px;
+   font-size: 14px;
+   padding: 0 3px;
+}
+.win-rating .win-star:before {
+   content: "\E082";
+}
+.win-rating .win-star.win-disabled {
+   cursor: default;
+}
+
+
+
+/*
+DatePicker control.
+*/
+.win-datepicker {
+   display: -ms-inline-box;
+   height: auto;
+   width: auto;
+}
+.win-datepicker .win-datepicker-month {
+   margin-right: 20px;
+}
+.win-datepicker .win-datepicker-date.win-order0,
+.win-datepicker .win-datepicker-date.win-order1 {
+   margin-right: 20px;
+}
+.win-datepicker .win-datepicker-year.win-order0 {
+   margin-right: 20px;
+}
+
+/*
+TimePicker control.
+*/
+.win-timepicker {
+   display: -ms-inline-box;
+   height: auto;
+   width: auto;
+}
+.win-timepicker select {
+   padding-left: 2px;
+}
+.win-timepicker .win-timepicker-hour {
+   margin-right: 20px;
+}
+.win-timepicker .win-timepicker-period.win-order0 {
+   margin-right: 20px;
+}
+.win-timepicker .win-timepicker-minute.win-order1 {
+   margin-right: 20px;
+}
+
+/*
+Toggle control.
+*/
+.win-toggleswitch {
+   padding: 0;
+   background-color: transparent;
+   vertical-align: top;
+   margin: 0;
+   display: block;
+}
+.win-toggleswitch .win-switch {
+   display: inline-block;
+   height: 19px;
+   width: 50px;
+   padding: 5px;
+   margin: 0;
+   background-color: transparent;
+}
+.win-toggleswitch .win-switch::-ms-tooltip {
+   display: none;
+}
+.win-toggleswitch .win-switch::-ms-ticks-before,
+.win-toggleswitch .win-switch::-ms-ticks-after {
+   display: none;
+}
+.win-toggleswitch .win-switch::-ms-track {
+   height: 15px; /* 19px - 2px borders */
+   width: 46px;
+   padding: 0;
+   margin: 0;
+   border-width: 2px;
+   border-style: solid;
+}
+.win-toggleswitch .win-switch::-ms-fill-lower,
+.win-toggleswitch .win-switch::-ms-fill-upper {
+   height: 13px; /* 19px - 2px borders - 1px margins */
+   padding: 0;
+}
+.win-toggleswitch .win-switch::-ms-fill-lower {
+   margin-left: 1px;
+}
+.win-toggleswitch .win-switch::-ms-fill-upper {
+   margin-right: 1px;
+}
+.win-toggleswitch .win-switch::-ms-thumb {
+   height: 19px;
+   width: 12px;
+}
+.win-toggleswitch .win-title {
+   display: block;
+   vertical-align: top;
+   max-width:470px;
+   font-size: 11pt;
+   font-weight: 300;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+.win-toggleswitch .win-label {
+   display: inline-block;
+   width: 125px;
+   vertical-align: top;
+   padding: 5px 20px 5px 0px;
+   min-width:65px;
+   font-size: 11pt;
+   font-weight: 600;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+
+/*
+Tooltip control.
+*/
+.win-tooltip {
+   display: block;
+   position: fixed;
+   top: 30px;
+   left: 30px;
+   max-width: 30em;
+   margin: 0;
+   padding: 7px 12px 8px 12px;
+   border-style: solid;
+   border-width: 2px;
+   z-index: 9999;
+   word-wrap: break-word;
+   -ms-animation-fill-mode: both;
+}
+.win-tooltip-phantom {
+   display: block;
+   position: fixed;
+   top: 30px;
+   left: 30px;
+   background-color: transparent;
+   border-width: 0;
+   margin: 0;
+   padding: 0;
+}
+
+.win-viewbox {
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+
+.win-semanticzoom {
+   height: 400px;
+   -ms-touch-action: none;
+}
+.win-semanticzoomactive * {
+   -ms-touch-action: inherit;
+}
+
+/*
+ScrollView control.
+*/
+.win-scrollview {
+   overflow-x: auto;
+   overflow-y: hidden;
+   height: 400px;
+   width: 100%;
+}
+
+/*
+ListView control.
+*/
+.win-listview {
+   overflow: hidden;
+   height: 400px;
+}
+.win-listview .win-surface {
+   position: relative;
+   overflow: visible;
+   width: 100%;
+   height: 100%;
+}
+.win-listview > .win-viewport {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   z-index: 0;
+}
+.win-listview > .win-viewport.win-horizontal {
+   overflow-x: auto;
+   overflow-y: hidden;
+}
+.win-listview > .win-viewport.win-vertical {
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+.win-listview > .win-horizontal .win-container {
+   margin: 4px;
+}
+.win-listview > .win-vertical .win-container {
+   margin: 4px 24px 4px 7px;
+}
+.win-listview.win-rtl > .win-vertical .win-container {
+   margin: 4px 7px 4px 24px;
+}
+.win-listview .win-container {
+   cursor: default;
+   position: absolute;
+}
+.win-swipeable .win-container {
+   -ms-touch-action: none;
+}
+.win-interactive {
+   -ms-touch-action: auto;
+}
+.win-listview .win-item {
+   /* Used to place above .win-selectionbackground in ListView */
+   z-index: 1;
+}
+.win-listview .win-item,
+.win-dragimage .win-item {
+   overflow: hidden;
+   position: absolute;
+}
+.win-listview > .win-vertical .win-item
+{
+   /* Allow flex box to fill win-item in list layout */
+   width: 100%;
+}
+.win-listview .win-item:focus {
+   outline-style: none;
+}
+.win-listview .win-focusedoutline {
+   /*width: calc(100% + 4px);*/
+   /*height: calc(100% + 4px);*/
+   left: -2px;
+   top: -2px;
+   position: absolute;
+   z-index: 5;
+}
+.win-dragimage {
+   opacity: 0.8;
+   overflow: hidden;
+}
+.win-dragoverlay {
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+}
+.win-dragcount {
+   position: absolute;
+   margin: 12px;
+   padding: 0;
+   vertical-align: top;
+   font-size: 42pt;
+   font-weight: 200;
+   line-height: 26pt;
+}
+.win-container.win-selected .win-selectionborder {
+   border-width: 4px;
+   border-style: solid;
+}
+.win-container.win-selected:hover .win-selectionborder {
+   border-width: 4px;
+   border-style: solid;
+}
+.win-listview .win-groupheader {
+   position: absolute;
+   top: 0;
+   padding: 10px 10px 10px 2px;
+   cursor: default;
+   overflow: hidden;
+   margin-left: 70px;
+   font-size: 20pt;
+   font-weight: 200;
+   line-height: 1.2; /* 32px when font-size is 20pt */
+}
+.win-listview.win-rtl .win-groupheader {
+   margin-left: 0;
+   margin-right: 70px;
+   padding-left: 10px;
+   padding-right: 2px;
+}
+.win-listview.win-groups > .win-horizontal .win-surface {
+   margin-left: -70px;
+}
+.win-listview.win-groups.win-rtl > .win-horizontal .win-surface {
+   margin-left: 0;
+   margin-right: -70px;
+}
+.win-surface ._win-proxy {
+   position: absolute;
+   width: 0;
+   height: 0;
+   -ms-touch-action: none;
+}
+.win-selectionborder {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 2;
+}
+.win-selectionbackground {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   /* Used to place behind .win-item in the ListView */
+   z-index: 0;
+}
+.win-selectioncheckmarkbackground {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 0;
+   height: 0;
+   margin: 0;
+   padding: 0;
+   border-width: 20px;
+   border-style: solid;
+   z-index: 3;
+}
+.win-rtl .win-selectioncheckmarkbackground {
+   left: 0;
+   right: auto;
+}
+.win-selectioncheckmark {
+   position: absolute;
+   margin: 0;
+   padding: 2px;
+   right: 0;
+   top: 0;
+   font-family: Segoe UI Symbol;
+   font-size: 11pt;
+   z-index: 4;
+}
+.win-rtl .win-selectioncheckmark {
+   left: 0;
+   right: auto;
+}
+.win-selectionhint {
+   position: absolute;
+   margin: 0;
+   padding: 2px;
+   right: 0;
+   font-family: Segoe UI Symbol;
+   font-size: 11pt;
+   opacity: 0.5;
+}
+.win-selectionhint.win-revealed {
+   opacity: 1;
+}
+.win-rtl .win-selectionhint {
+   left: 0;
+   right: auto;
+}
+.win-listview .win-progress {
+   left: 50%;
+   top: 50%;
+   width: 60px;
+   height: 60px;
+   margin-left: -30px;
+   margin-top: -30px;
+   z-index: 1;
+   position: absolute;
+}
+.win-listview .win-progress::-ms-fill {
+   -ms-animation-name: -ms-ring;
+}
+
+/*
+FlipView control.
+*/
+.win-flipview {
+   overflow: hidden;
+}
+.win-flipview .win-navleft {
+   left: 0%;
+   top: 50%;
+   margin-top: -19px;
+}
+.win-flipview .win-navright {
+   left: 100%;
+   top: 50%;
+   margin-left: -69px;
+   margin-top: -19px;
+}
+.win-flipview .win-navtop {
+   left: 50%;
+   top: 0%;
+   margin-left: -35px;
+}
+.win-flipview .win-navbottom {
+   left: 50%;
+   top: 100%;
+   margin-left: -35px;
+   margin-top: -39px;
+}
+.win-flipview .win-navbutton {
+   border: none;
+   width: 69px;
+   height: 39px;
+   z-index: 1;
+   position: absolute;
+   font-family: "Segoe UI Symbol";
+   font-size: 16pt;
+   padding: 0;
+   min-width: 0;
+}
+.win-flipview .win-item, .win-flipview .win-item > .win-template {
+   display:-ms-box;
+   height: 100%;
+   width: 100%;
+   -ms-box-align:middle;
+   -ms-box-pack:center;
+}
+
+
+
+
+/* ***********************************************************************
+         Custom Styles
+   *********************************************************************** */
+
+/* Modal
+-------------------------------------------------- */
+.modal {
+   border-style: solid;
+   border-width: 2px;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  /*-webkit-box-shadow: none;*/
+     /*-moz-box-shadow: none;*/
+          /*box-shadow: none;*/
+}
+   .modal-footer {
+      background-color: transparent;
+   }
+
+
+/* Buttons overrides
+-------------------------------------------------- */
+.btn-large {
+   font-size: 15px;
+   line-height: 18px;
+   padding: 6px 14px;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+.btn-small {
+   line-height: 16px;
+   min-height: 20px;
+   padding: 3px 9px;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-warning,
+.btn-warning:hover,
+.btn-danger,
+.btn-danger:hover,
+.btn-success,
+.btn-success:hover,
+.btn-info,
+.btn-info:hover,
+.btn-inverse,
+.btn-inverse:hover {
+   text-shadow: none;
+}
+
+
+
+/* ButtonGroup
+-------------------------------------------------- */
+.btn-group > .btn:first-child,
+.btn-group > .btn:last-child,
+.btn-group > .dropdown-toggle {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+}
+
+.btn-group > .dropdown-toggle {
+   min-width: 20px;
+   padding-bottom: 5px;
+}
+
+
+/* DropDown Caret
+-------------------------------------------------- */
+.caret {
+   border: 0;
+   margin: 0;
+   min-width: 14px;
+   min-height: 18px;
+   padding: 0 3px;
+   font-family: "Segoe UI Symbol";
+   font-size: inherit;
+   line-height: 1;
+   text-indent: 0;
+   cursor: default;
+   opacity: 1;
+   filter: alpha(opacity=100);
+   overflow: hidden;
+   cursor: pointer;
+}
+.caret:after {
+   content: "\E099";
+}
+
+a.header-dropdown .caret {
+   font-size: 26px;
+   font-weight: 200;
+   line-height: 34px;
+   width: auto;
+   height: 26px;
+}
+
+
+.dropdown .caret {
+   margin: 0;
+}
+
+.dropdown:hover .caret,
+.open .caret {
+   opacity: 0.6;
+   filter: alpha(opacity=60);
+}
+
+
+.btn .caret {
+   margin: 0;
+}
+
+.btn-mini .caret {
+   margin-top: 5px;
+}
+
+.btn-small .caret {
+   margin: 0;
+}
+
+.btn-large .caret {
+   margin: 0;
+   border: 0;
+}
+
+.dropup .caret, .navbar-fixed-bottom .dropdown .caret {
+   content: "";
+   border: 0;
+}
+.dropup .btn-large .caret {
+   border: 0;
+}
+.dropup .caret:after {
+   content: "\E098";
+}
+
+.btn-primary .caret,
+.btn-warning .caret,
+.btn-danger .caret,
+.btn-info .caret,
+.btn-success .caret,
+.btn-inverse .caret {
+   border: 0;
+   /*opacity: 0.75;*/
+   /*filter: alpha(opacity=75);*/
+}
+
+
+
+
+.nav-tabs .dropdown-toggle .caret,
+.nav-pills .dropdown-toggle .caret {
+   margin: 0;
+   border: 0;
+}
+
+.nav-tabs .dropdown-toggle:hover .caret,
+.nav-pills .dropdown-toggle:hover .caret {
+   margin: 0;
+   border: 0;
+}
+
+.nav-tabs .active .dropdown-toggle .caret,
+.nav-pills .active .dropdown-toggle .caret {
+   margin: 0;
+   border: 0;
+}
+
+.nav-pills .dropdown-menu {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+.nav li.dropdown.open .caret,
+.nav li.dropdown.open.active .caret,
+.nav li.dropdown.open a:hover .caret {
+   border: 0;
+   /*opacity: 1;*/
+   /*filter: alpha(opacity=100);*/
+}
+
+
+.navbar .nav li.dropdown .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open .caret {
+   border: 0;
+}
+
+.navbar .nav li.dropdown.active .caret {
+   /*opacity: 1;*/
+   /*filter: alpha(opacity=100);*/
+}
+
+
+/* Tabs & Pills
+-------------------------------------------------- */
+
+.tabs-below > .nav-tabs > li > a,
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a,
+.nav-tabs > li > a,
+.nav-pills > li > a {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+
+
+
+
+/* Form controls, general.
+-------------------------------------------------- */
+input, textarea, select, .uneditable-input {
+   -webkit-border-radius: none;
+   -moz-border-radius: none;
+   border-radius: 0;
+}
+
+
+/* Metro Radio button
+-------------------------------------------------- */
+.controls > .radio:first-child, .controls > .checkbox:first-child {
+   padding-top: 0;
+}
+
+label.radio,
+label.checkbox {
+   cursor: pointer;
+   position: relative;
+   padding-left: 0;
+}
+
+input[type=radio],
+input[type=radio] + span,
+input[type=radio] + span::before,
+input[type=radio] + span::after {
+   vertical-align: middle;
+   display: inline-block;
+}
+input[type=radio] {
+   position: absolute;
+   filter: alpha(opacity=0);
+   -moz-opacity: 0;
+   opacity: 0;
+}
+input[type=radio] + span {
+   font-family: "Segoe UI Symbol";
+   padding-left: 36px;
+   padding-top: 4px;
+}
+input[type=radio] + span::before {
+   content: "\2022";
+   text-indent: -9999px;
+   border: 2px solid #BABABA;
+   background: #FFF;
+   position: absolute;
+   left: 0;
+   top: 2px;
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+}
+input[type=radio]:checked + span::after {
+   text-indent: -9999px;
+   content: "\2022";
+   background: #000;
+   position: absolute;
+   left: 6px;
+   top: 8px;
+   width: 12px;
+   height: 12px;
+   z-index: 1000;
+   -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+           border-radius: 50%;
+}
+/* this set the background color for checked radio */
+/*input[type=radio]:checked + span::before {*/
+   /*background: #d1d1d1;*/
+/*}*/
+input[type=radio]:not(:checked):disabled + span::before,
+input[type=radio]:disabled + span::before,
+input[type=radio]:disabled + span::after {
+   cursor: default;
+   background: #868686;
+}
+
+
+/* Metro Checkbox
+-------------------------------------------------- */
+label.checkbox input[type=checkbox],
+label.checkbox input[type=checkbox] + span,
+label.checkbox input[type=checkbox] + span::before,
+label.checkbox input[type=checkbox] + span::after {
+   vertical-align: middle;
+   display: inline-block;
+}
+label.checkbox input[type=checkbox] {
+   position: absolute;
+   filter: alpha(opacity=0);
+   -moz-opacity: 0;
+   opacity: 0;
+}
+label.checkbox input[type=checkbox] + span {
+   font-family: "Segoe UI Symbol";
+   padding-left: 36px;
+   padding-top: 4px;
+}
+
+label.checkbox input[type=checkbox]:checked + span::after {
+   border: 2px solid #BABABA;
+   background-color: #FFF;
+   content: "\E0E7";
+   color: #202020;
+   font-size: 16px;
+   position: absolute;
+   top: 2px;
+   left: 0;
+   width: 18px;
+   height: 18px;
+   z-index: 1000;
+}
+label.checkbox input[type=checkbox] + span::after {
+   border: 2px solid #BABABA;
+   background-color: #FFF;
+   content: "\2003";
+   font-size: 16px;
+   position: absolute;
+   top: 2px;
+   left: 0;
+   width: 18px;
+   height: 18px;
+   z-index: 1000;
+}
+
+label.checkbox input[type=checkbox]:not(:checked):disabled + span::after,
+label.checkbox:hover input[type=checkbox]:disabled + span::after,
+label.checkbox input[type=checkbox]:disabled + span::after {
+   cursor: default;
+   background: #BABABA;
+}
+label.checkbox input[type=checkbox]:disabled + span::after {
+   color: #4c4c4c;
+}
+
+
+
+/* Navigation
+-------------------------------------------------- */
+
+header h1 {display: inline;}
+
+#header-container {display: inline-block;}
+
+
+#nav-bar {
+   display: block;
+   position: relative;
+   height: 64px;
+}
+
+
+#user-info {
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 0 8px 4px 4px;
+}
+.user-info-block {
+   display: block;
+   float: left;
+   margin-left: 8px;
+}
+.user-info-block img {margin-top: 8px;}
+
+
+
+
+/* Forms
+-------------------------------------------------- */
+.form-actions {
+   background-color: inherit;
+}
+
+
+.label {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   text-shadow: none;
+}
+
+
+
+/* Tables
+-------------------------------------------------- */
+.table thead {
+   border-bottom: 1px solid #BEBEBE;
+}
+
+.table th {
+   /*font-family: "Segoe UI", Arial, Helvetica, Sans-Serif;*/
+   font-size: 9pt;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+.table th, .table td {
+   border-top: 0;
+
+}
+
+
+/* Pagination
+-------------------------------------------------- */
+.pagination ul {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: 0;
+}
+.pagination li:first-child a,
+.pagination li:last-child a {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+.pagination .active a {
+   color: #FFF;
+}
+.pagination a:hover, .pagination .active a {
+   background-color: #CCC;
+}
+
+
+.pager a {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+.pager .previous a:before {
+   font-family: "Segoe UI Symbol";
+   content: "\E096\2003";
+}
+.pager .next a:after {
+   font-family: "Segoe UI Symbol";
+   content: "\2003\E097";
+}
+
+
+
+/* Content Filter Dropdown
+-------------------------------------------------- */
+#content-filters {
+   margin: 10px 0;
+}
+   #content-filters nav nav-pills {
+
+   }
+   #content-filters .nav-pills > li > a {
+      display: inline-block;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+   }
+   .nav > li > a:hover {
+      text-decoration: none;
+      background-color: inherit;
+   }
+   #content-filters .nav-pills > .active > a,
+   #content-filters .nav-pills > .active > a:hover {
+      color: inherit;
+      background-color: transparent;
+   }
+   #content-filters .nav-pills > li > span {display: inline-block;}
+
+   #content-filters div {
+      position: relative;;
+   }
+   #content-filters a {
+      font-size: 15px;
+      margin-right: 40px;
+   }
+
+
+
+
+
+
+
+

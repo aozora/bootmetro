@@ -1,0 +1,310 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+   <title>Metro</title>
+
+   <!-- Mobile viewport optimized: h5bp.com/viewport -->
+   <meta name="viewport" content="width=device-width">
+
+   <meta name="description" content=""/>
+   <meta name="author" content=""/>
+
+   <link rel="stylesheet" type="text/css" href="content/css/bootstrap.css">
+   <link rel="stylesheet" type="text/css" href="content/css/bootstrap-responsive.css">
+   <link rel="stylesheet" type="text/css" href="content/css/metro-ui.css">
+   <link rel="stylesheet" type="text/css" href="content/css/metro-tiles.css">
+   <link rel="stylesheet" type="text/css" href="content/css/charms.css">
+   <link rel="stylesheet" type="text/css" href="content/css/metro-ui-light-grey.css">
+   <!--<link rel="stylesheet" type="text/css" href="content/css/metro-accent-colors.css">-->
+   <link rel="stylesheet" type="text/css" href="content/css/bootstrap-metro-responsive.css">
+
+   <!--  these two css are to use only for documentation -->
+   <link rel="stylesheet" type="text/css" href="content/css/demo.css">
+   <link rel="stylesheet" type="text/css" href="scripts/google-code-prettify/prettify.css" >
+
+   <!-- Le fav and touch icons -->
+   <link rel="shortcut icon" href="content/ico/favicon.ico">
+   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="content/ico/apple-touch-icon-144-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="content/ico/apple-touch-icon-114-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="content/ico/apple-touch-icon-72-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" href="content/ico/apple-touch-icon-57-precomposed.png">
+  
+   <!-- All JavaScript at the bottom, except for Modernizr and Respond.
+      Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+      For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+   <script src="scripts/modernizr.min.js"></script>
+
+   <!--@RenderSection("head", false)-->
+</head>
+
+<body data-accent="blue">
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+   <header id="nav-bar" class="container">
+      <h1>Application Name</h1>
+      <a id="user-info" href="#">
+      <div class="user-info-block">
+         <h3>FirstName</h3>
+         <h4>LastName</h4>
+      </div>
+      <div class="user-info-block">
+         <img id="user-avatar" src="http://www.gravatar.com/avatar/6cc5a644d49a9bfe88bc0819ae7bdea6.png?s=32" alt="user" />
+      </div>
+   </a>
+</header>
+   
+   
+   <div class="container">
+   
+      <div  class="metro metro-theme-light">
+   
+         <div class="metro-sections">
+   
+            <div class="metro-section" id="section1">
+   
+               <a data-next="#section2" data-prior="#section1" href="#" class="next-section"></a>
+   
+               <h2>Dashboard</h2>
+   
+               <a class="tile bg-color-orange" href="./appbar-demo.html">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Desktop alt.png" />
+                  </div>
+                  <span class="tile-label">DEMO APP-BAR</span>
+               </a>
+   
+               <a class="tile tile-double bg-color-green" href="./table-simple.html">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Microsoft Store.png" />
+                  </div>
+                  <span class="tile-label">DEMO SIMPLE TABLE </span>
+               </a>
+   
+               <a class="tile tile-double bg-color-green" href="./table-filtered.html">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Microsoft Store.png" />
+                  </div>
+                  <span class="tile-label">DEMO TABLE FILTERED</span>
+               </a>
+   
+               <a class="tile bg-color-blueDark" href="./tiles-templates.html">
+                  <div class="tile-icon-large">
+                     <img src="content/img/metro-tiles.jpg" />
+                  </div>
+                  <span class="tile-label">TILE TEMPLATES</span>
+               </a>
+   
+               <div class="tile tile-double bg-color-blue">
+                  <div class="tile-content-main">
+                     <div style="padding: 10px;">
+                        <img class="place-left" style="height: 96px; margin-right: 20px" src="content/img/Notifications.png" />
+                        <div style="margin-left: 115px; margin-top: 10px">
+                           <p style="font-size: 36px; margin-top: 0px;">12</p>
+                           <p style="font-size: 18px; margin-top: 0px;">Documenti da approvare</p>
+                           <p style="font-size: 12px; margin-top: 5px">lorem ipsum</p>
+                        </div>
+                     </div>
+                  </div>
+                  <span class="tile-label">NOTIFICATIONS</span>
+               </div>
+   
+               <div class="tile tile-double tile-multi-content">
+                  <div class="tile-content-main">
+                     <div style="padding: 10px;">
+                        <img src="content/img/Sunny.png" style="height: 96px; margin-right: 20px" class="place-left"/>
+                        <div style="margin-left: 115px; margin-top: 10px">
+                           <p style="font-size: 36px; margin-top: 0px;">12&#186;</p>
+                           <p style="font-size: 18px; margin-top: 0px;">Milano, Italia</p>
+                           <p style="font-size: 12px; margin-top: 5px">Soleggiato</p>
+                        </div>
+                     </div>
+                     <span class="tile-label">Meteo</span>
+                  </div>
+                  <div class="tile-content-sub bg-color-blueDark">
+                     Ehi! What a surprise!
+                  </div>
+               </div>
+   
+            </div>
+   
+            <div class="metro-section" id="section2">
+   
+               <a data-next="#section3" data-prior="#section2" href="#" class="next-section"></a>
+   
+               <h2>Bootstrap Metro</h2>
+   
+               <a class="tile tile-double bg-color-blue" href="./bootstrap-scaffolding.html">
+                  <div class="tile-content-main">
+                     <div style="padding: 10px;">
+                        <img class="place-left" style="height: 96px; margin-right: 20px" src="content/img/My Apps.png" />
+                        <div style="margin-left: 115px; margin-top: 10px">
+                           <p style="font-size: 18px; margin-top: 0px;">Grid system</p>
+                           <p style="font-size: 18px; margin-top: 0px;">Layouts</p>
+                           <p style="font-size: 18px; margin-top: 5px">Responsive design</p>
+                        </div>
+                     </div>
+                  </div>
+                  <span class="tile-label"><strong>SCAFFOLDING</strong></span>
+               </a>
+   
+               <a class="tile tile-double bg-color-blue" href="./bootstrap-base-css.html">
+                  <div class="tile-content-main">
+                     <div style="padding: 10px;">
+                        <img class="place-left" style="height: 96px; margin-right: 20px" src="content/img/Coding app.png" />
+                        <div style="margin-left: 115px; margin-top: 10px">
+                           <p style="font-size: 18px; margin-top: 0px;">Typography</p>
+                           <p style="font-size: 18px; margin-top: 0px;">Tables</p>
+                           <p style="font-size: 18px; margin-top: 5px">Forms &amp; Buttons</p>
+                        </div>
+                     </div>
+                  </div>
+                  <span class="tile-label"><strong>BASE CSS</strong></span>
+               </a>
+   
+               <a class="tile bg-color-orange" href="./bootstrap-components.html">
+                  <div class="tile-icon-large">
+                     <img src="content/img/RegEdit.png" />
+                  </div>
+                  <span class="tile-label"><strong>COMPONENTS</strong></span>
+               </a>
+   
+               <a class="tile bg-color-orange" href="./bootstrap-javascript.html">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Devices.png" />
+                  </div>
+                  <span class="tile-label"><strong>JAVASCRIPT</strong></span>
+               </a>
+   
+            </div>
+   
+            <div class="metro-section" id="section3">
+               <h2>Category 3</h2>
+               <div class="tile tile-double bg-color-blue">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Live%20SkyDrive.png" />
+                  </div>
+                  <span class="tile-label">Live SkyDrive</span>
+               </div>
+               <div class="tile bg-color-blueDark">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Bluetooth.png" />
+                  </div>
+                  <span class="tile-label">Bluetooth</span>
+               </div>
+               <div class="tile bg-color-red">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Control%20Panel.png" />
+                  </div>
+                  <span class="tile-label">Control Panel</span>
+               </div>
+               <div class="tile bg-color-green">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Signal.png" />
+                  </div>
+                  <span class="tile-label">WiFi Settings</span>
+               </div>
+               <div class="tile bg-color-yellow">
+                  <div class="tile-icon-large">
+                     <img src="content/img/Computer%20alt%202.png" />
+                  </div>
+                  <span class="tile-label">My Computer</span>
+               </div>
+            </div>
+         </div>
+   
+      </div>
+   
+   </div>
+   
+   
+   <div id="charms" class="win-ui-dark">
+      <div id="charms-header" class="row">
+         <div class="span1 align-left">
+            <a id="close-charms" class="win-backbutton" href="#"></a>
+         </div>
+         <div class="span2">
+            <h1>Utente</h1>
+         </div>
+      </div>
+   
+      <div id="charms-body">
+         <div id="charms-user" class="span3">
+   
+            <br />
+   
+            <div class="row">
+               <div class="span2">
+                  <h3>FirstName</h3>
+                  <h4>LastName</h4>
+               </div>
+               <div class="span1">
+                  <img src="http://www.gravatar.com/avatar/6cc5a644d49a9bfe88bc0819ae7bdea6.png?s=48" alt="user" />
+               </div>
+            </div>
+   
+            <hr/>
+   
+            <div class="">
+               <form class="">
+                  <label for="hub-color-select">HUB background color:</label>
+                  <select id="hub-color-select">
+                     <option value="#FFF">Light</option>
+                     <option value="#F2F2F2">Semi Light 1</option>
+                     <option value="#F4F4F4">Semi Light 2</option>
+                     <option value="#000">Dark</option>
+                     <option value="#004050">Win8</option>
+                  </select>
+   
+                  <label for="accent-color-select">Accent Color:</label>
+                  <select id="accent-color-select">
+                     <option value="orange">Orange</option>
+                     <option value="red">Red</option>
+                     <option value="green">Green</option>
+                     <option value="blue">Blue</option>
+                     <option value="purple">Purple</option>
+                     <option value="teal">Teal</option>
+                     <option value="lime">Lime</option>
+                  </select>
+               </form>
+            </div>
+   
+         </div>
+   
+         <div id="charms-search">
+            Search:
+            <input type="text" id="charmsSearchTextbox" />
+            <ul id="searchResults">
+            </ul>
+         </div>
+   
+      </div>
+   </div>
+
+  <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write("<script src='scripts/jquery-1.7.2.min.js'>\x3C/script>")</script>
+
+   <script type="text/javascript" src="scripts/google-code-prettify/prettify.js"></script>
+   <script type="text/javascript" src="scripts/jquery.mousewheel.js"></script>
+   <script type="text/javascript" src="scripts/jquery.scrollTo.js"></script>
+   <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="scripts/metro.js"></script>
+  <script type="text/javascript" src="scripts/charms.js"></script>
+  <script type="text/javascript" src="scripts/demo.js"></script>
+
+   <script type="text/javascript">
+     $(".metro").metro();
+   </script>
+
+</body>
+</html>
