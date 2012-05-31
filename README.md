@@ -29,7 +29,7 @@ The framework integrate and extend the work first done by other great people:
 
 * [Guidelines and checklist for text and typography](http://msdn.microsoft.com/en-us/library/windows/apps/hh700394)
 
-* [Choosing the right UI surfaces](http://msdn.microsoft.com/en-us/library/windows/apps/hh465304(v=VS.85).aspx/)
+* [Choosing the right UI surfaces]( http://msdn.microsoft.com/en-us/library/windows/apps/hh465304)
 
 * [Choosing a tile template](http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx)
    
