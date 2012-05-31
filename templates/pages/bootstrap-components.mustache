@@ -1629,25 +1629,25 @@
          <h3>{{_i}}Example alerts{{/i}}</h3>
          <p>{{_i}}Wrap your message and an optional close icon in a div with simple class.{{/i}}</p>
          <div class="alert">
-           <button class="close" data-dismiss="alert">&times;</button>
+           <button class="close" data-dismiss="alert"></button>
            <strong>{{_i}}Warning!{{/i}}</strong> {{_i}}Best check yo self, you're not looking too good.{{/i}}
          </div>
    <pre class="prettyprint linenums">
    &lt;div class="alert"&gt;
-     &lt;button class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
+     &lt;button class="close" data-dismiss="alert"&gt;&lt;/button&gt;
      &lt;strong&gt;{{_i}}Warning!{{/i}}&lt;/strong&gt; {{_i}}Best check yo self, you're not looking too good.{{/i}}
    &lt;/div&gt;
    </pre>
          <p><span class="label label-info">{{_i}}Heads up!{{/i}}</span> {{_i}}iOS devices require an <code>href="#"</code> for the dismissal of alerts. Be sure to include it and the data attribute for anchor close icons. Alternatively, you may use a <code>button</code> element with the data attribute, which we have opted to do for our docs.{{/i}}</p>
          <p>{{_i}}Easily extend the standard alert message with two optional classes: <code>.alert-block</code> for more padding and text controls and <code>.alert-heading</code> for a matching heading.{{/i}}</p>
          <div class="alert alert-block">
-           <button class="close" data-dismiss="alert">&times;</button>
+           <button class="close" data-dismiss="alert"></button>
            <h4 class="alert-heading">{{_i}}Warning!{{/i}}</h4>
            <p>{{_i}}Best check yo self, you're not looking too good.{{/i}} Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
          </div>
    <pre class="prettyprint linenums">
    &lt;div class="alert alert-block"&gt;
-     &lt;a class="close" data-dismiss="alert" href="#"&gt;&times;&lt;/a&gt;
+     &lt;a class="close" data-dismiss="alert" href="#"&gt;&lt;/a&gt;
      &lt;h4 class="alert-heading"&gt;{{_i}}Warning!{{/i}}&lt;/h4&gt;
      {{_i}}Best check yo self, you're not...{{/i}}
    &lt;/div&gt;
@@ -1660,7 +1660,7 @@
        <div class="span4">
          <h3>{{_i}}Error or danger{{/i}}</h3>
          <div class="alert alert-error">
-           <button class="close" data-dismiss="alert">&times;</button>
+           <button class="close" data-dismiss="alert"></button>
            <strong>{{_i}}Oh snap!{{/i}}</strong> {{_i}}Change a few things up and try submitting again.{{/i}}
          </div>
    <pre class="prettyprint linenums">
@@ -1672,7 +1672,7 @@
        <div class="span4">
          <h3>{{_i}}Success{{/i}}</h3>
          <div class="alert alert-success">
-           <button class="close" data-dismiss="alert">&times;</button>
+           <button class="close" data-dismiss="alert"></button>
            <strong>{{_i}}Well done!{{/i}}</strong> {{_i}}You successfully read this important alert message.{{/i}}
          </div>
    <pre class="prettyprint linenums">
@@ -1684,7 +1684,7 @@
        <div class="span4">
          <h3>{{_i}}Information{{/i}}</h3>
          <div class="alert alert-info">
-           <button class="close" data-dismiss="alert">&times;</button>
+           <button class="close" data-dismiss="alert"></button>
            <strong>{{_i}}Heads up!{{/i}}</strong> {{_i}}This alert needs your attention, but it's not super important.{{/i}}
          </div>
    <pre class="prettyprint linenums">
@@ -1809,7 +1809,7 @@
        <h1>{{_i}}Miscellaneous{{/i}} <small>{{_i}}Lightweight utility components{{/i}}</small></h1>
      </div>
      <div class="row">
-       <div class="span4">
+       <div class="span6">
          <h2>{{_i}}Wells{{/i}}</h2>
          <p>{{_i}}Use the well as a simple effect on an element to give it an inset effect.{{/i}}</p>
          <div class="well">
@@ -1821,15 +1821,27 @@
    &lt;/div&gt;
    </pre>
        </div><!--/span-->
-       <div class="span4">
-         <h2>{{_i}}Close icon{{/i}}</h2>
-         <p>{{_i}}Use the generic close icon for dismissing content like modals and alerts.{{/i}}</p>
-         <p><button class="close" style="float: none;">&times;</button></p>
-   <pre class="prettyprint linenums">&lt;button class="close"&gt;&amp;times;&lt;/button&gt;</pre>
-         <p>{{_i}}iOS devices require an href="#" for click events if you rather use an anchor.{{/i}}</p>
-   <pre class="prettyprint linenums">&lt;a class="close" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
+
+
+       <div class="span6">
+         <h2>{{_i}}Loader{{/i}}</h2>
+         <p>{{_i}}This is usefull to display when running ajax request. Should be put over an overlay div like a modal.{{/i}}</p>
+         <p>
+             <div id="ui-loader" class="ui-loader">
+                <h1>Please wait...</h1>
+                <span class="ui-iconloading"></span>
+             </div>
+          </p>
+<pre class="prettyprint linenums">
+   &lt;div id="ui-loader" class="ui-loader"&gt;
+      &lt;h1&gt;Please wait...&lt;/h1&gt;
+      &lt;span class="ui-iconloading"&gt;&lt;/span&gt;
+   &lt;/div&gt;
+</pre>
        </div><!--/span-->
+
      </div><!--/row-->
+
    </section>
 
 </div>

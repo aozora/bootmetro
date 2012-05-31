@@ -832,7 +832,7 @@
            <input type="text" class="span3" placeholder="{{_i}}Type something…{{/i}}">
            <p class="help-block">{{_i}}Example block-level help text here.{{/i}}</p>
            <label class="checkbox">
-             <input type="checkbox"><span> {{_i}}Check me out{{/i}}</span>
+             <input type="checkbox"><span class="metro-checkbox"> {{_i}}Check me out{{/i}}</span>
            </label>
            <button type="submit" class="btn">{{_i}}Submit{{/i}}</button>
          </form>
@@ -842,7 +842,7 @@
      &lt;input type="text" class="span3" placeholder="{{_i}}Type something…{{/i}}"&gt;
      &lt;span class="help-block"&gt;Example block-level help text here.&lt;/span&gt;
      &lt;label class="checkbox"&gt;
-       &lt;input type="checkbox"&gt;&lt;span&gt; {{_i}}Check me out{{/i}}&lt;/span&gt;
+       &lt;input type="checkbox"&gt;&lt;span class="metro-checkbox"&gt; {{_i}}Check me out{{/i}}&lt;/span&gt;
      &lt;/label&gt;
      &lt;button type="submit" class="btn"&gt;{{_i}}Submit{{/i}}&lt;/button&gt;
    &lt;/form&gt;
@@ -868,7 +868,7 @@
            <input type="text" class="input-small" placeholder="{{_i}}Email{{/i}}">
            <input type="password" class="input-small" placeholder="{{_i}}Password{{/i}}">
            <label class="checkbox">
-             <input type="checkbox"><span> {{_i}}Remember me{{/i}}</span>
+             <input type="checkbox"><span class="checkbox" {{_i}}Remember me{{/i}}</span>
            </label>
            <button type="submit" class="btn">{{_i}}Sign in{{/i}}</button>
          </form>
@@ -877,7 +877,7 @@
      &lt;input type="text" class="input-small" placeholder="{{_i}}Email{{/i}}"&gt;
      &lt;input type="password" class="input-small" placeholder="{{_i}}Password{{/i}}"&gt;
      &lt;label class="checkbox"&gt;
-       &lt;input type="checkbox"&gt;&lt;span&gt; {{_i}}Remember me{{/i}}&lt;/span&gt;
+       &lt;input type="checkbox"&gt;&lt;span class="metro-checkbox"&gt; {{_i}}Remember me{{/i}}&lt;/span&gt;
      &lt;/label&gt;
      &lt;button type="submit" class="btn"&gt;{{_i}}Sign in{{/i}}&lt;/button&gt;
    &lt;/form&gt;
@@ -917,7 +917,7 @@
                <div class="controls">
                  <label class="checkbox">
                    <input type="checkbox" id="optionsCheckbox" value="option1">
-                   <span>{{_i}}Option one is this and that&mdash;be sure to include why it's great{{/i}}</span>
+                   <span class="metro-checkbox">{{_i}}Option one is this and that&mdash;be sure to include why it's great{{/i}}</span>
                  </label>
                </div>
              </div>
@@ -1024,7 +1024,7 @@
                <div class="controls">
                  <label class="checkbox">
                    <input type="checkbox" id="optionsCheckbox2" value="option1" disabled>
-                   <span>{{_i}}This is a disabled checkbox{{/i}}</span>
+                   <span class="metro-checkbox">{{_i}}This is a disabled checkbox{{/i}}</span>
                  </label>
                </div>
              </div>
@@ -1177,13 +1177,13 @@
                <label class="control-label" for="inlineCheckboxes">{{_i}}Inline checkboxes{{/i}}</label>
                <div class="controls">
                  <label class="checkbox inline">
-                   <input type="checkbox" id="inlineCheckbox1" value="option1"> <span>1</span>
+                   <input type="checkbox" id="inlineCheckbox1" value="option1"> <span class="metro-checkbox">1</span>
                  </label>
                  <label class="checkbox inline">
-                   <input type="checkbox" id="inlineCheckbox2" value="option2"> <span>2</span>
+                   <input type="checkbox" id="inlineCheckbox2" value="option2"> <span class="metro-checkbox">2</span>
                  </label>
                  <label class="checkbox inline">
-                   <input type="checkbox" id="inlineCheckbox3" value="option3"> <span>3</span>
+                   <input type="checkbox" id="inlineCheckbox3" value="option3"> <span class="metro-checkbox">3</span>
                  </label>
                </div>
              </div>
@@ -1192,15 +1192,15 @@
                <div class="controls">
                  <label class="checkbox">
                    <input type="checkbox" name="optionsCheckboxList1" value="option1">
-                   <span>{{_i}}Option one is this and that&mdash;be sure to include why it's great{{/i}}</span>
+                   <span class="metro-checkbox">{{_i}}Option one is this and that&mdash;be sure to include why it's great{{/i}}</span>
                  </label>
                  <label class="checkbox">
                    <input type="checkbox" name="optionsCheckboxList2" value="option2">
-                   <span>{{_i}}Option two can also be checked and included in form results{{/i}}</span>
+                   <span class="metro-checkbox">{{_i}}Option two can also be checked and included in form results{{/i}}</span>
                  </label>
                  <label class="checkbox">
                    <input type="checkbox" name="optionsCheckboxList3" value="option3">
-                   <span>{{_i}}Option three can&mdash;yes, you guessed it&mdash;also be checked and included in form results{{/i}}</span>
+                   <span class="metro-checkbox">{{_i}}Option three can&mdash;yes, you guessed it&mdash;also be checked and included in form results{{/i}}</span>
                  </label>
                  <p class="help-block">{{_i}}<strong>Note:</strong> Labels surround all the options for much larger click areas and a more usable form.{{/i}}</p>
                </div>
@@ -1210,11 +1210,11 @@
                <div class="controls">
                  <label class="radio">
                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                   <span>{{_i}}Option one is this and that&mdash;be sure to include why it's great{{/i}}</span>
+                   <span class="metro-radio">{{_i}}Option one is this and that&mdash;be sure to include why it's great{{/i}}</span>
                  </label>
                  <label class="radio">
                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                   <span>{{_i}}Option two can is something else and selecting it will deselect option one{{/i}}</span>
+                   <span class="metro-radio">{{_i}}Option two can is something else and selecting it will deselect option one{{/i}}</span>
                  </label>
                </div>
              </div>

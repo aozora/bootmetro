@@ -24,12 +24,6 @@ body {
     color: #888;
     background-color: rgb(255, 255, 255);
 }
-.win-type-interactive:hover {
-    color: rgb(50, 154, 163);
-}
-.win-type-interactive:hover:active {
-    color: rgb(37, 187, 196);
-}
 
 /*
 This class reverses the colors on the subtree to which it is applied.
@@ -256,6 +250,23 @@ input[type=file] {
     color: transparent;
 }
 
+
+
+/*
+Headers colors.
+*/
+.accent-color,
+header h1,
+header h2,
+table th {color: #24A0DA;}
+.accent-bg {background:#24A0DA;}
+
+a#user-info h3,
+a#user-info h4 { color: rgb(0, 130, 135); }
+a#user-info:hover { background-color: rgb(0, 130, 135); }
+a#user-info:hover h3,
+a#user-info:hover h4 { color: rgb(255, 255, 255); }
+
 /*
 Link colors.
 */
@@ -283,6 +294,7 @@ a:hover:active {
 a[disabled], a[disabled]:active { /* :disabled pseudo-class doesn't apply to a, even though disabled attribute stops navigation */
     color: rgba(0, 0, 0, 0.4);
 }
+
 
 /*
 Option for select control (all colors are same for both light and dark).
@@ -396,16 +408,16 @@ progress {
     background-color: rgba(0, 0, 0, 0.19);
     color: rgb(0, 130, 135);
 }
-progress::-ms-fill {
-    background-color: currentColor;
-}
+/*progress::-ms-fill {*/
+    /*background-color: currentColor;*/
+/*}*/
 /* 
 Explicitly define indeterminate for dark and light because expanded rule ".win-ui-light progress"
 has higher specificity than "progress:indeterminate".
 */
-.win-ui-dark progress:indeterminate, progress:indeterminate {
-    background-color: transparent;
-}
+/*.win-ui-dark progress:indeterminate, progress:indeterminate {*/
+    /*background-color: transparent;*/
+/*}*/
 
 /*
 FlipView control colors.
@@ -522,6 +534,7 @@ Back button control colors.
 .win-backbutton:hover {
     background-color: rgba(0, 0, 0, 0.13);
     border-color: rgb(0, 0, 0);
+   color: rgb(0, 0, 0);
    text-decoration: none;
 }
 .win-backbutton:hover:active {
@@ -538,23 +551,29 @@ Back button control colors.
 /*
 Command button colors.
 */
-.win-ui-dark button.win-command:focus {
+.win-ui-dark button.win-command:focus,
+.win-ui-dark a.win-command:focus {
     outline-color: rgb(255, 255, 255);
 }
+a.win-command:focus,
 button.win-command:focus {
     outline-color: rgb(0, 0, 0);
 }
+a.win-command:hover,
 button.win-command:hover {
     background-color: transparent;
 }
+a.win-command:active,
 button.win-command:active {
     background-color: transparent;
     color: inherit;
 }
+a.win-command:hover:active,
 button.win-command:hover:active {
     background-color: transparent;
     color: inherit;
 }
+a.win-command:disabled,
 button.win-command:disabled {
     border-color: transparent;
     background-color: transparent;
@@ -584,21 +603,34 @@ button.win-command:disabled {
 .win-commandimage {
     color: rgb(0, 0, 0);
 }
+a:hover:active .win-commandimage,
 button:hover:active .win-commandimage {
     color: rgb(255, 255, 255);
 }
+
+a:disabled .win-commandimage,
+a:disabled:active .win-commandimage,
 button:disabled .win-commandimage,
 button:disabled:active .win-commandimage {
     color: rgba(0, 0, 0, 0.4);
 }
+
+a[aria-selected=true] .win-commandimage,
+a[aria-selected=true]:active .win-commandimage,
 button[aria-selected=true] .win-commandimage,
 button[aria-selected=true]:active .win-commandimage {
     color: rgb(255, 255, 255);
 }
+
+a[aria-selected=true]:hover .win-commandimage,
+a[aria-selected=true]:hover:active .win-commandimage,
 button[aria-selected=true]:hover .win-commandimage,
 button[aria-selected=true]:hover:active .win-commandimage {
     color: rgb(0, 0, 0);
 }
+
+a[aria-selected=true]:disabled .win-commandimage,
+a[aria-selected=true]:disabled:active .win-commandimage,
 button[aria-selected=true]:disabled .win-commandimage, 
 button[aria-selected=true]:disabled:active .win-commandimage {
     color: rgb(255, 255, 255);
@@ -607,71 +639,93 @@ button[aria-selected=true]:disabled:active .win-commandimage {
 /*
 Command ring colors.
 */
+.win-ui-dark a:active .win-commandring,
 .win-ui-dark .win-commandring, .win-ui-dark button:active .win-commandring {
     background-color: transparent;
     border-color: rgb(255, 255, 255);
 }
+.win-ui-dark a:hover .win-commandring,
 .win-ui-dark button:hover .win-commandring {
     background-color: rgba(255, 255, 255, 0.13);
     border-color: rgb(255, 255, 255);
 }
+.win-ui-dark a:hover:active .win-commandring,
 .win-ui-dark button:hover:active .win-commandring {
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
 }
+.win-ui-dark a:disabled .win-commandring,
+.win-ui-dark a:disabled:active .win-commandring,
 .win-ui-dark button:disabled .win-commandring,
 .win-ui-dark button:disabled:active .win-commandring {
     background-color: transparent;
     border-color: rgba(255, 255, 255, 0.4);
 }
+.win-ui-dark a[aria-selected=true] .win-commandring,
+.win-ui-dark a[aria-selected=true]:active .win-commandring,
 .win-ui-dark button[aria-selected=true] .win-commandring,
 .win-ui-dark button[aria-selected=true]:active .win-commandring {
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
 }
+.win-ui-dark a[aria-selected=true]:hover .win-commandring,
 .win-ui-dark button[aria-selected=true]:hover .win-commandring {
     background-color: rgba(255, 255, 255, 0.13);
     border-color: rgb(255, 255, 255);
 }
+.win-ui-dark a[aria-selected=true]:hover:active .win-commandring,
 .win-ui-dark button[aria-selected=true]:hover:active .win-commandring {
     background-color: transparent;
     border-color: rgb(255, 255, 255);
 }
+.win-ui-dark a[aria-selected=true]:disabled .win-commandring,
+.win-ui-dark a[aria-selected=true]:disabled:active .win-commandring,
 .win-ui-dark button[aria-selected=true]:disabled .win-commandring, 
 .win-ui-dark button[aria-selected=true]:disabled:active .win-commandring {
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
 }
+.win-commandring, a:active .win-commandring,
 .win-commandring, button:active .win-commandring {
     background-color: transparent;
     border-color: rgb(0, 0, 0);
 }
+a:hover .win-commandring,
 button:hover .win-commandring {
     background-color: rgba(0, 0, 0, 0.13);
     border-color: rgb(0, 0, 0);
 }
+a:hover:active .win-commandring,
 button:hover:active .win-commandring {
     background-color: rgb(0, 0, 0);
     border-color: rgb(0, 0, 0);
 }
+a:disabled .win-commandring,
+a:disabled:active .win-commandring,
 button:disabled .win-commandring, 
 button:disabled:active .win-commandring {
     background-color: transparent;
     border-color: rgba(0, 0, 0, 0.4);
 }
+a[aria-selected=true] .win-commandring,
+a[aria-selected=true]:active .win-commandring,
 button[aria-selected=true] .win-commandring,
 button[aria-selected=true]:active .win-commandring {
     background-color: rgb(0, 0, 0);
     border-color: rgb(0, 0, 0);
 }
+a[aria-selected=true]:hover .win-commandring,
 button[aria-selected=true]:hover .win-commandring {
     background-color: rgba(0, 0, 0, 0.13);
     border-color: rgb(0, 0, 0);
 }
+a[aria-selected=true]:hover:active .win-commandring,
 button[aria-selected=true]:hover:active .win-commandring {
     background-color: rgba(255, 255, 255, 0.13);
     border-color: rgb(0, 0, 0);
 }
+a[aria-selected=true]:disabled .win-commandring,
+a[aria-selected=true]:disabled:active .win-commandring,
 button[aria-selected=true]:disabled .win-commandring,
 button[aria-selected=true]:disabled:active .win-commandring {
     background-color: rgba(0, 0, 0, 0.4);
@@ -681,13 +735,23 @@ button[aria-selected=true]:disabled:active .win-commandring {
 /*
 Command button labels colors.
 */
+a.win-command .win-label,
+button.win-command .win-label {
+   color: rgb(0, 0, 0);
+}
+
+.win-ui-dark a.win-command .win-label,
 .win-ui-dark button.win-command .win-label {
    color: rgb(255, 255, 255);
 }
+.win-ui-dark a.win-command:disabled .win-label,
+.win-ui-dark a.win-command:disabled:active .win-label,
 .win-ui-dark button.win-command:disabled .win-label,
 .win-ui-dark button.win-command:disabled:active .win-label {
     color: rgba(255, 255, 255, 0.4);
 }
+a.win-command:disabled .win-label,
+a.win-command:disabled:active .win-label,
 button.win-command:disabled .win-label,
 button.win-command:disabled:active .win-label {
     color: rgba(0, 0, 0, 0.4);
@@ -831,78 +895,42 @@ label {
 /*
 Workaround appbar icon touch colors for Consumer Preview
 */
+.win-ui-dark a:active .win-commandimage,
 .win-ui-dark button:active .win-commandimage {
     color: rgb(0, 0, 0);
 }
+.win-ui-dark a[aria-selected=true]:active .win-commandimage,
 .win-ui-dark button[aria-selected=true]:active .win-commandimage {
     color: rgb(255, 255, 255);
 }
+.win-ui-dark a:active .win-commandring,
 .win-ui-dark button:active .win-commandring {
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
 }
+.win-ui-dark a[aria-selected=true]:active .win-commandring,
 .win-ui-dark button[aria-selected=true]:active .win-commandring {
     background-color: transparent;
     border-color: rgb(255, 255, 255);
 }
+a:active .win-commandimage,
 button:active .win-commandimage {
     color: rgb(255, 255, 255);
 }
+a[aria-selected=true]:active .win-commandimage,
 button[aria-selected=true]:active .win-commandimage {
     color: rgb(0, 0, 0);
 }
+a:active .win-commandring,
 button:active .win-commandring {
     background-color: rgb(0, 0, 0);
     border-color: rgb(0, 0, 0);
 }
+a[aria-selected=true]:active .win-commandring,
 button[aria-selected=true]:active .win-commandring {
     background-color: rgba(255, 255, 255, 0.13);
     border-color: rgb(0, 0, 0);
 }
-/*
-body,
-.win-type-xx-large,
-.win-type-x-large,
-.win-type-large,
-.win-type-medium,
-.win-type-small,
-.win-type-x-small,
-.win-type-xx-small,
-input,
-textarea,
-.win-textarea,
-button,
-select,
-option {
-    font-family: 
-        "Segoe UI",
-        "Ebrima",
-        "Nirmala UI",
-        "Gadugi",
-        "Segoe UI Symbol",
-        "Meiryo UI",
-        "Khmer UI",
-        "Tunga",
-        "Lao UI",
-        "Raavi",
-        "Iskoola Pota",
-        "Latha",
-        "Leelawadee",
-        "Microsoft YaHei UI",
-        "Microsoft JhengHei UI",
-        "Malgun Gothic",
-        "Estrangelo Edessa",
-        "Microsoft Himalaya",
-        "Microsoft New Tai Lue",
-        "Microsoft PhagsPa",
-        "Microsoft Tai Le",
-        "Microsoft Yi Baiti",
-        "Mongolian Baiti",
-        "MV Boli",
-        "Myanmar Text",
-        "Cambria Math";
-}
-*/
 
 
 
@@ -912,7 +940,7 @@ option {
 /* Bootstrap Metro button
 -------------------------------------------------- */
 input.btn, button.btn, a.btn {
-   font-family: "Segoe UI",Arial,Helvetica,Sans-Serif;
+   font-family: "OpenSansRegular",Tahoma,Arial,Helvetica,Sans-Serif;
 }
 
 .btn {
@@ -983,7 +1011,26 @@ input.btn, button.btn, a.btn {
 }
 
 
+.btn-large {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
 
+.btn-primary,
+.btn-primary:hover,
+.btn-warning,
+.btn-warning:hover,
+.btn-danger,
+.btn-danger:hover,
+.btn-success,
+.btn-success:hover,
+.btn-info,
+.btn-info:hover,
+.btn-inverse,
+.btn-inverse:hover {
+   text-shadow: none;
+}
 
 .btn-primary {
    background-color: #59008C;
@@ -1135,4 +1182,12 @@ input.btn, button.btn, a.btn {
    -webkit-border-radius: 0;
    -moz-border-radius: 0;
    border-radius: 0;
+}
+
+
+
+.alert .close {
+   color: #FFF;
+   opacity: 0.4;
+   filter: alpha(opacity=40);
 }
