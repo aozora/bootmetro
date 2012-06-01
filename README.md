@@ -1,8 +1,8 @@
-metroui-web
-===========
+# MetroUI-Web
 
-Simple and complete web UI framework to create web apps with Windows 8 Metro user interface.
-It is based on Twitter Bootstrap and inspired by the Metro UI CSS by Sergey Pimenov.
+
+MetroUI-Web provides simple and flexible HTML, CSS, and Javascript for web apps that wants to mimic the "Windows 8 MetroUI" style, without the need to run on Windows 8.
+It is built on top of Twitter Bootstrap and inspired by the Metro UI CSS by Sergey Pimenov.
 
 
 ## Features
