@@ -1,0 +1,53 @@
+<!-- Header
+================================================== -->
+<header id="nav-bar" class="container-fluid">
+   <div class="row-fluid">
+      <div class="span8">
+         <div id="header-container">
+            <a id="backbutton" class="win-backbutton" href="./tiles-templates.html"></a>
+            <h5>{{appname}}</h5>
+            <div class="dropdown">
+               <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                  {{_i}}WidePeek Tiles Templates{{/i}}
+                  <b class="caret"></b>
+               </a>
+               {{>headermenu}}
+            </div>
+         </div>
+      </div>
+      {{>loggeduser}}
+   </div>
+</header>
+
+<div class="container-fluid metro">
+<div class="row-fluid">
+<div class="span12">
+
+<table id="widepeek" class="table">
+   <caption><h3>Wide Peek templates</h3></caption>
+   <thead>
+      <tr>
+         <th>Template Name</th>
+         <th>Description</th>
+         <th>Tile</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td><strong>[TODO] TileWidePeekImageCollection01</strong></td>
+         <td>Top: One large square image with four smaller square images to its right, no text. Bottom: One header string in larger text over one string of regular text wrapped over a maximum of four lines.</td>
+         <td>
+            <a class="tile widepeek" href="#">
+               <div class="tile-image-wrapper">
+                  <img src="content/img/tile-wide.jpg" alt=""/>
+               </div>
+               <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+            </a>
+         </td>
+      </tr>
+   </tbody>
+</table>
+
+</div>
+</div>
+</div>

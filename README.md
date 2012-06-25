@@ -1,7 +1,7 @@
-# MetroUI-Web
+# BootMetro
 
 
-MetroUI-Web provides simple and flexible HTML, CSS, and Javascript for web apps that wants to mimic the "Windows 8 MetroUI" style, without the need to run on Windows 8.
+BootMetro provides simple and flexible HTML, CSS, and Javascript for web apps that wants to use the "Windows 8 MetroUI" style, without the need to run on Windows 8.
 It is built on top of Twitter Bootstrap and inspired by the Metro UI CSS by Sergey Pimenov.
 
 
@@ -20,7 +20,7 @@ The framework integrate and extend the work first done by other great people:
 
 ## Versioning
 
-### Latest Release: v0.8
+### Latest Release: v0.5
 
 * first official drop with:
    * tiles
@@ -28,14 +28,23 @@ The framework integrate and extend the work first done by other great people:
 
 ## ToDo
 
-* Complete the implementation of the tiles templates
+* fix charms & charms animation like bootstrap plugins
+* check layout guideline on "Understanding the Windows 8 silhouette"
+   * make 2 layout grid: h-scroll + v-scroll
+* (almost done) Complete the implementation of the tiles templates (add counter & mini ico)
+* demo form page with notifications
+* demo ListView
+* demo image thumbs selectables
+* demo charms with docs
 
 
 ## Links
 
-### Metro UI Guidelines
+### Official Metro UI Guidelines
 
 * [UX guidelines for Metro style apps](http://msdn.microsoft.com/en-us/library/windows/apps/hh465424)
+
+* [Understanding the Windows 8 silhouette](http://msdn.microsoft.com/en-us/library/windows/apps/hh872191)
 
 * [Navigation design for Metro style apps](http://msdn.microsoft.com/en-us/library/windows/apps/hh761500)
 

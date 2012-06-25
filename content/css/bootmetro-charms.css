@@ -1,0 +1,132 @@
+﻿/* charms */
+#charms {
+   background-color: #004D60;
+   position: fixed;
+   top: 0%;
+   right: 0%;
+   width: 320px;
+   height: 100%;
+   padding: 0;
+   margin: 0;
+   display: none;
+}
+   #charms .charms-section {
+      margin: 0 40px 40px 40px;
+   }
+
+   #charms .charms-header {
+      position: relative;
+      padding: 40px 0 10px 0;
+   }
+      #charms .charms-header a.win-command span.win-commandimage.win-commandring,
+      #charms .charms-header a.win-command {
+      font-size: 20px;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      vertical-align: top;
+   }
+      #charms .charms-header h2 {
+         display: inline-block;
+         color: #FFF;
+         margin-left: 10px;
+      }
+
+      #charms a.win-command {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+   }
+   #charms .charms-header a#pin-charms {
+      color: #FFF;
+      font-size: 11px;
+      height: 20px;
+      position: absolute;
+      right: 2px;
+      text-align: center;
+      top: 2px;
+      width: 20px;
+      margin-right: -24px;
+   }
+   #charms .charms-header a#pin-charms.active {
+      background-color: #FFF;
+      -webkit-border-radius: 50%;
+         -moz-border-radius: 50%;
+              border-radius: 50%;
+      color: #000;
+   }
+
+
+#charms-body {
+   min-width: 350px;
+}
+
+#charms h2,
+#charms h3,
+#charms h4,
+#charms p,
+#charms a,
+#charms label {color: #19BFC9;}
+#charms a:hover {background-color: #216475}
+
+#charms hr {border: 1px solid #357281}
+
+
+/* transictions */
+#charms.slide {
+  right: -320px;
+  -webkit-transition: 0.6s ease-in-out left;
+     -moz-transition: 0.6s ease-in-out left;
+      -ms-transition: 0.6s ease-in-out left;
+       -o-transition: 0.6s ease-in-out left;
+          transition: 0.6s ease-in-out left;
+}
+
+#charms.slide.in { right: 0;}
+
+
+/*
+#charms-user {
+   height: 100%;
+   display: none;
+}
+
+#charms-search {
+   color: White;
+   display: none;
+   height: 100%;
+   padding: 40px 20px 20px 20px;
+   width: 265px;
+}
+
+#charms-search li {
+   margin-left: -10px;
+   font-size: 10pt;
+   margin: 5px 0px 5px 0px;
+}
+
+#charms-search a:link, #charms-search a:visited, #charms-search a:hover, #charms-search a:active {
+   color: White;
+   text-decoration: none;
+}
+
+#charms-searchTextbox {
+   display: none;
+}
+
+ul#searchResults {
+   list-style-type: square;
+}
+
+.charms-block {
+   display: block;
+   float: none;
+   margin-top: 16px;
+}
+
+
+
+.highlight {
+   color: #1BA1E2;
+}
+*/
