@@ -270,6 +270,9 @@ hr.soften {
    font-size: 14px;
    margin-right: 10px;
 }
+.marketing.metro p {
+   display: inline-block;
+}
 .marketing .bs-icon {
    float: left;
    margin: 7px 10px 0 0;
@@ -568,7 +571,9 @@ h2 + .row {
    max-width: 100%;
    margin: 0 auto;
 }
-.marketing-byline {
+.marketing-byline,
+.marketing.metro p.marketing-byline {
+   display: block;
    margin: -18px 0 27px;
    font-size: 18px !important;
    font-weight: 300;
