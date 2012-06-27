@@ -10,6 +10,9 @@
       var lastSectionWidth = $(".metro-sections .metro-section").last().outerWidth(true);
       var max = lastSectionWidth - totalWidth;
 
+      // reset the left value
+      $(".metro-sections").css('left', 0);
+
       // setup the horizontal scroll
       $(".metro-sections").mousewheel(function(e, delta) {
          e.preventDefault();
