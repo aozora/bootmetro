@@ -31,6 +31,13 @@ $(function(){
 
 
 
+   // listview demo
+   $('#listview-grid-demo').on('click', '.mediumListIconTextItem', function(e){
+      e.preventDefault();
+      $(this).toggleClass('selected');
+   });
+
+
    //$('#home-carousel').carousel({interval: 5000});
 
 });
