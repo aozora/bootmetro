@@ -11,7 +11,7 @@
    <!-- Mobile viewport optimized: h5bp.com/viewport -->
    <meta name="viewport" content="width=device-width">
 
-   <title>Tiles · BootMetro</title>
+   <title>Listviews · BootMetro</title>
 
    <meta name="robots" content="noindex, nofollow">
    <meta name="description" content="MetroUI-Web : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
@@ -72,7 +72,7 @@
                <h5>BootMetro</h5>
                <div class="dropdown">
                   <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
-                     Tiles Templates
+                     ListViews
                      <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu">
@@ -113,43 +113,98 @@
    <div class="container-fluid">
       <div class="row-fluid">
          <div class="metro span12">
-            <div class="metro-sections">
    
-                  <div class="metro-section" id="section1">
+            <header>
+               <h2>Grid Layout</h2>
+               <p>Basic sample for simple ListView into <em>Grid layout</em></p>
+            </header>
    
-                     <a class="tile wide imagetext bg-color-gree" href="./square-tiles-templates.html">
-                        <div class="image-wrapper">
-                           <img src="content/img/metro-tiles.jpg" />
-                        </div>
-                        <div class="column-text">
-                           <div class="text-header3">Square tiles templates</div>
-                        </div>
-                     </a>
-   
-                     <a class="tile wide imagetext tile-double bg-color-orange" href="./wide-tiles-templates.html">
-                        <div class="image-wrapper">
-                           <img src="content/img/metro-tiles-wide.jpg" />
-                        </div>
-                        <div class="column-text">
-                           <div class="text-header3">Wide tiles templates</div>
-                        </div>
-                     </a>
-   
-                     <a class="tile wide imagetext bg-color-green" href="./widepeek-tiles-templates.html">
-                        <div class="image-wrapper">
-                           <img src="content/img/metro-tiles-widepeek.png" />
-                        </div>
-                        <div class="column-text">
-                           <div class="text-header3">Wide peek tiles templates</div>
-                        </div>
-                     </a>
-   
+            <div id="listview-grid-demo" class="listview-container grid-layout">
+               <div class="mediumListIconTextItem">
+                  <img src="holder.js/60x60" class="mediumListIconTextItem-Image" />
+                  <div class="mediumListIconTextItem-Detail">
+                     <h4>Title</h4>
+                     <h6>Lorem ipsum sin ut dolorem</h6>
                   </div>
+               </div>
+               <div class="mediumListIconTextItem">
+                  <img src="holder.js/60x60" class="mediumListIconTextItem-Image" />
+                  <div class="mediumListIconTextItem-Detail">
+                     <h4>Title</h4>
+                     <h6>Lorem ipsum sin ut dolorem</h6>
+                  </div>
+               </div>
+               <div class="mediumListIconTextItem">
+                  <img src="holder.js/60x60" class="mediumListIconTextItem-Image" />
+                  <div class="mediumListIconTextItem-Detail">
+                     <h4>Title</h4>
+                     <h6>Lorem ipsum sin ut dolorem</h6>
+                  </div>
+               </div>
+   
+               <div class="mediumListIconTextItem">
+                  <div class="icon-google-plus-3 mediumListIconTextItem-Image" ></div>
+                  <div class="mediumListIconTextItem-Detail">
+                     <h4>Title</h4>
+                     <h6>Lorem ipsum sin ut dolorem</h6>
+                  </div>
+               </div>
+               <div class="mediumListIconTextItem">
+                  <div class="icon-facebook-2 mediumListIconTextItem-Image" ></div>
+                  <div class="mediumListIconTextItem-Detail">
+                     <h4>Title</h4>
+                     <h6>Lorem ipsum sin ut dolorem</h6>
+                  </div>
+               </div>
+               <div class="mediumListIconTextItem">
+                  <div class="icon-twitter-2 mediumListIconTextItem-Image" ></div>
+                  <div class="mediumListIconTextItem-Detail">
+                     <h4>Title</h4>
+                     <h6>Lorem ipsum sin ut dolorem</h6>
+                  </div>
+               </div>
+   
+               <div class="mediumListIconTextItem">
+                  <div class="icon-images mediumListIconTextItem-Image" ></div>
+                  <div class="mediumListIconTextItem-Detail">
+                     <h4>Title</h4>
+                     <h6>Lorem ipsum sin ut dolorem</h6>
+                  </div>
+               </div>
+               <div class="mediumListIconTextItem">
+                  <div class="icon-movie mediumListIconTextItem-Image" ></div>
+                  <div class="mediumListIconTextItem-Detail">
+                     <h4>Title</h4>
+                     <h6>Lorem ipsum sin ut dolorem</h6>
+                  </div>
+               </div>
+               <div class="mediumListIconTextItem">
+                  <div class="icon-chart  mediumListIconTextItem-Image" ></div>
+                  <div class="mediumListIconTextItem-Detail">
+                     <h4>Title</h4>
+                     <h6>Lorem ipsum sin ut dolorem</h6>
+                  </div>
+               </div>
    
             </div>
+   
+            <br/>
+            <h3>Enabling selection mode</h3>
+            <p>To enabling the toggle selection simply use a script like this:</p>
+   <pre class="prettyprint linenums">
+   $('#listview-grid-demo').on('click', '.mediumListIconTextItem', function(e){
+      e.preventDefault();
+      $(this).toggleClass('selected');
+   });
+   </pre>
+   
+            <span class="label label-important">In the next version there will be a jQuery plugin to expand these functionality.</span>
+   
+   
          </div>
       </div>
-   </div>   <div id="charms" class="win-ui-dark">
+   </div>
+   <div id="charms" class="win-ui-dark">
    
       <div id="theme-charms-section" class="charms-section">
          <div class="charms-header">
