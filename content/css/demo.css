@@ -296,7 +296,10 @@ hr.soften {
    position: relative;
 }
 #hero-image {
-   margin: 0;
+   height: 265px;
+   margin: 70px 0 0;
+   vertical-align: bottom;
+   width: 500px;
 }
 
 #hero a.btn-large b {
