@@ -770,6 +770,11 @@ section#misc .ui-loader {
 }
 
 
+/* Code */
+ol.linenums {
+   list-style-position: inside;
+}
+
 
 
 /* Responsive Docs
