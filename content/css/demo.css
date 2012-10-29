@@ -336,10 +336,24 @@ hr.soften {
 #home-tiles {
    margin-top: 10px;
 }
-#home-tiles .tile {
-   margin-left: 2%;
-   margin-right: 2%;
-}
+   #home-tiles .tile {
+      margin-left: 2%;
+      margin-right: 2%;
+   }
+
+   #home-tiles .tile.square .text-big span.icon {
+      font-size: 80px;
+      height: 80px;
+      line-height: 80px;
+      width: 80px;
+      padding: 0 15px;
+      text-align: center;
+   }
+   #home-tiles .tile.square .text {
+      font-size: 18px;
+      line-height: 20px;
+      text-align: center;
+   }
 
 /* Footer
 --------------------------------------------------
