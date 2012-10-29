@@ -1214,8 +1214,8 @@ input.btn, button.btn, a.btn {
 
 .alert .close {
    color: #FFF;
-   opacity: 0.4;
-   filter: alpha(opacity=40);
+   /*opacity: 0.4;*/
+   /*filter: alpha(opacity=40);*/
 }
 
 

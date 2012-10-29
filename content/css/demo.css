@@ -296,10 +296,7 @@ hr.soften {
    position: relative;
 }
 #hero-image {
-   height: 265px;
-   margin: 70px 0 0;
-   vertical-align: bottom;
-   width: 500px;
+   margin: 0;
 }
 
 #hero a.btn-large b {
@@ -336,24 +333,10 @@ hr.soften {
 #home-tiles {
    margin-top: 10px;
 }
-   #home-tiles .tile {
-      margin-left: 2%;
-      margin-right: 2%;
-   }
-
-   #home-tiles .tile.square .text-big span.icon {
-      font-size: 80px;
-      height: 80px;
-      line-height: 80px;
-      width: 80px;
-      padding: 0 15px;
-      text-align: center;
-   }
-   #home-tiles .tile.square .text {
-      font-size: 18px;
-      line-height: 20px;
-      text-align: center;
-   }
+#home-tiles .tile {
+   margin-left: 2%;
+   margin-right: 2%;
+}
 
 /* Footer
 --------------------------------------------------
@@ -786,6 +769,11 @@ section#misc .ui-loader {
    font-size: 18px;
 }
 
+
+/* Code */
+ol.linenums {
+   list-style-position: inside;
+}
 
 
 
