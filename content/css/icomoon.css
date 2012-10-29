@@ -687,34 +687,34 @@
 .icon-embed:before {
 	content: "\e07d";
 }
-.icon-seven-segment:before {
+.icon-seven-segment-0:before {
 	content: "\e07e";
 }
-.icon-seven-segment-2:before {
+.icon-seven-segment-1:before {
 	content: "\e07f";
 }
-.icon-seven-segment-3:before {
+.icon-seven-segment-2:before {
 	content: "\e080";
 }
-.icon-seven-segment-4:before {
+.icon-seven-segment-3:before {
 	content: "\e081";
 }
-.icon-seven-segment-5:before {
+.icon-seven-segment-4:before {
 	content: "\e082";
 }
-.icon-seven-segment-6:before {
+.icon-seven-segment-5:before {
 	content: "\e083";
 }
-.icon-seven-segment-7:before {
+.icon-seven-segment-6:before {
 	content: "\e084";
 }
-.icon-seven-segment-8:before {
+.icon-seven-segment-7:before {
 	content: "\e085";
 }
-.icon-seven-segment-9:before {
+.icon-seven-segment-8:before {
 	content: "\e086";
 }
-.icon-seven-segment-10:before {
+.icon-seven-segment-9:before {
 	content: "\e087";
 }
 .icon-bluetooth:before {
