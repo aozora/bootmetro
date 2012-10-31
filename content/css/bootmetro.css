@@ -1555,10 +1555,18 @@ FlipView control.
 .btn-large {
    font-size: 15px;
    line-height: 24px;
-    padding: 10px 14px;
+   padding: 2px 14px;
    -webkit-border-radius: 0;
    -moz-border-radius: 0;
    border-radius: 0;
+}
+   .btn-large.dropdown-toggle {
+      padding-top: 2px;
+      padding-bottom: 2px;;
+   }
+
+.btn-mini.dropdown-toggle {
+   padding-top: 5px;
 }
 
 .btn-small {
@@ -2151,3 +2159,52 @@ header h1 {display: inline;}
    border-radius: 0;
 }
 
+
+
+/* Wizard */
+.wizard {
+   background-color: #FFF;
+}
+
+#wizard-steps-container {
+   background-color: #0072BC !important;
+   color: #FFF;
+}
+   #wizard-steps-container h2 {
+      margin-bottom: 30px;
+      padding: 20px;
+   }
+
+   ul#wizard-steps {
+     list-style-type: none;
+      margin: 0;
+   }
+      ul#wizard-steps li {
+         list-style-type: none;
+         display: block;
+         width: 100%;
+         height: 36px;
+      }
+      ul#wizard-steps li.active {
+         background-color: #FFF;
+      }
+         ul#wizard-steps li a {
+            display: block;
+            width: 100%;
+            height: 36px;
+            padding: 0 20px;
+            font-family: 'OpenSansLightRegular';
+            line-height: 36px;
+            text-transform: uppercase;
+            color: #FFF;
+            text-decoration: none;
+         }
+         ul#wizard-steps li.active a {
+            color: #666;
+         }
+
+#wizard-step-content {
+   margin-top: 20px;
+   padding: 0;
+   vertical-align: top;
+}
