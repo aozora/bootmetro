@@ -54,8 +54,8 @@
 
    .metro-sections h2 {
       margin-left: 5px;
-      font-family: "OpenSansRegular",Arial,Helvetica,Sans-Serif;
-      font-weight: 100;
+      font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+      font-weight: 300;
       text-transform: lowercase;
    }
 
@@ -200,10 +200,10 @@
       margin: 0 auto;
    }
    .metro .tile .app-label {
-      position: absolute;
+      bottom: 5px;
+      font-size: 12px;
       left: 20px;
-      bottom: 10px;
-      font-size: 11px;
+      position: absolute;
    }
    .metro .tile .app-count {
       position: absolute;
@@ -247,7 +247,8 @@
 
 /* normal header in 1 line of wrapped text*/
 .metro .tile .text-header {
-   font-family: "OpenSansLightRegular",Tahoma,Arial,Helvetica,Sans-Serif;
+   font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+   font-weight: 300;
    font-size: 34px;
    line-height: 36px;
    max-height: 36px;
@@ -256,7 +257,8 @@
 }
 /* One string of large text wrapped over a maximum of three lines.*/
 .metro .tile .text-header3 {
-   font-family: "OpenSansLightRegular",Tahoma,Arial,Helvetica,Sans-Serif;
+   font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+   font-weight: 300;
    font-size: 34px;
    line-height: 36px;
    text-align: left;

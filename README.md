@@ -2,7 +2,7 @@
 
 
 BootMetro provides simple and flexible HTML, CSS, and Javascript for web apps that wants to use the "Windows 8 MetroUI" style, without the need to run on Windows 8.
-It is built on top of Twitter Bootstrap and inspired by the Metro UI CSS by Sergey Pimenov.
+It is built on top of Twitter Bootstrap and was originally inspired by the Metro UI CSS by Sergey Pimenov.
 
 
 ## Features
@@ -20,11 +20,14 @@ The framework integrate and extend the work first done by other great people:
 
 ## Versioning
 
-### Latest Release: v0.5
+### Latest Release: v0.6
 
-* first official drop with:
-   * tiles
-   * almost complete Bootstrap re-styled with MetroUI
+* Various bug fixes
+* restored correct use of OpenSans web font
+* upgraded to use Twitter Bootstrap v2.2.1
+* added ListView demo
+* added Wizard demo (in progress)
+* styled modal dialogs as Metro guidelines for messages and errors/warnings.
 
 ## ToDo
 
@@ -33,7 +36,6 @@ The framework integrate and extend the work first done by other great people:
    * make 2 layout grid: h-scroll + v-scroll
 * (almost done) Complete the implementation of the tiles templates (add counter & mini ico)
 * demo form page with notifications
-* demo ListView
 * demo image thumbs selectables
 * demo charms with docs
 
