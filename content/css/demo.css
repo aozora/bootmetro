@@ -271,6 +271,13 @@ hr.soften {
    font-size: 16px;
    line-height: 1.5;
 }
+.marketing.metro .tile.wide {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+}
+
 .marketing .marketing-byline {
    margin-bottom: 40px;
    font-size: 20px;
@@ -278,10 +285,10 @@ hr.soften {
    line-height: 1.25;
    color: #999;
 }
-.marketing img {
-   display: block;
-   margin: 0 auto 30px;
-}
+/*.marketing img {*/
+   /*display: block;*/
+   /*margin: 0 auto 30px;*/
+/*}*/
 
 
 
