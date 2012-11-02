@@ -831,12 +831,10 @@ form.bs-docs-example {
 #icomoon-container .glyph {
    float: left;
    text-align: center;
-   background: #FFF;
+   background: #F4F4F4;
    padding: .75em;
    margin: .75em 1.5em .75em 0;
    width: 7em;
-   /*border-radius: .375em;*/
-   /*box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px #ccc;*/
 }
 #icomoon-container .glyph input {
    width: 100%;
@@ -847,8 +845,7 @@ form.bs-docs-example {
 #icomoon-container .mtm {
    margin-top: .75em;
    border: 0;
-   /*background-color: #fff;*/
-   padding: 0 20px;
+   padding: 0 10px;
 }
 
 .fs1 {
@@ -876,9 +873,12 @@ form.bs-docs-example {
 }
 
 
-/* Code */
-ol.linenums {
-   list-style-position: inside;
+/*
+ListView demo
+*/
+.mediumListIconTextItem.selected .mediumListIconTextItem-Image[class^="icon-"],
+.mediumListIconTextItem.selected .mediumListIconTextItem-Image[class*=" icon-"] {
+   color: #FFF;
 }
 
 
@@ -1055,6 +1055,10 @@ ol.linenums {
    }
    .example-sites .thumbnail > img {
       max-width: 270px;
+   }
+
+   #hero-image {
+      margin: 0;
    }
 
    /* Do our best to make tables work in narrow viewports */

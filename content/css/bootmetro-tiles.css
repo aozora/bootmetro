@@ -446,7 +446,9 @@
       line-height: 60px;
       margin: 5px;
    }
-   .mediumListIconTextItem .mediumListIconTextItem-Detail {
+
+
+.mediumListIconTextItem .mediumListIconTextItem-Detail {
       display: inline-block;
       vertical-align: top;;
       margin: 5px;

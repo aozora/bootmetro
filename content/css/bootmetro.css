@@ -2340,3 +2340,15 @@ Carousel
    padding: 0;
    vertical-align: top;
 }
+
+
+/*
+Responsive Media Queries
+*/
+@media (max-width: 480px) {
+
+   .container-fluid {
+      padding: 0;
+   }
+
+}
