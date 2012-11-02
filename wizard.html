@@ -11,7 +11,7 @@
    <!-- Mobile viewport optimized: h5bp.com/viewport -->
    <meta name="viewport" content="width=device-width">
 
-   <title>Appbar · BootMetro</title>
+   <title>Wizard · BootMetro</title>
 
    <meta name="robots" content="noindex, nofollow">
    <meta name="description" content="MetroUI-Web : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
@@ -72,7 +72,7 @@
                <h5>BootMetro</h5>
                <div class="dropdown">
                   <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
-                     ApplicationBar Demo
+                     Wizard
                      <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu">
@@ -110,66 +110,50 @@
    </div>
    </header>
    
-   
    <div class="container-fluid">
-      <div class="row-fluid">
-         <div class="span12">
-            <h6>This page show a full Application Bar stacked on the bottom of the page with plenty of commands.</h6>
-            <br />
+      <div class="row-fluid wizard">
+         <div class="span3">
+            <div id="wizard-steps-container">
+               <h2>Wizard Title</h2>
    
-            <form class="">
-               <label for="appbar-theme-select">Change ApplicationBar theme:</label>
-               <select id="appbar-theme-select" class="">
-                  <option value="win-ui-light">Light</option>
-                  <option value="win-ui-dark">Dark</option>
-               </select>
-            </form>
-   
-            <div class="">
-               <h3>Commands Icons</h3>
-               <p>Commands markup can be made with <code>&lt;a&gt;</code> element or a <code>&lt;button&gt;</code>.</p>
-               <p>To show an icon you should use the glyph code that you find in the <a href="./icons.html">Icons</a> page.</p>
+               <ul id="wizard-steps">
+                  <li>
+                     <a href="#">Step 1 lorem ipsum</a>
+                  </li>
+                  <li class="active">
+                     <a href="#">Step 2 lorem ipsum</a>
+                  </li>
+                  <li>
+                     <a href="#">Step 3 lorem ipsum</a>
+                  </li>
+                  <li>
+                     <a href="#">Step 4 lorem ipsum</a>
+                  </li>
+                  <li>
+                     <a href="#">Step 5 lorem ipsum</a>
+                  </li>
+               </ul>
             </div>
-   <pre class="prettyprint linenums">
-   &lt;button class="win-command"&gt;
-      &lt;span class="win-commandimage win-commandring"&gt;&#x0021;&lt;/span&gt;
-      &lt;span class="win-label"&gt;Home&lt;/span&gt;
-   &lt;/button&gt;
-   </pre>
+         </div>
    
+         <div class="span9">
+            <section id="wizard-step-content">
+               <h2>Step Title</h2>
+               <h3>Subtitle</h3>
    
+               <form class="form-horizontal">
    
-            </div>
+               </form>
+   
+            </section>
+         </div>
       </div>
    </div>
    
-   
-   <footer class="win-commandlayout navbar-fixed-bottom">
+   <footer class="win-ui-dark win-commandlayout navbar-fixed-bottom">
       <div class="container">
          <div class="row">
-            <div class="span6 align-left">
-   
-               <a class="win-command">
-                  <span class="win-commandimage win-commandring">&#x0021;</span>
-                  <span class="win-label">Home</span>
-               </a>
-   
-               <hr class="win-command" />
-   
-               <button class="win-command">
-                  <span class="win-commandimage win-commandring">&#xe03e;</span>
-                  <span class="win-label">Add</span>
-               </button>
-   
-               <button class="win-command">
-                  <span class="win-commandimage win-commandring">&#x0052;</span>
-                  <span class="win-label">Save</span>
-               </button>
-   
-               <button class="win-command">
-                  <span class="win-commandimage win-commandring">&#xe125;</span>
-                  <span class="win-label">Reload</span>
-               </button>
+            <div class="span12 align-right">
    
                <button class="win-command">
                   <span class="win-commandimage win-commandring">&#xe1cd;</span>
@@ -183,48 +167,6 @@
    
             </div>
    
-            <div class="span6 align-right">
-   
-               <button class="win-command">
-                  <span class="win-commandimage win-commandring">&#xe202;</span>
-                  <span class="win-label">Settings</span>
-               </button>
-   
-               <button class="win-command">
-                  <span class="win-commandimage win-commandring">&#xE01D;</span>
-                  <span class="win-label">Download</span>
-               </button>
-   
-               <button class="win-command">
-                  <span class="win-commandimage win-commandring">&#xE01F;</span>
-                  <span class="win-label">Upload</span>
-               </button>
-   
-               <button class="win-command">
-                  <span class="win-commandimage win-commandring">&#xE165;</span>
-                  <span class="win-label">Send Email</span>
-               </button>
-   
-               <button class="win-command">
-                  <span class="win-commandimage win-commandring">&#x0067;</span>
-                  <span class="win-label">Search</span>
-               </button>
-   
-               <button class="win-command">
-                  <span class="win-commandimage win-commandring">&#xE001;</span>
-                  <span class="win-label">Delete</span>
-               </button>
-   
-               <button class="win-command">
-                  <span class="win-commandimage win-commandring">&#xE15F;</span>
-                  <span class="win-label">User</span>
-               </button>
-   
-               <button class="win-command">
-                  <span class="win-commandimage win-commandring">&#xE15E;</span>
-                  <span class="win-label">Users</span>
-               </button>
-            </div>
          </div>
       </div>
    </footer>

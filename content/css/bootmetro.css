@@ -1,50 +1,5 @@
 /* Common css rules for metro-ui-light & metro-ui-dark */
 
-/* NOTE: enable the following font-face directive if you want to use the local fonts instead of the
-         Google WebFonts cache; if you do that remember to comment/remove the link in the layout
-*/
-/*
-@font-face {
-    font-family: 'OpenSansRegular';
-    src: url('/Content/font/opensans-regular-webfont.eot');
-    src: url('/Content/font/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/Content/font/opensans-regular-webfont.woff') format('woff'),
-         url('/Content/font/opensans-regular-webfont.ttf') format('truetype'),
-         url('/Content/font/opensans-regular-webfont.svg#OpenSansRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'OpenSansLightRegular';
-    src: url('/Content/font/opensans-light-webfont.eot');
-    src: url('/Content/font/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/Content/font/opensans-light-webfont.woff') format('woff'),
-         url('/Content/font/opensans-light-webfont.ttf') format('truetype'),
-         url('/Content/font/opensans-light-webfont.svg#OpenSansLightRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'OpenSansSemiboldRegular';
-    src: url('/Content/font/opensans-semibold-webfont.eot');
-    src: url('/Content/font/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/Content/font/opensans-semibold-webfont.woff') format('woff'),
-         url('/Content/font/opensans-semibold-webfont.ttf') format('truetype'),
-         url('/Content/font/opensans-semibold-webfont.svg#OpenSansSemiboldRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'OpenSansBold';
-    src: url('/Content/font/opensans-bold-webfont.eot');
-    src: url('/Content/font/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/Content/font/opensans-bold-webfont.woff') format('woff'),
-         url('/Content/font/opensans-bold-webfont.ttf') format('truetype'),
-         url('/Content/font/opensans-bold-webfont.svg#OpenSansBold') format('svg');
-   font-weight: normal;
-   font-style: normal;
-}
-*/
 
 /* Body & Footer & headers
 -------------------------------------------------- */
@@ -56,9 +11,9 @@ body {
    padding-top: 24px;
    padding-bottom: 88px;
    position: relative;
-   font-family: "OpenSansRegular",Tahoma,Arial,Helvetica,Sans-Serif;
+   font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+   font-weight: 300;
    font-size: 11px;
-   font-weight: normal;
 }
 
 
@@ -106,52 +61,35 @@ td.align-center {text-align: center}
 
 /* Weight and size definitions for typographic classes and elements.
 -------------------------------------------------- */
-h1, .win-type-xx-large {
+h1 {
    font-weight: 300;
    font-size: 40px;
    line-height: 48px;
-   /*font-size: 42pt;*/
-   /*line-height: 1.1429; *//* 64px when font-size is 42pt */
 }
-h2, .win-type-x-large {
+h2 {
    font-weight: 300;
    font-size: 26px;
    line-height: 34px;
-   /*font-size: 20pt;*/
-   /*line-height: 1.2; *//* 32px when font-size is 20pt */
 }
 h3, .win-type-large {
    font-weight: 600;
    font-size: 20px;
    line-height: 26px;
-   /*font-size: 11pt;*/
-   /*line-height: 1.3636; *//* 20px when font-size is 11pt */
 }
-h4, .win-type-medium /*, code, pre, samp*/ {
+h4 /*, code, pre, samp*/ {
    font-weight: 400;
    font-size: 15px;
    line-height: 20px;
-   /*font-size: 11pt;*/
-   /*line-height: 1.3636; *//* 20px when font-size is 11pt */
 }
-body, h5, .win-type-small, legend {
+body, h5, legend {
    font-weight: 300;
    font-size: 13px;
    line-height: 20px;
-   /*font-size: 11pt;*/
-   /*line-height: 1.3636; *//* 20px when font-size is 11pt */
 }
-.win-type-x-small {
-   font-weight: 300;
-   font-size: 11pt;
-   line-height: 1.3636; /* 20px when font-size is 11pt */
-}
-h6, caption, figcaption, small, .win-type-xx-small {
+h6, caption, figcaption, small {
    font-weight: 400;
    font-size: 11px;
    line-height: 11px;
-   /*font-size: 9pt;*/
-   /*line-height: 1.6667; *//* 20px when font-size is 9pt */
 }
 h1, h2, h3, h4, h5, h6 {
    margin-top: 0;
@@ -193,7 +131,8 @@ em {
 }
 
 p {
-   font-family: "OpenSansLightRegular",Arial,Helvetica,Sans-Serif;
+   font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+   font-weight: 300;
 }
 
 
@@ -210,7 +149,8 @@ select, option {
 
 a.win-command,
 input, button, select, textarea {
-   font-family: "OpenSansLightRegular",Arial,Helvetica,Sans-Serif;
+   font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+   font-weight: 300;
    /*font-size: 11px;*/
    height: 28px;
    line-height: 30px;
@@ -361,6 +301,29 @@ img {
    border-style: none;
 }
 
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
 /*
 Select control.
 */
@@ -377,6 +340,14 @@ select {
    /*line-height: 1.3636; *//* 20px when font-size is 11pt */
 }
 
+/*
+Search input
+*/
+input.search-query {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
 
 /*
 Range control.
@@ -385,29 +356,6 @@ input[type=range] {
    width: 280px;
    height: auto;
    padding: 17px 0 32px 0;
-}
-input[type=range]::-ms-track {
-   padding: 0;
-   width: auto;
-   height: 11px;
-   border-style: none;
-   color: transparent; /* ticks hidden by default */
-}
-input[type=range]::-ms-thumb {
-   width: 11px;
-   height: 11px;
-   border-style: none;
-}
-input[type=range]::-ms-ticks-before, input[type=range]::-ms-ticks-after {
-   width: 100%;
-   height: 5px;
-   display: none;
-}
-input[type=range]:disabled::-ms-fill-lower {
-   margin-right: 5px;
-}
-input[type=range]:disabled::-ms-fill-upper {
-   margin-left: 6px;
 }
 
 /*
@@ -419,30 +367,11 @@ input[type=range].win-vertical {
    padding: 0 17px;
    writing-mode: bt-lr;
 }
-input[type=range].win-vertical::-ms-track {
-   width: 11px;
-   height: auto;
-}
-input[type=range].win-vertical:disabled::-ms-fill-lower {
-   margin-right: 0;
-   margin-top: 6px;
-}
-input[type=range].win-vertical:disabled::-ms-fill-upper {
-   margin-left: 0;
-   margin-bottom: 5px;
-}
-
-input[type=range].win-vertical::-ms-ticks-before,
-input[type=range].win-vertical::-ms-ticks-after {
-   width: 5px;
-   height: 100%;
-   display: none;
-}
 
 /*
 Progress control. */
 .progress {
-   height: auto;
+   /*height: auto;*/
    background-image: none;
    -webkit-border-radius: 0;
    -moz-border-radius: 0;
@@ -491,7 +420,30 @@ Progress control. */
       }
 
 
-
+.progress-danger .bar,
+.progress .bar-danger,
+.progress-danger.progress-striped .bar,
+.progress-striped .bar-danger,
+.progress-success .bar,
+.progress .bar-success,
+.progress-success.progress-striped .bar,
+.progress-striped .bar-success,
+.progress-info .bar,
+.progress .bar-info,
+.progress-info.progress-striped .bar,
+.progress-striped .bar-info,
+.progress-warning .bar,
+.progress .bar-warning,
+.progress-warning.progress-striped .bar,
+.progress-striped .bar-warning {
+   background-image: none;
+   filter: none;
+}
+.progress .bar + .bar {
+   -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+           box-shadow: none;
+}
 
 
 
@@ -554,7 +506,7 @@ Back button.
    width: 38px;
    height: 38px;
    font-size: 20px;
-   line-height: 35px; /* line-height must match the content box height. */
+   line-height: 38px; /* line-height must match the content box height. */
    vertical-align: baseline;
 }
 .win-backbutton::before {
@@ -1103,36 +1055,7 @@ Toggle control.
    margin: 0;
    background-color: transparent;
 }
-.win-toggleswitch .win-switch::-ms-tooltip {
-   display: none;
-}
-.win-toggleswitch .win-switch::-ms-ticks-before,
-.win-toggleswitch .win-switch::-ms-ticks-after {
-   display: none;
-}
-.win-toggleswitch .win-switch::-ms-track {
-   height: 15px; /* 19px - 2px borders */
-   width: 46px;
-   padding: 0;
-   margin: 0;
-   border-width: 2px;
-   border-style: solid;
-}
-.win-toggleswitch .win-switch::-ms-fill-lower,
-.win-toggleswitch .win-switch::-ms-fill-upper {
-   height: 13px; /* 19px - 2px borders - 1px margins */
-   padding: 0;
-}
-.win-toggleswitch .win-switch::-ms-fill-lower {
-   margin-left: 1px;
-}
-.win-toggleswitch .win-switch::-ms-fill-upper {
-   margin-right: 1px;
-}
-.win-toggleswitch .win-switch::-ms-thumb {
-   height: 19px;
-   width: 12px;
-}
+
 .win-toggleswitch .win-title {
    display: block;
    vertical-align: top;
@@ -1153,8 +1076,14 @@ Toggle control.
 }
 
 /*
-Tooltip control.
+Tooltip & PopOver control.
 */
+.tooltip-inner {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
 .win-tooltip {
    display: block;
    position: fixed;
@@ -1510,34 +1439,94 @@ FlipView control.
 /* Modal
 -------------------------------------------------- */
 .modal {
-   border-style: solid;
-   border-width: 2px;
+   border: 0;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+}
+.modal.message,
+.modal.warning {
+   left: 0;
+   margin: 0;
+   padding: 0 20%;
+   width: 60%;
+   border: 0;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
-  /*-webkit-box-shadow: none;*/
-     /*-moz-box-shadow: none;*/
-          /*box-shadow: none;*/
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
 }
+   .modal-header {
+      border: 0;
+   }
+   .modal-body {
+      max-height: 300px;
+   }
    .modal-footer {
       background-color: transparent;
+      border: 0;
+      -webkit-border-radius: 0;
+         -moz-border-radius: 0;
+              border-radius: 0;
+      -webkit-box-shadow: none;
+         -moz-box-shadow: none;
+              box-shadow: none;
    }
+.modal.message.fade.in {
+   top: 20%;
+}
+
+.modal.warning {
+   padding: 0 1%;
+   width: 100%;
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+   background-color: #0072BC !important;
+   color: #FFF;
+
+}
+   .modal.warning .modal-body {
+      display: inline-block;
+      width: 60%;
+      vertical-align: top;;
+   }
+   .modal.warning .modal-footer {
+      display: inline-block;
+      width: 30%;
+      vertical-align: top;;
+   }
+.modal.warning.fade.in {
+   top: 0;
+}
+
 
 
 /* Popover
 -------------------------------------------------- */
+.popover {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
 .popover-inner {
-   width: 280px;
-   padding: 2px;
+   /*width: 280px;*/
+   /*padding: 2px;*/
    overflow: hidden;
-   background: #000;
+   /*background: #000;*/
    -webkit-border-radius: 0;
    -moz-border-radius: 0;
    border-radius: 0;
 }
 
 .popover-title {
-   background-color: #FFF;
+   background-color: transparent;
+   border: 0;
    line-height: 1;
    -webkit-border-radius: 0;
    -moz-border-radius: 0;
@@ -1604,12 +1593,26 @@ FlipView control.
    -moz-box-shadow: none;
    box-shadow: none;
 }
-
+.btn-group > .btn + .dropdown-toggle {
+   box-shadow: none;
+}
 .btn-group > .dropdown-toggle {
    min-width: 20px;
    padding-bottom: 5px;
 }
 
+
+/*
+Dropdown submenu
+*/
+.dropdown-submenu > a:after {
+   border: 0;
+   margin-right: -5px;
+   margin-top: 0;
+   color: #CCC;
+   font-family: 'IcoMoon';
+   content: '\e0f1'
+}
 
 /* DropDown Caret
 -------------------------------------------------- */
@@ -1629,6 +1632,7 @@ FlipView control.
    filter: alpha(opacity=100);
    overflow: hidden;
    cursor: pointer;
+   vertical-position: bottom;
 }
 .caret:after {
    content: "\e0f3";
@@ -1637,7 +1641,7 @@ FlipView control.
 a.header-dropdown .caret {
    font-size: 26px;
    font-weight: 200;
-   line-height: 34px;
+   line-height: 30px;
    width: auto;
    height: 26px;
    vertical-align: middle;
@@ -1656,7 +1660,7 @@ a.header-dropdown .caret {
 
 
 .btn .caret {
-   margin: 0;
+   margin-top: 4px;
 }
 
 .btn-mini .caret {
@@ -1668,7 +1672,6 @@ a.header-dropdown .caret {
 }
 
 .btn-large .caret {
-   margin: 0;
    border: 0;
 }
 
@@ -1680,7 +1683,7 @@ a.header-dropdown .caret {
    border: 0;
 }
 .dropup .caret:after {
-   content: "\E098";
+   content: "\E0F2";
 }
 
 .btn-primary .caret,
@@ -1690,10 +1693,24 @@ a.header-dropdown .caret {
 .btn-success .caret,
 .btn-inverse .caret {
    border: 0;
-   /*opacity: 0.75;*/
-   /*filter: alpha(opacity=75);*/
 }
 
+
+/*
+Dropdowns
+*/
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+   background-image: none;
+   filter: 0;
+}
+
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover {
+   background-image: none;
+   filter: 0;
+}
 
 
 
@@ -1714,6 +1731,13 @@ a.header-dropdown .caret {
    margin: 0;
    border: 0;
 }
+.nav-tabs.nav-stacked > li:last-child > a,
+.nav-tabs.nav-stacked > li:first-child > a {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
 
 .nav-pills .dropdown-menu {
    -webkit-border-radius: 0;
@@ -1734,12 +1758,71 @@ a.header-dropdown .caret {
 .navbar .nav li.dropdown .dropdown-toggle .caret,
 .navbar .nav li.dropdown.open .caret {
    border: 0;
+   margin-top: 6px;
 }
 
 .navbar .nav li.dropdown.active .caret {
    /*opacity: 1;*/
    /*filter: alpha(opacity=100);*/
 }
+
+
+
+/*
+Nav List
+*/
+.nav-header {
+   font-size: 14px;
+   font-weight: 300;
+}
+
+
+/*
+NavBar
+*/
+.navbar-inner {
+   background-image: none;
+   filter: 0;
+   -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+           box-shadow: none;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+}
+
+.navbar .btn-navbar {
+   background-image: none;
+   filter: 0;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+}
+.navbar-search .search-query {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+
+
+/*
+Breadcrumb
+*/
+.breadcrumb {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
 
 
 /* Tabs & Pills
@@ -1933,8 +2016,12 @@ header h1 {display: inline;}
    display: block;
 }
 #top-info a {
-    display: inline-block;
+   display: inline-block;
    height: 46px;
+   color: #5A5A5A;
+}
+#top-info a:hover {
+   color: #000;
 }
    .top-info-block {
       display: block;
@@ -1986,7 +2073,7 @@ header h1 {display: inline;}
 }
 
 .table th {
-   /*font-family: "OpenSansRegular", Arial, Helvetica, Sans-Serif;*/
+   /*font-family: "Open Sans", Arial, Helvetica, Sans-Serif;*/
    font-size: 9pt;
    font-weight: bold;
    text-transform: uppercase;
@@ -2008,12 +2095,16 @@ header h1 {display: inline;}
    -moz-box-shadow: none;
    box-shadow: 0;
 }
-.pagination li:first-child a,
-.pagination li:last-child a {
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > span,
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > span {
    -webkit-border-radius: 0;
    -moz-border-radius: 0;
    border-radius: 0;
 }
+
+
 .pagination .active a {
    color: #FFF;
 }
@@ -2022,22 +2113,47 @@ header h1 {display: inline;}
 }
 
 
-.pager a {
+.pager li > a, .pager li > span {
    -webkit-border-radius: 0;
    -moz-border-radius: 0;
    border-radius: 0;
 }
 .pager .previous a:before {
-   /*font-family: "Segoe UI Symbol";
-   content: "\E096\2003";*/
    font-family: 'IcoMoon';
-	content: "\e045";
+	content: "\e0f4";
 }
 .pager .next a:after {
-   /*font-family: "Segoe UI Symbol";
-   content: "\2003\E097";*/
    font-family: 'IcoMoon';
-	content: "\e043";
+	content: "\e0f1";
+}
+
+
+/*
+Badge
+*/
+.badge {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+/*
+Hero Unit
+*/
+.hero-unit {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+/*
+Thumbnail
+*/
+.thumbnail {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
 }
 
 
@@ -2122,10 +2238,14 @@ header h1 {display: inline;}
    content: "\e131";
    font-size: 16px;
 }
-   .modal .close:hover,
    .alert .close:hover {
       background-color: rgba(255, 255, 255, 0.4);
       color: #FFF;
+   }
+   .modal .close:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #FFF;
+      margin-top: 0;
    }
 
 .alert-success {
@@ -2157,6 +2277,17 @@ header h1 {display: inline;}
    -webkit-border-radius: 0;
    -moz-border-radius: 0;
    border-radius: 0;
+}
+
+
+/*
+Carousel
+*/
+.carousel-control {
+   font-family: "IcoMoon";
+   font-size: 40px;
+   line-height: 40px;
+   border-width: 2px;
 }
 
 
@@ -2193,7 +2324,8 @@ header h1 {display: inline;}
             width: 100%;
             height: 36px;
             padding: 0 20px;
-            font-family: 'OpenSansLightRegular';
+            font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+            font-weight: 300;
             line-height: 36px;
             text-transform: uppercase;
             color: #FFF;
@@ -2207,4 +2339,16 @@ header h1 {display: inline;}
    margin-top: 20px;
    padding: 0;
    vertical-align: top;
+}
+
+
+/*
+Responsive Media Queries
+*/
+@media (max-width: 480px) {
+
+   .container-fluid {
+      padding: 0;
+   }
+
 }

@@ -19,14 +19,14 @@
    <meta name="author" content="AozoraLabs by Marcello Palmitessa"/>
    
    <!-- remove or comment this line if you want to use the local fonts -->
-   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 
    <link rel="stylesheet" type="text/css" href="content/css/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="content/css/bootstrap-responsive.css">
    <link rel="stylesheet" type="text/css" href="content/css/bootmetro.css">
    <link rel="stylesheet" type="text/css" href="content/css/bootmetro-tiles.css">
    <link rel="stylesheet" type="text/css" href="content/css/bootmetro-charms.css">
-   <link rel="stylesheet" type="text/css" href="content/css/metro-ui-semilight.css">
+   <link rel="stylesheet" type="text/css" href="content/css/metro-ui-light.css">
    <link rel="stylesheet" type="text/css" href="content/css/icomoon.css">
 
    <!--  these two css are to use only for documentation -->
@@ -43,7 +43,7 @@
    <!-- All JavaScript at the bottom, except for Modernizr and Respond.
       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-   <script src="scripts/modernizr.min.js"></script>
+   <script src="scripts/modernizr-2.6.1.min.js"></script>
 
    <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -57,23 +57,12 @@
    </script>
 </head>
 
-<body data-accent="blue">
+<body>
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-   <!--<header id="nav-bar" class="container-fluid">-->
-      <!--<div class="row-fluid">-->
-         <!--<div class="span12">-->
-            <!--<h1>BootMetro</h1>-->
-         <!--</div>-->
-      <!--</div>-->
-   <!--</header>-->
-   
-   <!--<h2>Create your hub</h2>-->
-   <!--<p></p>-->
-   
-   
+   <!--
    <div id="hero" class="container-fluid" xmlns="http://www.w3.org/1999/html">
       <div class="row-fluid">
    
@@ -88,7 +77,7 @@
                      <b class="icon-arrow-right-7"></b>
                   </a>
                   <br/>
-                  <small>Latest version: 0.5</small>
+                  <span class="label label-success">Latest version: 0.6</span>
                </p>
             </div>
             <div class="span7">
@@ -98,13 +87,42 @@
    
       </div>
    </div>
+   -->
+   <header id="hero" class="">
+   
+         <div class="jumbotron masthead">
+            <div class="container-fluid">
+               <div class="row-fluid">
+                  <div class="inner span5">
+                     <h1>BootMetro</h1>
+                     <h2>Metro style web framework</h2>
+                     <p>Simple and flexible HTML, CSS, and Javascript for web apps that wants to use the "Windows 8 App Store" style, without the need to run on Windows 8.</p>
+                     <p>
+                        <a class="btn btn-large btn-primary" href="https://github.com/aozora/bootmetro/zipball/master">
+                           Download Now
+                           <i class="icon-arrow-right-7"></i>
+                        </a>
+                        <span>it's free</span>
+                        <br/>
+                        <span class="label label-success">Latest version: 0.6</span>
+                     </p>
+                  </div>
+                  <div class="span7">
+                     <img id="hero-image" class="pull-right" width="500" height="265" src="content/img/hero4.png" alt="hero">
+                  </div>
+               </div>
+            </div>
+         </div>
+   
+   </header>
+   
    
    <div id="home-tiles" class="container-fluid metro">
       <div class="row-fluid">
          <div class="span4">
             <a class="tile wide imagetext bg-color-orange first" href="https://github.com/aozora/bootmetro">
                <div class="image-wrapper">
-                  <span class="icon icon-github"></span>
+                  <span class="icon icon-github"/>
                </div>
                <div class="column-text">
                   <div class="text-header3">View project on GitHub</div>
@@ -114,15 +132,13 @@
          <div class="span4">
             <a class="tile wide imagetext bg-color-green middle" href="./hub.html">
                <div class="image-wrapper">
-                  <!--<img src="content/img/metro-tiles.jpg" alt="demo"/>-->
-                  <span class="icon icon-grid-view"></span>
+                  <span class="icon icon-grid-view"/>
                </div>
                <div class="column-text">
                   <div class="text-header3">View the Demo online</div>
                </div>
             </a>
          </div>
-
          <div class="span4">
             <a class="tile wide imagetext bg-color-blue last" href="https://twitter.com/aozoralabs">
                <div class="image-wrapper">
@@ -133,24 +149,6 @@
                </div>
             </a>
          </div>
-         <!--<div class="span4">-->
-            <!--<a class="tile square text tilesquareblock bg-color-blue last" href="https://twitter.com/aozoralabs">-->
-               <!--<div class="text-big">-->
-                  <!--<span class="icon icon-twitter"></span>-->
-               <!--</div>-->
-               <!--<div class="text">-->
-                  <!--Follow me-->
-               <!--</div>-->
-            <!--</a>-->
-            <!--<a class="tile square text tilesquareblock bg-color-blue last" href="https://twitter.com/aozoralabs">-->
-               <!--<div class="text-big">-->
-                  <!--<span class="icon icon-google-plus"></span>-->
-               <!--</div>-->
-               <!--<div class="text">-->
-                  <!--Follow me-->
-               <!--</div>-->
-            <!--</a>-->
-         <!--</div>-->
       </div>
    </div>
    
@@ -165,7 +163,7 @@
                <img src="content/img/detail-hub.png" alt="hub" />
             </div>
             <p>Give more focus to your content. With a Metro style app you give users immediately focus on the primary infos, increasing the usability and reducing the distractions.</p>
-            <p>Use the same tile templates as defined for the original Windows 8 MetroUI.</p>
+            <!--<p>Use the same tile templates as defined for the original Windows 8 MetroUI.</p>-->
          </div>
          <div class="span4">
             <h2>Actions</h2>
@@ -197,31 +195,33 @@
             </div>
             <p>With the awesome <a href="http://keyamoon.com/icomoon">IcoMoon</a> font icon set, you can use hundreds of font icons with any color and any dimension.</p>
          </div>
+         <div class="span4">
+            <h2>Messages</h2>
+            <div class="tile wide image">
+               <img src="content/img/metro-messages.png" alt="icons" />
+            </div>
+            <p>Show messages, warning and errors like Windows 8 do.</p>
+         </div>
       </div>
+      <div class="row-fluid">
+         <div class="span4">
+            <h2>ListViews</h2>
+            <div class="tile wide image">
+               <img src="content/img/listviews.png" alt="charms" />
+            </div>
+            <p>Show selectable lists of elements.</p>
+         </div>
+         <div class="span4">
+         </div>
+         <div class="span4">
+         </div>
+      </div>
+   
    </div>
-
-  <div id="ads-tiles" class="container-fluid metro">
-     <div class="row-fluid">
-        <div class="span12">
-           <div id="ad-container" class="bg-color-blu">
-              <script type="text/javascript"><!--
-              google_ad_client = "ca-pub-4131516355996689";
-              /* BootMetro 728x90 */
-              google_ad_slot = "8605421585";
-              google_ad_width = 728;
-              google_ad_height = 90;
-              //-->
-              </script>
-              <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-           </div>
-        </div>
-
-     </div>
-
-  </div>
-
-
-  <div id="charms" class="win-ui-dark">
+   
+   
+   
+   <div id="charms" class="win-ui-dark">
    
       <div id="theme-charms-section" class="charms-section">
          <div class="charms-header">
@@ -250,8 +250,8 @@
    </div>
 
    <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-   <script>window.jQuery || document.write("<script src='scripts/jquery-1.7.2.min.js'>\x3C/script>")</script>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write("<script src='scripts/jquery-1.8.2.min.js'>\x3C/script>")</script>
 
    <script type="text/javascript" src="scripts/google-code-prettify/prettify.js"></script>
    <script type="text/javascript" src="scripts/jquery.mousewheel.js"></script>

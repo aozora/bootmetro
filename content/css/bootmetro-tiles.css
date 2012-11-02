@@ -1,10 +1,6 @@
 /* Metro Tiles
 -------------------------------------------------- */
-/*
- * Metro UI CSS v 1.0.1
- * Copyright 2012 Sergey Pimenov
- * Licensed under the MIT Lilcense
- */
+
 .bg-color-blue {
    background-color: #0072BC !important;
 }
@@ -38,46 +34,6 @@
 
 
 
-/*.place-left {*/
-   /*float: left;*/
-/*}*/
-/*.place-right {*/
-   /*float: right;*/
-/*}*/
-/*.pos-rel {*/
-   /*position: relative;*/
-/*}*/
-/*.pos-abs {*/
-   /*position: absolute;*/
-/*}*/
-/*.pos-fix {*/
-   /*position: fixed;*/
-/*}*/
-
-
-/*.top-left {*/
-   /*position: absolute;*/
-   /*top: 0;*/
-   /*left: 0;*/
-/*}*/
-/*.top-right {*/
-   /*position: absolute;*/
-   /*top: 0;*/
-   /*right: 0;*/
-/*}*/
-/*.bottom-right {*/
-   /*position: absolute;*/
-   /*bottom: 0;*/
-   /*right: 0;*/
-/*}*/
-/*.bottom-left {*/
-   /*position: absolute;*/
-   /*bottom: 0;*/
-   /*left: 0;*/
-/*}*/
-
-
-
 .metro {
    overflow: hidden;
 }
@@ -98,8 +54,8 @@
 
    .metro-sections h2 {
       margin-left: 5px;
-      font-family: "OpenSansRegular",Arial,Helvetica,Sans-Serif;
-      font-weight: 100;
+      font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+      font-weight: 300;
       text-transform: lowercase;
    }
 
@@ -146,128 +102,6 @@
       outline: 3px #225a68 solid;
    }
 
-
-/*
-.metro .tile .tile-icon-large {
-   margin-top: 20px;
-   margin-left: 0px;
-   display: table-cell;
-   vertical-align: middle !important;
-   text-align: center;
-   width: 150px;
-   padding-top: 20px;
-}
-.metro .tile .tile-icon-large img {
-   width: 96px;
-   height: 96px;
-}
-.metro .tile .tile-icon-cover {
-   margin-top: 20px;
-   margin-left: 0px;
-   display: table-cell;
-   vertical-align: middle !important;
-   text-align: center;
-   width: 150px;
-   padding-top: 30px;
-}
-   .metro .tile .tile-icon-cover img {
-      max-width: 90px;
-      height: 90px;
-   }
-
-.metro .tile .tile-icon {
-   position: absolute;
-   bottom: 10px;
-   left: 20px;
-   width: 32px;
-   height: 32px;
-}
-
-.metro .tile .tile-label {
-   position: absolute;
-   bottom: 10px;
-   left: 20px;
-   font-size: 14px;
-   color: #fff;
-}*/
-
-/* small caption on top of tile */
-/*
-.metro .tile .tile-caption {
-   position: absolute;
-   top: 0px;
-   left: 0px;
-   width: 130px;
-   padding: 2px 10px;
-   border-bottom: 1px #ff4500 solid;
-   background: #fff;
-   font-size: 14px;
-   color: #000;
-   font-size: 10px;
-   text-align: right;
-}
-.metro .tile .tile-header {
-   font-size: 19px;
-   color: #7ac479;
-   text-align: left;
-   margin: 20px;
-}*/
-
-/* little numeric count on the bottom-right margin of the tile 
-.metro .tile .tile-counter {
-   position: absolute;
-   right: 20px;
-   bottom: 10px;
-   font-size: 14px;
-   font-weight: normal;
-}*/
-/*
-.metro .tile .tile-text {
-   text-align: left;
-   margin-top: 20px;
-   margin-left: 20px;
-   font-size: 12px;
-}
-
-.metro .tile .tile-image {
-   padding: 0px;
-}
-   .metro .tile .tile-image img {
-      min-height: 100%;
-      min-width: 100%;
-   }
-
-.metro .tile .tile-content-main {
-   height: 150px;
-   position: relative;
-   overflow: hidden;
-}
-   .metro .tile .tile-content-sub {
-      position: relative;
-      margin: 1px;
-      height: 50px;
-      max-height: 148px;
-      padding: 2px 5px;
-      overflow: hidden;
-      box-shadow-bottom: inset 0px 0px 3px #fff;
-   }
-
-.metro .tile.tile-double {
-   width: 310px;
-}
-   .metro .tile.tile-double .tile-icon-large {
-      margin-top: 20px;
-      margin-left: 107px;
-   }
-   .metro .tile.tile-double .tile-icon-large img {
-      width: 96px;
-      height: 96px;
-   }
-   .metro .tile.tile-double .tile-icon-cover,
-   .metro .tile.tile-double .tile-icon-large {
-      width: 310px;
-   }
-*/
 
 .scroll {
    -webkit-transition:left 0.6s ease;  /* here the animation is set on 5 seconds */
@@ -366,10 +200,10 @@
       margin: 0 auto;
    }
    .metro .tile .app-label {
-      position: absolute;
+      bottom: 5px;
+      font-size: 12px;
       left: 20px;
-      bottom: 10px;
-      font-size: 11px;
+      position: absolute;
    }
    .metro .tile .app-count {
       position: absolute;
@@ -413,7 +247,8 @@
 
 /* normal header in 1 line of wrapped text*/
 .metro .tile .text-header {
-   font-family: "OpenSansLightRegular",Tahoma,Arial,Helvetica,Sans-Serif;
+   font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+   font-weight: 300;
    font-size: 34px;
    line-height: 36px;
    max-height: 36px;
@@ -422,7 +257,8 @@
 }
 /* One string of large text wrapped over a maximum of three lines.*/
 .metro .tile .text-header3 {
-   font-family: "OpenSansLightRegular",Tahoma,Arial,Helvetica,Sans-Serif;
+   font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+   font-weight: 300;
    font-size: 34px;
    line-height: 36px;
    text-align: left;
@@ -562,6 +398,91 @@
       max-width: 80px;
       max-height: 80px;
    }
+
+
+/* ListView
+ -------------------------------------------------- */
+.listview-container.grid-layout {
+   border: solid 2px rgba(0, 0, 0, 0.13);
+   height: 240px;
+   overflow: auto;
+   padding: 2px;
+   background-color: #FFF;
+}
+
+
+.mediumListIconTextItem {
+   display: inline-block;
+   position: relative;
+   vertical-align: top;;
+   width: 282px;
+   height: 70px;
+   padding: 5px;
+   margin-bottom: 7px;
+   margin-right: 24px;
+   border: solid 3px transparent;
+   overflow: hidden;
+   background-color: #FFF;
+   cursor: pointer;
+}
+   .mediumListIconTextItem:hover {
+      border: solid 3px #b3b3b3;
+      background-color: #b3b3b3;
+   }
+
+   .mediumListIconTextItem img.mediumListIconTextItem-Image {
+      display: inline-block;
+      vertical-align: top;;
+      width: 60px;
+      height: 60px;
+      margin: 5px;
+   }
+   .mediumListIconTextItem .mediumListIconTextItem-Image[class^="icon-"],
+   .mediumListIconTextItem .mediumListIconTextItem-Image[class*=" icon-"] {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      font-size: 60px;
+      line-height: 60px;
+      margin: 5px;
+   }
+
+
+.mediumListIconTextItem .mediumListIconTextItem-Detail {
+      display: inline-block;
+      vertical-align: top;;
+      margin: 5px;
+   }
+
+
+.mediumListIconTextItem.selected {
+   background-color: #4617b4;
+}
+   .mediumListIconTextItem.selected:after {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 16px;
+      height: 16px;
+      font-family: 'IcoMoon';
+      content: "\e03c";
+      color: #FFF;
+      font-size: 16px;
+   }
+
+   .mediumListIconTextItem.selected:hover {
+      border: solid 3px #b3b3b3;
+      background-color: #4617b4;
+   }
+   .mediumListIconTextItem.selected .mediumListIconTextItem-Detail,
+   .mediumListIconTextItem.selected .mediumListIconTextItem-Detail h4,
+   .mediumListIconTextItem.selected .mediumListIconTextItem-Detail h6 {
+      color: #FFF;
+   }
+
+
+
+
 
 
 /* Special undocumented tiles for ads

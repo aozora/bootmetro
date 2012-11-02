@@ -1,11 +1,3 @@
-/*!
-  © Microsoft. All rights reserved.
-
-  This library is supported for use in Windows Metro style apps only.
-
-  Version: 0.6
-*/
-
 /*
 Typographic color definitions.
 */
@@ -895,7 +887,7 @@ button[aria-selected=true]:active .win-commandring {
 /* Bootstrap Metro button
 -------------------------------------------------- */
 input.btn, button.btn, a.btn {
-   font-family: "OpenSansRegular",Tahoma,Arial,Helvetica,Sans-Serif;
+   font-family: "Open Sans",Tahoma,Arial,Helvetica,Sans-Serif;
 }
 
 .btn {
