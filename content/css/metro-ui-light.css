@@ -5,24 +5,13 @@ Typographic color definitions.
    color: #FFF;
    background-color: #1D1D1D;
 }
-/*.win-ui-dark .win-type-interactive:hover {*/
-   /*color: rgba(156, 114, 255, 0.8);*/
-/*}*/
-/*.win-ui-dark .win-type-interactive:hover:active {*/
-   /*color: rgba(156, 114, 255, 0.6);*/
-/*}*/
+
 html,
 body {
    color: #333;
    background-color: #FFF;
 }
 
-/*.win-type-interactive:hover {*/
-   /*color: rgba(79, 26, 203, 0.8);*/
-/*}*/
-/*.win-type-interactive:hover:active {*/
-   /*color: rgba(79, 26, 203, 0.6);*/
-/*}*/
 
 /*
 This class reverses the colors on the subtree to which it is applied.
@@ -166,21 +155,6 @@ Invalid style.
 input[type]:invalid {
    outline-color: rgb(255, 128, 51);
    outline-width: 2px;
-}
-
-/*
-Clear and reveal buttons.
-*/
-input::-ms-clear, input::-ms-reveal {
-   background-color: #FFF;
-   color: #000;
-}
-input::-ms-clear:hover, input::-ms-reveal:hover {
-   background-color: rgb(222, 222, 222);
-}
-input::-ms-clear:hover:active, input::-ms-reveal:hover:active {
-   background-color: #000;
-   color: #FFF;
 }
 
 /*
