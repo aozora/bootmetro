@@ -1,9 +1,8 @@
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <head>
    <meta charset="utf-8" />
    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
@@ -14,8 +13,8 @@
    <title>BootMetro</title>
 
    <meta name="robots" content="index, nofollow">
-   <meta name="description" content="MetroUI-Web : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
-   <meta name="keywords" content="metro, metroui, metro-ui, metro ui, windows 8, metro style, bootstrap, framework, web framework, css, html" />
+   <meta name="description" content="BootMetro : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
+   <meta name="keywords" content="bootmetro, modern ui, modern-ui, metro, metroui, metro-ui, metro ui, windows 8, metro style, bootstrap, framework, web framework, css, html" />
    <meta name="author" content="AozoraLabs by Marcello Palmitessa"/>
    
    <!-- remove or comment this line if you want to use the local fonts -->
@@ -28,6 +27,8 @@
    <link rel="stylesheet" type="text/css" href="content/css/bootmetro-charms.css">
    <link rel="stylesheet" type="text/css" href="content/css/metro-ui-light.css">
    <link rel="stylesheet" type="text/css" href="content/css/icomoon.css">
+   <link rel="stylesheet" type="text/css" href="content/css/datepicker.css">
+   <link rel="stylesheet" type="text/css" href="content/css/daterangepicker.css">
 
    <!--  these two css are to use only for documentation -->
    <link rel="stylesheet" type="text/css" href="content/css/demo.css">
@@ -58,9 +59,9 @@
 </head>
 
 <body>
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+   <!--[if lt IE 7]>
+   <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+   <![endif]-->
 
    <!--
    <div id="hero" class="container-fluid" xmlns="http://www.w3.org/1999/html">
@@ -261,6 +262,8 @@
    <script type="text/javascript" src="scripts/bootmetro-charms.js"></script>
    <script type="text/javascript" src="scripts/demo.js"></script>
    <script type="text/javascript" src="scripts/holder.js"></script>
+   <script type="text/javascript" src="scripts/bootstrap-datepicker.js"></script>
+   <script type="text/javascript" src="scripts/daterangepicker.js"></script>
 
    <script type="text/javascript">
       $(".metro").metro();
