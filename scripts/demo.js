@@ -37,6 +37,8 @@ $(function(){
       $(this).toggleClass('selected');
    });
 
+   // Datepicker
+   $('.datepicker').datepicker()
 
    //$('#home-carousel').carousel({interval: 5000});
 
