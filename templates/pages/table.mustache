@@ -1,0 +1,168 @@
+<!-- Header
+================================================== -->
+<header id="nav-bar" class="container-fluid">
+   <div class="row-fluid">
+      <div class="span8">
+         <div id="header-container">
+            <a id="backbutton" class="win-backbutton" href="./hub.html"></a>
+            <h5>{{appname}}</h5>
+            <div class="dropdown">
+               <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
+                  {{_i}}Demo Table with Filters{{/i}}
+                  <b class="caret"></b>
+               </a>
+               {{>headermenu}}
+            </div>
+         </div>
+      </div>
+      {{>loggeduser}}
+   </div>
+</header>
+
+<div class="container-fluid">
+   <div class="row-fluid">
+      <div class="span12">
+
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+         <div id="content-filters" class="row-fluid">
+            <div class="span12">
+               <ul class="nav nav-pills">
+                  <li class="dropdown">
+                     <a class="dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                        All projects
+                        <b class="caret" href="#"></b>
+                     </a>
+                     <ul id="projects-filter" class="dropdown-menu">
+                        <li><a href="#">All projects</a></li>
+                        <li><a href="#">ACME</a></li>
+                        <li><a href="#">Surface</a></li>
+                        <li><a href="#">OSX</a></li>
+                        <li><a href="#">WinRT</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                        All budgets
+                        <b class="caret" href="#"></b>
+                     </a>
+                     <ul id="budget-filter" class="dropdown-menu">
+                        <li><a href="#">All budgets</a></li>
+                        <li><a href="#">Budget &lt; 1.000</a></li>
+                        <li><a href="#">Budget 1.000 - 10.000</a></li>
+                        <li><a href="#">Budget 10.000 - 45.000</a></li>
+                        <li><a href="#">Budget 45.000 - 100.000</a></li>
+                        <li><a href="#">Budget &gt; 100.000</a></li>
+                     </ul>
+                  </li>
+                  <li class="">
+                     <a>&nbsp;|&nbsp;</a><span>Sort by&nbsp;</span>
+                  </li>
+                  <li class="dropdown">
+
+                     <a class="dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                        Project name
+                        <b class="caret" href="#"></b>
+                     </a>
+                     <ul id="sort-filter" class="dropdown-menu">
+                        <li><a href="#">Project name</a></li>
+                        <li><a href="#">Budget Cost</a></li>
+                        <li><a href="#">Duration</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="row-fluid">
+            <div class="span12">
+
+               <table class="table table-condensed">
+                  <thead>
+                  <tr>
+                     <th>Project</th>
+                     <th>Duration</th>
+                     <th class="span2">Contract Value</th>
+                     <th class="span2">Budget Cost</th>
+                     <th class="span2">Cost Variance</th>
+                     <th>Location</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                     <td>ACME</td>
+                     <td>440 days</td>
+                     <td class="span2 align-right">70.570,00&#x20AC;</td>
+                     <td class="span2 align-right">70.570,00&#x20AC;</td>
+                     <td class="span2 align-right">+3000,00</td>
+                     <td>Milano</td>
+                  </tr>
+                  <tr>
+                     <td>Surface</td>
+                     <td>140 days</td>
+                     <td class="span2 align-right">70.570,00&#x20AC;</td>
+                     <td class="span2 align-right">70.570,00&#x20AC;</td>
+                     <td class="span2 align-right">+3000,00</td>
+                     <td>Milano</td>
+                  </tr>
+                  <tr>
+                     <td>OSX</td>
+                     <td>440 days</td>
+                     <td class="span2 align-right">70.570,00&#x20AC;</td>
+                     <td class="span2 align-right">70.570,00&#x20AC;</td>
+                     <td class="span2 align-right">+3000,00</td>
+                     <td>Milano</td>
+                  </tr>
+                  <tr>
+                     <td>WinRT</td>
+                     <td>1440 days</td>
+                     <td class="span2 align-right">170.570,00&#x20AC;</td>
+                     <td class="span2 align-right">170.570,00&#x20AC;</td>
+                     <td class="span2 align-right">-43000,00</td>
+                     <td>Milano</td>
+                  </tr>
+                  </tbody>
+               </table>
+
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div>
+
+<footer class="win-ui-dark win-commandlayout navbar-fixed-bottom">
+   <div class="container">
+      <div class="row">
+         <div class="span6 align-left">
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#x0067;</span>
+               <span class="win-label">Cerca</span>
+            </button>
+
+            <hr class="win-command" />
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xe125;</span>
+               <span class="win-label">Reload</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE165;</span>
+               <span class="win-label">Send Email</span>
+            </button>
+         </div>
+         <div class="span6 align-right">
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xE001;</span>
+               <span class="win-label">Delete</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xe03e;</span>
+               <span class="win-label">Add</span>
+            </button>
+         </div>
+      </div>
+   </div>
+</footer>

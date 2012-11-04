@@ -1,0 +1,115 @@
+<!-- Header
+================================================== -->
+<header id="nav-bar" class="container-fluid">
+   <div class="row-fluid">
+      <div class="span8">
+         <div id="header-container">
+            <a id="backbutton" class="win-backbutton" href="./hub.html"></a>
+            <h5>{{appname}}</h5>
+            <div class="dropdown">
+               <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
+                  {{_i}}ListViews{{/i}}
+                  <b class="caret"></b>
+               </a>
+               {{>headermenu}}
+            </div>
+         </div>
+      </div>
+      {{>loggeduser}}
+   </div>
+</header>
+
+<div class="container-fluid">
+   <div class="row-fluid">
+      <div class="metro span12">
+
+         <header>
+            <h2>Grid Layout</h2>
+            <p>Basic sample for simple ListView into <em>Grid layout</em></p>
+         </header>
+
+         <div id="listview-grid-demo" class="listview-container grid-layout">
+            <div class="mediumListIconTextItem">
+               <img src="holder.js/60x60" class="mediumListIconTextItem-Image" />
+               <div class="mediumListIconTextItem-Detail">
+                  <h4>Title</h4>
+                  <h6>Lorem ipsum sin ut dolorem</h6>
+               </div>
+            </div>
+            <div class="mediumListIconTextItem">
+               <img src="holder.js/60x60" class="mediumListIconTextItem-Image" />
+               <div class="mediumListIconTextItem-Detail">
+                  <h4>Title</h4>
+                  <h6>Lorem ipsum sin ut dolorem</h6>
+               </div>
+            </div>
+            <div class="mediumListIconTextItem">
+               <img src="holder.js/60x60" class="mediumListIconTextItem-Image" />
+               <div class="mediumListIconTextItem-Detail">
+                  <h4>Title</h4>
+                  <h6>Lorem ipsum sin ut dolorem</h6>
+               </div>
+            </div>
+
+            <div class="mediumListIconTextItem">
+               <div class="icon-google-plus-3 mediumListIconTextItem-Image" ></div>
+               <div class="mediumListIconTextItem-Detail">
+                  <h4>Title</h4>
+                  <h6>Lorem ipsum sin ut dolorem</h6>
+               </div>
+            </div>
+            <div class="mediumListIconTextItem">
+               <div class="icon-facebook-2 mediumListIconTextItem-Image" ></div>
+               <div class="mediumListIconTextItem-Detail">
+                  <h4>Title</h4>
+                  <h6>Lorem ipsum sin ut dolorem</h6>
+               </div>
+            </div>
+            <div class="mediumListIconTextItem">
+               <div class="icon-twitter-2 mediumListIconTextItem-Image" ></div>
+               <div class="mediumListIconTextItem-Detail">
+                  <h4>Title</h4>
+                  <h6>Lorem ipsum sin ut dolorem</h6>
+               </div>
+            </div>
+
+            <div class="mediumListIconTextItem">
+               <div class="icon-images mediumListIconTextItem-Image" ></div>
+               <div class="mediumListIconTextItem-Detail">
+                  <h4>Title</h4>
+                  <h6>Lorem ipsum sin ut dolorem</h6>
+               </div>
+            </div>
+            <div class="mediumListIconTextItem">
+               <div class="icon-movie mediumListIconTextItem-Image" ></div>
+               <div class="mediumListIconTextItem-Detail">
+                  <h4>Title</h4>
+                  <h6>Lorem ipsum sin ut dolorem</h6>
+               </div>
+            </div>
+            <div class="mediumListIconTextItem">
+               <div class="icon-chart  mediumListIconTextItem-Image" ></div>
+               <div class="mediumListIconTextItem-Detail">
+                  <h4>Title</h4>
+                  <h6>Lorem ipsum sin ut dolorem</h6>
+               </div>
+            </div>
+
+         </div>
+
+         <br/>
+         <h3>Enabling selection mode</h3>
+         <p>To enabling the toggle selection simply use a script like this:</p>
+<pre class="prettyprint linenums">
+$('#listview-grid-demo').on('click', '.mediumListIconTextItem', function(e){
+   e.preventDefault();
+   $(this).toggleClass('selected');
+});
+</pre>
+
+         <span class="label label-important">In the next version there will be a jQuery plugin to expand these functionality.</span>
+
+
+      </div>
+   </div>
+</div>

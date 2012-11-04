@@ -1,0 +1,223 @@
+<!-- Header
+================================================== -->
+<header id="nav-bar" class="container-fluid">
+   <div class="row-fluid">
+      <div class="span8">
+         <div id="header-container">
+            <a id="backbutton" class="win-backbutton" href="./tiles-templates.html"></a>
+            <h5>{{appname}}</h5>
+            <div class="dropdown">
+               <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                  {{_i}}Square Tiles Templates{{/i}}
+                  <b class="caret"></b>
+               </a>
+               {{>headermenu}}
+            </div>
+         </div>
+      </div>
+      {{>loggeduser}}
+   </div>
+</header>
+
+<div class="container-fluid">
+   <div class="subnav">
+      <ul class="nav nav-pills">
+         <li><a href="#textonly">{{_i}}Text Only Tiles{{/i}}</a></li>
+         <li><a href="#imageonly">{{_i}}Image Only Tiles{{/i}}</a></li>
+         <li><a href="#squarepeek">{{_i}}Square peek templates{{/i}}</a></li>
+      </ul>
+   </div>
+</div>
+
+
+<div class="container-fluid metro">
+   <div class="row-fluid">
+      <div class="span12">
+
+
+         <table id="apptile" class="table">
+            <caption><h3>App Tile</h3></caption>
+            <thead>
+               <tr>
+                  <th>Template Name</th>
+                  <th>Description</th>
+                  <th>Tile</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td><strong>Square App Tile</strong></td>
+                  <td></td>
+                  <td>
+                     <a class="tile app" href="#">
+                        <div class="image-wrapper">
+                           <img src="content/img/Windows 8.png" alt=""/>
+                        </div>
+                        <div class="app-label">AppName</div>
+                        <div class="app-count">12</div>
+                     </a>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+
+
+         <table id="textonly" class="table">
+            <caption><h3>Text Only Tiles</h3></caption>
+            <thead>
+               <tr>
+                  <th>Template Name</th>
+                  <th>Description</th>
+                  <th>Tile</th>
+               </tr>
+            </thead>
+            <tbody class="">
+               <tr>
+                  <td><strong>TileSquareBlock</strong></td>
+                  <td>One short string of large block text over a single, short line of bold, regular text.</td>
+                  <td>
+                     <a class="tile square text tilesquareblock" href="#">
+                        <div class="text-big">22</div>
+                        <div class="text">Text field 2</div>
+                     </a>
+                  </td>
+               </tr>
+               <tr>
+                  <td><strong>TileSquareText01</strong></td>
+                  <td>One header string in larger text on the first line; three strings of regular text on each of the next three lines. Text does not wrap.</td>
+                  <td>
+                     <a class="tile square text" href="#">
+                        <div class="text-header">Header</div>
+                        <div class="text">Text field 1</div>
+                        <div class="text">Text field 2</div>
+                        <div class="text">Text field 3</div>
+                     </a>
+                  </td>
+               </tr>
+               <tr>
+                  <td><strong>TileSquareText02</strong></td>
+                  <td>One header string in larger text on the first line, over one string of regular text wrapped over a maximum of three lines.</td>
+                  <td>
+                     <a class="tile square text" href="#">
+                        <div class="text-header">Header</div>
+                        <div class="text3">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                     </a>
+                  </td>
+               </tr>
+               <tr>
+                  <td><strong>TileSquareText03</strong></td>
+                  <td>Four strings of regular text on four lines. Text does not wrap.</td>
+                  <td>
+                     <a class="tile square text" href="#">
+                        <div class="text">Text field 1</div>
+                        <div class="text">Text field 2</div>
+                        <div class="text">Text field 3</div>
+                        <div class="text">Text field 4</div>
+                     </a>
+                  </td>
+               </tr>
+               <tr>
+                  <td><strong>TileSquareText04</strong></td>
+                  <td>One string of regular text wrapped over a maximum of four lines.</td>
+                  <td>
+                     <a class="tile square text" href="#">
+                        <div class="text4">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                     </a>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+
+         <table id="imageonly" class="table">
+            <caption><h3>Image Only Tiles</h3></caption>
+            <thead>
+               <tr>
+                  <th>Template Name</th>
+                  <th>Description</th>
+                  <th>Tile</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td><strong>TileSquareImage</strong></td>
+                  <td>One square image that fills the entire tile, no text.</td>
+                  <td>
+                     <a class="tile square image" href="#">
+                        <img src="content/img/avatar-movie-puzzles-2.jpg" alt=""/>
+                     </a>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+
+         <table id="squarepeek" class="table">
+            <caption><h3>Square peek templates</h3></caption>
+            <thead>
+               <tr>
+                  <th>Template Name</th>
+                  <th>Description</th>
+                  <th>Tile</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td><strong>TileSquarePeekImageAndText01</strong></td>
+                  <td>Top: One square image, no text. Bottom: One header string in larger text on the first line, three strings of regular text on each of the next three lines. Text does not wrap.</td>
+                  <td>
+                     <a class="tile squarepeek" href="#">
+                        <img src="content/img/avatar-movie-puzzles-2.jpg" alt=""/>
+                        <div class="text-inner">
+                           <div class="text-header">Header</div>
+                           <div class="text">Text field 1</div>
+                           <div class="text">Text field 2</div>
+                           <div class="text">Text field 3</div>
+                        </div>
+                     </a>
+                  </td>
+               </tr>
+               <tr>
+                  <td><strong>TileSquarePeekImageAndText02</strong></td>
+                  <td>Top: Square image, no text. Bottom: One header string in larger text on the first line, over one string of regular text wrapped over a maximum of three lines.</td>
+                  <td>
+                     <a class="tile squarepeek" href="#">
+                        <img src="content/img/avatar-movie-puzzles-2.jpg" alt=""/>
+                        <div class="text-inner">
+                           <div class="text-header">Header</div>
+                           <div class="text3">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                        </div>
+                     </a>
+                  </td>
+               </tr>
+               <tr>
+                  <td><strong>TileSquarePeekImageAndText03</strong></td>
+                  <td>Top: Square image, no text. Bottom: Four strings of regular text on four lines. Text does not wrap.</td>
+                  <td>
+                     <a class="tile squarepeek" href="#">
+                        <img src="content/img/avatar-movie-puzzles-2.jpg" alt=""/>
+                        <div class="text-inner">
+                           <div class="text">Text field 1</div>
+                           <div class="text">Text field 2</div>
+                           <div class="text">Text field 3</div>
+                           <div class="text">Text field 4</div>
+                        </div>
+                     </a>
+                  </td>
+               </tr>
+               <tr>
+                  <td><strong>TileSquarePeekImageAndText04</strong></td>
+                  <td>Top: Square image, no text. Bottom: One string of regular text wrapped over a maximum of four lines.</td>
+                  <td>
+                     <a class="tile squarepeek" href="#">
+                        <img src="content/img/avatar-movie-puzzles-2.jpg" alt=""/>
+                        <div class="text-inner">
+                           <div class="text4">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                        </div>
+                     </a>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+
+      </div>
+   </div>
+</div>

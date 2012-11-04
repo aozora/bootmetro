@@ -1,0 +1,177 @@
+<!-- Header
+================================================== -->
+<header id="nav-bar" class="container-fluid">
+   <div class="row-fluid">
+      <div class="span8">
+         <div id="header-container">
+            <a id="backbutton" class="win-backbutton" href="./index.html"></a>
+            <h5>{{appname}}</h5>
+            <div class="dropdown">
+               <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                  {{_i}}Start{{/i}}
+                  <b class="caret"></b>
+               </a>
+               {{>headermenu}}
+            </div>
+         </div>
+      </div>
+      {{>loggeduser}}
+   </div>
+</header>
+
+<div class="container-fluid">
+   <div class="row-fluid">
+      <div class="metro span12">
+         <div class="metro-sections">
+
+            <div id="section1" class="metro-section tile-span-4">
+
+               <h2>MetroUI Demos</h2>
+
+               <a class="tile wide imagetext bg-color-blueDark" href="./tiles-templates.html">
+                  <div class="image-wrapper">
+                     <img src="content/img/metro-tiles.jpg" />
+                  </div>
+                  <div class="column-text">
+                     <div class="text4">List of all tile templates: square, wide, widepeek, with images or text only.</div>
+                  </div>
+                  <div class="app-label">Tiles Templates</div>
+               </a>
+
+               <a class="tile wide imagetext wideimage bg-color-orange" href="./appbar-demo.html">
+                  <img src="content/img/appbar.png" alt=""/>
+                  <div class="textover-wrapper bg-color-blue">
+                     <div class="text2">Application Bar</div>
+                  </div>
+               </a>
+
+               <a class="tile app wide bg-color-greenDark" href="./table.html">
+                  <div class="image-wrapper">
+                     <img src="content/img/My Apps.png" alt=""/>
+                  </div>
+                  <div class="app-label">Styled Table</div>
+               </a>
+
+               <a class="tile app bg-color-purple" href="./listviews.html">
+                  <div class="image-wrapper">
+                     <span class="icon icon-list-2"></span>
+                  </div>
+                  <span class="app-label">ListView</span>
+               </a>
+
+               <a class="tile app bg-color-red" href="./charms-demo.html">
+                  <div class="image-wrapper">
+                     <span class="icon icon-publish"></span>
+                  </div>
+                  <span class="app-label">[TODO] Charms</span>
+               </a>
+
+               <a class="tile app bg-color-yellow" href="./images.html">
+                  <div class="image-wrapper">
+                     <span class="icon icon-images"></span>
+                  </div>
+                  <span class="app-label">[TODO] Images</span>
+               </a>
+
+               <a class="tile app bg-color-blueDark" href="./icons.html">
+                  <div class="image-wrapper">
+                     <span class="icon icon-IcoMoon" ></span>
+                  </div>
+                  <span class="app-label">Icons</span>
+               </a>
+
+            </div>
+
+            <div id="section2" class="metro-section tile-span-4">
+
+               <h2>Bootstrap Metro</h2>
+
+               <a class="tile wide imagetext bg-color-blue" href="./scaffolding.html">
+                  <div class="image-wrapper">
+                     <img src="content/img/My Apps.png" />
+                  </div>
+                  <div class="column-text">
+                     <div class="text">Grid system</div>
+                     <div class="text">Layouts</div>
+                     <div class="text">Responsive design</div>
+                  </div>
+                  <span class="app-label">SCAFFOLDING</span>
+               </a>
+
+               <a class="tile wide imagetext bg-color-blueDark" href="./base-css.html">
+                  <div class="image-wrapper">
+                     <img src="content/img/Coding app.png" />
+                  </div>
+                  <div class="column-text">
+                     <div class="text">Typography</div>
+                     <div class="text">Tables</div>
+                     <div class="text">Forms</div>
+                     <div class="text">Buttons</div>
+                  </div>
+                  <span class="app-label">BASE CSS</span>
+               </a>
+
+               <a class="tile app bg-color-orange" href="./components.html">
+                  <div class="image-wrapper">
+                     <img src="content/img/RegEdit.png" alt="" />
+                  </div>
+                  <span class="app-label">COMPONENTS</span>
+               </a>
+
+               <a class="tile app bg-color-red" href="./javascript.html">
+                  <div class="image-wrapper">
+                     <img src="content/img/Devices.png" alt="" />
+                  </div>
+                  <span class="app-label">JAVASCRIPT</span>
+               </a>
+
+            </div>
+
+            <!--<div id="section3" class="metro-section tile-span-2">-->
+               <!--<h2>Category 3</h2>-->
+               <!--<div class="tile tile-double bg-color-blue">-->
+                  <!--<div class="tile-icon-large">-->
+                     <!--<img src="content/img/Live%20SkyDrive.png" />-->
+                  <!--</div>-->
+                  <!--<span class="tile-label">Live SkyDrive</span>-->
+               <!--</div>-->
+               <!--<div class="tile bg-color-blueDark">-->
+                  <!--<div class="tile-icon-large">-->
+                     <!--<img src="content/img/Bluetooth.png" />-->
+                  <!--</div>-->
+                  <!--<span class="tile-label">Bluetooth</span>-->
+               <!--</div>-->
+               <!--<div class="tile bg-color-red">-->
+                  <!--<div class="tile-icon-large">-->
+                     <!--<img src="content/img/Control%20Panel.png" />-->
+                  <!--</div>-->
+                  <!--<span class="tile-label">Control Panel</span>-->
+               <!--</div>-->
+               <!--<div class="tile bg-color-green">-->
+                  <!--<div class="tile-icon-large">-->
+                     <!--<img src="content/img/Signal.png" />-->
+                  <!--</div>-->
+                  <!--<span class="tile-label">WiFi Settings</span>-->
+               <!--</div>-->
+               <!--<div class="tile bg-color-yellow">-->
+                  <!--<div class="tile-icon-large">-->
+                     <!--<img src="content/img/Computer%20alt%202.png" />-->
+                  <!--</div>-->
+                  <!--<span class="tile-label">My Computer</span>-->
+               <!--</div>-->
+            <!--</div>-->
+
+         </div>
+
+         <!-- <a id="tiles-scroll-prev" class="win-command carousel-control left" href="#metro-carousel" data-slide="prev">
+            <span class="win-commandimage win-commandring">&#xe05d;</span>
+         </a>
+         <a id="tiles-scroll-next"  class="win-command carousel-control right" href="#metro-carousel" data-slide="next">
+            <span class="win-commandimage win-commandring">&#xe059;</span>
+         </a> -->
+
+      </div>
+   </div>
+</div>
+
+

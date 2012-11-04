@@ -1,0 +1,61 @@
+<!-- Header
+================================================== -->
+<header id="nav-bar" class="container-fluid">
+   <div class="row-fluid">
+      <div class="span8">
+         <div id="header-container">
+            <a id="backbutton" class="win-backbutton" href="./hub.html"></a>
+            <h5>{{appname}}</h5>
+            <div class="dropdown">
+               <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
+                  {{_i}}Tiles Templates{{/i}}
+                  <b class="caret"></b>
+               </a>
+               {{>headermenu}}
+            </div>
+         </div>
+      </div>
+      {{>loggeduser}}
+   </div>
+</header>
+
+<div class="container-fluid">
+   <div class="row-fluid">
+      <div class="metro span12">
+         <div class="metro-sections">
+
+               <div class="metro-section" id="section1">
+
+                  <a class="tile wide imagetext bg-color-gree" href="./square-tiles-templates.html">
+                     <div class="image-wrapper">
+                        <img src="content/img/metro-tiles.jpg" />
+                     </div>
+                     <div class="column-text">
+                        <div class="text-header3">Square tiles templates</div>
+                     </div>
+                  </a>
+
+                  <a class="tile wide imagetext tile-double bg-color-orange" href="./wide-tiles-templates.html">
+                     <div class="image-wrapper">
+                        <img src="content/img/metro-tiles-wide.jpg" />
+                     </div>
+                     <div class="column-text">
+                        <div class="text-header3">Wide tiles templates</div>
+                     </div>
+                  </a>
+
+                  <a class="tile wide imagetext bg-color-green" href="./widepeek-tiles-templates.html">
+                     <div class="image-wrapper">
+                        <img src="content/img/metro-tiles-widepeek.png" />
+                     </div>
+                     <div class="column-text">
+                        <div class="text-header3">Wide peek tiles templates</div>
+                     </div>
+                  </a>
+
+               </div>
+
+         </div>
+      </div>
+   </div>
+</div>
