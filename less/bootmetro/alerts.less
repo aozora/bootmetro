@@ -1,0 +1,66 @@
+//
+// Alerts
+// --------------------------------------------------
+
+.modal {
+   .close:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #FFF;
+      margin-top: 0;
+   }
+}
+.modal .close:after,.alert .close:after {
+   content: "\e131";
+   font-size: 16px;
+}
+.alert-heading {
+   font-weight: 600;
+}
+.alert-info {
+   color: #FFFFFF;
+   background-color: #2D89F0;
+   border-color: #2D89F0;
+}
+.alert-success {
+   color: #FFFFFF;
+   background-color: #01A31C;
+   border-color: #01A31C;
+}
+.alert {
+   text-shadow: none;
+   background-color: #D44A26;
+   border-color: #D44A26;
+   color: #FFF;
+   position: relative;
+   .close:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #FFF;
+   }
+}
+.alert-danger,.alert-error {
+   color: #FFFFFF;
+   background-color: #BC1C48;
+   border-color: #BC1C48;
+}
+.modal .close,.alert .close {
+   position: absolute;
+   top: 0;
+   right: 0;
+   display: inline-block;
+   min-width: 0;
+   min-height: 0;
+   width: 30px;
+   height: 30px;
+   font-family: 'IcoMoon';
+   font-weight: normal;
+   font-size: 12px;
+   line-height: 12px;
+   text-indent: 0;
+   text-shadow: none;
+   opacity: 1;
+   background-clip: border-box;
+   box-sizing: border-box;
+   border: 0;
+   text-align: center;
+   vertical-align: baseline;
+}

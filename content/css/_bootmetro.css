@@ -1954,7 +1954,6 @@ header h1 {display: inline;}
    margin-bottom: 20px;
 }
 
-
 #top-info {
    display: block;
 }
@@ -2119,7 +2118,7 @@ Thumbnail
       -moz-border-radius: 0;
       border-radius: 0;
    }
-   .nav > li > a:hover {
+   #content-filters .nav > li > a:hover {
       text-decoration: none;
       background-color: inherit;
    }
