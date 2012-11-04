@@ -1,0 +1,81 @@
+<!-- Header
+================================================== -->
+<header id="nav-bar" class="container-fluid">
+   <div class="row-fluid">
+      <div class="span8">
+         <div id="header-container">
+            <a id="backbutton" class="win-backbutton" href="./hub.html"></a>
+            <h5>{{appname}}</h5>
+            <div class="dropdown">
+               <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
+                  {{_i}}Wizard{{/i}}
+                  <b class="caret"></b>
+               </a>
+               {{>headermenu}}
+            </div>
+         </div>
+      </div>
+      {{>loggeduser}}
+   </div>
+</header>
+
+<div class="container-fluid">
+   <div class="row-fluid wizard">
+      <div class="span3">
+         <div id="wizard-steps-container">
+            <h2>Wizard Title</h2>
+
+            <ul id="wizard-steps">
+               <li>
+                  <a href="#">Step 1 lorem ipsum</a>
+               </li>
+               <li class="active">
+                  <a href="#">Step 2 lorem ipsum</a>
+               </li>
+               <li>
+                  <a href="#">Step 3 lorem ipsum</a>
+               </li>
+               <li>
+                  <a href="#">Step 4 lorem ipsum</a>
+               </li>
+               <li>
+                  <a href="#">Step 5 lorem ipsum</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+      <div class="span9">
+         <section id="wizard-step-content">
+            <h2>Step Title</h2>
+            <h3>Subtitle</h3>
+
+            <form class="form-horizontal">
+
+            </form>
+
+         </section>
+      </div>
+   </div>
+</div>
+
+<footer class="win-ui-dark win-commandlayout navbar-fixed-bottom">
+   <div class="container">
+      <div class="row">
+         <div class="span12 align-right">
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xe1cd;</span>
+               <span class="win-label">Previous</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandimage win-commandring">&#xe1ca;</span>
+               <span class="win-label">Next</span>
+            </button>
+
+         </div>
+
+      </div>
+   </div>
+</footer>
