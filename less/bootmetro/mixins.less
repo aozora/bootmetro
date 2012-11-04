@@ -7,52 +7,13 @@
 // CSS3 PROPERTIES
 // --------------------------------------------------
 
-// Border Radius
-.border-radius(@radius) {
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
+// NO Border Radius
+.no-border-radius {
+   -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+           border-radius: 0;
 }
 
-// Single Corner Border Radius
-.border-top-left-radius(@radius) {
-  -webkit-border-top-left-radius: 0;
-      -moz-border-radius-topleft: 0;
-          border-top-left-radius: 0;
-}
-.border-top-right-radius(@radius) {
-  -webkit-border-top-right-radius: 0;
-      -moz-border-radius-topright: 0;
-          border-top-right-radius: 0;
-}
-.border-bottom-right-radius(@radius) {
-  -webkit-border-bottom-right-radius: 0;
-      -moz-border-radius-bottomright: 0;
-          border-bottom-right-radius: 0;
-}
-.border-bottom-left-radius(@radius) {
-  -webkit-border-bottom-left-radius: 0;
-      -moz-border-radius-bottomleft: 0;
-          border-bottom-left-radius: 0;
-}
-
-// Single Side Border Radius
-.border-top-radius(@radius) {
-  .border-top-right-radius(0);
-  .border-top-left-radius(0);
-}
-.border-right-radius(@radius) {
-  .border-top-right-radius(0);
-  .border-bottom-right-radius(0);
-}
-.border-bottom-radius(@radius) {
-  .border-bottom-right-radius(0);
-  .border-bottom-left-radius(0);
-}
-.border-left-radius(@radius) {
-  .border-top-left-radius(0);
-  .border-bottom-left-radius(0);
-}
 
 // Drop shadows
 .box-shadow(@shadowA, @shadowB:X, ...){
@@ -60,4 +21,80 @@
      -moz-box-shadow: none;
           box-shadow: none;
 }
+// NO Drop shadows
+   .no-box-shadow {
+   -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+           box-shadow: none;
+}
 
+// Gradient Bar Colors for buttons and alerts
+   .gradientBar(@primaryColor, @secondaryColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+   color: @textColor;
+   text-shadow: @textShadow;
+   #gradient > .vertical(@primaryColor, @secondaryColor);
+   border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
+   border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+}
+
+#gradient {
+   .horizontal(@startColor: #555, @endColor: #333) {
+      background-color: @endColor;
+      background-image: none;
+      .reset-filter();
+   }
+   .vertical(@startColor: #555, @endColor: #333) {
+      background-color: mix(@startColor, @endColor, 60%);
+      background-image: none;
+      .reset-filter();
+   }
+   .directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
+      background-color: @endColor;
+      background-image: none;
+   }
+   .vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+      background-color: mix(@midColor, @endColor, 80%);
+      background-image: none;
+      .reset-filter();
+   }
+   .radial(@innerColor: #555, @outerColor: #333) {
+      background-color: @outerColor;
+      background-image: none;
+   }
+   .striped(@color: #555, @angle: 45deg) {
+      background-color: @color;
+      background-image: none;
+   }
+}
+
+
+// The Grid
+.container-fluid {
+   padding-left: 70px;
+   padding-right: 70px;
+}
+
+.row-fluid .hide {
+   display: none;
+}
+
+
+/* General alignment styles
+-------------------------------------------------- */
+.align-right {text-align: right}
+.align-left {text-align: left}
+.align-center {text-align: center}
+
+td.align-right {text-align: right}
+td.align-left {text-align: left}
+td.align-center {text-align: center}
+
+.block { display: block;}
+
+
+
+/* General form mixins
+-------------------------------------------------- */
+.formBorder {
+   border: 2px solid @inputBorder;
+}

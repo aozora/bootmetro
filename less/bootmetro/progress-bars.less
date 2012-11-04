@@ -1,0 +1,68 @@
+//
+// Progress bars
+// --------------------------------------------------
+
+/*
+Progress control. */
+.progress {
+   background-image: none;
+   .no-border-radius;
+}
+.progress.progress-indeterminate {
+   background-color: transparent;
+}
+
+.progress.progress-indeterminate .bar {
+   display: block;
+   position: static;
+   width: 188px;
+   height: 11px;
+   margin: 4px auto;
+   background: transparent url("../img/progress-indeterminate-light.gif") no-repeat 0 0;
+   .no-border-radius;
+   .no-box-shadow;
+}
+.win-ui-dark.progress.progress-indeterminate .bar {
+   width: 191px;
+   height: 7px;
+   margin: 9px auto;
+   background: transparent url("../img/progress-indeterminate-dark.gif") no-repeat 0 0;
+}
+
+.progress.progress-indeterminate .win-ring.small {
+   display: inline-block;
+   width: 23px;
+   height: 27px;
+   margin: 4px 10px 5px;
+   background: transparent url("../img/progress-indeterminate-ring-light-small.gif") no-repeat 0 0;
+}
+.win-ui-dark.progress.progress-indeterminate .win-ring.small {
+   width: 24px;
+   height: 23px;
+   margin: 8px 10px 5px;
+   background: transparent url("../img/progress-indeterminate-ring-dark-small.gif") no-repeat 0 0;
+}
+
+
+.progress-danger .bar,
+.progress .bar-danger,
+.progress-danger.progress-striped .bar,
+.progress-striped .bar-danger,
+.progress-success .bar,
+.progress .bar-success,
+.progress-success.progress-striped .bar,
+.progress-striped .bar-success,
+.progress-info .bar,
+.progress .bar-info,
+.progress-info.progress-striped .bar,
+.progress-striped .bar-info,
+.progress-warning .bar,
+.progress .bar-warning,
+.progress-warning.progress-striped .bar,
+.progress-striped .bar-warning {
+   background-image: none;
+   filter: none;
+}
+.progress .bar + .bar {
+   .no-box-shadow;
+}

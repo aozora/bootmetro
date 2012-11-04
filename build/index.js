@@ -95,14 +95,15 @@ recess([lesspath], {
    compile: true,
    compress: false
 }, function (err, obj) {
-   if (err)
-      throw err;
 
-   console.log(
+   console.dir(
       //      obj // recess instance for fat.css
       //      , obj.output // array of loggable content
       obj.errors // array of failed lint rules
    );
+   if (err)
+      throw err;
+
    css = obj.output;
    fs.writeFileSync( path.join(cssdir, '/bootmetro.css') , css, 'utf-8');
 //   fs.writeFileSync( path.join(cssdir, '/bootstrap2.css') , css, 'utf-8');
