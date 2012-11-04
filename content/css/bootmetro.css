@@ -149,10 +149,9 @@ select, option {
 
 a.win-command,
 input, button, select, textarea {
-   font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+   font-family: "Open Sans",Helvetica,"Helvetica Neue",Sans-Serif;
    font-weight: 300;
-   /*font-size: 11px;*/
-   height: 28px;
+   /*height: 28px;*/
    line-height: 30px;
 
    -webkit-box-sizing: border-box;
@@ -164,7 +163,7 @@ textarea { height: auto;}
 /*
 Text input controls.
 */
-textarea, .win-textarea {
+textarea {
    width: 260px;
    /*height: 39px;*/
    padding: 4px 8px;
@@ -202,6 +201,16 @@ input[type=tel], input[type=url], input[type=search], textarea, .win-textarea {
    -moz-border-radius: 0;
    border-radius: 0;
 }
+.form-search .input-append .search-query {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+.form-search .input-prepend .search-query {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
 
 .input-prepend .add-on, .input-append .add-on {
    height: 16px;
@@ -209,16 +218,27 @@ input[type=tel], input[type=url], input[type=search], textarea, .win-textarea {
 }
 .input-prepend .add-on:first-child,
 .input-prepend .btn:first-child {
-   border-style: solid;
-   border-width: 2px;
+   border: 2px solid #CCC;
+   border-width: 2px 0 2px 2px;
+   -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+           border-radius: 0;
+}
+.input-append .add-on:last-child,
+.input-append .btn:last-child {
+   border: 2px solid #CCC;
+   border-width: 2px 2px 2px 0;
    -webkit-border-radius: 0;
    -moz-border-radius: 0;
    border-radius: 0;
 }
-.input-append .add-on:last-child,
-.input-append .btn:last-child {
-   border-style: solid;
-   border-width: 2px;
+.input-prepend.input-append .add-on:first-child, .input-prepend.input-append .btn:first-child {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   margin-right: -1px;
+}
+.input-prepend.input-append input + .btn-group .btn, .input-prepend.input-append select + .btn-group .btn, .input-prepend.input-append .uneditable-input + .btn-group .btn {
    -webkit-border-radius: 0;
    -moz-border-radius: 0;
    border-radius: 0;
@@ -237,8 +257,7 @@ a.win-command, button, input[type=button], input[type=reset], input[type=submit]
    min-width: 90px;
    padding: 4px 8px;
    margin-bottom: 0;
-   border-width: 2px;
-   border-style: solid;
+   border: 2px solid;
    background-clip: padding-box;
    /*font-size: 11pt;*/
    font-weight: 600;
@@ -262,33 +281,30 @@ input[type=file] {
    margin: 7px 8px 21px 8px;
    background-clip: padding-box;
 }
-input[type=file]::-ms-value {
-   margin: 0;
-   border-width: 2px;
-   border-style: solid;
-   border-right-style: none;
-   -webkit-border-radius: 0;
-   -moz-border-radius: 0;
-   border-radius: 0;
-   background-clip: padding-box;
+/*input[type=file]::-ms-value {*/
+   /*margin: 0;*/
+   /*border-width: 2px;*/
+   /*border-style: solid;*/
+   /*border-right-style: none;*/
+   /*-webkit-border-radius: 0;*/
+   /*-moz-border-radius: 0;*/
+   /*border-radius: 0;*/
+   /*background-clip: padding-box;*/
    /*font-size: 11pt;*/
-   font-weight: 400;
-   line-height: 1.3636; /* 20px when font-size is 11pt */
-}
-input[type=file]::-ms-browse {
-   margin: 0;
-   padding: 0 18px;
-   border-width: 2px;
-   border-style: solid;
-   background-clip: padding-box;
+   /*font-weight: 400;*/
+   /*line-height: 1.3636; *//* 20px when font-size is 11pt */
+/*}*/
+/*input[type=file]::-ms-browse {*/
+   /*margin: 0;*/
+   /*padding: 0 18px;*/
+   /*border-width: 2px;*/
+   /*border-style: solid;*/
+   /*background-clip: padding-box;*/
    /*font-size: 11pt;*/
-   font-weight: 600;
-   line-height: 1.3636; /* 20px when font-size is 11pt */
-}
+   /*font-weight: 600;*/
+   /*line-height: 1.3636; *//* 20px when font-size is 11pt */
+/*}*/
 
-/*
-No underline or special cursor on links.
-*/
 a {
    text-decoration: none;
    /*cursor: default;*/
@@ -358,15 +374,6 @@ input[type=range] {
    padding: 17px 0 32px 0;
 }
 
-/*
-Vertical range control.
-*/
-input[type=range].win-vertical {
-   width: auto;
-   height: 191px;
-   padding: 0 17px;
-   writing-mode: bt-lr;
-}
 
 /*
 Progress control. */
@@ -446,42 +453,6 @@ Progress control. */
 }
 
 
-
-
-
-
-/*
-AppBar/Flyout z-index values:
-    1000 - AppBar/settings click-eating div
-    1001 - AppBar
-    1002 - Flyout click-eating div
-    1003 - Flyout
-*/
-.win-appbarclickeater {
-   z-index: 1000;
-   opacity: 0;
-   background-color: Purple;
-   display: none;
-   width: 100%;
-   height: 100%;
-   left: 0;
-   top: 0;
-   position: fixed;
-}
-.win-flyoutmenuclickeater {
-   z-index: 1002;
-   opacity: 0;
-   background-color: Lime;
-   display: none;
-   width: 100%;
-   height: 100%;
-   left: 0;
-   top: 0;
-   position: fixed;
-}
-
-
-
 /*
 Back button.
 */
@@ -544,11 +515,6 @@ button.win-command {
    font-size: 9pt;
    font-weight: normal;
    line-height: 16px;
-}
-
-a.win-hidefocus:focus,
-button.win-hidefocus:focus {
-   outline: none;
 }
 
 
@@ -755,41 +721,6 @@ AppBar control.
       margin-right: 9px;
    }
 }
-
-
-
-/*
-Flyout control.
-*/
-.win-flyout {
-   z-index: 1003;
-   position: fixed;
-   padding: 25px 20px 20px 20px;
-   border-style: solid;
-   border-width: 2px;
-   margin: 5px;
-   min-width: 26px; /* 70px - padding - border = 26px */
-   max-width: 466px; /* 510px - padding - border = 466px */
-   min-height: 5px; /* 54px - padding - border = 5px */
-   /*max-height: calc(100% - 59px); *//* 768px - margin - padding - border = 709px */
-   width: auto;
-   height: auto;
-   word-wrap: break-word;
-   overflow: auto;
-   font-size: 11pt;
-   font-weight: 400;
-   line-height: 1.3636; /* 20px when font-size is 11pt */
-}
-.win-flyout.win-leftalign {
-   margin-left: 0;
-}
-.win-flyout.win-rightalign {
-   margin-right: 0;
-}
-.win-flyout.win-scrolls {
-   overflow: auto;
-}
-
 
 
 /*
@@ -1541,10 +1472,22 @@ FlipView control.
 
 /* Buttons overrides
 -------------------------------------------------- */
+.btn {
+   line-height: 18px;
+}
+
+.btn.btn-link {
+   background-color: transparent;
+   border-color: transparent;
+   color: #0088CC;
+}
+.btn.btn-link:hover {
+   background-color: transparent;
+   border-color: transparent;
+   transition: none 0s ease 0s;
+}
+
 .btn-large {
-   font-size: 15px;
-   line-height: 24px;
-   padding: 2px 14px;
    -webkit-border-radius: 0;
    -moz-border-radius: 0;
    border-radius: 0;
