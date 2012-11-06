@@ -131,6 +131,13 @@ hr.soften {
    text-shadow: 0 0 10px rgba(255,255,255,.25);
 }
 
+.jumbotron a.link {
+   color: #4F1ACB;
+   font-size: 13px;
+   font-weight: 300;
+   line-height: 20px;
+}
+
 /* Download button */
 .masthead .btn {
    padding: 19px 24px;
