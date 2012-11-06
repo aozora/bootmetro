@@ -6193,15 +6193,11 @@ textarea {
 textarea {
   width: 260px;
   height: auto;
-  padding: 4px 8px;
-  padding-right: 17px;
-  overflow-y: scroll;
-  word-wrap: break-word;
-}
-
-textarea {
   min-width: 260px;
   min-height: 39px;
+  padding: 4px 4px 4px 8px;
+  overflow-y: scroll;
+  word-wrap: break-word;
 }
 
 input[type=text],
@@ -6271,6 +6267,36 @@ input[type=range] {
   width: 280px;
   height: auto;
   padding: 17px 0 32px 0;
+}
+
+input.search-query {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.form-search .input-append .search-query {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.form-search .input-append .btn {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.form-search .input-prepend .search-query {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.form-search .input-prepend .btn {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
 }
 
 /* Metro Radio button
@@ -6694,6 +6720,10 @@ option {
   letter-spacing: 0.02em;
 }
 
+.page-header {
+  border-bottom: 0;
+}
+
 /*
 Button control.
 */
@@ -7007,6 +7037,9 @@ AppBar control.
 .btn-group > .btn:first-child,
 .btn-group > .btn:last-child,
 .btn-group > .dropdown-toggle {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
@@ -7020,7 +7053,26 @@ AppBar control.
 
 .btn-group > .dropdown-toggle {
   min-width: 20px;
-  padding-bottom: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.btn-group > .btn-mini + .dropdown-toggle {
+  padding-top: 0;
+  *padding-top: 0;
+  padding-bottom: 0;
+  *padding-bottom: 0;
+}
+
+.btn-group > .btn-mini + .dropdown-toggle .caret {
+  margin-top: 2px;
+}
+
+.btn-group > .btn-large + .dropdown-toggle {
+  padding-top: 10px;
+  *padding-top: 10px;
+  padding-bottom: 8px;
+  *padding-bottom: 8px;
 }
 
 .modal .close:hover {
@@ -7100,6 +7152,40 @@ AppBar control.
   font-weight: 300;
 }
 
+.nav-pills > li > a,
+.nav-tabs > li > a {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.nav-tabs.nav-stacked > li:first-child > a,
+.nav-tabs.nav-stacked > li:last-child > a {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.nav-tabs .dropdown-menu,
+.nav-pills .dropdown-menu {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.tabs-below > .nav-tabs > li > a {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
 .navbar-inner {
   background-image: none;
   filter: 0;
@@ -7124,6 +7210,12 @@ AppBar control.
           box-shadow: none;
 }
 
+.navbar-search .search-query {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
 .pager .next a:after {
   font-family: 'IcoMoon';
   content: "\e0f1";
@@ -7132,6 +7224,13 @@ AppBar control.
 .pager .previous a:before {
   font-family: 'IcoMoon';
   content: "\e0f4";
+}
+
+.pager li > a,
+.pager li > span {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
 }
 
 .pagination a:hover,
@@ -7217,6 +7316,12 @@ AppBar control.
           box-shadow: none;
 }
 
+.popover {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
 .popover-title {
   line-height: 1;
   background-color: transparent;
@@ -7264,6 +7369,18 @@ AppBar control.
 #content-filters a {
   margin-right: 40px;
   font-size: 15px;
+}
+
+.label {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.badge {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
 }
 
 /*
@@ -7348,6 +7465,12 @@ Progress control. */
   font-size: 40px;
   line-height: 40px;
   border-width: 2px;
+}
+
+.hero-unit {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
 }
 
 .bg-color-orange {

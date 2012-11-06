@@ -136,6 +136,7 @@ hr.soften {
    padding: 19px 24px;
    font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
    font-size: 24px;
+   line-height: 28px;;
    font-weight: 400;
    color: #fff; /* redeclare to override the `.jumbotron a` */
    border: 0;
