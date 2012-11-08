@@ -604,6 +604,8 @@ Command ring colors.
    background-color: #FFF;
    border-color: #FFF;
 }
+.win-ui-dark a.active .win-commandring,
+.win-ui-dark button.active .win-commandring,
 .win-ui-dark a[aria-checked=true]:hover .win-commandring,
 .win-ui-dark button[aria-checked=true]:hover .win-commandring {
    background-color: rgba(255, 255, 255, 0.13);
