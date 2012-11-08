@@ -38,9 +38,6 @@ input[type=file] {
 Back button.
 */
 .win-backbutton {
-   position: absolute;
-   left: 10px;
-   top: 8px;
    display: inline-block;
    min-width: 0;
    min-height: 0;
@@ -70,6 +67,11 @@ Back button.
    visibility: hidden;
 }
 
+#nav-bar .win-backbutton {
+   position: absolute;
+   left: 10px;
+   top: 8px;
+}
 
 
 /*
@@ -164,7 +166,8 @@ Command button labels.
 a.win-command .win-label,
 button.win-command .win-label {
    position: relative;
-   line-height: 20px;
+   line-height: 15px;
+   margin-top: 3px;
    display: block;
    max-width: 88px; /* 100px button, but allow for 2px margins and 4px padding on each side */
    padding-left: 4px;  /* 12px between buttons, 6px per side, minus 2px margins */

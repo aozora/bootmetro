@@ -6456,7 +6456,7 @@ label.checkbox input[type=checkbox]:disabled ~ span.metro-checkbox::after {
 
 .table th {
   font-size: 9pt;
-  font-weight: bold;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -6770,9 +6770,6 @@ Back button.
 */
 
 .win-backbutton {
-  position: absolute;
-  top: 8px;
-  left: 10px;
   display: inline-block;
   width: 38px;
   height: 38px;
@@ -6803,6 +6800,12 @@ Back button.
 .win-backbutton:disabled:active {
   visibility: hidden;
   background-clip: padding-box;
+}
+
+#nav-bar .win-backbutton {
+  position: absolute;
+  top: 8px;
+  left: 10px;
 }
 
 /*
@@ -6907,8 +6910,9 @@ button.win-command .win-label {
   max-width: 88px;
   padding-right: 4px;
   padding-left: 4px;
+  margin-top: 3px;
   overflow: hidden;
-  line-height: 20px;
+  line-height: 15px;
   word-break: keep-all;
   word-wrap: break-word;
 }
@@ -7361,8 +7365,19 @@ AppBar control.
   background-color: transparent;
 }
 
+#content-filters .nav-pills > .open > a,
+#content-filters .nav-pills > .open > a:hover {
+  color: #FFF;
+  background-color: #999;
+}
+
 #content-filters .nav-pills > li > span {
   display: inline-block;
+  padding: 8px 0;
+  margin: 1px 0;
+  font-size: 13px;
+  line-height: 15px;
+  vertical-align: top;
 }
 
 #content-filters div {
@@ -7370,7 +7385,6 @@ AppBar control.
 }
 
 #content-filters a {
-  margin-right: 40px;
   font-size: 15px;
 }
 
