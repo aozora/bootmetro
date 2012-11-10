@@ -70,16 +70,12 @@
          if (width != undefined)
             w = width;
          
-         //$(this.element).animate({ width: w }, this.options.animateDuration, function () {
-         //   $(sectionId).show();
-         //});
-         //$(this.element).show();
-         var transition = $.support.transition && $(this.element).hasClass('fade');
+         var transition = $.support.transition && $(this.element).hasClass('slide');
 
-         $(this.element).show();
+//         $(this.element).show();
 
          if (transition) {
-            $(this.element).eq(0).offsetWidth(); // force reflow
+            $(this.element).eq(0).offsetWidth; // force reflow
          }
 
          $(this.element).addClass('in');
@@ -88,7 +84,7 @@
       },
 
       close: function(){
-         $(this.element).hide(); //.animate({ width: '0' }, this.options.animateDuration);
+         $(this.element).removeClass('in');
          return false;
       },
 

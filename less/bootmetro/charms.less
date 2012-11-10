@@ -7,11 +7,13 @@
    height: 100%;
    padding: 0;
    margin: 0;
-   display: none;
+   display: block;
    a.win-command {
+      background-clip: border-box;
       display: inline-block;
       margin: 0;
       padding: 0;
+      .border-radius(50%);
    }
    .charms-section {
       margin: 0 40px 40px 40px;
@@ -35,9 +37,7 @@
       }
       a#pin-charms.active {
          background-color: #FFF;
-         -webkit-border-radius: 50%;
-         -moz-border-radius: 50%;
-         border-radius: 50%;
+         .border-radius(50%);
          color: #000;
       }
       h2 {
@@ -50,10 +50,15 @@
       border: 1px solid #357281;
    }
 }
-#charms h2,#charms h3,#charms h4,#charms p,#charms a,#charms label {
+#charms h2,
+#charms h3,
+#charms h4,
+#charms p,
+#charms a,
+#charms label {
    color: #19BFC9;
 }
-#charms .charms-header a.win-command span.win-commandimage.win-commandring,#charms .charms-header a.win-command {
+#charms .charms-header a.win-backbutton {
    font-size: 20px;
    width: 32px;
    height: 32px;
@@ -65,11 +70,11 @@
 }
 #charms.slide {
    right: -320px;
-   -webkit-transition: 0.6s ease-in-out left;
-   -moz-transition: 0.6s ease-in-out left;
-   -ms-transition: 0.6s ease-in-out left;
-   -o-transition: 0.6s ease-in-out left;
-   transition: 0.6s ease-in-out left;
+   -webkit-transition: all 0.36s ease;
+      -moz-transition: all 0.36s ease;
+       -ms-transition: all 0.36s ease;
+        -o-transition: all 0.36s ease;
+           transition: all 0.36s ease;
 }
 #charms.slide.in {
    right: 0;

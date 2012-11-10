@@ -2191,6 +2191,7 @@
              <div class="page-header">
                <h1>Progress bars <small>For loading, redirecting, or action status</small></h1>
              </div>
+              <p class="label label-info">For Metro style progress bars see the <a href="./metro-components.html">Metro Components</a> page.</p>
    
              <h2>Examples and markup</h2>
    
@@ -2204,32 +2205,6 @@
    <pre class="prettyprint linenums">
    &lt;div class="progress"&gt;
      &lt;div class="bar" style="width: 60%;"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   </pre>
-   
-             <h3>Indeterminate</h3>
-             <p>Use this style for tasks that are not determinate that are non-modal (don't block user interaction).</p>
-             <div class="bs-docs-example">
-               <div class="progress progress-indeterminate">
-                 <div class="bar"></div>
-               </div>
-             </div>
-   <pre class="prettyprint linenums">
-   &lt;div class="progress progress-indeterminate"&gt;
-     &lt;div class="bar"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   </pre>
-   
-             <h3>Indeterminate Ring</h3>
-              <p>Use this style for tasks that are not determinate that are non-modal (don't block user interaction).</p>
-             <div class="bs-docs-example">
-               <div class="progress progress-indeterminate">
-                 <div class="win-ring small"></div>
-               </div>
-             </div>
-   <pre class="prettyprint linenums">
-   &lt;div class="progress progress-indeterminate"&gt;
-     &lt;div class="win-ring small"&gt;&lt;/div&gt;
    &lt;/div&gt;
    </pre>
    
@@ -2586,13 +2561,11 @@
        </div>
    
      </div>
-   <div id="charms" class="win-ui-dark">
+   <div id="charms" class="win-ui-dark slide">
    
       <div id="theme-charms-section" class="charms-section">
          <div class="charms-header">
-            <a href="#" class="close-charms win-command">
-               <span class="win-commandimage win-commandring">&#xe05d;</span>
-            </a>
+            <a href="#" class="close-charms win-backbutton"></a>
             <h2>Settings</h2>
          </div>
    
@@ -2602,7 +2575,6 @@
                <form class="">
                   <label for="win-theme-select">Change theme:</label>
                   <select id="win-theme-select" class="">
-                     <option value="metro-ui-semilight">Semi-Light</option>
                      <option value="metro-ui-light">Light</option>
                      <option value="metro-ui-dark">Dark</option>
                   </select>

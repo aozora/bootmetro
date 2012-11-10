@@ -177,27 +177,27 @@ textarea {
 /* General alignment styles
 -------------------------------------------------- */
 
-.align-right {
+.align-right,
+th.align-right,
+td.align-right,
+.table th.align-right,
+.table td.align-right {
   text-align: right;
 }
 
-.align-left {
+.align-left,
+th.align-left,
+td.align-left,
+.table th.align-left,
+.table td.align-left {
   text-align: left;
 }
 
-.align-center {
-  text-align: center;
-}
-
-td.align-right {
-  text-align: right;
-}
-
-td.align-left {
-  text-align: left;
-}
-
-td.align-center {
+.align-center,
+th.align-center,
+td.align-center,
+.table th.align-center,
+.table td.align-center {
   text-align: center;
 }
 
@@ -7340,7 +7340,7 @@ AppBar control.
 }
 
 #content-filters {
-  margin: 10px 0;
+  margin-top: 10px;
 }
 
 #content-filters .nav-pills > li > a {
@@ -8090,7 +8090,7 @@ article.tile-listviewitem-detail section {
   position: fixed;
   top: 0;
   right: 0;
-  display: none;
+  display: block;
   width: 320px;
   height: 100%;
   padding: 0;
@@ -8102,6 +8102,10 @@ article.tile-listviewitem-detail section {
   display: inline-block;
   padding: 0;
   margin: 0;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  background-clip: border-box;
 }
 
 #charms .charms-section {
@@ -8156,8 +8160,7 @@ article.tile-listviewitem-detail section {
   color: #19BFC9;
 }
 
-#charms .charms-header a.win-command span.win-commandimage.win-commandring,
-#charms .charms-header a.win-command {
+#charms .charms-header a.win-backbutton {
   width: 32px;
   height: 32px;
   font-size: 20px;
@@ -8171,11 +8174,11 @@ article.tile-listviewitem-detail section {
 
 #charms.slide {
   right: -320px;
-  -webkit-transition: 0.6s ease-in-out left;
-     -moz-transition: 0.6s ease-in-out left;
-      -ms-transition: 0.6s ease-in-out left;
-       -o-transition: 0.6s ease-in-out left;
-          transition: 0.6s ease-in-out left;
+  -webkit-transition: all 0.36s ease;
+     -moz-transition: all 0.36s ease;
+      -ms-transition: all 0.36s ease;
+       -o-transition: all 0.36s ease;
+          transition: all 0.36s ease;
 }
 
 #charms.slide.in {

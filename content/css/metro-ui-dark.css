@@ -35,6 +35,13 @@ Text selection color
 }
 
 /*
+Table
+*/
+.table-striped tbody tr:nth-child(2n+1) td, .table-striped tbody tr:nth-child(2n+1) th {
+   background-color: #6e727c;
+}
+
+/*
 Text input, checkbox, radio, and select control colors.
 */
 input[type=text], input[type=password],
@@ -459,6 +466,7 @@ Back button control colors.
 .win-backbutton:hover {
     background-color: rgba(255, 255, 255, 0.13);
     border-color: rgb(255, 255, 255);
+   text-decoration: none;
 }
 .win-backbutton:hover:active {
     background-color:rgb(255, 255, 255);
@@ -1123,4 +1131,38 @@ input.btn, button.btn, a.btn {
 
 .well {
    background-color: #FFF;
+}
+
+
+/*
+Docs
+*/
+.bs-docs-example,
+.bs-docs-sidenav {
+   background-color: rgb(29, 29, 29);
+   border-color: #80848d;
+}
+
+   .bs-docs-sidenav > li > a:hover {
+      background-color: #6e727c;
+      border-color: #80848d;
+   }
+   .bs-docs-sidenav > li > a {
+      color: #FFF;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+   }
+
+.bs-docs-example:after {
+   background-color: #000;
+}
+
+.prettyprint,
+pre {
+   background-color: #000;
+}
+.prettyprint.linenums {
+   box-shadow: 40px 0 0 #000 inset;
+}
+ol.linenums li {
+   text-shadow: none;
 }
