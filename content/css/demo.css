@@ -131,11 +131,19 @@ hr.soften {
    text-shadow: 0 0 10px rgba(255,255,255,.25);
 }
 
+.jumbotron a.link {
+   color: #4F1ACB;
+   font-size: 13px;
+   font-weight: 300;
+   line-height: 20px;
+}
+
 /* Download button */
 .masthead .btn {
    padding: 19px 24px;
    font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
    font-size: 24px;
+   line-height: 28px;;
    font-weight: 400;
    color: #fff; /* redeclare to override the `.jumbotron a` */
    border: 0;
@@ -758,10 +766,11 @@ form.bs-docs-example {
    -webkit-border-radius: 0;
    -moz-border-radius: 0;
    border-radius: 0;
-   -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
-   -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
-   box-shadow: 0 1px 4px rgba(0,0,0,.065);
+   /*-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);*/
+   /*-moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);*/
+   /*box-shadow: 0 1px 4px rgba(0,0,0,.065);*/
 }
+
 .bs-docs-sidenav > li > a {
    display: block;
    width: 190px \9;

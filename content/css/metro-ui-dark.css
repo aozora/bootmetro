@@ -3,8 +3,8 @@ Typographic color definitions.
 */
 html,
 body {
-    color: rgb(255, 255, 255);
-    background-color: rgb(29, 29, 29);
+    color: #D2D2D2;
+    background-color: #1d1d1d;
 }
 .win-type-interactive:hover {
     color: rgb(66, 210, 218);
@@ -35,15 +35,44 @@ Text selection color
 }
 
 /*
+Table
+*/
+.table-striped tbody tr:nth-child(2n+1) td, .table-striped tbody tr:nth-child(2n+1) th {
+   background-color: #6e727c;
+}
+
+/*
 Text input, checkbox, radio, and select control colors.
 */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input,
+label.checkbox input[type="radio"] ~ span.metro-radio:after,
+label.checkbox input[type="checkbox"] ~ span.metro-checkbox:after {
+   background-color: #D2D2D2;
+}
+
+
 input[type=text], input[type=password],
 input[type=email], input[type=number],
 input[type=tel], input[type=url],
 input[type=search], textarea, .win-textarea,
 select, input::-ms-check {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-color: rgba(255, 255, 255, 0.8);
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+   border-color: rgba(255, 255, 255, 0.8);
     color: rgb(0, 0, 0);
 }
 input[type=text]:hover, input[type=password]:hover, 
@@ -51,7 +80,7 @@ input[type=email]:hover, input[type=number]:hover,
 input[type=tel]:hover, input[type=url]:hover,
 input[type=search]:hover, textarea:hover, 
 .win-textarea:hover, select:hover, input:hover::-ms-check {
-    background-color: rgba(255, 255, 255, 0.87);
+    /*background-color: rgba(255, 255, 255, 0.87);*/
     border-color: rgba(255, 255, 255, 0.87);
     color: rgb(0, 0, 0);
 }
@@ -85,6 +114,16 @@ input:disabled::-ms-check, input:disabled:active::-ms-check {
 input:disabled::-ms-check, input:disabled:active::-ms-check { /* checkbox and radio have filled disabled state in dark */
     background-color: rgba(255, 255, 255, 0.4);
 }
+
+
+
+.input-append .add-on, .input-prepend .add-on {
+   background-color: #D2D2D2;
+}
+
+
+
+
 .win-ui-light input[type=text], .win-ui-light input[type=password],
 .win-ui-light input[type=email], .win-ui-light input[type=number],
 .win-ui-light input[type=tel], .win-ui-light input[type=url],
@@ -459,6 +498,7 @@ Back button control colors.
 .win-backbutton:hover {
     background-color: rgba(255, 255, 255, 0.13);
     border-color: rgb(255, 255, 255);
+   text-decoration: none;
 }
 .win-backbutton:hover:active {
     background-color:rgb(255, 255, 255);
@@ -1123,4 +1163,42 @@ input.btn, button.btn, a.btn {
 
 .well {
    background-color: #FFF;
+}
+
+
+/*
+Docs
+*/
+section > .page-header,
+section > .lead {
+   color: #D2D2D2;
+}
+.bs-docs-example,
+.bs-docs-sidenav {
+   background-color: #1d1d1d;
+   border-color: #80848d;
+}
+
+   .bs-docs-sidenav > li > a:hover {
+      background-color: #6e727c;
+      border-color: #80848d;
+   }
+   .bs-docs-sidenav > li > a {
+      color: #FFF;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+   }
+
+.bs-docs-example:after {
+   background-color: #000;
+}
+
+.prettyprint,
+pre {
+   background-color: #000;
+}
+.prettyprint.linenums {
+   box-shadow: 40px 0 0 #000 inset;
+}
+ol.linenums li {
+   text-shadow: none;
 }

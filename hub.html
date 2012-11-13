@@ -20,15 +20,12 @@
    <!-- remove or comment this line if you want to use the local fonts -->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 
-   <link rel="stylesheet" type="text/css" href="content/css/bootstrap.css">
-   <link rel="stylesheet" type="text/css" href="content/css/bootstrap-responsive.css">
+   <!--<link rel="stylesheet" type="text/css" href="content/css/bootstrap.css">-->
    <link rel="stylesheet" type="text/css" href="content/css/bootmetro.css">
-   <link rel="stylesheet" type="text/css" href="content/css/bootmetro-tiles.css">
-   <link rel="stylesheet" type="text/css" href="content/css/bootmetro-charms.css">
+   <link rel="stylesheet" type="text/css" href="content/css/bootstrap-responsive.css">
    <link rel="stylesheet" type="text/css" href="content/css/metro-ui-light.css">
    <link rel="stylesheet" type="text/css" href="content/css/icomoon.css">
    <link rel="stylesheet" type="text/css" href="content/css/datepicker.css">
-   <link rel="stylesheet" type="text/css" href="content/css/daterangepicker.css">
 
    <!--  these two css are to use only for documentation -->
    <link rel="stylesheet" type="text/css" href="content/css/demo.css">
@@ -67,7 +64,7 @@
    ================================================== -->
    <header id="nav-bar" class="container-fluid">
       <div class="row-fluid">
-         <div class="span8">
+         <div class="span7">
             <div id="header-container">
                <a id="backbutton" class="win-backbutton" href="./index.html"></a>
                <h5>BootMetro</h5>
@@ -82,7 +79,9 @@
                   <li><a href="./listviews.html">ListViews</a></li>
                   <li><a href="./appbar-demo.html">Demo App-Bar</a></li>
                   <li><a href="./table.html">Demo Table</a></li>
+                  <li><a href="./wizard.html">Wizard</a></li>
                   <li><a href="./icons.html">Icons</a></li>
+                  <li class="divider"></li>
                   <li><a href="./scaffolding.html">Bootstrap Scaffolding</a></li>
                   <li><a href="./base-css.html">Bootstrap Base CSS</a></li>
                   <li><a href="./components.html">Bootstrap Components</a></li>
@@ -93,8 +92,12 @@
             </div>
             </div>
          </div>
-         <div id="top-info" class="pull-right">
-         <a href="#" class="pull-left">
+         <div id="top-info" class="span5 pull-right">
+         <a id="settings" class="pull-right" href="#">
+            <b class="icon-settings"></b>
+         </a>
+         <hr class="separator pull-right"/>
+         <a href="#" class="pull-right">
             <div class="top-info-block">
                <h3>FirstName</h3>
                <h4>LastName</h4>
@@ -102,10 +105,6 @@
             <div class="top-info-block">
                <b class="icon-user"></b>
             </div>
-         </a>
-         <hr class="separator pull-left"/>
-         <a id="settings" class="pull-left" href="#">
-            <b class="icon-settings"></b>
          </a>
       </div>
    </div>
@@ -118,7 +117,17 @@
    
                <div id="section1" class="metro-section tile-span-4">
    
-                  <h2>MetroUI Demos</h2>
+                  <h2>BootMetro Demos</h2>
+   
+                  <a class="tile wide imagetext bg-color-orange" href="./metro-layouts.html">
+                     <div class="image-wrapper">
+                        <img src="content/img/metro-tiles.jpg" />
+                     </div>
+                     <div class="column-text">
+                        <div class="text4">Demos of various Metro style layouts.</div>
+                     </div>
+                     <div class="app-label">Layouts</div>
+                  </a>
    
                   <a class="tile wide imagetext bg-color-blueDark" href="./tiles-templates.html">
                      <div class="image-wrapper">
@@ -137,7 +146,7 @@
                      </div>
                   </a>
    
-                  <a class="tile app wide bg-color-greenDark" href="./table.html">
+                  <a class="tile app square bg-color-greenDark" href="./table.html">
                      <div class="image-wrapper">
                         <img src="content/img/My Apps.png" alt=""/>
                      </div>
@@ -158,18 +167,25 @@
                      <span class="app-label">[TODO] Charms</span>
                   </a>
    
-                  <a class="tile app bg-color-yellow" href="./images.html">
-                     <div class="image-wrapper">
-                        <span class="icon icon-images"></span>
-                     </div>
-                     <span class="app-label">[TODO] Images</span>
-                  </a>
+                  <!--<a class="tile app bg-color-yellow" href="./images.html">-->
+                     <!--<div class="image-wrapper">-->
+                        <!--<span class="icon icon-images"></span>-->
+                     <!--</div>-->
+                     <!--<span class="app-label">[_TODO] Images</span>-->
+                  <!--</a>-->
    
                   <a class="tile app bg-color-blueDark" href="./icons.html">
                      <div class="image-wrapper">
                         <span class="icon icon-IcoMoon" ></span>
                      </div>
                      <span class="app-label">Icons</span>
+                  </a>
+   
+                  <a class="tile app bg-color-purple" href="./metro-components.html">
+                     <div class="image-wrapper">
+                        <span class="icon icon-list-2"></span>
+                     </div>
+                     <span class="app-label">Metro Components</span>
                   </a>
    
                </div>
@@ -267,13 +283,11 @@
    </div>
    
    
-   <div id="charms" class="win-ui-dark">
+   <div id="charms" class="win-ui-dark slide">
    
       <div id="theme-charms-section" class="charms-section">
          <div class="charms-header">
-            <a href="#" class="close-charms win-command">
-               <span class="win-commandimage win-commandring">&#xe05d;</span>
-            </a>
+            <a href="#" class="close-charms win-backbutton"></a>
             <h2>Settings</h2>
          </div>
    
@@ -283,7 +297,6 @@
                <form class="">
                   <label for="win-theme-select">Change theme:</label>
                   <select id="win-theme-select" class="">
-                     <option value="metro-ui-semilight">Semi-Light</option>
                      <option value="metro-ui-light">Light</option>
                      <option value="metro-ui-dark">Dark</option>
                   </select>

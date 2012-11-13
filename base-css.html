@@ -20,15 +20,12 @@
    <!-- remove or comment this line if you want to use the local fonts -->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 
-   <link rel="stylesheet" type="text/css" href="content/css/bootstrap.css">
-   <link rel="stylesheet" type="text/css" href="content/css/bootstrap-responsive.css">
+   <!--<link rel="stylesheet" type="text/css" href="content/css/bootstrap.css">-->
    <link rel="stylesheet" type="text/css" href="content/css/bootmetro.css">
-   <link rel="stylesheet" type="text/css" href="content/css/bootmetro-tiles.css">
-   <link rel="stylesheet" type="text/css" href="content/css/bootmetro-charms.css">
+   <link rel="stylesheet" type="text/css" href="content/css/bootstrap-responsive.css">
    <link rel="stylesheet" type="text/css" href="content/css/metro-ui-light.css">
    <link rel="stylesheet" type="text/css" href="content/css/icomoon.css">
    <link rel="stylesheet" type="text/css" href="content/css/datepicker.css">
-   <link rel="stylesheet" type="text/css" href="content/css/daterangepicker.css">
 
    <!--  these two css are to use only for documentation -->
    <link rel="stylesheet" type="text/css" href="content/css/demo.css">
@@ -67,7 +64,7 @@
    ================================================== -->
    <header id="nav-bar" class="container-fluid">
       <div class="row-fluid">
-         <div class="span8">
+         <div class="span7">
             <div id="header-container">
                <a id="backbutton" class="win-backbutton" href="./hub.html"></a>
                <h5>BootMetro</h5>
@@ -82,7 +79,9 @@
                   <li><a href="./listviews.html">ListViews</a></li>
                   <li><a href="./appbar-demo.html">Demo App-Bar</a></li>
                   <li><a href="./table.html">Demo Table</a></li>
+                  <li><a href="./wizard.html">Wizard</a></li>
                   <li><a href="./icons.html">Icons</a></li>
+                  <li class="divider"></li>
                   <li><a href="./scaffolding.html">Bootstrap Scaffolding</a></li>
                   <li><a href="./base-css.html">Bootstrap Base CSS</a></li>
                   <li><a href="./components.html">Bootstrap Components</a></li>
@@ -93,8 +92,12 @@
             </div>
             </div>
          </div>
-         <div id="top-info" class="pull-right">
-         <a href="#" class="pull-left">
+         <div id="top-info" class="span5 pull-right">
+         <a id="settings" class="pull-right" href="#">
+            <b class="icon-settings"></b>
+         </a>
+         <hr class="separator pull-right"/>
+         <a href="#" class="pull-right">
             <div class="top-info-block">
                <h3>FirstName</h3>
                <h4>LastName</h4>
@@ -102,10 +105,6 @@
             <div class="top-info-block">
                <b class="icon-user"></b>
             </div>
-         </a>
-         <hr class="separator pull-left"/>
-         <a id="settings" class="pull-left" href="#">
-            <b class="icon-settings"></b>
          </a>
       </div>
    </div>
@@ -127,7 +126,7 @@
              <li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
              <li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
              <li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li>
-             <li><a href="#icons"><i class="icon-chevron-right"></i> Icons by Glyphicons</a></li>
+             <li><a href="#icons"><i class="icon-chevron-right"></i> Icons by IcoMoon</a></li>
            </ul>
          </div>
          <div class="span9">
@@ -1808,162 +1807,10 @@
            ================================================== -->
            <section id="icons">
              <div class="page-header">
-               <h1>Icons <small>by <a href="http://glyphicons.com" target="_blank">Glyphicons</a></small></h1>
+               <h1>Icons <small>by <a href="http://keyamoon.com/icomoon/app">IcoMoon</a></small></h1>
              </div>
    
-             <h2>Icon glyphs</h2>
-             <p>140 icons in sprite form, available in dark gray (default) and white, provided by <a href="http://glyphicons.com" target="_blank">Glyphicons</a>.</p>
-             <ul class="the-icons clearfix">
-               <li><i class="icon-glass"></i> icon-glass</li>
-               <li><i class="icon-music"></i> icon-music</li>
-               <li><i class="icon-search"></i> icon-search</li>
-               <li><i class="icon-envelope"></i> icon-envelope</li>
-               <li><i class="icon-heart"></i> icon-heart</li>
-               <li><i class="icon-star"></i> icon-star</li>
-               <li><i class="icon-star-empty"></i> icon-star-empty</li>
-               <li><i class="icon-user"></i> icon-user</li>
-               <li><i class="icon-film"></i> icon-film</li>
-               <li><i class="icon-th-large"></i> icon-th-large</li>
-               <li><i class="icon-th"></i> icon-th</li>
-               <li><i class="icon-th-list"></i> icon-th-list</li>
-               <li><i class="icon-ok"></i> icon-ok</li>
-               <li><i class="icon-remove"></i> icon-remove</li>
-               <li><i class="icon-zoom-in"></i> icon-zoom-in</li>
-               <li><i class="icon-zoom-out"></i> icon-zoom-out</li>
-               <li><i class="icon-off"></i> icon-off</li>
-               <li><i class="icon-signal"></i> icon-signal</li>
-               <li><i class="icon-cog"></i> icon-cog</li>
-               <li><i class="icon-trash"></i> icon-trash</li>
-               <li><i class="icon-home"></i> icon-home</li>
-               <li><i class="icon-file"></i> icon-file</li>
-               <li><i class="icon-time"></i> icon-time</li>
-               <li><i class="icon-road"></i> icon-road</li>
-               <li><i class="icon-download-alt"></i> icon-download-alt</li>
-               <li><i class="icon-download"></i> icon-download</li>
-               <li><i class="icon-upload"></i> icon-upload</li>
-               <li><i class="icon-inbox"></i> icon-inbox</li>
-   
-               <li><i class="icon-play-circle"></i> icon-play-circle</li>
-               <li><i class="icon-repeat"></i> icon-repeat</li>
-               <li><i class="icon-refresh"></i> icon-refresh</li>
-               <li><i class="icon-list-alt"></i> icon-list-alt</li>
-               <li><i class="icon-lock"></i> icon-lock</li>
-               <li><i class="icon-flag"></i> icon-flag</li>
-               <li><i class="icon-headphones"></i> icon-headphones</li>
-               <li><i class="icon-volume-off"></i> icon-volume-off</li>
-               <li><i class="icon-volume-down"></i> icon-volume-down</li>
-               <li><i class="icon-volume-up"></i> icon-volume-up</li>
-               <li><i class="icon-qrcode"></i> icon-qrcode</li>
-               <li><i class="icon-barcode"></i> icon-barcode</li>
-               <li><i class="icon-tag"></i> icon-tag</li>
-               <li><i class="icon-tags"></i> icon-tags</li>
-               <li><i class="icon-book"></i> icon-book</li>
-               <li><i class="icon-bookmark"></i> icon-bookmark</li>
-               <li><i class="icon-print"></i> icon-print</li>
-               <li><i class="icon-camera"></i> icon-camera</li>
-               <li><i class="icon-font"></i> icon-font</li>
-               <li><i class="icon-bold"></i> icon-bold</li>
-               <li><i class="icon-italic"></i> icon-italic</li>
-               <li><i class="icon-text-height"></i> icon-text-height</li>
-               <li><i class="icon-text-width"></i> icon-text-width</li>
-               <li><i class="icon-align-left"></i> icon-align-left</li>
-               <li><i class="icon-align-center"></i> icon-align-center</li>
-               <li><i class="icon-align-right"></i> icon-align-right</li>
-               <li><i class="icon-align-justify"></i> icon-align-justify</li>
-               <li><i class="icon-list"></i> icon-list</li>
-   
-               <li><i class="icon-indent-left"></i> icon-indent-left</li>
-               <li><i class="icon-indent-right"></i> icon-indent-right</li>
-               <li><i class="icon-facetime-video"></i> icon-facetime-video</li>
-               <li><i class="icon-picture"></i> icon-picture</li>
-               <li><i class="icon-pencil"></i> icon-pencil</li>
-               <li><i class="icon-map-marker"></i> icon-map-marker</li>
-               <li><i class="icon-adjust"></i> icon-adjust</li>
-               <li><i class="icon-tint"></i> icon-tint</li>
-               <li><i class="icon-edit"></i> icon-edit</li>
-               <li><i class="icon-share"></i> icon-share</li>
-               <li><i class="icon-check"></i> icon-check</li>
-               <li><i class="icon-move"></i> icon-move</li>
-               <li><i class="icon-step-backward"></i> icon-step-backward</li>
-               <li><i class="icon-fast-backward"></i> icon-fast-backward</li>
-               <li><i class="icon-backward"></i> icon-backward</li>
-               <li><i class="icon-play"></i> icon-play</li>
-               <li><i class="icon-pause"></i> icon-pause</li>
-               <li><i class="icon-stop"></i> icon-stop</li>
-               <li><i class="icon-forward"></i> icon-forward</li>
-               <li><i class="icon-fast-forward"></i> icon-fast-forward</li>
-               <li><i class="icon-step-forward"></i> icon-step-forward</li>
-               <li><i class="icon-eject"></i> icon-eject</li>
-               <li><i class="icon-chevron-left"></i> icon-chevron-left</li>
-               <li><i class="icon-chevron-right"></i> icon-chevron-right</li>
-               <li><i class="icon-plus-sign"></i> icon-plus-sign</li>
-               <li><i class="icon-minus-sign"></i> icon-minus-sign</li>
-               <li><i class="icon-remove-sign"></i> icon-remove-sign</li>
-               <li><i class="icon-ok-sign"></i> icon-ok-sign</li>
-   
-               <li><i class="icon-question-sign"></i> icon-question-sign</li>
-               <li><i class="icon-info-sign"></i> icon-info-sign</li>
-               <li><i class="icon-screenshot"></i> icon-screenshot</li>
-               <li><i class="icon-remove-circle"></i> icon-remove-circle</li>
-               <li><i class="icon-ok-circle"></i> icon-ok-circle</li>
-               <li><i class="icon-ban-circle"></i> icon-ban-circle</li>
-               <li><i class="icon-arrow-left"></i> icon-arrow-left</li>
-               <li><i class="icon-arrow-right"></i> icon-arrow-right</li>
-               <li><i class="icon-arrow-up"></i> icon-arrow-up</li>
-               <li><i class="icon-arrow-down"></i> icon-arrow-down</li>
-               <li><i class="icon-share-alt"></i> icon-share-alt</li>
-               <li><i class="icon-resize-full"></i> icon-resize-full</li>
-               <li><i class="icon-resize-small"></i> icon-resize-small</li>
-               <li><i class="icon-plus"></i> icon-plus</li>
-               <li><i class="icon-minus"></i> icon-minus</li>
-               <li><i class="icon-asterisk"></i> icon-asterisk</li>
-               <li><i class="icon-exclamation-sign"></i> icon-exclamation-sign</li>
-               <li><i class="icon-gift"></i> icon-gift</li>
-               <li><i class="icon-leaf"></i> icon-leaf</li>
-               <li><i class="icon-fire"></i> icon-fire</li>
-               <li><i class="icon-eye-open"></i> icon-eye-open</li>
-               <li><i class="icon-eye-close"></i> icon-eye-close</li>
-               <li><i class="icon-warning-sign"></i> icon-warning-sign</li>
-               <li><i class="icon-plane"></i> icon-plane</li>
-               <li><i class="icon-calendar"></i> icon-calendar</li>
-               <li><i class="icon-random"></i> icon-random</li>
-               <li><i class="icon-comment"></i> icon-comment</li>
-               <li><i class="icon-magnet"></i> icon-magnet</li>
-   
-               <li><i class="icon-chevron-up"></i> icon-chevron-up</li>
-               <li><i class="icon-chevron-down"></i> icon-chevron-down</li>
-               <li><i class="icon-retweet"></i> icon-retweet</li>
-               <li><i class="icon-shopping-cart"></i> icon-shopping-cart</li>
-               <li><i class="icon-folder-close"></i> icon-folder-close</li>
-               <li><i class="icon-folder-open"></i> icon-folder-open</li>
-               <li><i class="icon-resize-vertical"></i> icon-resize-vertical</li>
-               <li><i class="icon-resize-horizontal"></i> icon-resize-horizontal</li>
-               <li><i class="icon-hdd"></i> icon-hdd</li>
-               <li><i class="icon-bullhorn"></i> icon-bullhorn</li>
-               <li><i class="icon-bell"></i> icon-bell</li>
-               <li><i class="icon-certificate"></i> icon-certificate</li>
-               <li><i class="icon-thumbs-up"></i> icon-thumbs-up</li>
-               <li><i class="icon-thumbs-down"></i> icon-thumbs-down</li>
-               <li><i class="icon-hand-right"></i> icon-hand-right</li>
-               <li><i class="icon-hand-left"></i> icon-hand-left</li>
-               <li><i class="icon-hand-up"></i> icon-hand-up</li>
-               <li><i class="icon-hand-down"></i> icon-hand-down</li>
-               <li><i class="icon-circle-arrow-right"></i> icon-circle-arrow-right</li>
-               <li><i class="icon-circle-arrow-left"></i> icon-circle-arrow-left</li>
-               <li><i class="icon-circle-arrow-up"></i> icon-circle-arrow-up</li>
-               <li><i class="icon-circle-arrow-down"></i> icon-circle-arrow-down</li>
-               <li><i class="icon-globe"></i> icon-globe</li>
-               <li><i class="icon-wrench"></i> icon-wrench</li>
-               <li><i class="icon-tasks"></i> icon-tasks</li>
-               <li><i class="icon-filter"></i> icon-filter</li>
-               <li><i class="icon-briefcase"></i> icon-briefcase</li>
-               <li><i class="icon-fullscreen"></i> icon-fullscreen</li>
-             </ul>
-   
-             <h3>Glyphicons attribution</h3>
-             <p><a href="http://glyphicons.com/">Glyphicons</a> Halflings are normally not available for free, but an arrangement between Bootstrap and the Glyphicons creators have made this possible at no cost to you as developers. As a thank you, we ask you to include an optional link back to <a href="http://glyphicons.com/">Glyphicons</a> whenever practical.</p>
-   
-   
+              <p>See Icons page.</p>
              <hr class="bs-docs-separator">
    
    
@@ -1974,7 +1821,7 @@
    </pre>
              <p>There are also styles available for inverted (white) icons, made ready with one extra class. We will specifically enforce this class on hover and active states for nav and dropdown links.</p>
    <pre class="prettyprint linenums">
-   &lt;i class="icon-search icon-white"&gt;&lt;/i&gt;
+   &lt;i class="icon-search-2 icon-white"&gt;&lt;/i&gt;
    </pre>
              <p>
                <span class="label label-info">Heads up!</span>
@@ -1994,10 +1841,9 @@
              <div class="bs-docs-example">
                <div class="btn-toolbar">
                  <div class="btn-group">
-                   <a class="btn" href="#"><i class="icon-align-left"></i></a>
-                   <a class="btn" href="#"><i class="icon-align-center"></i></a>
-                   <a class="btn" href="#"><i class="icon-align-right"></i></a>
-                   <a class="btn" href="#"><i class="icon-align-justify"></i></a>
+                   <a class="btn" href="#"><i class="icon-paragraph-left"></i></a>
+                   <a class="btn" href="#"><i class="icon-paragraph-center"></i></a>
+                   <a class="btn" href="#"><i class="icon-paragraph-right"></i></a>
                  </div>
                </div>
              </div>
@@ -2005,10 +1851,9 @@
    &lt;div class="btn-toolbar"&gt;
      &lt;div class="btn-group"&gt;
    
-       &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-left"&gt;&lt;/i&gt;&lt;/a&gt;
-       &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-center"&gt;&lt;/i&gt;&lt;/a&gt;
-       &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-right"&gt;&lt;/i&gt;&lt;/a&gt;
-       &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-justify"&gt;&lt;/i&gt;&lt;/a&gt;
+       &lt;a class="btn" href="#"&gt;&lt;i class="icon-paragraph-left"&gt;&lt;/i&gt;&lt;/a&gt;
+       &lt;a class="btn" href="#"&gt;&lt;i class="icon-paragraph-center"&gt;&lt;/i&gt;&lt;/a&gt;
+       &lt;a class="btn" href="#"&gt;&lt;i class="icon-paragraph-right"&gt;&lt;/i&gt;&lt;/a&gt;
      &lt;/div&gt;
    &lt;/div&gt;
    </pre>
@@ -2020,8 +1865,8 @@
                  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
                  <ul class="dropdown-menu">
                    <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
-                   <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
-                   <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+                   <li><a href="#"><i class="icon-remove"></i> Delete</a></li>
+                   <li><a href="#"><i class="icon-blocked-2"></i> Ban</a></li>
                    <li class="divider"></li>
                    <li><a href="#"><i class="i"></i> Make admin</a></li>
                  </ul>
@@ -2033,8 +1878,8 @@
      &lt;a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"&gt;&lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
      &lt;ul class="dropdown-menu"&gt;
        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-pencil"&gt;&lt;/i&gt; Edit&lt;/a&gt;&lt;/li&gt;
-       &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-trash"&gt;&lt;/i&gt; Delete&lt;/a&gt;&lt;/li&gt;
-       &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-ban-circle"&gt;&lt;/i&gt; Ban&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt; Delete&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-blocked-2"&gt;&lt;/i&gt; Ban&lt;/a&gt;&lt;/li&gt;
        &lt;li class="divider"&gt;&lt;/li&gt;
        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="i"&gt;&lt;/i&gt; Make admin&lt;/a&gt;&lt;/li&gt;
      &lt;/ul&gt;
@@ -2076,7 +1921,7 @@
                  <label class="control-label" for="inputIcon">Email address</label>
                  <div class="controls">
                    <div class="input-prepend">
-                     <span class="add-on"><i class="icon-envelope"></i></span><input class="span2" id="inputIcon" type="text">
+                     <span class="add-on"><i class="icon-email"></i></span><input class="span2" id="inputIcon" type="text">
                    </div>
                  </div>
                </div>
@@ -2086,7 +1931,7 @@
      &lt;label class="control-label" for="inputIcon"&gt;Email address&lt;/label&gt;
      &lt;div class="controls"&gt;
        &lt;div class="input-prepend"&gt;
-         &lt;span class="add-on"&gt;&lt;i class="icon-envelope"&gt;&lt;/i&gt;&lt;/span&gt;
+         &lt;span class="add-on"&gt;&lt;i class="icon-email"&gt;&lt;/i&gt;&lt;/span&gt;
          &lt;input class="span2" id="inputIcon" type="text"&gt;
        &lt;/div&gt;
      &lt;/div&gt;
@@ -2101,13 +1946,11 @@
        </div>
    
      </div>
-   <div id="charms" class="win-ui-dark">
+   <div id="charms" class="win-ui-dark slide">
    
       <div id="theme-charms-section" class="charms-section">
          <div class="charms-header">
-            <a href="#" class="close-charms win-command">
-               <span class="win-commandimage win-commandring">&#xe05d;</span>
-            </a>
+            <a href="#" class="close-charms win-backbutton"></a>
             <h2>Settings</h2>
          </div>
    
@@ -2117,7 +1960,6 @@
                <form class="">
                   <label for="win-theme-select">Change theme:</label>
                   <select id="win-theme-select" class="">
-                     <option value="metro-ui-semilight">Semi-Light</option>
                      <option value="metro-ui-light">Light</option>
                      <option value="metro-ui-dark">Dark</option>
                   </select>

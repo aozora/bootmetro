@@ -1,0 +1,94 @@
+//
+// Mixins
+// --------------------------------------------------
+
+
+
+// CSS3 PROPERTIES
+// --------------------------------------------------
+
+// NO Border Radius
+.no-border-radius {
+   -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+           border-radius: 0;
+}
+
+
+// Drop shadows
+.box-shadow(@shadowA, @shadowB:X, ...){
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+// NO Drop shadows
+   .no-box-shadow {
+   -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+           box-shadow: none;
+}
+
+
+.text-overflow-wrap {
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+
+// Gradient Bar Colors for buttons and alerts
+   .gradientBar(@primaryColor, @secondaryColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+   color: @textColor;
+   text-shadow: @textShadow;
+   #gradient > .vertical(@primaryColor, @secondaryColor);
+   border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
+   border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+}
+
+#gradient {
+   .horizontal(@startColor: #555, @endColor: #333) {
+      background-color: @endColor;
+      background-image: none;
+      .reset-filter();
+   }
+   .vertical(@startColor: #555, @endColor: #333) {
+      background-color: mix(@startColor, @endColor, 60%);
+      background-image: none;
+      .reset-filter();
+   }
+   .directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
+      background-color: @endColor;
+      background-image: none;
+   }
+   .vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+      background-color: mix(@midColor, @endColor, 80%);
+      background-image: none;
+      .reset-filter();
+   }
+   .radial(@innerColor: #555, @outerColor: #333) {
+      background-color: @outerColor;
+      background-image: none;
+   }
+   .striped(@color: #555, @angle: 45deg) {
+      background-color: @color;
+      background-image: none;
+   }
+}
+
+
+
+/* General alignment styles
+-------------------------------------------------- */
+.align-right, th.align-right, td.align-right, .table th.align-right, .table td.align-right      {text-align: right}
+.align-left, th.align-left, td.align-left, .table th.align-left, .table td.align-left           {text-align: left}
+.align-center, th.align-center, td.align-center, .table th.align-center, .table td.align-center {text-align: center}
+
+
+.block { display: block;}
+
+
+
+/* General form mixins
+-------------------------------------------------- */
+.formBorder {
+   border: 2px solid @inputBorder;
+}

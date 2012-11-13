@@ -1,0 +1,105 @@
+//
+// Forms
+// --------------------------------------------------
+.form-actions {
+   background-color: inherit;
+}
+
+
+.label {
+   .no-border-radius;
+   text-shadow: none;
+}
+
+
+a.win-command,
+input, button, select, textarea {
+   font-family: @sansFontFamily;
+   font-weight: 300;
+   line-height: 30px;
+   .box-sizing(border-box);
+}
+
+textarea {
+   width: 260px;
+   height: auto;
+   padding: 4px 4px 4px 8px;
+   overflow-y: scroll;
+   word-wrap: break-word;
+   min-width: 260px;
+   min-height: 39px;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=number],
+input[type=tel], input[type=url], input[type=search], textarea {
+   min-height: 28px;
+   min-width: 64px;
+   border-width: 2px;
+   border-style: solid;
+   background-clip: padding-box;
+   font-weight: 400;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+
+.input-prepend .add-on, .input-append .add-on {
+   height: 16px;
+   line-height: 15px;
+}
+.input-prepend .add-on:first-child,
+.input-prepend .btn:first-child {
+   .formBorder;
+   border-width: 2px 0 2px 2px;
+}
+.input-append .add-on:last-child,
+.input-append .btn:last-child {
+   .formBorder;
+   border-width: 2px 2px 2px 0;
+}
+.input-prepend.input-append .add-on:first-child, .input-prepend.input-append .btn:first-child {
+   margin-right: -1px;
+}
+.input-append .btn {
+   height: 28px;
+   min-height: 28px;
+}
+
+
+
+/*
+Select control.
+*/
+select {
+   padding: 2px;
+   min-height: 24px;
+   min-width: 80px;
+   border-width: 2px;
+   border-style: solid;
+   background-clip: padding-box;
+}
+
+
+/*
+Range control.
+*/
+input[type=range] {
+   width: 280px;
+   height: auto;
+   padding: 17px 0 32px 0;
+}
+
+
+input.search-query {
+   .no-border-radius;
+}
+.form-search .input-append .search-query {
+   .no-border-radius;
+}
+.form-search .input-append .btn {
+   .no-border-radius;
+}
+.form-search .input-prepend .search-query {
+   .no-border-radius;
+}
+.form-search .input-prepend .btn {
+   .no-border-radius;
+}

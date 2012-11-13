@@ -1,6 +1,9 @@
 //#!/usr/bin/env node
-var hogan = require('hogan.js')
+var  hogan = require('hogan.js')
+   , less = require('less')
+   , recess = require('recess')
    , fs = require('fs')
+   , path = require('path')
    , prod = process.argv[2] == 'production'
    , title = 'BootMetro'
    , appname = 'BootMetro'
@@ -78,3 +81,30 @@ pages.forEach(function (name) {
 
    fs.writeFileSync(__dirname + '/../' + name.replace(/mustache$/, 'html'), page, 'utf-8')
 })
+
+
+// compile LESS styles
+var lessdir = __dirname  + '/../less'
+   ,lesspath = path.join(lessdir, '/bootmetro/bootmetro.less')
+//   ,lesspath = path.join(lessdir, '/bootstrap.less')
+   ,cssdir = __dirname  + '/../content/css'
+   ,css;
+
+
+recess([lesspath], {
+   compile: true,
+   compress: false
+}, function (err, obj) {
+
+   console.dir(
+      //      obj // recess instance for fat.css
+      //      , obj.output // array of loggable content
+      obj.errors // array of failed lint rules
+   );
+   if (err)
+      throw err;
+
+   css = obj.output;
+   fs.writeFileSync( path.join(cssdir, '/bootmetro.css') , css, 'utf-8');
+//   fs.writeFileSync( path.join(cssdir, '/bootstrap2.css') , css, 'utf-8');
+});

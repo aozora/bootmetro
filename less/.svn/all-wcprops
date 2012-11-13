@@ -1,0 +1,245 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less
+END
+hero-unit.less
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/hero-unit.less
+END
+tables.less
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/tables.less
+END
+utilities.less
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/utilities.less
+END
+popovers.less
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/popovers.less
+END
+carousel.less
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/carousel.less
+END
+dropdowns.less
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/dropdowns.less
+END
+scaffolding.less
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/scaffolding.less
+END
+type.less
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/type.less
+END
+reset.less
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/reset.less
+END
+responsive-768px-979px.less
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/responsive-768px-979px.less
+END
+labels-badges.less
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/labels-badges.less
+END
+forms.less
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/forms.less
+END
+sprites.less
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/sprites.less
+END
+buttons.less
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/buttons.less
+END
+accordion.less
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/accordion.less
+END
+component-animations.less
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/component-animations.less
+END
+responsive-navbar.less
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/responsive-navbar.less
+END
+responsive-utilities.less
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/responsive-utilities.less
+END
+thumbnails.less
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/thumbnails.less
+END
+navbar.less
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/navbar.less
+END
+code.less
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/code.less
+END
+bootstrap.less
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/bootstrap.less
+END
+modals.less
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/modals.less
+END
+grid.less
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/grid.less
+END
+wells.less
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/wells.less
+END
+button-groups.less
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/button-groups.less
+END
+progress-bars.less
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/progress-bars.less
+END
+pagination.less
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/pagination.less
+END
+breadcrumbs.less
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/breadcrumbs.less
+END
+alerts.less
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/alerts.less
+END
+tooltip.less
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/tooltip.less
+END
+responsive.less
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/responsive.less
+END
+pager.less
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/pager.less
+END
+layouts.less
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/layouts.less
+END
+close.less
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/close.less
+END
+responsive-1200px-min.less
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/responsive-1200px-min.less
+END
+navs.less
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/navs.less
+END
+mixins.less
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/mixins.less
+END
+variables.less
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/variables.less
+END
+responsive-767px-max.less
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/aozoralabs/!svn/ver/534/bootmetro-v1/assets/less/responsive-767px-max.less
+END

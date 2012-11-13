@@ -53,6 +53,7 @@
    -webkit-border-radius: 0;
    -moz-border-radius: 0;
    border-radius: 0;
+   font-weight: 300;
 }
 
 .datepicker td.day:hover {

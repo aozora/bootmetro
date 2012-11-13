@@ -1,0 +1,2296 @@
+/* Common css rules for metro-ui-light & metro-ui-dark */
+
+
+/* Body & Footer & headers
+-------------------------------------------------- */
+html {
+   background-color: #FFF;
+}
+
+body {
+   padding-top: 24px;
+   padding-bottom: 88px;
+   position: relative;
+   font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+   font-weight: 300;
+   font-size: 11px;
+}
+
+
+.clearfix:after {
+   content: ".";
+   display: block;
+   clear: both;
+   visibility: hidden;
+   line-height: 0;
+   height: 0;
+}
+.clearfix {
+   display: inline-block;
+   zoom: 1;
+}
+html[xmlns] .clearfix {
+   display: block;
+}
+* html .clearfix {
+   height: 1%;
+}
+
+
+
+.container-fluid {
+   padding-left: 70px;
+   padding-right: 70px;
+}
+
+.row-fluid .hide {
+    display: none;
+}
+
+/* General alignment styles
+-------------------------------------------------- */
+.align-right {text-align: right}
+.align-left {text-align: left}
+.align-center {text-align: center}
+
+td.align-right {text-align: right}
+td.align-left {text-align: left}
+td.align-center {text-align: center}
+
+.block { display: block;}
+
+/* Weight and size definitions for typographic classes and elements.
+-------------------------------------------------- */
+h1 {
+   font-weight: 300;
+   font-size: 40px;
+   line-height: 48px;
+}
+h2 {
+   font-weight: 300;
+   font-size: 26px;
+   line-height: 34px;
+}
+h3, .win-type-large {
+   font-weight: 600;
+   font-size: 20px;
+   line-height: 26px;
+}
+h4 /*, code, pre, samp*/ {
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 20px;
+}
+body, h5, legend {
+   font-weight: 300;
+   font-size: 13px;
+   line-height: 20px;
+}
+h6, caption, figcaption, small {
+   font-weight: 400;
+   font-size: 11px;
+   line-height: 11px;
+}
+h1, h2, h3, h4, h5, h6 {
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+/* This is the header H2 with a dropdown for the page menu */
+#header-container a.header-dropdown {
+   font-size: 26px;
+   font-weight: 200;
+   line-height: 34px;
+   text-decoration: none;
+}
+   #header-container .dropdown-menu .divider {
+      background-color: #717171;
+   }
+   #header-container .dropdown.open .dropdown-toggle {
+       background: inherit;
+       color: inherit;
+   }
+#header-container h5 {font-size: 14px;}
+
+dt, th {
+   font-size: 15px;
+   font-weight: 700;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+
+abbr, acronym, address, blockquote, cite, dl, dd, li, ol, p, q, td, tr {
+   font-weight: 300;
+}
+
+b, strong {
+   font-weight: 700;
+}
+
+em {
+   font-style: italic;
+}
+
+p {
+   font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+   font-weight: 300;
+}
+
+
+
+/* Additional letter-spacing for the document and its controls.
+-------------------------------------------------- */
+
+body,
+button, input,
+textarea, .win-textarea,
+select, option {
+   letter-spacing: 0.02em;
+}
+
+a.win-command,
+input, button, select, textarea {
+   font-family: "Open Sans",Helvetica,"Helvetica Neue",Sans-Serif;
+   font-weight: 300;
+   /*height: 28px;*/
+   line-height: 30px;
+
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+}
+textarea { height: auto;}
+
+/*
+Text input controls.
+*/
+textarea {
+   width: 260px;
+   /*height: 39px;*/
+   padding: 4px 8px;
+   overflow-y: scroll;
+   word-wrap: break-word;
+   /* Leave space for autohiding scrollbar on elements that enable text selection. */
+   padding-right: 17px;
+}
+textarea {
+   min-width: 260px;
+   min-height: 39px;
+}
+.win-textarea {
+   width: 260px;
+   height: 39px;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=number],
+input[type=tel], input[type=url], input[type=search], textarea, .win-textarea {
+   /*width: 276px;*/
+   min-height: 28px;
+   min-width: 64px;
+   /*margin: 0;*/
+   /*padding: 0 0 0 4px;*/
+   border-width: 2px;
+   border-style: solid;
+   background-clip: padding-box;
+   /*font-size: 11pt;*/
+   font-weight: 400;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+
+.search-query {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+.form-search .input-append .search-query {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+.form-search .input-prepend .search-query {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+.input-prepend .add-on, .input-append .add-on {
+   height: 16px;
+   line-height: 15px;
+}
+.input-prepend .add-on:first-child,
+.input-prepend .btn:first-child {
+   border: 2px solid #CCC;
+   border-width: 2px 0 2px 2px;
+   -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+           border-radius: 0;
+}
+.input-append .add-on:last-child,
+.input-append .btn:last-child {
+   border: 2px solid #CCC;
+   border-width: 2px 2px 2px 0;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+.input-prepend.input-append .add-on:first-child, .input-prepend.input-append .btn:first-child {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   margin-right: -1px;
+}
+.input-prepend.input-append input + .btn-group .btn, .input-prepend.input-append select + .btn-group .btn, .input-prepend.input-append .uneditable-input + .btn-group .btn {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+.input-append .btn {
+   height: 28px;
+   min-height: 28px;
+}
+
+
+/*
+Button control.
+*/
+a.win-command, button, input[type=button], input[type=reset], input[type=submit] {
+   min-width: 90px;
+   padding: 4px 8px;
+   margin-bottom: 0;
+   border: 2px solid;
+   background-clip: padding-box;
+   /*font-size: 11pt;*/
+   font-weight: 600;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+a.win-command {
+   min-height: 32px; /* content (20px) + padding + border */
+}
+
+
+/*
+File upload control.
+*/
+input[type=file] {
+   /*border: none;*/
+   min-width: 100px;
+   min-height: 20px;
+   width: 340px;
+   height: 32px;
+   padding: 0;
+   margin: 7px 8px 21px 8px;
+   background-clip: padding-box;
+}
+/*input[type=file]::-ms-value {*/
+   /*margin: 0;*/
+   /*border-width: 2px;*/
+   /*border-style: solid;*/
+   /*border-right-style: none;*/
+   /*-webkit-border-radius: 0;*/
+   /*-moz-border-radius: 0;*/
+   /*border-radius: 0;*/
+   /*background-clip: padding-box;*/
+   /*font-size: 11pt;*/
+   /*font-weight: 400;*/
+   /*line-height: 1.3636; *//* 20px when font-size is 11pt */
+/*}*/
+/*input[type=file]::-ms-browse {*/
+   /*margin: 0;*/
+   /*padding: 0 18px;*/
+   /*border-width: 2px;*/
+   /*border-style: solid;*/
+   /*background-clip: padding-box;*/
+   /*font-size: 11pt;*/
+   /*font-weight: 600;*/
+   /*line-height: 1.3636; *//* 20px when font-size is 11pt */
+/*}*/
+
+a {
+   text-decoration: none;
+   /*cursor: default;*/
+}
+
+/*
+No border on images when in a link.
+*/
+img {
+   border-style: none;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+/*
+Select control.
+*/
+select {
+   padding: 2px;
+   min-height: 24px;
+   min-width: 80px;
+   border-width: 2px;
+   border-style: solid;
+   background-clip: padding-box;
+   /*margin: 4px 0;*/
+   /*font-size: 11pt;*/
+   /*font-weight: 400;*/
+   /*line-height: 1.3636; *//* 20px when font-size is 11pt */
+}
+
+/*
+Search input
+*/
+input.search-query {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+/*
+Range control.
+*/
+input[type=range] {
+   width: 280px;
+   height: auto;
+   padding: 17px 0 32px 0;
+}
+
+
+/*
+Progress control. */
+.progress {
+   /*height: auto;*/
+   background-image: none;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+}
+   .progress.progress-indeterminate {
+      background-color: transparent;
+   }
+
+.progress.progress-indeterminate .bar {
+         display: block;
+         position: static;
+         width: 188px;
+         height: 11px;
+         margin: 4px auto;
+         -webkit-border-radius: 0;
+         -moz-border-radius: 0;
+         border-radius: 0;
+         background: transparent url("../img/progress-indeterminate-light.gif") no-repeat 0 0;
+         -webkit-box-shadow: none;
+         -moz-box-shadow: none;
+         box-shadow: none;
+      }
+      .win-ui-dark.progress.progress-indeterminate .bar {
+         width: 191px;
+         height: 7px;
+         margin: 9px auto;
+         background: transparent url("../img/progress-indeterminate-dark.gif") no-repeat 0 0;
+      }
+
+      .progress.progress-indeterminate .win-ring.small {
+         display: inline-block;
+         width: 23px;
+         height: 27px;
+         margin: 4px 10px 5px;
+         background: transparent url("../img/progress-indeterminate-ring-light-small.gif") no-repeat 0 0;
+      }
+      .win-ui-dark.progress.progress-indeterminate .win-ring.small {
+         width: 24px;
+         height: 23px;
+         margin: 8px 10px 5px;
+         background: transparent url("../img/progress-indeterminate-ring-dark-small.gif") no-repeat 0 0;
+      }
+
+
+.progress-danger .bar,
+.progress .bar-danger,
+.progress-danger.progress-striped .bar,
+.progress-striped .bar-danger,
+.progress-success .bar,
+.progress .bar-success,
+.progress-success.progress-striped .bar,
+.progress-striped .bar-success,
+.progress-info .bar,
+.progress .bar-info,
+.progress-info.progress-striped .bar,
+.progress-striped .bar-info,
+.progress-warning .bar,
+.progress .bar-warning,
+.progress-warning.progress-striped .bar,
+.progress-striped .bar-warning {
+   background-image: none;
+   filter: none;
+}
+.progress .bar + .bar {
+   -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+           box-shadow: none;
+}
+
+
+/*
+Back button.
+*/
+.win-backbutton {
+   position: absolute;
+   left: 10px;
+   top: 8px;
+   display: inline-block;
+   min-width: 0;
+   min-height: 0;
+   background-clip: border-box;
+   box-sizing: border-box;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+   border-width: 2px;
+   border-style: solid;
+   padding: 0;
+   text-align: center;
+
+   /* Normal sizing. */
+   width: 38px;
+   height: 38px;
+   font-size: 20px;
+   line-height: 38px; /* line-height must match the content box height. */
+   vertical-align: baseline;
+}
+.win-backbutton::before {
+   font-weight: normal;
+	font-family: 'IcoMoon';
+   content: "\e05d";
+   vertical-align: 24%;
+}
+.win-backbutton:disabled, .win-backbutton:disabled:active {
+   background-clip: padding-box;
+   visibility: hidden;
+}
+
+
+
+/*
+Command buttons.
+*/
+a.win-command {
+   display: inline-block;
+   cursor: pointer;
+   letter-spacing: 0.02em;
+   vertical-align: middle;
+}
+a.win-command,
+button.win-command {
+   background: none;
+   background-clip: border-box;
+   height: auto; /* height is 88px (label) or 68px (no label) */
+   padding: 12px 0; /* bottom dependent on label/img, 2px margin */
+   margin: 0 5px;
+   border: 0;
+   min-width: 42px;
+   text-align: center;
+   font-size: 9pt;
+   font-weight: normal;
+   line-height: 16px;
+}
+
+
+
+/*
+Command button icons.
+*/
+.win-commandicon {
+   display: inline-block;
+   margin: 0 28px; /* padding for command buttons, 2px/side for focus */
+   min-width: 0;
+   min-height: 0;
+   padding: 0;
+
+   /* Normal sizing */
+   width: 40px;
+   height: 40px;
+   box-sizing: border-box;
+   cursor: default;
+}
+.win-commandimage {
+   font-family: "IcoMoon";
+   letter-spacing: 0;
+
+   /* Applications provide their own content, like &#xE0D5;. */
+   vertical-align: middle;
+   font-size: 14pt;
+   margin: -2px;
+   line-height: 40px; /* line-height must match the content box height */
+   background-position: 0 0;
+   /*background-origin: border-box;*/
+   display: inline-block;
+   /* Still 40px */
+   width: 40px;
+   height: 40px;
+   background-size: 160px 80px;
+}
+
+/*
+Offsets for sprite versions.
+a:hover .win-commandimage, a:active .win-commandimage,
+button:hover .win-commandimage, button:active .win-commandimage {
+   background-position: -40px 0;
+}
+a:hover:active .win-commandimage,
+button:hover:active .win-commandimage {
+   background-position: -80px 0;
+}
+a:disabled .win-commandimage,
+a:disabled:active .win-commandimage,
+button:disabled .win-commandimage,
+button:disabled:active .win-commandimage {
+   background-position: -120px 0;
+}
+*/
+
+/*
+Offsets for sprite versions in selected state.
+a[aria-checked=true] .win-commandimage,
+button[aria-checked=true] .win-commandimage {
+   background-position: 0 -40px;
+}
+
+a[aria-checked=true]:hover .win-commandimage,
+a[aria-checked=true]:active .win-commandimage,
+button[aria-checked=true]:hover .win-commandimage,
+button[aria-checked=true]:active .win-commandimage {
+   background-position: -40px -40px;
+}
+
+a[aria-checked=true]:hover:active .win-commandimage,
+button[aria-checked=true]:hover:active .win-commandimage {
+   background-position: -80px -40px;
+}
+
+a[aria-checked=true]:disabled .win-commandimage,
+a[aria-checked=true]:disabled:active .win-commandimage,
+button[aria-checked=true]:disabled .win-commandimage,
+button[aria-checked=true]:disabled:active .win-commandimage {
+   background-position: -120px -40px;
+}
+*/
+
+/*
+Command button "ring".
+*/
+.win-commandring,
+a:hover .win-commandring,
+a:active .win-commandring,
+a.win-command:disabled .win-commandring,
+a.win-command:disabled:active .win-commandring,
+button:hover .win-commandring,
+button:active .win-commandring,
+button.win-command:disabled .win-commandring,
+button.win-command:disabled:active .win-commandring {
+   border-width: 2px;
+   border-style: solid;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+   background-clip: border-box;
+}
+
+a:hover:active .win-commandring,
+a[aria-checked=true] .win-commandring,
+a[aria-checked=true]:active .win-commandring,
+a[aria-checked=true]:disabled .win-commandring,
+a[aria-checked=true]:disabled:active .win-commandring,
+button:hover:active .win-commandring,
+button[aria-checked=true] .win-commandring,
+button[aria-checked=true]:active .win-commandring,
+button[aria-checked=true]:disabled .win-commandring,
+button[aria-checked=true]:disabled:active .win-commandring {
+   background-clip: border-box;
+}
+
+/*
+Command button labels.
+*/
+a.win-command .win-label,
+button.win-command .win-label {
+   position: relative;
+   line-height: 20px;
+   display: block;
+   max-width: 88px; /* 100px button, but allow for 2px margins and 4px padding on each side */
+   padding-left: 4px;  /* 12px between buttons, 6px per side, minus 2px margins */
+   padding-right: 4px;
+   overflow: hidden;
+   word-wrap: break-word;
+   word-break: keep-all;
+   top: 1px;
+}
+a.win-command,
+a.win-command:hover {
+   text-decoration: none
+}
+
+/*
+AppBarCommand separator.
+*/
+hr.win-command {
+   display: inline-block;
+   padding: 0;
+   margin: 14px 29px 34px 30px;
+   width: 1px;
+   height: 40px;
+   border: 0;
+   vertical-align: top;
+}
+
+/*
+AppBar Edgy Container
+*/
+.win-appbar {
+   z-index: 1001;
+   border-width: 0;
+   width: 100%;
+   height: auto;
+   left: 0;
+   position: fixed;
+}
+
+/*
+AppBar control.
+*/
+.win-commandlayout {
+   /*text-align: right;*/
+   padding-left: 10px;
+   /*padding-right: calc(((100% + 5px) mod 20px) + 5px);*/
+   /*width: calc(100% - 10px - (((100% + 5px) mod 20px) + 5px));*/
+
+   /* Hide whitespace between buttons. */
+   font-size: 0;
+
+   min-height: 88px;
+}
+.win-commandlayout .win-selection {
+   float: left;
+}
+
+
+/* Narrow buttons and no labels when < 1024px. */
+@media (max-width: 1023px) {
+   a.win-command .win-label,
+   button.win-command .win-label {
+      display: none;
+   }
+   a.win-command .win-commandicon,
+   button.win-command .win-commandicon {
+      margin: 0 8px; /* 2px margin for focus */
+   }
+   .win-commandlayout {
+      min-height: 68px;
+   }
+   hr.win-command {
+      margin-bottom: 14px;
+      margin-top: 14px;
+   }
+}
+
+@media (min-width: 321px) and (max-width: 1023px) {
+   hr.win-command {
+      margin-left: 10px;
+      margin-right: 9px;
+   }
+}
+
+
+/*
+Menu control.
+*/
+.win-menu {
+   padding: 5px 0 7px 0;
+   line-height: 33px;
+   text-align: left; /* Set explicitly in case our parent has different alignment, like appbar overflow. */
+   min-height: 38px; /* 54px - padding - border = 38px */
+   /*max-height: calc(100% - 26px); *//* 768px - margin - padding - border = 742px */
+   max-width: none;
+}
+
+/*
+Menu commands.
+*/
+.win-menu button.win-command {
+   display: block;
+   border: none;
+   padding: 0 20px;
+   margin-left: 0;
+   margin-right: 0;
+   float: none;
+   text-align: left;
+   font-size: 11pt;
+   width: 100%;
+   font-weight: 600;
+   line-height: 33px;
+}
+.win-menu button.win-command:focus {
+   outline: none;
+}
+.win-menu hr.win-command {
+   display: block;
+   height: 1px;
+   width: auto;
+   border: 0;
+   padding: 0;
+   margin: 11px 16px 8px 16px;
+}
+
+/*
+Menu toggle buttons.
+*/
+.win-menu-toggle button.win-command::before {
+	font-family: 'IcoMoon';
+	content: "\e20c";
+   visibility: hidden;
+   letter-spacing: 0;
+}
+.win-menu-toggle button[aria-selected=true].win-command::before {
+   /* Display a checkbox if aria-selected is set */
+   visibility: visible;
+}
+
+
+
+/*
+Settings Pane
+*/
+.win-settingsflyout {
+   z-index: 1001;  /* Same as appbar so flyouts can show above it */
+   border-left: 1px solid;
+   position: fixed;
+   top: 0;
+   right: 0;
+   height: 100%;
+   width: 345px; /* 346px - border (1px) */
+   -ms-touch-select: none;
+}
+.win-settingsflyout.win-wide {
+   width: 645px; /* 646px - border (1px) */
+}
+.win-settingsflyout .win-header {
+   padding-left: 40px;
+   padding-right: 40px;
+   padding-top: 32px;
+   height: 48px;
+}
+/* Settings back button is slightly smaller. */
+.win-settingsflyout .win-backbutton {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   font-size: 8pt;
+   line-height: 26px;
+   margin-top: 3px;
+}
+.win-settingsflyout .win-header .win-label {
+   display: inline-block;
+   padding-left: 40px;
+   font-size: 20pt;
+   line-height: 33px;
+}
+.win-settingsflyout .win-content {
+   overflow: auto;
+   padding-left: 40px;
+   padding-right: 40px;
+   padding-top: 33px;
+   /*height: calc(100% - 112px);*/
+}
+.win-settingsflyout .win-label {
+   font-size: 20pt;
+   font-weight: 200;
+   line-height: normal;
+}
+
+.win-settingsflyout .win-content .win-settings-section {
+   padding-top: 0;
+   padding-bottom: 39px;
+}
+
+.win-settingsflyout .win-content .win-settings-section p {
+   margin: 0;
+   padding-top: 0;
+   padding-bottom: 25px;
+}
+
+.win-settingsflyout .win-content .win-settings-section a {
+   margin: 0;
+   padding-top: 0;
+   padding-bottom: 25px;
+   display:inline-block;
+}
+
+.win-settingsflyout .win-content .win-settings-section .win-toggleswitch  {
+   margin: 0;
+   padding-top: 0;
+   padding-bottom: 20px;
+}
+
+.win-settingsflyout .win-content .win-settings-section label {
+   display:block;
+   padding-bottom: 7px;
+}
+
+.win-settingsflyout .win-content .win-settings-section button,
+.win-settingsflyout .win-content .win-settings-section select,
+.win-settingsflyout .win-content .win-settings-section input[type=button],
+.win-settingsflyout .win-content .win-settings-section input[type=text] {
+   margin-bottom: 25px;
+   margin-left: 0;
+   margin-right:  20px;
+}
+
+.win-settingsflyout .win-content .win-settings-section input[type=radio] {
+   margin-top: 0;
+   margin-bottom: 0;
+   padding-bottom: 15px;
+}
+
+
+/*
+Common AppBar/Flyout/SettingsFlyout styles
+
+.win-flyout input[type=text],
+.win-settingsflyout input[type=text],
+.win-appbar input[type=text] {
+   -ms-touch-select: grippers;
+}
+*/
+
+
+
+/*
+Rating control.
+*/
+/*.win-rating {
+    display: -ms-inline-flexbox;
+    height: auto;
+    width: auto;
+    white-space: normal;
+    -ms-flex-align: stretch;
+    -ms-flex-pack: center;
+    -ms-touch-action: none;
+}
+
+.win-rating .win-star {
+    -ms-flex: 1 1 auto;
+    height:28px;
+    width: 28px;
+    padding: 0 6px;
+    font-family: "Segoe UI Symbol";
+    font-size: 28px;
+    overflow: hidden;
+    text-indent: 0;
+    line-height: 1;
+    cursor: default;
+    position: relative;
+   letter-spacing: 0;
+}
+.win-rating.win-small .win-star {
+   width: 14px;
+   height: 14px;
+   font-size: 14px;
+   padding: 0 3px;
+}
+.win-rating .win-star:before {
+   content: "\E082";
+}
+.win-rating .win-star.win-disabled {
+   cursor: default;
+}
+*/
+
+
+/*
+DatePicker control.
+.win-datepicker {
+    display: -ms-inline-flexbox;
+   height: auto;
+   width: auto;
+}
+.win-datepicker .win-datepicker-month {
+   margin-right: 20px;
+}
+.win-datepicker .win-datepicker-date.win-order0,
+.win-datepicker .win-datepicker-date.win-order1 {
+   margin-right: 20px;
+}
+.win-datepicker .win-datepicker-year.win-order0 {
+   margin-right: 20px;
+}
+*/
+
+/*
+TimePicker control.
+.win-timepicker {
+    display: -ms-inline-flexbox;
+   height: auto;
+   width: auto;
+}
+.win-timepicker select {
+   padding-left: 2px;
+}
+.win-timepicker .win-timepicker-hour {
+   margin-right: 20px;
+}
+.win-timepicker .win-timepicker-period.win-order0 {
+   margin-right: 20px;
+}
+.win-timepicker .win-timepicker-minute.win-order1 {
+   margin-right: 20px;
+}
+*/
+
+/*
+Toggle control.
+*/
+.win-toggleswitch {
+   padding: 0;
+   background-color: transparent;
+   vertical-align: top;
+   margin: 0;
+   display: block;
+}
+.win-toggleswitch .win-switch {
+   display: inline-block;
+   height: 19px;
+   width: 50px;
+   padding: 5px;
+   margin: 0;
+   background-color: transparent;
+}
+
+.win-toggleswitch .win-title {
+   display: block;
+   vertical-align: top;
+   max-width:470px;
+   font-size: 11pt;
+   font-weight: 300;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+.win-toggleswitch .win-label {
+   display: inline-block;
+   vertical-align: top;
+   padding: 5px 20px 5px 0px;
+   min-width:65px;
+   direction: inherit;
+   font-size: 11pt;
+   font-weight: 600;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+
+/*
+Tooltip & PopOver control.
+*/
+.tooltip-inner {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+.win-tooltip {
+   display: block;
+   position: fixed;
+   top: 30px;
+   left: 30px;
+   max-width: 30em;
+   margin: 0;
+   padding: 6px 10px 7px 10px;
+   border-style: solid;
+   border-width: 2px;
+   z-index: 9999;
+   word-wrap: break-word;
+   font-size: 9pt;
+   font-weight: 400;
+   line-height: 1.6667; /* 20px when font-size is 9pt */
+}
+.win-tooltip-phantom {
+   display: block;
+   position: fixed;
+   top: 30px;
+   left: 30px;
+   background-color: transparent;
+   border-width: 0;
+   margin: 0;
+   padding: 0;
+}
+
+.win-viewbox {
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+
+.win-semanticzoom {
+   height: 400px;
+   -ms-touch-action: pan-x pan-y double-tap-zoom;
+}
+.win-semanticzoom * {
+   -ms-touch-action: inherit;
+}
+
+.win-semanticzoom-button {
+   z-index:  100;
+   position: absolute;
+   min-width: 25px;
+   min-height: 25px;
+   width: 25px;
+   height: 25px;
+   padding: 0px;
+   bottom: 21px;
+   -ms-touch-action: none;
+}
+
+.win-semanticzoom-button::before {
+   font-family: "Segoe UI Symbol";
+   font-weight: normal;
+   font-size: 11pt;
+   content: "\E0B8"; /* minus sign */
+}
+
+.win-semanticzoom-button-location.rtl {
+   left: 4px;
+}
+
+.win-semanticzoom-button-location.ltr{
+   right: 4px;
+}
+
+/*
+ScrollView control.
+*/
+.win-scrollview {
+   overflow-x: auto;
+   overflow-y: hidden;
+   height: 400px;
+   width: 100%;
+}
+
+/*
+ListView control.
+*/
+.win-listview {
+   overflow: hidden;
+   height: 400px;
+}
+.win-listview .win-surface {
+   position: relative;
+   overflow: visible;
+   width: 100%;
+   height: 100%;
+}
+.win-listview > .win-viewport {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   z-index: 0;
+}
+.win-listview > .win-viewport.win-horizontal {
+   overflow-x: auto;
+   overflow-y: hidden;
+}
+.win-listview > .win-viewport.win-vertical {
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+.win-listview > .win-horizontal .win-container {
+   margin: 5px;
+}
+.win-listview > .win-vertical .win-container {
+   margin: 5px 24px 5px 7px;
+}
+.win-listview.win-rtl > .win-vertical .win-container {
+   margin: 5px 7px 5px 24px;
+}
+.win-listview .win-container {
+   cursor: default;
+   position: absolute;
+   z-index: 0;
+}
+.win-swipeable .win-container {
+   z-index: 1;
+}
+.win-interactive {
+   -ms-touch-action: auto;
+}
+.win-listview .win-item {
+   /* Used to place above .win-selectionbackground in ListView */
+   z-index: 1;
+}
+.win-listview .win-item {
+   overflow: hidden;
+   position: absolute;
+}
+.win-listview > .win-vertical .win-item
+{
+   /* Allow flex box to fill win-item in list layout */
+   width: 100%;
+}
+.win-listview .win-item:focus {
+   outline-style: none;
+}
+.win-listview .win-focusedoutline {
+   /*width: calc(100% + 4px);*/
+   /*height: calc(100% + 4px);*/
+   left: -2px;
+   top: -2px;
+   position: absolute;
+   z-index: 5;
+}
+
+.win-container.win-selected .win-selectionborder {
+   border-width: 4px;
+   border-style: solid;
+}
+.win-container.win-selected:hover .win-selectionborder {
+   border-width: 4px;
+   border-style: solid;
+}
+.win-listview .win-groupheader {
+   position: absolute;
+   top: 0;
+   padding: 10px 10px 10px 2px;
+   cursor: default;
+   overflow: hidden;
+   margin-left: 70px;
+   font-size: 20pt;
+   font-weight: 200;
+   line-height: 1.2; /* 32px when font-size is 20pt */
+}
+.win-listview.win-rtl .win-groupheader {
+   margin-left: 0;
+   margin-right: 70px;
+   padding-left: 10px;
+   padding-right: 2px;
+}
+.win-listview.win-groups > .win-horizontal .win-surface {
+   margin-left: -70px;
+}
+.win-listview.win-groups.win-rtl > .win-horizontal .win-surface {
+   margin-left: 0;
+   margin-right: -70px;
+}
+.win-surface ._win-proxy {
+   position: absolute;
+   width: 0;
+   height: 0;
+   -ms-touch-action: none;
+}
+.win-selectionborder {
+   position: absolute;
+   opacity: inherit;
+   z-index: 2;
+}
+.win-container.win-selected .win-selectionbordertop {
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 0;
+   border-right-style: hidden !important;
+   border-bottom-style: hidden !important;
+   border-left-style: hidden !important;
+}
+.win-container.win-selected .win-selectionborderright {
+   top: 0;
+   right: 0;
+   bottom: 0;
+   width: 0;
+   border-top-style: hidden !important;
+   border-bottom-style: hidden !important;
+   border-left-style: hidden !important;
+}
+.win-container.win-selected .win-selectionborderbottom {
+   left: 0;
+   right: 0;
+   bottom: 0;
+   height: 0;
+   border-top-style: hidden !important;
+   border-right-style: hidden !important;
+   border-left-style: hidden !important;
+}
+.win-container.win-selected .win-selectionborderleft {
+   top: 0;
+   left: 0;
+   bottom: 0;
+   width: 0;
+   border-top-style: hidden !important;
+   border-right-style: hidden !important;
+   border-bottom-style: hidden !important;
+}
+.win-selectionbackground {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   /* Used to place behind .win-item in the ListView */
+   z-index: 0;
+}
+.win-selectioncheckmarkbackground {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 0;
+   height: 0;
+   margin: 0;
+   padding: 0;
+   border-width: 20px;
+   border-style: solid;
+   z-index: 3;
+}
+.win-rtl .win-selectioncheckmarkbackground {
+   left: 0;
+   right: auto;
+}
+.win-selectioncheckmark {
+   position: absolute;
+   margin: 0;
+   padding: 2px;
+   right: 0;
+   top: 0;
+   font-family: Segoe UI Symbol;
+   font-size: 11pt;
+   z-index: 4;
+}
+.win-rtl .win-selectioncheckmark {
+   left: 0;
+   right: auto;
+}
+.win-selectionhint {
+   position: absolute;
+   margin: 0;
+   padding: 2px;
+   right: 0;
+   font-family: Segoe UI Symbol;
+   font-size: 11pt;
+   opacity: 0.5;
+}
+.win-selectionhint.win-revealed {
+   opacity: 1;
+}
+.win-rtl .win-selectionhint {
+   left: 0;
+   right: auto;
+}
+.win-listview .win-progress {
+   left: 50%;
+   top: 50%;
+   width: 60px;
+   height: 60px;
+   margin-left: -30px;
+   margin-top: -30px;
+   z-index: 1;
+   position: absolute;
+}
+.win-listview .win-progress::-ms-fill {
+   -ms-animation-name: -ms-ring;
+}
+
+/*
+FlipView control.
+.win-flipview {
+    overflow: hidden;
+    height: 400px;
+}
+
+.win-flipview .win-surface {
+    -ms-scroll-chaining: none;
+}
+.win-flipview .win-navright {
+   left: 100%;
+   top: 50%;
+   margin-left: -69px;
+   margin-top: -19px;
+}
+.win-flipview .win-navtop {
+   left: 50%;
+   top: 0%;
+   margin-left: -35px;
+}
+.win-flipview .win-navbottom {
+   left: 50%;
+   top: 100%;
+   margin-left: -35px;
+   margin-top: -39px;
+}
+.win-flipview .win-navbutton {
+   border: none;
+   width: 69px;
+   height: 39px;
+   z-index: 1;
+   position: absolute;
+   font-family: "Segoe UI Symbol";
+   font-size: 16pt;
+   padding: 0;
+   min-width: 0;
+}
+.win-flipview .win-item, .win-flipview .win-item > .win-template {
+    display:-ms-flexbox;
+    height: 100%;
+    width: 100%;
+    -ms-flex-align:center;
+    -ms-flex-pack:center;
+}
+*/
+
+
+
+
+/* ***********************************************************************
+         Custom Styles
+   *********************************************************************** */
+
+/* Modal
+-------------------------------------------------- */
+.modal {
+   border: 0;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+}
+.modal.message,
+.modal.warning {
+   left: 0;
+   margin: 0;
+   padding: 0 20%;
+   width: 60%;
+   border: 0;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+   .modal-header {
+      border: 0;
+   }
+   .modal-body {
+      max-height: 300px;
+   }
+   .modal-footer {
+      background-color: transparent;
+      border: 0;
+      -webkit-border-radius: 0;
+         -moz-border-radius: 0;
+              border-radius: 0;
+      -webkit-box-shadow: none;
+         -moz-box-shadow: none;
+              box-shadow: none;
+   }
+.modal.message.fade.in {
+   top: 20%;
+}
+
+.modal.warning {
+   padding: 0 1%;
+   width: 100%;
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+   background-color: #0072BC !important;
+   color: #FFF;
+
+}
+   .modal.warning .modal-body {
+      display: inline-block;
+      width: 60%;
+      vertical-align: top;;
+   }
+   .modal.warning .modal-footer {
+      display: inline-block;
+      width: 30%;
+      vertical-align: top;;
+   }
+.modal.warning.fade.in {
+   top: 0;
+}
+
+
+
+/* Popover
+-------------------------------------------------- */
+.popover {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+.popover-inner {
+   /*width: 280px;*/
+   /*padding: 2px;*/
+   overflow: hidden;
+   /*background: #000;*/
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+.popover-title {
+   background-color: transparent;
+   border: 0;
+   line-height: 1;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+.popover-content {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+/* Buttons overrides
+-------------------------------------------------- */
+.btn {
+   line-height: 18px;
+}
+
+.btn.btn-link {
+   background-color: transparent;
+   border-color: transparent;
+   color: #0088CC;
+}
+.btn.btn-link:hover {
+   background-color: transparent;
+   border-color: transparent;
+   transition: none 0s ease 0s;
+}
+
+.btn-large {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+   .btn-large.dropdown-toggle {
+      padding-top: 2px;
+      padding-bottom: 2px;;
+   }
+
+.btn-mini.dropdown-toggle {
+   padding-top: 5px;
+}
+
+.btn-small {
+   line-height: 16px;
+   min-height: 20px;
+   padding: 3px 9px;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-warning,
+.btn-warning:hover,
+.btn-danger,
+.btn-danger:hover,
+.btn-success,
+.btn-success:hover,
+.btn-info,
+.btn-info:hover,
+.btn-inverse,
+.btn-inverse:hover {
+   text-shadow: none;
+}
+
+
+
+/* ButtonGroup
+-------------------------------------------------- */
+.btn-group > .btn:first-child,
+.btn-group > .btn:last-child,
+.btn-group > .dropdown-toggle {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+}
+.btn-group > .btn + .dropdown-toggle {
+   box-shadow: none;
+}
+.btn-group > .dropdown-toggle {
+   min-width: 20px;
+   padding-bottom: 5px;
+}
+
+
+/*
+Dropdown submenu
+*/
+.dropdown-submenu > a:after {
+   border: 0;
+   margin-right: -5px;
+   margin-top: 0;
+   color: #CCC;
+   font-family: 'IcoMoon';
+   content: '\e0f1'
+}
+
+/* DropDown Caret
+-------------------------------------------------- */
+.caret {
+   border: 0;
+   margin: 0;
+   min-width: 14px;
+   min-height: 18px;
+   padding: 0 3px;
+	font-family: 'IcoMoon';
+   font-size: inherit;
+   font-weight: normal;
+   line-height: 1;
+   text-indent: 0;
+   cursor: default;
+   opacity: 1;
+   filter: alpha(opacity=100);
+   overflow: hidden;
+   cursor: pointer;
+   vertical-position: bottom;
+}
+.caret:after {
+   content: "\e0f3";
+}
+
+a.header-dropdown .caret {
+   font-size: 26px;
+   font-weight: 200;
+   line-height: 30px;
+   width: auto;
+   height: 26px;
+   vertical-align: middle;
+}
+
+
+.dropdown .caret {
+   margin: 0;
+}
+
+.dropdown:hover .caret,
+.open .caret {
+   opacity: 0.6;
+   filter: alpha(opacity=60);
+}
+
+
+.btn .caret {
+   margin-top: 4px;
+}
+
+.btn-mini .caret {
+   margin-top: 5px;
+}
+
+.btn-small .caret {
+   margin: 0;
+}
+
+.btn-large .caret {
+   border: 0;
+}
+
+.dropup .caret, .navbar-fixed-bottom .dropdown .caret {
+   content: "";
+   border: 0;
+}
+.dropup .btn-large .caret {
+   border: 0;
+}
+.dropup .caret:after {
+   content: "\E0F2";
+}
+
+.btn-primary .caret,
+.btn-warning .caret,
+.btn-danger .caret,
+.btn-info .caret,
+.btn-success .caret,
+.btn-inverse .caret {
+   border: 0;
+}
+
+
+/*
+Dropdowns
+*/
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+   background-image: none;
+   filter: 0;
+}
+
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover {
+   background-image: none;
+   filter: 0;
+}
+
+
+
+.nav-tabs .dropdown-toggle .caret,
+.nav-pills .dropdown-toggle .caret {
+   margin: 0;
+   border: 0;
+}
+
+.nav-tabs .dropdown-toggle:hover .caret,
+.nav-pills .dropdown-toggle:hover .caret {
+   margin: 0;
+   border: 0;
+}
+
+.nav-tabs .active .dropdown-toggle .caret,
+.nav-pills .active .dropdown-toggle .caret {
+   margin: 0;
+   border: 0;
+}
+.nav-tabs.nav-stacked > li:last-child > a,
+.nav-tabs.nav-stacked > li:first-child > a {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+.nav-pills .dropdown-menu {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+.nav li.dropdown.open .caret,
+.nav li.dropdown.open.active .caret,
+.nav li.dropdown.open a:hover .caret {
+   border: 0;
+   /*opacity: 1;*/
+   /*filter: alpha(opacity=100);*/
+}
+
+
+.navbar .nav li.dropdown .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open .caret {
+   border: 0;
+   margin-top: 6px;
+}
+
+.navbar .nav li.dropdown.active .caret {
+   /*opacity: 1;*/
+   /*filter: alpha(opacity=100);*/
+}
+
+
+
+/*
+Nav List
+*/
+.nav-header {
+   font-size: 14px;
+   font-weight: 300;
+}
+
+
+/*
+NavBar
+*/
+.navbar-inner {
+   background-image: none;
+   filter: 0;
+   -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+           box-shadow: none;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+}
+
+.navbar .btn-navbar {
+   background-image: none;
+   filter: 0;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+}
+.navbar-search .search-query {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+
+
+/*
+Breadcrumb
+*/
+.breadcrumb {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+
+/* Tabs & Pills
+-------------------------------------------------- */
+
+.tabs-below > .nav-tabs > li > a,
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a,
+.nav-tabs > li > a,
+.nav-pills > li > a {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+
+
+
+
+/* Form controls, general.
+-------------------------------------------------- */
+input, textarea, select, .uneditable-input {
+   -webkit-border-radius: none;
+   -moz-border-radius: none;
+   border-radius: 0;
+}
+
+
+/* Metro Radio button
+-------------------------------------------------- */
+/*
+   NOTE:
+   Originally the following rules used the adjacent sibling selector '+ span'
+   but in Rails & ASP.NET radio & checkbox are rendered with a supplemental hidden input following
+   the radio/checkbox, so I changed the rules to use the general sibling selector '~ span' and adding a
+   custom class to the span.
+   Note that the general sibling selector '~' is CSS3 only and is not supported in <= IE7.
+*/
+
+
+.controls > .radio:first-child, .controls > .checkbox:first-child {
+   padding-top: 0;
+}
+
+label.radio,
+label.checkbox {
+   cursor: pointer;
+   position: relative;
+   padding-left: 0;
+}
+
+input[type=radio],
+input[type=radio] ~ span.metro-radio,
+input[type=radio] ~ span.metro-radio::before,
+input[type=radio] ~ span.metro-radio::after {
+   vertical-align: middle;
+   display: inline-block;
+}
+input[type=radio] {
+   position: absolute;
+   filter: alpha(opacity=0);
+   -moz-opacity: 0;
+   opacity: 0;
+}
+input[type=radio] ~ span.metro-radio {
+   padding-left: 36px;
+   padding-top: 4px;
+}
+input[type=radio] ~ span.metro-radio::before {
+   font-family: 'IcoMoon';
+   content: "\e10b";
+   text-indent: -9999px;
+   border: 2px solid #BABABA;
+   background: #FFF;
+   position: absolute;
+   left: 0;
+   top: 2px;
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+}
+input[type=radio]:checked ~ span.metro-radio::after {
+   text-indent: -9999px;
+   font-family: 'IcoMoon';
+   content: "\e10b";
+   background: #000;
+   position: absolute;
+   left: 6px;
+   top: 8px;
+   width: 12px;
+   height: 12px;
+   z-index: 1000;
+   -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+           border-radius: 50%;
+}
+/* this set the background color for checked radio */
+/*input[type=radio]:checked + span::before {*/
+   /*background: #d1d1d1;*/
+/*}*/
+input[type=radio]:not(:checked):disabled ~ span.metro-radio::before,
+input[type=radio]:disabled ~ span.metro-radio::before,
+input[type=radio]:disabled ~ span.metro-radio::after {
+   cursor: default;
+   background: #868686;
+}
+
+
+/* Metro Checkbox
+-------------------------------------------------- */
+label.checkbox input[type=checkbox],
+label.checkbox input[type=checkbox] ~ span.metro-checkbox,
+label.checkbox input[type=checkbox] ~ span.metro-checkbox::before,
+label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
+   vertical-align: middle;
+   display: inline-block;
+}
+label.checkbox input[type=checkbox] {
+   position: absolute;
+   filter: alpha(opacity=0);
+   -moz-opacity: 0;
+   opacity: 0;
+}
+label.checkbox input[type=checkbox] ~ span.metro-checkbox {
+   padding-left: 36px;
+   padding-top: 4px;
+}
+
+label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after {
+   border: 2px solid #BABABA;
+   background-color: #FFF;
+   font-family: 'IcoMoon';
+   content: "\e20c";
+   color: #202020;
+   font-size: 16px;
+   position: absolute;
+   top: 2px;
+   left: 0;
+   width: 18px;
+   height: 18px;
+   z-index: 1000;
+}
+label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
+   border: 2px solid #BABABA;
+   background-color: #FFF;
+   font-family: 'IcoMoon';
+   content: "\2003";
+   font-size: 16px;
+   position: absolute;
+   top: 2px;
+   left: 0;
+   width: 18px;
+   height: 18px;
+   z-index: 1000;
+}
+
+label.checkbox input[type=checkbox]:not(:checked):disabled ~ span.metro-checkbox::after,
+label.checkbox:hover input[type=checkbox]:disabled ~ span.metro-checkbox::after,
+label.checkbox input[type=checkbox]:disabled ~ span.metro-checkbox::after {
+   cursor: default;
+   background: #BABABA;
+}
+label.checkbox input[type=checkbox]:disabled ~ span.metro-checkbox::after {
+   color: #4c4c4c;
+}
+
+
+
+
+/* Navigation
+-------------------------------------------------- */
+
+header h1 {display: inline;}
+
+#header-container {display: inline-block;}
+
+
+#nav-bar {
+   display: block;
+   position: relative;
+   height: 64px;
+   margin-bottom: 20px;
+}
+
+#top-info {
+   display: block;
+}
+#top-info a {
+   display: inline-block;
+   height: 46px;
+   color: #5A5A5A;
+}
+#top-info a:hover {
+   color: #000;
+}
+   .top-info-block {
+      display: block;
+      float: left;
+      margin-left: 8px;
+   }
+   #top-info b {
+       display: inline-block;
+       font-size: 38px;
+       height: 46px;
+       line-height: 46px;
+       vertical-align: top;
+       width: 46px;
+      text-align: center;
+   }
+   #top-info hr.separator {
+      background-color: #7B7B7B;
+      border: 0 none;
+      display: inline-block;
+      height: 42px;
+      margin: 2px 10px;
+      padding: 0;
+      vertical-align: top;
+      width: 1px;
+   }
+
+
+
+/* Forms
+-------------------------------------------------- */
+.form-actions {
+   background-color: inherit;
+}
+
+
+.label {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   text-shadow: none;
+}
+
+
+
+/* Tables
+-------------------------------------------------- */
+.table thead {
+   border-bottom: 1px solid #BEBEBE;
+}
+
+.table th {
+   /*font-family: "Open Sans", Arial, Helvetica, Sans-Serif;*/
+   font-size: 9pt;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+.table th, .table td {
+   border-top: 0;
+
+}
+
+
+/* Pagination
+-------------------------------------------------- */
+.pagination ul {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: 0;
+}
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > span,
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > span {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+.pagination .active a {
+   color: #FFF;
+}
+.pagination a:hover, .pagination .active a {
+   background-color: #CCC;
+}
+
+
+.pager li > a, .pager li > span {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+.pager .previous a:before {
+   font-family: 'IcoMoon';
+	content: "\e0f4";
+}
+.pager .next a:after {
+   font-family: 'IcoMoon';
+	content: "\e0f1";
+}
+
+
+/*
+Badge
+*/
+.badge {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+/*
+Hero Unit
+*/
+.hero-unit {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+/*
+Thumbnail
+*/
+.thumbnail {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+
+/* Content Filter Dropdown
+-------------------------------------------------- */
+#content-filters {
+   margin: 10px 0;
+}
+   #content-filters nav nav-pills {
+
+   }
+   #content-filters .nav-pills > li > a {
+      display: inline-block;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+   }
+   #content-filters .nav > li > a:hover {
+      text-decoration: none;
+      background-color: inherit;
+   }
+   #content-filters .nav-pills > .active > a,
+   #content-filters .nav-pills > .active > a:hover {
+      color: inherit;
+      background-color: transparent;
+   }
+   #content-filters .nav-pills > li > span {display: inline-block;}
+
+   #content-filters div {
+      position: relative;;
+   }
+   #content-filters a {
+      font-size: 15px;
+      margin-right: 40px;
+   }
+
+
+
+/* Alerts
+-------------------------------------------------- */
+.alert {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   text-shadow: none;
+   background-color: #D44A26;
+   border-color: #D44A26;
+   color: #FFF;
+   position: relative;
+}
+
+.modal .close,
+.alert .close {
+   position: absolute;
+   top: 0;
+   right: 0;
+   display: inline-block;
+   min-width: 0;
+   min-height: 0;
+   width: 30px;
+   height: 30px;
+	font-family: 'IcoMoon';
+   font-weight: normal;
+   font-size: 12px;
+   line-height: 12px;
+   text-indent: 0;
+   text-shadow: none;
+   opacity: 1;
+   background-clip: border-box;
+   box-sizing: border-box;
+   border: 0;
+   text-align: center;
+   vertical-align: baseline;
+}
+.modal .close:after,
+.alert .close:after {
+   content: "\e131";
+   font-size: 16px;
+}
+   .alert .close:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #FFF;
+   }
+   .modal .close:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #FFF;
+      margin-top: 0;
+   }
+
+.alert-success {
+   color: #FFFFFF;
+   background-color: #01A31C;
+   border-color: #01A31C;
+}
+
+.alert-danger,
+.alert-error {
+   color: #FFFFFF;
+   background-color: #BC1C48;
+   border-color: #BC1C48;
+}
+
+.alert-info {
+   color: #FFFFFF;
+   background-color: #2D89F0;
+   border-color: #2D89F0 ;
+}
+
+.alert-heading {
+   font-weight: 600;
+}
+
+
+
+.well {
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+/*
+Carousel
+*/
+.carousel-control {
+   font-family: "IcoMoon";
+   font-size: 40px;
+   line-height: 40px;
+   border-width: 2px;
+}
+
+
+
+/* Wizard */
+.wizard {
+   background-color: #FFF;
+}
+
+#wizard-steps-container {
+   background-color: #0072BC !important;
+   color: #FFF;
+}
+   #wizard-steps-container h2 {
+      margin-bottom: 30px;
+      padding: 20px;
+   }
+
+   ul#wizard-steps {
+     list-style-type: none;
+      margin: 0;
+   }
+      ul#wizard-steps li {
+         list-style-type: none;
+         display: block;
+         width: 100%;
+         height: 36px;
+      }
+      ul#wizard-steps li.active {
+         background-color: #FFF;
+      }
+         ul#wizard-steps li a {
+            display: block;
+            width: 100%;
+            height: 36px;
+            padding: 0 20px;
+            font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+            font-weight: 300;
+            line-height: 36px;
+            text-transform: uppercase;
+            color: #FFF;
+            text-decoration: none;
+         }
+         ul#wizard-steps li.active a {
+            color: #666;
+         }
+
+#wizard-step-content {
+   margin-top: 20px;
+   padding: 0;
+   vertical-align: top;
+}
+
+
+/*
+Responsive Media Queries
+*/
+@media (max-width: 480px) {
+
+   .container-fluid {
+      padding: 0;
+   }
+
+}

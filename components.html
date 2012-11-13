@@ -20,15 +20,12 @@
    <!-- remove or comment this line if you want to use the local fonts -->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 
-   <link rel="stylesheet" type="text/css" href="content/css/bootstrap.css">
-   <link rel="stylesheet" type="text/css" href="content/css/bootstrap-responsive.css">
+   <!--<link rel="stylesheet" type="text/css" href="content/css/bootstrap.css">-->
    <link rel="stylesheet" type="text/css" href="content/css/bootmetro.css">
-   <link rel="stylesheet" type="text/css" href="content/css/bootmetro-tiles.css">
-   <link rel="stylesheet" type="text/css" href="content/css/bootmetro-charms.css">
+   <link rel="stylesheet" type="text/css" href="content/css/bootstrap-responsive.css">
    <link rel="stylesheet" type="text/css" href="content/css/metro-ui-light.css">
    <link rel="stylesheet" type="text/css" href="content/css/icomoon.css">
    <link rel="stylesheet" type="text/css" href="content/css/datepicker.css">
-   <link rel="stylesheet" type="text/css" href="content/css/daterangepicker.css">
 
    <!--  these two css are to use only for documentation -->
    <link rel="stylesheet" type="text/css" href="content/css/demo.css">
@@ -67,7 +64,7 @@
    ================================================== -->
    <header id="nav-bar" class="container-fluid">
       <div class="row-fluid">
-         <div class="span8">
+         <div class="span7">
             <div id="header-container">
                <a id="backbutton" class="win-backbutton" href="./hub.html"></a>
                <h5>BootMetro</h5>
@@ -82,7 +79,9 @@
                   <li><a href="./listviews.html">ListViews</a></li>
                   <li><a href="./appbar-demo.html">Demo App-Bar</a></li>
                   <li><a href="./table.html">Demo Table</a></li>
+                  <li><a href="./wizard.html">Wizard</a></li>
                   <li><a href="./icons.html">Icons</a></li>
+                  <li class="divider"></li>
                   <li><a href="./scaffolding.html">Bootstrap Scaffolding</a></li>
                   <li><a href="./base-css.html">Bootstrap Base CSS</a></li>
                   <li><a href="./components.html">Bootstrap Components</a></li>
@@ -93,8 +92,12 @@
             </div>
             </div>
          </div>
-         <div id="top-info" class="pull-right">
-         <a href="#" class="pull-left">
+         <div id="top-info" class="span5 pull-right">
+         <a id="settings" class="pull-right" href="#">
+            <b class="icon-settings"></b>
+         </a>
+         <hr class="separator pull-right"/>
+         <a href="#" class="pull-right">
             <div class="top-info-block">
                <h3>FirstName</h3>
                <h4>LastName</h4>
@@ -102,10 +105,6 @@
             <div class="top-info-block">
                <b class="icon-user"></b>
             </div>
-         </a>
-         <hr class="separator pull-left"/>
-         <a id="settings" class="pull-left" href="#">
-            <b class="icon-settings"></b>
          </a>
       </div>
    </div>
@@ -345,10 +344,9 @@
              <p>Make a set of buttons appear vertically stacked rather than horizontally.</p>
              <div class="bs-docs-example">
                <div class="btn-group btn-group-vertical">
-                 <button type="button" class="btn"><i class="icon-align-left"></i></button>
-                 <button type="button" class="btn"><i class="icon-align-center"></i></button>
-                 <button type="button" class="btn"><i class="icon-align-right"></i></button>
-                 <button type="button" class="btn"><i class="icon-align-justify"></i></button>
+                 <button type="button" class="btn"><i class="icon-paragraph-left"></i></button>
+                 <button type="button" class="btn"><i class="icon-paragraph-center"></i></button>
+                 <button type="button" class="btn"><i class="icon-paragraph-right"></i></button>
                </div>
              </div>
    <pre class="prettyprint linenums">
@@ -2193,6 +2191,7 @@
              <div class="page-header">
                <h1>Progress bars <small>For loading, redirecting, or action status</small></h1>
              </div>
+              <p class="label label-info">For Metro style progress bars see the <a href="./metro-components.html">Metro Components</a> page.</p>
    
              <h2>Examples and markup</h2>
    
@@ -2206,32 +2205,6 @@
    <pre class="prettyprint linenums">
    &lt;div class="progress"&gt;
      &lt;div class="bar" style="width: 60%;"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   </pre>
-   
-             <h3>Indeterminate</h3>
-             <p>Use this style for tasks that are not determinate that are non-modal (don't block user interaction).</p>
-             <div class="bs-docs-example">
-               <div class="progress progress-indeterminate">
-                 <div class="bar"></div>
-               </div>
-             </div>
-   <pre class="prettyprint linenums">
-   &lt;div class="progress progress-indeterminate"&gt;
-     &lt;div class="bar"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   </pre>
-   
-             <h3>Indeterminate Ring</h3>
-              <p>Use this style for tasks that are not determinate that are non-modal (don't block user interaction).</p>
-             <div class="bs-docs-example">
-               <div class="progress progress-indeterminate">
-                 <div class="win-ring small"></div>
-               </div>
-             </div>
-   <pre class="prettyprint linenums">
-   &lt;div class="progress progress-indeterminate"&gt;
-     &lt;div class="win-ring small"&gt;&lt;/div&gt;
    &lt;/div&gt;
    </pre>
    
@@ -2588,13 +2561,11 @@
        </div>
    
      </div>
-   <div id="charms" class="win-ui-dark">
+   <div id="charms" class="win-ui-dark slide">
    
       <div id="theme-charms-section" class="charms-section">
          <div class="charms-header">
-            <a href="#" class="close-charms win-command">
-               <span class="win-commandimage win-commandring">&#xe05d;</span>
-            </a>
+            <a href="#" class="close-charms win-backbutton"></a>
             <h2>Settings</h2>
          </div>
    
@@ -2604,7 +2575,6 @@
                <form class="">
                   <label for="win-theme-select">Change theme:</label>
                   <select id="win-theme-select" class="">
-                     <option value="metro-ui-semilight">Semi-Light</option>
                      <option value="metro-ui-light">Light</option>
                      <option value="metro-ui-dark">Dark</option>
                   </select>

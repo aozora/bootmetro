@@ -38,9 +38,18 @@ $(function(){
    });
 
    // Datepicker
-   $('.datepicker').datepicker()
+   $('.datepicker').datepicker();
 
-   //$('#home-carousel').carousel({interval: 5000});
+
+
+   // Tile ListView
+   $('#tile-listview-demo').on('click', '.tile-listviewitem', function(e){
+      e.preventDefault();
+      var $this = $(this);
+      $('#tile-listview-demo .tile-listviewitem').removeClass('selected');
+      $this.addClass('selected');
+   });
+
 
 });
 
@@ -55,7 +64,7 @@ function updateCSS(css){
       $("link[href*=metro-ui-]:first").remove();
    }
    
-};
+}
 
 
 

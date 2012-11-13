@@ -1,0 +1,36 @@
+//
+// Button groups
+// --------------------------------------------------
+.btn-group > .btn:first-child,
+.btn-group > .btn:last-child,
+.btn-group > .dropdown-toggle {
+   .no-box-shadow;
+   .no-border-radius;
+}
+.btn-group > .btn + .dropdown-toggle {
+   .no-box-shadow;
+}
+.btn-group > .dropdown-toggle {
+   min-width: 20px;
+   padding-bottom: 2px;
+   padding-top: 2px;
+}
+
+
+.btn-group > .btn-mini + .dropdown-toggle {
+   padding-top: 0;
+   padding-bottom: 0;
+   *padding-top: 0;
+   *padding-bottom: 0;
+}
+   .btn-group > .btn-mini + .dropdown-toggle .caret {
+      margin-top: 2px;
+   }
+//.btn-group > .btn-small + .dropdown-toggle .caret {
+//}
+.btn-group > .btn-large + .dropdown-toggle {
+   padding-top: 10px;
+   padding-bottom: 8px;
+   *padding-top: 10px;
+   *padding-bottom: 8px;
+}

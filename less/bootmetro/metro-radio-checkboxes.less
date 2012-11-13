@@ -1,0 +1,138 @@
+/* Metro Radio button
+-------------------------------------------------- */
+/*
+   NOTE:
+   Originally the following rules used the adjacent sibling selector '+ span'
+   but in Rails & ASP.NET radio & checkbox are rendered with a supplemental hidden input following
+   the radio/checkbox, so I changed the rules to use the general sibling selector '~ span' and adding a
+   custom class to the span.
+   Note that the general sibling selector '~' is CSS3 only and is not supported in <= IE7.
+*/
+
+
+.controls > .radio:first-child, .controls > .checkbox:first-child {
+   padding-top: 0;
+}
+
+label.radio,
+label.checkbox {
+   cursor: pointer;
+   position: relative;
+   padding-left: 0;
+}
+
+input[type=radio],
+input[type=radio] ~ span.metro-radio,
+input[type=radio] ~ span.metro-radio::before,
+input[type=radio] ~ span.metro-radio::after {
+   vertical-align: middle;
+   display: inline-block;
+}
+input[type=radio] {
+   position: absolute;
+   filter: alpha(opacity=0);
+   -moz-opacity: 0;
+   opacity: 0;
+}
+input[type=radio] ~ span.metro-radio {
+   padding-left: 36px;
+   padding-top: 4px;
+}
+input[type=radio] ~ span.metro-radio::before {
+   font-family: 'IcoMoon';
+   content: "\e10b";
+   text-indent: -9999px;
+   border: 2px solid #BABABA;
+   background: #FFF;
+   position: absolute;
+   left: 0;
+   top: 2px;
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+}
+input[type=radio]:checked ~ span.metro-radio::after {
+   text-indent: -9999px;
+   font-family: 'IcoMoon';
+   content: "\e10b";
+   background: #000;
+   position: absolute;
+   left: 6px;
+   top: 8px;
+   width: 12px;
+   height: 12px;
+   z-index: 1000;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+}
+
+input[type=radio]:not(:checked):disabled ~ span.metro-radio::before,
+input[type=radio]:disabled ~ span.metro-radio::before,
+input[type=radio]:disabled ~ span.metro-radio::after {
+   cursor: default;
+   background: #868686;
+}
+
+
+/* Metro Checkbox
+-------------------------------------------------- */
+label.checkbox input[type=checkbox],
+label.checkbox input[type=checkbox] ~ span.metro-checkbox,
+label.checkbox input[type=checkbox] ~ span.metro-checkbox::before,
+label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
+   vertical-align: middle;
+   display: inline-block;
+}
+label.checkbox input[type=checkbox] {
+   position: absolute;
+   filter: alpha(opacity=0);
+   -moz-opacity: 0;
+   opacity: 0;
+}
+label.checkbox input[type=checkbox] ~ span.metro-checkbox {
+   padding-left: 36px;
+   padding-top: 4px;
+}
+
+label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after {
+   border: 2px solid #BABABA;
+   background-color: #FFF;
+   font-family: 'IcoMoon';
+   content: "\e20c";
+   color: #202020;
+   font-size: 16px;
+   position: absolute;
+   top: 2px;
+   left: 0;
+   width: 18px;
+   height: 18px;
+   z-index: 1000;
+}
+label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
+   border: 2px solid #BABABA;
+   background-color: #FFF;
+   font-family: 'IcoMoon';
+   content: "\2003";
+   font-size: 16px;
+   position: absolute;
+   top: 2px;
+   left: 0;
+   width: 18px;
+   height: 18px;
+   z-index: 1000;
+}
+
+label.checkbox input[type=checkbox]:not(:checked):disabled ~ span.metro-checkbox::after,
+label.checkbox:hover input[type=checkbox]:disabled ~ span.metro-checkbox::after,
+label.checkbox input[type=checkbox]:disabled ~ span.metro-checkbox::after {
+   cursor: default;
+   background: #BABABA;
+}
+label.checkbox input[type=checkbox]:disabled ~ span.metro-checkbox::after {
+   color: #4c4c4c;
+}
+

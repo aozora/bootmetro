@@ -1,8 +1,10 @@
 {
-  "name": "metro-doc-builder"
-, "version": "0.0.1"
-, "description": "build metro mockups"
-, "dependencies": {
-      "hogan.js": "1.0.5-dev"
+   "name":           "bootmetro-builder",
+   "version":        "0.0.1",
+   "description":    "build bootstrap docs",
+   "dependencies":   {
+      "hogan.js": ">= 1.0.5-dev",
+      "recess": ">= 1.1.6",
+      "less": ">= 1.3.0"
    }
 }

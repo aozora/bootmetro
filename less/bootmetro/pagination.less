@@ -1,0 +1,37 @@
+//
+// Pager pagination
+// --------------------------------------------------
+.pager {
+   .next {
+      a:after {
+         font-family: 'IcoMoon';
+         content: "\e0f1";
+      }
+   }
+   .previous {
+      a:before {
+         font-family: 'IcoMoon';
+         content: "\e0f4";
+      }
+   }
+}
+.pager li > a,
+.pager li > span {
+   .no-border-radius;
+}
+
+
+
+.pagination a:hover, .pagination .active a {
+   background-color: #CCC;
+}
+.pagination {
+   .active {
+      a {
+         color: #FFF;
+      }
+   }
+   ul {
+      .no-box-shadow;
+   }
+}

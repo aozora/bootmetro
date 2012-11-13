@@ -1,0 +1,298 @@
+//
+// Buttons
+// --------------------------------------------------
+
+/*
+Button control.
+*/
+a.win-command, button, input[type=button], input[type=reset], input[type=submit] {
+   min-width: 90px;
+   padding: 4px 8px;
+   margin-bottom: 0;
+   border: 2px solid;
+   background-clip: padding-box;
+   font-weight: 600;
+   line-height: 1.3636; /* 20px when font-size is 11pt */
+}
+a.win-command {
+   min-height: 32px; /* content (20px) + padding + border */
+}
+
+
+/*
+File upload control.
+*/
+input[type=file] {
+   min-width: 100px;
+   min-height: 20px;
+   width: 340px;
+   height: 32px;
+   padding: 0;
+   margin: 7px 8px 21px 8px;
+   background-clip: padding-box;
+}
+
+
+
+/*
+Back button.
+*/
+.win-backbutton {
+   display: inline-block;
+   min-width: 0;
+   min-height: 0;
+   background-clip: border-box;
+   box-sizing: border-box;
+   border-width: 2px;
+   border-style: solid;
+   padding: 0;
+   text-align: center;
+   .border-radius(50%);
+
+/* Normal sizing. */
+   width: 38px;
+   height: 38px;
+   font-size: 20px;
+   line-height: 38px; /* line-height must match the content box height. */
+   vertical-align: baseline;
+}
+.win-backbutton::before {
+   font-weight: normal;
+   font-family: 'IcoMoon';
+   content: "\e05d";
+   vertical-align: 24%;
+}
+.win-backbutton:disabled, .win-backbutton:disabled:active {
+   background-clip: padding-box;
+   visibility: hidden;
+}
+
+#nav-bar .win-backbutton {
+   position: absolute;
+   left: 10px;
+   top: 8px;
+}
+
+
+/*
+Command buttons.
+*/
+a.win-command {
+   display: inline-block;
+   cursor: pointer;
+   letter-spacing: 0.02em;
+   vertical-align: middle;
+}
+a.win-command,
+button.win-command {
+   background: none;
+   background-clip: border-box;
+   height: auto; /* height is 88px (label) or 68px (no label) */
+   padding: 12px 0; /* bottom dependent on label/img, 2px margin */
+   margin: 0 5px;
+   border: 0;
+   min-width: 50px;
+   text-align: center;
+   font-size: 9pt;
+   font-weight: normal;
+   line-height: 16px;
+}
+
+
+
+/*
+Command button icons.
+*/
+.win-commandicon {
+   display: inline-block;
+   margin: 0 28px;
+   min-width: 0;
+   min-height: 0;
+   padding: 0;
+   width: 40px;
+   height: 40px;
+   box-sizing: border-box;
+   cursor: default;
+}
+.win-commandimage {
+   font-family: "IcoMoon";
+   letter-spacing: 0;
+   vertical-align: middle;
+   font-size: 14pt;
+   margin: -2px;
+   line-height: 40px; /* line-height must match the content box height */
+   background-position: 0 0;
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+   background-size: 160px 80px;
+}
+
+
+/*
+Command button "ring".
+*/
+.win-commandring,
+a:hover .win-commandring,
+a:active .win-commandring,
+a.win-command:disabled .win-commandring,
+a.win-command:disabled:active .win-commandring,
+button:hover .win-commandring,
+button:active .win-commandring,
+button.win-command:disabled .win-commandring,
+button.win-command:disabled:active .win-commandring {
+   border-width: 2px;
+   border-style: solid;
+   background-clip: border-box;
+   .border-radius(50%);
+}
+
+a:hover:active .win-commandring,
+a[aria-checked=true] .win-commandring,
+a[aria-checked=true]:active .win-commandring,
+a[aria-checked=true]:disabled .win-commandring,
+a[aria-checked=true]:disabled:active .win-commandring,
+button:hover:active .win-commandring,
+button[aria-checked=true] .win-commandring,
+button[aria-checked=true]:active .win-commandring,
+button[aria-checked=true]:disabled .win-commandring,
+button[aria-checked=true]:disabled:active .win-commandring {
+   background-clip: border-box;
+}
+
+/*
+Command button labels.
+*/
+a.win-command .win-label,
+button.win-command .win-label {
+   position: relative;
+   line-height: 15px;
+   margin-top: 3px;
+   display: block;
+   max-width: 88px; /* 100px button, but allow for 2px margins and 4px padding on each side */
+   padding-left: 4px;  /* 12px between buttons, 6px per side, minus 2px margins */
+   padding-right: 4px;
+   overflow: hidden;
+   word-wrap: break-word;
+   word-break: keep-all;
+   top: 1px;
+}
+a.win-command,
+a.win-command:hover {
+   text-decoration: none
+}
+
+/*
+AppBarCommand separator.
+*/
+hr.win-command {
+   display: inline-block;
+   padding: 0;
+   margin: 14px 29px 34px 30px;
+   width: 1px;
+   height: 40px;
+   border: 0;
+   vertical-align: top;
+}
+
+/*
+AppBar Edgy Container
+*/
+.win-appbar {
+   z-index: 1001;
+   border-width: 0;
+   width: 100%;
+   height: auto;
+   left: 0;
+   position: fixed;
+}
+
+/*
+AppBar control.
+*/
+.win-commandlayout {
+   padding-left: 10px;
+   font-size: 0;
+   min-height: 88px;
+   .win-selection {
+      float: left;
+   }
+}
+
+
+.btn {
+   line-height: 18px;
+}
+
+.btn.btn-link {
+   background-color: transparent;
+   border-color: transparent;
+   color: #0088CC;
+}
+.btn.btn-link:hover {
+   background-color: transparent;
+   border-color: transparent;
+   .transition(none 0s ease 0s);
+}
+
+.btn-large.dropdown-toggle {
+   padding-top: 2px;
+   padding-bottom: 2px;
+}
+
+.btn-mini.dropdown-toggle {
+   padding-top: 5px;
+}
+
+.btn-small {
+   line-height: 16px;
+   min-height: 20px;
+   padding: 3px 9px;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-warning,
+.btn-warning:hover,
+.btn-danger,
+.btn-danger:hover,
+.btn-success,
+.btn-success:hover,
+.btn-info,
+.btn-info:hover,
+.btn-inverse,
+.btn-inverse:hover {
+   text-shadow: none;
+}
+
+
+
+
+
+
+
+/* Narrow buttons and no labels when < 1024px. */
+@media (max-width: 1023px) {
+   a.win-command .win-label,
+   button.win-command .win-label {
+      display: none;
+   }
+   a.win-command .win-commandicon,
+   button.win-command .win-commandicon {
+      margin: 0 8px; /* 2px margin for focus */
+   }
+   .win-commandlayout {
+      min-height: 68px;
+   }
+   hr.win-command {
+      margin-bottom: 14px;
+      margin-top: 14px;
+   }
+}
+
+@media (min-width: 321px) and (max-width: 1023px) {
+   hr.win-command {
+      margin-left: 10px;
+      margin-right: 9px;
+   }
+}

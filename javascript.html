@@ -20,15 +20,12 @@
    <!-- remove or comment this line if you want to use the local fonts -->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 
-   <link rel="stylesheet" type="text/css" href="content/css/bootstrap.css">
-   <link rel="stylesheet" type="text/css" href="content/css/bootstrap-responsive.css">
+   <!--<link rel="stylesheet" type="text/css" href="content/css/bootstrap.css">-->
    <link rel="stylesheet" type="text/css" href="content/css/bootmetro.css">
-   <link rel="stylesheet" type="text/css" href="content/css/bootmetro-tiles.css">
-   <link rel="stylesheet" type="text/css" href="content/css/bootmetro-charms.css">
+   <link rel="stylesheet" type="text/css" href="content/css/bootstrap-responsive.css">
    <link rel="stylesheet" type="text/css" href="content/css/metro-ui-light.css">
    <link rel="stylesheet" type="text/css" href="content/css/icomoon.css">
    <link rel="stylesheet" type="text/css" href="content/css/datepicker.css">
-   <link rel="stylesheet" type="text/css" href="content/css/daterangepicker.css">
 
    <!--  these two css are to use only for documentation -->
    <link rel="stylesheet" type="text/css" href="content/css/demo.css">
@@ -67,7 +64,7 @@
    ================================================== -->
    <header id="nav-bar" class="container-fluid">
       <div class="row-fluid">
-         <div class="span8">
+         <div class="span7">
             <div id="header-container">
                <a id="backbutton" class="win-backbutton" href="./hub.html"></a>
                <h5>BootMetro</h5>
@@ -82,7 +79,9 @@
                   <li><a href="./listviews.html">ListViews</a></li>
                   <li><a href="./appbar-demo.html">Demo App-Bar</a></li>
                   <li><a href="./table.html">Demo Table</a></li>
+                  <li><a href="./wizard.html">Wizard</a></li>
                   <li><a href="./icons.html">Icons</a></li>
+                  <li class="divider"></li>
                   <li><a href="./scaffolding.html">Bootstrap Scaffolding</a></li>
                   <li><a href="./base-css.html">Bootstrap Base CSS</a></li>
                   <li><a href="./components.html">Bootstrap Components</a></li>
@@ -93,8 +92,12 @@
             </div>
             </div>
          </div>
-         <div id="top-info" class="pull-right">
-         <a href="#" class="pull-left">
+         <div id="top-info" class="span5 pull-right">
+         <a id="settings" class="pull-right" href="#">
+            <b class="icon-settings"></b>
+         </a>
+         <hr class="separator pull-right"/>
+         <a href="#" class="pull-right">
             <div class="top-info-block">
                <h3>FirstName</h3>
                <h4>LastName</h4>
@@ -102,10 +105,6 @@
             <div class="top-info-block">
                <b class="icon-user"></b>
             </div>
-         </a>
-         <hr class="separator pull-left"/>
-         <a id="settings" class="pull-left" href="#">
-            <b class="icon-settings"></b>
          </a>
       </div>
    </div>
@@ -308,9 +307,9 @@
                 </div>
              </div>
              <div class="bs-docs-example" style="padding-bottom: 24px;">
-                <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">Show Flyout (classic modal)</a>
-                <a data-toggle="modal" href="#myModal2" class="btn btn-success btn-large">Show Metro Message</a>
-                <a data-toggle="modal" href="#myModal3" class="btn btn-warning btn-large">Show Error/Warning</a>
+                <a data-toggle="modal" href="#myModal" class="btn btn-primary">Show Flyout (classic modal)</a>
+                <a data-toggle="modal" href="#myModal2" class="btn btn-success">Show Metro Message</a>
+                <a data-toggle="modal" href="#myModal3" class="btn btn-warning">Show Error/Warning</a>
              </div>
    
    <pre class="prettyprint linenums">
@@ -1758,55 +1757,16 @@
              </table>
            </section>
    
-           <section id="datepicker">
-              <div class="page-header">
-                 <h1>DatePicker <small></small></h1>
-              </div>
-               <p>Code from: <a href="http://www.eyecon.ro/bootstrap-datepicker/">http://www.eyecon.ro/bootstrap-datepicker/</a></p>
-   
-              <p>Attached to a field with the format specified via options.</p>
-              <div class="bs-docs-example">
-                 <input type="text" id="dp1" value="02-16-2012" class="span2 datepicker">
-              </div>
-   <pre class="prettyprint linenums">
-   &lt;input type="text" id="dp1" value="02-16-2012" class="span2 datepicker"&gt;
-   </pre>
-   
-              <p>Attachet to a field with the format specified via data tag.</p>
-              <div class="bs-docs-example">
-                 <input type="text" id="dp2" data-date-format="mm/dd/yy" value="02/16/12" class="span2 datepicker">
-              </div>
-   <pre class="prettyprint linenums">
-   &lt;input type="text" id="dp2" data-date-format="mm/dd/yy" value="02-16-2012" class="span2 datepicker"&gt;
-   </pre>
-   
-              <p>As component.</p>
-              <div class="bs-docs-example">
-                 <div data-date-format="dd-mm-yyyy" data-date="12-02-2012" id="dp3" class="input-append datepicker">
-                    <input type="text" readonly="" value="12-02-2012" size="16" class="span2">
-                    <span class="add-on"><i class="icon-calendar"></i></span>
-                 </div>
-              </div>
-   <pre class="prettyprint linenums">
-   &lt;div data-date-format="dd-mm-yyyy" data-date="12-02-2012" id="dp3" class="input-append datepicker"&gt;
-      &lt;input type="text" readonly="" value="12-02-2012" size="16" class="span2"&gt;
-      &lt;span class="add-on"&gt;&lt;i class="icon-calendar"&gt;&lt;/i&gt;&lt;/span&gt;
-      &lt;/div&gt;
-   </pre>
-   
-           </section>
    
          </div>
        </div>
    
      </div>
-   <div id="charms" class="win-ui-dark">
+   <div id="charms" class="win-ui-dark slide">
    
       <div id="theme-charms-section" class="charms-section">
          <div class="charms-header">
-            <a href="#" class="close-charms win-command">
-               <span class="win-commandimage win-commandring">&#xe05d;</span>
-            </a>
+            <a href="#" class="close-charms win-backbutton"></a>
             <h2>Settings</h2>
          </div>
    
@@ -1816,7 +1776,6 @@
                <form class="">
                   <label for="win-theme-select">Change theme:</label>
                   <select id="win-theme-select" class="">
-                     <option value="metro-ui-semilight">Semi-Light</option>
                      <option value="metro-ui-light">Light</option>
                      <option value="metro-ui-dark">Dark</option>
                   </select>
