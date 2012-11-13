@@ -6822,7 +6822,7 @@ a.win-command {
 a.win-command,
 button.win-command {
   height: auto;
-  min-width: 42px;
+  min-width: 50px;
   padding: 12px 0;
   margin: 0 5px;
   font-size: 9pt;
@@ -7339,6 +7339,11 @@ AppBar control.
   overflow: hidden;
 }
 
+.tooltip.in {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
 #content-filters {
   margin-top: 10px;
 }
@@ -7551,12 +7556,6 @@ Progress control. */
           transition: left 0.6s ease;
 }
 
-.metro-sections h2 {
-  margin-left: 5px;
-  font-weight: 300;
-  text-transform: lowercase;
-}
-
 .metro {
   overflow: hidden;
 }
@@ -7566,6 +7565,17 @@ Progress control. */
   width: 10000px;
   height: auto;
   overflow: hidden;
+}
+
+.metro .metro-sections.vscroll {
+  width: auto;
+  overflow: inherit;
+}
+
+.metro .metro-sections h2 {
+  margin-left: 5px;
+  font-weight: 300;
+  text-transform: lowercase;
 }
 
 .metro .metro-sections .metro-section.tile-span-8 {
