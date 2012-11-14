@@ -107,7 +107,7 @@ hr.soften {
 }
 .jumbotron h1 {
    font-size: 80px;
-   font-weight: normal;
+   font-weight: 300;
    letter-spacing: -1px;
    line-height: 1;
 }

@@ -20,8 +20,14 @@ The framework integrate and extend the work first done by other great people:
 
 ## Versioning
 
-### Latest Release: v0.6
+### Latest Release: v1.0
+* moved bootmetro main css files to LESS
+*
+*
+*
 
+
+## v0.6
 * Various bug fixes
 * restored correct use of OpenSans web font
 * upgraded to use Twitter Bootstrap v2.2.1
