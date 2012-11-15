@@ -239,6 +239,38 @@ hr.soften {
    *zoom: 1;
 }
 
+
+/*
+Index Donate tile
+*/
+.metro .tile.wide.donate {
+   height: 110px;
+   padding: 20px;
+   width: 270px;
+   cursor: default;
+}
+.metro .tile.wide.donate .text {
+   font-size: 15px;
+   font-weight: normal;
+   height: 18px;
+   line-height: 18px;
+   overflow: hidden;
+   text-align: left;
+}
+.metro .tile.wide.donate .text-header3 {
+   font-size: 30px;
+   font-weight: 300;
+   line-height: 32px;
+   max-height: 110px;
+   overflow: hidden;
+   text-align: left;
+}
+.metro .tile.wide.donate form {
+   margin: 10px auto;
+   text-align: center;
+}
+
+
 /* Subhead (other pages)
 ------------------------- */
 .subhead {
