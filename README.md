@@ -2,29 +2,29 @@
 
 
 BootMetro provides simple and flexible HTML, CSS, and Javascript for web apps that wants to use the "Windows 8 MetroUI" style, without the need to run on Windows 8.
-It is built on top of Twitter Bootstrap and was originally inspired by the Metro UI CSS by Sergey Pimenov.
+It is built on top of Twitter Bootstrap and HTML5 Boilerplate.
 
 
 ## Features
 The framework permit to create web applications with the look&feel of the not-yet-released Windows 8 MetroUI style.
 Maybe not ideal for internet web sites, the MetroUI style can be adopted for modern intranet web sites.
-I've choosen to use as base the awesome Twitter Bootstrap framework, applying a set of customizations in pure css (but planning to do it in LESS for future version).
+I've choose to use as base the awesome Twitter Bootstrap framework, applying a set of customizations in pure css (but planning to do it in LESS for future version).
 
 
 The framework integrate and extend the work first done by other great people:
    - [HTML5 Boilerplate](http://html5boilerplate.com/)
    - [Twitter Bootstrap](http://twitter.github.com/bootstrap)
-   - [Metro UI CSS by Sergey Pimenov](http://metroui.org.ua/)
    - [IcoMoon](http://keyamoon.com/icomoon/#toHome)
 
+Early versions of BootMetro was inspired by the work of Sergey Pimenov for his [Metro UI CSS](http://metroui.org.ua/)
 
 ## Versioning
 
 ### Latest Release: v1.0
 * moved bootmetro main css files to LESS
-*
-*
-*
+* upgraded to jQuery 1.8.3
+* upgraded to Modernizr 2.6.2
+* integrated HTML5 Boilerplate 4.0.1
 
 
 ## v0.6
@@ -37,7 +37,6 @@ The framework integrate and extend the work first done by other great people:
 
 ## ToDo
 
-* fix charms & charms animation like bootstrap plugins
 * check layout guideline on "Understanding the Windows 8 silhouette"
    * make 2 layout grid: h-scroll + v-scroll
 * (almost done) Complete the implementation of the tiles templates (add counter & mini ico)

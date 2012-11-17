@@ -1135,3 +1135,29 @@ ListView demo
       float: none;
    }
 }
+
+
+
+/*::-webkit-scrollbar {*/
+   /*width: 17px;*/
+   /*height: 17px;*/
+   /*background-color: #F0F0F0;*/
+   /*border: none;*/
+/*}*/
+/*Pseudo ::-webkit-search-decoration element*/
+
+/*::-webkit-scrollbar-thumb {*/
+   /*background-color: #CDCDCD;*/
+   /*border: 1px solid #F0F0F0;*/
+/*}*/
+/*Pseudo ::-webkit-search-decoration element*/
+
+/*::-webkit-scrollbar-button {*/
+   /*background-color: #F0F0F0;*/
+   /*background:  #F0F0F0 url("/content/img/controls-icon.png");*/
+   /*background-repeat: no-repeat;*/
+/*}*/
+/*Pseudo ::-webkit-search-decoration element*/
+/*::-webkit-scrollbar-corner {*/
+   /*background-color: #F0F0F0;*/
+/*}*/

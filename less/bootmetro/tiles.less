@@ -30,34 +30,6 @@
 }
 
 
-.image-wrapper {
-   span.icon {
-      font-size: 80px;
-      height: 80px;
-      line-height: 80px;
-      width: 80px;
-   }
-}
-
-.metro .tile.wide.imagetext .column-text,
-.metro .tile.wide.text .column-text {
-   display: block;
-   float: left;
-   width: 180px;
-//   padding-left: 10px;
-}
-
-.scroll {
-   .transition(left 0.6s ease);
-}
-
-//.metro-sections {
-//   h2 {
-//      margin-left: 5px;
-//      font-weight: 300;
-//      text-transform: lowercase;
-//   }
-//}
 
 .metro {
    overflow: hidden;
@@ -79,26 +51,6 @@
          text-transform: lowercase;
       }
 
-      .metro-section.tile-span-8 {
-         width: 1120px;
-         margin-left: 0;
-      }
-      .metro-section.tile-span-1 {
-         width: 160px;
-         margin-left: 0;
-      }
-      .metro-section.tile-span-2 {
-         width: 320px;
-         margin-left: 0;
-      }
-      .metro-section.tile-span-3 {
-         width: 480px;
-         margin-left: 0;
-      }
-      .metro-section.tile-span-4 {
-         width: 640px;
-         margin-left: 0;
-      }
 
       .metro-section {
          position: relative;
@@ -106,20 +58,40 @@
          width: auto;
          height: auto;
          margin-right: 75px;
+         &.tile-span-1 {
+            width: 160px;
+            margin-left: 0;
+         }
+         &.tile-span-2 {
+            width: 320px;
+            margin-left: 0;
+         }
+         &.tile-span-3 {
+            width: 480px;
+            margin-left: 0;
+         }
+         &.tile-span-4 {
+            width: 640px;
+            margin-left: 0;
+         }
+         &.tile-span-5 {
+            width: 640px;
+            margin-left: 0;
+         }
+         &.tile-span-6 {
+            width: 800px;
+            margin-left: 0;
+         }
+         &.tile-span-7 {
+            width: 960px;
+            margin-left: 0;
+         }
+         &.tile-span-8 {
+            width: 1120px;
+            margin-left: 0;
+         }
       }
 
-      .metro-section.tile-span-5 {
-         width: 640px;
-         margin-left: 0;
-      }
-      .metro-section.tile-span-6 {
-         width: 800px;
-         margin-left: 0;
-      }
-      .metro-section.tile-span-7 {
-         width: 960px;
-         margin-left: 0;
-      }
    }
 
    .tile {
@@ -135,13 +107,30 @@
       overflow: hidden;
       text-decoration: none;
       background-color: #2C83EF;
-      .app-count {
+
+      .app-label, .label {
+         bottom: 5px;
+         font-size: 12px;
+         left: 20px;
+         position: absolute;
+      }
+      .app-count, .count {
          position: absolute;
          right: 20px;
          bottom: 5px;
          font-size: 14px;
          font-weight: bold;
       }
+
+      .image-wrapper {
+         span.icon {
+            font-size: 80px;
+            height: 80px;
+            line-height: 80px;
+            width: 80px;
+         }
+      }
+
       .text-header3 {
          font-weight: 300;
          font-size: 34px;
@@ -215,12 +204,6 @@
          max-height: 92px;
          overflow: hidden;
       }
-      .app-label {
-         bottom: 5px;
-         font-size: 12px;
-         left: 20px;
-         position: absolute;
-      }
       .text {
          font-size: 15px;
          line-height: 18px;
@@ -233,7 +216,9 @@
    .tile:hover {
       outline: 3px #225a68 solid;
    }
+
    .tile.app {
+
       .image-wrapper {
          display: block;
          width: 150px;
@@ -312,6 +297,11 @@
             overflow: hidden;
          }
       }
+      .column-text {
+         display: block;
+         float: left;
+         width: 180px;
+      }
    }
    .tile.wide.imagetext {
       width: 270px;
@@ -327,6 +317,11 @@
             max-width: 80px;
             max-height: 80px;
          }
+      }
+      .column-text {
+         display: block;
+         float: left;
+         width: 180px;
       }
       .textover-wrapper {
          position: absolute;
@@ -366,6 +361,9 @@
          float: left;
       }
    }
+
+
+
    .tile.widepeek {
       width: 310px;
       height: 300px;
