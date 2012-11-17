@@ -34,16 +34,16 @@
 .metro {
    overflow: hidden;
 
+   &.nohidden {
+      width: auto;
+      overflow: inherit;
+   }
+
    .metro-sections {
       height: auto;
       position: relative;
       overflow: hidden;
       width: 10000px;
-
-      &.vscroll {
-         width: auto;
-         overflow: inherit;
-      }
 
       h2 {
          margin-left: 5px;
@@ -131,6 +131,14 @@
          }
       }
 
+      .text-header {
+         font-weight: 300;
+         font-size: 34px;
+         line-height: 36px;
+         max-height: 36px;
+         text-align: left;
+         overflow: hidden;
+      }
       .text-header3 {
          font-weight: 300;
          font-size: 34px;
@@ -148,14 +156,6 @@
          display: block;
          float: left;
          width: 50px;
-      }
-      .text-header {
-         font-weight: 300;
-         font-size: 34px;
-         line-height: 36px;
-         max-height: 36px;
-         text-align: left;
-         overflow: hidden;
       }
       .column2-text {
          display: block;
@@ -403,12 +403,29 @@
          float: left;
          height: 80px;
          width: 80px;
-         .image-wrapper span.icon {
+         span.icon {
             font-size: 80px;
             height: 80px;
             line-height: 80px;
             width: 80px;
          }
+      }
+
+      .text-header {
+         font-weight: 300;
+         font-size: 34px;
+         line-height: 36px;
+         max-height: 36px;
+         text-align: left;
+         overflow: hidden;
+      }
+      .text-header2 {
+         font-weight: 300;
+         font-size: 30px;
+         line-height: 32px;
+         max-height: 80px;
+         text-align: left;
+         overflow: hidden;
       }
 
       .column-text {
@@ -425,6 +442,10 @@
             overflow: hidden;
             text-align: left;
          }
+      }
+
+      .tile-form {
+         margin: 10px 0;
       }
 
    }

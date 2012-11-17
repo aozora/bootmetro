@@ -7538,16 +7538,16 @@ Progress control. */
   overflow: hidden;
 }
 
+.metro.nohidden {
+  width: auto;
+  overflow: inherit;
+}
+
 .metro .metro-sections {
   position: relative;
   width: 10000px;
   height: auto;
   overflow: hidden;
-}
-
-.metro .metro-sections.vscroll {
-  width: auto;
-  overflow: inherit;
 }
 
 .metro .metro-sections h2 {
@@ -7643,6 +7643,15 @@ Progress control. */
   line-height: 80px;
 }
 
+.metro .tile .text-header {
+  max-height: 36px;
+  overflow: hidden;
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 36px;
+  text-align: left;
+}
+
 .metro .tile .text-header3 {
   max-height: 110px;
   overflow: hidden;
@@ -7662,15 +7671,6 @@ Progress control. */
   display: block;
   float: left;
   width: 50px;
-}
-
-.metro .tile .text-header {
-  max-height: 36px;
-  overflow: hidden;
-  font-size: 34px;
-  font-weight: 300;
-  line-height: 36px;
-  text-align: left;
 }
 
 .metro .tile .column2-text {
@@ -7941,11 +7941,29 @@ Progress control. */
   height: 80px;
 }
 
-.metro-responsive-tiles .tile .image-wrapper .image-wrapper span.icon {
+.metro-responsive-tiles .tile .image-wrapper span.icon {
   width: 80px;
   height: 80px;
   font-size: 80px;
   line-height: 80px;
+}
+
+.metro-responsive-tiles .tile .text-header {
+  max-height: 36px;
+  overflow: hidden;
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 36px;
+  text-align: left;
+}
+
+.metro-responsive-tiles .tile .text-header2 {
+  max-height: 80px;
+  overflow: hidden;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 32px;
+  text-align: left;
 }
 
 .metro-responsive-tiles .tile .column-text {
@@ -7962,6 +7980,10 @@ Progress control. */
   font-weight: 300;
   line-height: 36px;
   text-align: left;
+}
+
+.metro-responsive-tiles .tile .tile-form {
+  margin: 10px 0;
 }
 
 .mediumListIconTextItem.selected .mediumListIconTextItem-Detail,
