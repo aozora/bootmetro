@@ -81,6 +81,7 @@
                   <li><a href="./table.html">Demo Table</a></li>
                   <li><a href="./wizard.html">Wizard</a></li>
                   <li><a href="./icons.html">Icons</a></li>
+                  <li><a href="./metro-components.html">Metro Components</a></li>
                   <li class="divider"></li>
                   <li><a href="./scaffolding.html">Bootstrap Scaffolding</a></li>
                   <li><a href="./base-css.html">Bootstrap Base CSS</a></li>
@@ -103,7 +104,7 @@
                <h4>LastName</h4>
             </div>
             <div class="top-info-block">
-               <b class="icon-user"></b>
+               <b class="icon-user-2"></b>
             </div>
          </a>
       </div>
@@ -248,89 +249,9 @@
    &lt;/div&gt;
    </pre>
    
-             <h3>Live demo</h3>
-             <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
-             <p>To show a Metro style message dialog, add a class <code>message</code>.</p>
-             <p>To show a Metro style warning or error dialog, add a class <code>warning</code>.</p>
-             <!-- sample modal content -->
-             <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-               <div class="modal-header">
-                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                 <h3 id="myModalLabel">Modal Heading</h3>
-               </div>
-               <div class="modal-body">
-                 <h4>Text in a modal</h4>
-                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
-   
-                 <h4>Popover in a modal</h4>
-                 <p>This <a href="#" role="button" class="btn popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on click.</p>
-   
-                 <h4>Tooltips in a modal</h4>
-                 <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> should have tooltips on hover.</p>
-   
-                 <hr>
-   
-                 <h4>Overflowing text to show optional scrollbar</h4>
-                 <p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we've included.</p>
-                 <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                 <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                 <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                 <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-               </div>
-               <div class="modal-footer">
-                 <button class="btn" data-dismiss="modal">Close</button>
-                 <button class="btn btn-primary">Save changes</button>
-               </div>
-             </div>
-             <div id="myModal2" class="modal message hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-header">
-                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                   <h3>Modal Heading</h3>
-                </div>
-                <div class="modal-body">
-                   <h4>Text in a modal</h4>
-                   <p>Do you want to turn on location services so Microsoft can use your location ?</p>
-                </div>
-                <div class="modal-footer">
-                   <button class="btn" data-dismiss="modal">Close</button>
-                   <button class="btn btn-primary">Save changes</button>
-                </div>
-             </div>
-             <div id="myModal3" class="modal warning bg-color-blu hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-body">
-                   <p>The new product cannot be saved due to an error. A log message has been emailed to you.</p>
-                </div>
-                <div class="modal-footer">
-                   <button class="btn btn-large" data-dismiss="modal">Close</button>
-                </div>
-             </div>
-             <div class="bs-docs-example" style="padding-bottom: 24px;">
-                <a data-toggle="modal" href="#myModal" class="btn btn-primary">Show Flyout (classic modal)</a>
-                <a data-toggle="modal" href="#myModal2" class="btn btn-success">Show Metro Message</a>
-                <a data-toggle="modal" href="#myModal3" class="btn btn-warning">Show Error/Warning</a>
-             </div>
-   
-   <pre class="prettyprint linenums">
-   &lt!-- Button to trigger modal --&gt;
-   &lt;a href="#myModal" role="button" class="btn" data-toggle="modal"&gt;Launch demo modal&lt;/a&gt;
-   
-   &lt!-- Modal --&gt;
-   &lt;div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
-     &lt;div class="modal-header"&gt;
-       &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&lt;/button&gt;
-       &lt;h3 id="myModalLabel"&gt;Modal header&lt;/h3&gt;
-     &lt;/div&gt;
-     &lt;div class="modal-body"&gt;
-       &lt;p&gt;One fine body&hellip;&lt;/p&gt;
-     &lt;/div&gt;
-     &lt;div class="modal-footer"&gt;
-       &lt;button class="btn" data-dismiss="modal" aria-hidden="true"&gt;Close&lt;/button&gt;
-       &lt;button class="btn btn-primary"&gt;Save changes&lt;/button&gt;
-     &lt;/div&gt;
-   &lt;/div&gt;
-   </pre>
+            <p>
+               <span class="label label-warning">To see a live demo go to the <a href="./metro-components.html#modals">Metro Components</a> page where you'll see different modals in Metro style.</span>
+            </p>
    
    
              <hr class="bs-docs-separator">

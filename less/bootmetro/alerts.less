@@ -8,41 +8,32 @@
       color: #FFF;
       margin-top: 0;
    }
+
+
 }
-.modal .close:after,.alert .close:after {
+
+.modal .close:after, .alert .close:after {
    content: "\e131";
    font-size: 16px;
 }
-.alert-heading {
-   font-weight: 600;
-}
-.alert-info {
-   color: #FFFFFF;
-   background-color: #2D89F0;
-   border-color: #2D89F0;
-}
-.alert-success {
-   color: #FFFFFF;
-   background-color: #01A31C;
-   border-color: #01A31C;
-}
 .alert {
    text-shadow: none;
-   background-color: #D44A26;
-   border-color: #D44A26;
-   color: #FFF;
+//   background-color: #D44A26;
+//   border-color: #D44A26;
+//   color: #FFF;
    position: relative;
+
    .close:hover {
       background-color: rgba(255, 255, 255, 0.4);
       color: #FFF;
    }
+   .alert-heading {
+      font-weight: 600;
+   }
 }
-.alert-danger,.alert-error {
-   color: #FFFFFF;
-   background-color: #BC1C48;
-   border-color: #BC1C48;
-}
-.modal .close,.alert .close {
+
+.modal .close,
+.alert .close {
    position: absolute;
    top: 0;
    right: 0;

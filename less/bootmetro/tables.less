@@ -4,7 +4,7 @@
 
 .table {
    thead {
-      border-bottom: 1px solid #BEBEBE;
+      border-bottom: 1px solid @tableBorder;
    }
    th {
       font-size: 9pt;
@@ -14,4 +14,27 @@
 }
 .table th, .table td {
    border-top: 0;
+}
+
+// TABLE BACKGROUNDS
+// -----------------
+// Exact selectors below required to override .table-striped
+
+.table tbody tr {
+   &.success td {
+      background-color: @successBackground;
+      color: @successText;
+   }
+   &.error td {
+      background-color: @errorBackground;
+      color: @errorText;
+   }
+   &.warning td {
+      background-color: @warningBackground;
+      color: @warningText;
+   }
+   &.info td {
+      background-color: @infoBackground;
+      color: @infoText;
+   }
 }

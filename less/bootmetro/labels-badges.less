@@ -7,3 +7,24 @@
 .badge {
    .no-border-radius;
 }
+
+// Colors
+// Only give background-color difference to links (and to simplify, we don't qualifty with `a` but [href] attribute)
+.label,
+.badge {
+// Important (red)
+   &-important         { background-color: @errorBackground; color: @errorText;}
+   &-important[href]   { background-color: darken(@errorBackground, 10%);  color: @errorText;}
+// Warnings (orange)
+   &-warning           { background-color: @warningBackground; color: @warningText;}
+   &-warning[href]     { background-color: darken(@warningBackground, 10%); color: @warningText;}
+// Success (green)
+   &-success           { background-color: @successBackground; }
+   &-success[href]     { background-color: darken(@successBackground, 10%); color: @successText;}
+// Info (turquoise)
+   &-info              { background-color: @infoBackground; }
+   &-info[href]        { background-color: darken(@infoBackground, 10%); color: @infoText;}
+// Inverse (black)
+   &-inverse           { background-color: @grayDark; }
+   &-inverse[href]     { background-color: darken(@grayDark, 10%); }
+}

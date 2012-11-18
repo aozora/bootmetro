@@ -103,3 +103,23 @@ input.search-query {
 .form-search .input-prepend .btn {
    .no-border-radius;
 }
+
+// FORM FIELD FEEDBACK STATES
+// --------------------------
+
+// Warning
+.control-group.warning {
+   .formFieldState(@warningBackground, @warningBackground, @warningBackground);
+}
+// Error
+.control-group.error {
+   .formFieldState(@errorBackground, @errorBackground, @errorBackground);
+}
+// Success
+.control-group.success {
+   .formFieldState(@successBackground, @successBackground, @successBackground);
+}
+// Success
+.control-group.info {
+   .formFieldState(@infoBackground, @infoBackground, @infoBackground);
+}
