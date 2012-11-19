@@ -16,6 +16,50 @@
    border-top: 0;
 }
 
+// reapply the border
+.table-bordered th, .table-bordered td {
+   border-top: 1px solid @tableBorder;
+}
+
+.table-bordered {
+// For first th or td in the first row in the first thead or tbody
+   thead:first-child tr:first-child th:first-child,
+   tbody:first-child tr:first-child td:first-child {
+      .no-border-radius;
+   }
+   thead:first-child tr:first-child th:last-child,
+   tbody:first-child tr:first-child td:last-child {
+      .no-border-radius;
+   }
+// For first th or td in the first row in the first thead or tbody
+   thead:last-child tr:last-child th:first-child,
+   tbody:last-child tr:last-child td:first-child,
+   tfoot:last-child tr:last-child td:first-child {
+      .no-border-radius;
+   }
+   thead:last-child tr:last-child th:last-child,
+   tbody:last-child tr:last-child td:last-child,
+   tfoot:last-child tr:last-child td:last-child {
+      .no-border-radius;
+   }
+
+// Special fixes to round the left border on the first td/th
+   caption + thead tr:first-child th:first-child,
+   caption + tbody tr:first-child td:first-child,
+   colgroup + thead tr:first-child th:first-child,
+   colgroup + tbody tr:first-child td:first-child {
+      .no-border-radius;
+   }
+   caption + thead tr:first-child th:last-child,
+   caption + tbody tr:first-child td:last-child,
+   colgroup + thead tr:first-child th:last-child,
+   colgroup + tbody tr:first-child td:last-child {
+      .no-border-radius;
+   }
+}
+
+
+
 // TABLE BACKGROUNDS
 // -----------------
 // Exact selectors below required to override .table-striped
@@ -37,4 +81,13 @@
       background-color: @infoBackground;
       color: @infoText;
    }
+}
+
+
+/* */
+table td label.radio,
+table td label.checkbox,
+table th label.radio,
+table th label.checkbox {
+   width: 24px;
 }

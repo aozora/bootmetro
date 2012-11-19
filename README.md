@@ -25,7 +25,12 @@ Early versions of BootMetro was inspired by the work of Sergey Pimenov for his [
 * upgraded to jQuery 1.8.3
 * upgraded to Modernizr 2.6.2
 * integrated HTML5 Boilerplate 4.0.1
-
+* added metro controls:
+   Metro Progress Bars, determinate & indeterminate & ring
+   Metro styled date picker
+   FlipView
+* Metro Layouts
+*
 
 ## v0.6
 * Various bug fixes
