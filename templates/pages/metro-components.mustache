@@ -32,6 +32,7 @@
             <li><a href="#progress"><i class="icon-chevron-right"></i> {{_i}}Metro Progress Bars{{/i}}</a></li>
             <li><a href="#modals"><i class="icon-chevron-right"></i> {{_i}}Modal{{/i}}</a></li>
             <li><a href="#datepicker"><i class="icon-chevron-right"></i> {{_i}}DatePicker{{/i}}</a></li>
+            <li><a href="#flipview"><i class="icon-chevron-right"></i> {{_i}}FlipView{{/i}}</a></li>
          </ul>
       </div>
       <div class="span9">
@@ -86,8 +87,6 @@
 
          </section>
 
-
-         <hr class="bs-docs-separator">
 
 
          <!-- Modal
@@ -363,6 +362,71 @@
          </pre>
 
          </section>
+
+
+
+         <section id="flipview">
+            <div class="page-header">
+               <h1>{{_i}}FlipView{{/i}} <small></small></h1>
+            </div>
+            <p>The FlipView control lets flip through views or items one at a time. Flip buttons appear on mouse hover and let people flip to the next or previous item.</p>
+            <p>
+               <span class="label label-info">Note:</span> The FlipView control is a customization of the <a href="./javascript.html#carousel">Carousel</a> component, so it requires the carousel javascript plugin.
+            </p>
+
+
+            <h2>{{_i}}Example carousel{{/i}}</h2>
+            <p>{{_i}}The slideshow below shows a generic plugin and component for cycling through elements like a carousel.{{/i}}</p>
+            <div class="bs-docs-example">
+               <div class="row">
+                  <div class="span4">
+                     <div id="myFlipview" class="carousel flipview slide span4">
+                        <div class="carousel-inner">
+                           <div class="item active">
+                              <img src="content/img/sample-1.jpg" alt="">
+                              <div class="carousel-caption">
+                                 <h4>{{_i}}First Thumbnail label{{/i}}</h4>
+                                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <img src="content/img/sample-2.jpg" alt="">
+                              <div class="carousel-caption">
+                                 <h4>{{_i}}Second Thumbnail label{{/i}}</h4>
+                                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <img src="content/img/sample-3.jpg" alt="">
+                              <div class="carousel-caption">
+                                 <h4>{{_i}}Third Thumbnail label{{/i}}</h4>
+                                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">&#xe0f4;</a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">&#xe0f1;</a>
+                     </div>
+                  </div>
+               </div>
+            </div>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;div id="myCarousel" class="carousel flipview slide"&gt;
+  &lt;!-- {{_i}}Carousel items{{/i}} --&gt;
+  &lt;div class="carousel-inner"&gt;
+    &lt;div class="active item"&gt;…&lt;/div&gt;
+    &lt;div class="item"&gt;…&lt;/div&gt;
+    &lt;div class="item"&gt;…&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- {{_i}}Carousel nav{{/i}} --&gt;
+  &lt;a class="carousel-control left" href="#myCarousel" data-slide="prev"&gt;&amp;lsaquo;&lt;/a&gt;
+  &lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&amp;rsaquo;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+         </section>
+
+
 
       </div>
    </div>

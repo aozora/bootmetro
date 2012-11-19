@@ -1,0 +1,39 @@
+//
+// Flipview (carousel customization)
+// --------------------------------------------------
+
+.carousel.flipview {
+
+}
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel.flipview .carousel-control {
+   display: none;
+   left: 0;
+   width: 60px;
+   height: 40px;
+   border: 0;
+   .no-border-radius;
+   font-size: 20px;
+   line-height: 40px;
+   .opacity(100);
+   background: rgba(255, 255, 255, 0.6);
+   color: @black;
+
+// Reposition the right one
+   &.right {
+      left: auto;
+      right: 0;
+   }
+
+// Hover state
+   &:hover {
+      .opacity(90);
+   }
+}
+
+.carousel.flipview:hover .carousel-control {
+   display: block;
+}

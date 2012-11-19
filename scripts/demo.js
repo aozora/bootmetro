@@ -50,6 +50,9 @@ $(function(){
       $this.addClass('selected');
    });
 
+   // FlipView demo
+   $('#myFlipview').carousel()
+
 
 });
 
