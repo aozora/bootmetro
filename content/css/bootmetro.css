@@ -8652,8 +8652,7 @@ input[type=radio] ~ span.metro-radio::after {
 
 input[type=radio] {
   position: absolute;
-  -moz-opacity: 0;
-       opacity: 0;
+  opacity: 0;
   filter: alpha(opacity=0);
 }
 
@@ -8715,8 +8714,7 @@ label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
 
 label.checkbox input[type=checkbox] {
   position: absolute;
-  -moz-opacity: 0;
-       opacity: 0;
+  opacity: 0;
   filter: alpha(opacity=0);
 }
 
@@ -8853,13 +8851,44 @@ label.checkbox input[type=checkbox]:disabled ~ span.metro-checkbox::after {
   background-color: #2d89f0;
 }
 
-/* */
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: #f5f5f5;
+  border-top: 1px solid #00bff2;
+  border-bottom: 1px solid #00bff2;
+}
 
-table td label.radio,
+.table-hover tbody tr:hover td:first-child {
+  border-left: 1px solid #00bff2;
+}
+
+.table-hover tbody tr:hover td:last-child {
+  border-right: 1px solid #00bff2;
+}
+
+/* CheckBox cells */
+
 table td label.checkbox,
-table th label.radio,
 table th label.checkbox {
   width: 24px;
+}
+
+table th label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after,
+table td label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after {
+  top: 20;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+}
+
+table th label.checkbox input[type=checkbox] ~ span.metro-checkbox::after,
+table td label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
 }
 
 /*

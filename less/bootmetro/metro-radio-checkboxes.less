@@ -30,9 +30,7 @@ input[type=radio] ~ span.metro-radio::after {
 }
 input[type=radio] {
    position: absolute;
-   filter: alpha(opacity=0);
-   -moz-opacity: 0;
-   opacity: 0;
+   .opacity(0);
 }
 input[type=radio] ~ span.metro-radio {
    padding-left: 36px;
@@ -50,9 +48,7 @@ input[type=radio] ~ span.metro-radio::before {
    width: 20px;
    height: 20px;
    margin-right: 10px;
-   -webkit-border-radius: 50%;
-   -moz-border-radius: 50%;
-   border-radius: 50%;
+   .border-radius(50%);
 }
 input[type=radio]:checked ~ span.metro-radio::after {
    text-indent: -9999px;
@@ -65,9 +61,7 @@ input[type=radio]:checked ~ span.metro-radio::after {
    width: 12px;
    height: 12px;
    z-index: 1000;
-   -webkit-border-radius: 50%;
-   -moz-border-radius: 50%;
-   border-radius: 50%;
+   .border-radius(50%);
 }
 
 input[type=radio]:not(:checked):disabled ~ span.metro-radio::before,
@@ -89,9 +83,7 @@ label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
 }
 label.checkbox input[type=checkbox] {
    position: absolute;
-   filter: alpha(opacity=0);
-   -moz-opacity: 0;
-   opacity: 0;
+   .opacity(0);
 }
 label.checkbox input[type=checkbox] ~ span.metro-checkbox {
    padding-left: 36px;

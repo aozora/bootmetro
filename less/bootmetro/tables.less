@@ -84,10 +84,51 @@
 }
 
 
-/* */
-table td label.radio,
+
+// HOVER EFFECT
+// ------------
+// Placed here since it has to come after the potential zebra striping
+.table-hover {
+   tbody {
+      tr:hover td,
+      tr:hover th {
+         background-color: @tableBackgroundHover;
+         border-top: 1px solid @tableBorderHover;
+         border-bottom: 1px solid @tableBorderHover;
+      }
+      tr:hover td:first-child {
+         border-left: 1px solid @tableBorderHover;
+      }
+      tr:hover td:last-child {
+         border-right: 1px solid @tableBorderHover;
+      }
+   }
+}
+
+
+
+
+
+/* CheckBox cells */
 table td label.checkbox,
-table th label.radio,
 table th label.checkbox {
    width: 24px;
+}
+
+
+table th label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after,
+table td label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after {
+   font-size: 14px;
+   top: 20;
+   left: 0;
+   width: 16px;
+   height: 16px;
+}
+table th label.checkbox input[type=checkbox] ~ span.metro-checkbox::after,
+table td label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
+   font-size: 14px;
+   top: 0px;
+   left: 0;
+   width: 16px;
+   height: 16px;
 }
