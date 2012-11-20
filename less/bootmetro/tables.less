@@ -87,7 +87,6 @@
 
 // HOVER EFFECT
 // ------------
-// Placed here since it has to come after the potential zebra striping
 .table-hover {
    tbody {
       tr:hover td,
@@ -101,6 +100,18 @@
       }
       tr:hover td:last-child {
          border-right: 1px solid @tableBorderHover;
+      }
+   }
+}
+
+// SINGLE CELL HOVER EFFECT
+// ------------------------
+.table-cell-hover {
+   tbody {
+      tr td:hover,
+      tr th:hover {
+         background-color: @tableBackgroundHover;
+         border: 1px solid @tableBorderHover;
       }
    }
 }

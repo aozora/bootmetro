@@ -6137,6 +6137,12 @@ label.checkbox input[type=checkbox]:disabled ~ span.metro-checkbox::after {
   border-right: 1px solid #00bff2;
 }
 
+.table-cell-hover tbody tr td:hover,
+.table-cell-hover tbody tr th:hover {
+  background-color: #f5f5f5;
+  border: 1px solid #00bff2;
+}
+
 /* CheckBox cells */
 
 table td label.checkbox,
