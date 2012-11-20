@@ -31,6 +31,7 @@ Early versions of BootMetro was inspired by the work of Sergey Pimenov for his [
    Metro Progress Bars, determinate & indeterminate & ring
    Metro styled date picker
    FlipView
+   Toast notifications
 * Metro Layouts
 *
 

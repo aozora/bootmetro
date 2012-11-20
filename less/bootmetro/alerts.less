@@ -1,26 +1,10 @@
 //
-// Alerts
+// Alerts & Toasts
 // --------------------------------------------------
 
-.modal {
-   .close:hover {
-      background-color: rgba(0, 0, 0, 0.4);
-      color: #FFF;
-      margin-top: 0;
-   }
 
-
-}
-
-.modal .close:after, .alert .close:after {
-   content: "\e131";
-   font-size: 16px;
-}
 .alert {
    text-shadow: none;
-//   background-color: #D44A26;
-//   border-color: #D44A26;
-//   color: #FFF;
    position: relative;
 
    .close:hover {
@@ -32,6 +16,108 @@
    }
 }
 
+
+
+.toast {
+   position: relative;
+   .box-sizing(border-box);
+   padding: 13px 60px 13px 15px;
+   margin-bottom: 10px;
+   border: 2px solid lighten(@linkColor, 10%);
+   width: 380px;
+   height: 90px;
+   text-shadow: none;
+   background-color: @linkColor;
+   .no-border-radius;
+   color: @white;
+
+   h4 {
+      display: block;
+      width: 100%;
+      margin: 0;
+      .text-overflow-wrap;
+   }
+
+   p {
+      display: block;
+      width: 100%;
+      margin: 0;
+      .text-overflow-wrap;
+   }
+
+   .toast-inner {
+      margin-left: 90px;
+
+   }
+
+
+   &.toasttext01 {
+      p {
+         height: 60px;
+         line-height: 20px;
+      }
+   }
+   &.toasttext02 {
+      h4 {
+         height: 20px;
+         line-height: 20px;
+      }
+      p {
+         height: 40px;
+         line-height: 20px;
+      }
+   }
+   &.toasttext03 {
+      h4 {
+         height: 40px;
+         line-height: 20px;
+      }
+      p {
+         height: 20px;
+         line-height: 20px;
+      }
+   }
+   &.toasttext04 {
+      h4 {
+         height: 20px;
+         line-height: 20px;
+      }
+      p {
+         height: 20px;
+         line-height: 20px;
+      }
+   }
+
+
+   &.toastimageandtext01 {
+      padding: 0;
+
+      img {
+         display: inline-block;
+         vertical-align: top;
+         max-width: 88px;
+         max-height: 88px;
+         margin: 0;
+      }
+      p {
+         display: inline-block;
+         vertical-align: top;
+         padding: 13px 60px 10px 15px;
+         height: 60px;
+         line-height: 20px;
+      }
+
+   }
+
+
+
+}
+
+
+
+
+
+.toast .close,
 .modal .close,
 .alert .close {
    position: absolute;
@@ -54,4 +140,23 @@
    border: 0;
    text-align: center;
    vertical-align: baseline;
+}
+
+.toast .close:after,
+.modal .close:after,
+.alert .close:after {
+   content: "\e131";
+   font-size: 16px;
+}
+
+.toast {
+   .close {
+      display: none;
+   }
+
+   &:hover .close {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #FFF;
+   }
 }

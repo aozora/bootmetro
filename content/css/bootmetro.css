@@ -6784,18 +6784,6 @@ AppBar control.
   *padding-bottom: 8px;
 }
 
-.modal .close:hover {
-  margin-top: 0;
-  color: #FFF;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal .close:after,
-.alert .close:after {
-  font-size: 16px;
-  content: "\e131";
-}
-
 .alert {
   position: relative;
   text-shadow: none;
@@ -6810,6 +6798,100 @@ AppBar control.
   font-weight: 600;
 }
 
+.toast {
+  position: relative;
+  width: 380px;
+  height: 90px;
+  padding: 13px 60px 13px 15px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: none;
+  background-color: #2e8bcc;
+  border: 2px solid #54a2d9;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.toast h4 {
+  display: block;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toast p {
+  display: block;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toast .toast-inner {
+  margin-left: 90px;
+}
+
+.toast.toasttext01 p {
+  height: 60px;
+  line-height: 20px;
+}
+
+.toast.toasttext02 h4 {
+  height: 20px;
+  line-height: 20px;
+}
+
+.toast.toasttext02 p {
+  height: 40px;
+  line-height: 20px;
+}
+
+.toast.toasttext03 h4 {
+  height: 40px;
+  line-height: 20px;
+}
+
+.toast.toasttext03 p {
+  height: 20px;
+  line-height: 20px;
+}
+
+.toast.toasttext04 h4 {
+  height: 20px;
+  line-height: 20px;
+}
+
+.toast.toasttext04 p {
+  height: 20px;
+  line-height: 20px;
+}
+
+.toast.toastimageandtext01 {
+  padding: 0;
+}
+
+.toast.toastimageandtext01 img {
+  display: inline-block;
+  max-width: 88px;
+  max-height: 88px;
+  margin: 0;
+  vertical-align: top;
+}
+
+.toast.toastimageandtext01 p {
+  display: inline-block;
+  height: 60px;
+  padding: 13px 60px 10px 15px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.toast .close,
 .modal .close,
 .alert .close {
   position: absolute;
@@ -6832,6 +6914,23 @@ AppBar control.
   opacity: 1;
   box-sizing: border-box;
   background-clip: border-box;
+}
+
+.toast .close:after,
+.modal .close:after,
+.alert .close:after {
+  font-size: 16px;
+  content: "\e131";
+}
+
+.toast .close {
+  display: none;
+}
+
+.toast:hover .close {
+  display: inline-block;
+  color: #FFF;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .nav-header {
@@ -6943,6 +7042,12 @@ AppBar control.
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
+}
+
+.modal .close:hover {
+  margin-top: 0;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal.warning.fade.in {
