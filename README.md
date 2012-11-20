@@ -21,6 +21,8 @@ Early versions of BootMetro was inspired by the work of Sergey Pimenov for his [
 ## Versioning
 
 ### Latest Release: v1.0
+* BREAKING CHANGES:
+   * icomoon.css is now bootmetro-icons.css and is recomended to have it before bootmetro.css
 * moved bootmetro main css files to LESS
 * upgraded to jQuery 1.8.3
 * upgraded to Modernizr 2.6.2

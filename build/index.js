@@ -86,25 +86,67 @@ pages.forEach(function (name) {
 // compile LESS styles
 var lessdir = __dirname  + '/../less'
    ,lesspath = path.join(lessdir, '/bootmetro/bootmetro.less')
-//   ,lesspath = path.join(lessdir, '/bootstrap.less')
    ,cssdir = __dirname  + '/../content/css'
    ,css;
 
-
+// Compile bootmetro.css
 recess([lesspath], {
    compile: true,
    compress: false
 }, function (err, obj) {
 
-   console.dir(
-      //      obj // recess instance for fat.css
-      //      , obj.output // array of loggable content
-      obj.errors // array of failed lint rules
-   );
+   console.dir( obj.errors );
    if (err)
       throw err;
 
    css = obj.output;
    fs.writeFileSync( path.join(cssdir, '/bootmetro.css') , css, 'utf-8');
-//   fs.writeFileSync( path.join(cssdir, '/bootstrap2.css') , css, 'utf-8');
+   console.log('compiled bootmetro.less')
 });
+
+// Compile bootmetro-responsive.css
+recess([path.join(lessdir, '/responsive.less')], {
+   compile: true,
+   compress: false
+}, function (err, obj) {
+
+   console.dir( obj.errors );
+   if (err)
+      throw err;
+
+   css = obj.output;
+   fs.writeFileSync( path.join(cssdir, '/bootmetro-responsive.css') , css, 'utf-8');
+   console.log('compiled bootmetro-responsive.less')
+});
+
+// Compile bootmetro-icons.css
+recess([path.join(lessdir, '/bootmetro/bootmetro-icons.less')], {
+   compile: true,
+   compress: false
+}, function (err, obj) {
+
+   console.dir( obj.errors );
+   if (err)
+      throw err;
+
+   css = obj.output;
+   fs.writeFileSync( path.join(cssdir, '/bootmetro-icons.css') , css, 'utf-8');
+   console.log('compiled bootmetro-icons.less')
+});
+
+//
+//// Compile bootmetro-icons-ie7.css
+//recess([path.join(lessdir, '/bootmetro/bootmetro-icons-ie7.less')], {
+//   compile: true,
+//   compress: false
+//}, function (err, obj) {
+//
+//   console.dir( obj.errors );
+//   if (err)
+//      throw err;
+//
+//   css = obj.output;
+//   fs.writeFileSync( path.join(cssdir, '/bootmetro-icons-ie7.css') , css, 'utf-8');
+//   console.log('compiled bootmetro-icons-ie7.less')
+//});
+
