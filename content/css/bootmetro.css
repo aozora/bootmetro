@@ -5506,12 +5506,6 @@ img {
   display: block;
 }
 
-#top-info a {
-  display: inline-block;
-  height: 46px;
-  color: #5A5A5A;
-}
-
 #top-info b {
   display: inline-block;
   width: 46px;
@@ -5533,7 +5527,13 @@ img {
   border: 0 none;
 }
 
-#top-info a:hover {
+#top-info > a {
+  display: inline-block;
+  height: 46px;
+  color: #5A5A5A;
+}
+
+#top-info > a:hover {
   color: #000;
 }
 

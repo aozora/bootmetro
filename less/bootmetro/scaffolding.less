@@ -28,11 +28,7 @@ img {
 
 #top-info {
    display: block;
-   a {
-      display: inline-block;
-      height: 46px;
-      color: #5A5A5A;
-   }
+
    b {
       display: inline-block;
       font-size: 38px;
@@ -52,10 +48,18 @@ img {
       vertical-align: top;
       width: 1px;
    }
-   a:hover {
+}
+
+
+#top-info > a {
+   display: inline-block;
+   height: 46px;
+   color: #5A5A5A;
+   &:hover {
       color: #000;
    }
 }
+
 
 .top-info-block {
    display: block;
