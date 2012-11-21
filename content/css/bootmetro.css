@@ -7422,7 +7422,7 @@ Progress control. */
 }
 
 .metro {
-  overflow: hidden;
+  overflow: auto;
 }
 
 .metro.nohidden {

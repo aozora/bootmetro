@@ -8,9 +8,9 @@
       $(".metro-sections").width(totalWidth);
 
       // init nicescroll plugin
-      var nicesx = $(".metro").niceScroll(".metro .metro-sections",
+      var nicesx = $("#hub").niceScroll("#hub .metro-sections",
                                                    {
-                                                      touchbehavior: true,
+                                                      touchbehavior: true, //Modernizr.touch,
                                                       cursorcolor: "#FF00FF",
                                                       cursoropacitymax: 0.6,
                                                       cursorwidth: 24,
