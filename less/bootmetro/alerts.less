@@ -2,6 +2,18 @@
 // Alerts & Toasts
 // --------------------------------------------------
 
+.notifications {
+   position: fixed;
+}
+.notifications.top-right {
+   right: 0;
+   top: 0;
+}
+.notifications > div {
+   position: relative;
+   z-index: @zindexNotification;
+}
+
 
 .alert {
    text-shadow: none;

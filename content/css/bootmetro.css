@@ -6784,6 +6784,20 @@ AppBar control.
   *padding-bottom: 8px;
 }
 
+.notifications {
+  position: fixed;
+}
+
+.notifications.top-right {
+  top: 0;
+  right: 0;
+}
+
+.notifications > div {
+  position: relative;
+  z-index: 1060;
+}
+
 .alert {
   position: relative;
   text-shadow: none;
