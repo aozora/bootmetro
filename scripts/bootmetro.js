@@ -1,30 +1,23 @@
 (function ($) {
    $.fn.metro = function () {
-//      // arrange the section container
-//      var totalWidth = 0;
-//      var viewportWidth = $(".metro-sections").parent().width();
-//      $(".metro-sections .metro-section").each(function(index, el){
-//         totalWidth += $(el).outerWidth(true);
-//      });
-//      $(".metro-sections").width(totalWidth);
-//      var lastSectionWidth = $(".metro-sections .metro-section").last().outerWidth(true);
-//      var max = lastSectionWidth - totalWidth;
-//
-//      // reset the left value
-//      $(".metro-sections").css('left', 0);
-//
-//      // setup the horizontal scroll
-//      $(".metro-sections").mousewheel(function(e, delta) {
-//         e.preventDefault();
-//
-//         var $s = $(this);
-//         var actualLeft = parseInt($s.css('left'));
-//         var newLeft = actualLeft - (delta * 50);
-//         //console.log('delta: ' + delta + ' - actualLeft: ' + actualLeft + ' - newLeft: ' + newLeft);
-//
-//         if (newLeft <= 0 && newLeft >= max )
-//            $s.css('left', newLeft );
-//      });
+      // arrange the section container
+      var totalWidth = 0;
+      $(".metro-sections .metro-section").each(function(index, el){
+         totalWidth += $(el).outerWidth(true);
+      });
+      $(".metro-sections").width(totalWidth);
+
+      // init nicescroll plugin
+      var nicesx = $(".metro").niceScroll(".metro .metro-sections",
+                                                   {
+                                                      touchbehavior: true,
+                                                      cursorcolor: "#FF00FF",
+                                                      cursoropacitymax: 0.6,
+                                                      cursorwidth: 24,
+                                                      usetransition: true,
+                                                      hwacceleration: true,
+                                                      autohidemode: "hidden"
+                                                   });
 
 
       // if the tiles viewport is wider than the screen than shows the arrow buttons
@@ -45,12 +38,6 @@
          })
       })
 
-      // Metro-Switchers
-      /*var switchers = $(".metro-switch");
-      switchers.bind("click", function () {
-         var el = $(this);
-         if (el.hasClass('disabled') || el.hasClass('static')) return false;
-         el.toggleClass("state-on");
-      })*/
+
    }
 })(jQuery)

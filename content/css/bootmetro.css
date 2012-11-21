@@ -5953,7 +5953,7 @@ input[type=radio]:checked ~ span.metro-radio::after {
   position: absolute;
   top: 8px;
   left: 6px;
-  z-index: 1000;
+  z-index: 999;
   width: 12px;
   height: 12px;
   font-family: 'IcoMoon';
@@ -5998,7 +5998,7 @@ label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after {
   position: absolute;
   top: 2px;
   left: 0;
-  z-index: 1000;
+  z-index: 999;
   width: 18px;
   height: 18px;
   font-family: 'IcoMoon';
@@ -6013,7 +6013,7 @@ label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
   position: absolute;
   top: 2px;
   left: 0;
-  z-index: 1000;
+  z-index: 999;
   width: 18px;
   height: 18px;
   font-family: 'IcoMoon';

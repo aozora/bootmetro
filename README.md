@@ -33,7 +33,7 @@ Early versions of BootMetro was inspired by the work of Sergey Pimenov for his [
    FlipView
    Toast notifications
 * Metro Layouts
-*
+* use NiceScroll for Hub scrolling with touch support
 
 ## v0.6
 * Various bug fixes
