@@ -1,0 +1,130 @@
+<!-- Subhead
+================================================== -->
+<header id="nav-bar" class="container-fluid">
+   <div class="row-fluid">
+      <div class="span7">
+         <div id="header-container">
+            <a id="backbutton" class="win-backbutton" href="./hub.html"></a>
+            <h5>{{appname}}</h5>
+            <div class="dropdown">
+               <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
+                  {{_i}}Toast Notifications{{/i}}
+                  <b class="caret"></b>
+               </a>
+               {{>headermenu}}
+            </div>
+         </div>
+      </div>
+      {{>loggeduser}}
+   </div>
+</header>
+<div class="container">
+   <blockquote>
+      A toast notification is a transient message to the user that contains relevant, time-sensitive information and provides quick access to related content in an app.
+      <small>Toast notification overview (Windows Store apps)</small>
+   </blockquote>
+   <p>Following there are all the possible templates and styles for different kind of toast notifications.</p>
+</div>
+
+<div class="container">
+
+   <!-- Docs nav
+   ================================================== -->
+   <div class="row">
+      <div class="span3 bs-docs-sidebar">
+         <ul class="nav nav-list bs-docs-sidenav">
+            <li><a href="#textonly"><i class="icon-chevron-right"></i> {{_i}}Text Only Templates{{/i}}</a></li>
+            <li><a href="#imagetext"><i class="icon-chevron-right"></i> {{_i}}Image &amp; Text Templates{{/i}}</a></li>
+         </ul>
+      </div>
+      <div class="span9">
+
+
+         <!-- Text Only Templates
+         ================================================== -->
+         <section id="textonly">
+            <div class="page-header">
+               <h1>{{_i}}Text Only Templates{{/i}} <small></small></h1>
+            </div>
+
+            <div class="bs-docs-example">
+
+               <div class="toast toasttext01">
+                  <button type="button" class="close" data-dismiss="alert"></button>
+                  <p>Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p>
+               </div>
+
+               <div class="toast toasttext02">
+                  <button type="button" class="close" data-dismiss="alert"></button>
+                  <h4>Heading text</h4>
+                  <p>Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+               </div>
+
+               <div class="toast toasttext03">
+                  <button type="button" class="close" data-dismiss="alert"></button>
+                  <h4>Heading text that wraps over two lines. Vivamus elementum semper nisi.</h4>
+                  <p>Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+               </div>
+
+               <div class="toast toasttext04">
+                  <button type="button" class="close" data-dismiss="alert"></button>
+                  <h4>Heading text</h4>
+                  <p>Body text that wraps over two lines.</p>
+                  <p>Body text that wraps over two lines.</p>
+               </div>
+
+            </div>{{! /example }}
+
+<pre class="prettyprint linenums">
+&lt;div class="toast toasttext01"&gt;
+   &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+   &lt;p&gt;Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="toast toasttext02"&gt;
+   &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+   &lt;h4&gt;Heading text&lt;/h4&gt;
+   &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="toast toasttext03"&gt;
+   &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+   &lt;h4&gt;Heading text that wraps over two lines. Vivamus elementum semper nisi.&lt;/h4&gt;
+   &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="toast toasttext04"&gt;
+   &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+   &lt;h4&gt;Heading text&lt;/h4&gt;
+   &lt;p&gt;Body text that wraps over two lines.&lt;/p&gt;
+   &lt;p&gt;Body text that wraps over two lines.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+         </section>
+
+
+         <section id="imagetext">
+            <div class="page-header">
+               <h1>{{_i}}Image & Text Templates{{/i}} <small></small></h1>
+            </div>
+
+            <div class="bs-docs-example">
+
+               <div class="toast toastimageandtext01">
+                  <button type="button" class="close" data-dismiss="alert"></button>
+                  <img src="content/img/avatar-movie-puzzles-2.jpg" alt="" />
+                  <p>Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p>
+               </div>
+
+
+            </div>{{! /example }}
+
+<pre class="prettyprint linenums">
+
+</pre>
+
+         </section>
+
+      </div>
+   </div>
+</div>
