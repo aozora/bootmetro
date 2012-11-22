@@ -7960,6 +7960,68 @@ Progress control. */
   background-color: #0072BC;
 }
 
+.pivot {
+  position: relative;
+}
+
+.pivot .pivot-headers {
+  display: block;
+  height: 60px;
+}
+
+.pivot .pivot-items {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pivot .pivot-items .pivot-item {
+  position: relative;
+  display: none;
+  -webkit-transition: 0.6s ease-in-out left;
+     -moz-transition: 0.6s ease-in-out left;
+       -o-transition: 0.6s ease-in-out left;
+          transition: 0.6s ease-in-out left;
+}
+
+.pivot .pivot-items .active,
+.pivot .pivot-items .next,
+.pivot .pivot-items .prev {
+  display: block;
+}
+
+.pivot .pivot-items .active {
+  left: 0;
+}
+
+.pivot .pivot-items .next,
+.pivot .pivot-items .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.pivot .pivot-items .next {
+  left: 100%;
+}
+
+.pivot .pivot-items .prev {
+  left: -100%;
+}
+
+.pivot .pivot-items .next.left,
+.pivot .pivot-items .prev.right {
+  left: 0;
+}
+
+.pivot .pivot-items .active.left {
+  left: -100%;
+}
+
+.pivot .pivot-items .active.right {
+  left: 100%;
+}
+
 /*
 Tile ListView
 */
@@ -8050,27 +8112,6 @@ article.tile-listviewitem-detail header .titles h2 {
 
 article.tile-listviewitem-detail section {
   padding-top: 20px;
-}
-
-#pivot {
-  position: relative;
-}
-
-#pivot .pivot-headers {
-  display: block;
-  height: 60px;
-  clear: both;
-  white-space: nowrap;
-}
-
-#pivot .pivot-items {
-  position: relative;
-}
-
-#pivot .pivot-items .pivot-item {
-  display: block;
-  width: 100%;
-  white-space: normal;
 }
 
 #charms {

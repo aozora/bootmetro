@@ -53,15 +53,6 @@
          // and this.options
          // you can add more functions like the one below and 
          // call them like so: this.yourotherfunction(this.element, this.options).
-         
-         // check if the charms is pinned
-         /*var isPinned = $.cookie('charms_pinned');
-         if (isPinned != null || isPinned == 'true')
-         {
-            $("a#pin-charms").addClass("active");
-            $(this.element).width($.cookie('charms_width'));
-         }*/
-
       },
 
       showSection: function(sectionId, width){
@@ -71,8 +62,6 @@
             w = width;
          
          var transition = $.support.transition && $(this.element).hasClass('slide');
-
-//         $(this.element).show();
 
          if (transition) {
             $(this.element).eq(0).offsetWidth; // force reflow
@@ -86,27 +75,26 @@
       close: function(){
          $(this.element).removeClass('in');
          return false;
-      },
-
-      togglePin: function () {
-         var isPinned = $.cookie('charms_pinned');
-         
-         if (isPinned == null)
-         {
-            // pin
-            $.cookie('charms_pinned', 'true');
-            $.cookie('charms_width', $(this.element).width() );
-            $("a#pin-charms").addClass("active");
-         }
-         else
-         {
-            // unpin
-            $.cookie('charms_pinned', null);
-            $.cookie('charms_width', null );
-            $("a#pin-charms").removeClass("active");
-         }
-
-      }
+      }//,
+//
+//      togglePin: function () {
+//         var isPinned = $.cookie('charms_pinned');
+//
+//         if (isPinned == null)
+//         {
+//            // pin
+//            $.cookie('charms_pinned', 'true');
+//            $.cookie('charms_width', $(this.element).width() );
+//            $("a#pin-charms").addClass("active");
+//         }
+//         else
+//         {
+//            // unpin
+//            $.cookie('charms_pinned', null);
+//            $.cookie('charms_width', null );
+//            $("a#pin-charms").removeClass("active");
+//         }
+//      }
       
    };
 

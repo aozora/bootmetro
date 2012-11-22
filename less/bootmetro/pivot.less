@@ -1,0 +1,58 @@
+// PIVOT
+// ----------------
+.pivot {
+   position: relative;
+
+   .pivot-headers {
+      display: block;
+      height: 60px;
+   }
+
+   .pivot-items {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+
+
+      .pivot-item {
+         display: none;
+         position: relative;
+         .transition(.6s ease-in-out left);
+      }
+
+      .active,
+      .next,
+      .prev { display: block; }
+
+      .active {
+         left: 0;
+      }
+
+      .next,
+      .prev {
+         position: absolute;
+         top: 0;
+         width: 100%;
+      }
+
+      .next {
+         left: 100%;
+      }
+      .prev {
+         left: -100%;
+      }
+      .next.left,
+      .prev.right {
+         left: 0;
+      }
+
+      .active.left {
+         left: -100%;
+      }
+      .active.right {
+         left: 100%;
+      }
+
+   }
+
+}

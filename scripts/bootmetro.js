@@ -27,17 +27,17 @@
       //}
 
 
-      // Selectable
-      var selectables = $(".selectable");
-      $.each(selectables, function (i, e) {
-         var el = $(this);
-         var items = el.children(".metro-image, .metro-image-overlay, .metro-icon-text, .metro-image-text");
-         items.bind("click", function () {
-            if ($(this).hasClass("disabled")) return;
-            $(this).toggleClass("selected");
-         })
-      })
+//      // Selectable
+//      var selectables = $(".selectable");
+//      $.each(selectables, function (i, e) {
+//         var el = $(this);
+//         var items = el.children(".metro-image, .metro-image-overlay, .metro-icon-text, .metro-image-text");
+//         items.bind("click", function () {
+//            if ($(this).hasClass("disabled")) return;
+//            $(this).toggleClass("selected");
+//         })
+//      })
 
 
    }
-})(jQuery)
+})(jQuery);
