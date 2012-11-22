@@ -8052,6 +8052,27 @@ article.tile-listviewitem-detail section {
   padding-top: 20px;
 }
 
+#pivot {
+  position: relative;
+}
+
+#pivot .pivot-headers {
+  display: block;
+  height: 60px;
+  clear: both;
+  white-space: nowrap;
+}
+
+#pivot .pivot-items {
+  position: relative;
+}
+
+#pivot .pivot-items .pivot-item {
+  display: block;
+  width: 100%;
+  white-space: normal;
+}
+
 #charms {
   position: fixed;
   top: 0;
