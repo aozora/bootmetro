@@ -18,7 +18,14 @@
                                                       hwacceleration: true,
                                                       autohidemode: "hidden"
                                                    });
+      // $("#hub").scrollLeft(-100);
 
+      $("#tiles-scroll-prev").click(function(e){
+         $("#hub").scrollLeft(-100);
+      });
+      $("#tiles-scroll-next").click(function(e){
+         $("#hub").scrollLeft(100);
+      });
 
       // if the tiles viewport is wider than the screen than shows the arrow buttons
       //if ( $(".metro").width() < totalWidth ){

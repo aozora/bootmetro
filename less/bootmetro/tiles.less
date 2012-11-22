@@ -33,6 +33,7 @@
 
 .metro {
    overflow: auto;
+   position: relative;
 
    &.nohidden {
       width: auto;
@@ -381,6 +382,35 @@
 }
 
 
+#tiles-scroll-prev,
+#tiles-scroll-next {
+   position: absolute;
+   top: 20%;
+   left: 32px;
+
+   border-width: 2px;
+   border-style: solid;
+   padding: 0;
+   text-align: center;
+   .border-radius(50%);
+
+   width: 32px;
+   height: 32px;
+   font-size: 20px;
+   line-height: 32px; /* line-height must match the content box height. */
+   vertical-align: baseline;
+   font-weight: normal;
+   font-family: 'IcoMoon';
+   vertical-align: 24%;
+   text-decoration: none;
+   outline: 0;
+}
+#tiles-scroll-next {
+   left: auto;
+   right: 32px;
+}
+
+
 
 .metro-responsive-tiles {
    .tile {
@@ -451,92 +481,16 @@
    }
 }
 
-
-
-
-// ListView
-.mediumListIconTextItem.selected .mediumListIconTextItem-Detail,
-.mediumListIconTextItem.selected .mediumListIconTextItem-Detail h4,
-.mediumListIconTextItem.selected .mediumListIconTextItem-Detail h6 {
-   color: #FFF;
-}
-
-.listview-container.grid-layout {
-   border: solid 2px rgba(0, 0, 0, 0.13);
-   height: 240px;
-   overflow: auto;
-   padding: 2px;
-   background-color: #FFF;
-}
-
-
-.mediumListIconTextItem .mediumListIconTextItem-Image[class^="icon-"],.mediumListIconTextItem .mediumListIconTextItem-Image[class*=" icon-"] {
-   display: inline-block;
-   width: 60px;
-   height: 60px;
-   font-size: 60px;
-   line-height: 60px;
-   margin: 5px;
-}
-.mediumListIconTextItem {
-   display: inline-block;
-   position: relative;
-   vertical-align: top;
-   width: 282px;
-   height: 70px;
-   padding: 5px;
-   margin-bottom: 7px;
-   margin-right: 24px;
-   border: solid 3px transparent;
-   overflow: hidden;
-   background-color: #FFF;
-   cursor: pointer;
-   .mediumListIconTextItem-Detail {
-      display: inline-block;
-      vertical-align: top;
-      margin: 5px;
-   }
-   img.mediumListIconTextItem-Image {
-      display: inline-block;
-      vertical-align: top;
-      width: 60px;
-      height: 60px;
-      margin: 5px;
-   }
-}
-
-.mediumListIconTextItem.selected:hover {
-   border: solid 3px #b3b3b3;
-   background-color: #4617b4;
-}
-.mediumListIconTextItem.selected {
-   background-color: #4617b4;
-}
-.mediumListIconTextItem:hover {
-   border: solid 3px #b3b3b3;
-   background-color: #b3b3b3;
-}
-
-.mediumListIconTextItem.selected:after {
-   position: absolute;
-   top: 5px;
-   right: 5px;
-   width: 16px;
-   height: 16px;
-   font-family: 'IcoMoon';
-   content: "\e03c";
-   color: #FFF;
-   font-size: 16px;
-}
-
-
-// Special undocumented tiles for ads
-#ad-container {
-   background-color: #0072BC;
-   height: 90px;
-   margin-top: 10px;
-   text-align: center;
-   width: 100%;
-}
-
-
+//
+//
+//
+//// Special undocumented tiles for ads
+//#ad-container {
+//   background-color: #0072BC;
+//   height: 90px;
+//   margin-top: 10px;
+//   text-align: center;
+//   width: 100%;
+//}
+//
+//

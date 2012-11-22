@@ -7422,6 +7422,7 @@ Progress control. */
 }
 
 .metro {
+  position: relative;
   overflow: auto;
 }
 
@@ -7803,6 +7804,34 @@ Progress control. */
   padding: 0 65px;
 }
 
+#tiles-scroll-prev,
+#tiles-scroll-next {
+  position: absolute;
+  top: 20%;
+  left: 32px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-family: 'IcoMoon';
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 32px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  vertical-align: 24%;
+  border-style: solid;
+  border-width: 2px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+}
+
+#tiles-scroll-next {
+  right: 32px;
+  left: auto;
+}
+
 .metro-responsive-tiles .tile {
   position: relative;
   display: block;
@@ -7871,6 +7900,86 @@ Progress control. */
 
 .metro-responsive-tiles .tile .tile-form {
   margin: 10px 0;
+}
+
+.pivot {
+  position: relative;
+}
+
+.pivot .pivot-headers {
+  margin-bottom: 10px;
+}
+
+.pivot .pivot-headers a {
+  margin: 0 10px 0 0;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 34px;
+  color: #555555;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+.pivot .pivot-headers a:hover {
+  color: #222222;
+}
+
+.pivot .pivot-headers a.active {
+  font-weight: 400;
+  color: #222222;
+}
+
+.pivot .pivot-items {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pivot .pivot-items .pivot-item {
+  position: relative;
+  display: none;
+  -webkit-transition: 0.4s ease-in-out left;
+     -moz-transition: 0.4s ease-in-out left;
+       -o-transition: 0.4s ease-in-out left;
+          transition: 0.4s ease-in-out left;
+}
+
+.pivot .pivot-items .active,
+.pivot .pivot-items .next,
+.pivot .pivot-items .prev {
+  display: block;
+}
+
+.pivot .pivot-items .active {
+  left: 0;
+}
+
+.pivot .pivot-items .next,
+.pivot .pivot-items .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.pivot .pivot-items .next {
+  left: 100%;
+}
+
+.pivot .pivot-items .prev {
+  left: -100%;
+}
+
+.pivot .pivot-items .next.left,
+.pivot .pivot-items .prev.right {
+  left: 0;
+}
+
+.pivot .pivot-items .active.left {
+  left: -100%;
+}
+
+.pivot .pivot-items .active.right {
+  left: 100%;
 }
 
 .mediumListIconTextItem.selected .mediumListIconTextItem-Detail,
@@ -7950,76 +8059,6 @@ Progress control. */
   font-size: 16px;
   color: #FFF;
   content: "\e03c";
-}
-
-#ad-container {
-  width: 100%;
-  height: 90px;
-  margin-top: 10px;
-  text-align: center;
-  background-color: #0072BC;
-}
-
-.pivot {
-  position: relative;
-}
-
-.pivot .pivot-headers {
-  display: block;
-  height: 60px;
-}
-
-.pivot .pivot-items {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.pivot .pivot-items .pivot-item {
-  position: relative;
-  display: none;
-  -webkit-transition: 0.6s ease-in-out left;
-     -moz-transition: 0.6s ease-in-out left;
-       -o-transition: 0.6s ease-in-out left;
-          transition: 0.6s ease-in-out left;
-}
-
-.pivot .pivot-items .active,
-.pivot .pivot-items .next,
-.pivot .pivot-items .prev {
-  display: block;
-}
-
-.pivot .pivot-items .active {
-  left: 0;
-}
-
-.pivot .pivot-items .next,
-.pivot .pivot-items .prev {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.pivot .pivot-items .next {
-  left: 100%;
-}
-
-.pivot .pivot-items .prev {
-  left: -100%;
-}
-
-.pivot .pivot-items .next.left,
-.pivot .pivot-items .prev.right {
-  left: 0;
-}
-
-.pivot .pivot-items .active.left {
-  left: -100%;
-}
-
-.pivot .pivot-items .active.right {
-  left: 100%;
 }
 
 /*

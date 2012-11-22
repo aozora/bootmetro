@@ -4,9 +4,28 @@
    position: relative;
 
    .pivot-headers {
-      display: block;
-      height: 60px;
+      margin-bottom: 10px;
+
+      a {
+         margin: 0 10px 0 0;
+         font-weight: 300;
+         text-transform: lowercase;
+         text-decoration: none;
+         font-size: 26px;
+         font-weight: 300;
+         line-height: 34px;
+         color: @pivotHeadersColor;
+
+         &:hover {
+            color: @pivotHeadersHoverColor;
+         }
+         &.active {
+            color: @pivotHeadersActiveColor;
+            font-weight: 400;
+         }
+      }
    }
+
 
    .pivot-items {
       overflow: hidden;
@@ -17,7 +36,7 @@
       .pivot-item {
          display: none;
          position: relative;
-         .transition(.6s ease-in-out left);
+         .transition(.4s ease-in-out left);
       }
 
       .active,
