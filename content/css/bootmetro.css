@@ -5545,6 +5545,7 @@ img {
 
 #header-container {
   display: inline-block;
+  vertical-align: top;
 }
 
 header h1 {
@@ -7423,28 +7424,31 @@ Progress control. */
 
 .metro {
   position: relative;
+}
+
+.panorama {
   overflow: auto;
 }
 
-.metro.nohidden {
+.panorama.nohidden {
   width: auto;
   overflow: inherit;
 }
 
-.metro .metro-sections {
+.panorama .panorama-sections {
   position: relative;
   width: 10000px;
   height: auto;
   overflow: hidden;
 }
 
-.metro .metro-sections h2 {
+.panorama .panorama-sections h2 {
   margin-left: 5px;
   font-weight: 300;
   text-transform: lowercase;
 }
 
-.metro .metro-sections .metro-section {
+.panorama .panorama-sections .panorama-section {
   position: relative;
   float: left;
   width: auto;
@@ -7452,47 +7456,47 @@ Progress control. */
   margin-right: 75px;
 }
 
-.metro .metro-sections .metro-section.tile-span-1 {
+.panorama .panorama-sections .panorama-section.tile-span-1 {
   width: 160px;
   margin-left: 0;
 }
 
-.metro .metro-sections .metro-section.tile-span-2 {
+.panorama .panorama-sections .panorama-section.tile-span-2 {
   width: 320px;
   margin-left: 0;
 }
 
-.metro .metro-sections .metro-section.tile-span-3 {
+.panorama .panorama-sections .panorama-section.tile-span-3 {
   width: 480px;
   margin-left: 0;
 }
 
-.metro .metro-sections .metro-section.tile-span-4 {
+.panorama .panorama-sections .panorama-section.tile-span-4 {
   width: 640px;
   margin-left: 0;
 }
 
-.metro .metro-sections .metro-section.tile-span-5 {
+.panorama .panorama-sections .panorama-section.tile-span-5 {
   width: 640px;
   margin-left: 0;
 }
 
-.metro .metro-sections .metro-section.tile-span-6 {
+.panorama .panorama-sections .panorama-section.tile-span-6 {
   width: 800px;
   margin-left: 0;
 }
 
-.metro .metro-sections .metro-section.tile-span-7 {
+.panorama .panorama-sections .panorama-section.tile-span-7 {
   width: 960px;
   margin-left: 0;
 }
 
-.metro .metro-sections .metro-section.tile-span-8 {
+.panorama .panorama-sections .panorama-section.tile-span-8 {
   width: 1120px;
   margin-left: 0;
 }
 
-.metro .tile {
+.panorama .tile {
   position: relative;
   display: block;
   float: left;
@@ -7507,16 +7511,16 @@ Progress control. */
   background-color: #2C83EF;
 }
 
-.metro .tile .app-label,
-.metro .tile .label {
+.panorama .tile .app-label,
+.panorama .tile .label {
   position: absolute;
   bottom: 5px;
   left: 20px;
   font-size: 12px;
 }
 
-.metro .tile .app-count,
-.metro .tile .count {
+.panorama .tile .app-count,
+.panorama .tile .count {
   position: absolute;
   right: 20px;
   bottom: 5px;
@@ -7524,14 +7528,14 @@ Progress control. */
   font-weight: bold;
 }
 
-.metro .tile .image-wrapper span.icon {
+.panorama .tile .image-wrapper span.icon {
   width: 80px;
   height: 80px;
   font-size: 80px;
   line-height: 80px;
 }
 
-.metro .tile .text-header {
+.panorama .tile .text-header {
   max-height: 36px;
   overflow: hidden;
   font-size: 34px;
@@ -7540,7 +7544,7 @@ Progress control. */
   text-align: left;
 }
 
-.metro .tile .text-header3 {
+.panorama .tile .text-header3 {
   max-height: 110px;
   overflow: hidden;
   font-size: 34px;
@@ -7549,31 +7553,31 @@ Progress control. */
   text-align: left;
 }
 
-.metro .tile .column3-text {
+.panorama .tile .column3-text {
   display: block;
   float: left;
   width: 200px;
 }
 
-.metro .tile .column3-label {
+.panorama .tile .column3-label {
   display: block;
   float: left;
   width: 50px;
 }
 
-.metro .tile .column2-text {
+.panorama .tile .column2-text {
   display: block;
   float: left;
   width: 160px;
 }
 
-.metro .tile .column2-label {
+.panorama .tile .column2-label {
   display: block;
   float: left;
   width: 90px;
 }
 
-.metro .tile .text2 {
+.panorama .tile .text2 {
   max-height: 44px;
   overflow: hidden;
   font-size: 15px;
@@ -7582,7 +7586,7 @@ Progress control. */
   text-align: left;
 }
 
-.metro .tile .text3 {
+.panorama .tile .text3 {
   max-height: 56px;
   overflow: hidden;
   font-size: 15px;
@@ -7591,7 +7595,7 @@ Progress control. */
   text-align: left;
 }
 
-.metro .tile .text4 {
+.panorama .tile .text4 {
   max-height: 72px;
   overflow: hidden;
   font-size: 15px;
@@ -7600,13 +7604,13 @@ Progress control. */
   text-align: left;
 }
 
-.metro .tile .column {
+.panorama .tile .column {
   display: block;
   float: left;
   width: 130px;
 }
 
-.metro .tile .text5 {
+.panorama .tile .text5 {
   max-height: 92px;
   overflow: hidden;
   font-size: 15px;
@@ -7615,7 +7619,7 @@ Progress control. */
   text-align: left;
 }
 
-.metro .tile .text {
+.panorama .tile .text {
   height: 18px;
   overflow: hidden;
   font-size: 15px;
@@ -7624,11 +7628,11 @@ Progress control. */
   text-align: left;
 }
 
-.metro .tile:hover {
+.panorama .tile:hover {
   outline: 3px #225a68 solid;
 }
 
-.metro .tile.app .image-wrapper {
+.panorama .tile.app .image-wrapper {
   display: block;
   width: 150px;
   height: 80px;
@@ -7638,96 +7642,96 @@ Progress control. */
   vertical-align: middle;
 }
 
-.metro .tile.app .image-wrapper img {
+.panorama .tile.app .image-wrapper img {
   max-width: 80px;
   max-height: 80px;
   margin: 0 auto;
 }
 
-.metro .tile.square.text {
+.panorama .tile.square.text {
   width: 110px;
   height: 110px;
   padding: 20px;
 }
 
-.metro .tile.square.text .text-big {
+.panorama .tile.square.text .text-big {
   overflow: hidden;
   font-size: 76px;
   line-height: 76px;
   text-align: left;
 }
 
-.metro .tile.square.text.tilesquareblock .text {
+.panorama .tile.square.text.tilesquareblock .text {
   overflow: hidden;
   font-size: 14px;
   font-weight: bold;
   text-align: left;
 }
 
-.metro .tile.square.image {
+.panorama .tile.square.image {
   width: 150px;
   height: 150px;
   padding: 0;
 }
 
-.metro .tile.square.image img {
+.panorama .tile.square.image img {
   max-width: 150px;
   max-height: 150px;
 }
 
-.metro .tile.squarepeek {
+.panorama .tile.squarepeek {
   width: 150px;
   height: 300px;
 }
 
-.metro .tile.squarepeek .text-inner {
+.panorama .tile.squarepeek .text-inner {
   width: 110px;
   height: 110px;
   padding: 20px;
 }
 
-.metro .tile.wide.app {
+.panorama .tile.wide.app {
   width: 310px;
   height: 150px;
 }
 
-.metro .tile.wide.app .image-wrapper {
+.panorama .tile.wide.app .image-wrapper {
   width: 310px;
 }
 
-.metro .tile.wide.text {
+.panorama .tile.wide.text {
   width: 270px;
   height: 110px;
   padding: 20px;
 }
 
-.metro .tile.wide.text .column-text-big {
+.panorama .tile.wide.text .column-text-big {
   display: block;
   float: left;
   width: 80px;
   margin-left: 10px;
 }
 
-.metro .tile.wide.text .column-text-big .text-big {
+.panorama .tile.wide.text .column-text-big .text-big {
   overflow: hidden;
   font-size: 74px;
   line-height: 60px;
   text-align: right;
 }
 
-.metro .tile.wide.text .column-text {
+.panorama .tile.wide.text .column-text {
   display: block;
   float: left;
   width: 180px;
 }
 
-.metro .tile.wide.imagetext {
+.panorama .tile.wide.imagetext {
   width: 270px;
   height: 110px;
   padding: 20px;
 }
 
-.metro .tile.wide.imagetext .image-wrapper {
+.panorama .tile.wide.imagetext .image-wrapper {
   display: block;
   float: left;
   width: 80px;
@@ -7735,18 +7739,18 @@ Progress control. */
   margin-right: 10px;
 }
 
-.metro .tile.wide.imagetext .image-wrapper img {
+.panorama .tile.wide.imagetext .image-wrapper img {
   max-width: 80px;
   max-height: 80px;
 }
 
-.metro .tile.wide.imagetext .column-text {
+.panorama .tile.wide.imagetext .column-text {
   display: block;
   float: left;
   width: 180px;
 }
 
-.metro .tile.wide.imagetext .textover-wrapper {
+.panorama .tile.wide.imagetext .textover-wrapper {
   position: absolute;
   bottom: 0;
   width: 270px;
@@ -7755,19 +7759,19 @@ Progress control. */
   background-color: inherit;
 }
 
-.metro .tile.wide.image {
+.panorama .tile.wide.image {
   width: 310px;
   height: 150px;
 }
 
-.metro .tile.wide.image .mini-tiles {
+.panorama .tile.wide.image .mini-tiles {
   display: inline-block;
   float: left;
   width: 152px;
   height: 150px;
 }
 
-.metro .tile.wide.image .mini-tiles img {
+.panorama .tile.wide.image .mini-tiles img {
   display: inline-block;
   float: left;
   max-width: 75px;
@@ -7775,37 +7779,37 @@ Progress control. */
   border-left: 1px solid #2A2A2A;
 }
 
-.metro .tile.wide.imagetext.wideimage {
+.panorama .tile.wide.imagetext.wideimage {
   width: 310px;
   height: 150px;
   padding: 0;
 }
 
-.metro .tile.wide.image.collection img {
+.panorama .tile.wide.image.collection img {
   float: left;
   max-width: 158px;
   max-height: 150px;
 }
 
-.metro .tile.widepeek {
+.panorama .tile.widepeek {
   width: 310px;
   height: 300px;
 }
 
-.metro .tile.ad.ad125 {
+.panorama .tile.ad.ad125 {
   width: 125px;
   height: 125px;
   padding: 12px 13px 13px 12px;
 }
 
-.metro .tile.wide.ad.ad125 {
+.panorama .tile.wide.ad.ad125 {
   width: 180px;
   height: 150px;
   padding: 0 65px;
 }
 
-#tiles-scroll-prev,
-#tiles-scroll-next {
+#panorama-scroll-prev,
+#panorama-scroll-next {
   position: absolute;
   top: 20%;
   left: 32px;
@@ -7828,7 +7832,7 @@ Progress control. */
   outline: 0;
 }
 
-#tiles-scroll-next {
+#panorama-scroll-next {
   right: 32px;
   left: auto;
 }

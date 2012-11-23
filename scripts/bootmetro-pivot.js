@@ -1,5 +1,5 @@
 ﻿/* ==========================================================
- * bootstrap-pivot.js v2.2.1
+ * bootstrap-pivot.js v1.0
  * http://aozora.github.com/bootmetro/
  * ==========================================================
  * Copyright 2012 Marcello Palmitessa

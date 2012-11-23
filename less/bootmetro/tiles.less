@@ -30,17 +30,20 @@
 }
 
 
-
 .metro {
-   overflow: auto;
    position: relative;
+
+}
+
+.panorama {
+   overflow: auto;
 
    &.nohidden {
       width: auto;
       overflow: inherit;
    }
 
-   .metro-sections {
+   .panorama-sections {
       height: auto;
       position: relative;
       overflow: hidden;
@@ -52,8 +55,7 @@
          text-transform: lowercase;
       }
 
-
-      .metro-section {
+      .panorama-section {
          position: relative;
          float: left;
          width: auto;
@@ -94,6 +96,8 @@
       }
 
    }
+
+
 
    .tile {
       position: relative;
@@ -382,8 +386,8 @@
 }
 
 
-#tiles-scroll-prev,
-#tiles-scroll-next {
+#panorama-scroll-prev,
+#panorama-scroll-next {
    position: absolute;
    top: 20%;
    left: 32px;
@@ -405,7 +409,7 @@
    text-decoration: none;
    outline: 0;
 }
-#tiles-scroll-next {
+#panorama-scroll-next {
    left: auto;
    right: 32px;
 }

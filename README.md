@@ -23,15 +23,19 @@ Early versions of BootMetro was inspired by the work of Sergey Pimenov for his [
 ### Latest Release: v1.0
 * BREAKING CHANGES:
    * icomoon.css is now bootmetro-icons.css and is recomended to have it before bootmetro.css
+   * bootmetro.js is now bootmetro-panorama.js
+      * classes in hub.html to use panorama scroll, are changed from metro* to panorama*
 * moved bootmetro main css files to LESS
 * upgraded to jQuery 1.8.3
 * upgraded to Modernizr 2.6.2
 * integrated HTML5 Boilerplate 4.0.1
 * added metro controls:
-   Metro Progress Bars, determinate & indeterminate & ring
-   Metro styled date picker
-   FlipView
-   Toast notifications
+   * new panorama
+   * new pivot
+   * Metro Progress Bars, determinate & indeterminate & ring
+   * Metro styled date picker
+   * FlipView
+   * Toast notifications
 * Metro Layouts
 * use NiceScroll for Hub scrolling with touch support
 
