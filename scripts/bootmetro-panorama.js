@@ -30,51 +30,133 @@
       this.$element = $(element)
       this.options = options
 //      this.options.slide && this.slide(this.options.slide)
+
+      this.$groups = $('.panorama-sections .panorama-section')
+      this.$current = 0
+
       this.init()
    }
 
    Panorama.prototype = {
 
       init: function(){
-
+         var $this = this
          // arrange the section container
-         var totalWidth = 0;
-         $(".panorama-sections .panorama-section").each(function(index, el){
-            totalWidth += $(el).outerWidth(true);
+         var totalWidth = 0
+         $('.panorama-sections .panorama-section').each(function(index, el){
+            totalWidth += $(el).outerWidth(true)
          });
-         $(".panorama-sections").width(totalWidth);
+         $('.panorama-sections').width(totalWidth)
+
+
+         if (!this.options.showscrollbuttons){
+            $('#panorama-scroll-prev').hide()
+            $('#panorama-scroll-next').hide()
+         }
+
+
+//         var $groups = $('.panorama-sections .panorama-section').length;
+
 
          // init nicescroll plugin
          if (this.options.nicescroll){
-            var nicesx = this.$element.niceScroll(".panorama .panorama-sections",
-               {
-                  touchbehavior: true, //Modernizr.touch,
-                  cursorcolor: "#FF00FF",
-                  cursoropacitymax: 0.6,
-                  cursorwidth: 24,
-                  usetransition: true,
-                  hwacceleration: true,
-                  autohidemode: "hidden"
+
+//            console.log('nicescroll init');
+//            var nicesx = this.$element.niceScroll(".panorama .panorama-sections",
+//               {
+//                  touchbehavior: true, //Modernizr.touch,
+//                  cursorcolor: "#FF00FF",
+//                  cursoropacitymax: 0.6,
+//                  cursorwidth: 24,
+//                  usetransition: true,
+//                  hwacceleration: true,
+//                  autohidemode: "hidden"
+//               });
+//
+         } else {
+
+            if (this.options.showscrollbuttons){
+               var $p = $('.panorama-sections');
+
+               $('#panorama-scroll-prev').click(function(e){
+                  e.preventDefault();
+                  $this.prev()
                });
 
-            $("#panorama-scroll-prev").click(function(e){
-               $("#hub").scrollLeft(-100);
-            });
-            $("#panorama-scroll-next").click(function(e){
-               $("#hub").scrollLeft(100);
-            });
+               $("#panorama-scroll-next").click(function(e){
+                  e.preventDefault();
+                  $this.next()
+               });
+            }
+
+
+
+
+
+//            //Enable swiping...
+//            $(".panorama").swipe( {
+//               //Generic swipe handler for all directions
+//               swipe:function(event, direction, distance, duration, fingerCount) {
+//                  if (direction=='right'){
+//                     $("#panorama-scroll-prev").click();
+//                  }
+//                  if (direction=='left'){
+//                     $("#panorama-scroll-next").click();
+//                  }
+//               },
+//               threshold:0,
+//               fingers:'all'
+//            });
+
+            $this.setButtons()
          }
 
       }
 
       , next: function () {
-//         if (this.sliding) return
-//         return this.slide('next')
+         var $this = this
+         this.$current++
+         if (this.$current >= this.$groups.length)
+            this.$current = this.$groups.length - 1
+
+         var $p = $('.panorama-sections');
+         var targetOffset = $(this.$groups[this.$current]).position().left
+
+         $p.animate({
+            marginLeft: -targetOffset
+         }, 200, 'swing', function(){$this.setButtons()})
+
       }
 
       , prev: function () {
-//         if (this.sliding) return
-//         return this.slide('prev')
+         var $this = this
+         this.$current--
+         if (this.$current < 0)
+            this.$current = 0
+
+         var $p = $('.panorama-sections');
+         var targetOffset = $(this.$groups[this.$current]).position().left
+
+         $p.animate({
+            marginLeft: -targetOffset
+         }, 200, 'swing', function(){$this.setButtons()})
+
+      }
+
+      , setButtons: function () {
+
+         if (!this.options.showscrollbuttons)
+            return false;
+         
+            if (this.$current === 0)
+            $("#panorama-scroll-prev").hide();
+         else
+            $("#panorama-scroll-prev").show();
+
+         if (this.$current === this.$groups.length - 1)
+            $("#panorama-scroll-next").hide();
+         else
+            $("#panorama-scroll-next").show();
       }
 
 
@@ -103,68 +185,4 @@
 
    $.fn.panorama.Constructor = Panorama
 
-//   $('.panorama .panorama-headers > a').click(function(e){
-//      e.preventDefault()
-//
-//      var $this = $(this), href
-//         , $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
-//         , $to = parseInt($this.attr('data-to'));
-//      $target.panorama($to)
-//   })
-
 }(window.jQuery);
-
-//
-//
-//
-//
-//(function ($) {
-//   $.fn.panorama = function () {
-//      // arrange the section container
-//      var totalWidth = 0;
-//      $(".panorama-sections .panorama-section").each(function(index, el){
-//         totalWidth += $(el).outerWidth(true);
-//      });
-//      $(".panorama-sections").width(totalWidth);
-//
-//      // init nicescroll plugin
-//      var nicesx = $("#hub").niceScroll("#hub .panorama-sections",
-//                                                   {
-//                                                      touchbehavior: true, //Modernizr.touch,
-//                                                      cursorcolor: "#FF00FF",
-//                                                      cursoropacitymax: 0.6,
-//                                                      cursorwidth: 24,
-//                                                      usetransition: true,
-//                                                      hwacceleration: true,
-//                                                      autohidemode: "hidden"
-//                                                   });
-//      // $("#hub").scrollLeft(-100);
-//
-//      $("#tiles-scroll-prev").click(function(e){
-//         $("#hub").scrollLeft(-100);
-//      });
-//      $("#tiles-scroll-next").click(function(e){
-//         $("#hub").scrollLeft(100);
-//      });
-//
-//      // if the tiles viewport is wider than the screen than shows the arrow buttons
-//      //if ( $(".panorama").width() < totalWidth ){
-//      //   $("#tiles-scroll-prev").show();
-//      //   $("#tiles-scroll-next").show();
-//      //}
-//
-//
-////      // Selectable
-////      var selectables = $(".selectable");
-////      $.each(selectables, function (i, e) {
-////         var el = $(this);
-////         var items = el.children(".panorama-image, .panorama-image-overlay, .panorama-icon-text, .panorama-image-text");
-////         items.bind("click", function () {
-////            if ($(this).hasClass("disabled")) return;
-////            $(this).toggleClass("selected");
-////         })
-////      })
-//
-//
-//   }
-//})(jQuery);
