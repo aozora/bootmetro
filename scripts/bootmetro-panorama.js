@@ -85,20 +85,20 @@
                });
             }
 
-//            //Enable swiping...
-//            $(".panorama").swipe( {
-//               //Generic swipe handler for all directions
-//               swipe:function(event, direction, distance, duration, fingerCount) {
-//                  if (direction=='right'){
-//                     $("#panorama-scroll-prev").click();
-//                  }
-//                  if (direction=='left'){
-//                     $("#panorama-scroll-next").click();
-//                  }
-//               },
-//               threshold:0,
-//               fingers:'all'
-//            });
+            //Enable swiping...
+            $(".panorama").swipe( {
+               //Generic swipe handler for all directions
+               swipe:function(event, direction, distance, duration, fingerCount) {
+                  if (direction=='right'){
+                     $this.prev()
+                  }
+                  if (direction=='left'){
+                     $this.next()
+                  }
+               },
+               threshold:0,
+               fingers:'all'
+            });
 
             $this.setButtons()
          }
@@ -110,7 +110,6 @@
 
                if (e.which == 39) // right-arrow
                   $this.next()
-
             })
          }
 
