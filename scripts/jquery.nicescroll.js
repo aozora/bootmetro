@@ -1,5 +1,5 @@
 /* jquery.nicescroll
--- version 3.0.0 RC7
+-- version 3.0.0 RC8
 -- copyright 2011-12 InuYaksa*2012
 -- licensed under the MIT
 --
@@ -141,7 +141,7 @@
 
     var self = this;
 
-    this.version = '3.0.0 RC7';
+    this.version = '3.0.0 RC8';
     this.name = 'nicescroll';
     
     this.me = me;
@@ -523,15 +523,20 @@
           if (self.rail.align&&off.left) pos.left+=off.left;
         }
         
-        self.rail.css({top:pos.top,left:pos.left,height:(len)?len.h:self.win.innerHeight()});
-        if (self.zoom) self.zoom.css({top:pos.top+1,left:pos.left-20});
-        
-        if (self.railh) {
-          var pos = {top:wpos.top,left:wpos.left};
-          var y = (self.railh.align) ? pos.top + getWidthToPixel(self.win,'border-top-width',true) + self.win.innerHeight() - self.railh.height : pos.top + getWidthToPixel(self.win,'border-top-width',true);
-          var x = pos.left + getWidthToPixel(self.win,'border-left-width');
-          self.railh.css({top:y,left:x,width:self.railh.width});
-        }
+				if (!self.locked) self.rail.css({top:pos.top,left:pos.left,height:(len)?len.h:self.win.innerHeight()});
+				
+				if (self.zoom) {				  
+				  self.zoom.css({top:pos.top+1,left:(self.rail.align==1) ? pos.left-20 : pos.left+self.rail.width+4});
+			  }
+				
+				if (self.railh&&!self.locked) {
+					var pos = {top:wpos.top,left:wpos.left};
+					var y = (self.railh.align) ? pos.top + getWidthToPixel(self.win,'border-top-width',true) + self.win.innerHeight() - self.railh.height : pos.top + getWidthToPixel(self.win,'border-top-width',true);
+					var x = pos.left + getWidthToPixel(self.win,'border-left-width');
+					self.railh.css({top:y,left:x,width:self.railh.width});
+				}
+		
+				
       }
     };
     
@@ -1279,12 +1284,17 @@
         self.bind(window,'orientationchange',self.resize);
         
         self.bind(window,"load",self.resize);
-
+        
+		
+// removed for issue #106 on width set with percentuage
+/*
         if (cap.ischrome&&!self.ispage&&!self.haswrapper) { //chrome void scrollbar bug
-          var ww=self.win.width();
-          self.win.css('width',ww-0.1);
+          var ww=self.win[0].style["width"];
+          console.log(ww);
+          self.win.css('width',"=-0.1");
           self.synched("chromefix",function(){self.win.css('width',ww)});
         }
+*/		
         
 // Trying a cross-browser implementation - good luck!
 
@@ -1458,6 +1468,8 @@
   
     this.onResize = function(e,page) {
     
+	  if (!self.win) return false;
+	
       if (!self.haswrapper&&!self.ispage) {        
         if (self.win.css('display')=='none') {
           if (self.visibility) self.hideRail().hideRailHr();
@@ -1521,7 +1533,10 @@
       }
   
       self.locked = (self.page.maxh==0)&&(self.page.maxw==0);
-      if (self.locked) return false;
+      if (self.locked) {
+				if (!self.ispage) self.updateScrollBar(self.view);
+			  return false;
+		  }
 
       if (!self.hidden&&!self.visibility) {
         self.showRail().showRailHr();
@@ -1570,7 +1585,7 @@
     }
    
     this._bind = function(el,name,fn,bubble) {  // primitive bind
-      self.events.push({e:el,n:name,f:fn});
+      self.events.push({e:el,n:name,f:fn,b:bubble});
       if (el.addEventListener) {
         el.addEventListener(name,fn,bubble||false);
       }
@@ -1609,9 +1624,9 @@
       } 
     };
     
-    this._unbind = function(el,name,fn) {  // primitive unbind
+    this._unbind = function(el,name,fn,bub) {  // primitive unbind
       if (el.removeEventListener) {
-        el.removeEventListener(name,fn,false);
+        el.removeEventListener(name,fn,bub);
       }
       else if (el.detachEvent) {
         el.detachEvent('on'+name,fn);
@@ -1623,7 +1638,7 @@
     this.unbindAll = function() {
       for(var a=0;a<self.events.length;a++) {
         var r = self.events[a];        
-        self._unbind(r.e,r.n,r.f);
+        self._unbind(r.e,r.n,r.f,r.b);
       }
     };
     
@@ -1723,6 +1738,10 @@
       }
       self.saved = false;      
       self.me.data('__nicescroll',''); //erase all traces
+	  self.me = null;
+	  self.doc = null;
+	  self.docscroll = null;
+	  self.win = null;
       return self;
     };
     
@@ -2518,7 +2537,7 @@
  
   var _scrollTop = jQuery.fn.scrollTop; // preserve original function
    
-  $.cssHooks["scrollTop"] = {
+  $.cssHooks["pageYOffset"] = {
     get: function(elem,computed,extra) {      
       var nice = $.data(elem,'__nicescroll')||false;
       return (nice&&nice.ishwscroll) ? nice.getScrollTop() : _scrollTop.call(elem);
@@ -2541,7 +2560,7 @@
       var nice = (this[0]) ? $.data(this[0],'__nicescroll')||false : false;
       return (nice&&nice.ishwscroll) ? nice.getScrollTop() : _scrollTop.call(this);
     } else {      
-      return this.each(function() {     
+      return this.each(function() {
         var nice = $.data(this,'__nicescroll')||false;
         (nice&&nice.ishwscroll) ? nice.setScrollTop(parseInt(value)) : _scrollTop.call($(this),value);
       });
@@ -2552,7 +2571,7 @@
  
   var _scrollLeft = jQuery.fn.scrollLeft; // preserve original function
    
-  $.cssHooks.scrollLeft = {
+  $.cssHooks.pageXOffset = {
     get: function(elem,computed,extra) {
       var nice = $.data(elem,'__nicescroll')||false;
       return (nice&&nice.ishwscroll) ? nice.getScrollLeft() : _scrollLeft.call(elem);

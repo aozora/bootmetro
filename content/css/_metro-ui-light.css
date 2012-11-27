@@ -354,6 +354,90 @@ Progress control colors.
 }
 
 
+/*
+FlipView control colors.
+*/
+.win-flipview .win-navbutton {
+   background-color: rgba(213, 213, 213, 0.35);
+   color: rgba(0, 0, 0, 0.60);
+}
+.win-flipview .win-navbutton:hover {
+   background-color: rgba(215, 215, 215, 0.94);
+   color: rgba(0, 0, 0, 1.0);
+}
+.win-flipview .win-navbutton:hover:active {
+   background-color: rgba(41, 41, 41, 0.74);
+   color: rgba(255, 255, 255, 1.0);
+}
+
+/*
+ListView control colors.
+*/
+.win-ui-dark .win-listview .win-container:hover {
+   background-color: rgba(255, 255, 255, 0.3);
+   outline: rgba(255, 255, 255, 0.3) solid 3px;
+}
+.win-ui-dark .win-listview .win-focusedoutline {
+   outline: #FFF solid 2px;
+}
+.win-listview .win-container:hover {
+   background-color: rgba(0, 0, 0, 0.3);
+   outline: rgba(0, 0, 0, 0.3) solid 3px;
+}
+.win-listview .win-focusedoutline {
+   outline: #000 solid 2px;
+}
+.win-listview .win-container.win-selected:hover {
+   background-color: rgb(95, 55, 190);
+}
+.win-listview .win-container.win-swipe:hover {
+   background-color: transparent;
+   outline: none;
+}
+.win-listview .win-selected {
+   color: #FFF;
+}
+.win-container.win-selected .win-selectionborder {
+   border-color: rgb(70, 23, 180);
+}
+.win-container.win-selected:hover .win-selectionborder {
+   border-color: rgb(95, 55, 190);
+}
+.win-selected .win-selectionbackground {
+   background-color: rgb(70, 23, 180);
+}
+.win-selected:hover .win-selectionbackground {
+   background-color: rgb(95, 55, 190);
+}
+.win-selectioncheckmark {
+   color: #FFF;
+}
+.win-ui-dark .win-selectionhint {
+   color: #FFF;
+}
+.win-selectionhint {
+   color: rgb(70, 23, 180);
+}
+.win-selectioncheckmarkbackground {
+   border-top-color: rgb(70, 23, 180);
+   border-right-color: rgb(70, 23, 180);
+   border-left-color: transparent;
+   border-bottom-color: transparent;
+}
+.win-container.win-selected:hover .win-selectioncheckmarkbackground {
+   border-top-color: rgb(95, 55, 190);
+   border-right-color: rgb(95, 55, 190);
+   border-left-color: transparent;
+   border-bottom-color: transparent;
+}
+.win-listview.win-rtl .win-selectioncheckmarkbackground {
+   border-left-color: rgb(70, 23, 180);
+   border-right-color: transparent;
+}
+.win-listview.win-rtl .win-container.win-selected:hover .win-selectioncheckmarkbackground {
+   border-left-color: rgb(95, 55, 190);
+   border-right-color: transparent;
+}
 
 
 /*
@@ -631,7 +715,182 @@ AppBar control colors.
 }
 
 
+/*
+Flyout control colors, flyout normally has light theme.
+*/
+.win-flyout {
+   border-color: rgb(42, 42, 42);
+   background-color: #FFF;
+}
 
+.win-settingsflyout {
+   border-color: rgba(0, 0, 0, 0.24);
+   background-color: #FFF;
+}
+
+.win-ui-dark.win-flyout, .win-ui-dark .win-flyout {
+   border-color: rgb(42, 42, 42);
+   background-color: #000;
+}
+
+.win-ui-dark.win-settingsflyout, .win-ui-dark .win-settingsflyout {
+   border-color: rgba(255, 255, 255, 0.24);
+   background-color: #000;
+}
+
+/*
+Menu button colors, menu is always light theme.
+*/
+.win-menu button {
+   background-color: transparent;
+   color: #000;
+}
+.win-menu button:focus,
+.win-menu button:active {
+   background-color: rgb(222, 222, 222);
+}
+.win-menu button:hover:active {
+   color: #FFF;
+   background-color: #000;
+}
+.win-menu button:disabled,
+.win-menu button:disabled:active {
+   background-color: transparent;
+   color: rgba(0, 0, 0, 0.1);
+}
+.win-ui-dark.win-menu button, .win-ui-dark .win-menu button {
+   background-color: transparent;
+   color: #FFF;
+}
+.win-ui-dark.win-menu button:focus, .win-ui-dark .win-menu button:focus,
+.win-ui-dark.win-menu button:active, .win-ui-dark .win-menu button:active {
+   background-color: rgb(222, 222, 222);
+}
+.win-ui-dark.win-menu button:hover:active, .win-ui-dark .win-menu button:hover:active {
+   color: #000;
+   background-color: #FFF;
+}
+.win-ui-dark.win-menu button:disabled, .win-ui-dark .win-menu button:disabled,
+.win-ui-dark.win-menu button:disabled:active, .win-ui-dark .win-menu button:disabled:active {
+   background-color: transparent;
+   color: rgba(255, 255, 255, 0.1);
+}
+
+/*
+Rating control colors.
+*/
+.win-ui-dark .win-rating .win-star.win-user.win-full,
+.win-ui-dark .win-rating .win-star.win-user.win-full.win-disabled {
+   color: rgb(91, 46, 197);
+}
+.win-ui-dark .win-rating .win-star.win-tentative.win-full {
+   color: rgb(129, 82, 239);
+}
+.win-ui-dark .win-rating .win-star.win-average.win-full,
+.win-ui-dark .win-rating .win-star.win-average.win-full.win-disabled {
+   color: #FFF;
+}
+.win-ui-dark .win-rating .win-star.win-empty {
+   color: rgba(255, 255, 255, 0.35);
+}
+.win-rating .win-star.win-user.win-full,
+.win-rating .win-star.win-user.win-full.win-disabled {
+   color: rgb(70, 23, 180);
+}
+.win-rating .win-star.win-tentative.win-full {
+   color: rgb(114, 65, 228);
+}
+.win-rating .win-star.win-average.win-full,
+.win-rating .win-star.win-average.win-full.win-disabled {
+   color: #000;
+}
+.win-rating .win-star.win-empty {
+   color: rgba(0, 0, 0, 0.35);
+}
+
+
+
+/*
+Toggleswitch control colors.
+*/
+
+.win-ui-dark .win-toggleswitch .win-title {
+   color: #FFF;
+}
+.win-ui-dark .win-toggleswitch .win-title.win-disabled {
+   color: rgba(255, 255, 255, 0.4);
+}
+.win-toggleswitch .win-title {
+   color: #000;
+}
+.win-toggleswitch .win-title.win-disabled {
+   color: rgba(0, 0, 0, 0.4);
+}
+
+.win-ui-dark .win-toggleswitch .win-label {
+   color: #FFF;
+}
+.win-ui-dark .win-toggleswitch .win-label.win-disabled {
+   color: rgba(255, 255, 255, 0.4);
+}
+.win-toggleswitch .win-label {
+   color: #000;
+}
+.win-toggleswitch .win-label.win-disabled {
+   color: rgba(0, 0, 0, 0.4);
+}
+
+.win-toggleswitch .win-switch::-ms-track {
+   background-color: transparent;
+}
+.win-ui-dark .win-toggleswitch .win-switch::-ms-track {
+   border-color: rgba(255, 255, 255, 0.35);
+}
+.win-ui-dark .win-toggleswitch .win-switch::-ms-fill-upper {
+   background-color: rgba(255, 255, 255, 0.26);
+}
+.win-ui-dark .win-toggleswitch .win-switch:hover::-ms-fill-upper {
+   background-color: rgba(255, 255, 255, 0.29);
+}
+.win-ui-dark .win-toggleswitch .win-switch:active::-ms-fill-upper {
+   background-color: rgba(255, 255, 255, 0.35);
+}
+.win-ui-dark .win-toggleswitch .win-switch:disabled::-ms-track {
+   border-color: rgba(255, 255, 255, 0.2);
+}
+.win-ui-dark .win-toggleswitch .win-switch:disabled::-ms-fill-lower,
+.win-ui-dark .win-toggleswitch .win-switch:disabled::-ms-fill-upper {
+   background-color: rgba(255, 255, 255, 0.12);
+}
+.win-toggleswitch .win-switch::-ms-track {
+   border-color: rgba(0, 0, 0, 0.35);
+}
+.win-toggleswitch .win-switch::-ms-fill-upper {
+   background-color: rgba(0, 0, 0, 0.26);
+}
+.win-toggleswitch .win-switch:hover::-ms-fill-upper {
+   background-color: rgba(0, 0, 0, 0.29);
+}
+.win-toggleswitch .win-switch:active::-ms-fill-upper {
+   background-color: rgba(0, 0, 0, 0.35);
+}
+.win-toggleswitch .win-switch:disabled::-ms-track {
+   border-color: rgba(0, 0, 0, 0.2);
+}
+.win-toggleswitch .win-switch:disabled::-ms-fill-lower,
+.win-toggleswitch .win-switch:disabled::-ms-fill-upper {
+   background-color: rgba(0, 0, 0, 0.12);
+}
+
+
+/*
+Tooltip control colors.
+*/
+.win-tooltip {
+   background-color: #FFF;
+   border-color: rgb(128, 128, 128);
+   color: rgba(0, 0, 0, 0.6);
+}
 
 /*
 Label colors.
@@ -693,8 +952,12 @@ button[aria-selected=true]:active .win-commandring {
 
 /* Bootstrap Metro button
 -------------------------------------------------- */
+input.btn, button.btn, a.btn {
+   font-family: "Open Sans",Tahoma,Arial,Helvetica,Sans-Serif;
+}
 
 .btn {
+   /*font-size: 11pt;*/
    background-color: rgba(182, 182, 182, 0.7);
    border-color: rgba(0, 0, 0, 0.2);
    color: #000;
@@ -919,6 +1182,8 @@ button[aria-selected=true]:active .win-commandring {
 
 .alert .close {
    color: #FFF;
+   /*opacity: 0.4;*/
+   /*filter: alpha(opacity=40);*/
 }
 
 

@@ -134,6 +134,21 @@ recess([path.join(lessdir, '/bootmetro/bootmetro-icons.less')], {
    console.log('compiled bootmetro-icons.less')
 });
 
+// Compile bootmetro-ui-light.css
+recess([path.join(lessdir, '/bootmetro/bootmetro-ui-light.less')], {
+   compile: true,
+   compress: false
+}, function (err, obj) {
+
+   console.dir( obj.errors );
+   if (err)
+      throw err;
+
+   css = obj.output;
+   fs.writeFileSync( path.join(cssdir, '/bootmetro-ui-light.css') , css, 'utf-8');
+   console.log('compiled bootmetro-ui-light.less')
+});
+
 //
 //// Compile bootmetro-icons-ie7.css
 //recess([path.join(lessdir, '/bootmetro/bootmetro-icons-ie7.less')], {

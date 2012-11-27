@@ -54,10 +54,6 @@
             $('#panorama-scroll-next').hide()
          }
 
-
-//         var $groups = $('.panorama-sections .panorama-section').length;
-
-
          // init nicescroll plugin
          if (this.options.nicescroll){
 
@@ -89,10 +85,6 @@
                });
             }
 
-
-
-
-
 //            //Enable swiping...
 //            $(".panorama").swipe( {
 //               //Generic swipe handler for all directions
@@ -109,6 +101,17 @@
 //            });
 
             $this.setButtons()
+         }
+
+         if (this.options.keyboard){
+            $(document).on('keyup', function ( e ) {
+               if (e.which == 37) // left-arrow
+                  $this.prev()
+
+               if (e.which == 39) // right-arrow
+                  $this.next()
+
+            })
          }
 
       }
@@ -147,7 +150,7 @@
 
          if (!this.options.showscrollbuttons)
             return false;
-         
+
             if (this.$current === 0)
             $("#panorama-scroll-prev").hide();
          else
@@ -180,7 +183,8 @@
 
    $.fn.panorama.defaults = {
       nicescroll: true,
-      showscrollbuttons: true
+      showscrollbuttons: true,
+      keyboard: true
    }
 
    $.fn.panorama.Constructor = Panorama

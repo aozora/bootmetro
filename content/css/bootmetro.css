@@ -7439,7 +7439,7 @@ Progress control. */
   position: relative;
   width: 10000px;
   height: auto;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .panorama .panorama-sections h2 {
