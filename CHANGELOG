@@ -1,0 +1,46 @@
+v1.0 pre (07/12/2012)
+=================================
+
+Pivot plugin (bootmetro-pivot.js)
+---------------------------------
+The markup for the pivot-headers anchors has changed: the attribute data-to has been renamed to data-pivot-index, so now it's name is more semantic, since his value is the index of the item to display.
+Note that the pivot plugin, due to the fact that in reality is the bootstrap-carousel with something less, has a serious issue (see https://github.com/aozora/bootmetro/issues/45 ) that probably  will lead me to rewrite this plugin from zero; I hope in that case to not break anything.
+
+
+Panorama
+---------------------------------
+The markup has changed from:
+
+      <div id="hub" class="metro panorama span12">
+
+            <div class="panorama-sections">
+
+            ...
+            </div>
+      </div>
+      <a id="panorama-scroll-prev" href="#">&#xe05d;</a>
+      <a id="panorama-scroll-next" href="#">&#xe059;</a>
+
+to this:
+
+      <div id="hub" class="metro span12">
+
+         <div class="panorama">
+
+            <div class="panorama-sections">
+
+            ...
+            </div>
+         </div>
+         <a id="panorama-scroll-prev" href="#">&#xe05d;</a>
+         <a id="panorama-scroll-next" href="#">&#xe059;</a>
+      </div>
+
+
+All pages markup:
+---------------------------------
+In all the demo pages I replaced the fluid css classes with the non fluid ones, so "container-fluid" is now, "container", and "row-fluid" is "row".
+
+On the header element <header id="nav-bar"> I have removed the -fluid suffix from his inner div's; the elements <div id="header-container"> and <div id="top-info"> are now contained in the same div with class="span12"; before that row was split within 2 span.
+This change was necessary to improve the responsive design for the header for lower resolutions ( < 798px width).
+

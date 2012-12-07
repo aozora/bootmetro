@@ -105,7 +105,7 @@ recess([lesspath], {
 });
 
 // Compile bootmetro-responsive.css
-recess([path.join(lessdir, '/responsive.less')], {
+recess([path.join(lessdir, '/bootmetro/responsive.less')], {
    compile: true,
    compress: false
 }, function (err, obj) {

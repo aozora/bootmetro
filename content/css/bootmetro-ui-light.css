@@ -142,7 +142,7 @@ input[type=submit] {
 
 a[aria-selected=true]:active .win-commandimage,
 button[aria-selected=true]:active .win-commandimage {
-  color: #000;
+  color: #000000;
 }
 
 .alert .close {
@@ -321,16 +321,6 @@ button[aria-checked=true]:disabled:active .win-commandimage {
 .win-ui-dark a[disabled],
 .win-ui-dark a[disabled]:active {
   color: rgba(255, 255, 255, 0.4);
-}
-
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary.active,
-.btn-primary.disabled,
-.btn-primary[disabled] {
-  color: #CCC;
-  background-color: #781096;
-  border-color: #781096;
 }
 
 a[aria-checked=true]:disabled .win-commandring,
@@ -668,6 +658,16 @@ button.win-command:disabled {
   filter: none;
 }
 
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  color: #CCC;
+  background-color: #781096;
+  border-color: #781096;
+}
+
 .btn-primary:active,
 .btn-primary.active {
   background-color: #781096;
@@ -720,6 +720,14 @@ button.win-command:disabled {
   border-color: #24748c;
 }
 
+.btn-danger {
+  background-color: #da4f49;
+  background-image: none;
+  background-repeat: no-repeat;
+  border-color: #da4f49;
+  filter: none;
+}
+
 .btn-danger:hover,
 .btn-danger:active,
 .btn-danger.active,
@@ -735,40 +743,12 @@ button.win-command:disabled {
   border-color: #942a25;
 }
 
-.btn-danger {
-  background-color: #da4f49;
-  background-image: none;
-  background-repeat: no-repeat;
-  border-color: #da4f49;
-  filter: none;
-}
-
-.btn-inverse {
-  background-color: #414141;
-  background-image: none;
-  background-repeat: no-repeat;
-  border-color: #414141;
-  filter: none;
-}
-
-.btn-inverse:active,
-.btn-inverse.active {
-  background-color: #080808;
-  border-color: #080808;
-}
-
 .btn-warning {
   background-color: #faa732;
   background-image: none;
   background-repeat: no-repeat;
   border-color: #faa732;
   filter: none;
-}
-
-.btn-warning:active,
-.btn-warning.active {
-  background-color: #c67605;
-  border-color: #c67605;
 }
 
 .btn-warning:hover,
@@ -780,6 +760,20 @@ button.win-command:disabled {
   border-color: #f89406;
 }
 
+.btn-warning:active,
+.btn-warning.active {
+  background-color: #c67605;
+  border-color: #c67605;
+}
+
+.btn-inverse {
+  background-color: #414141;
+  background-image: none;
+  background-repeat: no-repeat;
+  border-color: #414141;
+  filter: none;
+}
+
 .btn-inverse:hover,
 .btn-inverse:active,
 .btn-inverse.active,
@@ -787,6 +781,12 @@ button.win-command:disabled {
 .btn-inverse[disabled] {
   background-color: #222222;
   border-color: #222222;
+}
+
+.btn-inverse:active,
+.btn-inverse.active {
+  background-color: #080808;
+  border-color: #080808;
 }
 
 .win-ui-dark {

@@ -65,9 +65,9 @@
 
    <!-- Header
    ================================================== -->
-   <header id="nav-bar" class="container-fluid">
-      <div class="row-fluid">
-         <div class="span7">
+   <header id="nav-bar" class="container">
+      <div class="row">
+         <div class="span12">
             <div id="header-container">
                <a id="backbutton" class="win-backbutton" href="./hub.html"></a>
                <h5>BootMetro</h5>
@@ -98,32 +98,32 @@
                </ul>
             </div>
             </div>
+            <div id="top-info" class="pull-right">
+            <a id="settings" class="pull-right" href="#">
+               <b class="icon-settings"></b>
+            </a>
+            <hr class="separator pull-right"/>
+            <a href="#" class="pull-right">
+               <div class="top-info-block">
+                  <h3>FirstName</h3>
+                  <h4>LastName</h4>
+               </div>
+               <div class="top-info-block">
+                  <b class="icon-user-2"></b>
+               </div>
+            </a>
          </div>
-         <div id="top-info" class="span5 pull-right">
-         <a id="settings" class="pull-right" href="#">
-            <b class="icon-settings"></b>
-         </a>
-         <hr class="separator pull-right"/>
-         <a href="#" class="pull-right">
-            <div class="top-info-block">
-               <h3>FirstName</h3>
-               <h4>LastName</h4>
-            </div>
-            <div class="top-info-block">
-               <b class="icon-user-2"></b>
-            </div>
-         </a>
       </div>
-   </div>
+      </div>
    </header>
    
-   <div class="container-fluid">
-      <div class="row-fluid">
+   <div class="container">
+      <div class="row">
          <div class="span12">
    
             <p>Here a table styled</p>
    
-            <div id="content-filters" class="row-fluid">
+            <div id="content-filters" class="row">
                <div class="span12">
                   <ul class="nav nav-pills">
                      <li class="dropdown">
@@ -172,7 +172,7 @@
                </div>
             </div>
    
-            <div class="row-fluid">
+            <div class="row">
                <div class="span12">
    
                   <table class="table table-condensed table-hover">
@@ -327,7 +327,6 @@
    <script>window.jQuery || document.write("<script src='scripts/jquery-1.8.3.min.js'>\x3C/script>")</script>
 
    <script type="text/javascript" src="scripts/google-code-prettify/prettify.js"></script>
-   <!--<script type="text/javascript" src="scripts/jquery.scrollTo.js"></script>-->
    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
    <script type="text/javascript" src="scripts/bootmetro-panorama.js"></script>
    <script type="text/javascript" src="scripts/bootmetro-pivot.js"></script>
@@ -337,10 +336,11 @@
    <script type="text/javascript" src="scripts/jquery.touchSwipe.js"></script>
    <script type="text/javascript" src="scripts/demo.js"></script>
    <script type="text/javascript" src="scripts/holder.js"></script>
-
    <script type="text/javascript">
-      $('#hub').panorama({
-         nicescroll: false
+      $('.panorama').panorama({
+         nicescroll: false,
+         showscrollbuttons: true,
+         keyboard: true
       });
 
       $('#pivot').pivot();

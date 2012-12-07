@@ -1,8 +1,8 @@
 <!-- Subhead
 ================================================== -->
-<header id="nav-bar" class="container-fluid">
-   <div class="row-fluid">
-      <div class="span7">
+<header id="nav-bar" class="container">
+   <div class="row">
+      <div class="span12">
          <div id="header-container">
             <a id="backbutton" class="win-backbutton" href="./hub.html"></a>
             <h5>{{appname}}</h5>
@@ -14,11 +14,11 @@
                {{>headermenu}}
             </div>
          </div>
-      </div>
-      <div id="top-info" class="span5 pull-right">
-         <a id="settings" class="pull-right" href="#">
-            <b class="icon-settings"></b>
-         </a>
+         <div id="top-info" class="pull-right">
+            <a id="settings" class="pull-right" href="#">
+               <b class="icon-settings"></b>
+            </a>
+         </div>
       </div>
    </div>
 </header>
@@ -45,10 +45,10 @@
             <div class="bs-docs-example" style="background-color: #f5f5f5;">
                <div id="pivot" class="pivot slide">
                   <div class="pivot-headers">
-                     <a href="#pivot" data-to="0">Item 1</a>
-                     <a href="#pivot" data-to="1">Item 2</a>
-                     <a href="#pivot" data-to="2">Item 3</a>
-                     <a href="#pivot" data-to="3">Item 4</a>
+                     <a href="#pivot" data-pivot-index="0" class="active">Item 1</a>
+                     <a href="#pivot" data-pivot-index="1">Item 2</a>
+                     <a href="#pivot" data-pivot-index="2">Item 3</a>
+                     <a href="#pivot" data-pivot-index="3">Item 4</a>
                   </div>
                   <div class="pivot-items">
                      <div id="pivot-item-1" class="pivot-item active">
@@ -75,12 +75,12 @@
                </div>
             </div>
 <pre class="prettyprint linenums">
-<div id="pivot" class="pivot slide">
+&lt;div id="pivot" class="pivot slide"&gt;
    &lt;div class="pivot-headers"&gt;
-      &lt;a href="#pivot" data-to="0"&gt;Item 1&lt;/a&gt;
-      &lt;a href="#pivot" data-to="1"&gt;Item 2&lt;/a&gt;
-      &lt;a href="#pivot" data-to="2"&gt;Item 3&lt;/a&gt;
-      &lt;a href="#pivot" data-to="3"&gt;Item 4&lt;/a&gt;
+      &lt;a href="#pivot" data-target="0" class="active"&gt;Item 1&lt;/a&gt;
+      &lt;a href="#pivot" data-target="1"&gt;Item 2&lt;/a&gt;
+      &lt;a href="#pivot" data-target="2"&gt;Item 3&lt;/a&gt;
+      &lt;a href="#pivot" data-target="3"&gt;Item 4&lt;/a&gt;
    &lt;/div&gt;
    &lt;div class="pivot-items"&gt;
       &lt;div id="pivot-item-1" class="pivot-item active"&gt;

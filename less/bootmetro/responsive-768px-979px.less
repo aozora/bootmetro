@@ -1,0 +1,35 @@
+//
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+}
+
+@media (min-width: 321px) and (max-width: 1023px) {
+   hr.win-command {
+      margin-left: 10px;
+      margin-right: 9px;
+   }
+}
+
+/* Narrow buttons and no labels when < 1024px. */
+@media (max-width: 1023px) {
+   a.win-command .win-label,
+   button.win-command .win-label {
+      display: none;
+   }
+   a.win-command .win-commandicon,
+   button.win-command .win-commandicon {
+      margin: 0 8px; /* 2px margin for focus */
+   }
+   .win-commandlayout {
+      min-height: 68px;
+   }
+   hr.win-command {
+      margin-bottom: 14px;
+      margin-top: 14px;
+   }
+}

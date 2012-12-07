@@ -1,8 +1,8 @@
 <!-- Header
 ================================================== -->
-<header id="nav-bar" class="container-fluid">
-   <div class="row-fluid">
-      <div class="span7">
+<header id="nav-bar" class="container">
+   <div class="row">
+      <div class="span12">
          <div id="header-container">
             <a id="backbutton" class="win-backbutton" href="./hub.html"></a>
             <h5>{{appname}}</h5>
@@ -14,18 +14,18 @@
                {{>headermenu}}
             </div>
          </div>
+         {{>loggeduser}}
       </div>
-      {{>loggeduser}}
    </div>
 </header>
 
-<div class="container-fluid">
-   <div class="row-fluid">
+<div class="container">
+   <div class="row">
       <div class="span12">
 
          <p>Here a table styled</p>
 
-         <div id="content-filters" class="row-fluid">
+         <div id="content-filters" class="row">
             <div class="span12">
                <ul class="nav nav-pills">
                   <li class="dropdown">
@@ -74,7 +74,7 @@
             </div>
          </div>
 
-         <div class="row-fluid">
+         <div class="row">
             <div class="span12">
 
                <table class="table table-condensed table-hover">

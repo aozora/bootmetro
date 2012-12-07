@@ -32,6 +32,9 @@
       this.options.slide && this.slide(this.options.slide)
    }
 
+
+
+
    Pivot.prototype = {
 
       to: function (pos) {
@@ -44,7 +47,7 @@
 
          if (this.sliding) {
             return this.$element.one('slid', function () {
-               that.to(pos)
+               that.go(pos)
             })
          }
 
@@ -131,8 +134,12 @@
 
       var $this = $(this), href
          , $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
-         , $to = parseInt($this.attr('data-to'));
-      $target.pivot($to)
+         , $index = parseInt($this.attr('data-pivot-index'));
+
+      $('.pivot .pivot-headers > a.active').removeClass('active')
+      $this.addClass('active')
+
+      $target.pivot($index)
    })
 
 }(window.jQuery);

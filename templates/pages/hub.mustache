@@ -1,8 +1,8 @@
 <!-- Header
 ================================================== -->
-<header id="nav-bar" class="container-fluid">
-   <div class="row-fluid">
-      <div class="span7">
+<header id="nav-bar" class="container">
+   <div class="row">
+      <div class="span12">
          <div id="header-container">
             <a id="backbutton" class="win-backbutton" href="./index.html"></a>
             <h5>{{appname}}</h5>
@@ -14,15 +14,16 @@
                {{>headermenu}}
             </div>
          </div>
+         {{>loggeduser}}
       </div>
-      {{>loggeduser}}
    </div>
 </header>
 
-<div class="container-fluid">
-   <div class="row-fluid">
-      <div id="hub" class="metro panorama span12">
-         <div class="panorama-sections">
+<div class="container">
+   <div class="row">
+      <div id="hub" class="metro span12">
+         <div class="panorama">
+            <div class="panorama-sections">
 
             <div id="section1" class="panorama-section tile-span-4">
 
@@ -138,11 +139,10 @@
             </div>
 
          </div>
+         </div>
+         <a id="panorama-scroll-prev" href="#">&#xe05d;</a>
+         <a id="panorama-scroll-next" href="#">&#xe059;</a>
       </div>
-
-      <a id="panorama-scroll-prev" href="#">&#xe05d;</a>
-      <a id="panorama-scroll-next" href="#">&#xe059;</a>
-
    </div>
 </div>
 
