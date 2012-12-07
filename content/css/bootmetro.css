@@ -7388,7 +7388,7 @@ Progress control. */
 .panorama {
   position: relative;
   margin: 0 40px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .panorama.nohidden {
