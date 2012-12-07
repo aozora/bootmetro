@@ -44,3 +44,8 @@ In all the demo pages I replaced the fluid css classes with the non fluid ones, 
 On the header element <header id="nav-bar"> I have removed the -fluid suffix from his inner div's; the elements <div id="header-container"> and <div id="top-info"> are now contained in the same div with class="span12"; before that row was split within 2 span.
 This change was necessary to improve the responsive design for the header for lower resolutions ( < 798px width).
 
+
+Theme Css Files
+---------------------------------
+the theme css files, metro-ui-light and metro-ui-dark are no longer used. metro-ui-light is renamed bootmetro-ui-light, and it is built with less.
+The dark theme will be rebuilt with less in the next minor release.
