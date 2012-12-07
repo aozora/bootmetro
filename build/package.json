@@ -1,6 +1,6 @@
 {
    "name":           "bootmetro-builder",
-   "version":        "0.0.1",
+   "version":        "1.0.0",
    "description":    "build bootstrap docs",
    "dependencies":   {
       "hogan.js": ">= 1.0.5-dev",
