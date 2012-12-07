@@ -43,13 +43,18 @@
             , activePos = children.index($active)
             , that = this
 
-         if (pos > (children.length - 1) || pos < 0) return
+         if (pos > (children.length - 1) || pos < 0)
+            return
 
          if (this.sliding) {
             return this.$element.one('slid', function () {
-               that.go(pos)
+               that.to(pos)
             })
+            return
          }
+
+         if (pos === activePos)
+            return
 
          return this.slide(pos > activePos ? 'next' : 'prev', $(children[pos]))
       }
@@ -80,11 +85,16 @@
             relatedTarget: $next[0]
          })
 
-         if ($next.hasClass('active')) return
+         if ($next.hasClass('active')) {
+            that.sliding = false // this should prevent issue #45
+            return
+         }
 
          if ($.support.transition && this.$element.hasClass('slide')) {
             this.$element.trigger(e)
-            if (e.isDefaultPrevented()) return
+            if (e.isDefaultPrevented())
+               return
+
             $next.addClass(type)
             $next[0].offsetWidth // force reflow
             $active.addClass(direction)
@@ -97,7 +107,9 @@
             })
          } else {
             this.$element.trigger(e)
-            if (e.isDefaultPrevented()) return
+            if (e.isDefaultPrevented())
+               return
+
             $active.removeClass('active')
             $next.addClass('active')
             this.sliding = false
@@ -119,8 +131,10 @@
             , data = $this.data('pivot')
             , options = $.extend({}, $.fn.pivot.defaults, typeof option == 'object' && option)
             , action = typeof option == 'string' ? option : options.slide
-         if (!data) $this.data('pivot', (data = new Pivot(this, options)))
-         if (typeof option == 'number') data.to(option)
+         if (!data)
+            $this.data('pivot', (data = new Pivot(this, options)))
+         if (typeof option == 'number')
+            data.to(option)
          else if (action) data[action]()
       })
    }
