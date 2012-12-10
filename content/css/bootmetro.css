@@ -5506,41 +5506,36 @@ img {
   display: block;
 }
 
-#top-info b {
-  display: inline-block;
-  width: 46px;
-  height: 46px;
-  font-size: 38px;
-  line-height: 46px;
-  text-align: center;
-  vertical-align: top;
-}
-
-#top-info hr.separator {
-  display: inline-block;
-  width: 1px;
-  height: 42px;
-  padding: 0;
-  margin: 2px 10px;
-  vertical-align: top;
-  background-color: #7B7B7B;
-  border: 0 none;
-}
-
 #top-info > a {
   display: inline-block;
-  height: 46px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin-left: 10px;
+  font-family: 'IcoMoon';
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 40px;
   color: #5A5A5A;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  vertical-align: 24%;
+  border-style: solid;
+  border-width: 2px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  outline: 0;
+}
+
+#top-info > a b {
+  font-size: 32px;
+  line-height: 40px;
 }
 
 #top-info > a:hover {
   color: #000;
-}
-
-.top-info-block {
-  display: block;
-  float: left;
-  margin-left: 8px;
 }
 
 #header-container {

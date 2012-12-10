@@ -1,3 +1,35 @@
+=================================
+v1.0 pre (10/12/2012)
+=================================
+
+Pivot plugin (bootmetro-pivot.js)
+---------------------------------
+Removed registration of click event using the selector '.pivot .pivot-headers > a';
+implemented data-api like bootstrap plugins, which register click event with the selector '[data-pivot-index]' on the document.
+This also frees you to locate the the pivot clickable elements anywhere in the document.
+
+
+IcoMoon web font
+---------------------------------
+There is a temporary fix for the problem reported in Issue #51 'Icons not showing up in chrome', changing the bootmetro-icons css
+to exchange the registration order of the font. However this fix should work only for Chrome, still remains the issue for some Firefox users
+on Windows; the final fix will be available in the next commits with a regeneration of the css for IcoMoon.
+
+
+All pages header markup
+---------------------------------
+I'm refactoring the markup for the header, that have the most problems for lower resolution devices; the work is not yet finished, the committed
+markup may change in net commits.
+
+
+All pages markup
+---------------------------------
+Fixed the case for the DOCTYPE directive to be standard compliant.
+
+
+
+
+=================================
 v1.0 pre (07/12/2012)
 =================================
 

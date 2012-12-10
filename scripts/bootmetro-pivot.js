@@ -143,17 +143,23 @@
 
    $.fn.pivot.Constructor = Pivot
 
-   $('.pivot .pivot-headers > a').click(function(e){
-      e.preventDefault()
 
+
+   /* PIVOT DATA-API
+    * ================= */
+
+   $(document).on('click.pivot.data-api', '[data-pivot-index]', function (e) {
       var $this = $(this), href
          , $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
+         , options = $.extend({}, $target.data(), $this.data())
          , $index = parseInt($this.attr('data-pivot-index'));
 
-      $('.pivot .pivot-headers > a.active').removeClass('active')
+      $('[data-pivot-index].active').removeClass('active')
       $this.addClass('active')
 
       $target.pivot($index)
+      e.preventDefault()
    })
+
 
 }(window.jQuery);
