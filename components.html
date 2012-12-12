@@ -196,12 +196,12 @@
    
              <h3>Sub menus on dropdowns</h3>
              <p>Add an extra level of dropdown menus, appearing on hover like those of OS X, with some simple markup additions. Add <code>.dropdown-submenu</code> to any <code>li</code> in an existing dropdown menu for automatic styling.</p>
-             <div class="bs-docs-example" style="min-height: 180px;">
+             <div class="bs-docs-example bs-docs-example-submenus">
    
                <div class="pull-left">
                  <p class="muted">Default</p>
                  <div class="dropdown clearfix">
-                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                      <li><a tabindex="-1" href="#">Action</a></li>
                      <li><a tabindex="-1" href="#">Another action</a></li>
                      <li><a tabindex="-1" href="#">Something else here</a></li>
@@ -220,10 +220,10 @@
                  </div>
                </div>
    
-               <div class="pull-left" style="margin-left: 20px;">
+               <div class="pull-left">
                  <p class="muted">Dropup</p>
                  <div class="dropup">
-                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                      <li><a tabindex="-1" href="#">Action</a></li>
                      <li><a tabindex="-1" href="#">Another action</a></li>
                      <li><a tabindex="-1" href="#">Something else here</a></li>
@@ -242,10 +242,10 @@
                  </div>
                </div>
    
-               <div class="pull-left" style="margin-left: 20px;">
+               <div class="pull-left">
                  <p class="muted">Left submenu</p>
                  <div class="dropdown">
-                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                      <li><a tabindex="-1" href="#">Action</a></li>
                      <li><a tabindex="-1" href="#">Another action</a></li>
                      <li><a tabindex="-1" href="#">Something else here</a></li>
@@ -1708,17 +1708,17 @@
              <p>Alternatively, you can align each link to the sides:</p>
              <div class="bs-docs-example">
                <ul class="pager">
-                 <li class="previous"><a href="#">Older</a></li>
-                 <li class="next"><a href="#">Newer</a></li>
+                 <li class="previous"><a href="#">&larr; Older</a></li>
+                 <li class="next"><a href="#">Newer &rarr;</a></li>
                </ul>
              </div>
    <pre class="prettyprint linenums">
    &lt;ul class="pager"&gt;
      &lt;li class="previous"&gt;
-       &lt;a href="#"&gt;Older&lt;/a&gt;
+       &lt;a href="#"&gt;&amp;larr; Older&lt;/a&gt;
      &lt;/li&gt;
      &lt;li class="next"&gt;
-       &lt;a href="#"&gt;Newer&lt;/a&gt;
+       &lt;a href="#"&gt;Newer &amp;rarr;&lt;/a&gt;
      &lt;/li&gt;
    &lt;/ul&gt;
    </pre>
@@ -1727,14 +1727,14 @@
              <p>Pager links also use the general <code>.disabled</code> utility class from the pagination.</p>
              <div class="bs-docs-example">
                <ul class="pager">
-                 <li class="previous disabled"><a href="#">Older</a></li>
-                 <li class="next"><a href="#">Newer</a></li>
+                 <li class="previous disabled"><a href="#">&larr; Older</a></li>
+                 <li class="next"><a href="#">Newer &rarr;</a></li>
                </ul>
              </div>
    <pre class="prettyprint linenums">
    &lt;ul class="pager"&gt;
      &lt;li class="previous disabled"&gt;
-       &lt;a href="#"&gt;Older&lt;/a&gt;
+       &lt;a href="#"&gt;&amp;larr; Older&lt;/a&gt;
      &lt;/li&gt;
      ...
    &lt;/ul&gt;
@@ -1889,6 +1889,9 @@
                </tbody>
              </table>
    
+             <h3>Easily collapsible</h3>
+             <p>For easy implementation, labels and badges will simply collapse (via CSS's <code>:empty</code> selector) when no content exists within.</p>
+   
            </section>
    
    
@@ -1951,22 +1954,22 @@
                <ul class="thumbnails">
                  <li class="span3">
                    <a href="#" class="thumbnail">
-                     <img src="http://placehold.it/260x180" alt="">
+                     <img data-src="holder.js/260x180" alt="">
                    </a>
                  </li>
                  <li class="span3">
                    <a href="#" class="thumbnail">
-                     <img src="http://placehold.it/260x180" alt="">
+                     <img data-src="holder.js/260x180" alt="">
                    </a>
                  </li>
                  <li class="span3">
                    <a href="#" class="thumbnail">
-                     <img src="http://placehold.it/260x180" alt="">
+                     <img data-src="holder.js/260x180" alt="">
                    </a>
                  </li>
                  <li class="span3">
                    <a href="#" class="thumbnail">
-                     <img src="http://placehold.it/260x180" alt="">
+                     <img data-src="holder.js/260x180" alt="">
                    </a>
                  </li>
                </ul>
@@ -1978,7 +1981,7 @@
                <ul class="thumbnails">
                  <li class="span4">
                    <div class="thumbnail">
-                     <img src="http://placehold.it/300x200" alt="">
+                     <img data-src="holder.js/300x200" alt="">
                      <div class="caption">
                        <h3>Thumbnail label</h3>
                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -1988,7 +1991,7 @@
                  </li>
                  <li class="span4">
                    <div class="thumbnail">
-                     <img src="http://placehold.it/300x200" alt="">
+                     <img data-src="holder.js/300x200" alt="">
                      <div class="caption">
                        <h3>Thumbnail label</h3>
                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -1998,7 +2001,7 @@
                  </li>
                  <li class="span4">
                    <div class="thumbnail">
-                     <img src="http://placehold.it/300x200" alt="">
+                     <img data-src="holder.js/300x200" alt="">
                      <div class="caption">
                        <h3>Thumbnail label</h3>
                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -2024,7 +2027,7 @@
    &lt;ul class="thumbnails"&gt;
      &lt;li class="span4"&gt;
        &lt;a href="#" class="thumbnail"&gt;
-         &lt;img src="http://placehold.it/300x200" alt=""&gt;
+         &lt;img data-src="holder.js/300x200" alt=""&gt;
        &lt;/a&gt;
      &lt;/li&gt;
      ...
@@ -2035,7 +2038,7 @@
    &lt;ul class="thumbnails"&gt;
      &lt;li class="span4"&gt;
        &lt;div class="thumbnail"&gt;
-         &lt;img src="http://placehold.it/300x200" alt=""&gt;
+         &lt;img data-src="holder.js/300x200" alt=""&gt;
          &lt;h3&gt;Thumbnail label&lt;/h3&gt;
          &lt;p&gt;Thumbnail caption...&lt;/p&gt;
        &lt;/div&gt;
@@ -2049,27 +2052,27 @@
              <ul class="thumbnails">
                <li class="span4">
                  <a href="#" class="thumbnail">
-                   <img src="http://placehold.it/360x270" alt="">
+                   <img data-src="holder.js/360x270" alt="">
                  </a>
                </li>
                <li class="span3">
                  <a href="#" class="thumbnail">
-                   <img src="http://placehold.it/260x120" alt="">
+                   <img data-src="holder.js/260x120" alt="">
                  </a>
                </li>
                <li class="span2">
                  <a href="#" class="thumbnail">
-                   <img src="http://placehold.it/160x120" alt="">
+                   <img data-src="holder.js/160x120" alt="">
                  </a>
                </li>
                <li class="span3">
                  <a href="#" class="thumbnail">
-                   <img src="http://placehold.it/260x120" alt="">
+                   <img data-src="holder.js/260x120" alt="">
                  </a>
                </li>
                <li class="span2">
                  <a href="#" class="thumbnail">
-                   <img src="http://placehold.it/160x120" alt="">
+                   <img data-src="holder.js/160x120" alt="">
                  </a>
                </li>
              </ul>
@@ -2090,22 +2093,22 @@
              <p>Wrap any text and an optional dismiss button in <code>.alert</code> for a basic warning alert message.</p>
              <div class="bs-docs-example">
                <div class="alert">
-                 <button type="button" class="close" data-dismiss="alert"></button>
+                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                  <strong>Warning!</strong> Best check yo self, you're not looking too good.
                </div>
              </div>
    <pre class="prettyprint linenums">
    &lt;div class="alert"&gt;
-     &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+     &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
      &lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, you're not looking too good.
    &lt;/div&gt;
    </pre>
    
              <h3>Dismiss buttons</h3>
              <p>Mobile Safari and Mobile Opera browsers, in addition to the <code>data-dismiss="alert"</code> attribute, require an <code>href="#"</code> for the dismissal of alerts when using an <code>&lt;a&gt;</code> tag.</p>
-             <pre class="prettyprint linenums">&lt;a href="#" class="close" data-dismiss="alert"&gt;&lt;/a&gt;</pre>
+             <pre class="prettyprint linenums">&lt;a href="#" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/a&gt;</pre>
              <p>Alternatively, you may use a <code>&lt;button&gt;</code> element with the data attribute, which we have opted to do for our docs. When using <code>&lt;button&gt;</code>, you must include <code>type="button"</code> or your forms may not submit.</p>
-             <pre class="prettyprint linenums">&lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;</pre>
+             <pre class="prettyprint linenums">&lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;</pre>
    
              <h3>Dismiss alerts via JavaScript</h3>
              <p>Use the <a href="./javascript.html#alerts">alerts jQuery plugin</a> for quick and easy dismissal of alerts.</p>
@@ -2118,14 +2121,14 @@
              <p>For longer messages, increase the padding on the top and bottom of the alert wrapper by adding <code>.alert-block</code>.</p>
              <div class="bs-docs-example">
                <div class="alert alert-block">
-                 <button type="button" class="close" data-dismiss="alert"></button>
+                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                  <h4>Warning!</h4>
                  <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
                </div>
              </div>
    <pre class="prettyprint linenums">
    &lt;div class="alert alert-block"&gt;
-     &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+     &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
      &lt;h4&gt;Warning!&lt;/h4&gt;
      Best check yo self, you're not...
    &lt;/div&gt;
@@ -2141,7 +2144,7 @@
              <h3>Error or danger</h3>
              <div class="bs-docs-example">
                <div class="alert alert-error">
-                 <button type="button" class="close" data-dismiss="alert"></button>
+                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                  <strong>Oh snap!</strong> Change a few things up and try submitting again.
                </div>
              </div>
@@ -2154,7 +2157,7 @@
              <h3>Success</h3>
              <div class="bs-docs-example">
                <div class="alert alert-success">
-                 <button type="button" class="close" data-dismiss="alert"></button>
+                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                  <strong>Well done!</strong> You successfully read this important alert message.
                </div>
              </div>
@@ -2167,7 +2170,7 @@
              <h3>Information</h3>
              <div class="bs-docs-example">
                <div class="alert alert-info">
-                 <button type="button" class="close" data-dismiss="alert"></button>
+                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                  <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
                </div>
              </div>
@@ -2317,7 +2320,7 @@
              <div class="bs-docs-example">
                <div class="media">
                  <a class="pull-left" href="#">
-                   <img class="media-object" src="http://placehold.it/64x64">
+                   <img class="media-object" data-src="holder.js/64x64">
                  </a>
                  <div class="media-body">
                    <h4 class="media-heading">Media heading</h4>
@@ -2326,14 +2329,14 @@
                </div>
                <div class="media">
                  <a class="pull-left" href="#">
-                   <img class="media-object" src="http://placehold.it/64x64">
+                   <img class="media-object" data-src="holder.js/64x64">
                  </a>
                  <div class="media-body">
                    <h4 class="media-heading">Media heading</h4>
                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                    <div class="media">
                      <a class="pull-left" href="#">
-                       <img class="media-object" src="http://placehold.it/64x64">
+                       <img class="media-object" data-src="holder.js/64x64">
                      </a>
                      <div class="media-body">
                        <h4 class="media-heading">Media heading</h4>
@@ -2346,7 +2349,7 @@
    <pre class="prettyprint linenums">
    &lt;div class="media"&gt;
      &lt;a class="pull-left" href="#"&gt;
-       &lt;img class="media-object" src="http://placehold.it/64x64"&gt;
+       &lt;img class="media-object" data-src="holder.js/64x64"&gt;
      &lt;/a&gt;
      &lt;div class="media-body"&gt;
        &lt;h4 class="media-heading"&gt;Media heading&lt;/h4&gt;
@@ -2370,7 +2373,7 @@
                <ul class="media-list">
                  <li class="media">
                    <a class="pull-left" href="#">
-                     <img class="media-object" src="http://placehold.it/64x64">
+                     <img class="media-object" data-src="holder.js/64x64">
                    </a>
                    <div class="media-body">
                      <h4 class="media-heading">Media heading</h4>
@@ -2378,7 +2381,7 @@
                      <!-- Nested media object -->
                      <div class="media">
                        <a class="pull-left" href="#">
-                         <img class="media-object" src="http://placehold.it/64x64">
+                         <img class="media-object" data-src="holder.js/64x64">
                        </a>
                        <div class="media-body">
                          <h4 class="media-heading">Nested media heading</h4>
@@ -2386,7 +2389,7 @@
                          <!-- Nested media object -->
                          <div class="media">
                            <a class="pull-left" href="#">
-                             <img class="media-object" src="http://placehold.it/64x64">
+                             <img class="media-object" data-src="holder.js/64x64">
                            </a>
                            <div class="media-body">
                              <h4 class="media-heading">Nested media heading</h4>
@@ -2398,7 +2401,7 @@
                      <!-- Nested media object -->
                      <div class="media">
                        <a class="pull-left" href="#">
-                         <img class="media-object" src="http://placehold.it/64x64">
+                         <img class="media-object" data-src="holder.js/64x64">
                        </a>
                        <div class="media-body">
                          <h4 class="media-heading">Nested media heading</h4>
@@ -2409,7 +2412,7 @@
                  </li>
                  <li class="media">
                    <a class="pull-right" href="#">
-                     <img class="media-object" src="http://placehold.it/64x64">
+                     <img class="media-object" data-src="holder.js/64x64">
                    </a>
                    <div class="media-body">
                      <h4 class="media-heading">Media heading</h4>
@@ -2422,7 +2425,7 @@
    &lt;ul class="media-list"&gt;
      &lt;li class="media"&gt;
        &lt;a class="pull-left" href="#"&gt;
-         &lt;img class="media-object" src="http://placehold.it/64x64"&gt;
+         &lt;img class="media-object" data-src="holder.js/64x64"&gt;
        &lt;/a&gt;
        &lt;div class="media-body"&gt;
          &lt;h4 class="media-heading"&gt;Media heading&lt;/h4&gt;
@@ -2488,7 +2491,7 @@
              <h2>Close icon</h2>
              <p>Use the generic close icon for dismissing content like modals and alerts.</p>
              <div class="bs-docs-example">
-               <p><button class="close" style="float: none;"></button></p>
+               <p><button class="close" style="float: none;">&times;</button></p>
              </div>
              <pre class="prettyprint linenums">&lt;button class="close"&gt;&amp;times;&lt;/button&gt;</pre>
              <p>iOS devices require an href="#" for click events if you would rather use an anchor.</p>

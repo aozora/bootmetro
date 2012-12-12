@@ -223,7 +223,7 @@
    
    
              <h2 id="abbreviations">Abbreviations</h2>
-             <p>Stylized implemenation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.</p>
+             <p>Stylized implementation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.</p>
    
              <h3><code>&lt;abbr&gt;</code></h3>
              <p>For expanded text on long hover of an abbreviation, include the <code>title</code> attribute.</p>
@@ -257,7 +257,7 @@
                </address>
                <address>
                  <strong>Full Name</strong><br>
-                 <a href="mailto:#">first.last@gmail.com</a>
+                 <a href="mailto:#">first.last@example.com</a>
                </address>
              </div>
    <pre class="prettyprint linenums">
@@ -270,7 +270,7 @@
    
    &lt;address&gt;
      &lt;strong&gt;Full Name&lt;/strong&gt;&lt;br&gt;
-     &lt;a href="mailto:#"&gt;first.last@gmail.com&lt;/a&gt;
+     &lt;a href="mailto:#"&gt;first.last@example.com&lt;/a&gt;
    &lt;/address&gt;
    </pre>
    
@@ -381,7 +381,7 @@
    </pre>
    
            <h3>Unstyled</h3>
-           <p>A list of items with no <code>list-style</code> or additional left padding.</p>
+           <p>Remove the default <code>list-style</code> and left padding on list items (immediate children only).</p>
            <div class="bs-docs-example">
              <ul class="unstyled">
                <li>Lorem ipsum dolor sit amet</li>
@@ -403,6 +403,21 @@
            </div>
    <pre class="prettyprint linenums">
    &lt;ul class="unstyled"&gt;
+     &lt;li&gt;...&lt;/li&gt;
+   &lt;/ul&gt;
+   </pre>
+   
+           <h3>Inline</h3>
+           <p>Place all list items on a single line with <code>inline-block</code> and some light padding.</p>
+           <div class="bs-docs-example">
+             <ul class="inline">
+               <li>Lorem ipsum</li>
+               <li>Phasellus iaculis</li>
+               <li>Nulla volutpat</li>
+             </ul>
+           </div>
+   <pre class="prettyprint linenums">
+   &lt;ul class="inline"&gt;
      &lt;li&gt;...&lt;/li&gt;
    &lt;/ul&gt;
    </pre>
@@ -1380,6 +1395,54 @@
    &lt;/div&gt;
    </pre>
    
+             <h4>Segmented dropdown groups</h4>
+             <form class="bs-docs-example">
+               <div class="input-prepend">
+                 <div class="btn-group">
+                   <button class="btn" tabindex="-1">Action</button>
+                   <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                     <span class="caret"></span>
+                   </button>
+                   <ul class="dropdown-menu">
+                     <li><a href="#">Action</a></li>
+                     <li><a href="#">Another action</a></li>
+                     <li><a href="#">Something else here</a></li>
+                     <li class="divider"></li>
+                     <li><a href="#">Separated link</a></li>
+                   </ul>
+                 </div>
+                 <input type="text">
+               </div>
+               <div class="input-append">
+                 <input type="text">
+                 <div class="btn-group">
+                   <button class="btn" tabindex="-1">Action</button>
+                   <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                     <span class="caret"></span>
+                   </button>
+                   <ul class="dropdown-menu">
+                     <li><a href="#">Action</a></li>
+                     <li><a href="#">Another action</a></li>
+                     <li><a href="#">Something else here</a></li>
+                     <li class="divider"></li>
+                     <li><a href="#">Separated link</a></li>
+                   </ul>
+                 </div>
+               </div>
+             </form>
+   <pre class="prettyprint linenums">
+   &lt;form&gt;
+     &lt;div class="input-prepend"&gt;
+       &lt;div class="btn-group"&gt;...&lt;/div&gt;
+       &lt;input type="text"&gt;
+     &lt;/div&gt;
+     &lt;div class="input-append"&gt;
+       &lt;input type="text"&gt;
+       &lt;div class="btn-group"&gt;...&lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/form&gt;
+   </pre>
+   
              <h4>Search form</h4>
              <form class="bs-docs-example form-search">
                <div class="input-append">
@@ -1486,7 +1549,7 @@
    &lt;/select&gt;
    </pre>
    
-             <p>For multiple grid inputs per line, <strong>use the <code>.controls-row</code> modifier class for proper spacing</strong>. It floats the inputs to collapse white-space, sets the proper margins, and the clears the float.</p>
+             <p>For multiple grid inputs per line, <strong>use the <code>.controls-row</code> modifier class for proper spacing</strong>. It floats the inputs to collapse white-space, sets the proper margins, and clears the float.</p>
              <form class="bs-docs-example" style="padding-bottom: 15px;">
                <div class="controls">
                  <input class="span5" type="text" placeholder=".span5">
@@ -1576,6 +1639,15 @@
              </form>
    <pre class="prettyprint linenums">
    &lt;input class="input-xlarge" id="focusedInput" type="text" value="This is focused..."&gt;
+   </pre>
+   
+             <h3>Invalid inputs</h3>
+             <p>Style inputs via default browser functionality with <code>:invalid</code>. Specify a <code>type</code> and add the <code>required</code> attribute.</p>
+             <form class="bs-docs-example form-inline">
+               <input class="span3" type="email" placeholder="test@example.com" required>
+             </form>
+   <pre class="prettyprint linenums">
+   &lt;input class="span3" type="email" required&gt;
    </pre>
    
              <h3>Disabled inputs</h3>
@@ -1823,9 +1895,9 @@
    
              <p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p>
              <div class="bs-docs-example bs-docs-example-images">
-               <img src="http://placehold.it/140x140" class="img-rounded">
-               <img src="http://placehold.it/140x140" class="img-circle">
-               <img src="http://placehold.it/140x140" class="img-polaroid">
+               <img data-src="holder.js/140x140" class="img-rounded">
+               <img data-src="holder.js/140x140" class="img-circle">
+               <img data-src="holder.js/140x140" class="img-polaroid">
              </div>
    <pre class="prettyprint linenums">
    &lt;img src="..." class="img-rounded"&gt;
@@ -1922,7 +1994,7 @@
    &lt;/div&gt;
    </pre>
    
-             <h5>Small button</h5>
+             <h5>Button sizes</h5>
              <div class="bs-docs-example">
                <a class="btn btn-small" href="#"><i class="icon-star"></i></a>
              </div>
