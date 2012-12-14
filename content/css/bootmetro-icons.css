@@ -18,14 +18,10 @@
 
 [class^="icon-"],
 [class*=" icon-"] {
-  width: 16px;
-  height: 16px;
   font-family: 'IcoMoon';
-  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
   font-weight: normal;
-  line-height: 16px;
   background-image: none;
   background-position: inherit;
   speak: none;

@@ -6645,6 +6645,7 @@ Command buttons.
 a.win-command {
   display: inline-block;
   letter-spacing: 0.02em;
+  vertical-align: top;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -6676,6 +6677,8 @@ Command button icons.
   min-height: 0;
   padding: 0;
   margin: 0 28px;
+  font-size: 30px;
+  line-height: 40px;
   cursor: default;
   box-sizing: border-box;
 }

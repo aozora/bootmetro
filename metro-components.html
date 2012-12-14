@@ -117,6 +117,7 @@
       <div class="row">
          <div class="span3 bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav">
+               <li><a href="#commands"><i class="icon-chevron-right"></i> Commands</a></li>
                <li><a href="#progress"><i class="icon-chevron-right"></i> Metro Progress Bars</a></li>
                <li><a href="#modals"><i class="icon-chevron-right"></i> Modal</a></li>
                <li><a href="#datepicker"><i class="icon-chevron-right"></i> DatePicker</a></li>
@@ -124,6 +125,73 @@
             </ul>
          </div>
          <div class="span9">
+   
+            <!-- Progress bars
+            ================================================== -->
+            <section id="commands">
+               <div class="page-header">
+                  <h1>Command Button <small>Special action buttons</small></h1>
+               </div>
+   
+               <h2>Examples and markup</h2>
+   
+               <h3>Simple Command</h3>
+               <p>Hover each command</p>
+               <div class="bs-docs-example bs-docs-example-commands">
+   
+                  <button class="win-command" rel="tootlip" title="Simple command with only an icon">
+                     <span class="win-commandicon icon-settings"></span>
+                  </button>
+   
+                  <button class="win-command" rel="tootlip" title="Command with icon and label">
+                     <span class="win-commandicon icon-settings"></span>
+                     <span class="win-label">With label</span>
+                  </button>
+   
+                  <button class="win-command" rel="tootlip" title="Command with icon with border ring">
+                     <span class="win-commandicon win-commandring icon-settings"></span>
+                  </button>
+   
+                  <button class="win-command" rel="tootlip" title="Command with icon and label with border ring">
+                     <span class="win-commandicon win-commandring icon-settings"></span>
+                     <span class="win-label">With ring &amp; label</span>
+                  </button>
+   
+                  <button class="win-command orange" rel="tootlip" title="Command with icon and label with border ring, with a custom color">
+                     <span class="win-commandicon win-commandring icon-settings"></span>
+                     <span class="win-label">Customized</span>
+                  </button>
+   
+               </div>
+            <pre class="prettyprint linenums">
+   &lt;button class="win-command" rel="tootlip" title="Simple command with only an icon"&gt;
+      &lt;span class="win-commandicon icon-settings"&gt;&lt;/span&gt;
+   &lt;/button&gt;
+   
+   &lt;button class="win-command" rel="tootlip" title="Command with icon and label"&gt;
+      &lt;span class="win-commandicon icon-settings"&gt;&lt;/span&gt;
+      &lt;span class="win-label"&gt;With label&lt;/span&gt;
+   &lt;/button&gt;
+   
+   &lt;button class="win-command" rel="tootlip" title="Command with icon with border ring"&gt;
+      &lt;span class="win-commandicon win-commandring icon-settings"&gt;&lt;/span&gt;
+   &lt;/button&gt;
+   
+   &lt;button class="win-command" rel="tootlip" title="Command with icon and label with border ring"&gt;
+      &lt;span class="win-commandicon win-commandring icon-settings"&gt;&lt;/span&gt;
+      &lt;span class="win-label"&gt;With ring &amp; label&lt;/span&gt;
+   &lt;/button&gt;
+   
+   &lt;button class="win-command orange" rel="tootlip" title="Command with icon and label with border ring, with a custom color"&gt;
+      &lt;span class="win-commandicon win-commandring icon-settings"&gt;&lt;/span&gt;
+      &lt;span class="win-label"&gt;Customized&lt;/span&gt;
+   &lt;/button&gt;
+            </pre>
+   
+   
+            </section>
+   
+   
    
             <!-- Progress bars
             ================================================== -->
@@ -141,11 +209,11 @@
                      <div class="bar" style="width: 60%;"></div>
                   </div>
                </div>
-            <pre class="prettyprint linenums">
-            &lt;div class="progress"&gt;
-              &lt;div class="bar" style="width: 60%;"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-            </pre>
+   <pre class="prettyprint linenums">
+   &lt;div class="progress"&gt;
+     &lt;div class="bar" style="width: 60%;"&gt;&lt;/div&gt;
+   &lt;/div&gt;
+   </pre>
    
                <h3>Indeterminate</h3>
                <p>Use this style for tasks that are not determinate that are non-modal (don't block user interaction).</p>
@@ -154,11 +222,11 @@
                      <div class="bar"></div>
                   </div>
                </div>
-            <pre class="prettyprint linenums">
-            &lt;div class="progress progress-indeterminate"&gt;
-              &lt;div class="bar"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-            </pre>
+   <pre class="prettyprint linenums">
+   &lt;div class="progress progress-indeterminate"&gt;
+     &lt;div class="bar"&gt;&lt;/div&gt;
+   &lt;/div&gt;
+   </pre>
    
                <h3>Indeterminate Ring</h3>
                <p>Use this style for tasks that are not determinate that are non-modal (don't block user interaction).</p>
@@ -167,11 +235,11 @@
                      <div class="win-ring small"></div>
                   </div>
                </div>
-            <pre class="prettyprint linenums">
-            &lt;div class="progress progress-indeterminate"&gt;
-              &lt;div class="win-ring small"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-            </pre>
+   <pre class="prettyprint linenums">
+   &lt;div class="progress progress-indeterminate"&gt;
+     &lt;div class="win-ring small"&gt;&lt;/div&gt;
+   &lt;/div&gt;
+   </pre>
    
             </section>
    
@@ -205,21 +273,21 @@
                      </div>
                   </div>
                </div>
-            <pre class="prettyprint linenums">
-            &lt;div class="modal hide fade"&gt;
-              &lt;div class="modal-header"&gt;
-                &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
-                &lt;h3&gt;Modal header&lt;/h3&gt;
-              &lt;/div&gt;
-              &lt;div class="modal-body"&gt;
-                &lt;p&gt;One fine body&hellip;&lt;/p&gt;
-              &lt;/div&gt;
-              &lt;div class="modal-footer"&gt;
-                &lt;a href="#" class="btn"&gt;Close&lt;/a&gt;
-                &lt;a href="#" class="btn btn-primary"&gt;Save changes&lt;/a&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-            </pre>
+   <pre class="prettyprint linenums">
+   &lt;div class="modal hide fade"&gt;
+     &lt;div class="modal-header"&gt;
+       &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
+       &lt;h3&gt;Modal header&lt;/h3&gt;
+     &lt;/div&gt;
+     &lt;div class="modal-body"&gt;
+       &lt;p&gt;One fine body&hellip;&lt;/p&gt;
+     &lt;/div&gt;
+     &lt;div class="modal-footer"&gt;
+       &lt;a href="#" class="btn"&gt;Close&lt;/a&gt;
+       &lt;a href="#" class="btn btn-primary"&gt;Save changes&lt;/a&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+   </pre>
    
                <h3>Live demo</h3>
                <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
@@ -285,25 +353,25 @@
                   <a data-toggle="modal" href="#myModal3" class="btn btn-warning">Show Error/Warning</a>
                </div>
    
-            <pre class="prettyprint linenums">
-            &lt!-- Button to trigger modal --&gt;
-            &lt;a href="#myModal" role="button" class="btn" data-toggle="modal"&gt;Launch demo modal&lt;/a&gt;
+   <pre class="prettyprint linenums">
+   &lt!-- Button to trigger modal --&gt;
+   &lt;a href="#myModal" role="button" class="btn" data-toggle="modal"&gt;Launch demo modal&lt;/a&gt;
    
-            &lt!-- Modal --&gt;
-            &lt;div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
-              &lt;div class="modal-header"&gt;
-                &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&lt;/button&gt;
-                &lt;h3 id="myModalLabel"&gt;Modal header&lt;/h3&gt;
-              &lt;/div&gt;
-              &lt;div class="modal-body"&gt;
-                &lt;p&gt;One fine body&hellip;&lt;/p&gt;
-              &lt;/div&gt;
-              &lt;div class="modal-footer"&gt;
-                &lt;button class="btn" data-dismiss="modal" aria-hidden="true"&gt;Close&lt;/button&gt;
-                &lt;button class="btn btn-primary"&gt;Save changes&lt;/button&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-            </pre>
+   &lt!-- Modal --&gt;
+   &lt;div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+     &lt;div class="modal-header"&gt;
+       &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&lt;/button&gt;
+       &lt;h3 id="myModalLabel"&gt;Modal header&lt;/h3&gt;
+     &lt;/div&gt;
+     &lt;div class="modal-body"&gt;
+       &lt;p&gt;One fine body&hellip;&lt;/p&gt;
+     &lt;/div&gt;
+     &lt;div class="modal-footer"&gt;
+       &lt;button class="btn" data-dismiss="modal" aria-hidden="true"&gt;Close&lt;/button&gt;
+       &lt;button class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+   </pre>
    
    
                <hr class="bs-docs-separator">
@@ -362,11 +430,11 @@
                <h3>Methods</h3>
                <h4>.modal(options)</h4>
                <p>Activates your content as a modal. Accepts an optional options <code>object</code>.</p>
-            <pre class="prettyprint linenums">
-            $('#myModal').modal({
-              keyboard: false
-            })
-            </pre>
+   <pre class="prettyprint linenums">
+   $('#myModal').modal({
+     keyboard: false
+   })
+   </pre>
                <h4>.modal('toggle')</h4>
                <p>Manually toggles a modal.</p>
                <pre class="prettyprint linenums">$('#myModal').modal('toggle')</pre>
@@ -404,11 +472,11 @@
                      </tr>
                   </tbody>
                </table>
-            <pre class="prettyprint linenums">
-            $('#myModal').on('hidden', function () {
-              // do something…
-            })
-            </pre>
+   <pre class="prettyprint linenums">
+   $('#myModal').on('hidden', function () {
+     // do something…
+   })
+   </pre>
             </section>
    
    
@@ -425,17 +493,17 @@
                <div class="bs-docs-example">
                   <input type="text" id="dp1" value="02-16-2012" class="span2 datepicker">
                </div>
-            <pre class="prettyprint linenums">
-            &lt;input type="text" id="dp1" value="02-16-2012" class="span2 datepicker"&gt;
-            </pre>
+   <pre class="prettyprint linenums">
+   &lt;input type="text" id="dp1" value="02-16-2012" class="span2 datepicker"&gt;
+   </pre>
    
                <p>Attachet to a field with the format specified via data tag.</p>
                <div class="bs-docs-example">
                   <input type="text" id="dp2" data-date-format="mm/dd/yy" value="02/16/12" class="span2 datepicker">
                </div>
-            <pre class="prettyprint linenums">
-            &lt;input type="text" id="dp2" data-date-format="mm/dd/yy" value="02-16-2012" class="span2 datepicker"&gt;
-            </pre>
+   <pre class="prettyprint linenums">
+   &lt;input type="text" id="dp2" data-date-format="mm/dd/yy" value="02-16-2012" class="span2 datepicker"&gt;
+   </pre>
    
                <p>As component.</p>
                <div class="bs-docs-example">
@@ -444,12 +512,12 @@
                      <span class="add-on"><i class="icon-calendar"></i></span>
                   </div>
                </div>
-            <pre class="prettyprint linenums">
-            &lt;div data-date-format="dd-mm-yyyy" data-date="12-02-2012" id="dp3" class="input-append datepicker"&gt;
-               &lt;input type="text" readonly="" value="12-02-2012" size="16" class="span2"&gt;
-               &lt;span class="add-on"&gt;&lt;i class="icon-calendar"&gt;&lt;/i&gt;&lt;/span&gt;
-               &lt;/div&gt;
-            </pre>
+   <pre class="prettyprint linenums">
+   &lt;div data-date-format="dd-mm-yyyy" data-date="12-02-2012" id="dp3" class="input-append datepicker"&gt;
+      &lt;input type="text" readonly="" value="12-02-2012" size="16" class="span2"&gt;
+      &lt;span class="add-on"&gt;&lt;i class="icon-calendar"&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;/div&gt;
+   </pre>
    
             </section>
    

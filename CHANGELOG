@@ -1,4 +1,13 @@
 =================================
+v1.0 pre (15/12/2012)
+=================================
+The definition of '''[class^="icon-"],[class*=" icon-"]''' don't have anymore the font-size, width, height and line-height rules.
+
+
+
+
+
+=================================
 v1.0 pre (13/12/2012)
 =================================
 Merged with Twitter Bootstrap v2.2.2
