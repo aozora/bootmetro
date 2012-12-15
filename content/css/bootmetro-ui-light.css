@@ -113,7 +113,7 @@ select:focus::-ms-value {
   background-color: #4617b4;
 }
 
-button:hover:active .win-commandimage {
+button:hover:active .win-commandicon {
   color: #FFF;
 }
 
@@ -140,8 +140,8 @@ input[type=submit] {
           border-radius: 0;
 }
 
-a[aria-selected=true]:active .win-commandimage,
-button[aria-selected=true]:active .win-commandimage {
+a[aria-selected=true]:active .win-commandicon,
+button[aria-selected=true]:active .win-commandicon {
   color: #000000;
 }
 
@@ -212,8 +212,8 @@ button:active .win-commandring {
   border-color: #000000;
 }
 
-button[aria-checked=true]:hover .win-commandimage,
-button[aria-checked=true]:hover:active .win-commandimage {
+button[aria-checked=true]:hover .win-commandicon,
+button[aria-checked=true]:hover:active .win-commandicon {
   color: #000;
 }
 
@@ -275,8 +275,8 @@ button:hover:active .win-commandring {
   border-color: #000;
 }
 
-a:active .win-commandimage,
-button:active .win-commandimage {
+a:active .win-commandicon,
+button:active .win-commandicon {
   color: #FFF;
 }
 
@@ -313,8 +313,8 @@ input[type=submit]:hover {
   background-clip: border-box;
 }
 
-button[aria-checked=true]:disabled .win-commandimage,
-button[aria-checked=true]:disabled:active .win-commandimage {
+button[aria-checked=true]:disabled .win-commandicon,
+button[aria-checked=true]:disabled:active .win-commandicon {
   color: #FFF;
 }
 
@@ -353,8 +353,8 @@ a#user-info:hover h4 {
   color: #FFF;
 }
 
-button[aria-checked=true] .win-commandimage,
-button[aria-checked=true]:active .win-commandimage {
+button[aria-checked=true] .win-commandicon,
+button[aria-checked=true]:active .win-commandicon {
   color: #FFF;
 }
 
@@ -403,8 +403,8 @@ button:disabled:active .win-commandring {
   border-color: rgba(0, 0, 0, 0.4);
 }
 
-.win-ui-dark button[aria-checked=true]:hover .win-commandimage,
-.win-ui-dark button[aria-checked=true]:hover:active .win-commandimage {
+.win-ui-dark button[aria-checked=true]:hover .win-commandicon,
+.win-ui-dark button[aria-checked=true]:hover:active .win-commandicon {
   color: #FFF;
 }
 
@@ -462,8 +462,8 @@ table th {
   border-color: #FFF;
 }
 
-.win-ui-dark button[aria-checked=true]:disabled .win-commandimage,
-.win-ui-dark button[aria-checked=true]:disabled:active .win-commandimage {
+.win-ui-dark button[aria-checked=true]:disabled .win-commandicon,
+.win-ui-dark button[aria-checked=true]:disabled:active .win-commandicon {
   color: rgba(0, 0, 0, 0.4);
 }
 
@@ -524,8 +524,8 @@ button.win-command.win-hidefocus:focus {
   border-color: transparent;
 }
 
-button:disabled .win-commandimage,
-button:disabled:active .win-commandimage {
+button:disabled .win-commandicon,
+button:disabled:active .win-commandicon {
   color: rgba(0, 0, 0, 0.4);
 }
 
@@ -541,7 +541,7 @@ input[type=range]::-ms-track {
   border-color: rgba(255, 255, 255, 0.4);
 }
 
-.win-commandimage {
+.win-commandicon {
   color: #000;
 }
 
@@ -817,11 +817,11 @@ button.win-command:disabled {
   border-color: #FFF;
 }
 
-.win-ui-dark button:hover:active .win-commandimage {
+.win-ui-dark button:hover:active .win-commandicon {
   color: #000;
 }
 
-.win-ui-dark .win-commandimage {
+.win-ui-dark .win-commandicon {
   color: #FFF;
 }
 
@@ -883,13 +883,13 @@ button.win-command:disabled {
   color: rgba(255, 255, 255, 0.22);
 }
 
-.win-ui-dark a[aria-selected=true]:active .win-commandimage,
-.win-ui-dark button[aria-selected=true]:active .win-commandimage {
+.win-ui-dark a[aria-selected=true]:active .win-commandicon,
+.win-ui-dark button[aria-selected=true]:active .win-commandicon {
   color: #FFF;
 }
 
-.win-ui-dark button[aria-checked=true] .win-commandimage,
-.win-ui-dark button[aria-checked=true]:active .win-commandimage {
+.win-ui-dark button[aria-checked=true] .win-commandicon,
+.win-ui-dark button[aria-checked=true]:active .win-commandicon {
   color: #000;
 }
 
@@ -926,8 +926,8 @@ textarea:-ms-input-placeholder {
   border-color: rgba(255, 255, 255, 0.4);
 }
 
-.win-ui-dark button:disabled .win-commandimage,
-.win-ui-dark button:disabled:active .win-commandimage {
+.win-ui-dark button:disabled .win-commandicon,
+.win-ui-dark button:disabled:active .win-commandicon {
   color: rgba(255, 255, 255, 0.4);
 }
 
@@ -966,8 +966,8 @@ textarea:-ms-input-placeholder {
   border-color: #FFF;
 }
 
-.win-ui-dark a:active .win-commandimage,
-.win-ui-dark button:active .win-commandimage {
+.win-ui-dark a:active .win-commandicon,
+.win-ui-dark button:active .win-commandicon {
   color: #000;
 }
 

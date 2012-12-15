@@ -135,10 +135,9 @@
    
                <h2>Examples and markup</h2>
    
-               <h3>Simple Command</h3>
-               <p>Hover each command</p>
+               <h3>Basic Commands</h3>
+               <p>Hover each command to display an explanatory tooltip.</p>
                <div class="bs-docs-example bs-docs-example-commands">
-   
                   <button class="win-command" rel="tootlip" title="Simple command with only an icon">
                      <span class="win-commandicon icon-settings"></span>
                   </button>
@@ -156,14 +155,8 @@
                      <span class="win-commandicon win-commandring icon-settings"></span>
                      <span class="win-label">With ring &amp; label</span>
                   </button>
-   
-                  <button class="win-command orange" rel="tootlip" title="Command with icon and label with border ring, with a custom color">
-                     <span class="win-commandicon win-commandring icon-settings"></span>
-                     <span class="win-label">Customized</span>
-                  </button>
-   
                </div>
-            <pre class="prettyprint linenums">
+   <pre class="prettyprint linenums">
    &lt;button class="win-command" rel="tootlip" title="Simple command with only an icon"&gt;
       &lt;span class="win-commandicon icon-settings"&gt;&lt;/span&gt;
    &lt;/button&gt;
@@ -181,12 +174,67 @@
       &lt;span class="win-commandicon win-commandring icon-settings"&gt;&lt;/span&gt;
       &lt;span class="win-label"&gt;With ring &amp; label&lt;/span&gt;
    &lt;/button&gt;
+   </pre>
    
+               <h3>Basic Commands with dark theme</h3>
+               <p>Hover each command to display an explanatory tooltip.</p>
+               <div class="bs-docs-example bs-docs-example-commands">
+                  <div class="win-ui-dark">
+                     <button class="win-command" rel="tootlip" title="Simple command with only an icon">
+                        <span class="win-commandicon icon-settings"></span>
+                     </button>
+   
+                     <button class="win-command" rel="tootlip" title="Command with icon and label">
+                        <span class="win-commandicon icon-settings"></span>
+                        <span class="win-label">With label</span>
+                     </button>
+   
+                     <button class="win-command" rel="tootlip" title="Command with icon with border ring">
+                        <span class="win-commandicon win-commandring icon-settings"></span>
+                     </button>
+   
+                     <button class="win-command" rel="tootlip" title="Command with icon and label with border ring">
+                        <span class="win-commandicon win-commandring icon-settings"></span>
+                        <span class="win-label">With ring &amp; label</span>
+                     </button>
+                  </div>
+   
+               </div>
+   
+   
+   
+   
+               <h2>Customization</h2>
+               <div class="bs-docs-example bs-docs-example-commands">
+                  <button class="win-command orange" rel="tootlip" title="Command with icon and label with border ring, with a custom color">
+                     <span class="win-commandicon win-commandring icon-settings"></span>
+                     <span class="win-label">Custom color</span>
+                  </button>
+               </div>
+   <pre class="prettyprint linenums">
    &lt;button class="win-command orange" rel="tootlip" title="Command with icon and label with border ring, with a custom color"&gt;
       &lt;span class="win-commandicon win-commandring icon-settings"&gt;&lt;/span&gt;
       &lt;span class="win-label"&gt;Customized&lt;/span&gt;
    &lt;/button&gt;
+   </pre>
+   
+               <p>This is a sample CSS used to customized the above orange command:</p>
+            <pre class="prettyprint linenums">
+   .win-command.orange,
+   .win-command.orange .win-label {
+      color: #F09609;
+   }
+   .win-command.orange .win-commandring {
+      border-color: #F09609;
+   }
+   .win-command.orange:hover .win-commandring {
+       background-color: rgba(240, 150, 9, 0.4);
+   }
             </pre>
+   
+   
+   
+   win-ui-dark
    
    
             </section>

@@ -637,14 +637,17 @@ h2 + .row {
    vertical-align: top;
 }
 
-.bs-docs-example .win-command.orange,
+/* sample customization of win-command */
+.bs-docs-example .win-command.orange .win-commandicon,
 .bs-docs-example .win-command.orange .win-label {
    color: #F09609;
 }
-.bs-docs-example .win-command.orange .win-commandring{
+.bs-docs-example .win-command.orange .win-commandring {
    border-color: #F09609;
 }
-
+.bs-docs-example .win-command.orange:hover .win-commandring {
+    background-color: rgba(240, 150, 9, 0.4);
+}
 
 
 .bs-navbar-top-example,
