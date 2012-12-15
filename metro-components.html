@@ -130,12 +130,12 @@
             ================================================== -->
             <section id="commands">
                <div class="page-header">
-                  <h1>Command Button <small>Special action buttons</small></h1>
+                  <h1>Command Buttons <small>Special action buttons</small></h1>
                </div>
    
                <h2>Examples and markup</h2>
    
-               <h3>Basic Commands</h3>
+               <h3>Commands with icons</h3>
                <p>Hover each command to display an explanatory tooltip.</p>
                <div class="bs-docs-example bs-docs-example-commands">
                   <button class="win-command" rel="tootlip" title="Simple command with only an icon">
@@ -198,10 +198,37 @@
                         <span class="win-label">With ring &amp; label</span>
                      </button>
                   </div>
-   
                </div>
    
    
+               <h3>Commands with images</h3>
+               <div class="bs-docs-example bs-docs-example-commands">
+                  <button class="win-command" rel="tootlip" title="Simple command with only an icon">
+                     <span class="win-commandimage">
+                        <img src="holder.js/40x40" alt=""/>
+                     </span>
+                  </button>
+   
+                  <button class="win-command" rel="tootlip" title="Command with icon and label">
+                     <span class="win-commandimage">
+                        <img src="holder.js/40x40" alt=""/>
+                     </span>
+                     <span class="win-label">With label</span>
+                  </button>
+   
+                  <button class="win-command" rel="tootlip" title="Command with icon with border ring">
+                     <span class="win-commandimage win-commandring">
+                        <img src="holder.js/40x40" alt=""/>
+                     </span>
+                  </button>
+   
+                  <button class="win-command" rel="tootlip" title="Command with icon and label with border ring">
+                     <span class="win-commandimage win-commandring">
+                        <img src="holder.js/40x40" alt=""/>
+                     </span>
+                     <span class="win-label">With ring &amp; label</span>
+                  </button>
+               </div>
    
    
                <h2>Customization</h2>
@@ -219,8 +246,8 @@
    </pre>
    
                <p>This is a sample CSS used to customized the above orange command:</p>
-            <pre class="prettyprint linenums">
-   .win-command.orange,
+   <pre class="prettyprint linenums">
+   .win-command.orange .win-commandicon,
    .win-command.orange .win-label {
       color: #F09609;
    }
@@ -230,7 +257,7 @@
    .win-command.orange:hover .win-commandring {
        background-color: rgba(240, 150, 9, 0.4);
    }
-            </pre>
+   </pre>
    
    
    

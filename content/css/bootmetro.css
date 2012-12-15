@@ -6687,14 +6687,8 @@ Command button icons.
   display: inline-block;
   width: 40px;
   height: 40px;
-  margin: -2px;
-  font-family: "IcoMoon";
-  font-size: 14pt;
-  line-height: 40px;
   letter-spacing: 0;
   vertical-align: middle;
-  background-position: 0 0;
-  background-size: 160px 80px;
 }
 
 /*
