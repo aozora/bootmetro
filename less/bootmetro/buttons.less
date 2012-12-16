@@ -106,16 +106,15 @@ Command button icons.
 */
 .win-commandicon {
    display: inline-block;
-   margin: 0 28px;
+//   margin: 0 28px;
    min-width: 0;
    min-height: 0;
    padding: 0;
    width: 40px;
    height: 40px;
    box-sizing: border-box;
-   font-size: 30px;
+   font-size: 24px;
    line-height: 40px;
-   cursor: default;
 }
 
 .win-commandimage {
@@ -170,21 +169,44 @@ Command button labels.
 a.win-command .win-label,
 button.win-command .win-label {
    position: relative;
-   line-height: 15px;
-   margin-top: 3px;
    display: block;
-   max-width: 88px; /* 100px button, but allow for 2px margins and 4px padding on each side */
+   margin-top: 3px;
+//   max-width: 88px; /* 100px button, but allow for 2px margins and 4px padding on each side */
+   width: 100%;
+   .box-sizing(border-box);
    padding-left: 4px;  /* 12px between buttons, 6px per side, minus 2px margins */
    padding-right: 4px;
    overflow: hidden;
+   line-height: 15px;
    word-wrap: break-word;
    word-break: keep-all;
-   top: 1px;
+//   top: 1px;
 }
 a.win-command,
 a.win-command:hover {
    text-decoration: none
 }
+
+
+
+//Sizes
+.win-command.win-command-large .win-commandicon {
+   width: 60px;
+   height: 60px;
+   box-sizing: border-box;
+   font-size: 40px;
+   line-height: 60px;
+   text-align: center;
+}
+
+.win-command.win-command-small .win-commandicon {
+   width: 24px;
+   height: 24px;
+   box-sizing: border-box;
+   font-size: 16px;
+   line-height: 24px;
+}
+
 
 /*
 AppBarCommand separator.

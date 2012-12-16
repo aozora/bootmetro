@@ -5653,35 +5653,7 @@ img {
 }
 
 #top-info > a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
   padding: 0;
-  margin-left: 10px;
-  font-family: 'IcoMoon';
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 40px;
-  color: #5A5A5A;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: baseline;
-  vertical-align: 24%;
-  border-style: solid;
-  border-width: 2px;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
-  outline: 0;
-}
-
-#top-info > a b {
-  font-size: 32px;
-  line-height: 40px;
-}
-
-#top-info > a:hover {
-  color: #000;
 }
 
 #header-container {
@@ -6676,10 +6648,8 @@ Command button icons.
   min-width: 0;
   min-height: 0;
   padding: 0;
-  margin: 0 28px;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 40px;
-  cursor: default;
   box-sizing: border-box;
 }
 
@@ -6732,9 +6702,8 @@ Command button labels.
 a.win-command .win-label,
 button.win-command .win-label {
   position: relative;
-  top: 1px;
   display: block;
-  max-width: 88px;
+  width: 100%;
   padding-right: 4px;
   padding-left: 4px;
   margin-top: 3px;
@@ -6742,11 +6711,31 @@ button.win-command .win-label {
   line-height: 15px;
   word-break: keep-all;
   word-wrap: break-word;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a.win-command,
 a.win-command:hover {
   text-decoration: none;
+}
+
+.win-command.win-command-large .win-commandicon {
+  width: 60px;
+  height: 60px;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.win-command.win-command-small .win-commandicon {
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  box-sizing: border-box;
 }
 
 /*
