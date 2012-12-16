@@ -50,6 +50,7 @@
             </div>
 
             <h2>{{_i}}Examples and markup{{/i}}</h2>
+            <p>Command styles can be applied to anything with the <code>.win-command</code> class applied. However, typically you'll want to apply these to only <code><a></code> and <code><button></code> elements for the best rendering.</p>
 
             <h3>{{_i}}Commands with icons{{/i}}</h3>
             <p>{{_i}}Hover each command to display an explanatory tooltip.{{/i}}</p>
@@ -116,36 +117,67 @@
                </div>
             </div>
 
+            <br/>
+
 
             <h3>{{_i}}Commands with images{{/i}}</h3>
+            <p></p>
             <div class="bs-docs-example bs-docs-example-commands">
                <button class="win-command" rel="tootlip" title="Simple command with only an icon">
                   <span class="win-commandimage">
-                     <img src="holder.js/40x40" alt=""/>
+                     <img src="content/img/sample-tiles.png" width="40" height="40" alt=""/>
                   </span>
                </button>
 
                <button class="win-command" rel="tootlip" title="Command with icon and label">
                   <span class="win-commandimage">
-                     <img src="holder.js/40x40" alt=""/>
+                     <img src="content/img/sample-tiles.png" width="40" height="40" alt=""/>
                   </span>
                   <span class="win-label">With label</span>
                </button>
 
                <button class="win-command" rel="tootlip" title="Command with icon with border ring">
                   <span class="win-commandimage win-commandring">
-                     <img src="holder.js/40x40" alt=""/>
+                     <img src="content/img/sample-tiles.png" width="40" height="40" alt=""/>
                   </span>
                </button>
 
                <button class="win-command" rel="tootlip" title="Command with icon and label with border ring">
                   <span class="win-commandimage win-commandring">
-                     <img src="holder.js/40x40" alt=""/>
+                     <img src="content/img/sample-tiles.png" width="40" height="40" alt=""/>
                   </span>
                   <span class="win-label">With ring &amp; label</span>
                </button>
             </div>
+<pre class="prettyprint linenums">
+&lt;button class="win-command" rel="tootlip" title="Simple command with only an icon"&gt;
+   &lt;span class="win-commandimage"&gt;
+      &lt;img src="content/img/sample-tiles.png" width="40" height="40" alt=""/&gt;
+   &lt;/span&gt;
+&lt;/button&gt;
 
+&lt;button class="win-command" rel="tootlip" title="Command with icon and label"&gt;
+   &lt;span class="win-commandimage"&gt;
+      &lt;img src="content/img/sample-tiles.png" width="40" height="40" alt=""/&gt;
+   &lt;/span&gt;
+   &lt;span class="win-label"&gt;With label&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button class="win-command" rel="tootlip" title="Command with icon with border ring"&gt;
+   &lt;span class="win-commandimage win-commandring"&gt;
+      &lt;img src="content/img/sample-tiles.png" width="40" height="40" alt=""/&gt;
+   &lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button class="win-command" rel="tootlip" title="Command with icon and label with border ring"&gt;
+   &lt;span class="win-commandimage win-commandring"&gt;
+      &lt;img src="content/img/sample-tiles.png" width="40" height="40" alt=""/&gt;
+   &lt;/span&gt;
+   &lt;span class="win-label"&gt;With ring &amp; label&lt;/span&gt;
+&lt;/button&gt;
+</pre>
+
+            <hr class="bs-docs-separator"/>
 
             <h2>{{_i}}Customization{{/i}}</h2>
             <div class="bs-docs-example bs-docs-example-commands">
@@ -177,7 +209,6 @@
 
 
 
-win-ui-dark
 
 
          </section>
