@@ -57,18 +57,18 @@
          // init nicescroll plugin
          if (this.options.nicescroll){
 
-//            console.log('nicescroll init');
-//            var nicesx = this.$element.niceScroll(".panorama .panorama-sections",
-//               {
-//                  touchbehavior: true, //Modernizr.touch,
-//                  cursorcolor: "#FF00FF",
-//                  cursoropacitymax: 0.6,
-//                  cursorwidth: 24,
-//                  usetransition: true,
-//                  hwacceleration: true,
-//                  autohidemode: "hidden"
-//               });
-//
+            console.log('nicescroll init');
+            var nicesx = this.$element.niceScroll(".panorama .panorama-sections",
+               {
+                  touchbehavior: true, //Modernizr.touch,
+                  cursorcolor: "#FF00FF",
+                  cursoropacitymax: 0.6,
+                  cursorwidth: 24,
+                  usetransition: true,
+                  hwacceleration: true,
+                  autohidemode: "hidden"
+               });
+
          } else {
 
             if (this.options.showscrollbuttons){

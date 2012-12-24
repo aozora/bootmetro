@@ -6618,7 +6618,6 @@ a.win-command {
   display: inline-block;
   letter-spacing: 0.02em;
   vertical-align: top;
-  vertical-align: middle;
   cursor: pointer;
 }
 
@@ -7514,8 +7513,12 @@ Progress control. */
 
 .panorama {
   position: relative;
+  width: 100%;
   margin: 0 40px;
   overflow: hidden;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .panorama.nohidden {
