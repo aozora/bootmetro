@@ -5,7 +5,8 @@
 /*
 Button control.
 */
-a.win-command, button, input[type=button], input[type=reset], input[type=submit] {
+//a.win-command,
+button, input[type=button], input[type=reset], input[type=submit] {
    min-width: 90px;
    padding: 4px 8px;
    margin-bottom: 0;
@@ -13,9 +14,6 @@ a.win-command, button, input[type=button], input[type=reset], input[type=submit]
    background-clip: padding-box;
    font-weight: 600;
    line-height: 1.3636; /* 20px when font-size is 11pt */
-}
-a.win-command {
-   min-height: 32px; /* content (20px) + padding + border */
 }
 
 
@@ -77,26 +75,22 @@ Back button.
 /*
 Command buttons.
 */
-a.win-command {
+.win-command {
    display: inline-block;
    vertical-align: top;
    cursor: pointer;
-   letter-spacing: 0.02em;
-//   vertical-align: middle;
-}
-a.win-command,
-button.win-command {
    background: none;
    background-clip: border-box;
+//   min-height: 32px; /* content (20px) + padding + border */
    height: auto; /* height is 88px (label) or 68px (no label) */
-   padding: 12px 0; /* bottom dependent on label/img, 2px margin */
    margin: 0 5px;
    border: 0;
-   min-width: 50px;
+//   min-width: 50px;
    text-align: center;
    font-size: 9pt;
    font-weight: normal;
    line-height: 16px;
+   letter-spacing: 0.02em;
 }
 
 
@@ -106,44 +100,38 @@ Command button icons.
 */
 .win-commandicon {
    display: inline-block;
-//   margin: 0 28px;
    min-width: 0;
    min-height: 0;
    padding: 0;
    width: 40px;
    height: 40px;
-   box-sizing: border-box;
+//   .box-sizing(border-box);
    font-size: 24px;
    line-height: 40px;
 }
 
 .win-commandimage {
-//   font-family: "IcoMoon";
    letter-spacing: 0;
    vertical-align: middle;
-//   font-size: 14pt;
-//   margin: -2px;
-//   line-height: 40px; /* line-height must match the content box height */
-//   background-position: 0 0;
    display: inline-block;
    width: 40px;
    height: 40px;
-//   background-size: 160px 80px;
 }
 
 
 /*
 Command button "ring".
 */
-.win-commandring,
-a:hover .win-commandring,
-a:active .win-commandring,
-a.win-command:disabled .win-commandring,
-a.win-command:disabled:active .win-commandring,
-button:hover .win-commandring,
-button:active .win-commandring,
-button.win-command:disabled .win-commandring,
-button.win-command:disabled:active .win-commandring {
+//.win-commandring,
+//a:hover .win-commandring,
+//a:active .win-commandring,
+//a.win-command:disabled .win-commandring,
+//a.win-command:disabled:active .win-commandring,
+//button:hover .win-commandring,
+//button:active .win-commandring,
+//button.win-command:disabled .win-commandring,
+//button.win-command:disabled:active
+.win-commandring {
    border-width: 2px;
    border-style: solid;
    background-clip: border-box;
@@ -180,8 +168,8 @@ button.win-command .win-label {
    line-height: 15px;
    word-wrap: break-word;
    word-break: keep-all;
-//   top: 1px;
 }
+
 a.win-command,
 a.win-command:hover {
    text-decoration: none
@@ -193,7 +181,7 @@ a.win-command:hover {
 .win-command.win-command-large .win-commandicon {
    width: 60px;
    height: 60px;
-   box-sizing: border-box;
+//   box-sizing: border-box;
    font-size: 40px;
    line-height: 60px;
    text-align: center;
@@ -202,7 +190,7 @@ a.win-command:hover {
 .win-command.win-command-small .win-commandicon {
    width: 24px;
    height: 24px;
-   box-sizing: border-box;
+//   box-sizing: border-box;
    font-size: 16px;
    line-height: 24px;
 }
@@ -243,7 +231,16 @@ AppBar control.
    .win-selection {
       float: left;
    }
+
+   // command button inside appbar
+   .win-command {
+      padding: 12px 0;
+   }
 }
+
+
+
+
 
 
 .btn {

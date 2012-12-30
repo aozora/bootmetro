@@ -5688,7 +5688,6 @@ header h1 {
           border-radius: 0;
 }
 
-a.win-command,
 input,
 button,
 select,
@@ -6534,7 +6533,6 @@ option {
 Button control.
 */
 
-a.win-command,
 button,
 input[type=button],
 input[type=reset],
@@ -6546,12 +6544,6 @@ input[type=submit] {
   line-height: 1.3636;
   border: 2px solid;
   background-clip: padding-box;
-}
-
-a.win-command {
-  min-height: 32px;
-  /* content (20px) + padding + border */
-
 }
 
 /*
@@ -6614,23 +6606,17 @@ Back button.
 Command buttons.
 */
 
-a.win-command {
+.win-command {
   display: inline-block;
-  letter-spacing: 0.02em;
-  vertical-align: top;
-  cursor: pointer;
-}
-
-a.win-command,
-button.win-command {
   height: auto;
-  min-width: 50px;
-  padding: 12px 0;
   margin: 0 5px;
   font-size: 9pt;
   font-weight: normal;
   line-height: 16px;
+  letter-spacing: 0.02em;
   text-align: center;
+  vertical-align: top;
+  cursor: pointer;
   background: none;
   border: 0;
   background-clip: border-box;
@@ -6649,7 +6635,6 @@ Command button icons.
   padding: 0;
   font-size: 24px;
   line-height: 40px;
-  box-sizing: border-box;
 }
 
 .win-commandimage {
@@ -6664,15 +6649,7 @@ Command button icons.
 Command button "ring".
 */
 
-.win-commandring,
-a:hover .win-commandring,
-a:active .win-commandring,
-a.win-command:disabled .win-commandring,
-a.win-command:disabled:active .win-commandring,
-button:hover .win-commandring,
-button:active .win-commandring,
-button.win-command:disabled .win-commandring,
-button.win-command:disabled:active .win-commandring {
+.win-commandring {
   border-style: solid;
   border-width: 2px;
   -webkit-border-radius: 50%;
@@ -6726,7 +6703,6 @@ a.win-command:hover {
   font-size: 40px;
   line-height: 60px;
   text-align: center;
-  box-sizing: border-box;
 }
 
 .win-command.win-command-small .win-commandicon {
@@ -6734,7 +6710,6 @@ a.win-command:hover {
   height: 24px;
   font-size: 16px;
   line-height: 24px;
-  box-sizing: border-box;
 }
 
 /*
@@ -6776,6 +6751,10 @@ AppBar control.
 
 .win-commandlayout .win-selection {
   float: left;
+}
+
+.win-commandlayout .win-command {
+  padding: 12px 0;
 }
 
 .btn {
