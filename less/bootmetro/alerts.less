@@ -18,7 +18,8 @@
 .alert {
    text-shadow: none;
    position: relative;
-
+   z-index: @zindexNotification;
+   
    .close:hover {
       background-color: rgba(255, 255, 255, 0.4);
       color: #FFF;
@@ -42,6 +43,7 @@
    background-color: @linkColor;
    .no-border-radius;
    color: @white;
+   z-index: @zindexNotification;
 
    h4 {
       display: block;
