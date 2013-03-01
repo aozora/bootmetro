@@ -66,7 +66,8 @@
                   cursorwidth: 24,
                   usetransition: true,
                   hwacceleration: true,
-                  autohidemode: "hidden"
+                  autohidemode: "hidden",
+                  bouncescroll: true
                });
 
          } else {
