@@ -6999,7 +6999,7 @@ AppBar control.
 .modal .close:after,
 .alert .close:after {
   font-size: 16px;
-  content: "\e131";
+  content: "\e0fd";
 }
 
 .toast .close {
