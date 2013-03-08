@@ -917,9 +917,14 @@ form.bs-docs-example {
    padding: .25em .5em;
    background-color: #fff;
    margin: .5em 1em .5em 0;
-   font-size: 18px;
+   font-size: 16px;
+   text-align: center;
 }
-
+   #icomoon-container .box1 span {
+      display: block;
+      font-size: 32px;
+      margin-bottom: 8px;
+   }
 
 /*
 ListView demo

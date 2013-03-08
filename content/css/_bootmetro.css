@@ -1582,11 +1582,11 @@ Dropdown submenu
 }
 
 a.header-dropdown .caret {
-   font-size: 26px;
+   font-size: 24px;
    font-weight: 200;
    line-height: 30px;
    width: auto;
-   height: 26px;
+   height: 24px;
    vertical-align: middle;
 }
 

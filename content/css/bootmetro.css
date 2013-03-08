@@ -6276,7 +6276,7 @@ Dropdown submenu
 }
 
 .caret:after {
-  content: "\e0f3";
+  content: "\e3e0";
 }
 
 .navbar .nav li.dropdown .dropdown-toggle .caret,
@@ -6334,8 +6334,8 @@ Dropdown submenu
 
 a.header-dropdown .caret {
   width: auto;
-  height: 26px;
-  font-size: 26px;
+  height: 24px;
+  font-size: 24px;
   font-weight: 200;
   line-height: 30px;
   vertical-align: middle;
@@ -6360,7 +6360,7 @@ a.header-dropdown .caret {
   font-family: 'IcoMoon';
   color: #CCC;
   border: 0;
-  content: '\e0f1';
+  content: '\e3e0';
 }
 
 .dropup .caret,
@@ -6584,9 +6584,10 @@ Back button.
 
 .win-backbutton::before {
   font-family: 'IcoMoon';
+  font-size: 24px;
   font-weight: normal;
   vertical-align: 24%;
-  content: "\e05d";
+  content: "\e12e";
 }
 
 .win-backbutton:disabled,
