@@ -12,6 +12,7 @@
 
 body {
    position: relative;
+   background: transparent url(../img/bkg-1.jpg) repeat 0 0;
    /*padding-top: 40px;*/
 }
 
