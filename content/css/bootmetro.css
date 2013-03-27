@@ -6105,7 +6105,7 @@ label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after {
   color: #202020;
   background-color: #FFF;
   border: 2px solid #BABABA;
-  content: "\e20c";
+  content: "\e383";
 }
 
 label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
@@ -6276,7 +6276,7 @@ Dropdown submenu
 }
 
 .caret:after {
-  content: "\e3e0";
+  content: "\e0d6";
 }
 
 .navbar .nav li.dropdown .dropdown-toggle .caret,
@@ -6360,7 +6360,7 @@ a.header-dropdown .caret {
   font-family: 'IcoMoon';
   color: #CCC;
   border: 0;
-  content: '\e3e0';
+  content: '\e0f1';
 }
 
 .dropup .caret,
@@ -6587,7 +6587,7 @@ Back button.
   font-size: 24px;
   font-weight: normal;
   vertical-align: 24%;
-  content: "\e12e";
+  content: "\e43a";
 }
 
 .win-backbutton:disabled,
@@ -6998,8 +6998,8 @@ AppBar control.
 .toast .close:after,
 .modal .close:after,
 .alert .close:after {
-  font-size: 16px;
-  content: "\e0fd";
+  font-size: 14px;
+  content: "\e078";
 }
 
 .toast .close {
