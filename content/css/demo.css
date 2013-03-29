@@ -189,9 +189,10 @@ hr.soften {
 #hero {
    display: block;
    position: relative;
+   margin: 60px 0 0 0;
 }
 #hero-image {
-   margin: 60px 0 0 0;
+   /*margin: 60px 0 0 0;*/
 }
 
 /* Social proof buttons from GitHub & Twitter */
