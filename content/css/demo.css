@@ -22,6 +22,10 @@ body {
 /* Tweak navbar brand link to be super sleek
 -------------------------------------------------- */
 
+#nav-bar {
+   height: auto;
+}
+
 body > .navbar {
    font-size: 13px;
 }
@@ -915,7 +919,7 @@ form.bs-docs-example {
 }
 #icomoon-container .box1 {
    display: inline-block;
-   width: 15em;
+   width: 11em;
    padding: .25em .5em;
    background-color: #fff;
    margin: .5em 1em .5em 0;
