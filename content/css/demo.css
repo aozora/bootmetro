@@ -12,11 +12,15 @@
 
 body {
    position: relative;
-   background: transparent url(../img/bkg-1.jpg) repeat 0 0;
+   /*background: transparent url(../img/bkg-1.jpg) repeat 0 0;*/
+   background-color: #f2f0e4;
    /*padding-top: 40px;*/
+   color: #847d6b;
 }
 
-
+.accent-color, header h1, header h2, table th {
+    color: #847d6b;
+}
 
 
 /* Tweak navbar brand link to be super sleek
