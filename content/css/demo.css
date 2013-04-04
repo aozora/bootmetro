@@ -9,7 +9,7 @@
 
 /* Body and structure
 -------------------------------------------------- */
-
+html,
 body {
    position: relative;
    /*background: transparent url(../img/bkg-1.jpg) repeat 0 0;*/
@@ -33,6 +33,54 @@ body {
 body > .navbar {
    font-size: 13px;
 }
+
+#header-nav {
+   position: relative;
+}
+#header-nav .nav.nav-links {
+   *zoom: 1;
+}
+   #header-nav .nav.nav-links:before,
+   #header-nav .nav.nav-links:after {
+      display: table;
+      content: "";
+      line-height: 0;
+   }
+   #header-nav .nav.nav-links:after {
+      clear: both;
+   }
+
+   #header-nav .nav.nav-links {
+      margin-bottom: 10px;
+   }
+      #header-nav .nav.nav-links > li {
+         float: left;
+      }
+         #header-nav .nav.nav-links a {
+            margin: 0 10px 0 0;
+            font-weight: 300;
+            text-transform: lowercase;
+            text-decoration: none;
+            font-size: 26px;
+            font-weight: 300;
+            line-height: 34px;
+            color: #847d6b;
+         }
+            #header-nav .nav.nav-links a:hover {
+               /*color: @pivotHeadersHoverColor;*/
+               font-weight: 400;
+               background-color: transparent;
+            }
+            #header-nav .nav.nav-links li.active a {
+               /*color: @pivotHeadersActiveColor;*/
+               font-weight: 400;
+               background-color: transparent;
+            }
+
+
+
+
+
 
 
 
