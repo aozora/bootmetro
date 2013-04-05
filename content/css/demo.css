@@ -22,6 +22,13 @@ body {
     color: #847d6b;
 }
 
+header h1 {
+   font-size: 50px;
+   font-weight: 300;
+   line-height: 54px;
+}
+   header h1 small {font-weight: 300;}
+
 
 /* Tweak navbar brand link to be super sleek
 -------------------------------------------------- */
@@ -67,13 +74,11 @@ body > .navbar {
             color: #847d6b;
          }
             #header-nav .nav.nav-links a:hover {
-               /*color: @pivotHeadersHoverColor;*/
-               font-weight: 400;
+               color: #595753;
                background-color: transparent;
             }
             #header-nav .nav.nav-links li.active a {
-               /*color: @pivotHeadersActiveColor;*/
-               font-weight: 400;
+               color: #595753;
                background-color: transparent;
             }
 
