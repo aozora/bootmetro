@@ -26,6 +26,7 @@ header h1 {
    font-size: 50px;
    font-weight: 300;
    line-height: 54px;
+   color: #444;
 }
    header h1 small {font-weight: 300;}
 
@@ -273,7 +274,7 @@ hr.soften {
       -moz-box-sizing: border-box;
            box-sizing: border-box;
    border-left: 3px solid transparent;
-   color: #333333;
+   color: #FFF;
    display: inline-block;
    min-height: 62px;
    margin-bottom: 10px;
@@ -283,11 +284,11 @@ hr.soften {
 }
 
    .list-tile.blue {
-      background-color: #C9E2F3;
+      background-color: #2E8BCC;
       border-color: #2E8BCC;
    }
    .list-tile.green {
-      background-color: #ABE3AB;
+      background-color: #339933;
       border-color: #339933;
    }
 
@@ -319,12 +320,12 @@ hr.soften {
       top: 0;
       width: 80px;
    }
-      .list-tile.blue  .list-tile-icon {
-         background-color: #2E8BCC;
-      }
-      .list-tile.green .list-tile-icon {
-         background-color: #339933;
-      }
+      /*.list-tile.blue  .list-tile-icon {*/
+         /*background-color: #2E8BCC;*/
+      /*}*/
+      /*.list-tile.green .list-tile-icon {*/
+         /*background-color: #339933;*/
+      /*}*/
 
 .list-tile .donate-form {
    margin: 10px auto;
@@ -332,11 +333,19 @@ hr.soften {
 }
 
 /* hover */
-.list-tile:hover {
+.list-tile.blue:hover {
    text-decoration: none;
-   background-color: #FFF;
+   background-color: #C9E2F3;
    color: #2E8BCC;
 }
+   .list-tile.blue:hover .list-tile-icon { color: #2E8BCC; }
+
+.list-tile.green:hover {
+   text-decoration: none;
+   background-color: #ABE3AB;
+   color: #339933;
+}
+   .list-tile.green:hover .list-tile-icon { color: #339933; }
 
 
 
