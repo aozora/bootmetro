@@ -16,7 +16,8 @@ var templates = [__dirname + '/../templates/demo',
                  __dirname + '/../templates/pages']
 
 
-var layout, pages, sidebar, sitemenu, partial_loggeduser, partial_charms, partial_headermenu
+var layout, pages, sidebar, partial_docssidebar, partial_loggeduser, partial_charms, partial_headermenu
+
 
 // retrieve partials
 partial_loggeduser = fs.readFileSync(__dirname + '/../templates/partials/logged-user.mustache', 'utf-8')
@@ -31,6 +32,11 @@ partial_charms = hogan.compile(partial_charms, { sectionTags:[
 
 partial_headermenu = fs.readFileSync(__dirname + '/../templates/partials/header-menu.mustache', 'utf-8')
 partial_headermenu = hogan.compile(partial_headermenu, { sectionTags:[
+   {o:'_i', c:'i'}
+] })
+
+partial_docssidebar = fs.readFileSync(__dirname + '/../templates/partials/docs-sidebar.mustache', 'utf-8')
+partial_docssidebar = hogan.compile(partial_docssidebar, { sectionTags:[
    {o:'_i', c:'i'}
 ] })
 
@@ -81,7 +87,8 @@ templates.forEach(function(templatedir){
          body: page,
          charms: partial_charms,
          loggeduser: partial_loggeduser,
-         headermenu: partial_headermenu
+         headermenu: partial_headermenu,
+         docssidebar: partial_docssidebar
       })
 
 

@@ -54,14 +54,36 @@
    </script>
 </head>
 
-<body>
+<body class="bs-docs-docs">
 
    <!--[if lt IE 7]>
    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
    <![endif]-->
 
+   {{>docssidebar}}
+
+   <div class="bs-docs-container">
    {{>body}}
-   {{>charms}}
+   </div>
+
+   <a class="bs-docs-top affix" href="#welcome">Back to top</a>
+
+   <footer class="bs-docs-footer">
+     <div class="container">
+
+       <p>Designed and built with all the love in the world by <a target="_blank" href="http://twitter.com/mdo">@mdo</a> and <a target="_blank" href="http://twitter.com/fat">@fat</a>.</p>
+       <p>Code licensed under <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+       <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+       <ul class="footer-links">
+         <li><a href="http://blog.getbootstrap.com">Blog</a></li>
+         <li class="muted">·</li>
+         <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Issues</a></li>
+         <li class="muted">·</li>
+         <li><a href="https://github.com/twitter/bootstrap/blob/master/CHANGELOG.md">Changelog</a></li>
+       </ul>
+     </div>
+   </footer>
+
 
    <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
