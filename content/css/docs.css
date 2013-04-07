@@ -40,7 +40,6 @@ body {
   font-weight: 500;
   color: #999;
   background-color: #eee;
-  border-radius: 4px;
 }
 .bs-docs-top:hover {
   color: #fff;
@@ -281,7 +280,7 @@ hr.soften {
 .bs-docs-example-type .table td {
   color: #999;
   vertical-align: middle;
-  border-color: ;
+  /*border-color: ;*/
 }
 .bs-docs-example-type .table td,
 .bs-docs-example-type .table th {
