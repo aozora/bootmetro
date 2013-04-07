@@ -75,9 +75,7 @@ templates.forEach(function(templatedir){
                               return $1.toUpperCase()
                            })
 
-      page = hogan.compile(page, { sectionTags:[
-         {o:'_i', c:'i'}
-      ] })
+      page = hogan.compile(page, { sectionTags:[ {o:'_i', c:'i'} ] })
 
       page = layout.render(context, {
          body: page,
@@ -97,9 +95,10 @@ templates.forEach(function(templatedir){
          destinationPath = __dirname + '/../demo/'
       }
 
-      console.log(destinationPath)
+      var fullDestinationPath = destinationPath + name.replace(/mustache$/, 'html');
+      console.log('building ' + fullDestinationPath)
 
-      //fs.writeFileSync(destinationPath + name.replace(/mustache$/, 'html'), page, 'utf-8')
+      fs.writeFileSync(fullDestinationPath, page, 'utf-8')
    })
 
 })

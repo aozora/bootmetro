@@ -10,9 +10,9 @@
    <!-- Mobile viewport optimized: h5bp.com/viewport -->
    <meta name="viewport" content="width=device-width">
 
-   <title>About</title>
+   <title>Metro</title>
 
-   <meta name="robots" content="index, nofollow">
+   <meta name="robots" content="noindex, nofollow">
    <meta name="description" content="BootMetro : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
    <meta name="keywords" content="bootmetro, modern ui, modern-ui, metro, metroui, metro-ui, metro ui, windows 8, metro style, bootstrap, framework, web framework, css, html" />
    <meta name="author" content="AozoraLabs by Marcello Palmitessa"/>
@@ -27,7 +27,7 @@
    <link rel="stylesheet" type="text/css" href="content/css/datepicker.css">
 
    <!--  these two css are to use only for documentation -->
-   <link rel="stylesheet" type="text/css" href="content/css/site.css">
+   <link rel="stylesheet" type="text/css" href="content/css/demo.css">
 
    <!-- Le fav and touch icons -->
    <link rel="shortcut icon" href="content/ico/favicon.ico">
@@ -40,17 +40,6 @@
       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
    <script src="scripts/modernizr-2.6.2.min.js"></script>
-
-   <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-3182578-6']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-   </script>
 </head>
 
 <body>
@@ -68,7 +57,7 @@
                <h5>BootMetro</h5>
                <div class="dropdown">
                   <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
-                     About &amp; Credits
+                     Metro Layouts
                      <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu">
@@ -93,40 +82,53 @@
                </ul>
             </div>
             </div>
+            <div id="top-info" class="pull-right">
+            <a id="settings" href="#" class="win-command pull-right">
+               <span class="win-commandicon win-commandring icon-cog-3"></span>
+            </a>
+            <a id="logged-user" href="#" class="win-command pull-right">
+               <span class="win-commandicon win-commandring icon-user"></span>
+            </a>
+            <div class="pull-left">
+               <h3>FirstName</h3>
+               <h4>LastName</h4>
+            </div>
          </div>
+      </div>
       </div>
    </header>
    
    <div class="container">
       <div class="row">
-         <div class="span12">
+         <div class="metro span12">
+            <div class="metro-sections">
    
-            <h1>About <small></small></h1>
-            <p>
-               Early in 2012, when Microsoft released the first beta of Windows 8 I finally had the opportunity to try the "Metro UI" (now renamed to... Windows 8 App Store style).
-               At that time the UI guidelines was almost done, and also the "direction" set by microsoft was clear. I looked for other references of Metro style around the web, and there was nothing or little info apart the official one.
-               <br/>
-               So I had the idea "why not recreate in pure HTML5/CSS3 the win 8 style ?". I was already working with the beautiful Twitter Bootstrap framework and I thought that it was relatively simple to customize it to recreate a metro style.
-               So... I started it.
-               <br/>
-               At the same time I found the project MetroUI-CSS, by Sergey Pimenov, that evidently have had the same idea, but with some missing things from the original Metro guidelines, but his development was already ahead of mine.
-               So, that's the story that started all about BootMetro!
-            </p>
+               <div class="metro-section" id="section1">
    
-            <h2>Author</h2>
-            <p>
-               I'm <a href="http://www.marcellop.com/">Marcello Palmitessa</a>, an italian developer, curious designer, and tech geek.
-            </p>
+                  <a class="tile wide imagetext bg-color-orange" href="./list-detail.html">
+                     <div class="image-wrapper">
+                        <img src="content/img/metro-tiles.jpg" />
+                     </div>
+                     <div class="column-text">
+                        <div class="text-header3">Listview with Details</div>
+                     </div>
+                  </a>
    
-            <h2>Contributors <small></small></h2>
-            <p>
-               I wish to thank Alexander Finger &amp; David Smith for their support and all the githubbers who keep me on the road to improve the project.
-            </p>
+                  <a class="tile wide imagetext tile-double bg-color-green" href="#">
+                     <div class="image-wrapper">
+                        <img src="content/img/metro-tiles-wide.jpg" />
+                     </div>
+                     <div class="column-text">
+                        <div class="text-header3">...more to come...</div>
+                     </div>
+                  </a>
    
+               </div>
+   
+            </div>
          </div>
       </div>
-   </div>
-   <div id="charms" class="win-ui-dark slide">
+   </div>   <div id="charms" class="win-ui-dark slide">
    
       <div id="theme-charms-section" class="charms-section">
          <div class="charms-header">
@@ -159,12 +161,13 @@
    <script type="text/javascript" src="scripts/bootmetro-icons-ie7.js">
    <![endif]-->
 
-   <script type="text/javascript" src="scripts/google-code-prettify/prettify.js"></script>
    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
    <script type="text/javascript" src="scripts/bootmetro-panorama.js"></script>
    <script type="text/javascript" src="scripts/bootmetro-pivot.js"></script>
    <script type="text/javascript" src="scripts/bootmetro-charms.js"></script>
    <script type="text/javascript" src="scripts/bootstrap-datepicker.js"></script>
+   <!--<script type="text/javascript" src="scripts/jquery.nicescroll.js"></script>-->
+   <!--<script type="text/javascript" src="scripts/jquery.touchSwipe.js"></script>-->
    <script type="text/javascript" src="scripts/demo.js"></script>
    <script type="text/javascript" src="scripts/holder.js"></script>
    <script type="text/javascript">

@@ -10,7 +10,7 @@
    <!-- Mobile viewport optimized: h5bp.com/viewport -->
    <meta name="viewport" content="width=device-width">
 
-   <title>About</title>
+   <title>Appbar</title>
 
    <meta name="robots" content="index, nofollow">
    <meta name="description" content="BootMetro : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
@@ -27,7 +27,8 @@
    <link rel="stylesheet" type="text/css" href="content/css/datepicker.css">
 
    <!--  these two css are to use only for documentation -->
-   <link rel="stylesheet" type="text/css" href="content/css/site.css">
+   <link rel="stylesheet" type="text/css" href="content/css/docs.css">
+   <link rel="stylesheet" type="text/css" href="scripts/google-code-prettify/prettify.css" >
 
    <!-- Le fav and touch icons -->
    <link rel="shortcut icon" href="content/ico/favicon.ico">
@@ -54,6 +55,7 @@
 </head>
 
 <body>
+
    <!--[if lt IE 7]>
    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
    <![endif]-->
@@ -68,7 +70,7 @@
                <h5>BootMetro</h5>
                <div class="dropdown">
                   <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
-                     About &amp; Credits
+                     ApplicationBar Demo
                      <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu">
@@ -93,39 +95,136 @@
                </ul>
             </div>
             </div>
+            <div id="top-info" class="pull-right">
+            <a id="settings" href="#" class="win-command pull-right">
+               <span class="win-commandicon win-commandring icon-cog-3"></span>
+            </a>
+            <a id="logged-user" href="#" class="win-command pull-right">
+               <span class="win-commandicon win-commandring icon-user"></span>
+            </a>
+            <div class="pull-left">
+               <h3>FirstName</h3>
+               <h4>LastName</h4>
+            </div>
          </div>
       </div>
+      </div>
    </header>
+   
    
    <div class="container">
       <div class="row">
          <div class="span12">
+            <p>This page show a full Application Bar stacked on the bottom of the page with plenty of command buttons.</p>
+            <br />
    
-            <h1>About <small></small></h1>
-            <p>
-               Early in 2012, when Microsoft released the first beta of Windows 8 I finally had the opportunity to try the "Metro UI" (now renamed to... Windows 8 App Store style).
-               At that time the UI guidelines was almost done, and also the "direction" set by microsoft was clear. I looked for other references of Metro style around the web, and there was nothing or little info apart the official one.
-               <br/>
-               So I had the idea "why not recreate in pure HTML5/CSS3 the win 8 style ?". I was already working with the beautiful Twitter Bootstrap framework and I thought that it was relatively simple to customize it to recreate a metro style.
-               So... I started it.
-               <br/>
-               At the same time I found the project MetroUI-CSS, by Sergey Pimenov, that evidently have had the same idea, but with some missing things from the original Metro guidelines, but his development was already ahead of mine.
-               So, that's the story that started all about BootMetro!
-            </p>
+            <form class="">
+               <label for="appbar-theme-select">Change ApplicationBar theme:</label>
+               <select id="appbar-theme-select" class="">
+                  <option value="win-ui-dark">Dark</option>
+                  <option value="win-ui-light">Light</option>
+               </select>
+            </form>
    
-            <h2>Author</h2>
-            <p>
-               I'm <a href="http://www.marcellop.com/">Marcello Palmitessa</a>, an italian developer, curious designer, and tech geek.
-            </p>
+            <div class="">
+               <h3>Commands Icons</h3>
+               <p>Commands markup can be made with <code>&lt;a&gt;</code> element or a <code>&lt;button&gt;</code>.</p>
+               <p>To show an icon you should use the glyph code that you find in the <a href="./icons.html">Icons</a> page.</p>
+            </div>
+   <pre class="prettyprint linenums">
+   &lt;button class="win-command"&gt;
+      &lt;span class="win-commandimage win-commandring"&gt;&#x0021;&lt;/span&gt;
+      &lt;span class="win-label"&gt;Home&lt;/span&gt;
+   &lt;/button&gt;
+   </pre>
    
-            <h2>Contributors <small></small></h2>
-            <p>
-               I wish to thank Alexander Finger &amp; David Smith for their support and all the githubbers who keep me on the road to improve the project.
-            </p>
    
-         </div>
+   
+            </div>
       </div>
    </div>
+   
+   
+   <footer class="win-commandlayout navbar-fixed-bottom win-ui-dark">
+      <div class="container">
+         <div class="row">
+            <div class="span6 align-left">
+   
+               <a class="win-command" href="#">
+                  <span class="win-commandicon win-commandring icon-home"></span>
+                  <span class="win-label">Home</span>
+               </a>
+   
+               <hr class="win-command" />
+   
+               <a class="win-command" href="#">
+                  <span class="win-commandicon win-commandring icon-plus-2"></span>
+                  <span class="win-label">Add</span>
+               </a>
+   
+               <a class="win-command" href="#">
+                  <span class="win-commandicon win-commandring icon-out"></span>
+                  <span class="win-label">Save</span>
+               </a>
+   
+               <button class="win-command">
+                  <span class="win-commandicon win-commandring icon-reload"></span>
+                  <span class="win-label">Reload</span>
+               </button>
+   
+               <button class="win-command">
+                  <span class="win-commandicon win-commandring icon-arrow-left-4"></span>
+                  <span class="win-label">Previous</span>
+               </button>
+   
+               <button class="win-command">
+                  <span class="win-commandicon win-commandring icon-arrow-right-4"></span>
+                  <span class="win-label">Next</span>
+               </button>
+   
+            </div>
+   
+            <div class="span6 align-right">
+   
+               <button class="win-command">
+                  <span class="win-commandicon win-commandring icon-cog-2"></span>
+                  <span class="win-label">Settings</span>
+               </button>
+   
+               <button class="win-command">
+                  <span class="win-commandicon win-commandring icon-download"></span>
+                  <span class="win-label">Download</span>
+               </button>
+   
+               <button class="win-command">
+                  <span class="win-commandicon win-commandring icon-upload-2"></span>
+                  <span class="win-label">Upload</span>
+               </button>
+   
+               <button class="win-command">
+                  <span class="win-commandicon win-commandring icon-email"></span>
+                  <span class="win-label">Send Email</span>
+               </button>
+   
+               <button class="win-command">
+                  <span class="win-commandicon win-commandring icon-search-2"></span>
+                  <span class="win-label">Search</span>
+               </button>
+   
+               <button class="win-command">
+                  <span class="win-commandicon win-commandring icon-remove"></span>
+                  <span class="win-label">Delete</span>
+               </button>
+   
+               <button class="win-command">
+                  <span class="win-commandicon win-commandring icon-user-4"></span>
+                  <span class="win-label">User</span>
+               </button>
+   
+            </div>
+         </div>
+      </div>
+   </footer>
    <div id="charms" class="win-ui-dark slide">
    
       <div id="theme-charms-section" class="charms-section">
@@ -165,16 +264,6 @@
    <script type="text/javascript" src="scripts/bootmetro-pivot.js"></script>
    <script type="text/javascript" src="scripts/bootmetro-charms.js"></script>
    <script type="text/javascript" src="scripts/bootstrap-datepicker.js"></script>
-   <script type="text/javascript" src="scripts/demo.js"></script>
    <script type="text/javascript" src="scripts/holder.js"></script>
-   <script type="text/javascript">
-      $('.panorama').panorama({
-         nicescroll: true,
-         showscrollbuttons: true,
-         keyboard: true
-      });
-
-      $('#pivot').pivot();
-   </script>
 </body>
 </html>

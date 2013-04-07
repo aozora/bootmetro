@@ -10,7 +10,7 @@
    <!-- Mobile viewport optimized: h5bp.com/viewport -->
    <meta name="viewport" content="width=device-width">
 
-   <title>About</title>
+   <title>Toast</title>
 
    <meta name="robots" content="index, nofollow">
    <meta name="description" content="BootMetro : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
@@ -27,7 +27,8 @@
    <link rel="stylesheet" type="text/css" href="content/css/datepicker.css">
 
    <!--  these two css are to use only for documentation -->
-   <link rel="stylesheet" type="text/css" href="content/css/site.css">
+   <link rel="stylesheet" type="text/css" href="content/css/docs.css">
+   <link rel="stylesheet" type="text/css" href="scripts/google-code-prettify/prettify.css" >
 
    <!-- Le fav and touch icons -->
    <link rel="shortcut icon" href="content/ico/favicon.ico">
@@ -54,11 +55,12 @@
 </head>
 
 <body>
+
    <!--[if lt IE 7]>
    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
    <![endif]-->
 
-   <!-- Header
+   <!-- Subhead
    ================================================== -->
    <header id="nav-bar" class="container">
       <div class="row">
@@ -68,7 +70,7 @@
                <h5>BootMetro</h5>
                <div class="dropdown">
                   <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
-                     About &amp; Credits
+                     Toast Notifications
                      <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu">
@@ -93,40 +95,124 @@
                </ul>
             </div>
             </div>
+            <div id="top-info" class="pull-right">
+               <a id="settings" href="#" class="win-command pull-right">
+                  <span class="win-commandicon win-commandring icon-settings"></span>
+               </a>
+            </div>
          </div>
       </div>
    </header>
+   <div class="container">
+      <blockquote>
+         A toast notification is a transient message to the user that contains relevant, time-sensitive information and provides quick access to related content in an app.
+         <small>Toast notification overview (Windows Store apps)</small>
+      </blockquote>
+      <p>Following there are all the possible templates and styles for different kind of toast notifications.</p>
+   </div>
    
    <div class="container">
+   
+      <!-- Docs nav
+      ================================================== -->
       <div class="row">
-         <div class="span12">
+         <div class="span3 bs-docs-sidebar">
+            <ul class="nav nav-list bs-docs-sidenav">
+               <li><a href="#textonly"><i class="icon-chevron-right"></i> Text Only Templates</a></li>
+               <li><a href="#imagetext"><i class="icon-chevron-right"></i> Image &amp; Text Templates</a></li>
+            </ul>
+         </div>
+         <div class="span9">
    
-            <h1>About <small></small></h1>
-            <p>
-               Early in 2012, when Microsoft released the first beta of Windows 8 I finally had the opportunity to try the "Metro UI" (now renamed to... Windows 8 App Store style).
-               At that time the UI guidelines was almost done, and also the "direction" set by microsoft was clear. I looked for other references of Metro style around the web, and there was nothing or little info apart the official one.
-               <br/>
-               So I had the idea "why not recreate in pure HTML5/CSS3 the win 8 style ?". I was already working with the beautiful Twitter Bootstrap framework and I thought that it was relatively simple to customize it to recreate a metro style.
-               So... I started it.
-               <br/>
-               At the same time I found the project MetroUI-CSS, by Sergey Pimenov, that evidently have had the same idea, but with some missing things from the original Metro guidelines, but his development was already ahead of mine.
-               So, that's the story that started all about BootMetro!
-            </p>
    
-            <h2>Author</h2>
-            <p>
-               I'm <a href="http://www.marcellop.com/">Marcello Palmitessa</a>, an italian developer, curious designer, and tech geek.
-            </p>
+            <!-- Text Only Templates
+            ================================================== -->
+            <section id="textonly">
+               <div class="page-header">
+                  <h1>Text Only Templates <small></small></h1>
+               </div>
    
-            <h2>Contributors <small></small></h2>
-            <p>
-               I wish to thank Alexander Finger &amp; David Smith for their support and all the githubbers who keep me on the road to improve the project.
-            </p>
+               <div class="bs-docs-example">
+   
+                  <div class="toast toasttext01">
+                     <button type="button" class="close" data-dismiss="alert"></button>
+                     <p>Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p>
+                  </div>
+   
+                  <div class="toast toasttext02">
+                     <button type="button" class="close" data-dismiss="alert"></button>
+                     <h4>Heading text</h4>
+                     <p>Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+                  </div>
+   
+                  <div class="toast toasttext03">
+                     <button type="button" class="close" data-dismiss="alert"></button>
+                     <h4>Heading text that wraps over two lines. Vivamus elementum semper nisi.</h4>
+                     <p>Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+                  </div>
+   
+                  <div class="toast toasttext04">
+                     <button type="button" class="close" data-dismiss="alert"></button>
+                     <h4>Heading text</h4>
+                     <p>Body text that wraps over two lines.</p>
+                     <p>Body text that wraps over two lines.</p>
+                  </div>
+   
+               </div>
+   
+   <pre class="prettyprint linenums">
+   &lt;div class="toast toasttext01"&gt;
+      &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+      &lt;p&gt;Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula&lt;/p&gt;
+   &lt;/div&gt;
+   
+   &lt;div class="toast toasttext02"&gt;
+      &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+      &lt;h4&gt;Heading text&lt;/h4&gt;
+      &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+   &lt;/div&gt;
+   
+   &lt;div class="toast toasttext03"&gt;
+      &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+      &lt;h4&gt;Heading text that wraps over two lines. Vivamus elementum semper nisi.&lt;/h4&gt;
+      &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+   &lt;/div&gt;
+   
+   &lt;div class="toast toasttext04"&gt;
+      &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+      &lt;h4&gt;Heading text&lt;/h4&gt;
+      &lt;p&gt;Body text that wraps over two lines.&lt;/p&gt;
+      &lt;p&gt;Body text that wraps over two lines.&lt;/p&gt;
+   &lt;/div&gt;
+   </pre>
+            </section>
+   
+   
+            <section id="imagetext">
+               <div class="page-header">
+                  <h1>Image & Text Templates <small></small></h1>
+               </div>
+   
+               <div class="bs-docs-example">
+   
+                  <div class="toast toastimageandtext01">
+                     <button type="button" class="close" data-dismiss="alert"></button>
+                     <img src="content/img/avatar-movie-puzzles-2.jpg" alt="" />
+                     <p>Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p>
+                  </div>
+   
+   
+               </div>
+   
+   <pre class="prettyprint linenums">
+   
+   </pre>
+   
+            </section>
    
          </div>
       </div>
-   </div>
-   <div id="charms" class="win-ui-dark slide">
+   </div>   <div id="charms" class="win-ui-dark slide">
    
       <div id="theme-charms-section" class="charms-section">
          <div class="charms-header">
@@ -165,16 +251,6 @@
    <script type="text/javascript" src="scripts/bootmetro-pivot.js"></script>
    <script type="text/javascript" src="scripts/bootmetro-charms.js"></script>
    <script type="text/javascript" src="scripts/bootstrap-datepicker.js"></script>
-   <script type="text/javascript" src="scripts/demo.js"></script>
    <script type="text/javascript" src="scripts/holder.js"></script>
-   <script type="text/javascript">
-      $('.panorama').panorama({
-         nicescroll: true,
-         showscrollbuttons: true,
-         keyboard: true
-      });
-
-      $('#pivot').pivot();
-   </script>
 </body>
 </html>
