@@ -11,6 +11,28 @@ var  hogan = require('hogan.js')
    , robots_index = '<meta name="robots" content="index, nofollow">'
 
 
+var demopages = [ 'application-bar',
+                  'hub',
+                  'list-detail',
+                  'listview',
+                  'metro-layouts',
+                  'table',
+                  'tiles-templates',
+                  'square-tiles-templates',
+                  'wide-tiles-templates',
+                  'widepeek-tiles-templates'
+                ];
+var docpages = [ 'index-doc',
+             'scaffolding',
+             'base-css',
+             'components',
+             'javascript',
+             'metro-components',
+             'pivot',
+             'toast'
+           ];
+
+
 var layout, pages, sidebar, sitemenu, partial_loggeduser, partial_charms, partial_headermenu
 
 // compile layout template
@@ -43,9 +65,13 @@ pages = fs.readdirSync(__dirname + '/../templates/pages')
 // iterate over pages
 pages.forEach(function (name) {
 
-   if (!name.match(/\.mustache$/)) return
+   // exclude non mustache files
+   if (!name.match(/\.mustache$/))
+      return
 
-   if (name.substring(0, 1) == '_') return
+   // exclude files that start with "_"
+   if (name.substring(0, 1) == '_')
+      return
 
    var page = fs.readFileSync(__dirname + '/../templates/pages/' + name, 'utf-8')
       , context = {}
@@ -79,11 +105,14 @@ pages.forEach(function (name) {
       headermenu:partial_headermenu
    })
 
-   fs.writeFileSync(__dirname + '/../' + name.replace(/mustache$/, 'html'), page, 'utf-8')
+
+   var destinationPath = __dirname + '/../';
+   fs.writeFileSync(destinationPath + name.replace(/mustache$/, 'html'), page, 'utf-8')
 })
 
 
 // compile LESS styles
+// =============================================================
 var lessdir = __dirname  + '/../less'
    ,lesspath = path.join(lessdir, '/bootmetro/bootmetro.less')
    ,cssdir = __dirname  + '/../content/css'
@@ -149,19 +178,4 @@ recess([path.join(lessdir, '/bootmetro/bootmetro-ui-light.less')], {
    console.log('compiled bootmetro-ui-light.less')
 });
 
-//
-//// Compile bootmetro-icons-ie7.css
-//recess([path.join(lessdir, '/bootmetro/bootmetro-icons-ie7.less')], {
-//   compile: true,
-//   compress: false
-//}, function (err, obj) {
-//
-//   console.dir( obj.errors );
-//   if (err)
-//      throw err;
-//
-//   css = obj.output;
-//   fs.writeFileSync( path.join(cssdir, '/bootmetro-icons-ie7.css') , css, 'utf-8');
-//   console.log('compiled bootmetro-icons-ie7.less')
-//});
 
