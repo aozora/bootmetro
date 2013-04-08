@@ -148,7 +148,14 @@ docs.forEach(function (name) {
    console.log('compiled doc page ' + name)
 })
 
-console.dir(doc_context)
+
+// SEE https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty
+
+
+
+
+//var jsonString = JSON.stringify(doc_context);
+//console.dir(jsonString)
 // var keys = Object.keys(sub_pages);
 // keys.forEach(function(key) {
 //   var doc = Object.keys(sub_pages[key]);
@@ -167,15 +174,21 @@ doc_context.appname = appname
 var doc_index = fs.readFileSync(docTemplateDir + '/index.mustache', 'utf-8')
 doc_index = hogan.compile(doc_index, { sectionTags:[ {o:'_i', c:'i'} ] })
 
+
+var partials = {
+   body: doc_index,
+   docssidebar: partial_docssidebar
+}
+
+
+
+
 doc_index = doc_layout.render(doc_context, {
    body: doc_index,
    docssidebar: partial_docssidebar
 })
 
 fs.writeFileSync(__dirname + '/../docs/index.html', doc_index, 'utf-8')
-
-
-
 
 
 
