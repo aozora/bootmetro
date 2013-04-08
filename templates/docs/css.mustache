@@ -1,0 +1,49 @@
+<div id="css" class="bs-docs-section-header">
+   <h1>CSS</h1>
+   <p class="lead">Fundamental HTML elements styled and enhanced with extensible classes.</p>
+</div>
+
+<div id="css-overview" class="bs-docs-section">
+   <div class="page-header">
+      <h1>Overview</h1>
+   </div>
+   <p class="lead">Get the lowdown on the key pieces of BootMetro's infrastructure, including our approach to better, faster, stronger web development.</p>
+
+   <h3>HTML5 doctype required</h3>
+   <p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+   <div class="highlight">
+      <pre>
+         <code class="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+            <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+            ...
+            <span class="nt">&lt;/html&gt;</span>
+         </code>
+      </pre>
+   </div>
+
+   <h3>Mobile first</h3>
+   <p>With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, <strong>Bootstrap is mobile first</strong>. Mobile first styles can be found throughout the entire library instead of in separate files.</p>
+   <p>To ensure proper rendering and touch zooming, <strong>add the viewport meta tag</strong> to your <code>&lt;head&gt;</code>.</p>
+   <div class="highlight">
+      <pre>
+         <code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+         </code>
+      </pre>
+   </div>
+
+   <h3>Responsive images</h3>
+   <p>We automatically attempt to scale images to appropriate sizes with a global <code>max-width: 100%;</code> on all <code>&lt;img&gt;</code> elements. If you run into problems (e.g., with Google Maps), be sure to disable this property on a per-case basis.</p>
+
+   <h3>Typography and links</h3>
+   <p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
+   <ul>
+      <li>Remove <code>margin</code> on the body</li>
+      <li>Set <code>background-color: white;</code> on the <code>body</code></li>
+      <li>Use the <code>@font-family-base</code>, <code>@font-size-base</code>, and <code>@line-height-base</code> attributes as our typographic base</li>
+      <li>Set the global link color via <code>@link-color</code> and apply link underlines only on <code>:hover</code></li>
+   </ul>
+   <p>These styles can be found within <strong>scaffolding.less</strong>.</p>
+
+   <h3>Normalize reset</h3>
+   <p>For improved cross-browser rendering, we use <a target="_blank" href="http://necolas.github.com/normalize.css/">Normalize</a>, a project by <a target="_blank" href="http://twitter.com/necolas">Nicolas Gallagher</a> and <a target="_blank" href="http://twitter.com/jon_neal">Jonathan Neal</a>.</p>
+</div>

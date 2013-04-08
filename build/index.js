@@ -111,7 +111,6 @@ templates.forEach(function(templatedir){
 
 
 
-
 // Build DOCS
 // =============================================================
 console.log('\n\nCompiling Docs')
@@ -124,8 +123,6 @@ docs = fs.readdirSync(docTemplateDir)
 // compile layout template
 var doc_layout = fs.readFileSync(docTemplateDir + '/_layout.mustache', 'utf-8')
 doc_layout = hogan.compile(doc_layout)
-
-//var sub_pages = {}
 var doc_context = {}
 
 // get an array of doc pages as partials
@@ -142,55 +139,28 @@ docs.forEach(function (name) {
    var doc = fs.readFileSync(docTemplateDir + '/' + name, 'utf-8')
    doc = hogan.compile(doc, { sectionTags:[ {o:'_i', c:'i'} ] })
 
-   // sub_pages.push(jsonDoc)
-   doc_context[name.replace(/\.mustache$/, '')] = doc
+   Object.defineProperty(doc_context, name.replace(/\.mustache$/, ''), {value : doc});
 
    console.log('compiled doc page ' + name)
 })
 
 
-// SEE https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty
-
-
-
-
-//var jsonString = JSON.stringify(doc_context);
-//console.dir(jsonString)
-// var keys = Object.keys(sub_pages);
-// keys.forEach(function(key) {
-//   var doc = Object.keys(sub_pages[key]);
-// });
-
-//doc_context[name.replace(/\.mustache$/, '')] = 'active'
 doc_context._i = true
 doc_context.production = prod
 doc_context.appname = appname
-// doc_context.title = name.replace(/\.mustache/, '')
-//                     .replace(/\-.*/, '')
-//                     .replace(/(.)/, function ($1) {
-//                         return $1.toUpperCase()
-//                      })
+doc_context.title = appname + ' Documentation'
 
 var doc_index = fs.readFileSync(docTemplateDir + '/index.mustache', 'utf-8')
 doc_index = hogan.compile(doc_index, { sectionTags:[ {o:'_i', c:'i'} ] })
 
 
-var partials = {
-   body: doc_index,
-   docssidebar: partial_docssidebar
-}
+doc_context.body = doc_index
+doc_context.docssidebar = partial_docssidebar
 
 
-
-
-doc_index = doc_layout.render(doc_context, {
-   body: doc_index,
-   docssidebar: partial_docssidebar
-})
+doc_index = doc_layout.render(doc_context, doc_context)
 
 fs.writeFileSync(__dirname + '/../docs/index.html', doc_index, 'utf-8')
-
-
 
 
 
