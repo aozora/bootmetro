@@ -12,7 +12,7 @@ var  hogan = require('hogan.js')
 
 
 var templates = [__dirname + '/../templates/demo',
-                 __dirname + '/../templates/docs',
+                 //__dirname + '/../templates/docs',
                  __dirname + '/../templates/pages']
 
 
@@ -45,7 +45,7 @@ partial_docssidebar = hogan.compile(partial_docssidebar, { sectionTags:[
 
 
 
-// cycle for each template dir
+// cycle for each template dir (pages / demo)
 templates.forEach(function(templatedir){
 
    // compile layout template
@@ -109,6 +109,93 @@ templates.forEach(function(templatedir){
    })
 
 })
+
+
+
+
+// Build DOCS
+// =============================================================
+
+var docFiles = [ 'welcome',
+                 'css',
+                 'scaffolding',
+                 'base-css',
+                 'components',
+                 'icons',
+                 'javascript',
+                 'metro-components',
+                 'pivot',
+                 'tiles',
+                 'toast',
+                 'listviews'
+               ]
+
+// retrieve pages
+var docTemplateDir = __dirname + '/../templates/docs'
+docs = fs.readdirSync(docTemplateDir)
+
+// compile layout template
+var doc_layout = fs.readFileSync(docTemplateDir + '/_layout.mustache', 'utf-8')
+doc_layout = hogan.compile(layout)
+
+var sub_pages = {}
+
+// get an array of doc pages as partials
+docs.forEach(function (name) {
+
+   // exclude non mustache files
+   if (!name.match(/\.mustache$/))
+      return
+
+   // exclude _layout & index
+   if (name.match(/^_layout/) || name.match(/^index/))
+      return
+
+   var doc = fs.readFileSync(docTemplateDir + '/' + name, 'utf-8')
+   doc = hogan.compile(doc, { sectionTags:[ {o:'_i', c:'i'} ] })
+
+   var jsonDoc = {key: name, doc: doc}
+
+   sub_pages.push(jsonDoc)
+}
+
+
+// var keys = Object.keys(sub_pages);
+
+// keys.forEach(function(key) {
+  
+//   var doc = Object.keys(sub_pages[key]);
+
+
+// });
+
+var doc_context = {}
+
+doc_context[name.replace(/\.mustache$/, '')] = 'active'
+doc_context._i = true
+doc_context.production = prod
+doc_context.appname = appname
+// doc_context.title = name.replace(/\.mustache/, '')
+//                     .replace(/\-.*/, '')
+//                     .replace(/(.)/, function ($1) {
+//                         return $1.toUpperCase()
+//                      })
+
+var doc_page = hogan.compile(page, { sectionTags:[ {o:'_i', c:'i'} ] })
+
+page = layout.render(context, {
+   body: page,
+   charms: partial_charms,
+   loggeduser: partial_loggeduser,
+   headermenu: partial_headermenu,
+   docssidebar: partial_docssidebar
+})
+
+
+
+
+
+
 
 
 
