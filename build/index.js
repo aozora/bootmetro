@@ -114,20 +114,8 @@ templates.forEach(function(templatedir){
 
 // Build DOCS
 // =============================================================
-
-// var docFiles = [ 'welcome',
-//                  'css',
-//                  'scaffolding',
-//                  'base-css',
-//                  'components',
-//                  'icons',
-//                  'javascript',
-//                  'metro-components',
-//                  'pivot',
-//                  'tiles',
-//                  'toast',
-//                  'listviews'
-//                ]
+console.log('\n\nCompiling Docs')
+console.log('\n\n==============')
 
 // retrieve pages
 var docTemplateDir = __dirname + '/../templates/docs'
@@ -135,9 +123,9 @@ docs = fs.readdirSync(docTemplateDir)
 
 // compile layout template
 var doc_layout = fs.readFileSync(docTemplateDir + '/_layout.mustache', 'utf-8')
-doc_layout = hogan.compile(layout)
+doc_layout = hogan.compile(doc_layout)
 
-var sub_pages = {}
+//var sub_pages = {}
 var doc_context = {}
 
 // get an array of doc pages as partials
@@ -154,23 +142,19 @@ docs.forEach(function (name) {
    var doc = fs.readFileSync(docTemplateDir + '/' + name, 'utf-8')
    doc = hogan.compile(doc, { sectionTags:[ {o:'_i', c:'i'} ] })
 
-   // var jsonDoc = {key: name, doc: doc}
-
    // sub_pages.push(jsonDoc)
    doc_context[name.replace(/\.mustache$/, '')] = doc
-}
 
+   console.log('compiled doc page ' + name)
+})
 
+console.dir(doc_context)
 // var keys = Object.keys(sub_pages);
-
 // keys.forEach(function(key) {
-  
 //   var doc = Object.keys(sub_pages[key]);
-
 // });
 
-
-// doc_context[name.replace(/\.mustache$/, '')] = 'active'
+//doc_context[name.replace(/\.mustache$/, '')] = 'active'
 doc_context._i = true
 doc_context.production = prod
 doc_context.appname = appname
@@ -181,14 +165,14 @@ doc_context.appname = appname
 //                      })
 
 var doc_index = fs.readFileSync(docTemplateDir + '/index.mustache', 'utf-8')
-var doc_index = hogan.compile(doc_index, { sectionTags:[ {o:'_i', c:'i'} ] })
+doc_index = hogan.compile(doc_index, { sectionTags:[ {o:'_i', c:'i'} ] })
 
-doc_index = layout.render(context, {
+doc_index = doc_layout.render(doc_context, {
    body: doc_index,
    docssidebar: partial_docssidebar
 })
 
-fs.writeFileSync(docTemplateDir + '/index.html', doc_index, 'utf-8')
+fs.writeFileSync(__dirname + '/../docs/index.html', doc_index, 'utf-8')
 
 
 
