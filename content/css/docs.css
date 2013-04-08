@@ -122,16 +122,30 @@ hr.soften {
 -------------------------------------------------- */
 
 .show-grid {
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
-.show-grid [class*="col-span-"] {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.show-grid [class*="span"] {
   background-color: #eee;
-  border: 1px solid #ddd;
+  text-align: center;
+  min-height: 40px;
+  line-height: 40px;
 }
-.show-grid [class*="col-span-"]:hover {
+.show-grid [class*="span"]:hover {
   background-color: #ddd;
+}
+.show-grid .show-grid {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.show-grid .show-grid [class*="span"] {
+  margin-top: 5px;
+}
+.show-grid [class*="span"] [class*="span"] {
+  background-color: #ccc;
+}
+.show-grid [class*="span"] [class*="span"] [class*="span"] {
+  background-color: #999;
 }
 
 

@@ -10,7 +10,7 @@
    <!-- Mobile viewport optimized: h5bp.com/viewport -->
    <meta name="viewport" content="width=device-width">
 
-   <title>Toast</title>
+   <title>Welcome</title>
 
    <meta name="robots" content="index, nofollow">
    <meta name="description" content="BootMetro : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
@@ -282,157 +282,55 @@
      </ul>
    </div>
    <div class="bs-docs-container">
-   <!-- Subhead
-   ================================================== -->
-   <header id="nav-bar" class="container">
-      <div class="row">
-         <div class="span12">
-            <div id="header-container">
-               <a id="backbutton" class="win-backbutton" href="./hub.html"></a>
-               <h5>BootMetro</h5>
-               <div class="dropdown">
-                  <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
-                     Toast Notifications
-                     <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                  <li><a href="./metro-layouts.html">Metro Layouts</a></li>
-                  <li><a href="./hub.html">Hub</a></li>
-                  <li><a href="./tiles-templates.html">Tile Templates</a></li>
-                  <li><a href="./listviews.html">ListViews</a></li>
-                  <li><a href="./appbar-demo.html">App-Bar Demo</a></li>
-                  <li><a href="./table.html">Table Demo</a></li>
-                  <li><a href="./wizard.html">Wizard</a></li>
-                  <li><a href="./icons.html">Icons</a></li>
-                  <li><a href="./toast.html">Toast Notifications</a></li>
-                  <li><a href="./pivot.html">Pivot</a></li>
-                  <li><a href="./metro-components.html">Metro Components</a></li>
-                  <li class="divider"></li>
-                  <li><a href="./scaffolding.html">Bootstrap Scaffolding</a></li>
-                  <li><a href="./base-css.html">Bootstrap Base CSS</a></li>
-                  <li><a href="./components.html">Bootstrap Components</a></li>
-                  <li><a href="./javascript.html">Bootstrap Javascript</a></li>
-                  <li class="divider"></li>
-                  <li><a href="./index.html">Home</a></li>
-               </ul>
-            </div>
-            </div>
-            <div id="top-info" class="pull-right">
-               <a id="settings" href="#" class="win-command pull-right">
-                  <span class="win-commandicon win-commandring icon-settings"></span>
-               </a>
-            </div>
-         </div>
-      </div>
-   </header>
-   <div class="container">
-      <blockquote>
-         A toast notification is a transient message to the user that contains relevant, time-sensitive information and provides quick access to related content in an app.
-         <small>Toast notification overview (Windows Store apps)</small>
-      </blockquote>
-      <p>Following there are all the possible templates and styles for different kind of toast notifications.</p>
+   <div class="bs-docs-section-header" id="welcome">
+      <h1>Welcome</h1>
+      <p class="lead">Welcome to the BootMetro documentation.</p>
    </div>
    
-   <div class="container">
+   <div id="getting-started" class="bs-docs-section">
+      <div class="page-header">
+         <h1>Getting started</h1>
+      </div>
+      
+      <p class="lead">
+         There are a few easy ways to quickly get started with BootMetro, please read through.
+      </p>
    
-      <!-- Docs nav
-      ================================================== -->
       <div class="row">
-         <div class="span3 bs-docs-sidebar">
-            <ul class="nav nav-list bs-docs-sidenav">
-               <li><a href="#textonly"><i class="icon-chevron-right"></i> Text Only Templates</a></li>
-               <li><a href="#imagetext"><i class="icon-chevron-right"></i> Image &amp; Text Templates</a></li>
-            </ul>
+         <div class="span6">
+            <h3>
+               Compiled CSS and JS
+            </h3>
+            <p>
+               <strong>The fastest way to get started:</strong> get the compiled and minified versions of our CSS, JavaScript, and fonts. No documentation or original source files are included.
+            </p>
+            <p>
+               <a onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" href="assets/bootstrap.zip" class="btn btn-large btn-primary">Download Bootstrap</a>
+            </p>
          </div>
-         <div class="span9">
-   
-   
-            <!-- Text Only Templates
-            ================================================== -->
-            <section id="textonly">
-               <div class="page-header">
-                  <h1>Text Only Templates <small></small></h1>
-               </div>
-   
-               <div class="bs-docs-example">
-   
-                  <div class="toast toasttext01">
-                     <button type="button" class="close" data-dismiss="alert"></button>
-                     <p>Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p>
-                  </div>
-   
-                  <div class="toast toasttext02">
-                     <button type="button" class="close" data-dismiss="alert"></button>
-                     <h4>Heading text</h4>
-                     <p>Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
-                  </div>
-   
-                  <div class="toast toasttext03">
-                     <button type="button" class="close" data-dismiss="alert"></button>
-                     <h4>Heading text that wraps over two lines. Vivamus elementum semper nisi.</h4>
-                     <p>Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
-                  </div>
-   
-                  <div class="toast toasttext04">
-                     <button type="button" class="close" data-dismiss="alert"></button>
-                     <h4>Heading text</h4>
-                     <p>Body text that wraps over two lines.</p>
-                     <p>Body text that wraps over two lines.</p>
-                  </div>
-   
-               </div>
-   
-   <pre class="prettyprint linenums">
-   &lt;div class="toast toasttext01"&gt;
-      &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
-      &lt;p&gt;Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula&lt;/p&gt;
-   &lt;/div&gt;
-   
-   &lt;div class="toast toasttext02"&gt;
-      &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
-      &lt;h4&gt;Heading text&lt;/h4&gt;
-      &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
-   &lt;/div&gt;
-   
-   &lt;div class="toast toasttext03"&gt;
-      &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
-      &lt;h4&gt;Heading text that wraps over two lines. Vivamus elementum semper nisi.&lt;/h4&gt;
-      &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
-   &lt;/div&gt;
-   
-   &lt;div class="toast toasttext04"&gt;
-      &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
-      &lt;h4&gt;Heading text&lt;/h4&gt;
-      &lt;p&gt;Body text that wraps over two lines.&lt;/p&gt;
-      &lt;p&gt;Body text that wraps over two lines.&lt;/p&gt;
-   &lt;/div&gt;
-   </pre>
-            </section>
-   
-   
-            <section id="imagetext">
-               <div class="page-header">
-                  <h1>Image & Text Templates <small></small></h1>
-               </div>
-   
-               <div class="bs-docs-example">
-   
-                  <div class="toast toastimageandtext01">
-                     <button type="button" class="close" data-dismiss="alert"></button>
-                     <img src="content/img/avatar-movie-puzzles-2.jpg" alt="" />
-                     <p>Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p>
-                  </div>
-   
-   
-               </div>
-   
-   <pre class="prettyprint linenums">
-   
-   </pre>
-   
-            </section>
-   
+         <div class="span6">
+            <h3>
+               Latest source code
+            </h3>
+            <p>
+               Get the original files for all CSS and JavaScript, along with a local copy of the docs by downloading the latest version directly from GitHub.
+            </p>
+            <p>
+               <a onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);" href="https://github.com/twitter/bootstrap/zipball/master" class="btn btn-large">Download Bootstrap source</a>
+            </p>
          </div>
+         <div class="span12">
+            <h3>
+               Clone or fork via GitHub
+            </h3>
+            <p>
+               Clone the entire project or fork your own version of Bootstrap to make it your own by visiting us on GitHub.
+            </p>
+            <p>
+               <a onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'GitHub project']);" href="https://github.com/twitter/bootstrap/" class="btn btn-large">GitHub repository</a>
+            </p>
+         </div>
+   
       </div>
    </div>   </div>
 
