@@ -22,6 +22,18 @@
 
    <link rel="stylesheet" type="text/css" href="../content/css/bootmetro.css">
    <link rel="stylesheet" type="text/css" href="../content/css/bootmetro-responsive.css">
+   <style>
+      @font-face {
+         font-family: 'IcoMoon';
+         src: url('../content/font/IcoMoon.eot');
+         src: url('../content/font/IcoMoon.svg#IcoMoon') format('svg'),
+         url('../content/font/IcoMoon.eot?#iefix') format('embedded-opentype'),
+         url('../content/font/IcoMoon.woff') format('woff'),
+         url('../content/font/IcoMoon.ttf') format('truetype');
+         font-weight: normal;
+         font-style: normal;
+      }
+   </style>
    <link rel="stylesheet" type="text/css" href="../content/css/bootmetro-icons.css">
    <link rel="stylesheet" type="text/css" href="../content/css/bootmetro-ui-light.css">
    <link rel="stylesheet" type="text/css" href="../content/css/datepicker.css">
@@ -66,15 +78,12 @@
    
        <li><a href="#welcome">Welcome!</a></li>
        <li><a href="#getting-started">Getting started</a></li>
-       <!--<li><a href="#whats-included">What's included</a></li>-->
-       <!--<li class=""><a href="#examples">Templates and examples</a></li>-->
-       <!--<li class="active"><a href="#customizing">Customizing Bootstrap</a></li>-->
    
        <!-- CSS -->
        <li class=""><a href="#css" class="nav-header">CSS</a></li>
-       <li class=""><a href="#css-overview">Overview</a></li>
        <li>
          <a href="#scaffolding">Scaffolding</a>
+          <b class="caret"></b>
          <ul class="nav">
              <li><a href="#scaffolding-global">Global styles</a></li>
              <li><a href="#scaffolding-gridSystem">Grid system</a></li>
@@ -350,25 +359,7 @@
    <p class="lead">Fundamental HTML elements styled and enhanced with extensible classes.</p>
 </div>
 
-<div id="css-overview" class="bs-docs-section">
-   <div class="page-header">
-      <h1>Overview</h1>
-   </div>
-   <p class="lead">Get the lowdown on the key pieces of BootMetro's infrastructure, including our approach to better, faster, stronger web development.</p>
-
-   <h3>HTML5 doctype required</h3>
-   <p>BootMetro makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
-   <div class="highlight">
-      <pre>
-<code class="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-...
-<span class="nt">&lt;/html&gt;</span>
-</code>
-      </pre>
-   </div>
-
-</div><div id="scaffolding" class="bs-docs-section">
+<div id="scaffolding" class="bs-docs-section">
    <div class="page-header">
       <h1>Scaffolding</h1>
    </div>
@@ -376,10 +367,7 @@
 
      <!-- Global Bootstrap settings
      ================================================== -->
-     <section id="scaffolding-global">
-       <div class="page-header">
-         <h1>Global settings</h1>
-       </div>
+      <h1 id="scaffolding-global">Global settings</h1>
 
        <h3>Requires HTML5 doctype</h3>
        <p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
@@ -403,17 +391,13 @@
        <h3>Reset via Normalize</h3>
        <p>With Bootstrap 2, the old reset block has been dropped in favor of <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> and <a href="http://twitter.com/jon_neal" target="_blank">Jonathan Neal</a> that also powers the <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>. While we use much of Normalize within our <strong>reset.less</strong>, we have removed some elements specifically for Bootstrap.</p>
 
-     </section>
 
 
 
 
      <!-- Grid system
      ================================================== -->
-     <section id="scaffolding-gridSystem">
-       <div class="page-header">
-         <h1>Default grid system</h1>
-       </div>
+      <h1 id="scaffolding-gridSystem">Default grid system</h1>
 
        <h2>Live grid example</h2>
        <p>The default Bootstrap grid system utilizes <strong>12 columns</strong>, making for a 940px wide container without <a href="./scaffolding.html#responsive">responsive features</a> enabled. With the responsive CSS file added, the grid adapts to be 724px and 1170px wide depending on your viewport. Below 767px viewports, the columns become fluid and stack vertically.</p>
@@ -500,16 +484,12 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
-     </section>
 
 
 
      <!-- Fluid grid system
      ================================================== -->
-     <section id="scaffolding-fluidGridSystem">
-       <div class="page-header">
-         <h1>Fluid grid system</h1>
-       </div>
+      <h1 id="scaffolding-fluidGridSystem">Fluid grid system</h1>
 
        <h2>Live fluid grid example</h2>
        <p>The fluid grid system uses percents instead of pixels for column widths. It has the same responsive capabilities as our fixed grid system, ensuring proper proportions for key screen resolutions and devices.</p>
@@ -618,17 +598,13 @@
    &lt;/div&gt;
    </pre>
 
-     </section>
 
 
 
 
      <!-- Layouts (Default and fluid)
      ================================================== -->
-     <section id="scaffolding-layouts">
-       <div class="page-header">
-         <h1>Layouts</h1>
-       </div>
+      <h1 id="scaffolding-layouts">Layouts</h1>
 
        <h2>Fixed layout</h2>
        <p>Provides a common fixed-width (and optionally responsive) layout with only <code>&lt;div class="container"&gt;</code> required.</p>
@@ -661,17 +637,13 @@
    &lt;/div&gt;
    &lt;/div&gt;
    </pre>
-     </section>
 
 
 
 
      <!-- Responsive design
      ================================================== -->
-     <section id="scaffolding-responsive">
-       <div class="page-header">
-         <h1>Responsive design</h1>
-       </div>
+      <h1 id="scaffolding-responsive">Responsive design</h1>
 
        <h2>Enabling responsive features</h2>
        <p>Turn on responsive CSS in your project by including the proper meta tag and additional stylesheet within the <code>&lt;head&gt;</code> of your document. If you've compiled Bootstrap from the Customize page, you need only include the meta tag.</p>
@@ -819,7 +791,6 @@
          <li>Desktop<span class="hidden-desktop">&#10004; Desktop</span></li>
        </ul>
 
-     </section>
 
 </div>
 
