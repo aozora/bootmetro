@@ -431,15 +431,16 @@ hr.soften {
 /* Icons
 -------------------------------------------------- */
 
-.the-icons {
+#icomoon-container {
   padding-bottom: 1px;
   margin-left: 0;
   list-style: none;
   margin-bottom: 20px;
   overflow: hidden;
 }
-.the-icons li {
-  float: left;
+#icomoon-container .box1 {
+   display: inline-block;
+   vertical-align: top;
   width: 100px;
   height: 110px;
   padding: 10px;
@@ -452,14 +453,14 @@ hr.soften {
           box-sizing: border-box;
   margin: 0 -1px -1px 0;
 }
-.the-icons .glyphicon {
+#icomoon-container .box1 span {
   display: block;
   margin: 5px auto;
   vertical-align: middle;
   margin-right: 3px;
   font-size: 24px;
 }
-.the-icons li:hover {
+#icomoon-container .box1:hover {
   background-color: rgba(255,0,0,.1);
 }
 
