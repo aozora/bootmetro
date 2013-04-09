@@ -12,7 +12,6 @@ var  hogan = require('hogan.js')
 
 
 var templates = [__dirname + '/../templates/demo',
-                 //__dirname + '/../templates/docs',
                  __dirname + '/../templates/pages']
 
 
@@ -93,12 +92,10 @@ templates.forEach(function(templatedir){
 
       var destinationPath
       if ( templatedir.match(/pages$/) ){
-         destinationPath = __dirname + '/../';
-      } else if ( templatedir.match(/docs$/) ){
-         destinationPath = __dirname + '/../docs/'
+         destinationPath = __dirname + '/../dist';
       } else {
          // demo & docs
-         destinationPath = __dirname + '/../demo/'
+         destinationPath = __dirname + '/../dist/demo/'
       }
 
       var fullDestinationPath = destinationPath + name.replace(/mustache$/, 'html');
@@ -160,7 +157,7 @@ doc_context.docssidebar = partial_docssidebar
 
 doc_index = doc_layout.render(doc_context, doc_context)
 
-fs.writeFileSync(__dirname + '/../docs/index.html', doc_index, 'utf-8')
+fs.writeFileSync(__dirname + '/../dist/docs/index.html', doc_index, 'utf-8')
 
 
 
