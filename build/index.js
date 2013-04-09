@@ -92,7 +92,7 @@ templates.forEach(function(templatedir){
 
       var destinationPath
       if ( templatedir.match(/pages$/) ){
-         destinationPath = __dirname + '/../dist';
+         destinationPath = __dirname + '/../dist/';
       } else {
          // demo & docs
          destinationPath = __dirname + '/../dist/demo/'
@@ -167,7 +167,7 @@ fs.writeFileSync(__dirname + '/../dist/docs/index.html', doc_index, 'utf-8')
 // =============================================================
 var lessdir = __dirname  + '/../less'
    ,lesspath = path.join(lessdir, '/bootmetro/bootmetro.less')
-   ,cssdir = __dirname  + '/../content/css'
+   ,cssdir = __dirname  + '/../dist/content/css'
    ,css;
 
 // Compile bootmetro.css
