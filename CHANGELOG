@@ -1,4 +1,29 @@
 =================================
+v0.7
+=================================
+This release has to be considered as a stabilization of v0.6.
+The v1.0 will be completely redone from scratch using as base Bootstrap v3.
+
+BREAKING CHANGES:
+   Replaced icomoon font with a new icomoon set generated with PUA. Many icon-* class names has changed;
+   internal mapping of char codes has changed, please be patient and check every icon you used.
+
+
+List of changes:
+------------------
+bug fixes for 0.6
+New documentation pages, separated from demo pages.
+upgrade Bootstrap base to latest v2.3.1
+move CSS to LESS and integrate build with Bootstrap (backported from 1.0)
+complete Tiles templates (backported from 1.0)
+Toast notifications (backported from 1.0)
+Pivot view (like WP8) (backported from 1.0)
+Dual license GPL2 + Apache2
+
+
+
+
+=================================
 v1.0 pre (16/12/2012)
 =================================
 The definition of the CSS rule for selector [class^="icon-"],[class*=" icon-"] has changed, now it doesn't have
