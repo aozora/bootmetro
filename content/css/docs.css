@@ -62,6 +62,13 @@ section,
   padding-top: 30px;
 }
 
+
+.bs-docs-section-header {
+   /*border-bottom: 5px solid #B94A48;*/
+   color: #B94A48;
+   padding-top: 60px;
+}
+
 /* Few stylistic typography tweaks */
 section > .page-header,
 section > .lead {
@@ -153,70 +160,73 @@ hr.soften {
 -------------------------------------------------- */
 
 .bs-docs-sidebar {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 240px;
-  overflow-y: scroll;
-  text-shadow: 0 1px 0 #fff;
-  background-color: #f5f5f5;
-  box-shadow: inset -1px 0 0 #e5e5e5;
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   width: 240px;
+   overflow-y: scroll;
+   color: #FFF;
+   /*text-shadow: 0 1px 0 #fff;*/
+   background-color: #004D60;
+   /*box-shadow: inset -1px 0 0 #e5e5e5;*/
 }
 
-/* Nav: first level */
-.bs-docs-sidebar > .nav {
-  margin: 0 0 25px 0;
-}
-.bs-docs-sidebar .nav > li > a {
-  display: block;
-  color: #666;
-  padding: 4px 25px;
-}
-.bs-docs-sidebar .nav > li > a:hover,
-.bs-docs-sidebar .nav > li > a:focus {
-  text-decoration: none;
-  border-right: 1px solid #d5d5d5;
-}
-.bs-docs-sidebar .nav > .active > a,
-.bs-docs-sidebar .nav > .active:hover > a,
-.bs-docs-sidebar .nav > .active:focus > a {
-  font-weight: 500;
-  color: #b94a48;
-  background-color: transparent;
-  border-right: 1px solid #b94a48;
-}
+   /* Nav: first level */
+   .bs-docs-sidebar > .nav {
+     margin: 0 0 25px 0;
+   }
+   .bs-docs-sidebar .nav > li > a {
+     display: block;
+     color: #FFF;
+     padding: 4px 25px;
+   }
+   .bs-docs-sidebar .nav > li > a:hover,
+   .bs-docs-sidebar .nav > li > a:focus {
+      text-decoration: none;
+      /*border-right: 1px solid #d5d5d5;*/
+      background-color: #FFF;
+      color: #000;
+   }
+   .bs-docs-sidebar .nav > .active > a,
+   .bs-docs-sidebar .nav > .active:hover > a,
+   .bs-docs-sidebar .nav > .active:focus > a {
+     font-weight: 500;
+     color: #19BFC9;
+     background-color: #216475;
+     /*border-right: 1px solid #b94a48;*/
+   }
 
-/* Nav: second level (shown on .active) */
-.bs-docs-sidebar .nav .nav {
-  display: none;
-  margin-bottom: 5px;
-}
-.bs-docs-sidebar .nav > .active > ul {
-  display: block;
-}
-.bs-docs-sidebar .nav .nav > li > a {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 40px;
-  font-size: 90%;
-}
+      /* Nav: second level (shown on .active) */
+      .bs-docs-sidebar .nav .nav {
+        display: none;
+        margin-bottom: 5px;
+      }
+      .bs-docs-sidebar .nav > .active > ul {
+        display: block;
+      }
+      .bs-docs-sidebar .nav .nav > li > a {
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 40px;
+        font-size: 90%;
+      }
 
-.bs-docs-sidenav-heading {
-  margin: 0 0 25px;
-}
-.bs-docs-sidenav-heading a {
-  display: block;
-  padding: 15px 25px;
-  color: #b94a48;
-  border-bottom: 1px solid #e5e5e5;
-  box-shadow: 0 1px 0 #fff;
-}
-.bs-docs-sidenav-heading a:hover {
-  color: #a3403e;
-  text-decoration: none;
-}
+      .bs-docs-sidenav-heading {
+        margin: 0 0 25px;
+      }
+      .bs-docs-sidenav-heading a {
+        display: block;
+        padding: 15px 25px;
+        color: #FFF;
+        border-bottom: 1px solid #e5e5e5;
+        /*box-shadow: 0 1px 0 #fff;*/
+      }
+      .bs-docs-sidenav-heading a:hover {
+        color: #CCC;
+        text-decoration: none;
+      }
 
 /* Section headings for groups of links */
 .bs-docs-sidenav > li > .nav-header {

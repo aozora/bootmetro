@@ -5631,8 +5631,6 @@ body {
   position: relative;
   padding-top: 24px;
   padding-bottom: 88px;
-  font-family: "Open Sans", Arial, Helvetica, Sans-Serif;
-  font-size: 11px;
   font-weight: 300;
 }
 
@@ -6428,7 +6426,6 @@ h4 {
   line-height: 20px;
 }
 
-body,
 h5,
 legend {
   font-size: 13px;
@@ -6478,7 +6475,7 @@ h6 {
 dt,
 th {
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.3636;
   /* 20px when font-size is 11pt */
 
@@ -6502,7 +6499,7 @@ tr {
 
 b,
 strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 em {
@@ -7015,6 +7012,7 @@ AppBar control.
 .nav-header {
   font-size: 14px;
   font-weight: 300;
+  text-shadow: none;
 }
 
 .nav-pills > li > a,

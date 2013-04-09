@@ -663,7 +663,6 @@ button.win-command:disabled {
 .btn-primary.active,
 .btn-primary.disabled,
 .btn-primary[disabled] {
-  color: #CCC;
   background-color: #781096;
   border-color: #781096;
 }
