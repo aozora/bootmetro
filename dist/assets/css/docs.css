@@ -63,6 +63,10 @@ section,
 }
 
 
+.bs-docs-section h1, .bs-docs-section h2, .bs-docs-section h3, .bs-docs-section h4, .bs-docs-section h5, .bs-docs-section h6 {
+   margin: 10px 0;
+}
+
 .bs-docs-section-header {
    /*border-bottom: 5px solid #B94A48;*/
    color: #B94A48;
@@ -177,26 +181,38 @@ hr.soften {
    .bs-docs-sidebar > .nav {
      margin: 0 0 25px 0;
    }
-   .bs-docs-sidebar .nav > li > a {
-     display: block;
-     color: #FFF;
-     padding: 4px 25px;
-   }
-   .bs-docs-sidebar .nav > li > a:hover,
-   .bs-docs-sidebar .nav > li > a:focus {
-      text-decoration: none;
-      /*border-right: 1px solid #d5d5d5;*/
-      background-color: #FFF;
-      color: #000;
-   }
-   .bs-docs-sidebar .nav > .active > a,
-   .bs-docs-sidebar .nav > .active:hover > a,
-   .bs-docs-sidebar .nav > .active:focus > a {
-     font-weight: 500;
-     color: #19BFC9;
-     background-color: #216475;
-     /*border-right: 1px solid #b94a48;*/
-   }
+      .bs-docs-sidebar .nav > li {
+         position: relative;
+      }
+
+      .bs-docs-sidebar .nav > li > a {
+        display: block;
+        color: #FFF;
+        padding: 4px 25px;
+      }
+         .bs-docs-sidebar .nav > li > a:hover,
+         .bs-docs-sidebar .nav > li > a:focus {
+            text-decoration: none;
+            /*border-right: 1px solid #d5d5d5;*/
+            background-color: #FFF;
+            color: #000;
+         }
+         .bs-docs-sidebar .nav > .active > a,
+         .bs-docs-sidebar .nav > .active:hover > a,
+         .bs-docs-sidebar .nav > .active:focus > a {
+           font-weight: 500;
+           color: #19BFC9;
+           background-color: #216475;
+           /*border-right: 1px solid #b94a48;*/
+         }
+
+      .bs-docs-sidebar .nav > li > .caret {
+         position: absolute;
+         top: 2px;
+         right: 2px;
+      }
+
+
 
       /* Nav: second level (shown on .active) */
       .bs-docs-sidebar .nav .nav {
@@ -253,8 +269,6 @@ hr.soften {
   padding: 39px 14px 14px;
   margin-bottom: -1px;
   border: 1px solid #ddd;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
 }
 /* Echo out a label for the example */
 .bs-docs-example:after {
@@ -268,16 +282,12 @@ hr.soften {
   color: #9da0a4;
   background-color: #f5f5f5;
   border: 1px solid #ddd;
-  border-top-left-radius: 4px;
-  border-bottom-right-radius: 4px;
 }
 
 /* Tweak display of the examples */
 .bs-docs-example + .prettyprint,
 .bs-docs-example + .highlight {
   margin-top: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 .prettyprint .linenums {
   /*margin-left: 0;*/
@@ -431,6 +441,10 @@ hr.soften {
 /* Icons
 -------------------------------------------------- */
 
+#icomoon-container .the-icons.clearfix:before,
+#icomoon-container .the-icons.clearfix:after { content: ""; display: table; }
+#icomoon-container .the-icons.clearfix:after { clear: both; }
+
 #icomoon-container .the-icons {
   padding-bottom: 1px;
   margin-left: 0;
@@ -438,10 +452,11 @@ hr.soften {
   margin-bottom: 20px;
   overflow: hidden;
 }
+
 #icomoon-container .the-icons .box1 {
    display: inline-block;
    vertical-align: top;
-   width: 100px;
+   width: 12em;
    height: 110px;
    margin: 0 -1px -1px 0;
    padding: 10px;
@@ -458,8 +473,8 @@ hr.soften {
   display: block;
   margin: 5px auto;
   vertical-align: middle;
-  margin-right: 3px;
-  font-size: 24px;
+  /*margin-right: 3px;*/
+  font-size: 32px;
 }
 #icomoon-container .the-icons .box1:hover {
   background-color: rgba(255,0,0,.1);
@@ -517,9 +532,9 @@ hr.soften {
   color: #999;
   text-align: center;
   border: 1px solid #ddd;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
 }
 .responsive-utilities-test li + li {
   margin-left: 10px;
@@ -530,9 +545,9 @@ hr.soften {
   left:   -1px;
   right:  -1px;
   bottom: -1px;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
 }
 .responsive-utilities-test span {
   color: #468847;
@@ -607,7 +622,7 @@ hr.soften {
 /* Hide code snippets on mobile devices */
 @media screen and (max-width: 480px) {
   .bs-docs-example {
-    border-radius: 4px;
+    border-radius: 0;
   }
   .highlight {
     display: none;
@@ -662,10 +677,10 @@ hr.soften {
     padding-left: 280px;
   }
 
-  /* Icons */
+  /* Icons
   .the-icons li {
     width: 12.5%;
-  }
+  }*/
 
 }
 

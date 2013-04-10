@@ -58,13 +58,24 @@ h1, h2, h3, h4, h5, h6 {
 #header-container h5 {font-size: 14px;}
 
 dt, th {
-   font-size: 15px;
+   font-size: 16px;
    font-weight: 600;
    line-height: 1.3636; /* 20px when font-size is 11pt */
 }
 
 abbr, acronym, address, blockquote, cite, dl, dd, li, ol, p, q, td, tr {
    font-weight: 300;
+}
+
+blockquote {
+   border-left: 5px solid @light-blu2;
+   background-color: @grayLighter;
+
+   // Float right with text-align: right
+   &.pull-right {
+      padding-left: 15px;
+      border-right: 5px solid @light-blu2;
+   }
 }
 
 b, strong {

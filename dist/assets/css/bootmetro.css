@@ -5753,6 +5753,11 @@ textarea {
   min-height: 28px;
 }
 
+.radio.inline,
+.checkbox.inline {
+  padding-top: 0;
+}
+
 /*
 Select control.
 */
@@ -6103,7 +6108,7 @@ label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after {
   color: #202020;
   background-color: #FFF;
   border: 2px solid #BABABA;
-  content: "\e383";
+  content: "\e379";
 }
 
 label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
@@ -6222,22 +6227,11 @@ label.checkbox input[type=checkbox]:disabled ~ span.metro-checkbox::after {
 .table-hover tbody tr:hover td,
 .table-hover tbody tr:hover th {
   background-color: #f5f5f5;
-  border-top: 1px solid #00bff2;
-  border-bottom: 1px solid #00bff2;
-}
-
-.table-hover tbody tr:hover td:first-child {
-  border-left: 1px solid #00bff2;
-}
-
-.table-hover tbody tr:hover td:last-child {
-  border-right: 1px solid #00bff2;
 }
 
 .table-cell-hover tbody tr td:hover,
 .table-cell-hover tbody tr th:hover {
   background-color: #f5f5f5;
-  border: 1px solid #00bff2;
 }
 
 /* CheckBox cells */
@@ -6274,7 +6268,7 @@ Dropdown submenu
 }
 
 .caret:after {
-  content: "\e0d6";
+  content: "\e12c";
 }
 
 .navbar .nav li.dropdown .dropdown-toggle .caret,
@@ -6323,7 +6317,7 @@ Dropdown submenu
 }
 
 .dropup .caret:after {
-  content: "\E0F2";
+  content: "\e12c";
 }
 
 .dropup .btn-large .caret {
@@ -6474,7 +6468,7 @@ h6 {
 
 dt,
 th {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.3636;
   /* 20px when font-size is 11pt */
@@ -6495,6 +6489,16 @@ q,
 td,
 tr {
   font-weight: 300;
+}
+
+blockquote {
+  background-color: #eeeeee;
+  border-left: 5px solid #0177db;
+}
+
+blockquote.pull-right {
+  padding-left: 15px;
+  border-right: 5px solid #0177db;
 }
 
 b,
@@ -6822,7 +6826,6 @@ AppBar control.
 
 .btn-group > .dropdown-toggle {
   min-width: 20px;
-  padding-top: 2px;
   padding-bottom: 2px;
 }
 
