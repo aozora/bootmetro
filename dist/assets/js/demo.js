@@ -61,7 +61,7 @@ $(function(){
 //function to append a new theme stylesheet with the new style changes
 function updateCSS(css){
 
-   $("head").append('<link rel="stylesheet" type="text/css" href="content/css/' + css +'.css">');
+   $("head").append('<link rel="stylesheet" type="text/css" href="assets/css/' + css +'.css">');
 
    if($("link[href*=metro-ui-]").size() > 1){
       $("link[href*=metro-ui-]:first").remove();

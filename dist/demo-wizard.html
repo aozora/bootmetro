@@ -10,7 +10,7 @@
    <!-- Mobile viewport optimized: h5bp.com/viewport -->
    <meta name="viewport" content="width=device-width">
 
-   <title>BootMetro Demo - Metro</title>
+   <title>BootMetro Demo - Wizard</title>
 
    <meta name="robots" content="noindex, nofollow">
    <meta name="description" content="BootMetro : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
@@ -20,26 +20,26 @@
    <!-- remove or comment this line if you want to use the local fonts -->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 
-   <link rel="stylesheet" type="text/css" href="../content/css/bootmetro.css">
-   <link rel="stylesheet" type="text/css" href="../content/css/bootmetro-responsive.css">
-   <link rel="stylesheet" type="text/css" href="../content/css/bootmetro-icons.css">
-   <link rel="stylesheet" type="text/css" href="../content/css/bootmetro-ui-light.css">
-   <link rel="stylesheet" type="text/css" href="../content/css/datepicker.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro-responsive.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro-icons.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro-ui-light.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/datepicker.css">
 
    <!--  these two css are to use only for documentation -->
-   <link rel="stylesheet" type="text/css" href="../content/css/demo.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/demo.css">
 
    <!-- Le fav and touch icons -->
-   <link rel="shortcut icon" href="content/ico/favicon.ico">
-   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../content/ico/apple-touch-icon-144-precomposed.png">
-   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../content/ico/apple-touch-icon-114-precomposed.png">
-   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../content/ico/apple-touch-icon-72-precomposed.png">
-   <link rel="apple-touch-icon-precomposed" href="../content/ico/apple-touch-icon-57-precomposed.png">
+   <link rel="shortcut icon" href="assets/ico/favicon.ico">
+   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
   
    <!-- All JavaScript at the bottom, except for Modernizr and Respond.
       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-   <script src="../scripts/modernizr-2.6.2.min.js"></script>
+   <script src="assets/js/modernizr-2.6.2.min.js"></script>
 </head>
 
 <body>
@@ -57,7 +57,7 @@
                <h5>BootMetro</h5>
                <div class="dropdown">
                   <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
-                     Metro Layouts
+                     Wizard
                      <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu">
@@ -83,52 +83,75 @@
             </div>
             </div>
             <div id="top-info" class="pull-right">
-            <a id="settings" href="#" class="win-command pull-right">
-               <span class="win-commandicon win-commandring icon-cog-3"></span>
-            </a>
-            <a id="logged-user" href="#" class="win-command pull-right">
-               <span class="win-commandicon win-commandring icon-user"></span>
-            </a>
-            <div class="pull-left">
-               <h3>FirstName</h3>
-               <h4>LastName</h4>
+               <a id="settings" href="#" class="win-command pull-right">
+                  <span class="win-commandicon win-commandring icon-settings"></span>
+               </a>
             </div>
          </div>
-      </div>
       </div>
    </header>
    
    <div class="container">
-      <div class="row">
-         <div class="metro span12">
-            <div class="metro-sections">
+      <div class="row wizard">
+         <div class="span3">
+            <div id="wizard-steps-container">
+               <h2>Wizard Title</h2>
    
-               <div class="metro-section" id="section1">
-   
-                  <a class="tile wide imagetext bg-color-orange" href="./list-detail.html">
-                     <div class="image-wrapper">
-                        <img src="content/img/metro-tiles.jpg" />
-                     </div>
-                     <div class="column-text">
-                        <div class="text-header3">Listview with Details</div>
-                     </div>
-                  </a>
-   
-                  <a class="tile wide imagetext tile-double bg-color-green" href="#">
-                     <div class="image-wrapper">
-                        <img src="content/img/metro-tiles-wide.jpg" />
-                     </div>
-                     <div class="column-text">
-                        <div class="text-header3">...more to come...</div>
-                     </div>
-                  </a>
-   
-               </div>
-   
+               <ul id="wizard-steps">
+                  <li>
+                     <a href="#">Step 1 lorem ipsum</a>
+                  </li>
+                  <li class="active">
+                     <a href="#">Step 2 lorem ipsum</a>
+                  </li>
+                  <li>
+                     <a href="#">Step 3 lorem ipsum</a>
+                  </li>
+                  <li>
+                     <a href="#">Step 4 lorem ipsum</a>
+                  </li>
+                  <li>
+                     <a href="#">Step 5 lorem ipsum</a>
+                  </li>
+               </ul>
             </div>
          </div>
+   
+         <div class="span9">
+            <section id="wizard-step-content">
+               <h2>Step Title</h2>
+               <h3>Subtitle</h3>
+   
+               <form class="form-horizontal">
+   
+               </form>
+   
+            </section>
+         </div>
       </div>
-   </div>   <div id="charms" class="win-ui-dark slide">
+   </div>
+   
+   <footer class="win-ui-dark win-commandlayout navbar-fixed-bottom">
+      <div class="container">
+         <div class="row">
+            <div class="span12 align-right">
+   
+               <button class="win-command">
+                  <span class="win-commandimage win-commandring">&#xe1cd;</span>
+                  <span class="win-label">Previous</span>
+               </button>
+   
+               <button class="win-command">
+                  <span class="win-commandimage win-commandring">&#xe1ca;</span>
+                  <span class="win-label">Next</span>
+               </button>
+   
+            </div>
+   
+         </div>
+      </div>
+   </footer>
+   <div id="charms" class="win-ui-dark slide">
    
       <div id="theme-charms-section" class="charms-section">
          <div class="charms-header">
@@ -155,21 +178,21 @@
 
    <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-   <script>window.jQuery || document.write("<script src='../scripts/jquery-1.8.3.min.js'>\x3C/script>")</script>
+   <script>window.jQuery || document.write("<script src='assets/js/jquery-1.8.3.min.js'>\x3C/script>")</script>
 
    <!--[if IE 7]>
    <script type="text/javascript" src="scripts/bootmetro-icons-ie7.js">
    <![endif]-->
 
-   <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
-   <script type="text/javascript" src="../scripts/bootmetro-panorama.js"></script>
-   <script type="text/javascript" src="../scripts/bootmetro-pivot.js"></script>
-   <script type="text/javascript" src="../scripts/bootmetro-charms.js"></script>
-   <script type="text/javascript" src="../scripts/bootstrap-datepicker.js"></script>
+   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="assets/js/bootmetro-panorama.js"></script>
+   <script type="text/javascript" src="assets/js/bootmetro-pivot.js"></script>
+   <script type="text/javascript" src="assets/js/bootmetro-charms.js"></script>
+   <script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
    <!--<script type="text/javascript" src="scripts/jquery.nicescroll.js"></script>-->
    <!--<script type="text/javascript" src="scripts/jquery.touchSwipe.js"></script>-->
-   <script type="text/javascript" src="../scripts/demo.js"></script>
-   <script type="text/javascript" src="../scripts/holder.js"></script>
+   <script type="text/javascript" src="assets/js/demo.js"></script>
+   <script type="text/javascript" src="assets/js/holder.js"></script>
    <script type="text/javascript">
       $('.panorama').panorama({
          nicescroll: true,

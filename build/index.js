@@ -95,7 +95,7 @@ templates.forEach(function(templatedir){
          destinationPath = __dirname + '/../dist/';
       } else {
          // demo & docs
-         destinationPath = __dirname + '/../dist/demo/'
+         destinationPath = __dirname + '/../dist/demo-'
       }
 
       var fullDestinationPath = destinationPath + name.replace(/mustache$/, 'html');
@@ -157,7 +157,7 @@ doc_context.docssidebar = partial_docssidebar
 
 doc_index = doc_layout.render(doc_context, doc_context)
 
-fs.writeFileSync(__dirname + '/../dist/docs/index.html', doc_index, 'utf-8')
+fs.writeFileSync(__dirname + '/../dist/docs.html', doc_index, 'utf-8')
 
 
 
@@ -167,7 +167,7 @@ fs.writeFileSync(__dirname + '/../dist/docs/index.html', doc_index, 'utf-8')
 // =============================================================
 var lessdir = __dirname  + '/../less'
    ,lesspath = path.join(lessdir, '/bootmetro/bootmetro.less')
-   ,cssdir = __dirname  + '/../dist/content/css'
+   ,cssdir = __dirname  + '/../dist/assets/css'
    ,css;
 
 // Compile bootmetro.css
