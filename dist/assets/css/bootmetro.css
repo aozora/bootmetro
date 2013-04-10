@@ -7045,7 +7045,7 @@ AppBar control.
 .modal .close:after,
 .alert .close:after {
   font-size: 14px;
-  content: "\e078";
+  content: "\e37a";
 }
 
 .toast .close {

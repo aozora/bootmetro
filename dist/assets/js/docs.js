@@ -47,7 +47,7 @@
 
     // tooltip demo
     $('.tooltip-demo').tooltip({
-      selector: "a[data-toggle=tooltip]"
+      selector: "a[rel=tooltip]"
     })
 
     $('.tooltip-test').tooltip()
@@ -59,7 +59,7 @@
     })
 
     // popover demo
-    $("a[data-toggle=popover]")
+    $("a[rel=popover]")
       .popover()
       .click(function(e) {
         e.preventDefault()
