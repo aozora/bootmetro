@@ -7130,12 +7130,12 @@ AppBar control.
 
 .pager .next a:after {
   font-family: 'IcoMoon';
-  content: "\e0f1";
+  content: "\e12a";
 }
 
 .pager .previous a:before {
   font-family: 'IcoMoon';
-  content: "\e0f4";
+  content: "\e127";
 }
 
 .pager li > a,
