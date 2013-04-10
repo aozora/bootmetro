@@ -91,7 +91,8 @@ input[type=range] {
    padding: 17px 0 32px 0;
 }
 
-
+// Form Search
+// ------------------------
 input.search-query {
    .no-border-radius;
 }
@@ -107,6 +108,56 @@ input.search-query {
 .form-search .input-prepend .btn {
    .no-border-radius;
 }
+
+
+
+.form-search .input-append button[type="submit"].btn ,
+.form-search .input-append input[type="submit"].btn {
+   border-left: 0;
+   padding-right: 2px;
+   background-color: transparent;
+   color: @grayDark;
+}
+   .form-search .input-append button[type="submit"].btn .icon-search,
+   .form-search .input-append input[type="submit"].btn .icon-search {
+      font-size: 18px;
+      line-height: 18px;
+   }
+
+.form-search .input-append .search-query {
+   border-right: 0;
+}
+   // TODO: this should be moved in theme css
+   .form-search .input-append .search-query:focus + button[type="submit"].btn,
+   .form-search .input-append .search-query:focus + input[type="submit"].btn {
+      border-color: rgba(0, 0, 0, 0.6);
+   }
+
+
+.form-search .input-prepend button[type="submit"].btn ,
+.form-search .input-prepend input[type="submit"].btn {
+   border-right: 0;
+   padding-left: 2px;
+   background-color: transparent;
+   color: @grayDark;
+}
+.form-search .input-prepend button[type="submit"].btn .icon-search,
+.form-search .input-prepend input[type="submit"].btn .icon-search {
+   font-size: 18px;
+   line-height: 18px;
+}
+
+.form-search .input-prepend .search-query {
+   border-left: 0;
+}
+// TODO: this should be moved in theme css
+.form-search .input-prepend .search-query:focus + button[type="submit"].btn,
+.form-search .input-prepend .search-query:focus + input[type="submit"].btn {
+   border-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
 
 // FORM FIELD FEEDBACK STATES
 // --------------------------

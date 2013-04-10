@@ -293,7 +293,6 @@ button.win-command .win-label {
 
 .btn.disabled,
 .btn[disabled] {
-  color: rgba(0, 0, 0, 0.4);
   background-color: rgba(202, 202, 202, 0.4);
   border-color: rgba(0, 0, 0, 0.08);
 }

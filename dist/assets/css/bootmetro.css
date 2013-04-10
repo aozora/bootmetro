@@ -5811,6 +5811,52 @@ input.search-query {
           border-radius: 0;
 }
 
+.form-search .input-append button[type="submit"].btn,
+.form-search .input-append input[type="submit"].btn {
+  padding-right: 2px;
+  color: #333333;
+  background-color: transparent;
+  border-left: 0;
+}
+
+.form-search .input-append button[type="submit"].btn .icon-search,
+.form-search .input-append input[type="submit"].btn .icon-search {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.form-search .input-append .search-query {
+  border-right: 0;
+}
+
+.form-search .input-append .search-query:focus + button[type="submit"].btn,
+.form-search .input-append .search-query:focus + input[type="submit"].btn {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.form-search .input-prepend button[type="submit"].btn,
+.form-search .input-prepend input[type="submit"].btn {
+  padding-left: 2px;
+  color: #333333;
+  background-color: transparent;
+  border-right: 0;
+}
+
+.form-search .input-prepend button[type="submit"].btn .icon-search,
+.form-search .input-prepend input[type="submit"].btn .icon-search {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.form-search .input-prepend .search-query {
+  border-left: 0;
+}
+
+.form-search .input-prepend .search-query:focus + button[type="submit"].btn,
+.form-search .input-prepend .search-query:focus + input[type="submit"].btn {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
 .control-group.warning .control-label,
 .control-group.warning .help-block,
 .control-group.warning .help-inline {
@@ -6542,7 +6588,7 @@ input[type=submit] {
   margin-bottom: 0;
   font-weight: 600;
   line-height: 1.3636;
-  border: 2px solid;
+  border: 2px solid #cccccc;
   background-clip: padding-box;
 }
 
