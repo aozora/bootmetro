@@ -49,7 +49,7 @@
    </div>
 <pre class="prettyprint">
 &lt;p&gt;
-     &lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;
+   &lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;
 &lt;/p&gt;
 </pre>
 
@@ -851,20 +851,20 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
    <button type="submit" class="btn">Submit</button>
    </fieldset>
    </form>
-   <pre class="prettyprint linenums">
-      &lt;form&gt;
-      &lt;fieldset&gt;
+<pre class="prettyprint linenums">
+&lt;form&gt;
+   &lt;fieldset&gt;
       &lt;legend&gt;Legend&lt;/legend&gt;
       &lt;label&gt;Label name&lt;/label&gt;
       &lt;input type="text" placeholder="Type something…"&gt;
       &lt;span class="help-block"&gt;Example block-level help text here.&lt;/span&gt;
       &lt;label class="checkbox"&gt;
-      &lt;input type="checkbox"&gt;&lt;span class="metro-checkbox"&gt;Check me out&lt;/span&gt;
+         &lt;input type="checkbox"&gt;&lt;span class="metro-checkbox"&gt;Check me out&lt;/span&gt;
       &lt;/label&gt;
       &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
-      &lt;/fieldset&gt;
-      &lt;/form&gt;
-   </pre>
+   &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>
 
 
    <hr class="bs-docs-separator">
@@ -881,8 +881,8 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
    </form>
 <pre class="prettyprint linenums">
 &lt;form class="form-search"&gt;
-&lt;input type="text" class="input-medium search-query"&gt;
-&lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+   &lt;input type="text" class="input-medium search-query"&gt;
+   &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
 &lt;/form&gt;
 </pre>
 
@@ -896,16 +896,16 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
    </label>
    <button type="submit" class="btn">Sign in</button>
    </form>
-   <pre class="prettyprint linenums">
-      &lt;form class="form-inline"&gt;
-      &lt;input type="text" class="input-small" placeholder="Email"&gt;
-      &lt;input type="password" class="input-small" placeholder="Password"&gt;
-      &lt;label class="checkbox"&gt;
+<pre class="prettyprint linenums">
+&lt;form class="form-inline"&gt;
+   &lt;input type="text" class="input-small" placeholder="Email"&gt;
+   &lt;input type="password" class="input-small" placeholder="Password"&gt;
+   &lt;label class="checkbox"&gt;
       &lt;input type="checkbox"&gt;&lt;span class="metro-checkbox"&gt;Remember me&lt;/span&gt;
-      &lt;/label&gt;
-      &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
-      &lt;/form&gt;
-   </pre>
+   &lt;/label&gt;
+   &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+</pre>
 
    <h3 id="forms-horizontal">Horizontal form</h3>
    <p>Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p>
@@ -937,30 +937,30 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
    </div>
    </div>
    </form>
-   <pre class="prettyprint linenums">
-      &lt;form class="form-horizontal"&gt;
-      &lt;div class="control-group"&gt;
+<pre class="prettyprint linenums">
+&lt;form class="form-horizontal"&gt;
+   &lt;div class="control-group"&gt;
       &lt;label class="control-label" for="inputEmail"&gt;Email&lt;/label&gt;
       &lt;div class="controls"&gt;
-      &lt;input type="text" id="inputEmail" placeholder="Email"&gt;
+         &lt;input type="text" id="inputEmail" placeholder="Email"&gt;
       &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="control-group"&gt;
+   &lt;/div&gt;
+   &lt;div class="control-group"&gt;
       &lt;label class="control-label" for="inputPassword"&gt;Password&lt;/label&gt;
       &lt;div class="controls"&gt;
-      &lt;input type="password" id="inputPassword" placeholder="Password"&gt;
+         &lt;input type="password" id="inputPassword" placeholder="Password"&gt;
       &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="control-group"&gt;
+   &lt;/div&gt;
+   &lt;div class="control-group"&gt;
       &lt;div class="controls"&gt;
-      &lt;label class="checkbox"&gt;
-      &lt;input type="checkbox"&gt;&lt;span class="metro-checkbox"&gt;Remember me&lt;/span&gt;
-      &lt;/label&gt;
-      &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+         &lt;label class="checkbox"&gt;
+            &lt;input type="checkbox"&gt;&lt;span class="metro-checkbox"&gt;Remember me&lt;/span&gt;
+         &lt;/label&gt;
+         &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
       &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/form&gt;
-   </pre>
+   &lt;/div&gt;
+&lt;/form&gt;
+</pre>
 
 
    <hr class="bs-docs-separator">
@@ -1006,46 +1006,52 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
    <span class="metro-radio">Option two can be something else and selecting it will deselect option one</span>
    </label>
    </form>
-   <pre class="prettyprint linenums">
-      &lt;label class="checkbox"&gt;
-      &lt;input type="checkbox" value=""&gt;
-      &lt;span class="metro-checkbox"&gt;Option one is this and that&mdash;be sure to include why it's great&lt;/span&gt;
-      &lt;/label&gt;
+<pre class="prettyprint linenums">
+&lt;label class="checkbox"&gt;
+   &lt;input type="checkbox" value=""&gt;
+   &lt;span class="metro-checkbox"&gt;Option one is this and that&mdash;be sure to include why it's great&lt;/span&gt;
+&lt;/label&gt;
 
-      &lt;label class="radio"&gt;
-      &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
-      &lt;span class="metro-radio"&gt;Option one is this and that&mdash;be sure to include why it's great&lt;/span&gt;
-      &lt;/label&gt;
-      &lt;label class="radio"&gt;
-      &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
-      &lt;span class="metro-radio"&gt;Option two can be something else and selecting it will deselect option one&lt;/span&gt;
-      &lt;/label&gt;
-   </pre>
+&lt;label class="radio"&gt;
+   &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+   &lt;span class="metro-radio"&gt;Option one is this and that&mdash;be sure to include why it's great&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="radio"&gt;
+   &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+   &lt;span class="metro-radio"&gt;Option two can be something else and selecting it will deselect option one&lt;/span&gt;
+&lt;/label&gt;
+</pre>
 
    <h4>Inline checkboxes</h4>
    <p>Add the <code>.inline</code> class to a series of checkboxes or radios for controls appear on the same line.</p>
    <form class="bs-docs-example">
       <label class="checkbox inline">
-         <input type="checkbox" id="inlineCheckbox1" value="option1"><span class="metro-checkbox">1</span>
+         <input type="checkbox" id="inlineCheckbox1" value="option1">
+         <span class="metro-checkbox">1</span>
       </label>
       <label class="checkbox inline">
-         <input type="checkbox" id="inlineCheckbox2" value="option2"><span class="metro-checkbox">2</span>
+         <input type="checkbox" id="inlineCheckbox2" value="option2">
+         <span class="metro-checkbox">2</span>
       </label>
       <label class="checkbox inline">
-         <input type="checkbox" id="inlineCheckbox3" value="option3"><span class="metro-checkbox">3</span>
+         <input type="checkbox" id="inlineCheckbox3" value="option3">
+         <span class="metro-checkbox">3</span>
       </label>
    </form>
-   <pre class="prettyprint linenums">
-   &lt;label class="checkbox inline"&gt;
-     &lt;input type="checkbox" id="inlineCheckbox1" value="option1"&gt;&lt;span class="metro-checkbox"&gt;1&lt;/span&gt;
-   &lt;/label&gt;
-   &lt;label class="checkbox inline"&gt;
-     &lt;input type="checkbox" id="inlineCheckbox2" value="option2"&gt;&lt;span class="metro-checkbox"&gt;2&lt;/span&gt;
-   &lt;/label&gt;
-   &lt;label class="checkbox inline"&gt;
-     &lt;input type="checkbox" id="inlineCheckbox3" value="option3"&gt;&lt;span class="metro-checkbox"&gt;3&lt;/span&gt;
-   &lt;/label&gt;
-   </pre>
+<pre class="prettyprint linenums">
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox1" value="option1"&gt;
+   &lt;span class="metro-checkbox"&gt;1&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox2" value="option2"&gt;
+   &lt;span class="metro-checkbox"&gt;2&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox3" value="option3"&gt;
+   &lt;span class="metro-checkbox"&gt;3&lt;/span&gt;
+&lt;/label&gt;
+</pre>
 
    <h3>Selects</h3>
    <p>Use the default option or specify a <code>multiple="multiple"</code> to show multiple options at once.</p>
@@ -1066,23 +1072,23 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
          <option>5</option>
       </select>
    </form>
-   <pre class="prettyprint linenums">
-   &lt;select&gt;
-     &lt;option&gt;1&lt;/option&gt;
-     &lt;option&gt;2&lt;/option&gt;
-     &lt;option&gt;3&lt;/option&gt;
-     &lt;option&gt;4&lt;/option&gt;
-     &lt;option&gt;5&lt;/option&gt;
-   &lt;/select&gt;
+<pre class="prettyprint linenums">
+&lt;select&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
 
-   &lt;select multiple="multiple"&gt;
-     &lt;option&gt;1&lt;/option&gt;
-     &lt;option&gt;2&lt;/option&gt;
-     &lt;option&gt;3&lt;/option&gt;
-     &lt;option&gt;4&lt;/option&gt;
-     &lt;option&gt;5&lt;/option&gt;
-   &lt;/select&gt;
-   </pre>
+&lt;select multiple="multiple"&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+</pre>
 
 
    <hr class="bs-docs-separator">
@@ -1107,16 +1113,16 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
          <span class="add-on">.00</span>
       </div>
    </form>
-   <pre class="prettyprint linenums">
-      &lt;div class="input-prepend"&gt;
+<pre class="prettyprint linenums">
+   &lt;div class="input-prepend"&gt;
       &lt;span class="add-on"&gt;@&lt;/span&gt;
       &lt;input class="span2" id="prependedInput" type="text" placeholder="Username"&gt;
-      &lt;/div&gt;
-      &lt;div class="input-append"&gt;
+   &lt;/div&gt;
+   &lt;div class="input-append"&gt;
       &lt;input class="span2" id="appendedInput" type="text"&gt;
       &lt;span class="add-on"&gt;.00&lt;/span&gt;
-      &lt;/div&gt;
-   </pre>
+   &lt;/div&gt;
+</pre>
 
    <h4>Combined</h4>
    <p>Use both classes and two instances of <code>.add-on</code> to prepend and append an input.</p>
@@ -1127,13 +1133,13 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
          <span class="add-on">.00</span>
       </div>
    </form>
-   <pre class="prettyprint linenums">
-   &lt;div class="input-prepend input-append"&gt;
-     &lt;span class="add-on"&gt;$&lt;/span&gt;
-     &lt;input class="span2" id="appendedPrependedInput" type="text"&gt;
-     &lt;span class="add-on"&gt;.00&lt;/span&gt;
-   &lt;/div&gt;
-   </pre>
+<pre class="prettyprint linenums">
+&lt;div class="input-prepend input-append"&gt;
+  &lt;span class="add-on"&gt;$&lt;/span&gt;
+  &lt;input class="span2" id="appendedPrependedInput" type="text"&gt;
+  &lt;span class="add-on"&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+</pre>
 
    <h4>Buttons instead of text</h4>
    <p>Instead of a <code>&lt;span&gt;</code> with text, use a <code>.btn</code> to attach a button (or two) to an input.</p>
@@ -1143,12 +1149,12 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
          <button class="btn" type="button">Go!</button>
       </div>
    </form>
-   <pre class="prettyprint linenums">
-   &lt;div class="input-append"&gt;
-     &lt;input class="span2" id="appendedInputButton" type="text"&gt;
-     &lt;button class="btn" type="button"&gt;Go!&lt;/button&gt;
-   &lt;/div&gt;
-   </pre>
+<pre class="prettyprint linenums">
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedInputButton" type="text"&gt;
+  &lt;button class="btn" type="button"&gt;Go!&lt;/button&gt;
+&lt;/div&gt;
+</pre>
    <form class="bs-docs-example">
       <div class="input-append">
          <input class="span2" id="appendedInputButtons" type="text">
@@ -1156,13 +1162,13 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
          <button class="btn" type="button">Options</button>
       </div>
    </form>
-   <pre class="prettyprint linenums">
-   &lt;div class="input-append"&gt;
-     &lt;input class="span2" id="appendedInputButtons" type="text"&gt;
-     &lt;button class="btn" type="button"&gt;Search&lt;/button&gt;
-     &lt;button class="btn" type="button"&gt;Options&lt;/button&gt;
-   &lt;/div&gt;
-   </pre>
+<pre class="prettyprint linenums">
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedInputButtons" type="text"&gt;
+  &lt;button class="btn" type="button"&gt;Search&lt;/button&gt;
+  &lt;button class="btn" type="button"&gt;Options&lt;/button&gt;
+&lt;/div&gt;
+</pre>
 
    <h4>Button dropdowns</h4>
    <p></p>
@@ -1196,21 +1202,21 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
 &lt;/div&gt;
 </pre>
 
-          <form class="bs-docs-example">
-            <div class="input-prepend">
-              <div class="btn-group">
-                <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                </ul>
-              </div><!-- /btn-group -->
-              <input class="span2" id="prependedDropdownButton" type="text">
-            </div><!-- /input-prepend -->
-          </form>
+    <form class="bs-docs-example">
+      <div class="input-prepend">
+        <div class="btn-group">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <input class="span2" id="prependedDropdownButton" type="text">
+      </div><!-- /input-prepend -->
+    </form>
 <pre class="prettyprint linenums">
 &lt;div class="input-prepend"&gt;
   &lt;div class="btn-group"&gt;
@@ -1329,21 +1335,17 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
       <input type="text" class="span2 search-query">
       <button type="submit" class="btn"><i class="icon-search"></i></button>
    </div>
-            <div class="input-prepend">
-              <button type="submit" class="btn"><i class="icon-search"></i></button>
-              <input type="text" class="span2 search-query">
-            </div>
+            <!--<div class="input-prepend">-->
+              <!--<button type="submit" class="btn"><i class="icon-search"></i></button>-->
+              <!--<input type="text" class="span2 search-query">-->
+            <!--</div>-->
           </form>{{! /example }}
 <pre class="prettyprint linenums">
 &lt;form class="form-search"&gt;
-      &lt;div class="input-append"&gt;
-      &lt;input type="text" class="span2 search-query"&gt;
-      &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
-      &lt;/div&gt;
-  &lt;div class="input-prepend"&gt;
-    &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
-    &lt;input type="text" class="span2 search-query"&gt;
-  &lt;/div&gt;
+   &lt;div class="input-append"&gt;
+   &lt;input type="text" class="span2 search-query"&gt;
+   &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+   &lt;/div&gt;
 &lt;/form&gt;
 </pre>
 

@@ -57,6 +57,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 #header-container h5 {font-size: 14px;}
 
+
+
+.text-warning        { color: @orange; }
+a.text-warning:hover,
+a.text-warning:focus { color: darken(@orange, 10%); }
+
+.text-error          { color: @errorBackground; }
+a.text-error:hover,
+a.text-error:focus   { color: darken(@errorBackground, 10%); }
+
+.text-info           { color: @infoBackground; }
+a.text-info:hover,
+a.text-info:focus    { color: darken(@infoBackground, 10%); }
+
+.text-success        { color: @successBackground; }
+a.text-success:hover,
+a.text-success:focus { color: darken(@successBackground, 10%); }
+
+
 dt, th {
    font-size: 16px;
    font-weight: 600;
@@ -70,6 +89,8 @@ abbr, acronym, address, blockquote, cite, dl, dd, li, ol, p, q, td, tr {
 blockquote {
    border-left: 5px solid @light-blu2;
    background-color: @grayLighter;
+   padding-bottom: 5px;
+   padding-top: 5px;
 
    // Float right with text-align: right
    &.pull-right {

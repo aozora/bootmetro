@@ -5845,6 +5845,10 @@ textarea {
   line-height: 15px;
 }
 
+.input-prepend .btn-group .btn.dropdown-toggle .caret {
+  margin-top: 0;
+}
+
 .input-prepend .add-on:first-child,
 .input-prepend .btn:first-child {
   border: 2px solid #cccccc;
@@ -6626,6 +6630,42 @@ h6 {
   font-size: 14px;
 }
 
+.text-warning {
+  color: #f09609;
+}
+
+a.text-warning:hover,
+a.text-warning:focus {
+  color: #bf7707;
+}
+
+.text-error {
+  color: #bc1c48;
+}
+
+a.text-error:hover,
+a.text-error:focus {
+  color: #901537;
+}
+
+.text-info {
+  color: #2d89f0;
+}
+
+a.text-info:hover,
+a.text-info:focus {
+  color: #106fda;
+}
+
+.text-success {
+  color: #01a31c;
+}
+
+a.text-success:hover,
+a.text-success:focus {
+  color: #017013;
+}
+
 dt,
 th {
   font-size: 16px;
@@ -6652,6 +6692,8 @@ tr {
 }
 
 blockquote {
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: #eeeeee;
   border-left: 5px solid #0177db;
 }
@@ -6986,7 +7028,6 @@ AppBar control.
 
 .btn-group > .dropdown-toggle {
   min-width: 20px;
-  padding-bottom: 2px;
 }
 
 .btn-group > .btn-mini + .dropdown-toggle {
@@ -7000,11 +7041,24 @@ AppBar control.
   margin-top: 2px;
 }
 
+.btn-group > .btn-mini.dropdown-toggle {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.btn-group > .btn-mini.dropdown-toggle .caret {
+  margin-top: 0;
+}
+
 .btn-group > .btn-large + .dropdown-toggle {
   padding-top: 10px;
   *padding-top: 10px;
   padding-bottom: 8px;
   *padding-bottom: 8px;
+}
+
+.btn-group .btn.dropdown-toggle .caret {
+  margin-top: 0;
 }
 
 .notifications {
