@@ -79,6 +79,9 @@
     $('.bs-docs-carousel-example').carousel()
 
 
+     // Datepicker demo
+     $('.datepicker').datepicker();
+
   })
 
 

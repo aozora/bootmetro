@@ -6789,19 +6789,19 @@ Command button icons.
 
 .win-commandicon {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   min-width: 0;
   min-height: 0;
   padding: 0;
   font-size: 24px;
-  line-height: 40px;
+  line-height: 40px !important;
 }
 
 .win-commandimage {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   letter-spacing: 0;
   vertical-align: middle;
 }

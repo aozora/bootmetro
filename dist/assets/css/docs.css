@@ -623,6 +623,24 @@ hr.soften {
 }
 
 
+
+
+
+/* Metro Components
+-------------------------------------------------- */
+
+.win-command.orange .win-commandicon,
+.win-command.orange .win-label {
+   color: #F09609;
+}
+.win-command.orange .win-commandring {
+   border-color: #F09609;
+}
+.win-command.orange:hover .win-commandring {
+   background-color: rgba(240, 150, 9, 0.4);
+}
+
+
 /* Responsive variations
 -------------------------------------------------- */
 
