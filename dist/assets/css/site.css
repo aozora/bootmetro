@@ -88,18 +88,37 @@ body > .navbar {
    }
 
    #hero .btn {
-      padding: 19px 24px;
-      font-size: 24px;
-      line-height: 32px;
-      font-weight: 400;
-      color: #fff;
+      padding: 10px 18px;
+      margin-right: 10px;
       border: 0;
+      min-height: 46px;
+      color: #fff;
    }
+      #hero .btn .text {
+         display: inline-block;
+         vertical-align: top;
+      }
+         #hero .btn .text span {
+            display: block;
+         }
+         #hero .btn .text .header {
+            vertical-align: top;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 400;
+         }
+         #hero .btn .text .small {
+            font-size: 14px;
+            line-height: 14px;
+            color: #DDD;
+         }
+
       #hero .btn [class^="icon-"] {
-         font-size: 32px;
-         line-height: 32px;
-         margin: 0;
-         vertical-align: bottom;
+         display: inline-block;
+         vertical-align: top;
+         font-size: 38px;
+         line-height: 38px;
+         margin: 0 0 0 10px;
       }
 
 

@@ -7,6 +7,7 @@ The v1.0 will be completely redone from scratch using as base Bootstrap v3.
 BREAKING CHANGES:
    Replaced icomoon font with a new icomoon set generated with PUA. Many icon-* class names has changed;
    internal mapping of char codes has changed, please be patient and check every icon you used.
+   the static resources in the content folder has been moved to the assets folder
 
 
 List of changes:
