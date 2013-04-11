@@ -68,9 +68,16 @@ section,
 }
 
 .bs-docs-section-header {
-   /*border-bottom: 5px solid #B94A48;*/
-   color: #B94A48;
-   padding-top: 60px;
+   background-color: #EEEEEE;
+   border-left: 5px solid #0177DB;
+   color: #444;
+   margin-top: 60px;
+   padding: 0 10px;
+}
+
+.bs-docs-section-header h1 {
+   font-size: 42pt;
+   line-height: 1;
 }
 
 /* Few stylistic typography tweaks */
