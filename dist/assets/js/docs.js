@@ -82,6 +82,8 @@
      // Datepicker demo
      $('.datepicker').datepicker();
 
+     $('#dp3').datepicker();
+
   })
 
 

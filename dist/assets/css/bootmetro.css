@@ -6862,7 +6862,7 @@ a.win-command:hover {
   width: 60px;
   height: 60px;
   font-size: 40px;
-  line-height: 60px;
+  line-height: 60px !important;
   text-align: center;
 }
 
@@ -6870,7 +6870,7 @@ a.win-command:hover {
   width: 24px;
   height: 24px;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 24px !important;
 }
 
 /*
