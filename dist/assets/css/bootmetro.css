@@ -7559,8 +7559,8 @@ Progress control. */
 .progress.progress-indeterminate .bar {
   position: static;
   display: block;
-  width: 188px;
-  height: 11px;
+  width: 88px;
+  height: 8px;
   margin: 4px auto;
   background: transparent url("../img/progress-indeterminate-light.gif") no-repeat 0 0;
   -webkit-border-radius: 0;
@@ -7572,24 +7572,21 @@ Progress control. */
 }
 
 .win-ui-dark.progress.progress-indeterminate .bar {
-  width: 191px;
-  height: 7px;
-  margin: 9px auto;
   background: transparent url("../img/progress-indeterminate-dark.gif") no-repeat 0 0;
 }
 
 .progress.progress-indeterminate .win-ring.small {
   display: inline-block;
-  width: 23px;
-  height: 27px;
-  margin: 4px 10px 5px;
+  width: 24px;
+  height: 24px;
+  margin: 5px 10px;
   background: transparent url("../img/progress-indeterminate-ring-light-small.gif") no-repeat 0 0;
 }
 
 .win-ui-dark.progress.progress-indeterminate .win-ring.small {
   width: 24px;
-  height: 23px;
-  margin: 8px 10px 5px;
+  height: 24px;
+  margin: 5px 10px;
   background: transparent url("../img/progress-indeterminate-ring-dark-small.gif") no-repeat 0 0;
 }
 
