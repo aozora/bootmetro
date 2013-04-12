@@ -451,6 +451,19 @@ hr.soften {
 
 
 
+/* Welcome getting started
+-------------------------------------------------- */
+#getting-started .btn.btn-large {
+   line-height: 34px;
+}
+   #getting-started .btn.btn-large i {
+      font-size: 32px;
+      line-height: 32px;
+      margin-left: 20px;
+   }
+
+
+
 /* Icons
 -------------------------------------------------- */
 
