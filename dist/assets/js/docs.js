@@ -12,9 +12,14 @@ var app = $.sammy('#view-container', function() {
       //this.title = 'Hello!'
       this.page = this.params.page;
       // render the template and pass it through mustache
-      this.partial('partials/' + this.params.page + '.mustache');
+      this.partial('partials/' + this.params.page + '.mustache', function(){
+         // re-sync scrollspy & prettyprint
+         $('.bs-docs-sidebar').scrollspy('refresh');
 
-      $('.bs-docs-sidebar').scrollspy('refresh');
+         window.prettyPrint && prettyPrint()
+      });
+
+
    });
 });
 
