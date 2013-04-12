@@ -455,6 +455,7 @@ hr.soften {
 -------------------------------------------------- */
 #getting-started .btn.btn-large {
    line-height: 34px;
+   font-size: 24px;
 }
    #getting-started .btn.btn-large i {
       font-size: 32px;
