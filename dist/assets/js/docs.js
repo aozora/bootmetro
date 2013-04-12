@@ -1,3 +1,30 @@
+/* SAMMYJS START
+ ========================== */
+var app = $.sammy('#view-container', function() {
+   // include the plugin and alias mustache() to ms()
+   this.use('Mustache', 'mustache');
+
+   this.get('#/doc/:page', function(context) {
+
+      //context.log('page = ' + this.params.page);
+
+      // set local vars
+      //this.title = 'Hello!'
+      this.page = this.params.page;
+      // render the template and pass it through mustache
+      this.partial('partials/' + this.params.page + '.mustache');
+
+      $('.bs-docs-sidebar').scrollspy('refresh');
+   });
+});
+
+$(function() {
+   app.run('#/doc/welcome')
+});
+
+
+
+
 // NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
 // IT'S ALL JUST JUNK FOR OUR DOCS!
 // ++++++++++++++++++++++++++++++++++++++++++
@@ -84,7 +111,18 @@
 
      $('#dp3').datepicker();
 
-  })
+
+
+
+
+
+  });
+
+
+
+
+
+
 
 
 

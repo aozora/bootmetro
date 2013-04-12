@@ -53,6 +53,12 @@ body {
 }
 
 
+#view-container .progress {
+   margin: 15% auto;
+}
+
+
+
 /* Sections
 -------------------------------------------------- */
 

@@ -110,55 +110,55 @@ templates.forEach(function(templatedir){
 
 // Build DOCS
 // =============================================================
-console.log('\n\nCompiling Docs')
-console.log('\n\n==============')
-
-// retrieve pages
-var docTemplateDir = __dirname + '/../templates/docs'
-docs = fs.readdirSync(docTemplateDir)
-
-// compile layout template
-var doc_layout = fs.readFileSync(docTemplateDir + '/_layout.mustache', 'utf-8')
-doc_layout = hogan.compile(doc_layout)
-var doc_context = {}
-
-// get an array of doc pages as partials
-docs.forEach(function (name) {
-
-   // exclude non mustache files
-   if (!name.match(/\.mustache$/))
-      return
-
-   // exclude _layout & index
-   if (name.match(/^_layout/) || name.match(/^index/))
-      return
-
-   var doc = fs.readFileSync(docTemplateDir + '/' + name, 'utf-8')
-   doc = hogan.compile(doc, { sectionTags:[ {o:'_i', c:'i'} ] })
-
-   Object.defineProperty(doc_context, name.replace(/\.mustache$/, ''), {value : doc});
-
-   console.log('compiled doc page ' + name)
-})
-
-
-doc_context._i = true
-doc_context.production = prod
-doc_context.appname = appname
-doc_context.title = appname + ' Documentation'
-
-var doc_index = fs.readFileSync(docTemplateDir + '/index.mustache', 'utf-8')
-doc_index = hogan.compile(doc_index, { sectionTags:[ {o:'_i', c:'i'} ] })
-
-
-doc_context.body = doc_index
-doc_context.docssidebar = partial_docssidebar
-
-
-doc_index = doc_layout.render(doc_context, doc_context)
-
-fs.writeFileSync(__dirname + '/../dist/docs.html', doc_index, 'utf-8')
-
+//console.log('\n\nCompiling Docs')
+//console.log('\n\n==============')
+//
+//// retrieve pages
+//var docTemplateDir = __dirname + '/../templates/docs'
+//docs = fs.readdirSync(docTemplateDir)
+//
+//// compile layout template
+//var doc_layout = fs.readFileSync(docTemplateDir + '/_layout.mustache', 'utf-8')
+//doc_layout = hogan.compile(doc_layout)
+//var doc_context = {}
+//
+//// get an array of doc pages as partials
+//docs.forEach(function (name) {
+//
+//   // exclude non mustache files
+//   if (!name.match(/\.mustache$/))
+//      return
+//
+//   // exclude _layout & index
+//   if (name.match(/^_layout/) || name.match(/^index/))
+//      return
+//
+//   var doc = fs.readFileSync(docTemplateDir + '/' + name, 'utf-8')
+//   doc = hogan.compile(doc, { sectionTags:[ {o:'_i', c:'i'} ] })
+//
+//   Object.defineProperty(doc_context, name.replace(/\.mustache$/, ''), {value : doc});
+//
+//   console.log('compiled doc page ' + name)
+//})
+//
+//
+//doc_context._i = true
+//doc_context.production = prod
+//doc_context.appname = appname
+//doc_context.title = appname + ' Documentation'
+//
+//var doc_index = fs.readFileSync(docTemplateDir + '/index.mustache', 'utf-8')
+//doc_index = hogan.compile(doc_index, { sectionTags:[ {o:'_i', c:'i'} ] })
+//
+//
+//doc_context.body = doc_index
+//doc_context.docssidebar = partial_docssidebar
+//
+//
+//doc_index = doc_layout.render(doc_context, doc_context)
+//
+//fs.writeFileSync(__dirname + '/../dist/docs.html', doc_index, 'utf-8')
+//
 
 
 

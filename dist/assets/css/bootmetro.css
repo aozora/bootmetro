@@ -7544,7 +7544,7 @@ AppBar control.
 Progress control. */
 
 .progress {
-  height: 5px;
+  height: auto;
   background-image: none;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
@@ -7552,7 +7552,7 @@ Progress control. */
 }
 
 .progress.progress-indeterminate {
-  height: 19px;
+  height: auto;
   background-color: transparent;
 }
 
@@ -7571,16 +7571,22 @@ Progress control. */
           box-shadow: none;
 }
 
-.win-ui-dark.progress.progress-indeterminate .bar {
-  background: transparent url("../img/progress-indeterminate-dark.gif") no-repeat 0 0;
+.progress.progress-indeterminate .win-ring {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 5px 10px;
+  background: transparent url("../img/progress-indeterminate-ring-light.gif") no-repeat 0 0;
 }
 
 .progress.progress-indeterminate .win-ring.small {
-  display: inline-block;
   width: 24px;
   height: 24px;
-  margin: 5px 10px;
   background: transparent url("../img/progress-indeterminate-ring-light-small.gif") no-repeat 0 0;
+}
+
+.win-ui-dark.progress.progress-indeterminate .bar {
+  background: transparent url("../img/progress-indeterminate-dark.gif") no-repeat 0 0;
 }
 
 .win-ui-dark.progress.progress-indeterminate .win-ring.small {
