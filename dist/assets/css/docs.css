@@ -229,7 +229,7 @@ hr.soften {
 
       /* Nav: second level (shown on .active) */
       .bs-docs-sidebar .nav .nav {
-        display: none;
+        /*display: none;*/
         margin-bottom: 5px;
       }
       .bs-docs-sidebar .nav > .active > ul {
