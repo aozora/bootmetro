@@ -70,6 +70,7 @@ templates.forEach(function(templatedir){
       var page = fs.readFileSync(templatedir + '/' + name, 'utf-8')
          ,context = {}
 
+
       context[name.replace(/\.mustache$/, '')] = 'active'
       context._i = true
       context.production = prod
@@ -108,18 +109,82 @@ templates.forEach(function(templatedir){
 
 
 
-// Build DOCS
-// =============================================================
-//console.log('\n\nCompiling Docs')
-//console.log('\n\n==============')
-//
-//// retrieve pages
-//var docTemplateDir = __dirname + '/../templates/docs'
-//docs = fs.readdirSync(docTemplateDir)
-//
-//// compile layout template
-//var doc_layout = fs.readFileSync(docTemplateDir + '/_layout.mustache', 'utf-8')
-//doc_layout = hogan.compile(doc_layout)
+//Build DOCS
+//=============================================================
+console.log('\n\nCompiling Docs')
+console.log('\n\n==============')
+
+
+
+// retrieve pages
+var docTemplateDir = __dirname + '/../templates/docs'
+   ,docTemplatePartialDir = docTemplateDir + '/partials'
+   ,partial_sidebar
+docPages = fs.readdirSync(docTemplateDir)
+
+
+
+// retrieve doc partials
+var partial_grid = fs.readFileSync(docTemplatePartialDir + '/grid.mustache', 'utf-8')
+partial_grid = hogan.compile(partial_grid, { sectionTags:[
+   {o:'_i', c:'i'}
+] })
+
+var partial_basecss = fs.readFileSync(docTemplatePartialDir + '/base-css.mustache', 'utf-8')
+partial_basecss = hogan.compile(partial_basecss, { sectionTags:[
+   {o:'_i', c:'i'}
+] })
+
+
+// compile layout template
+var doc_layout = fs.readFileSync(docTemplateDir + '/_layout.mustache', 'utf-8')
+doc_layout = hogan.compile(doc_layout)
+
+// iterate over pages
+docPages.forEach(function (name) {
+
+   var docPage = fs.readFileSync(templatedir + '/' + name, 'utf-8')
+      ,docContext = {}
+
+   // check if the current page has scripts definex in partial pages
+   var hasSidebarPartial = fs.existsSync(docTemplatePartialDir + '/sidebar_' + name)
+   if (hasSidebarPartial){
+      partial_sidebar = fs.readFileSync(docTemplatePartialDir + '/sidebar_' + name, 'utf-8')
+      partial_sidebar = hogan.compile(partial_sidebar, { sectionTags:[
+         {o:'_i', c:'i'}
+      ] })
+   }
+
+
+   docContext[name.replace(/\.mustache$/, '')] = 'active'
+   docContext._i = true
+   docContext.production = prod
+   docContext.appname = appname
+   docContext.title = name.replace(/\.mustache/, '')
+      .replace(/\-.*/, '')
+      .replace(/(.)/, function ($1) {
+         return $1.toUpperCase()
+      })
+
+   docPage = hogan.compile(page, { sectionTags:[ {o:'_i', c:'i'} ] })
+
+   docPage = layout.render(context, {
+      body: docPage,
+      sidebar: partial_sidebar,
+      grid: partial_grid,
+      basecss: partial_basecss
+   })
+
+
+   var destinationPath = __dirname + '/../dist/';
+
+   var fullDestinationPath = destinationPath + name.replace(/mustache$/, 'html');
+   console.log('building ' + fullDestinationPath)
+
+   fs.writeFileSync(fullDestinationPath, docPage, 'utf-8')
+
+}
+
 //var doc_context = {}
 //
 //// get an array of doc pages as partials
@@ -156,9 +221,9 @@ templates.forEach(function(templatedir){
 //
 //
 //doc_index = doc_layout.render(doc_context, doc_context)
-//
+
 //fs.writeFileSync(__dirname + '/../dist/docs.html', doc_index, 'utf-8')
-//
+
 
 
 
