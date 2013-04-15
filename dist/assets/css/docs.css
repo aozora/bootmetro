@@ -12,20 +12,21 @@
 html,
 body {
    position: relative;
+   margin-top: 60px;
 }
 
-.bs-docs-container,
-.bs-home-container {
-  padding-left: 15px;
-  padding-right: 15px;
-}
+/*.bs-docs-container,*/
+/*.bs-home-container {*/
+  /*padding-left: 15px;*/
+  /*padding-right: 15px;*/
+/*}*/
 .bs-docs-container {
-  max-width: 860px;
+  /*max-width: 860px;*/
 }
-.bs-docs-container .row {
-  margin-left: -15px;
-  margin-right: -15px;
-}
+/*.bs-docs-container .row {*/
+  /*margin-left: -15px;*/
+  /*margin-right: -15px;*/
+/*}*/
 
 /*  */
 .bs-docs-footer {
@@ -191,12 +192,12 @@ hr.soften {
 -------------------------------------------------- */
 
 .bs-docs-sidebar {
-   display: none;
-   position: fixed;
-   top: 60px;
-   left: 0;
-   bottom: 0;
-   width: 240px;
+   display: block;
+   /*position: fixed;*/
+   /*top: 60px;*/
+   /*left: 0;*/
+   /*bottom: 0;*/
+   /*width: 240px;*/
    padding-top: 20px;
    overflow-y: scroll;
    /*color: #FFF;*/

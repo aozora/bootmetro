@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <!-- Mobile viewport optimized: h5bp.com/viewport -->
+   <meta name="viewport" content="width=device-width">
+
+   <title>{{appname}} Documentation - {{title}}</title>
+
+   <meta name="robots" content="noindex, nofollow">
+   <meta name="description" content="BootMetro : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
+   <meta name="keywords" content="bootmetro, modern ui, modern-ui, metro, metroui, metro-ui, metro ui, windows 8, metro style, bootstrap, framework, web framework, css, html" />
+   <meta name="author" content="AozoraLabs by Marcello Palmitessa"/>
+   
+   <!-- remove or comment this line if you want to use the local fonts -->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro-responsive.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro-icons.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro-ui-light.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/datepicker.css">
+
+   <!--  these two css are to use only for documentation -->
+   <link rel="stylesheet" type="text/css" href="assets/css/demo.css">
+   <link rel="stylesheet" type="text/css" href="assets/js/google-code-prettify/prettify.css" >
+
+   <!-- Le fav and touch icons -->
+   <link rel="shortcut icon" href="assets/ico/favicon.ico">
+   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  
+   <!-- All JavaScript at the bottom, except for Modernizr and Respond.
+      Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+      For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+   <script src="assets/js/modernizr-2.6.2.min.js"></script>
+
+   <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3182578-6']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+   </script>
+</head>
+
+<body class="bs-docs-docs" >
+   <!--[if lt IE 7]>
+   <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+   <![endif]-->
+
+   <!-- Navbar
+     ================================================== -->
+   <div class="navbar metro-navbar navbar-fixed-top">
+      <div class="navbar-inner">
+         <div class="container">
+            <button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+            <h1 class="brand" href="./index.html">BootMetro <small>documentation</small></h1>
+            <div class="nav-collapse collapse">
+               <ul class="nav">
+                  <li>
+                     <a href="./docs-index.html">Home</a>
+                  </li>
+                  <li>
+                     <a href="./docs-css.html">
+                        CSS
+                     </a>
+                  </li>
+                  <li><a href="./docs-icons.html">Icons</a></li>
+                  <li>
+                     <a href="./docs-components.html">
+                        Standard Components
+                     </a>
+                  </li>
+                  <li>
+                     <a href="./docs-javascript.html">Javascript</a>
+                  </li>
+                  <li>
+                     <a href="./docs-components.html">Metro Components</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="row">
+         <div class="bs-docs-sidebar span3">
+            {{>sidebar}}
+         </div>
+
+         <div class="bs-docs-container span9">
+            {{>body}}
+         </div>
+      </div>
+   </div>
+
+
+   <a class="bs-docs-top affix" href="#welcome">Back to top</a>
+
+   <footer class="bs-docs-footer">
+      <div class="container">
+         <p>Designed and built by <a target="_blank" href="https://twitter.com/aozoralabs">@aozoralabs</a>.</p>
+         <p>Code licensed under <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a> or <a target="_blank" href="http://www.gnu.org/licenses/gpl-2.0.html">GPL2, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+      </div>
+   </footer>
+
+   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script>window.jQuery || document.write("<script src='assets/js/jquery-1.8.3.min.js'>\x3C/script>")</script>
+
+   <!--[if IE 7]>
+   <script type="text/javascript" src="scripts/bootmetro-icons-ie7.js">
+   <![endif]-->
+
+   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="assets/js/bootmetro-panorama.js"></script>
+   <script type="text/javascript" src="assets/js/bootmetro-pivot.js"></script>
+   <script type="text/javascript" src="assets/js/bootmetro-charms.js"></script>
+   <script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
+   <script type="text/javascript" src="assets/js/holder.js"></script>
+
+   <!--<script type="text/javascript" src="assets/js/mustache.js"></script>-->
+   <!--<script type="text/javascript" src="assets/js/sammy-0.7.4.min.js"></script>-->
+   <!--<script type="text/javascript" src="assets/js/sammy.mustache-0.7.4.min.js"></script>-->
+
+   <script type="text/javascript" src="assets/js/docs.js"></script>
+</body>
+</html>
