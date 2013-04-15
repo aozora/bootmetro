@@ -15,29 +15,14 @@ var templates = [__dirname + '/../templates/demo',
                  __dirname + '/../templates/pages']
 
 
-var layout, pages, sidebar, partial_docssidebar, partial_loggeduser, partial_charms, partial_headermenu
+var layout, pages, sidebar, partial_loggeduser, partial_charms, partial_headermenu //, partial_docssidebar
 
 
 // retrieve partials
-partial_loggeduser = fs.readFileSync(__dirname + '/../templates/partials/logged-user.mustache', 'utf-8')
-partial_loggeduser = hogan.compile(partial_loggeduser, { sectionTags:[
-   {o:'_i', c:'i'}
-] })
-
-partial_charms = fs.readFileSync(__dirname + '/../templates/partials/charms.mustache', 'utf-8')
-partial_charms = hogan.compile(partial_charms, { sectionTags:[
-   {o:'_i', c:'i'}
-] })
-
-partial_headermenu = fs.readFileSync(__dirname + '/../templates/partials/header-menu.mustache', 'utf-8')
-partial_headermenu = hogan.compile(partial_headermenu, { sectionTags:[
-   {o:'_i', c:'i'}
-] })
-
-partial_docssidebar = fs.readFileSync(__dirname + '/../templates/partials/docs-sidebar.mustache', 'utf-8')
-partial_docssidebar = hogan.compile(partial_docssidebar, { sectionTags:[
-   {o:'_i', c:'i'}
-] })
+partial_loggeduser = getCompiledFile(__dirname + '/../templates/partials/logged-user.mustache')
+partial_charms = getCompiledFile(__dirname + '/../templates/partials/charms.mustache')
+partial_headermenu = getCompiledFile(__dirname + '/../templates/partials/header-menu.mustache')
+//partial_docssidebar = getCompiledFile(__dirname + '/../templates/partials/docs-sidebar.mustache')
 
 
 
@@ -48,8 +33,7 @@ partial_docssidebar = hogan.compile(partial_docssidebar, { sectionTags:[
 templates.forEach(function(templatedir){
 
    // compile layout template
-   layout = fs.readFileSync(templatedir + '/_layout.mustache', 'utf-8')
-   layout = hogan.compile(layout)
+   layout = getCompiledFile(templatedir + '/_layout.mustache')
 
    // retrieve pages
    pages = fs.readdirSync(templatedir)
@@ -67,10 +51,7 @@ templates.forEach(function(templatedir){
       if (name.substring(0, 1) == '_')
          return
 
-      var page = fs.readFileSync(templatedir + '/' + name, 'utf-8')
-         ,context = {}
-
-
+      var context = {}
       context[name.replace(/\.mustache$/, '')] = 'active'
       context._i = true
       context.production = prod
@@ -81,7 +62,7 @@ templates.forEach(function(templatedir){
                               return $1.toUpperCase()
                            })
 
-      page = hogan.compile(page, { sectionTags:[ {o:'_i', c:'i'} ] })
+      var page = getCompiledFile(templatedir + '/' + name)
 
       page = layout.render(context, {
          body: page,
@@ -119,42 +100,36 @@ console.log('\n\n==============')
 // retrieve pages
 var docTemplateDir = __dirname + '/../templates/docs'
    ,docTemplatePartialDir = docTemplateDir + '/partials'
+   ,docTemplateSidebarPartialDir = docTemplateDir + '/sidebar_partials'
    ,partial_sidebar
 docPages = fs.readdirSync(docTemplateDir)
 
 
 
-// retrieve doc partials
-var partial_grid = fs.readFileSync(docTemplatePartialDir + '/grid.mustache', 'utf-8')
-partial_grid = hogan.compile(partial_grid, { sectionTags:[
-   {o:'_i', c:'i'}
-] })
-
-var partial_basecss = fs.readFileSync(docTemplatePartialDir + '/base-css.mustache', 'utf-8')
-partial_basecss = hogan.compile(partial_basecss, { sectionTags:[
-   {o:'_i', c:'i'}
-] })
+//// retrieve doc partials
+//var partial_grid = getCompiledFile(docTemplatePartialDir + '/grid.mustache')
+//var partial_basecss = getCompiledFile(docTemplatePartialDir + '/basecss.mustache')
 
 
 // compile layout template
-var doc_layout = fs.readFileSync(docTemplateDir + '/_layout.mustache', 'utf-8')
-doc_layout = hogan.compile(doc_layout)
+var doc_layout = getCompiledFile(docTemplateDir + '/_layout.mustache')
+
+// put partials into context
+var docContext = {}
+docContext = getPartialsIntoContext(docContext, docTemplatePartialDir)
+
 
 // iterate over pages
 docPages.forEach(function (name) {
 
-   var docPage = fs.readFileSync(templatedir + '/' + name, 'utf-8')
-      ,docContext = {}
-
    // check if the current page has scripts definex in partial pages
-   var hasSidebarPartial = fs.existsSync(docTemplatePartialDir + '/sidebar_' + name)
+   var hasSidebarPartial = fs.existsSync(docTemplateSidebarPartialDir + '/sidebar_' + name)
    if (hasSidebarPartial){
-      partial_sidebar = fs.readFileSync(docTemplatePartialDir + '/sidebar_' + name, 'utf-8')
-      partial_sidebar = hogan.compile(partial_sidebar, { sectionTags:[
-         {o:'_i', c:'i'}
-      ] })
+      partial_sidebar = getCompiledFile(docTemplateSidebarPartialDir + '/sidebar_' + name)
    }
 
+//   // put partials into context
+//   docContext = getPartialsIntoContext(docContext, docTemplatePartialDir)
 
    docContext[name.replace(/\.mustache$/, '')] = 'active'
    docContext._i = true
@@ -166,13 +141,13 @@ docPages.forEach(function (name) {
          return $1.toUpperCase()
       })
 
-   docPage = hogan.compile(page, { sectionTags:[ {o:'_i', c:'i'} ] })
+   var docPage = getCompiledFile(docTemplateDir + '/' + name)
 
-   docPage = layout.render(context, {
+   docPage = doc_layout.render(docContext, {
       body: docPage,
-      sidebar: partial_sidebar,
+      sidebar: partial_sidebar /*,
       grid: partial_grid,
-      basecss: partial_basecss
+      basecss: partial_basecss */
    })
 
 
@@ -183,7 +158,7 @@ docPages.forEach(function (name) {
 
    fs.writeFileSync(fullDestinationPath, docPage, 'utf-8')
 
-}
+})
 
 //var doc_context = {}
 //
@@ -296,3 +271,28 @@ recess([path.join(lessdir, '/bootmetro/bootmetro-ui-light.less')], {
 });
 
 
+
+
+
+
+function getCompiledFile(path){
+   layout = fs.readFileSync(path, 'utf-8')
+   layout = hogan.compile(layout, { sectionTags:[ {o:'_i', c:'i'} ] })
+   return layout;
+}
+
+
+
+function getPartialsIntoContext(context, partialsPath){
+
+   var file = fs.readdirSync(partialsPath)
+
+   file.forEach(function(name){
+
+      var partial = getCompiledFile(partialsPath + '/' + name)
+      Object.defineProperty(context, name.replace(/\.mustache$/, ''), {value : partial});
+
+   })
+
+   return context
+}
