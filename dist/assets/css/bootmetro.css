@@ -7298,7 +7298,13 @@ AppBar control.
 }
 
 .navbar.metro-navbar .navbar-inner {
+  height: 60px;
+  min-height: 60px;
   background-color: #EEEEEE;
+}
+
+.navbar.metro-navbar .nav > li {
+  line-height: 40px;
 }
 
 .navbar.metro-navbar .nav > li > a {

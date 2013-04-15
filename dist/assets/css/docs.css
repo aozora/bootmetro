@@ -174,16 +174,30 @@ hr.soften {
 }
 
 
+/* Documentation Metro Navbar
+-------------------------------------------------- */
+.bs-docs-docs .navbar.metro-navbar .brand {
+   line-height: 20px;
+}
+.bs-docs-docs .navbar.metro-navbar .brand small {
+   font-size: 20px;
+   line-height: 20px;
+   display: block;
+}
+
+
+
 /* Sidenav
 -------------------------------------------------- */
 
 .bs-docs-sidebar {
    display: none;
    position: fixed;
-   top: 0;
+   top: 60px;
    left: 0;
    bottom: 0;
    width: 240px;
+   padding-top: 20px;
    overflow-y: scroll;
    color: #FFF;
    /*text-shadow: 0 1px 0 #fff;*/
@@ -200,9 +214,11 @@ hr.soften {
       }
 
       .bs-docs-sidebar .nav > li > a {
-        display: block;
-        color: #FFF;
-        padding: 4px 25px;
+         display: block;
+         font-size: 18px;
+         color: #FFF;
+         padding: 4px 25px;
+         text-shadow: none;
       }
          .bs-docs-sidebar .nav > li > a:hover,
          .bs-docs-sidebar .nav > li > a:focus {
