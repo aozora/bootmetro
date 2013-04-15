@@ -7267,6 +7267,7 @@ AppBar control.
 }
 
 .navbar-inner {
+  background-color: transparent;
   background-image: none;
   filter: 0;
   -webkit-box-shadow: none;
@@ -7294,6 +7295,25 @@ AppBar control.
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
+}
+
+.navbar.metro-navbar .navbar-inner {
+  background-color: #EEEEEE;
+}
+
+.navbar.metro-navbar .nav > li > a {
+  margin-right: 4px;
+  text-transform: uppercase;
+  background-color: #DDD;
+}
+
+.navbar.metro-navbar .nav > li.active > a {
+  background-color: #FFF;
+}
+
+.navbar.metro-navbar .nav li.dropdown .dropdown-toggle .caret,
+.navbar.metro-navbar .nav li.dropdown.open .caret {
+  margin-top: 0;
 }
 
 .pager .next a:after {
