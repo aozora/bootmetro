@@ -199,9 +199,9 @@ hr.soften {
    width: 240px;
    padding-top: 20px;
    overflow-y: scroll;
-   color: #FFF;
+   /*color: #FFF;*/
+   /*background-color: #004D60;*/
    /*text-shadow: 0 1px 0 #fff;*/
-   background-color: #004D60;
    /*box-shadow: inset -1px 0 0 #e5e5e5;*/
 }
 
@@ -216,7 +216,7 @@ hr.soften {
       .bs-docs-sidebar .nav > li > a {
          display: block;
          font-size: 18px;
-         color: #FFF;
+         /*color: #FFF;*/
          padding: 4px 25px;
          text-shadow: none;
       }
@@ -224,23 +224,23 @@ hr.soften {
          .bs-docs-sidebar .nav > li > a:focus {
             text-decoration: none;
             /*border-right: 1px solid #d5d5d5;*/
-            background-color: #FFF;
+            /*background-color: #FFF;*/
             color: #000;
          }
          .bs-docs-sidebar .nav > .active > a,
          .bs-docs-sidebar .nav > .active:hover > a,
          .bs-docs-sidebar .nav > .active:focus > a {
-           font-weight: 500;
-           color: #19BFC9;
-           background-color: #216475;
+           font-weight: 400;
+           color: #FFF;
+           background-color: #0177db;
            /*border-right: 1px solid #b94a48;*/
          }
 
-      .bs-docs-sidebar .nav > li > .caret {
-         position: absolute;
-         top: 2px;
-         right: 2px;
-      }
+      /*.bs-docs-sidebar .nav > li > .caret {*/
+         /*position: absolute;*/
+         /*top: 2px;*/
+         /*right: 2px;*/
+      /*}*/
 
 
 
@@ -253,10 +253,17 @@ hr.soften {
         display: block;
       }
       .bs-docs-sidebar .nav .nav > li > a {
-        padding-top: 2px;
-        padding-bottom: 2px;
-        padding-left: 40px;
-        font-size: 90%;
+         border-left: 3px solid #00BFF2;
+         display: inline-block;
+         font-size: 90%;
+         margin-left: 40px;
+         margin-bottom: 2px;
+         padding-left: 10px;
+         padding-top: 2px;
+      }
+      .bs-docs-sidebar .nav .nav > li > a:hover {
+         background-color: #00BFF2;
+         color: #FFF;
       }
 
       .bs-docs-sidenav-heading {

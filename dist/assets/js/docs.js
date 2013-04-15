@@ -14,7 +14,10 @@ var app = $.sammy('#view-container', function() {
       // render the template and pass it through mustache
       this.partial('partials/' + this.params.page + '.mustache', function(){
          // re-sync scrollspy & prettyprint
-         $('.bs-docs-sidebar').scrollspy('refresh');
+         //$('.bs-docs-sidebar').scrollspy('refresh');
+         $('[data-spy="scroll"]').each(function () {
+            var $spy = $(this).scrollspy('refresh')
+         });
 
          window.prettyPrint && prettyPrint()
       });

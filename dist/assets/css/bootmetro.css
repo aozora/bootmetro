@@ -7309,6 +7309,7 @@ AppBar control.
 
 .navbar.metro-navbar .nav > li > a {
   margin-right: 4px;
+  text-shadow: none;
   text-transform: uppercase;
   background-color: #DDD;
 }
