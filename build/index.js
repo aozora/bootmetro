@@ -131,7 +131,13 @@ docPages.forEach(function (name) {
 
    // put partials into context
    var docContext = {}
-   docContext = getPartialsIntoContext(docContext, docTemplatePartialDir)
+      ,partialsContext = {}
+      ,files = fs.readdirSync(docTemplatePartialDir)
+
+   files.forEach(function(name){
+      var partial = getCompiledFile(docTemplatePartialDir + '/' + name)
+      Object.defineProperty(partialsContext, name.replace(/\.mustache$/, ''), {value : partial});
+   })
 
    docContext[name.replace(/\.mustache$/, '')] = 'active'
    docContext._i = true
@@ -145,16 +151,13 @@ docPages.forEach(function (name) {
 
    var docPage = getCompiledFile(docTemplateDir + '/' + name)
 
-   docPage = doc_layout.render(docContext, {
-      body: docPage,
-      sidebar: partial_sidebar /*,
-      grid: partial_grid,
-      basecss: partial_basecss */
-   })
+   partialsContext.body = docPage
+   partialsContext.sidebar = partial_sidebar
+
+   docPage = doc_layout.render(docContext, partialsContext)
 
 
    var destinationPath = __dirname + '/../dist/';
-
    var fullDestinationPath = destinationPath + name.replace(/mustache$/, 'html');
    console.log('building ' + fullDestinationPath)
 
@@ -246,19 +249,3 @@ function getCompiledFile(path){
    return layout;
 }
 
-
-
-function getPartialsIntoContext(context, partialsPath){
-//console.log('getPartialsIntoContext(\'' + partialsPath + '\')')
-
-   var file = fs.readdirSync(partialsPath)
-
-   file.forEach(function(name){
-
-      var partial = getCompiledFile(partialsPath + '/' + name)
-      Object.defineProperty(context, name.replace(/\.mustache$/, ''), {value : partial});
-
-   })
-
-   return context
-}
