@@ -107,7 +107,7 @@
                   <ul class="nav">
                      <li><a href="#dropdowns-example">Example</a></li>
                      <li><a href="#dropdowns-alignment">Alignment options</a></li>
-                     <li><a href="#dropdowns-submenus">Alignment options</a></li>
+                     <li><a href="#dropdowns-submenus">Sub menus</a></li>
                   </ul>
                </li>
                <li>
@@ -248,31 +248,31 @@
                      </ul>
                   </div>
                </div>
-               <pre class="prettyprint linenums">
-               &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
-                 &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
-                 &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                 &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                 &lt;li class="divider"&gt;&lt;/li&gt;
-                 &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-               &lt;/ul&gt;
-               </pre>
+            <pre class="prettyprint linenums">
+            &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
+              &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+              &lt;li class="divider"&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            </pre>
             
                <h2>Markup</h2>
                <p>Looking at just the dropdown menu, here's the required HTML. You need to wrap the dropdown's trigger and the dropdown menu within <code>.dropdown</code>, or another element that declares <code>position: relative;</code>. Then just create the menu.</p>
             
-               <pre class="prettyprint linenums">
-               &lt;div class="dropdown"&gt;
-                 &lt;!-- Link or button to toggle dropdown --&gt;
-                 &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
-                   &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
-                   &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                   &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                   &lt;li class="divider"&gt;&lt;/li&gt;
-                   &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-                 &lt;/ul&gt;
-               &lt;/div&gt;
-               </pre>
+            <pre class="prettyprint linenums">
+            &lt;div class="dropdown"&gt;
+              &lt;!-- Link or button to toggle dropdown --&gt;
+              &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+                &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="divider"&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+            </pre>
             
                <h2 id="dropdowns-alignment">Options</h2>
                <p>Align menus to the right and add include additional levels of dropdowns.</p>
@@ -296,13 +296,13 @@
                      </ul>
                   </div>
                </div>
-               <pre class="prettyprint linenums">
-               &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
-                 &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Regular link&lt;/a&gt;&lt;/li&gt;
-                 &lt;li class="disabled"&gt;&lt;a tabindex="-1" href="#"&gt;Disabled link&lt;/a&gt;&lt;/li&gt;
-                 &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another link&lt;/a&gt;&lt;/li&gt;
-               &lt;/ul&gt;
-               </pre>
+            <pre class="prettyprint linenums">
+            &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
+              &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Regular link&lt;/a&gt;&lt;/li&gt;
+              &lt;li class="disabled"&gt;&lt;a tabindex="-1" href="#"&gt;Disabled link&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another link&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            </pre>
             
                <h3 id="dropdowns-submenus">Sub menus on dropdowns</h3>
                <p>Add an extra level of dropdown menus, appearing on hover like those of OS X, with some simple markup additions. Add <code>.dropdown-submenu</code> to any <code>li</code> in an existing dropdown menu for automatic styling.</p>
@@ -375,17 +375,17 @@
                   </div>
             
                </div>
-               <pre class="prettyprint linenums">
-               &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
-                 ...
-                 &lt;li class="dropdown-submenu"&gt;
-                   &lt;a tabindex="-1" href="#"&gt;More options&lt;/a&gt;
-                   &lt;ul class="dropdown-menu"&gt;
-                     ...
-                   &lt;/ul&gt;
-                 &lt;/li&gt;
-               &lt;/ul&gt;
-               </pre>
+            <pre class="prettyprint linenums">
+            &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+              ...
+              &lt;li class="dropdown-submenu"&gt;
+                &lt;a tabindex="-1" href="#"&gt;More options&lt;/a&gt;
+                &lt;ul class="dropdown-menu"&gt;
+                  ...
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+            </pre>
             
             </div>
             

@@ -6481,7 +6481,7 @@ Dropdown submenu
 }
 
 .dropup .caret:after {
-  content: "\e12c";
+  content: "\e131";
 }
 
 .dropup .btn-large .caret {
@@ -6516,7 +6516,7 @@ a.header-dropdown .caret {
   font-family: 'IcoMoon';
   color: #CCC;
   border: 0;
-  content: '\e0f1';
+  content: "\e12a";
 }
 
 .dropup .caret,
@@ -6544,7 +6544,7 @@ a.header-dropdown .caret {
 .caret {
   min-width: 14px;
   min-height: 18px;
-  padding: 0 3px;
+  padding: 0;
   margin: 0;
   overflow: hidden;
   font-family: 'IcoMoon';

@@ -15,20 +15,9 @@ body {
    padding-top: 60px;
 }
 
-/*.bs-docs-container,*/
-/*.bs-home-container {*/
-  /*padding-left: 15px;*/
-  /*padding-right: 15px;*/
-/*}*/
-.bs-docs-container {
-  /*max-width: 860px;*/
-}
-/*.bs-docs-container .row {*/
-  /*margin-left: -15px;*/
-  /*margin-right: -15px;*/
+/*.bs-docs-container {*/
 /*}*/
 
-/*  */
 .bs-docs-footer {
   padding-left:  15px;
   padding-right: 15px;
@@ -98,20 +87,6 @@ section > ul li {
 }
 
 
-
-
-/* padding for in-page bookmarks and fixed navbar
-section {
-   padding-top: 30px;
-}
-section > .page-header,
-section > .lead {
-   color: #5a5a5a;
-}
-section > ul li {
-   margin-bottom: 5px;
-}
-*/
 
 /* Separators (hr) */
 .bs-docs-separator {
@@ -193,111 +168,23 @@ hr.soften {
 
 .bs-docs-sidebar {
    display: block;
-   /*padding-top: 20px;*/
 }
 
 .bs-docs-sidenav {
    position: fixed;
    width: 228px;
-   height: 90%;
+   height: 80%;
    margin: 0;
    padding: 0;
    background-color: #fff;
    overflow-y: auto;
 }
-.bs-docs-sidenav.affix {
-   top: 60px;
-}
-.bs-docs-sidenav.affix-top {
-   top: 60px;
-}
-.bs-docs-sidenav.affix-bottom {
-   top: 60px;
-}
+   .bs-docs-sidenav.affix,
+   .bs-docs-sidenav.affix-top,
+   .bs-docs-sidenav.affix-bottom {
+      top: 60px;
+   }
 
-
-
-
-
-   /* Nav: first level */
-   /*.bs-docs-sidebar > .nav {*/
-     /*margin: 0 0 25px 0;*/
-   /*}*/
-      /*.bs-docs-sidebar .nav > li {*/
-         /*position: relative;*/
-      /*}*/
-
-      /*.bs-docs-sidebar .nav > li > a {*/
-         /*display: block;*/
-         /*font-size: 18px;*/
-         /*color: #FFF;*/
-         /*padding: 4px 25px;*/
-         /*text-shadow: none;*/
-      /*}*/
-         /*.bs-docs-sidebar .nav > li > a:hover,*/
-         /*.bs-docs-sidebar .nav > li > a:focus {*/
-            /*text-decoration: none;*/
-            /*border-right: 1px solid #d5d5d5;*/
-            /*background-color: #FFF;*/
-            /*color: #000;*/
-            /*color: #FFF;*/
-            /*background-color: #0177db;*/
-
-         /*}*/
-         /*.bs-docs-sidebar .nav > .active > a,*/
-         /*.bs-docs-sidebar .nav > .active:hover > a,*/
-         /*.bs-docs-sidebar .nav > .active:focus > a {*/
-           /*font-weight: 600;*/
-           /*color: #FFF;*/
-           /*background-color: #0177db;*/
-         /*}*/
-
-
-
-      /* Nav: second level (shown on .active) */
-      /*.bs-docs-sidebar .nav .nav {*/
-        /*display: none;*/
-        /*margin-bottom: 5px;*/
-      /*}*/
-      /*.bs-docs-sidebar .nav > .active > ul {*/
-        /*display: block;*/
-      /*}*/
-      /*.bs-docs-sidebar .nav .nav > li > a {*/
-         /*border-left: 3px solid #00BFF2;*/
-         /*display: inline-block;*/
-         /*font-size: 90%;*/
-         /*margin-left: 40px;*/
-         /*margin-bottom: 2px;*/
-         /*padding-left: 10px;*/
-         /*padding-top: 2px;*/
-      /*}*/
-      /*.bs-docs-sidebar .nav .nav > li > a:hover {*/
-         /*background-color: #00BFF2;*/
-         /*color: #FFF;*/
-      /*}*/
-
-      /*.bs-docs-sidebar .nav .nav > .active > a,*/
-      /*.bs-docs-sidebar .nav .nav > .active:hover > a,*/
-      /*.bs-docs-sidebar .nav .nav > .active:focus > a {*/
-         /*font-weight: 600;*/
-         /*color: #FFF;*/
-         /*border-left: 3px solid #0177db;*/
-      /*}*/
-
-
-/* Section headings for groups of links */
-/*.bs-docs-sidenav > li > .nav-header {*/
-  /*margin-top: 20px;*/
-  /*margin-bottom: 5px;*/
-  /*font-size: 14px;*/
-  /*font-weight: 500;*/
-  /*color: #333;*/
-/*}*/
-/*.bs-docs-sidenav > .active > .nav-header,*/
-/*.bs-docs-sidenav > .active > .nav-header:hover {*/
-  /*color: #333;*/
-  /*border-color: #333;*/
-/*}*/
 
 
 
@@ -307,8 +194,10 @@ hr.soften {
 /* Base class */
 .bs-docs-example {
   position: relative;
-  padding: 39px 14px 14px;
-  margin-bottom: -1px;
+  margin: 15px 0;
+  padding: 39px 19px 14px;
+  *padding-top: 19px;
+  background-color: #fff;
   border: 1px solid #ddd;
 }
 /* Echo out a label for the example */
@@ -326,13 +215,11 @@ hr.soften {
 }
 
 /* Tweak display of the examples */
-.bs-docs-example + .prettyprint,
-.bs-docs-example + .highlight {
-  margin-top: 0;
+.bs-docs-example + .prettyprint {
+  margin-top: -20px;
+  padding-top: 15px;
 }
-.prettyprint .linenums {
-  /*margin-left: 0;*/
-}
+
 
 /* Tweak content of examples for optimum awesome */
 .bs-docs-example > p:last-child,
@@ -476,6 +363,23 @@ hr.soften {
   width: 260px;
   margin: 20px;
 }
+
+
+/* Dropdowns */
+.bs-docs-example-submenus {
+  min-height: 180px;
+}
+.bs-docs-example-submenus > .pull-left + .pull-left {
+  margin-left: 20px;
+}
+.bs-docs-example-submenus .dropup > .dropdown-menu,
+.bs-docs-example-submenus .dropdown > .dropdown-menu {
+  display: block;
+  position: static;
+  margin-bottom: 5px;
+  *width: 180px;
+}
+
 
 
 
