@@ -7,8 +7,8 @@ var  hogan = require('hogan.js')
    , prod = process.argv[2] == 'production'
    , title = 'BootMetro'
    , appname = 'BootMetro'
-   , robots_noindex = '<meta name="robots" content="noindex, nofollow">'
-   , robots_index = '<meta name="robots" content="index, nofollow">'
+//   , robots_noindex = '<meta name="robots" content="noindex, nofollow">'
+//   , robots_index = '<meta name="robots" content="index, nofollow">'
 
 
 var templates = [__dirname + '/../templates/demo',
@@ -102,34 +102,36 @@ var docTemplateDir = __dirname + '/../templates/docs'
    ,docTemplatePartialDir = docTemplateDir + '/partials'
    ,docTemplateSidebarPartialDir = docTemplateDir + '/sidebar_partials'
    ,partial_sidebar
-docPages = fs.readdirSync(docTemplateDir)
-
-
-
-//// retrieve doc partials
-//var partial_grid = getCompiledFile(docTemplatePartialDir + '/grid.mustache')
-//var partial_basecss = getCompiledFile(docTemplatePartialDir + '/basecss.mustache')
+   ,docPages = fs.readdirSync(docTemplateDir)
 
 
 // compile layout template
 var doc_layout = getCompiledFile(docTemplateDir + '/_layout.mustache')
 
-// put partials into context
-var docContext = {}
-docContext = getPartialsIntoContext(docContext, docTemplatePartialDir)
-
 
 // iterate over pages
 docPages.forEach(function (name) {
 
+
+   // exclude non mustache files
+   if (!name.match(/\.mustache$/))
+      return
+
+   // exclude _layout & index
+   if (name.match(/^_layout/) || name.match(/^index/))
+      return
+
+
    // check if the current page has scripts definex in partial pages
-   var hasSidebarPartial = fs.existsSync(docTemplateSidebarPartialDir + '/sidebar_' + name)
+   var hasSidebarPartial = fs.existsSync(docTemplateSidebarPartialDir + '/sidebar-' + name)
    if (hasSidebarPartial){
-      partial_sidebar = getCompiledFile(docTemplateSidebarPartialDir + '/sidebar_' + name)
+      partial_sidebar = getCompiledFile(docTemplateSidebarPartialDir + '/sidebar-' + name)
    }
 
-//   // put partials into context
-//   docContext = getPartialsIntoContext(docContext, docTemplatePartialDir)
+
+   // put partials into context
+   var docContext = {}
+   docContext = getPartialsIntoContext(docContext, docTemplatePartialDir)
 
    docContext[name.replace(/\.mustache$/, '')] = 'active'
    docContext._i = true
@@ -159,45 +161,6 @@ docPages.forEach(function (name) {
    fs.writeFileSync(fullDestinationPath, docPage, 'utf-8')
 
 })
-
-//var doc_context = {}
-//
-//// get an array of doc pages as partials
-//docs.forEach(function (name) {
-//
-//   // exclude non mustache files
-//   if (!name.match(/\.mustache$/))
-//      return
-//
-//   // exclude _layout & index
-//   if (name.match(/^_layout/) || name.match(/^index/))
-//      return
-//
-//   var doc = fs.readFileSync(docTemplateDir + '/' + name, 'utf-8')
-//   doc = hogan.compile(doc, { sectionTags:[ {o:'_i', c:'i'} ] })
-//
-//   Object.defineProperty(doc_context, name.replace(/\.mustache$/, ''), {value : doc});
-//
-//   console.log('compiled doc page ' + name)
-//})
-//
-//
-//doc_context._i = true
-//doc_context.production = prod
-//doc_context.appname = appname
-//doc_context.title = appname + ' Documentation'
-//
-//var doc_index = fs.readFileSync(docTemplateDir + '/index.mustache', 'utf-8')
-//doc_index = hogan.compile(doc_index, { sectionTags:[ {o:'_i', c:'i'} ] })
-//
-//
-//doc_context.body = doc_index
-//doc_context.docssidebar = partial_docssidebar
-//
-//
-//doc_index = doc_layout.render(doc_context, doc_context)
-
-//fs.writeFileSync(__dirname + '/../dist/docs.html', doc_index, 'utf-8')
 
 
 
@@ -276,6 +239,8 @@ recess([path.join(lessdir, '/bootmetro/bootmetro-ui-light.less')], {
 
 
 function getCompiledFile(path){
+//console.log('getCompiledFile(\'' + path + '\')')
+
    layout = fs.readFileSync(path, 'utf-8')
    layout = hogan.compile(layout, { sectionTags:[ {o:'_i', c:'i'} ] })
    return layout;
@@ -284,6 +249,7 @@ function getCompiledFile(path){
 
 
 function getPartialsIntoContext(context, partialsPath){
+//console.log('getPartialsIntoContext(\'' + partialsPath + '\')')
 
    var file = fs.readdirSync(partialsPath)
 

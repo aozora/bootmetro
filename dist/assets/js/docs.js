@@ -1,38 +1,3 @@
-/* SAMMYJS START
- ========================== */
-var app = $.sammy('#view-container', function() {
-   // include the plugin and alias mustache() to ms()
-   this.use('Mustache', 'mustache');
-
-   this.get('#/doc/:page', function(context) {
-
-      //context.log('page = ' + this.params.page);
-
-      // set local vars
-      //this.title = 'Hello!'
-      this.page = this.params.page;
-      // render the template and pass it through mustache
-      this.partial('partials/' + this.params.page + '.mustache', function(){
-         // re-sync scrollspy & prettyprint
-         //$('.bs-docs-sidebar').scrollspy('refresh');
-         $('[data-spy="scroll"]').each(function () {
-            var $spy = $(this).scrollspy('refresh')
-         });
-
-         window.prettyPrint && prettyPrint()
-      });
-
-
-   });
-});
-
-$(function() {
-   app.run('#/doc/welcome')
-});
-
-
-
-
 // NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
 // IT'S ALL JUST JUNK FOR OUR DOCS!
 // ++++++++++++++++++++++++++++++++++++++++++
@@ -48,19 +13,19 @@ $(function() {
       e.preventDefault()
     })
 
-    // back to top
-    // setTimeout(function () {
-    //   $('.bs-docs-sidenav').affix({
-    //     offset: {
-    //       top: function () { return $window.width() <= 980 ? 290 : 210 }
-    //     , bottom: 270
-    //     }
-    //   })
-    // }, 100)
+     // side bar
+     setTimeout(function () {
+        $('.bs-docs-sidenav').affix({
+           offset: {
+              top: function () { return $window.width() <= 980 ? 290 : 210 }
+              , bottom: 270
+           }
+        })
+     }, 100)
 
-    setTimeout(function () {
-      $('.bs-docs-top').affix()
-    }, 100)
+//    setTimeout(function () {
+//      $('.bs-docs-top').affix()
+//    }, 100)
 
     // make code pretty
     window.prettyPrint && prettyPrint()
@@ -119,19 +84,7 @@ $(function() {
 
      $('#dp3').datepicker();
 
-
-
-
-
-
   });
-
-
-
-
-
-
-
 
 
 }(window.jQuery)
