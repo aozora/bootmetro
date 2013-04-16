@@ -212,9 +212,7 @@ hr.soften {
    top: 60px;
 }
 .bs-docs-sidenav.affix-bottom {
-   position: absolute;
-   top: auto;
-   bottom: 0;
+   top: 60px;
 }
 
 
@@ -222,99 +220,84 @@ hr.soften {
 
 
    /* Nav: first level */
-   .bs-docs-sidebar > .nav {
-     margin: 0 0 25px 0;
-   }
-      .bs-docs-sidebar .nav > li {
-         position: relative;
-      }
+   /*.bs-docs-sidebar > .nav {*/
+     /*margin: 0 0 25px 0;*/
+   /*}*/
+      /*.bs-docs-sidebar .nav > li {*/
+         /*position: relative;*/
+      /*}*/
 
-      .bs-docs-sidebar .nav > li > a {
-         display: block;
-         font-size: 18px;
+      /*.bs-docs-sidebar .nav > li > a {*/
+         /*display: block;*/
+         /*font-size: 18px;*/
          /*color: #FFF;*/
-         padding: 4px 25px;
-         text-shadow: none;
-      }
-         .bs-docs-sidebar .nav > li > a:hover,
-         .bs-docs-sidebar .nav > li > a:focus {
-            text-decoration: none;
+         /*padding: 4px 25px;*/
+         /*text-shadow: none;*/
+      /*}*/
+         /*.bs-docs-sidebar .nav > li > a:hover,*/
+         /*.bs-docs-sidebar .nav > li > a:focus {*/
+            /*text-decoration: none;*/
             /*border-right: 1px solid #d5d5d5;*/
             /*background-color: #FFF;*/
             /*color: #000;*/
-            color: #FFF;
-            background-color: #0177db;
+            /*color: #FFF;*/
+            /*background-color: #0177db;*/
 
-         }
-         .bs-docs-sidebar .nav > .active > a,
-         .bs-docs-sidebar .nav > .active:hover > a,
-         .bs-docs-sidebar .nav > .active:focus > a {
-           font-weight: 600;
+         /*}*/
+         /*.bs-docs-sidebar .nav > .active > a,*/
+         /*.bs-docs-sidebar .nav > .active:hover > a,*/
+         /*.bs-docs-sidebar .nav > .active:focus > a {*/
+           /*font-weight: 600;*/
            /*color: #FFF;*/
            /*background-color: #0177db;*/
-         }
+         /*}*/
 
 
 
       /* Nav: second level (shown on .active) */
-      .bs-docs-sidebar .nav .nav {
+      /*.bs-docs-sidebar .nav .nav {*/
         /*display: none;*/
-        margin-bottom: 5px;
-      }
-      .bs-docs-sidebar .nav > .active > ul {
-        display: block;
-      }
-      .bs-docs-sidebar .nav .nav > li > a {
-         border-left: 3px solid #00BFF2;
-         display: inline-block;
-         font-size: 90%;
-         margin-left: 40px;
-         margin-bottom: 2px;
-         padding-left: 10px;
-         padding-top: 2px;
-      }
-      .bs-docs-sidebar .nav .nav > li > a:hover {
-         background-color: #00BFF2;
-         color: #FFF;
-      }
-
-      .bs-docs-sidebar .nav .nav > .active > a,
-      .bs-docs-sidebar .nav .nav > .active:hover > a,
-      .bs-docs-sidebar .nav .nav > .active:focus > a {
-         font-weight: 600;
+        /*margin-bottom: 5px;*/
+      /*}*/
+      /*.bs-docs-sidebar .nav > .active > ul {*/
+        /*display: block;*/
+      /*}*/
+      /*.bs-docs-sidebar .nav .nav > li > a {*/
+         /*border-left: 3px solid #00BFF2;*/
+         /*display: inline-block;*/
+         /*font-size: 90%;*/
+         /*margin-left: 40px;*/
+         /*margin-bottom: 2px;*/
+         /*padding-left: 10px;*/
+         /*padding-top: 2px;*/
+      /*}*/
+      /*.bs-docs-sidebar .nav .nav > li > a:hover {*/
+         /*background-color: #00BFF2;*/
          /*color: #FFF;*/
-         border-left: 3px solid #0177db;
-      }
+      /*}*/
 
+      /*.bs-docs-sidebar .nav .nav > .active > a,*/
+      /*.bs-docs-sidebar .nav .nav > .active:hover > a,*/
+      /*.bs-docs-sidebar .nav .nav > .active:focus > a {*/
+         /*font-weight: 600;*/
+         /*color: #FFF;*/
+         /*border-left: 3px solid #0177db;*/
+      /*}*/
 
-      .bs-docs-sidenav-heading {
-        margin: 0 0 25px;
-      }
-      .bs-docs-sidenav-heading a {
-        display: block;
-        padding: 15px 25px;
-        color: #FFF;
-        border-bottom: 1px solid #e5e5e5;
-        /*box-shadow: 0 1px 0 #fff;*/
-      }
-      .bs-docs-sidenav-heading a:hover {
-        color: #CCC;
-        text-decoration: none;
-      }
 
 /* Section headings for groups of links */
-.bs-docs-sidenav > li > .nav-header {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
-}
-.bs-docs-sidenav > .active > .nav-header,
-.bs-docs-sidenav > .active > .nav-header:hover {
-  color: #333;
-  border-color: #333;
-}
+/*.bs-docs-sidenav > li > .nav-header {*/
+  /*margin-top: 20px;*/
+  /*margin-bottom: 5px;*/
+  /*font-size: 14px;*/
+  /*font-weight: 500;*/
+  /*color: #333;*/
+/*}*/
+/*.bs-docs-sidenav > .active > .nav-header,*/
+/*.bs-docs-sidenav > .active > .nav-header:hover {*/
+  /*color: #333;*/
+  /*border-color: #333;*/
+/*}*/
 
 
 

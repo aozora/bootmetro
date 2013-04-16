@@ -7009,6 +7009,14 @@ AppBar control.
   text-shadow: none;
 }
 
+.btn.btn-warning,
+.btn.btn-danger,
+.btn.btn-success,
+.btn.btn-info,
+.btn.btn-inverse {
+  color: #FFF;
+}
+
 .btn-group > .btn:first-child,
 .btn-group > .btn:last-child,
 .btn-group > .dropdown-toggle {
@@ -7264,6 +7272,78 @@ AppBar control.
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
+}
+
+/* Nav: first level */
+
+.metro-nav-list {
+  margin: 0 0 25px 0;
+}
+
+.metro-nav-list > li {
+  position: relative;
+}
+
+.metro-nav-list > li > a {
+  display: block;
+  padding: 4px 25px;
+  font-size: 18px;
+  text-shadow: none;
+}
+
+.metro-nav-list > li > a:hover,
+.metro-nav-list > li > a:focus {
+  color: #FFF;
+  text-decoration: none;
+  background-color: #0177db;
+}
+
+.metro-nav-list > .active > a,
+.metro-nav-list > .active:hover > a,
+.metro-nav-list > .active:focus > a {
+  font-weight: 600;
+}
+
+/* Nav: second level (shown on .active) */
+
+.metro-nav-list .nav {
+  margin-bottom: 5px;
+}
+
+.metro-nav-list > .active > ul {
+  display: block;
+}
+
+.metro-nav-list .nav > li > a {
+  display: inline-block;
+  padding-top: 2px;
+  padding-left: 10px;
+  margin-bottom: 2px;
+  margin-left: 40px;
+  font-size: 90%;
+  border-left: 3px solid #00BFF2;
+}
+
+.metro-nav-list .nav > li > a:hover {
+  color: #FFF;
+  background-color: #00BFF2;
+}
+
+.metro-nav-list .nav > .active > a,
+.metro-nav-list .nav > .active:hover > a,
+.metro-nav-list .nav > .active:focus > a {
+  font-weight: 600;
+  border-left: 3px solid #0177db;
+}
+
+/* Section headings for groups of links */
+
+.metro-nav-list > .nav-header {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
 }
 
 .navbar-inner {

@@ -76,7 +76,7 @@
                      <a href="./docs-index.html">Home</a>
                   </li>
                   <li class="">
-                     <a href="./docs-css.html">CSS</a>
+                     <a href="./docs-css.html">Basic CSS</a>
                   </li>
                   <li class="">
                      <a href="./docs-icons.html">Icons</a>
@@ -99,7 +99,7 @@
    <div id="doc-container" class="container">
       <div class="row">
          <div class="bs-docs-sidebar span3">
-            <ul class="nav bs-docs-sidenav">
+            <ul class="nav metro-nav-list bs-docs-sidenav">
                <!-- Components -->
                <li><a href="#components" class="nav-header">Components</a></li>
                <li>
@@ -137,6 +137,7 @@
                      <li><a href="#nav-alignment">Alignment options</a></li>
                      <li><a href="#nav-dropdowns">Using dropdowns</a></li>
                      <li><a href="#nav-list">Nav list</a></li>
+                     <li><a href="#metro-nav-list">Metro Nav list</a></li>
                      <li><a href="#nav-tabbable">Tabbable nav</a></li>
                   </ul>
                </li>
@@ -995,14 +996,14 @@
                   </ul>
                </div> <!-- /well -->
             </div>
-               <pre class="prettyprint linenums">
-               &lt;ul class="nav nav-list"&gt;
-                 &lt;li class="nav-header"&gt;List header&lt;/li&gt;
-                 &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-                 &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
-                 ...
-               &lt;/ul&gt;
-               </pre>
+            <pre class="prettyprint linenums">
+            &lt;ul class="nav nav-list"&gt;
+              &lt;li class="nav-header"&gt;List header&lt;/li&gt;
+              &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+              ...
+            &lt;/ul&gt;
+            </pre>
             <p>
                <span class="label label-info">Note</span>
                For nesting within a nav list, include <code>class="nav nav-list"</code> on any nested <code>&lt;ul&gt;</code>.
@@ -1010,13 +1011,62 @@
             
             <h3>Horizontal dividers</h3>
             <p>Add a horizontal divider by creating an empty list item with the class <code>.divider</code>, like so:</p>
-               <pre class="prettyprint linenums">
-               &lt;ul class="nav nav-list"&gt;
-                 ...
-                 &lt;li class="divider"&gt;&lt;/li&gt;
-                 ...
-               &lt;/ul&gt;
-               </pre>
+            <pre class="prettyprint linenums">
+            &lt;ul class="nav nav-list"&gt;
+              ...
+              &lt;li class="divider"&gt;&lt;/li&gt;
+              ...
+            &lt;/ul&gt;
+            </pre>
+            
+            
+            
+            <h2 id="metro-nav-list">Metro Nav lists</h2>
+            <p>A metro styled groups of nav links with optional headers.</p>
+            <h3>Example metro nav list</h3>
+            <p>Take a list of links and add <code>class="nav metro-nav-list"</code>:</p>
+            <div class="bs-docs-example">
+               <div class="well" style="max-width: 340px; padding: 8px 0;">
+                  <ul class="nav metro-nav-list">
+                     <li class="nav-header">List header</li>
+                     <li class="active">
+                        <a href="#">Home</a>
+                        <ul class="nav">
+                           <li><a href="#">Library</a></li>
+                           <li class="active">
+                              <a href="#">Applications</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="nav-header">Another list header</li>
+                     <li>
+                        <a href="#">Profile</a>
+                        <ul class="nav">
+                           <li><a href="#">Sub 1</a></li>
+                           <li>
+                              <a href="#">Sub 2</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><a href="#">Settings</a></li>
+                     <li><a href="#">Help</a></li>
+                  </ul>
+               </div> <!-- /well -->
+            </div>
+            <pre class="prettyprint linenums">
+            &lt;ul class="nav metro-nav-list"&gt;
+              &lt;li class="nav-header"&gt;List header&lt;/li&gt;
+              &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+              ...
+            &lt;/ul&gt;
+            </pre>
+            <p>
+               <span class="label label-info">Note</span>
+               For nesting within a metro nav list, include <code>class="nav"</code> on any nested <code>&lt;ul&gt;</code>.
+            </p>
+            
+            
             
             
             <hr class="bs-docs-separator">
@@ -2612,6 +2662,7 @@
    <script type="text/javascript" src="scripts/bootmetro-icons-ie7.js">
    <![endif]-->
 
+   <script type="text/javascript" src="assets/js/google-code-prettify/prettify.js"></script>
    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
    <script type="text/javascript" src="assets/js/bootmetro-panorama.js"></script>
    <script type="text/javascript" src="assets/js/bootmetro-pivot.js"></script>

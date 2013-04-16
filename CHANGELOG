@@ -15,6 +15,7 @@ List of changes:
 bug fixes for 0.6
 New documentation pages, separated from demo pages.
 upgrade Bootstrap base to latest v2.3.1
+new Metro Nav List (like the one used in the doc sidebar)
 move CSS to LESS and integrate build with Bootstrap (backported from 1.0)
 complete Tiles templates (backported from 1.0)
 Toast notifications (backported from 1.0)
