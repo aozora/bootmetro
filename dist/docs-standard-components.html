@@ -1036,6 +1036,7 @@
                            <li class="active">
                               <a href="#">Applications</a>
                            </li>
+                           <li><a href="#">Utilities</a></li>
                         </ul>
                      </li>
                      <li class="nav-header">Another list header</li>
@@ -1043,9 +1044,9 @@
                         <a href="#">Profile</a>
                         <ul class="nav">
                            <li><a href="#">Sub 1</a></li>
-                           <li>
-                              <a href="#">Sub 2</a>
-                           </li>
+                           <li><a href="#">Sub 2</a></li>
+                           <li><a href="#">Sub 3</a></li>
+                           <li><a href="#">Sub 4</a></li>
                         </ul>
                      </li>
                      <li><a href="#">Settings</a></li>
@@ -1055,10 +1056,15 @@
             </div>
             <pre class="prettyprint linenums">
             &lt;ul class="nav metro-nav-list"&gt;
-              &lt;li class="nav-header"&gt;List header&lt;/li&gt;
-              &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
-              ...
+               &lt;li class="nav-header"&gt;List header&lt;/li&gt;
+               &lt;li class="active"&gt;
+                  &lt;a href="#"&gt;Home&lt;/a&gt;
+                  &lt;ul class="nav"&gt;
+                     &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+                     ...
+                  &lt;/ul&gt;
+               &lt;/li&gt;
+               ...
             &lt;/ul&gt;
             </pre>
             <p>

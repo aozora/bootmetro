@@ -7274,6 +7274,10 @@ AppBar control.
           border-radius: 0;
 }
 
+.nav .dropdown-toggle .caret {
+  margin-top: 0;
+}
+
 /* Nav: first level */
 
 .metro-nav-list {
@@ -7369,6 +7373,12 @@ AppBar control.
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
+}
+
+.navbar .nav li.dropdown .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open .caret,
+.navbar .nav .dropdown-toggle .caret {
+  margin-top: 0;
 }
 
 .navbar-search .search-query {
