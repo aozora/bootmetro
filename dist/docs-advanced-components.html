@@ -103,26 +103,25 @@
             <!-- Metro Components -->
                <li>
                   <a href="#metro-components" class="nav-header">Advanced Components</a>
+               </li>
+               <li>
+                  <a href="#page-components">Page components</a>
                   <ul class="nav">
-            
-                     <li>
-                        <a href="#page-components">Page components</a>
-                        <ul class="nav">
-                           <li><a href="#type-components-page-header">Page header</a></li>
-                           <li><a href="#type-components-metro-page-header">Page header with back button</a></li>
-                           <li><a href="#type-components-hero">Hero</a></li>
-                        </ul>
-                     </li>
-            
-                     <li><a href="#metro-commands">Command Buttons</a></li>
-                     <li><a href="#metro-progress">Metro Progress Bars</a></li>
-                     <li><a href="#metro-modals">Modal</a></li>
-                     <li><a href="#metro-datepicker">DatePicker</a></li>
-                     <li><a href="#metro-flipview">FlipView</a></li>
-                     <li><a href="#metro-pivot">Pivot</a></li>
-                     <li><a href="#metro-toast">Toast Notification</a></li>
+                     <li><a href="#type-components-page-header">Page header</a></li>
+                     <li><a href="#type-components-metro-page-header1">Page header with back button</a></li>
+                     <li><a href="#type-components-metro-page-header2">Page header subtitle &amp; back button</a></li>
+                     <li><a href="#type-components-metro-page-header3">Page header with back button &amp; nav menu</a></li>
+                     <li><a href="#type-components-hero">Hero</a></li>
                   </ul>
                </li>
+            
+               <li><a href="#metro-commands">Command Buttons</a></li>
+               <li><a href="#metro-progress">Metro Progress Bars</a></li>
+               <li><a href="#metro-modals">Modal</a></li>
+               <li><a href="#metro-datepicker">DatePicker</a></li>
+               <li><a href="#metro-flipview">FlipView</a></li>
+               <li><a href="#metro-pivot">Pivot</a></li>
+               <li><a href="#metro-toast">Toast Notification</a></li>
             </ul>
          </div>
 
@@ -157,19 +156,50 @@
             
             
             
-            
-               <h2 id="type-components-metro-page-header">Page header with sub-title and back button</h2>
-               <p>A page header with the page title and the application sub-title on top, and with a left arrow button that should be used to navigate back. It can utilize the <code>h1</code>'s default <code>small</code>, element as well most other components (with additional styles).</p>
+               <h2 id="type-components-metro-page-header1">Page header back button</h2>
+               <p>A page header with a left arrow button that should be used to navigate back. It can utilize the <code>h1</code>'s default <code>small</code>, element as well most other components (with additional styles).</p>
                <div class="bs-docs-example bs-docs-example-metro-page-header">
-            
                   <div id="nav-bar">
                      <div class="row">
                         <div class="span9">
                            <div id="header-container">
                               <a id="backbutton" class="win-backbutton" href="#"></a>
-                              <h5>BootMetro</h5>
                               <div class="dropdown">
-                                 <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                                 <h1 class="header-dropdown accent-color">Title</h1>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            <pre class="prettyprint linenums">
+            &lt;div id="nav-bar"&gt;
+               &lt;div class="row"&gt;
+                  &lt;div class="span9"&gt;
+                     &lt;div id="header-container"&gt;
+                        &lt;a id="backbutton" class="win-backbutton" href="#"&gt;&lt;/a&gt;
+                        &lt;div class="dropdown"&gt;
+                           &lt;h1 class="header-dropdown accent-color"&gt;Title&lt;/h1&gt;
+                        &lt;/div&gt;
+                     &lt;/div&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
+            </pre>
+            
+            
+            
+               <h2 id="type-components-metro-page-header2">Page header with sub-title and back button</h2>
+               <p>A page header with the page title and the application sub-title on top, and with a left arrow button that should be used to navigate back. It can utilize the <code>h1</code>'s default <code>small</code>, element as well most other components (with additional styles).</p>
+               <div class="bs-docs-example bs-docs-example-metro-page-header">
+                  <div id="nav-bar">
+                     <div class="row">
+                        <div class="span9">
+                           <div id="header-container">
+                              <a id="backbutton" class="win-backbutton" href="#"></a>
+                              <h5>Application name</h5>
+                              <div class="dropdown">
+                                 <a class="header-dropdown accent-color" href="#">
                                     Start
                                  </a>
                               </div>
@@ -177,15 +207,78 @@
                         </div>
                      </div>
                   </div>
-            
                </div>
             <pre class="prettyprint linenums">
-            
-            
-            
+            &lt;div id="nav-bar"&gt;
+               &lt;div class="row"&gt;
+                  &lt;div class="span9"&gt;
+                     &lt;div id="header-container"&gt;
+                        &lt;a id="backbutton" class="win-backbutton" href="#"&gt;&lt;/a&gt;
+                        &lt;h5&gt;Application name&lt;/h5&gt;
+                        &lt;div class="dropdown"&gt;
+                           &lt;a class="header-dropdown accent-color" href="#"&gt;
+                              Page Title
+                           &lt;/a&gt;
+                        &lt;/div&gt;
+                     &lt;/div&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
             </pre>
             
-               <!--page header with back and dropdown navigation-->
+            
+               <h2 id="type-components-metro-page-header3">Page header with back button and nav dropdown menu</h2>
+               <p>A page header with the page title, the application sub-title on top, the left arrow button that should be used to navigate back, and the dropdown menu for navigation on other pages.</p>
+               <div class="bs-docs-example bs-docs-example-metro-page-header">
+                  <div id="nav-bar">
+                     <div class="row">
+                        <div class="span9">
+                           <div id="header-container">
+                              <a id="backbutton" class="win-backbutton" href="#"></a>
+                              <h5>Application name</h5>
+                              <div class="dropdown">
+                                 <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                                    Title
+                                    <b class="caret"></b>
+                                 </a>
+                                 <ul class="dropdown-menu">
+                                    <li><a href="#">Go to another page</a></li>
+                                    <li><a href="#">Go to another page</a></li>
+                                    <li><a href="#">Go to another page</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Home</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            <pre class="prettyprint linenums">
+            &lt;div id="nav-bar"&gt;
+               &lt;div class="row"&gt;
+                  &lt;div class="span9"&gt;
+                     &lt;div id="header-container"&gt;
+                        &lt;a id="backbutton" class="win-backbutton" href="#"&gt;&lt;/a&gt;
+                        &lt;h5&gt;Application name&lt;/h5&gt;
+                        &lt;div class="dropdown"&gt;
+                           &lt;a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#"&gt;
+                              Title
+                              &lt;b class="caret"&gt;&lt;/b&gt;
+                           &lt;/a&gt;
+                           &lt;ul class="dropdown-menu"&gt;
+                              &lt;li&gt;&lt;a href="#"&gt;Go to another page&lt;/a&gt;&lt;/li&gt;
+                              &lt;li&gt;&lt;a href="#"&gt;Go to another page&lt;/a&gt;&lt;/li&gt;
+                              &lt;li&gt;&lt;a href="#"&gt;Go to another page&lt;/a&gt;&lt;/li&gt;
+                              &lt;li class="divider"&gt;&lt;/li&gt;
+                              &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                           &lt;/ul&gt;
+                        &lt;/div&gt;
+                     &lt;/div&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
+            </pre>
             
             
                <h2 id="type-components-hero">Hero unit</h2>

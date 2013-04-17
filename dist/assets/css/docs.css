@@ -382,6 +382,10 @@ hr.soften {
 
 
 /* Metro Page Header */
+.bs-docs-example-metro-page-header h1 {
+   margin-top: 4px;
+}
+
 .bs-docs-example-metro-page-header h5 {
    margin: 0;
 }
