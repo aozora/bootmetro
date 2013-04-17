@@ -12,7 +12,8 @@
 html,
 body {
    position: relative;
-   padding-top: 60px;
+   margin: 0;
+   padding: 0;
 }
 
 /*.bs-docs-container {*/
@@ -46,6 +47,7 @@ body {
 #doc-container,
 #doc-container > row {
    position: relative;
+   margin-top: 90px;
 }
 
 

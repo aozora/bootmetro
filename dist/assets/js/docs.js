@@ -79,10 +79,10 @@
     $('.bs-docs-carousel-example').carousel()
 
 
-     // Datepicker demo
-     $('.datepicker').datepicker();
-
-     $('#dp3').datepicker();
+//     // Datepicker demo
+//     $('.datepicker').datepicker();
+//
+//     $('#dp3').datepicker();
 
   });
 

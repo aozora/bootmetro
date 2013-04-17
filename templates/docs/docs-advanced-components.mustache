@@ -178,112 +178,92 @@
 </div>
 
 
-
-
-<!-- DatePicker
+<!-- Pivot
 ================================================== -->
 <div class="bs-docs-section">
    <div class="page-header">
-      <h1 id="metro-datepicker">DatePicker <small></small></h1>
+      <h1 id="metro-pivot">Pivot Control <small></small></h1>
    </div>
-   <p>Code from: <a href="http://www.eyecon.ro/bootstrap-datepicker/">http://www.eyecon.ro/bootstrap-datepicker/</a></p>
-
-   <p>Attached to a field with the format specified via options.</p>
-   <div class="bs-docs-example">
-      <input type="text" id="dp1" value="02-16-2012" class="span2 datepicker">
-   </div>
-   <pre class="prettyprint linenums">
-   &lt;input type="text" id="dp1" value="02-16-2012" class="span2 datepicker"&gt;
-   </pre>
-
-   <p>Attachet to a field with the format specified via data tag.</p>
-   <div class="bs-docs-example">
-      <input type="text" id="dp2" data-date-format="mm/dd/yy" value="02/16/12" class="span2 datepicker">
-   </div>
-   <pre class="prettyprint linenums">
-   &lt;input type="text" id="dp2" data-date-format="mm/dd/yy" value="02-16-2012" class="span2 datepicker"&gt;
-   </pre>
-
-   <p>As component.</p>
-   <div class="bs-docs-example">
-      <div data-date-format="dd-mm-yyyy" data-date="12-02-2012" id="dp3" class="input-append date">
-         <input type="text" readonly="" value="12-02-2012" size="16" class="span2">
-         <span class="add-on"><i class="icon-calendar-3"></i></span>
-      </div>
-   </div>
-   <pre class="prettyprint linenums">
-   &lt;div data-date-format="dd-mm-yyyy" data-date="12-02-2012" id="dp3" class="input-append date"&gt;
-      &lt;input type="text" readonly="" value="12-02-2012" size="16" class="span2"&gt;
-      &lt;span class="add-on"&gt;&lt;i class="icon-calendar-3"&gt;&lt;/i&gt;&lt;/span&gt;
-      &lt;/div&gt;
-   </pre>
-
-</div>
-
-
-
-<!-- FlipView
-================================================== -->
-<div class="bs-docs-section">
-   <div class="page-header">
-      <h1 id="metro-flipview">FlipView <small></small></h1>
-   </div>
-   <p>The FlipView control lets flip through views or items one at a time. Flip buttons appear on mouse hover and let people flip to the next or previous item.</p>
-   <p>
-      <span class="label label-info">Note:</span> The FlipView control is a customization of the <a href="./javascript.html#carousel">Carousel</a> component, so it requires the carousel javascript plugin.
-   </p>
-
-
-   <h2>Example</h2>
-   <p>The slideshow below shows a generic plugin and component for cycling through elements like a carousel.</p>
-   <div class="bs-docs-example">
-      <div class="row">
-         <div class="span4">
-            <div id="myFlipview" class="carousel flipview slide span4">
-               <div class="carousel-inner">
-                  <div class="item active">
-                     <img src="assets/img/sample-1.jpg" alt="">
-                     <div class="carousel-caption">
-                        <h4>First Thumbnail label</h4>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <img src="assets/img/sample-2.jpg" alt="">
-                     <div class="carousel-caption">
-                        <h4>Second Thumbnail label</h4>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <img src="assets/img/sample-3.jpg" alt="">
-                     <div class="carousel-caption">
-                        <h4>Third Thumbnail label</h4>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                     </div>
-                  </div>
-               </div>
-               <a class="left carousel-control" href="#myFlipview" data-slide="prev">&#xe127;</a>
-               <a class="right carousel-control" href="#myFlipview" data-slide="next">&#xe12a;</a>
+   <div class="bs-docs-example" style="background-color: #f5f5f5;">
+      <div id="pivot" class="pivot slide">
+         <div class="pivot-headers">
+            <a href="#pivot" data-pivot-index="0" class="active">Item 1</a>
+            <a href="#pivot" data-pivot-index="1">Item 2</a>
+            <a href="#pivot" data-pivot-index="2">Item 3</a>
+            <a href="#pivot" data-pivot-index="3">Item 4</a>
+         </div>
+         <div class="pivot-items">
+            <div id="pivot-item-1" class="pivot-item active">
+               <h3>Item 1</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            </div>
+            <div id="pivot-item-2" class="pivot-item">
+               <h3>Item 2</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            </div>
+            <div id="pivot-item-3" class="pivot-item">
+               <h3>Item 3</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            </div>
+            <div id="pivot-item-4" class="pivot-item">
+               <h3>Item 4</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
             </div>
          </div>
       </div>
    </div>
-   <pre class="prettyprint linenums">
-   &lt;div id="myFlipview" class="carousel flipview slide"&gt;
-     &lt;!-- Carousel items --&gt;
-     &lt;div class="carousel-inner"&gt;
-       &lt;div class="active item"&gt;…&lt;/div&gt;
-       &lt;div class="item"&gt;…&lt;/div&gt;
-       &lt;div class="item"&gt;…&lt;/div&gt;
-     &lt;/div&gt;
-     &lt;!-- Carousel nav --&gt;
-     &lt;a class="carousel-control left" href="#myFlipview" data-slide="prev"&gt;&amp;#xe127;&lt;/a&gt;
-     &lt;a class="carousel-control right" href="#myFlipview" data-slide="next"&gt;&amp;#xe12a;&lt;/a&gt;
+<pre class="prettyprint linenums">
+&lt;div id="pivot" class="pivot slide"&gt;
+&lt;div class="pivot-headers"&gt;
+   &lt;a href="#pivot" data-target="0" class="active"&gt;Item 1&lt;/a&gt;
+   &lt;a href="#pivot" data-target="1"&gt;Item 2&lt;/a&gt;
+   &lt;a href="#pivot" data-target="2"&gt;Item 3&lt;/a&gt;
+   &lt;a href="#pivot" data-target="3"&gt;Item 4&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="pivot-items"&gt;
+   &lt;div id="pivot-item-1" class="pivot-item active"&gt;
+      &lt;h3&gt;Item 1&lt;/h3&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;...&lt;/p&gt;
    &lt;/div&gt;
-   </pre>
+   &lt;div id="pivot-item-2" class="pivot-item"&gt;
+      &lt;h3&gt;Item 2&lt;/h3&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div id="pivot-item-3" class="pivot-item"&gt;
+      &lt;h3&gt;Item 3&lt;/h3&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div id="pivot-item-4" class="pivot-item"&gt;
+      &lt;h3&gt;Item 4&lt;/h3&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<hr class="bs-docs-separator">
+
+
+<h2>Usage</h2>
+<p>Include the bootmetro-pivot.js alongside the other JS files.</p>
+
+<h3>Via data attributes</h3>
+<p>Activate a modal without writing JavaScript. Set <code>data-target</code> attribute on every header anchor with the index of the related pivot panel as value.</p>
+
+
+
 
 </div>
+
+
 
 
 <!-- AppBar -->
