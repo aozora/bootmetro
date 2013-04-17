@@ -4,6 +4,198 @@
    <p class="lead">Dozens of reusable components built to provide iconography, dropdowns, navigation, alerts, popovers, and much more.</p>
 </div>
 
+
+<!-- Command Buttons
+================================================== -->
+<div class="bs-docs-section">
+   <div class="page-header">
+      <h1 id="metro-commands">Command Buttons <small>Special action buttons</small></h1>
+   </div>
+
+   <h2 id="metro-commands-example">Examples and markup</h2>
+   <p>Command styles can be applied to anything with the <code>.win-command</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.</p>
+
+   <h3>Commands with icons</h3>
+   <p>To use one of the font icons provided with BootMetro, use a <code>.win-commandicon</code> and a <code>.icon-*</code> class.</p>
+   <p>Hover each command to display an explanatory tooltip.</p>
+   <div class="bs-docs-example bs-docs-example-commands">
+      <button class="win-command" rel="tootlip" title="Simple command with only an icon">
+         <span class="win-commandicon icon-cog-4"></span>
+      </button>
+
+      <button class="win-command" rel="tootlip" title="Command with icon and label">
+         <span class="win-commandicon icon-cog-4"></span>
+         <span class="win-label">With label</span>
+      </button>
+
+      <button class="win-command" rel="tootlip" title="Command with icon with border ring">
+         <span class="win-commandicon win-commandring icon-cog-4"></span>
+      </button>
+
+      <button class="win-command" rel="tootlip" title="Command with icon and label with border ring">
+         <span class="win-commandicon win-commandring icon-cog-4"></span>
+         <span class="win-label">With ring &amp; label</span>
+      </button>
+   </div>
+   <pre class="prettyprint linenums">
+   &lt;button class="win-command" rel="tootlip" title="Simple command with only an icon"&gt;
+      &lt;span class="win-commandicon icon-cog-4"&gt;&lt;/span&gt;
+   &lt;/button&gt;
+
+   &lt;button class="win-command" rel="tootlip" title="Command with icon and label"&gt;
+      &lt;span class="win-commandicon icon-cog-4"&gt;&lt;/span&gt;
+      &lt;span class="win-label"&gt;With label&lt;/span&gt;
+   &lt;/button&gt;
+
+   &lt;button class="win-command" rel="tootlip" title="Command with icon with border ring"&gt;
+      &lt;span class="win-commandicon win-commandring icon-cog-4"&gt;&lt;/span&gt;
+   &lt;/button&gt;
+
+   &lt;button class="win-command" rel="tootlip" title="Command with icon and label with border ring"&gt;
+      &lt;span class="win-commandicon win-commandring icon-cog-4"&gt;&lt;/span&gt;
+      &lt;span class="win-label"&gt;With ring &amp; label&lt;/span&gt;
+   &lt;/button&gt;
+   </pre>
+
+   <h3>Basic Commands with dark theme</h3>
+   <p>Hover each command to display an explanatory tooltip.</p>
+   <div class="bs-docs-example bs-docs-example-commands">
+      <div class="win-ui-dark">
+         <button class="win-command" rel="tootlip" title="Simple command with only an icon">
+            <span class="win-commandicon icon-cog-4"></span>
+         </button>
+
+         <button class="win-command" rel="tootlip" title="Command with icon and label">
+            <span class="win-commandicon icon-cog-4"></span>
+            <span class="win-label">With label</span>
+         </button>
+
+         <button class="win-command" rel="tootlip" title="Command with icon with border ring">
+            <span class="win-commandicon win-commandring icon-cog-4"></span>
+         </button>
+
+         <button class="win-command" rel="tootlip" title="Command with icon and label with border ring">
+            <span class="win-commandicon win-commandring icon-cog-4"></span>
+            <span class="win-label">With ring &amp; label</span>
+         </button>
+      </div>
+   </div>
+
+   <br/>
+
+
+   <h3>Commands with images</h3>
+   <p>To use a custom image, use a <code>.win-commandimage</code> class.</p>
+   <div class="bs-docs-example bs-docs-example-commands">
+      <button class="win-command" rel="tootlip" title="Simple command with an image inside">
+                     <span class="win-commandimage">
+                        <img src="assets/img/sample-tiles.png" width="42" height="42" alt=""/>
+                     </span>
+      </button>
+
+      <button class="win-command" rel="tootlip" title="Command with image and label">
+                     <span class="win-commandimage">
+                        <img src="assets/img/sample-tiles.png" width="42" height="42" alt=""/>
+                     </span>
+         <span class="win-label">With label</span>
+      </button>
+
+      <button class="win-command" rel="tootlip" title="Command with image with border ring">
+                     <span class="win-commandimage win-commandring">
+                        <img src="assets/img/sample-tiles.png" width="42" height="42" alt=""/>
+                     </span>
+      </button>
+
+      <button class="win-command" rel="tootlip" title="Command with image and label with border ring">
+                     <span class="win-commandimage win-commandring">
+                        <img src="assets/img/sample-tiles.png" width="42" height="42" alt=""/>
+                     </span>
+         <span class="win-label">With ring &amp; label</span>
+      </button>
+   </div>
+   <pre class="prettyprint linenums">
+   &lt;button class="win-command" rel="tootlip" title="Simple command with an image inside"&gt;
+      &lt;span class="win-commandimage"&gt;
+         &lt;img src="assets/img/sample-tiles.png" width="42" height="42" alt=""/&gt;
+      &lt;/span&gt;
+   &lt;/button&gt;
+
+   &lt;button class="win-command" rel="tootlip" title="Command with image and label"&gt;
+      &lt;span class="win-commandimage"&gt;
+         &lt;img src="assets/img/sample-tiles.png" width="42" height="42" alt=""/&gt;
+      &lt;/span&gt;
+      &lt;span class="win-label"&gt;With label&lt;/span&gt;
+   &lt;/button&gt;
+
+   &lt;button class="win-command" rel="tootlip" title="Command with image with border ring"&gt;
+      &lt;span class="win-commandimage win-commandring"&gt;
+         &lt;img src="assets/img/sample-tiles.png" width="42" height="42" alt=""/&gt;
+      &lt;/span&gt;
+   &lt;/button&gt;
+
+   &lt;button class="win-command" rel="tootlip" title="Command with image and label with border ring"&gt;
+      &lt;span class="win-commandimage win-commandring"&gt;
+         &lt;img src="assets/img/sample-tiles.png" width="42" height="42" alt=""/&gt;
+      &lt;/span&gt;
+      &lt;span class="win-label"&gt;With ring &amp; label&lt;/span&gt;
+   &lt;/button&gt;
+   </pre>
+
+   <!--<hr class="bs-docs-separator"/>-->
+
+   <h2 id="metro-commands-custom">Customization</h2>
+   <div class="bs-docs-example bs-docs-example-commands">
+      <button class="win-command orange" rel="tootlip" title="Command with icon and label with border ring, with a custom color">
+         <span class="win-commandicon win-commandring icon-cog-4"></span>
+         <span class="win-label">Custom color</span>
+      </button>
+   </div>
+   <pre class="prettyprint linenums">
+   &lt;button class="win-command orange" rel="tootlip" title="Command with icon and label with border ring, with a custom color"&gt;
+      &lt;span class="win-commandicon win-commandring icon-cog-4"&gt;&lt;/span&gt;
+      &lt;span class="win-label"&gt;Customized&lt;/span&gt;
+   &lt;/button&gt;
+   </pre>
+
+   <p>This is a sample CSS used to customized the above orange command:</p>
+   <pre class="prettyprint linenums">
+   .win-command.orange .win-commandicon,
+   .win-command.orange .win-label {
+      color: #F09609;
+   }
+   .win-command.orange .win-commandring {
+      border-color: #F09609;
+   }
+   .win-command.orange:hover .win-commandring {
+       background-color: rgba(240, 150, 9, 0.4);
+   }
+   </pre>
+
+   <hr class="bs-docs-separator"/>
+
+   <h2>Command button sizes</h2>
+   <div class="bs-docs-example bs-docs-example-commands">
+      <button class="win-command win-command-small" rel="tootlip" title="Command with icon and label with border ring, with a custom color">
+         <span class="win-commandicon win-commandring icon-cog-4"></span>
+         <span class="win-label">Small size</span>
+      </button>
+
+      <button class="win-command" rel="tootlip" title="Command with icon and label with border ring, with a custom color">
+         <span class="win-commandicon win-commandring icon-cog-4"></span>
+         <span class="win-label">Default size</span>
+      </button>
+
+      <button class="win-command win-command-large" rel="tootlip" title="Command with icon and label with border ring, with a custom color">
+         <span class="win-commandicon win-commandring icon-cog-4"></span>
+         <span class="win-label">Large size</span>
+      </button>
+   </div>
+
+
+</div>
+
+
+
 <!-- Dropdowns
 ================================================== -->
 <div class="bs-docs-section">
@@ -2041,11 +2233,11 @@
          <div class="bar" style="width: 60%;"></div>
       </div>
    </div>
-   <pre class="prettyprint linenums">
-   &lt;div class="progress"&gt;
-     &lt;div class="bar" style="width: 60%;"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   </pre>
+<pre class="prettyprint linenums">
+&lt;div class="progress"&gt;
+  &lt;div class="bar" style="width: 60%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
    <h3 id="progress-stacked">Stacked</h3>
    <p>Place multiple bars into the same <code>.progress</code> to stack them.</p>
@@ -2056,13 +2248,13 @@
          <div class="bar bar-danger" style="width: 10%"></div>
       </div>
    </div>
-   <pre class="prettyprint linenums">
-   &lt;div class="progress"&gt;
-     &lt;div class="bar bar-success" style="width: 35%;"&gt;&lt;/div&gt;
-     &lt;div class="bar bar-warning" style="width: 20%;"&gt;&lt;/div&gt;
-     &lt;div class="bar bar-danger" style="width: 10%;"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   </pre>
+<pre class="prettyprint linenums">
+&lt;div class="progress"&gt;
+  &lt;div class="bar bar-success" style="width: 35%;"&gt;&lt;/div&gt;
+  &lt;div class="bar bar-warning" style="width: 20%;"&gt;&lt;/div&gt;
+  &lt;div class="bar bar-danger" style="width: 10%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
 
    <hr class="bs-docs-separator">
@@ -2086,59 +2278,93 @@
          <div class="bar" style="width: 80%"></div>
       </div>
    </div>
-   <pre class="prettyprint linenums">
-   &lt;div class="progress progress-info"&gt;
-     &lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class="progress progress-success"&gt;
-     &lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class="progress progress-warning"&gt;
-     &lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class="progress progress-danger"&gt;
-     &lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   </pre>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-info"&gt;
+  &lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-success"&gt;
+  &lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-warning"&gt;
+  &lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-danger"&gt;
+  &lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
-   <h3 id="progress-striped">Striped bars</h3>
-   <p>Similar to the solid colors, we have varied striped progress bars.</p>
+   <!--<h3 id="progress-striped">Striped bars</h3>-->
+   <!--<p>Similar to the solid colors, we have varied striped progress bars.</p>-->
+   <!--<div class="bs-docs-example">-->
+      <!--<div class="progress progress-info progress-striped" style="margin-bottom: 9px;">-->
+         <!--<div class="bar" style="width: 20%"></div>-->
+      <!--</div>-->
+      <!--<div class="progress progress-success progress-striped" style="margin-bottom: 9px;">-->
+         <!--<div class="bar" style="width: 40%"></div>-->
+      <!--</div>-->
+      <!--<div class="progress progress-warning progress-striped" style="margin-bottom: 9px;">-->
+         <!--<div class="bar" style="width: 60%"></div>-->
+      <!--</div>-->
+      <!--<div class="progress progress-danger progress-striped">-->
+         <!--<div class="bar" style="width: 80%"></div>-->
+      <!--</div>-->
+   <!--</div>-->
+   <!--<pre class="prettyprint linenums">-->
+   <!--&lt;div class="progress progress-info progress-striped"&gt;-->
+     <!--&lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;-->
+   <!--&lt;/div&gt;-->
+   <!--&lt;div class="progress progress-success progress-striped"&gt;-->
+     <!--&lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;-->
+   <!--&lt;/div&gt;-->
+   <!--&lt;div class="progress progress-warning progress-striped"&gt;-->
+     <!--&lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;-->
+   <!--&lt;/div&gt;-->
+   <!--&lt;div class="progress progress-danger progress-striped"&gt;-->
+     <!--&lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;-->
+   <!--&lt;/div&gt;-->
+   <!--</pre>-->
+
+   <h3 id="progress-indeterminate">Indeterminate</h3>
+   <p>Use this style for tasks that are not determinate that are non-modal (don't block user interaction).</p>
    <div class="bs-docs-example">
-      <div class="progress progress-info progress-striped" style="margin-bottom: 9px;">
-         <div class="bar" style="width: 20%"></div>
-      </div>
-      <div class="progress progress-success progress-striped" style="margin-bottom: 9px;">
-         <div class="bar" style="width: 40%"></div>
-      </div>
-      <div class="progress progress-warning progress-striped" style="margin-bottom: 9px;">
-         <div class="bar" style="width: 60%"></div>
-      </div>
-      <div class="progress progress-danger progress-striped">
-         <div class="bar" style="width: 80%"></div>
+      <div class="progress progress-indeterminate">
+         <div class="bar"></div>
       </div>
    </div>
-   <pre class="prettyprint linenums">
-   &lt;div class="progress progress-info progress-striped"&gt;
-     &lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class="progress progress-success progress-striped"&gt;
-     &lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class="progress progress-warning progress-striped"&gt;
-     &lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class="progress progress-danger progress-striped"&gt;
-     &lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;
-   &lt;/div&gt;
-   </pre>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-indeterminate"&gt;
+  &lt;div class="bar"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+   <h3 id="progress-indeterminate-ring">Indeterminate Ring</h3>
+   <p>Use this style for tasks that are not determinate that are non-modal (don't block user interaction).</p>
+   <div class="bs-docs-example">
+      <div class="progress progress-indeterminate">
+         <div class="win-ring small"></div>
+      </div>
+
+      <div class="progress progress-indeterminate">
+         <div class="win-ring"></div>
+      </div>
+   </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-indeterminate"&gt;
+  &lt;div class="win-ring small"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress progress-indeterminate"&gt;
+  &lt;div class="win-ring"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
 
    <hr class="bs-docs-separator">
 
 
-   <h2>Browser support</h2>
-   <p>Progress bars use CSS3 gradients, transitions, and animations to achieve all their effects. These features are not supported in IE7-9 or older versions of Firefox.</p>
-   <p>Versions earlier than Internet Explorer 10 and Opera 12 do not support animations.</p>
+   <!--<h2>Browser support</h2>-->
+   <!--<p>Progress bars use CSS3 gradients, transitions, and animations to achieve all their effects. These features are not supported in IE7-9 or older versions of Firefox.</p>-->
+   <!--<p>Versions earlier than Internet Explorer 10 and Opera 12 do not support animations.</p>-->
 
 </div>
 

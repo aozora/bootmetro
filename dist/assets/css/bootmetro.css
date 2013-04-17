@@ -7693,6 +7693,10 @@ Progress control. */
           border-radius: 0;
 }
 
+.progress .bar {
+  height: 5px;
+}
+
 .progress.progress-indeterminate {
   height: auto;
   background-color: transparent;
