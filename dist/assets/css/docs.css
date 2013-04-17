@@ -381,6 +381,12 @@ hr.soften {
 }
 
 
+/* Metro Page Header */
+.bs-docs-example-metro-page-header h5 {
+   margin: 0;
+}
+
+
 
 
 /* Welcome getting started

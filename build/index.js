@@ -15,14 +15,13 @@ var templates = [__dirname + '/../templates/demo',
                  __dirname + '/../templates/pages']
 
 
-var layout, pages, sidebar, partial_loggeduser, partial_charms, partial_headermenu //, partial_docssidebar
+var /*layout, pages, sidebar,*/ partial_loggeduser, partial_charms, partial_headermenu //, partial_docssidebar
 
 
 // retrieve partials
 partial_loggeduser = getCompiledFile(__dirname + '/../templates/partials/logged-user.mustache')
 partial_charms = getCompiledFile(__dirname + '/../templates/partials/charms.mustache')
 partial_headermenu = getCompiledFile(__dirname + '/../templates/partials/header-menu.mustache')
-//partial_docssidebar = getCompiledFile(__dirname + '/../templates/partials/docs-sidebar.mustache')
 
 
 
@@ -33,10 +32,9 @@ partial_headermenu = getCompiledFile(__dirname + '/../templates/partials/header-
 templates.forEach(function(templatedir){
 
    // compile layout template
-   layout = getCompiledFile(templatedir + '/_layout.mustache')
-
+   var layout = getCompiledFile(templatedir + '/_layout.mustache')
    // retrieve pages
-   pages = fs.readdirSync(templatedir)
+   var pages = fs.readdirSync(templatedir)
 
 
 

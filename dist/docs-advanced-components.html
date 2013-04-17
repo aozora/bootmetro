@@ -104,6 +104,16 @@
                <li>
                   <a href="#metro-components" class="nav-header">Advanced Components</a>
                   <ul class="nav">
+            
+                     <li>
+                        <a href="#page-components">Page components</a>
+                        <ul class="nav">
+                           <li><a href="#type-components-page-header">Page header</a></li>
+                           <li><a href="#type-components-metro-page-header">Page header with back button</a></li>
+                           <li><a href="#type-components-hero">Hero</a></li>
+                        </ul>
+                     </li>
+            
                      <li><a href="#metro-commands">Command Buttons</a></li>
                      <li><a href="#metro-progress">Metro Progress Bars</a></li>
                      <li><a href="#metro-modals">Modal</a></li>
@@ -119,9 +129,91 @@
          <div class="bs-docs-container span9">
             
             <div id="metro-components" class="bs-docs-section-header">
-               <h1>Metro Components</h1>
-               <p class="lead">Reusable components used by Windows 8 and Windows Phone 8 or later.</p>
+               <h1>Advanced Components</h1>
+               <p class="lead">Reusable components like the ones used by Windows 8 and Windows Phone 8 or later.</p>
             </div>
+            
+            
+            
+            <!-- Page Headers
+            ================================================== -->
+            <div class="bs-docs-section">
+               <div class="page-components">
+                  <h1 id="page-headers">Page components <small>basic blocks for standard metro pages</small></h1>
+               </div>
+            
+               <h2 id="type-components-page-header">Page header</h2>
+               <p>A simple shell for an <code>h1</code> to appropriately space out and segment sections of content on a page. It can utilize the <code>h1</code>'s default <code>small</code>, element as well most other components (with additional styles).</p>
+               <div class="bs-docs-example">
+                  <div class="page-header">
+                     <h1>Example page header <small>Subtext for header</small></h1>
+                  </div>
+               </div>
+            <pre class="prettyprint linenums">
+            &lt;div class="page-header"&gt;
+              &lt;h1&gt;Example page header &lt;small&gt;Subtext for header&lt;/small&gt;&lt;/h1&gt;
+            &lt;/div&gt;
+            </pre>
+            
+            
+            
+            
+               <h2 id="type-components-metro-page-header">Page header with back button</h2>
+               <p>A simple shell for an <code>h1</code> to appropriately space out and segment sections of content on a page, with a left arrow button that should be used to navigate back. It can utilize the <code>h1</code>'s default <code>small</code>, element as well most other components (with additional styles).</p>
+               <div class="bs-docs-example bs-docs-example-metro-page-header">
+            
+                  <div id="nav-bar">
+                     <div class="row">
+                        <div class="span9">
+                           <div id="header-container">
+                              <a id="backbutton" class="win-backbutton" href="#"></a>
+                              <h5>BootMetro</h5>
+                              <div class="dropdown">
+                                 <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                                    Start
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+            
+               </div>
+            <pre class="prettyprint linenums">
+            
+            
+            
+            </pre>
+            
+               <!--page header with back and dropdown navigation-->
+            
+            
+               <h2 id="type-components-hero">Hero unit</h2>
+               <p>A lightweight, flexible component to showcase key content on your site. It works well on marketing and content-heavy sites.</p>
+               <div class="bs-docs-example">
+                  <div class="hero-unit">
+                     <h1>Hello, world!</h1>
+                     <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                     <p><a class="btn btn-primary btn-large">Learn more</a></p>
+                  </div>
+               </div>
+            <pre class="prettyprint linenums">
+            &lt;div class="hero-unit"&gt;
+              &lt;h1&gt;Heading&lt;/h1&gt;
+              &lt;p&gt;Tagline&lt;/p&gt;
+              &lt;p&gt;
+                &lt;a class="btn btn-primary btn-large"&gt;
+                  Learn more
+                &lt;/a&gt;
+              &lt;/p&gt;
+            &lt;/div&gt;
+            </pre>
+            
+            
+            </div>
+            
+            
+            
             
             <!-- Commands
             ================================================== -->
