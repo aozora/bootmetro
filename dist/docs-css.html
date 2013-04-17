@@ -186,12 +186,12 @@
 
 <h3>Requires HTML5 doctype</h3>
 <p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
-   <pre class="prettyprint linenums">
-   &lt;!DOCTYPE html&gt;
-   &lt;html lang="en"&gt;
-     ...
-   &lt;/html&gt;
-   </pre>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  ...
+&lt;/html&gt;
+</pre>
 
 <h3>Typography and links</h3>
 <p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
@@ -241,12 +241,12 @@
 
 <h3>Basic grid HTML</h3>
 <p>For a simple two column layout, create a <code>.row</code> and add the appropriate number of <code>.span*</code> columns. As this is a 12-column grid, each <code>.span*</code> spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent).</p>
-   <pre class="prettyprint linenums">
-   &lt;div class="row"&gt;
-     &lt;div class="span4"&gt;...&lt;/div&gt;
-     &lt;div class="span8"&gt;...&lt;/div&gt;
-   &lt;/div&gt;
-   </pre>
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span8"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 <p>Given this example, we have <code>.span4</code> and <code>.span8</code>, making for 12 total columns and a complete row.</p>
 
 <h2>Offsetting columns</h2>
@@ -264,12 +264,12 @@
       <div class="span5 offset3">5 offset 3</div>
    </div><!-- /row -->
 </div>
-   <pre class="prettyprint linenums">
-   &lt;div class="row"&gt;
-     &lt;div class="span4"&gt;...&lt;/div&gt;
-     &lt;div class="span3 offset2"&gt;...&lt;/div&gt;
-   &lt;/div&gt;
-   </pre>
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span3 offset2"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
 <h2>Nesting columns</h2>
 <p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column. Nested rows should include a set of columns that add up to the number of columns of its parent.</p>
