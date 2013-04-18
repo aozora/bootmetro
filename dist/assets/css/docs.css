@@ -154,6 +154,11 @@ hr.soften {
 
 /* Documentation Metro Navbar
 -------------------------------------------------- */
+
+.bs-docs-docs .navbar.metro-navbar.navbar-fixed-top {
+   z-index: 1065;
+}
+
 .bs-docs-docs .navbar.metro-navbar .brand {
    line-height: 20px;
 }
@@ -655,6 +660,28 @@ input.focused {
 .win-command.orange:hover .win-commandring {
    background-color: rgba(240, 150, 9, 0.4);
 }
+
+
+/* Alerts
+----------------- */
+
+#alerts {
+   position: fixed;
+   top: 5px;
+   right: 5px;
+   padding: 0;
+   z-index: 1100;
+}
+
+#alerts .alert,
+#alerts .toast {
+   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+   /*min-height: 40px;*/
+   /*position: relative;*/
+   /*width: 300px;*/
+}
+
 
 
 /* Responsive variations

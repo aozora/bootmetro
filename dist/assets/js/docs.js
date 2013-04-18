@@ -75,8 +75,12 @@
         }, 3000)
       })
 
-    // carousel demo
-    $('.bs-docs-carousel-example').carousel()
+   // carousel demo
+   $('.bs-docs-carousel-example').carousel()
+
+
+     // toasts demo
+//   $('')
 
 
 //     // Datepicker demo
