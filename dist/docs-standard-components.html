@@ -96,6 +96,8 @@
       </div>
    </div>
 
+   <div id="alerts-container"></div>
+
    <div id="doc-container" class="container">
       <div class="row">
          <div class="bs-docs-sidebar span3">
@@ -183,9 +185,9 @@
    <li>
       <a href="#toasts">Toast Notification</a>
       <ul class="nav">
-         <li><a href="#toasts-default">Default toast</a></li>
          <li><a href="#toasts-text">Text only</a></li>
-         <!--<li><a href="#alerts-alternatives">Contextual alternatives</a></li>-->
+         <li><a href="#toasts-imagetext">Image & Text</a></li>
+         <li><a href="#toasts-usage">Live demo</a></li>
       </ul>
    </li>
    <li>
@@ -2191,20 +2193,6 @@
 
 
 
-<!--&lt;!&ndash; Typographic components-->
-<!--================================================== &ndash;&gt;-->
-<!--<div class="bs-docs-section">-->
-   <!--<div class="page-header">-->
-      <!--<h1 id="type-components">Typographic components</h1>-->
-   <!--</div>-->
-
-
-
-
-
-<!--</div>-->
-
-
 
 <!-- Thumbnails
 ================================================== -->
@@ -2347,7 +2335,7 @@
 
 
 
-<!-- Alerts & Toasts
+<!-- Alerts
 ================================================== -->
 <div class="bs-docs-section">
    <div class="page-header">
@@ -2460,12 +2448,13 @@
       <small>Toast notification overview (Windows Store apps)</small>
    </blockquote>
    <p>Following there are all the possible templates and styles for different kind of toast notifications.</p>
+   <p><span class="label label-important">Important:</span> the dismiss functionality <strong>requires the <a href="#tooltips">Bootstrap Tooltip</a> plugin to be included.</strong></p>
 
    <!-- Text Only Templates
    ================================================== -->
    <h2 id="toasts-text">Text Only Templates <small></small></h2>
 
-   <div class="bs-docs-example">
+   <div class="bs-docs-example bs-docs-example-toasts">
 
       <div class="toast toasttext01">
          <button type="button" class="close" data-dismiss="alert"></button>
@@ -2495,43 +2484,99 @@
 
 <pre class="prettyprint linenums">
 &lt;div class="toast toasttext01"&gt;
-&lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
-&lt;p&gt;Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula&lt;/p&gt;
+   &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+   &lt;p&gt;Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class="toast toasttext02"&gt;
-&lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
-&lt;h4&gt;Heading text&lt;/h4&gt;
-&lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+   &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+   &lt;h4&gt;Heading text&lt;/h4&gt;
+   &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class="toast toasttext03"&gt;
-&lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
-&lt;h4&gt;Heading text that wraps over two lines. Vivamus elementum semper nisi.&lt;/h4&gt;
-&lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+   &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+   &lt;h4&gt;Heading text that wraps over two lines. Vivamus elementum semper nisi.&lt;/h4&gt;
+   &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class="toast toasttext04"&gt;
-&lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
-&lt;h4&gt;Heading text&lt;/h4&gt;
-&lt;p&gt;Body text that wraps over two lines.&lt;/p&gt;
-&lt;p&gt;Body text that wraps over two lines.&lt;/p&gt;
+   &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+   &lt;h4&gt;Heading text&lt;/h4&gt;
+   &lt;p&gt;Body text that wraps over two lines.&lt;/p&gt;
+   &lt;p&gt;Body text that wraps over two lines.&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
 
-   <h2>Image & Text Templates <small></small></h2>
-   <div class="bs-docs-example">
+   <h2 id="toasts-imagetext">Image & Text Templates <small></small></h2>
+   <div class="bs-docs-example bs-docs-example-toasts">
       <div class="toast toastimageandtext01">
          <button type="button" class="close" data-dismiss="alert"></button>
          <img src="assets/img/avatar-movie-puzzles-2.jpg" alt="" />
          <p>Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p>
       </div>
    </div>
-
 <pre class="prettyprint linenums">
 
 </pre>
+
+
+   <h2 id="toasts-usage">Live demo</h2>
+   <p>Show a toast notification via JavaScript by clicking the button below. Click it multiple times to display many instances.</p>
+   <div class="bs-docs-example bs-docs-example-toasts-demo">
+
+      <a id="show-toast-button" href="#toast-example1" class="btn btn-success">Show Toast!</a>
+
+      <div id="toast-example1" class="toast toasttext02 fade">
+         <button type="button" class="close" data-dismiss="alert"></button>
+         <h4>Heading text</h4>
+         <p>Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+      </div>
+
+   </div>
+   <h3>Sample code</h3>
+   <p>Put under the body element the following div, used as a container for all notifications:</p>
+<pre class="prettyprint">
+   &lt;div id="alerts-container"&gt;&lt;/div&gt;
+</pre>
+   <p>here the markup sample:</p>
+<pre class="prettyprint linenums">
+&lt;a id="show-toast-button" href="#toast-example1" class="btn btn-success"&gt;Show Toast!&lt;/a&gt;
+
+&lt;div id="toast-example1" class="toast toasttext02 fade"&gt;
+   &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+   &lt;h4&gt;Heading text&lt;/h4&gt;
+   &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+   <p>CSS code to support toast positioning as Windows 8 does:</p>
+<pre class="prettyprint linenums">
+#alerts-container {
+   position: fixed;
+   top: 5px;
+   right: 5px;
+   padding: 0;
+   z-index: 1100;
+}
+
+#alerts-container .toast {
+   /* add a shadow */
+   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+</pre>
+
+   <p>Use this javascript code to show the toast:</p>
+<pre class="prettyprint linenums">
+// toasts demo
+$('#show-toast-button').click(function(e){
+   e.preventDefault();
+   var $toast = $( $(this).attr('href')).clone();
+   $('#alerts-container').append($toast.addClass('in'));
+});
+</pre>
+
 
 
 </div>

@@ -79,8 +79,15 @@
    $('.bs-docs-carousel-example').carousel()
 
 
-     // toasts demo
-//   $('')
+  // toasts demo
+   $('#show-toast-button').click(function(e){
+      e.preventDefault();
+
+      var $toast = $( $(this).attr('href')).clone();
+
+      $('#alerts-container').append($toast.addClass('in'));
+
+   });
 
 
 //     // Datepicker demo

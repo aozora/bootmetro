@@ -804,7 +804,11 @@
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-  
+  .toast .close,
+  .modal .close,
+  .alert .close {
+    display: inline-block !important;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 1023px) {
@@ -987,7 +991,11 @@
 }
 
 @media (max-width: 767px) {
-  
+  .toast .close,
+  .modal .close,
+  .alert .close {
+    display: inline-block !important;
+  }
 }
 
 @media (max-width: 480px) {

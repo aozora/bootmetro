@@ -45,7 +45,7 @@ body {
 
 
 #doc-container,
-#doc-container > row {
+#doc-container > .row {
    position: relative;
    margin-top: 90px;
 }
@@ -397,6 +397,14 @@ hr.soften {
    margin: 0;
 }
 
+/* Toast notifications */
+.bs-docs-example-toasts-demo .toast {
+   display: none;
+}
+
+.bs-docs-example-toasts .toast h4 {
+   margin: 0;
+}
 
 
 
@@ -665,7 +673,7 @@ input.focused {
 /* Alerts
 ----------------- */
 
-#alerts {
+#alerts-container {
    position: fixed;
    top: 5px;
    right: 5px;
@@ -673,13 +681,10 @@ input.focused {
    z-index: 1100;
 }
 
-#alerts .alert,
-#alerts .toast {
+#alerts-container .toast {
+   /* add a shadow */
    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
       box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-   /*min-height: 40px;*/
-   /*position: relative;*/
-   /*width: 300px;*/
 }
 
 
