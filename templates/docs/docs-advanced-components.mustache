@@ -178,6 +178,164 @@
 </div>
 
 
+<!-- AppBar
+================================================== -->
+<div class="bs-docs-section">
+   <div class="page-components">
+      <h1 id="metro-appbar">Application Bar <small></small></h1>
+      <p>A bottom app bar that contains transient access to commands relevant to a particular view</p>
+   </div>
+
+   <h2 id="metro-appbar-default">Default style</h2>
+   <p>To place a separator line add <code>&lt;hr class="win-command" /&gt;</code> element between commands.</p>
+   <div class="bs-docs-example bs-docs-example-appbar">
+      <div class="win-commandlayout">
+            <a class="win-command" href="#">
+               <span class="win-commandicon win-commandring icon-home"></span>
+               <span class="win-label">Home</span>
+            </a>
+
+            <hr class="win-command" />
+
+            <a class="win-command" href="#">
+               <span class="win-commandicon win-commandring icon-plus-5"></span>
+               <span class="win-label">Add</span>
+            </a>
+
+            <a class="win-command" href="#">
+               <span class="win-commandicon win-commandring icon-disk"></span>
+               <span class="win-label">Save</span>
+            </a>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-reload"></span>
+               <span class="win-label">Reload</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-arrow-left-12"></span>
+               <span class="win-label">Previous</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-arrow-right-11"></span>
+               <span class="win-label">Next</span>
+            </button>
+
+            <hr class="win-command" />
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-cog-2"></span>
+               <span class="win-label">Settings</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-download"></span>
+               <span class="win-label">Download</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-upload-2"></span>
+               <span class="win-label">Upload</span>
+            </button>
+
+      </div>
+   </div>
+<pre class="prettyprint linenums">
+&lt;div class="win-commandlayout"&gt;
+      &lt;a class="win-command" href="#"&gt;
+         &lt;span class="win-commandicon win-commandring icon-home"&gt;&lt;/span&gt;
+         &lt;span class="win-label"&gt;Home&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;hr class="win-command" /&gt;
+      ...
+      &lt;button class="win-command"&gt;
+         &lt;span class="win-commandicon win-commandring icon-reload"&gt;&lt;/span&gt;
+         &lt;span class="win-label"&gt;Reload&lt;/span&gt;
+      &lt;/button&gt;
+      ...
+&lt;/div&gt;
+</pre>
+
+
+   <h2 id="metro-appbar-dark">Dark style</h2>
+   <p>To have the bar with a dark background add the <code>win-ui-dark</code>.</p>
+   <div class="bs-docs-example bs-docs-example-appbar">
+      <div class="win-commandlayout win-ui-dark">
+            <a class="win-command" href="#">
+               <span class="win-commandicon win-commandring icon-home"></span>
+               <span class="win-label">Home</span>
+            </a>
+
+            <hr class="win-command" />
+
+            <a class="win-command" href="#">
+               <span class="win-commandicon win-commandring icon-plus-5"></span>
+               <span class="win-label">Add</span>
+            </a>
+
+            <a class="win-command" href="#">
+               <span class="win-commandicon win-commandring icon-disk"></span>
+               <span class="win-label">Save</span>
+            </a>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-reload"></span>
+               <span class="win-label">Reload</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-arrow-left-12"></span>
+               <span class="win-label">Previous</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-arrow-right-11"></span>
+               <span class="win-label">Next</span>
+            </button>
+
+            <hr class="win-command" />
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-cog-2"></span>
+               <span class="win-label">Settings</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-download"></span>
+               <span class="win-label">Download</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-upload-2"></span>
+               <span class="win-label">Upload</span>
+            </button>
+
+      </div>
+   </div>
+<pre class="prettyprint linenums">
+&lt;div class="win-commandlayout win-ui-dark"&gt;
+      &lt;a class="win-command" href="#"&gt;
+         &lt;span class="win-commandicon win-commandring icon-home"&gt;&lt;/span&gt;
+         &lt;span class="win-label"&gt;Home&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;hr class="win-command" /&gt;
+      ...
+      &lt;button class="win-command"&gt;
+         &lt;span class="win-commandicon win-commandring icon-reload"&gt;&lt;/span&gt;
+         &lt;span class="win-label"&gt;Reload&lt;/span&gt;
+      &lt;/button&gt;
+      ...
+&lt;/div&gt;
+</pre>
+
+
+</div>
+
+
+
 <!-- Pivot
 ================================================== -->
 <div class="bs-docs-section">
@@ -402,12 +560,8 @@
 
 
 
-<!-- AppBar -->
 
 <!-- ListVIew -->
 
-<!-- Pivot -->
-
-<!-- Toast -->
 
 <!-- Tiles templates -->
