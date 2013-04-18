@@ -412,6 +412,14 @@ hr.soften {
    background-color: #FFF;
 }
 
+ /* up to landscape and desktop */
+/*@media screen and (min-width: 768px) {*/
+   /*#myChart {*/
+      /*width: 100% !important;*/
+      /*max-width: 800px;*/
+      /*height: auto !important;*/
+   /*}*/
+/*}*/
 
 
 
