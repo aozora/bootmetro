@@ -7126,40 +7126,41 @@ AppBar control.
 .toast {
   position: relative;
   z-index: 1060;
-  width: 380px;
+  width: 400px;
   height: 90px;
-  padding: 13px 60px 13px 15px;
+  margin-top: 15px;
   margin-bottom: 10px;
+  overflow: hidden;
+  *overflow: visible;
   color: #ffffff;
   text-shadow: none;
   background-color: #2e8bcc;
   border: 2px solid #54a2d9;
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  zoom: 1;
 }
 
-.toast h4 {
-  display: block;
-  width: 100%;
+.toast-body {
+  height: 64px;
+  padding: 13px 60px 13px 15px;
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
+}
+
+.toast-body p {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.toast p {
+.toast-object {
   display: block;
-  width: 100%;
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-.toast .toast-inner {
-  margin-left: 90px;
+.toast-heading {
+  margin: 0 0 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .toast.toasttext01 p {
@@ -7195,26 +7196,6 @@ AppBar control.
 .toast.toasttext04 p {
   height: 20px;
   line-height: 20px;
-}
-
-.toast.toastimageandtext01 {
-  padding: 0;
-}
-
-.toast.toastimageandtext01 img {
-  display: inline-block;
-  max-width: 88px;
-  max-height: 88px;
-  margin: 0;
-  vertical-align: top;
-}
-
-.toast.toastimageandtext01 p {
-  display: inline-block;
-  height: 60px;
-  padding: 13px 60px 10px 15px;
-  line-height: 20px;
-  vertical-align: top;
 }
 
 .toast .close,

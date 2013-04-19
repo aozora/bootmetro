@@ -89,6 +89,7 @@
 
    });
 
+   if ($("#myChart").length > 0){
 
       // charts demo
       //Get context with jQuery - using jQuery's .get() method.
@@ -116,6 +117,7 @@
         ]
      };
      new Chart(ctx).Line(data,{});
+   }
 
   });
 

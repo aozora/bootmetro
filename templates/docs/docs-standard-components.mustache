@@ -2211,7 +2211,7 @@
       <small>Toast notification overview (Windows Store apps)</small>
    </blockquote>
    <p>Following there are all the possible templates and styles for different kind of toast notifications.</p>
-   <p><span class="label label-important">Important:</span> the dismiss functionality <strong>requires the <a href="#tooltips">Bootstrap Tooltip</a> plugin to be included.</strong></p>
+   <p><span class="label label-important">Important:</span> the dismiss functionality <strong>requires the <a href="./docs-javascript.html#js-alerts">Bootstrap Alerts</a> plugin to be included.</strong></p>
 
    <!-- Text Only Templates
    ================================================== -->
@@ -2221,67 +2221,164 @@
 
       <div class="toast toasttext01">
          <button type="button" class="close" data-dismiss="alert"></button>
-         <p>Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p>
+         <div class="toast-body">
+            <p>Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p>
+         </div>
       </div>
 
       <div class="toast toasttext02">
          <button type="button" class="close" data-dismiss="alert"></button>
-         <h4>Heading text</h4>
-         <p>Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+         <div class="toast-body">
+            <h4 class="toast-heading">Toast heading</h4>
+            <p>Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+         </div>
       </div>
 
       <div class="toast toasttext03">
          <button type="button" class="close" data-dismiss="alert"></button>
-         <h4>Heading text that wraps over two lines. Vivamus elementum semper nisi.</h4>
-         <p>Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+         <div class="toast-body">
+            <h4 class="toast-heading">Toast heading that wraps over two lines. Vivamus elementum semper nisi.</h4>
+            <p>One line of body text.</p>
+         </div>
       </div>
 
       <div class="toast toasttext04">
          <button type="button" class="close" data-dismiss="alert"></button>
-         <h4>Heading text</h4>
-         <p>Body text that wraps over two lines.</p>
-         <p>Body text that wraps over two lines.</p>
+         <div class="toast-body">
+            <h4 class="toast-heading">Toast heading.</h4>
+            <p>Single line of text.</p>
+            <p>Single line of text.</p>
+         </div>
       </div>
 
    </div>
-
 <pre class="prettyprint linenums">
 &lt;div class="toast toasttext01"&gt;
    &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
-   &lt;p&gt;Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula&lt;/p&gt;
+   &lt;div class="toast-body"&gt;
+      &lt;p&gt;Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula&lt;/p&gt;
+   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="toast toasttext02"&gt;
    &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
-   &lt;h4&gt;Heading text&lt;/h4&gt;
-   &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+   &lt;div class="toast-body"&gt;
+      &lt;h4 class="toast-heading"&gt;Toast heading&lt;/h4&gt;
+      &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="toast toasttext03"&gt;
    &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
-   &lt;h4&gt;Heading text that wraps over two lines. Vivamus elementum semper nisi.&lt;/h4&gt;
-   &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+   &lt;div class="toast-body"&gt;
+      &lt;h4 class="toast-heading"&gt;Toast heading that wraps over two lines. Vivamus elementum semper nisi.&lt;/h4&gt;
+      &lt;p&gt;One line of body text.&lt;/p&gt;
+   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="toast toasttext04"&gt;
    &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
-   &lt;h4&gt;Heading text&lt;/h4&gt;
-   &lt;p&gt;Body text that wraps over two lines.&lt;/p&gt;
-   &lt;p&gt;Body text that wraps over two lines.&lt;/p&gt;
+   &lt;div class="toast-body"&gt;
+      &lt;h4 class="toast-heading"&gt;Toast heading.&lt;/h4&gt;
+      &lt;p&gt;Single line of text.&lt;/p&gt;
+      &lt;p&gt;Single line of text.&lt;/p&gt;
+   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 
    <h2 id="toasts-imagetext">Image & Text Templates <small></small></h2>
    <div class="bs-docs-example bs-docs-example-toasts">
-      <div class="toast toastimageandtext01">
+
+      <div class="toast toasttext01">
          <button type="button" class="close" data-dismiss="alert"></button>
-         <img src="assets/img/avatar-movie-puzzles-2.jpg" alt="" />
-         <p>Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p>
+         <div class="pull-left">
+            <img class="toast-object" data-src="holder.js/90x90">
+         </div>
+         <div class="toast-body">
+            <p>Body text that wraps over two lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p>
+         </div>
       </div>
+
+      <div class="toast toasttext02">
+         <button type="button" class="close" data-dismiss="alert"></button>
+         <div class="pull-left">
+            <img class="toast-object" data-src="holder.js/90x90">
+         </div>
+         <div class="toast-body">
+            <h4 class="toast-heading">Toast heading</h4>
+            <p>Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+         </div>
+      </div>
+
+      <div class="toast toasttext03">
+         <button type="button" class="close" data-dismiss="alert"></button>
+         <div class="pull-left">
+            <img class="toast-object" data-src="holder.js/90x90">
+         </div>
+         <div class="toast-body">
+            <h4 class="toast-heading">Toast heading that wraps over two lines. Vivamus elementum semper nisi.</h4>
+            <p>One line of body text.</p>
+         </div>
+      </div>
+
+      <div class="toast toasttext04">
+         <button type="button" class="close" data-dismiss="alert"></button>
+         <div class="pull-left">
+            <img class="toast-object" data-src="holder.js/90x90">
+         </div>
+         <div class="toast-body">
+            <h4 class="toast-heading">Toast heading that wraps over two lines. Vivamus elementum semper nisi.</h4>
+            <p>Single line of text.</p>
+            <p>Single line of text.</p>
+         </div>
+      </div>
+
    </div>
 <pre class="prettyprint linenums">
+&lt;div class="toast toasttext01"&gt;
+   &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+   &lt;div class="pull-left"&gt;
+      &lt;img class="toast-object" data-src="holder.js/90x90"&gt;
+   &lt;/div&gt;
+   &lt;div class="toast-body"&gt;
+      &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula&lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="toast toasttext02"&gt;
+   &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+   &lt;div class="pull-left"&gt;
+      &lt;img class="toast-object" data-src="holder.js/90x90"&gt;
+   &lt;/div&gt;
+   &lt;div class="toast-body"&gt;
+      &lt;h4 class="toast-heading"&gt;Toast heading&lt;/h4&gt;
+      &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="toast toasttext03"&gt;
+   &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+   &lt;div class="pull-left"&gt;
+      &lt;img class="toast-object" data-src="holder.js/90x90"&gt;
+   &lt;/div&gt;
+   &lt;div class="toast-body"&gt;
+      &lt;h4 class="toast-heading"&gt;Toast heading that wraps over two lines. Vivamus elementum semper nisi.&lt;/h4&gt;
+      &lt;p&gt;One line of body text.&lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="toast toasttext04"&gt;
+   &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+   &lt;div class="pull-left"&gt;
+      &lt;img class="toast-object" data-src="holder.js/90x90"&gt;
+   &lt;/div&gt;
+   &lt;div class="toast-body"&gt;
+      &lt;h4 class="toast-heading"&gt;Toast heading that wraps over two lines. Vivamus elementum semper nisi.&lt;/h4&gt;
+      &lt;p&gt;Single line of text.&lt;/p&gt;
+      &lt;p&gt;Single line of text.&lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
 </pre>
 
 
@@ -2293,8 +2390,13 @@
 
       <div id="toast-example1" class="toast toasttext02 fade">
          <button type="button" class="close" data-dismiss="alert"></button>
-         <h4>Heading text</h4>
-         <p>Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+         <div class="pull-left">
+            <img class="toast-object" data-src="holder.js/90x90">
+         </div>
+         <div class="toast-body">
+            <h4 class="toast-heading">Toast heading</h4>
+            <p>Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+         </div>
       </div>
 
    </div>
@@ -2309,9 +2411,15 @@
 
 &lt;div id="toast-example1" class="toast toasttext02 fade"&gt;
    &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
-   &lt;h4&gt;Heading text&lt;/h4&gt;
-   &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+   &lt;div class="pull-left"&gt;
+      &lt;img class="toast-object" data-src="holder.js/90x90"&gt;
+   &lt;/div&gt;
+   &lt;div class="toast-body"&gt;
+      &lt;h4 class="toast-heading"&gt;Toast heading&lt;/h4&gt;
+      &lt;p&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+   &lt;/div&gt;
 &lt;/div&gt;
+
 </pre>
    <p>CSS code to support toast positioning as Windows 8 does:</p>
 <pre class="prettyprint linenums">
