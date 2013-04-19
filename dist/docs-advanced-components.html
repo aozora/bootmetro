@@ -125,6 +125,8 @@
       </ul>
    </li>
    <li><a href="#metro-pivot">Pivot</a></li>
+   <li><a href="#metro-listview">ListView</a></li>
+
 </ul>
          </div>
 
@@ -690,9 +692,61 @@
 
 
 
+<!-- ListVIew
+================================================== -->
+<div class="bs-docs-section">
+   <div class="page-header">
+      <h1 id="metro-listview">ListView <small></small></h1>
+   </div>
+   <blockquote>
+      The ListView control offers a way to present collections of data, referred to as “items”, to users of your app. You can use ListView to produce various layouts, but it may not necessarily be the best option.
+      <small>Guidelines for ListView controls (Windows 8 User experience guidelines)</small>
+   </blockquote>
+
+   <p>ListView is intended for items that expose multiple pieces of data. If your items are just a set of short strings, consider using the Select control.</p>
+   <p>The ListView comes with two “layouts” built into the control: list layout, and grid layout.</p>
+
+   <h2 id="metro-listview-grid">Grid layout</h2>
+   <p>The grid layout always pans horizontally, and items are laid out following a top-to-bottom, then left-to-right reading order.</p>
+   <div class="bs-docs-example bs-docs-example-listview">
+
+      <div class="listview grid-layout">
+
+         <div class="listview-item">
+            <a class="pull-left" href="#">
+               <img class="listview-item-object" data-src="holder.js/60x60">
+            </a>
+            <div class="listview-item-body">
+               <h4 class="listview-item-heading">Media heading</h4>
+               <p>Lorem ipsum sin ut dolorem</p>
+            </div>
+         </div>
 
 
-<!-- ListVIew -->
+      </div>
+
+   </div>
+<pre class="prettyprint linenums">
+
+</pre>
+
+
+   <h2 id="metro-listview-list">List layout</h2>
+   <p>List Layouts are single-column only with a top to bottom reading order, and they always pan or scroll vertically.</p>
+   <div class="bs-docs-example bs-docs-example-listview">
+
+      <div class="listview list-layout">
+
+      </div>
+
+   </div>
+<pre class="prettyprint linenums">
+
+</pre>
+
+</div>
+
+
 
 
 <!-- Tiles templates -->
