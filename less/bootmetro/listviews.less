@@ -4,30 +4,68 @@
 }
 
 .listview-item {
-   //   display: inline-block;
-   //   position: relative;
-   //   vertical-align: top;
-
+   display: inline-block;
    position: relative;
+   vertical-align: top;
    .media;
    width: 282px;
-   height: 70px;
-   padding: 5px;
+   height: 60px;
+   padding: 10px;
    margin-bottom: 7px;
    margin-right: 24px;
    border: solid 3px transparent;
-
    text-shadow: none;
-   background-color: @linkColor;
    color: @white;
    z-index: @zindexNotification;
+
+   &:hover {
+      border: solid 3px @tile-border-hover;
+   }
+
+   &.selected {
+      border: 3px solid @blu1;
+   }
+   &.selected:after {
+      content: "";
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-left: 40px solid transparent;
+      border-top: 40px solid @blu1;
+      z-index: 1001;
+   }
+   &.selected:before {
+      position: absolute;
+      top: 0;
+      right: 4px;
+      color: #FFFFFF;
+      content: "\e379";
+   	font-family: 'icomoon';
+      z-index: 1002;
+   }
+
 }
+
 .listview-item-body {
    .media-body;
 
    p {
       .text-overflow-wrap;
       margin: 0;
+      height: 20px;
+      line-height: 20px;
+
+      &.two-lines {
+         height: 40px;
+         line-height: 20px;
+      }
+      &.three-lines {
+         height: 60px;
+         line-height: 20px;
+      }
    }
 }
 
@@ -36,12 +74,22 @@
    .media-object;
    width: 60px;
    height: 60px;
+   margin-right: 10px;
+
+   &[class*="icon-"] {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      font-size: 60px;
+      line-height: 60px;
+   }
 }
 
 // Reset margins on headings for tighter default spacing
 .listview-item-heading {
    .media-heading;
    .text-overflow-wrap;
+   margin: 0;
 }
 
 

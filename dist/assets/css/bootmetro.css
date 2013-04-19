@@ -7159,6 +7159,7 @@ AppBar control.
 
 .toast-heading {
   margin: 0 0 5px;
+  margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -7794,7 +7795,7 @@ Progress control. */
 }
 
 .bg-color-orange {
-  background-color: #CD4900 !important;
+  background-color: #f09609 !important;
 }
 
 .bg-color-purple {
@@ -7831,6 +7832,14 @@ Progress control. */
 
 .bg-color-darken {
   background-color: #1c1c1c !important;
+}
+
+.bg-color-gray {
+  background-color: #555555 !important;
+}
+
+.bg-color-grayLight {
+  background-color: #999999 !important;
 }
 
 .metro {
@@ -8412,9 +8421,10 @@ Progress control. */
 .listview-item {
   position: relative;
   z-index: 1060;
+  display: inline-block;
   width: 282px;
-  height: 70px;
-  padding: 5px;
+  height: 60px;
+  padding: 10px;
   margin-top: 15px;
   margin-right: 24px;
   margin-bottom: 7px;
@@ -8422,9 +8432,40 @@ Progress control. */
   *overflow: visible;
   color: #ffffff;
   text-shadow: none;
-  background-color: #2e8bcc;
+  vertical-align: top;
   border: solid 3px transparent;
   zoom: 1;
+}
+
+.listview-item:hover {
+  border: solid 3px #225a68;
+}
+
+.listview-item.selected {
+  border: 3px solid #003484;
+}
+
+.listview-item.selected:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 40px solid #003484;
+  border-left: 40px solid transparent;
+  content: "";
+}
+
+.listview-item.selected:before {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  z-index: 1002;
+  font-family: 'icomoon';
+  color: #FFFFFF;
+  content: "\e379";
 }
 
 .listview-item-body {
@@ -8434,19 +8475,41 @@ Progress control. */
 }
 
 .listview-item-body p {
+  height: 20px;
   margin: 0;
   overflow: hidden;
+  line-height: 20px;
   text-overflow: ellipsis;
+}
+
+.listview-item-body p.two-lines {
+  height: 40px;
+  line-height: 20px;
+}
+
+.listview-item-body p.three-lines {
+  height: 60px;
+  line-height: 20px;
 }
 
 .listview-item-object {
   display: block;
   width: 60px;
   height: 60px;
+  margin-right: 10px;
+}
+
+.listview-item-object[class*="icon-"] {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  font-size: 60px;
+  line-height: 60px;
 }
 
 .listview-item-heading {
   margin: 0 0 5px;
+  margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
 }

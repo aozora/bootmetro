@@ -1,5 +1,5 @@
 .bg-color-orange {
-   background-color: #CD4900 !important;
+   background-color: @orange !important;
 }
 .bg-color-purple {
    background-color: @purple !important;
@@ -28,7 +28,14 @@
 .bg-color-darken {
    background-color: #1c1c1c !important;
 }
+.bg-color-gray {
+   background-color: @gray !important;
+}
+.bg-color-grayLight {
+   background-color: @grayLight !important;
+}
 
+@tile-border-hover: #225a68;
 
 .metro {
    position: relative;
@@ -224,7 +231,7 @@
       }
    }
    .tile:hover {
-      outline: 3px #225a68 solid;
+      outline: 3px @tile-border-hover solid;
    }
 
    .tile.app {
