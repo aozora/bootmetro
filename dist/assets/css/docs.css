@@ -421,7 +421,9 @@ hr.soften {
    background-color: #FFF;
 
 }
-
+.bs-docs-example-listview .listview.list-layout {
+   height: 340px;
+}
 
 .bs-docs-example-listview .listview-item h4 {
    margin: 0;

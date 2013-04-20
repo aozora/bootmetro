@@ -1,6 +1,15 @@
 .listview.grid-layout {
    overflow-y: auto;
    padding: 2px;
+
+   .listview-item {
+      margin-right: 24px;
+   }
+}
+.listview.list-layout {
+   overflow-y: auto;
+   width: 330px;
+   padding: 2px;
 }
 
 .listview-item {
@@ -9,10 +18,9 @@
    vertical-align: top;
    .media;
    width: 282px;
-   height: 60px;
+   min-height: 60px;
    padding: 10px;
    margin-bottom: 7px;
-   margin-right: 24px;
    border: solid 3px transparent;
    text-shadow: none;
    color: @white;
@@ -20,6 +28,7 @@
 
    &:hover {
       border: solid 3px @tile-border-hover;
+      cursor: pointer;
    }
 
    &.selected {
@@ -93,81 +102,7 @@
 }
 
 
-//
-//// ListView
-//.mediumListIconTextItem.selected .mediumListIconTextItem-Detail,
-//.mediumListIconTextItem.selected .mediumListIconTextItem-Detail h4,
-//.mediumListIconTextItem.selected .mediumListIconTextItem-Detail h6 {
-//   color: #FFF;
-//}
-//
-//.listview-container.grid-layout {
-//   border: solid 2px rgba(0, 0, 0, 0.13);
-//   height: 240px;
-//   overflow: auto;
-//   padding: 2px;
-//   background-color: #FFF;
-//}
-//
-//
-//.mediumListIconTextItem .mediumListIconTextItem-Image[class^="icon-"],.mediumListIconTextItem .mediumListIconTextItem-Image[class*=" icon-"] {
-//   display: inline-block;
-//   width: 60px;
-//   height: 60px;
-//   font-size: 60px;
-//   line-height: 60px;
-//   margin: 5px;
-//}
-//.mediumListIconTextItem {
-//   display: inline-block;
-//   position: relative;
-//   vertical-align: top;
-//   width: 282px;
-//   height: 70px;
-//   padding: 5px;
-//   margin-bottom: 7px;
-//   margin-right: 24px;
-//   border: solid 3px transparent;
-//   overflow: hidden;
-//   background-color: #FFF;
-//   cursor: pointer;
-//   .mediumListIconTextItem-Detail {
-//      display: inline-block;
-//      vertical-align: top;
-//      margin: 5px;
-//   }
-//   img.mediumListIconTextItem-Image {
-//      display: inline-block;
-//      vertical-align: top;
-//      width: 60px;
-//      height: 60px;
-//      margin: 5px;
-//   }
-//}
-//
-//.mediumListIconTextItem.selected:hover {
-//   border: solid 3px #b3b3b3;
-//   background-color: #4617b4;
-//}
-//.mediumListIconTextItem.selected {
-//   background-color: #4617b4;
-//}
-//.mediumListIconTextItem:hover {
-//   border: solid 3px #b3b3b3;
-//   background-color: #b3b3b3;
-//}
-//
-//.mediumListIconTextItem.selected:after {
-//   position: absolute;
-//   top: 5px;
-//   right: 5px;
-//   width: 16px;
-//   height: 16px;
-//   font-family: 'IcoMoon';
-//   content: "\e03c";
-//   color: #FFF;
-//   font-size: 16px;
-//}
+
 
 
 

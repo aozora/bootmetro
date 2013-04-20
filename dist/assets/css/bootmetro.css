@@ -8418,15 +8418,24 @@ Progress control. */
   overflow-y: auto;
 }
 
+.listview.grid-layout .listview-item {
+  margin-right: 24px;
+}
+
+.listview.list-layout {
+  width: 330px;
+  padding: 2px;
+  overflow-y: auto;
+}
+
 .listview-item {
   position: relative;
   z-index: 1060;
   display: inline-block;
   width: 282px;
-  height: 60px;
+  min-height: 60px;
   padding: 10px;
   margin-top: 15px;
-  margin-right: 24px;
   margin-bottom: 7px;
   overflow: hidden;
   *overflow: visible;
@@ -8438,6 +8447,7 @@ Progress control. */
 }
 
 .listview-item:hover {
+  cursor: pointer;
   border: solid 3px #225a68;
 }
 
