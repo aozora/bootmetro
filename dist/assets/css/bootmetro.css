@@ -8428,9 +8428,12 @@ Progress control. */
   overflow-y: auto;
 }
 
+.listview.list-layout.big {
+  width: 430px;
+}
+
 .listview-item {
   position: relative;
-  z-index: 1060;
   display: inline-block;
   width: 282px;
   min-height: 60px;
@@ -8522,6 +8525,33 @@ Progress control. */
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.listview-item-subheading {
+  margin: 0 0 5px;
+  margin: 0;
+  overflow: hidden;
+  color: #eeeeee;
+  text-overflow: ellipsis;
+}
+
+.listview-item.big {
+  width: 380px;
+}
+
+.listview-item.big .listview-item-object {
+  display: block;
+  width: 112px;
+  height: 112px;
+  margin-right: 10px;
+}
+
+.listview-item.big .listview-item-object[class*="icon-"] {
+  display: inline-block;
+  width: 112px;
+  height: 112px;
+  font-size: 112px;
+  line-height: 112px;
 }
 
 /*

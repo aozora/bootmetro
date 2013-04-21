@@ -10,6 +10,10 @@
    overflow-y: auto;
    width: 330px;
    padding: 2px;
+
+   &.big {
+      width: 430px;
+   }
 }
 
 .listview-item {
@@ -24,7 +28,6 @@
    border: solid 3px transparent;
    text-shadow: none;
    color: @white;
-   z-index: @zindexNotification;
 
    &:hover {
       border: solid 3px @tile-border-hover;
@@ -100,10 +103,35 @@
    .text-overflow-wrap;
    margin: 0;
 }
+.listview-item-subheading {
+   .media-heading;
+   .text-overflow-wrap;
+   margin: 0;
+   color: @grayLighter;
+}
 
 
 
+// Bigger listview
+.listview-item.big {
 
+   width: 380px;
+
+   .listview-item-object {
+      .media-object;
+      width: 112px;
+      height: 112px;
+      margin-right: 10px;
+
+      &[class*="icon-"] {
+         display: inline-block;
+         width: 112px;
+         height: 112px;
+         font-size: 112px;
+         line-height: 112px;
+      }
+   }
+}
 
 
 /*

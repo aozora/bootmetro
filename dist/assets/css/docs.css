@@ -425,7 +425,8 @@ hr.soften {
    height: 340px;
 }
 
-.bs-docs-example-listview .listview-item h4 {
+.bs-docs-example-listview .listview-item h4,
+.bs-docs-example-listview .listview-item h5{
    margin: 0;
 }
 
