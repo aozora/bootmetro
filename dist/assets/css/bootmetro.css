@@ -7315,6 +7315,16 @@ AppBar control.
   font-weight: 600;
 }
 
+/* Section headings for groups of links */
+
+.metro-nav-list > .nav-header {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
 /* Nav: second level (shown on .active) */
 
 .metro-nav-list .nav {
@@ -7347,14 +7357,10 @@ AppBar control.
   border-left: 3px solid #0177db;
 }
 
-/* Section headings for groups of links */
+/* Nav: third level (shown on .active) */
 
-.metro-nav-list > .nav-header {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
+.metro-nav-list .nav .nav {
+  margin-left: 40px;
 }
 
 .navbar-inner {
