@@ -1,8 +1,8 @@
 =================================
-v0.7
+v1.0.0 alpha1
 =================================
 This release must be considered as a stabilization of v0.6.
-The v1.0 will be completely redone from scratch using as base Twitter Bootstrap v3.
+The v2.0 will be completely redone from scratch using as base Twitter Bootstrap v3.
 
 BREAKING CHANGES:
    - Replaced icomoon font with a new icomoon set generated with PUA. Many icon-* class names has changed;
