@@ -40,6 +40,17 @@
       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
    <script src="assets/js/modernizr-2.6.2.min.js"></script>
+
+   <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3182578-6']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+   </script>
 </head>
 
 <body>
@@ -51,10 +62,9 @@
    ================================================== -->
    <header id="nav-bar" class="container">
       <div class="row">
-         <div class="span12">
+         <div class="span6">
             <div id="header-container">
-               <a id="backbutton" class="win-backbutton" href="../index.html"></a>
-               <h5>BootMetro</h5>
+               <h5>BootMetro Demo</h5>
                <div class="dropdown">
                   <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#">
                      Start
@@ -82,6 +92,8 @@
                </ul>
             </div>
             </div>
+         </div>
+         <div class="span6">
             <div id="top-info" class="pull-right">
             <a id="settings" href="#" class="win-command pull-right">
                <span class="win-commandicon win-commandring icon-cog-3"></span>
@@ -106,7 +118,7 @@
    
                <div id="section1" class="panorama-section tile-span-4">
    
-                  <h2>BootMetro Demos</h2>
+                  <h2>Group One</h2>
    
                   <a class="tile wide imagetext bg-color-orange" href="./metro-layouts.html">
                      <div class="image-wrapper">
@@ -174,7 +186,7 @@
    
                <div id="section2" class="panorama-section tile-span-4">
    
-                  <h2>Bootstrap Metro</h2>
+                  <h2>Group two</h2>
    
                   <a class="tile wide imagetext bg-color-blue" href="./scaffolding.html">
                      <div class="image-wrapper">
@@ -219,8 +231,8 @@
    
             </div>
             </div>
-            <a id="panorama-scroll-prev" href="#">&#xe12e;</a>
-            <a id="panorama-scroll-next" href="#">&#xe12a;</a>
+            <a id="panorama-scroll-prev" href="#"></a>
+            <a id="panorama-scroll-next" href="#"></a>
          </div>
       </div>
    </div>
@@ -266,11 +278,20 @@
    <script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
    <!--<script type="text/javascript" src="scripts/jquery.nicescroll.js"></script>-->
    <!--<script type="text/javascript" src="scripts/jquery.touchSwipe.js"></script>-->
-   <script type="text/javascript" src="assets/js/demo.js"></script>
    <script type="text/javascript" src="assets/js/holder.js"></script>
+   <script type="text/javascript" src="assets/js/perfect-scrollbar.with-mousewheel.min.js"></script>
+   <script type="text/javascript" src="assets/js/demo.js"></script>
+
+
    <script type="text/javascript">
+
+      $("body").perfectScrollbar({
+         wheelSpeed: 20,
+         wheelPropagation: true
+      })
+
       $('.panorama').panorama({
-         nicescroll: true,
+         nicescroll: false,
          showscrollbuttons: true,
          keyboard: true
       });

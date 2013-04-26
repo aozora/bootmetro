@@ -6810,11 +6810,11 @@ Back button.
   background-clip: border-box;
 }
 
-.win-backbutton::before {
+.win-backbutton:before {
   font-family: 'IcoMoon';
-  font-size: 24px;
+  font-size: 22px;
   font-weight: normal;
-  vertical-align: 24%;
+  vertical-align: top;
   content: "\e41c";
 }
 
