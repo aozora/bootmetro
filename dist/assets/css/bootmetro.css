@@ -8228,16 +8228,12 @@ Progress control. */
   height: 300px;
 }
 
-.metro .tile.ad.ad125 {
-  width: 125px;
-  height: 125px;
-  padding: 12px 13px 13px 12px;
+.metro .tile.widepeek .tile {
+  margin: 0;
 }
 
-.metro .tile.wide.ad.ad125 {
-  width: 180px;
-  height: 150px;
-  padding: 0 65px;
+.metro .tile.widepeek .tile:hover {
+  outline: 0;
 }
 
 #panorama-scroll-prev,
