@@ -18,6 +18,10 @@ body {
    /*padding-top: 40px;*/
 }
 
+#wrap {
+   position: relative;
+}
+
 .accent-color, header h1, header h2, table th {
     color: #847d6b;
 }
