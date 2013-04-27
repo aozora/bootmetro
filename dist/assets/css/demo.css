@@ -1,10 +1,5 @@
-/* Add additional stylesheets below
+/* Demo styles for Hub and other metro pages
 -------------------------------------------------- */
-/*
-  Bootstrap's documentation styles
-  Special styles for presenting Bootstrap's documentation and examples
-*/
-
 
 
 /* Body and structure
@@ -14,33 +9,45 @@ body {
    position: relative;
    background: transparent url(../img/bkg-4.png) repeat 0 0;
    /*background-color: #f2f0e4;*/
+	margin:0;
+	padding:0;
+	height:100%; /* needed for container min-height */
    color: #847d6b;
-   /*padding-top: 40px;*/
 }
 
+
 #wrap {
-   position: relative;
+   position:relative; /* needed for footer positioning*/
+   margin:0 auto; /* center, not in IE5 */
+   height:auto !important; /* real browsers */
+   height:100%; /* IE6: treaded as min-height*/
+   min-height:100%; /* real browsers */
 }
+
+
+
+
+
 
 .accent-color, header h1, header h2, table th {
     color: #847d6b;
 }
 
-header h1 {
-   font-size: 50px;
-   font-weight: 300;
-   line-height: 54px;
-   color: #444;
-}
-   header h1 small {font-weight: 300;}
+/*header h1 {*/
+   /*font-size: 50px;*/
+   /*font-weight: 300;*/
+   /*line-height: 54px;*/
+   /*color: #444;*/
+/*}*/
+   /*header h1 small {font-weight: 300;}*/
 
 
 /* Tweak navbar brand link to be super sleek
 -------------------------------------------------- */
 
-#nav-bar {
-   height: auto;
-}
+/*#nav-bar {*/
+   /*height: auto;*/
+/*}*/
 
 body > .navbar {
    font-size: 13px;
@@ -1305,48 +1312,42 @@ ListView demo
 
 
 
-/*::-webkit-scrollbar {*/
-   /*width: 17px;*/
-   /*height: 17px;*/
-   /*background-color: #F0F0F0;*/
-   /*border: none;*/
-/*}*/
-/*Pseudo ::-webkit-search-decoration element*/
-
-/*::-webkit-scrollbar-thumb {*/
-   /*background-color: #CDCDCD;*/
-   /*border: 1px solid #F0F0F0;*/
-/*}*/
-/*Pseudo ::-webkit-search-decoration element*/
-
-/*::-webkit-scrollbar-button {*/
-   /*background-color: #F0F0F0;*/
-   /*background:  #F0F0F0 url("/content/img/controls-icon.png");*/
-   /*background-repeat: no-repeat;*/
-/*}*/
-/*Pseudo ::-webkit-search-decoration element*/
-/*::-webkit-scrollbar-corner {*/
-   /*background-color: #F0F0F0;*/
-/*}*/
-
 
 
 /* PERFECT SCROLLBAR */
-
-
 .ps-container .ps-scrollbar-x {
    position: absolute; /* please don't change 'position' */
    bottom: 3px; /* there must be 'bottom' for ps-scrollbar-x */
-   height: 8px;
-   background-color: #aaa;
-   border-radius: 4px;
-   -webkit-border-radius: 4px;
-   -moz-border-radius: 4px;
+   height: 17px;
+   background-color: #CDCDCD;
    opacity: 0;
    filter: alpha(opacity = 0);
-   -webkit-transition: opacity.2s linear;
-   -moz-transition: opacity .2s linear;
-   transition: opacity .2s linear;
+   -webkit-transition: opacity .2s linear;
+      -moz-transition: opacity .2s linear;
+           transition: opacity .2s linear;
+}
+
+.ps-container .ps-scrollbar-x:before {
+	content: "\e127";
+   font-family: 'IcoMoon';
+   position: absolute;
+   left: 0;
+   top: 0;
+   font-size: 17px;
+   line-height: 17px;
+   background-color: #f1f1f1;
+   color: #606060;
+}
+.ps-container .ps-scrollbar-x:after {
+	content: "\e12a";
+   font-family: 'IcoMoon';
+   position: absolute;
+   right: 0;
+   top: 0;
+   font-size: 17px;
+   line-height: 17px;
+   background-color: #f1f1f1;
+   color: #606060;
 }
 
 .ps-container:hover .ps-scrollbar-x {
@@ -1368,11 +1369,8 @@ ListView demo
 .ps-container .ps-scrollbar-y {
    position: absolute; /* please don't change 'position' */
    right: 3px; /* there must be 'right' for ps-scrollbar-y */
-   width: 8px;
+   width: 17px;
    background-color: #aaa;
-   border-radius: 4px;
-   -webkit-border-radius: 4px;
-   -moz-border-radius: 4px;
    opacity: 0;
    filter: alpha(opacity = 0);
    -webkit-transition: opacity.2s linear;

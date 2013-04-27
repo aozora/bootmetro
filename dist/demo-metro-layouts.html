@@ -186,16 +186,17 @@
 
    <script type="text/javascript">
 
-      $("#wrap").perfectScrollbar({
-         wheelSpeed: 20,
-         wheelPropagation: true
-      })
-
       $('.panorama').panorama({
          nicescroll: false,
          showscrollbuttons: true,
          keyboard: true
       });
+
+      $(".panorama").perfectScrollbar({
+//          wheelSpeed: 20
+//         ,wheelPropagation: true
+      })
+
 
       $('#pivot').pivot();
    </script>

@@ -2,14 +2,14 @@
 
    <!-- Header
    ================================================== -->
-   <header id="nav-bar" class="container">
+   <div id="nav-bar" class="container">
       <div class="row">
          <div class="span6">
             <div id="header-container">
                <h5>{{appname}} Demo</h5>
                <div class="dropdown">
                   <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#">
-                     {{_i}}Start{{/i}}
+                     Start
                      <b class="caret"></b>
                   </a>
                   {{>headermenu}}
@@ -20,134 +20,105 @@
             {{>loggeduser}}
          </div>
       </div>
-   </header>
+   </div>
 
-   <div class="container">
-      <div class="row">
-         <div id="hub" class="metro span12">
-            <div class="panorama">
+   <div id="metro-container" class="container">
+      <!--<div class="row">-->
+         <!--<div id="hub" class="metro">-->
+            <div class="metro panorama">
                <div class="panorama-sections">
 
-               <div id="section1" class="panorama-section tile-span-4">
+                  <div id="section1" class="panorama-section tile-span-4">
 
-                  <h2>Group One</h2>
+                     <h2>Group One</h2>
 
-                  <a class="tile wide imagetext bg-color-orange" href="./metro-layouts.html">
-                     <div class="image-wrapper">
-                        <img src="assets/img/metro-tiles.jpg" />
-                     </div>
-                     <div class="column-text">
-                        <div class="text4">Demos of various Metro style layouts.</div>
-                     </div>
-                     <div class="app-label">Layouts</div>
-                  </a>
+                     <a class="tile wide imagetext bg-color-orange" href="./metro-layouts.html">
+                        <div class="image-wrapper">
+                           <img src="assets/img/metro-tiles.jpg" />
+                        </div>
+                        <div class="column-text">
+                           <div class="text4">Demos of various Metro style layouts.</div>
+                        </div>
+                        <div class="app-label">Layouts</div>
+                     </a>
 
-                  <a class="tile wide imagetext bg-color-blueDark" href="./tiles-templates.html">
-                     <div class="image-wrapper">
-                        <img src="assets/img/metro-tiles.jpg" />
-                     </div>
-                     <div class="column-text">
-                        <div class="text4">List of all tile templates: square, wide, widepeek, with images or text only.</div>
-                     </div>
-                     <div class="app-label">Tiles Templates</div>
-                  </a>
+                     <a class="tile wide imagetext bg-color-blueDark" href="./tiles-templates.html">
+                        <div class="image-wrapper">
+                           <img src="assets/img/metro-tiles.jpg" />
+                        </div>
+                        <div class="column-text">
+                           <div class="text4">List of all tile templates: square, wide, widepeek, with images or text only.</div>
+                        </div>
+                        <div class="app-label">Tiles Templates</div>
+                     </a>
 
-                  <a class="tile wide imagetext wideimage bg-color-orange" href="./appbar-demo.html">
-                     <img src="assets/img/appbar.png" alt=""/>
-                     <div class="textover-wrapper bg-color-blue">
-                        <div class="text2">Application Bar</div>
-                     </div>
-                  </a>
+                     <a class="tile wide imagetext wideimage bg-color-orange" href="./appbar-demo.html">
+                        <img src="assets/img/appbar.png" alt=""/>
+                        <div class="textover-wrapper bg-color-blue">
+                           <div class="text2">Application Bar</div>
+                        </div>
+                     </a>
 
-                  <a class="tile app square bg-color-greenDark" href="./table.html">
-                     <div class="image-wrapper">
-                        <img src="assets/img/My Apps.png" alt=""/>
-                     </div>
-                     <div class="app-label">Styled Table</div>
-                  </a>
+                     <a class="tile app square bg-color-greenDark" href="./table.html">
+                        <div class="image-wrapper">
+                           <img src="assets/img/My Apps.png" alt=""/>
+                        </div>
+                        <div class="app-label">Styled Table</div>
+                     </a>
 
-                  <a class="tile app bg-color-purple" href="./listviews.html">
-                     <div class="image-wrapper">
-                        <span class="icon icon-list-2"></span>
-                     </div>
-                     <span class="app-label">ListView</span>
-                  </a>
+                  </div>
 
-                  <a class="tile app bg-color-red" href="#">
-                     <div class="image-wrapper">
-                        <span class="icon icon-publish"></span>
-                     </div>
-                     <span class="app-label">[TODO] Charms</span>
-                  </a>
+                  <div id="section2" class="panorama-section tile-span-4">
 
-                  <a class="tile app bg-color-blueDark" href="./icons.html">
-                     <div class="image-wrapper">
-                        <span class="icon icon-IcoMoon" ></span>
-                     </div>
-                     <span class="app-label">Icons</span>
-                  </a>
+                     <h2>Group two</h2>
 
-                  <a class="tile app bg-color-purple" href="./metro-components.html">
-                     <div class="image-wrapper">
-                        <span class="icon icon-list-2"></span>
-                     </div>
-                     <span class="app-label">Metro Components</span>
-                  </a>
+                     <a class="tile wide imagetext bg-color-blue" href="./scaffolding.html">
+                        <div class="image-wrapper">
+                           <img src="assets/img/My Apps.png" />
+                        </div>
+                        <div class="column-text">
+                           <div class="text">Grid system</div>
+                           <div class="text">Layouts</div>
+                           <div class="text">Responsive design</div>
+                        </div>
+                        <span class="app-label">SCAFFOLDING</span>
+                     </a>
 
-               </div>
+                     <a class="tile wide imagetext bg-color-blueDark" href="./base-css.html">
+                        <div class="image-wrapper">
+                           <img src="assets/img/Coding app.png" />
+                        </div>
+                        <div class="column-text">
+                           <div class="text">Typography</div>
+                           <div class="text">Tables</div>
+                           <div class="text">Forms</div>
+                           <div class="text">Buttons</div>
+                        </div>
+                        <span class="app-label">BASE CSS</span>
+                     </a>
 
-               <div id="section2" class="panorama-section tile-span-4">
+                     <a class="tile app bg-color-orange" href="./components.html">
+                        <div class="image-wrapper">
+                           <img src="assets/img/RegEdit.png" alt="" />
+                        </div>
+                        <span class="app-label">COMPONENTS</span>
+                     </a>
 
-                  <h2>Group two</h2>
+                     <a class="tile app bg-color-red" href="./javascript.html">
+                        <div class="image-wrapper">
+                           <img src="assets/img/Devices.png" alt="" />
+                        </div>
+                        <span class="app-label">JAVASCRIPT</span>
+                     </a>
 
-                  <a class="tile wide imagetext bg-color-blue" href="./scaffolding.html">
-                     <div class="image-wrapper">
-                        <img src="assets/img/My Apps.png" />
-                     </div>
-                     <div class="column-text">
-                        <div class="text">Grid system</div>
-                        <div class="text">Layouts</div>
-                        <div class="text">Responsive design</div>
-                     </div>
-                     <span class="app-label">SCAFFOLDING</span>
-                  </a>
-
-                  <a class="tile wide imagetext bg-color-blueDark" href="./base-css.html">
-                     <div class="image-wrapper">
-                        <img src="assets/img/Coding app.png" />
-                     </div>
-                     <div class="column-text">
-                        <div class="text">Typography</div>
-                        <div class="text">Tables</div>
-                        <div class="text">Forms</div>
-                        <div class="text">Buttons</div>
-                     </div>
-                     <span class="app-label">BASE CSS</span>
-                  </a>
-
-                  <a class="tile app bg-color-orange" href="./components.html">
-                     <div class="image-wrapper">
-                        <img src="assets/img/RegEdit.png" alt="" />
-                     </div>
-                     <span class="app-label">COMPONENTS</span>
-                  </a>
-
-                  <a class="tile app bg-color-red" href="./javascript.html">
-                     <div class="image-wrapper">
-                        <img src="assets/img/Devices.png" alt="" />
-                     </div>
-                     <span class="app-label">JAVASCRIPT</span>
-                  </a>
+                  </div>
 
                </div>
-
-            </div>
             </div>
             <a id="panorama-scroll-prev" href="#"></a>
             <a id="panorama-scroll-next" href="#"></a>
-         </div>
-      </div>
+         <!--</div>-->
+      <!--</div>-->
    </div>
-
 
 </div>

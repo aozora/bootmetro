@@ -5737,14 +5737,8 @@ a.badge:focus {
   position: fixed;
 }
 
-html {
-  background-color: #FFF;
-}
-
 body {
   position: relative;
-  padding-top: 24px;
-  padding-bottom: 88px;
   font-weight: 300;
 }
 
@@ -5781,8 +5775,9 @@ header h1 {
 #nav-bar {
   position: relative;
   display: block;
-  height: 64px;
-  margin-bottom: 20px;
+  height: auto;
+  padding-top: 24px;
+  padding-bottom: 20px;
 }
 
 .row-fluid .hide {
@@ -7871,6 +7866,7 @@ Progress control. */
   position: relative;
   width: 10000px;
   height: auto;
+  padding-bottom: 24px;
   overflow: hidden;
 }
 
