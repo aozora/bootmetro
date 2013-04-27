@@ -125,6 +125,32 @@
       text-decoration: none;
       background-color: #2C83EF;
 
+
+      &.selected {
+         border: 3px solid @blu1;
+      }
+      &.selected:after {
+         content: "";
+         position: absolute;
+         display: block;
+         right: 0;
+         top: 0;
+         width: 0;
+         height: 0;
+         border-left: 40px solid transparent;
+         border-top: 40px solid @blu1;
+         z-index: 1001;
+      }
+      &.selected:before {
+         position: absolute;
+         top: 0;
+         right: 4px;
+         color: #FFFFFF;
+         content: "\e379";
+         font-family: 'icomoon';
+         z-index: 1002;
+      }
+
       .app-label, .label {
          bottom: 5px;
          font-size: 12px;

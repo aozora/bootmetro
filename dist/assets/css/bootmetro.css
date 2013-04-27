@@ -7943,6 +7943,33 @@ Progress control. */
   background-color: #2C83EF;
 }
 
+.metro .tile.selected {
+  border: 3px solid #003484;
+}
+
+.metro .tile.selected:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 40px solid #003484;
+  border-left: 40px solid transparent;
+  content: "";
+}
+
+.metro .tile.selected:before {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  z-index: 1002;
+  font-family: 'icomoon';
+  color: #FFFFFF;
+  content: "\e379";
+}
+
 .metro .tile .app-label,
 .metro .tile .label {
   position: absolute;

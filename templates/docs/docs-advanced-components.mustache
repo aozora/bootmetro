@@ -572,6 +572,7 @@
 
    <p>ListView is intended for items that expose multiple pieces of data. If your items are just a set of short strings, consider using the Select control.</p>
    <p>The ListView comes with two “layouts” built into the control: list layout, and grid layout.</p>
+   <p>To apply the selection check simply add the <code>selected</code> class.</p>
 
    <h2 id="metro-listview-grid">Grid layout</h2>
    <p>The grid layout always pans horizontally, and items are laid out following a top-to-bottom, then left-to-right reading order.</p>
@@ -832,6 +833,11 @@
       <h1 id="metro-tiles">Tiles templates <small></small></h1>
    </div>
 
+   <blockquote>
+      Tiles are the representation of your app on the Start screen. Selecting a tile launches its app. The content shown on your tile can, and ideally should, change regularly, especially if your tile can communicate new, real-time information to your user.
+      Tiles can show a combination of text and images, and a badge to show status.
+      <small>Tiles, badges, and notifications (Windows Store apps documentation)</small>
+   </blockquote>
 
    <h2 id="metro-tiles-square">Square Tiles Templates</h2>
 
@@ -1456,81 +1462,272 @@
 
    <div class="metro">
 
-         <table id="widepeek" class="table">
-            <caption><h3>Wide Peek templates</h3></caption>
-            <thead>
-               <tr>
-                  <th>Template Name</th>
-                  <th>Description</th>
-                  <th>Tile</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td><strong>TileWidePeekImageCollection01</strong></td>
-                  <td>Top: One large square image with four smaller square images to its right, no text. Bottom: One header string in larger text over one string of regular text wrapped over a maximum of four lines.</td>
-                  <td>
-                     <a href="#" class="tile widepeek">
-                        <div class="tile wide image collection">
-                           <img class="tile-image-main" src="holder.js/160x150/#377C89:#FFFFFF" alt=""/>
-                           <div class="mini-tiles">
-                              <img src="holder.js/75x75/#339933:#FFFFFF" alt=""/>
-                              <img src="holder.js/75x75/#00bff2:#FFFFFF" alt=""/>
-                              <img src="holder.js/75x75" alt=""/>
-                              <img src="holder.js/75x75/#F09609:#FFFFFF" alt=""/>
-                           </div>
+      <table class="table">
+         <thead>
+            <tr>
+               <th>Template Name</th>
+               <th>Description</th>
+               <th>Tile</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><strong>TileWidePeekImageCollection01</strong></td>
+               <td>Top: One large square image with four smaller square images to its right, no text. Bottom: One header string in larger text over one string of regular text wrapped over a maximum of four lines.</td>
+               <td>
+                  <a href="#" class="tile widepeek">
+                     <div class="tile wide image collection">
+                        <img class="tile-image-main" src="holder.js/160x150/#377C89:#FFFFFF" alt=""/>
+                        <div class="mini-tiles">
+                           <img src="holder.js/75x75/#339933:#FFFFFF" alt=""/>
+                           <img src="holder.js/75x75/#00bff2:#FFFFFF" alt=""/>
+                           <img src="holder.js/75x75" alt=""/>
+                           <img src="holder.js/75x75/#F09609:#FFFFFF" alt=""/>
                         </div>
-                        <div class="tile wide text">
-                           <div class="text-header">Header</div>
-                           <div class="text">Text field 1</div>
-                           <div class="text">Text field 2</div>
-                           <div class="text">Text field 3</div>
-                           <div class="text">Text field 4</div>
+                     </div>
+                     <div class="tile wide text">
+                        <div class="text-header">Header</div>
+                        <div class="text">Text field 1</div>
+                        <div class="text">Text field 2</div>
+                        <div class="text">Text field 3</div>
+                        <div class="text">Text field 4</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWidePeekImage01</strong></td>
+               <td>Top: One wide image. Bottom: One header string in larger text over one string of regular text that wraps over a maximum of four lines.</td>
+               <td>
+                  <a href="#" class="tile widepeek">
+                     <div class="tile wide image" href="#">
+                        <img src="holder.js/310x150/#377C89:#FFFFFF" alt=""/>
+                     </div>
+                     <div class="tile wide text">
+                        <div class="text5">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWidePeekImage05</strong></td>
+               <td>Top: One wide image. Bottom: On the left, one small image; on the right, one header string of larger text on the first line over one string of regular text wrapped over a maximum of four lines.</td>
+               <td>
+                  <a href="#" class="tile widepeek">
+                     <div class="tile wide image" href="#">
+                        <img src="holder.js/310x150/#377C89:#FFFFFF" alt=""/>
+                     </div>
+                     <div class="tile wide imagetext">
+                        <div class="image-wrapper">
+                           <img src="holder.js/75x75" alt=""/>
                         </div>
-                     </a>
-                  </td>
-               </tr>
-               <tr>
-                  <td><strong>TileWidePeekImage01</strong></td>
-                  <td>Top: One wide image. Bottom: One header string in larger text over one string of regular text that wraps over a maximum of four lines.</td>
-                  <td>
-                     <a href="#" class="tile widepeek">
-                        <div class="tile wide image" href="#">
-                           <img src="holder.js/310x150/#377C89:#FFFFFF" alt=""/>
+                        <div class="column-text">
+                           <div class="text-header">Adipisci velit, sed quia non numquam eius modi tempora.</div>
+                           <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                           <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                           <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                           <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
                         </div>
-                        <div class="tile wide text">
-                           <div class="text5">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
-                        </div>
-                     </a>
-                  </td>
-               </tr>
-               <tr>
-                  <td><strong>TileWidePeekImage05</strong></td>
-                  <td>Top: One wide image. Bottom: On the left, one small image; on the right, one header string of larger text on the first line over one string of regular text wrapped over a maximum of four lines.</td>
-                  <td>
-                     <a href="#" class="tile widepeek">
-                        <div class="tile wide image" href="#">
-                           <img src="holder.js/310x150/#377C89:#FFFFFF" alt=""/>
-                        </div>
-                        <div class="tile wide imagetext">
-                           <div class="image-wrapper">
-                              <img src="holder.js/75x75" alt=""/>
-                           </div>
-                           <div class="column-text">
-                              <div class="text-header">Adipisci velit, sed quia non numquam eius modi tempora.</div>
-                              <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
-                              <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
-                              <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
-                              <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
-                           </div>
-                        </div>
-                     </a>
-                  </td>
-               </tr>
+                     </div>
+                  </a>
+               </td>
+            </tr>
 
-            </tbody>
-         </table>
+         </tbody>
+      </table>
 
+   </div>
+
+
+
+   <h2 id="metro-tiles-select">Selecting tiles</h2>
+   <p>To apply the selection check, simply add the <code>selected</code> class.</p>
+   <div class="bs-docs-example bs-docs-example-tiles">
+      <div class="metro">
+         <a class="tile wide text selected" href="#">
+            <div class="text-header">Header</div>
+            <div class="text4">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+         </a>
+
+         <a class="tile square text selected" href="#">
+            <div class="text-header">Header</div>
+            <div class="text">Text field 1</div>
+            <div class="text">Text field 2</div>
+            <div class="text">Text field 3</div>
+         </a>
+      </div>
+   </div>
+
+   <h2 id="metro-tiles-colors">Color alternatives</h2>
+   <p>To apply a different background color to a tile, you can use the following predefined classes, or make the yours.</p>
+
+   <div class="metro">
+      <table class="table table-bordered">
+         <thead>
+         <tr>
+            <th>Class name</th>
+            <th>Example</th>
+         </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <code>bg-color-orange</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-orange" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-purple</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-purple" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-green</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-green" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-greenDark</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-greenDark" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-blue</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-blue" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-blueDark</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-blueDark" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-red</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-red" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-yellow</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-yellow" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-pink</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-pink" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-darken</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-darken" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-gray</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-gray" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-grayLight</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-grayLight" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+         </tbody>
+      </table>
    </div>
 
 
