@@ -62,57 +62,55 @@
    
       <!-- Header
       ================================================== -->
-      <div id="nav-bar" class="container">
-         <div class="row">
-            <div class="span6">
-               <div id="header-container">
-                  <h5>BootMetro Demo</h5>
-                  <div class="dropdown">
-                     <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#">
-                        Start
-                        <b class="caret"></b>
-                     </a>
-                     <ul class="dropdown-menu">
-                     <li><a href="./metro-layouts.html">Metro Layouts</a></li>
-                     <li><a href="./hub.html">Hub</a></li>
-                     <li><a href="./tiles-templates.html">Tile Templates</a></li>
-                     <li><a href="./listviews.html">ListViews</a></li>
-                     <li><a href="./appbar-demo.html">App-Bar Demo</a></li>
-                     <li><a href="./table.html">Table Demo</a></li>
-                     <li><a href="./wizard.html">Wizard</a></li>
-                     <li><a href="./icons.html">Icons</a></li>
-                     <li><a href="./toast.html">Toast Notifications</a></li>
-                     <li><a href="./pivot.html">Pivot</a></li>
-                     <li><a href="./metro-components.html">Metro Components</a></li>
-                     <li class="divider"></li>
-                     <li><a href="./scaffolding.html">Bootstrap Scaffolding</a></li>
-                     <li><a href="./base-css.html">Bootstrap Base CSS</a></li>
-                     <li><a href="./components.html">Bootstrap Components</a></li>
-                     <li><a href="./javascript.html">Bootstrap Javascript</a></li>
-                     <li class="divider"></li>
-                     <li><a href="./index.html">Home</a></li>
-                  </ul>
-               </div>
-               </div>
+      <div id="nav-bar" class="-container">
+         <div class="pull-left">
+            <div id="header-container">
+               <h5>BootMetro Demo</h5>
+               <div class="dropdown">
+                  <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                     Start
+                     <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                  <li><a href="./metro-layouts.html">Metro Layouts</a></li>
+                  <li><a href="./hub.html">Hub</a></li>
+                  <li><a href="./tiles-templates.html">Tile Templates</a></li>
+                  <li><a href="./listviews.html">ListViews</a></li>
+                  <li><a href="./appbar-demo.html">App-Bar Demo</a></li>
+                  <li><a href="./table.html">Table Demo</a></li>
+                  <li><a href="./wizard.html">Wizard</a></li>
+                  <li><a href="./icons.html">Icons</a></li>
+                  <li><a href="./toast.html">Toast Notifications</a></li>
+                  <li><a href="./pivot.html">Pivot</a></li>
+                  <li><a href="./metro-components.html">Metro Components</a></li>
+                  <li class="divider"></li>
+                  <li><a href="./scaffolding.html">Bootstrap Scaffolding</a></li>
+                  <li><a href="./base-css.html">Bootstrap Base CSS</a></li>
+                  <li><a href="./components.html">Bootstrap Components</a></li>
+                  <li><a href="./javascript.html">Bootstrap Javascript</a></li>
+                  <li class="divider"></li>
+                  <li><a href="./index.html">Home</a></li>
+               </ul>
             </div>
-            <div class="span6">
-               <div id="top-info" class="pull-right">
-               <a id="settings" href="#" class="win-command pull-right">
-                  <span class="win-commandicon win-commandring icon-cog-3"></span>
-               </a>
-               <a id="logged-user" href="#" class="win-command pull-right">
-                  <span class="win-commandicon win-commandring icon-user"></span>
-               </a>
-               <div class="pull-left">
-                  <h3>FirstName</h3>
-                  <h4>LastName</h4>
-               </div>
             </div>
          </div>
+         <div class="pull-right">
+            <div id="top-info" class="pull-right">
+            <a id="settings" href="#" class="win-command pull-right">
+               <span class="win-commandicon win-commandring icon-cog-3"></span>
+            </a>
+            <a id="logged-user" href="#" class="win-command pull-right">
+               <span class="win-commandicon win-commandring icon-user"></span>
+            </a>
+            <div class="pull-left">
+               <h3>FirstName</h3>
+               <h4>LastName</h4>
+            </div>
          </div>
       </div>
+      </div>
    
-      <div id="metro-container" class="container">
+      <div id="metro-container" class="-container">
          <!--<div class="row">-->
             <!--<div id="hub" class="metro">-->
                <div class="metro panorama">
@@ -122,38 +120,43 @@
    
                         <h2>Group One</h2>
    
-                        <a class="tile wide imagetext bg-color-orange" href="./metro-layouts.html">
+                        <a class="tile app bg-color-orange" href="#">
                            <div class="image-wrapper">
-                              <img src="assets/img/metro-tiles.jpg" />
+                              <span class="icon icon-mail"></span>
+                           </div>
+                           <div class="app-label">Mail</div>
+                           <div class="app-count">12</div>
+                        </a>
+   
+                        <a class="tile app bg-color-blue" href="#">
+                           <div class="image-wrapper">
+                              <span class="icon icon-map"></span>
+                           </div>
+                           <div class="app-label">Map</div>
+                        </a>
+   
+                        <a class="tile wide imagetext bg-color-greenDark" href="#">
+                           <div class="image-wrapper">
+                              <span class="icon icon-chat-2"></span>
                            </div>
                            <div class="column-text">
-                              <div class="text4">Demos of various Metro style layouts.</div>
+                              <div class="text4">Chat with your friends</div>
                            </div>
-                           <div class="app-label">Layouts</div>
+                           <div class="app-label">145 friends online</div>
                         </a>
    
-                        <a class="tile wide imagetext bg-color-blueDark" href="./tiles-templates.html">
+                        <a class="tile app bg-color-purple" href="#">
                            <div class="image-wrapper">
-                              <img src="assets/img/metro-tiles.jpg" />
+                              <span class="icon icon-weather"></span>
                            </div>
-                           <div class="column-text">
-                              <div class="text4">List of all tile templates: square, wide, widepeek, with images or text only.</div>
-                           </div>
-                           <div class="app-label">Tiles Templates</div>
+                           <div class="app-label">Weather</div>
                         </a>
    
-                        <a class="tile wide imagetext wideimage bg-color-orange" href="./appbar-demo.html">
-                           <img src="assets/img/appbar.png" alt=""/>
-                           <div class="textover-wrapper bg-color-blue">
-                              <div class="text2">Application Bar</div>
-                           </div>
-                        </a>
-   
-                        <a class="tile app square bg-color-greenDark" href="./table.html">
+                        <a class="tile app bg-color-green" href="#">
                            <div class="image-wrapper">
-                              <img src="assets/img/My Apps.png" alt=""/>
+                              <span class="icon icon-linkedin"></span>
                            </div>
-                           <div class="app-label">Styled Table</div>
+                           <div class="app-label">LinkedIn</div>
                         </a>
    
                      </div>
@@ -162,16 +165,16 @@
    
                         <h2>Group two</h2>
    
-                        <a class="tile wide imagetext bg-color-blue" href="./scaffolding.html">
+                        <a class="tile wide imagetext bg-color-blue" href="#">
                            <div class="image-wrapper">
-                              <img src="assets/img/My Apps.png" />
+                              <span class="icon icon-music-3"></span>
                            </div>
                            <div class="column-text">
-                              <div class="text">Grid system</div>
-                              <div class="text">Layouts</div>
-                              <div class="text">Responsive design</div>
+                              <div class="text">Top 10</div>
+                              <div class="text">Favorites</div>
+                              <div class="text">Best choices</div>
                            </div>
-                           <span class="app-label">SCAFFOLDING</span>
+                           <span class="app-label">MUSIC</span>
                         </a>
    
                         <a class="tile wide imagetext bg-color-blueDark" href="./base-css.html">

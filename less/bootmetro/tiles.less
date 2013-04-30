@@ -125,7 +125,10 @@
       overflow: hidden;
       text-decoration: none;
       background-color: #2C83EF;
-
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+         -moz-background-clip: padding;     /* Firefox 3.6 */
+              background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
 
       &.selected {
          border: 3px solid @blu1;

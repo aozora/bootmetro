@@ -16,12 +16,12 @@ body{
 html,
 body {
    position: relative;
-   background: transparent url(../img/bkg-4.png) repeat 0 0;
+   background: transparent url(../img/bkg-win8.png) repeat 0 0;
    /*background-color: #f2f0e4;*/
 	margin:0;
 	padding:0;
 	height:100%; /* needed for container min-height */
-   color: #847d6b;
+   color: #FFF; /*#847d6b;*/
 }
 
 
@@ -40,11 +40,21 @@ overflow:hidden;
 }
 
 
+/* custom styles */
+.win-commandicon {
+   color: #FFF;
+}
+.win-commandring, a:active .win-commandring, .win-commandring, button:active .win-commandring {
+   border-color: #FFF;
+}
+
+
 
 #nav-bar {
    position: fixed;
    top: 0;
    left: 0;
+   width: 100%;
 }
 
 #metro-container {
@@ -60,7 +70,7 @@ overflow:hidden;
 
 
 .accent-color, header h1, header h2, table th {
-    color: #847d6b;
+    color: #FFF;
 }
 
 /*header h1 {*/

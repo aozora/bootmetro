@@ -7937,6 +7937,10 @@ Progress control. */
   text-decoration: none;
   cursor: pointer;
   background-color: #2C83EF;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-background-clip: padding;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
 }
 
 .metro .tile.selected {
