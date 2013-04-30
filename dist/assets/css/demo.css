@@ -17,6 +17,7 @@ html,
 body {
    position: relative;
    background: transparent url(../img/bkg-win8.png) repeat 0 0;
+   /*background: transparent url(../img/bkg-parallax-1.jpg) repeat 0 0;*/
    /*background-color: #f2f0e4;*/
 	margin:0;
 	padding:0;

@@ -55,54 +55,54 @@
          }
 
          // init nicescroll plugin
-         if (this.options.nicescroll){
+         if (this.options.parallax){
 
-            console.log('nicescroll init');
-            var nicesx = this.$element.niceScroll(".panorama .panorama-sections",
-               {
-                  touchbehavior: true, //Modernizr.touch,
-                  cursorcolor: "#FF00FF",
-                  cursoropacitymax: 0.6,
-                  cursorwidth: 24,
-                  usetransition: true,
-                  hwacceleration: true,
-                  autohidemode: "hidden",
-                  bouncescroll: true
-               });
+            var movementStrength = 45;
+            var height = movementStrength / $(window).height();
+            var width = movementStrength / $(window).width();
 
-         } else {
-
-            if (this.options.showscrollbuttons){
-               var $p = $('.panorama-sections');
-
-               $('#panorama-scroll-prev').click(function(e){
-                  e.preventDefault();
-                  $this.prev()
-               });
-
-               $("#panorama-scroll-next").click(function(e){
-                  e.preventDefault();
-                  $this.next()
-               });
-            }
-
-            //Enable swiping...
-            $(".panorama").swipe( {
-               //Generic swipe handler for all directions
-               swipe:function(event, direction, distance, duration, fingerCount) {
-                  if (direction=='right'){
-                     $this.prev()
-                  }
-                  if (direction=='left'){
-                     $this.next()
-                  }
-               }//,
-               //threshold: 0,
-//               fingers: 'all'
+            $("html").mousemove(function(e){
+                var pageX = e.pageX - ($(window).width() / 2);
+                var pageY = e.pageY - ($(window).height() / 2);
+                var newvalueX = width * pageX * -1;
+                var newvalueY = height * pageY * -1;
+                $('body').css("background-position", newvalueX + "px 0px");
             });
 
-            $this.setButtons()
+
          }
+
+         if (this.options.showscrollbuttons){
+            var $p = $('.panorama-sections');
+
+            $('#panorama-scroll-prev').click(function(e){
+               e.preventDefault();
+               $this.prev()
+            });
+
+            $("#panorama-scroll-next").click(function(e){
+               e.preventDefault();
+               $this.next()
+            });
+         }
+
+         //Enable swiping...
+         $(".panorama").swipe( {
+            //Generic swipe handler for all directions
+            swipe:function(event, direction, distance, duration, fingerCount) {
+               if (direction=='right'){
+                  $this.prev()
+               }
+               if (direction=='left'){
+                  $this.next()
+               }
+            }//,
+            //threshold: 0,
+//               fingers: 'all'
+         });
+
+         $this.setButtons()
+
 
          if (this.options.keyboard){
             $(document).on('keyup', function ( e ) {
@@ -125,9 +125,21 @@
          var $p = $('.panorama-sections');
          var targetOffset = $(this.$groups[this.$current]).position().left
 
+//         $p.animate({
+//            marginLeft: -targetOffset
+//         }, 200, 'swing', function(){$this.setButtons()})
          $p.animate({
-            marginLeft: -targetOffset
-         }, 200, 'swing', function(){$this.setButtons()})
+           marginLeft: -targetOffset
+         },
+         {
+            duration: 200,
+            easing: 'swing'
+//            ,step: function(now, fx) {
+////               var data = fx.elem.id + ' ' + fx.prop + ': ' + now;
+////               $('body').append('<div>' + data + '</div>');
+//               $('body').css("background-position", (targetOffset / 2) + "px 0px");
+//            }
+         });
 
       }
 
@@ -182,7 +194,7 @@
    }
 
    $.fn.panorama.defaults = {
-      nicescroll: true,
+      parallax: false,
       showscrollbuttons: true,
       keyboard: true
    }
