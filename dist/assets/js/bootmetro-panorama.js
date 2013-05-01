@@ -54,7 +54,6 @@
             $('#panorama-scroll-next').hide()
          }
 
-         // init nicescroll plugin
          if (this.options.parallax){
             // add a class to enable css3 transition
             $('body').addClass("panorama-parallax");
@@ -84,8 +83,8 @@
                if (direction=='left'){
                   $this.next()
                }
-            }//,
-            //threshold: 0,
+            }
+            ,threshold: 0
             //ingers: 'all'
          });
 
@@ -113,8 +112,9 @@
          var $p = $('.panorama-sections');
          var targetOffset = $(this.$groups[this.$current]).position().left
 
-         $('body').css('background-position', (targetOffset / 2) + 'px 0px')
-//         $this.setParallax(targetOffset)
+
+         if (this.options.parallax)
+            $('body').css('background-position', (targetOffset / 2) + 'px 0px')
 
          $p.animate({ marginLeft: -targetOffset },
             {
@@ -135,8 +135,8 @@
          var $p = $('.panorama-sections');
          var targetOffset = $(this.$groups[this.$current]).position().left
 
-         $('body').css('background-position', (targetOffset / 2) + 'px 0px')
-//         $this.setParallax(targetOffset)
+         if (this.options.parallax)
+            $('body').css('background-position', (targetOffset / 2) + 'px 0px')
 
          $p.animate({
                marginLeft: -targetOffset
@@ -165,24 +165,6 @@
          else
             $("#panorama-scroll-next").show();
       }
-
-//      , setParallax: function(offset){
-//
-//         var supportsBackgroundPositionXY = $('<div />', { style: 'background:#fff' }).css('background-position-x') !== undefined;
-//
-//         if (supportsBackgroundPositionXY) {
-//            $('body').stop(true).animate({
-//               'background-position-x': (offset / 2) + 'px'
-//            }, 200, 'swing')
-//         }else
-//         {
-//            $('body').stop(true).animate({
-//               'background-position': (offset / 2) + 'px 0px'
-//            }, 200, 'swing')
-//         }
-//
-//      }
-
 
    }
 
