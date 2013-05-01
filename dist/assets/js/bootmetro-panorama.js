@@ -56,20 +56,8 @@
 
          // init nicescroll plugin
          if (this.options.parallax){
-
-            var movementStrength = 45;
-            var height = movementStrength / $(window).height();
-            var width = movementStrength / $(window).width();
-
-            $("html").mousemove(function(e){
-                var pageX = e.pageX - ($(window).width() / 2);
-                var pageY = e.pageY - ($(window).height() / 2);
-                var newvalueX = width * pageX * -1;
-                var newvalueY = height * pageY * -1;
-                $('body').css("background-position", newvalueX + "px 0px");
-            });
-
-
+            // add a class to enable css3 transition
+            $('body').addClass("panorama-parallax");
          }
 
          if (this.options.showscrollbuttons){
@@ -98,7 +86,7 @@
                }
             }//,
             //threshold: 0,
-//               fingers: 'all'
+            //ingers: 'all'
          });
 
          $this.setButtons()
@@ -114,7 +102,7 @@
             })
          }
 
-      }
+      } // end init
 
       , next: function () {
          var $this = this
@@ -125,21 +113,16 @@
          var $p = $('.panorama-sections');
          var targetOffset = $(this.$groups[this.$current]).position().left
 
-//         $p.animate({
-//            marginLeft: -targetOffset
-//         }, 200, 'swing', function(){$this.setButtons()})
-         $p.animate({
-           marginLeft: -targetOffset
-         },
-         {
-            duration: 200,
-            easing: 'swing'
-//            ,step: function(now, fx) {
-////               var data = fx.elem.id + ' ' + fx.prop + ': ' + now;
-////               $('body').append('<div>' + data + '</div>');
-//               $('body').css("background-position", (targetOffset / 2) + "px 0px");
-//            }
-         });
+         $('body').css('background-position', (targetOffset / 2) + 'px 0px')
+//         $this.setParallax(targetOffset)
+
+         $p.animate({ marginLeft: -targetOffset },
+            {
+               duration: 200,
+               easing: 'swing'
+               ,complete: function(){$this.setButtons()}
+            }
+         );
 
       }
 
@@ -152,9 +135,18 @@
          var $p = $('.panorama-sections');
          var targetOffset = $(this.$groups[this.$current]).position().left
 
+         $('body').css('background-position', (targetOffset / 2) + 'px 0px')
+//         $this.setParallax(targetOffset)
+
          $p.animate({
-            marginLeft: -targetOffset
-         }, 200, 'swing', function(){$this.setButtons()})
+               marginLeft: -targetOffset
+            },
+            {
+               duration: 200,
+               easing: 'swing'
+               ,complete: function(){$this.setButtons()}
+            }
+         );
 
       }
 
@@ -174,11 +166,28 @@
             $("#panorama-scroll-next").show();
       }
 
+//      , setParallax: function(offset){
+//
+//         var supportsBackgroundPositionXY = $('<div />', { style: 'background:#fff' }).css('background-position-x') !== undefined;
+//
+//         if (supportsBackgroundPositionXY) {
+//            $('body').stop(true).animate({
+//               'background-position-x': (offset / 2) + 'px'
+//            }, 200, 'swing')
+//         }else
+//         {
+//            $('body').stop(true).animate({
+//               'background-position': (offset / 2) + 'px 0px'
+//            }, 200, 'swing')
+//         }
+//
+//      }
+
 
    }
 
 
-   /* PIVOT PLUGIN DEFINITION
+   /* PANORAMA PLUGIN DEFINITION
     * ========================== */
 
    $.fn.panorama = function (option) {

@@ -16,7 +16,7 @@ body{
 html,
 body {
    position: relative;
-   background: transparent url(../img/bkg-win8.png) repeat 0 0;
+   background: transparent url(../img/bkg-win8.jpg) repeat 0 0;
    /*background: transparent url(../img/bkg-parallax-1.jpg) repeat 0 0;*/
    /*background-color: #f2f0e4;*/
 	margin:0;
@@ -39,6 +39,15 @@ perspective:3300px;
 position:relative;
 overflow:hidden;
 }
+
+
+.panorama-parallax {
+  -webkit-transition: background-position 0.4s;
+     -moz-transition: background-position 0.4s;
+       -o-transition: background-position 0.4s;
+          transition: background-position 0.4s;
+}
+
 
 
 /* custom styles */
