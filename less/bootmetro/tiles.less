@@ -431,23 +431,22 @@
 #panorama-scroll-prev,
 #panorama-scroll-next {
    position: absolute;
-   top: 38px;
+   top: 132px;
    left: 0;
 
-   border-width: 2px;
-   border-style: solid;
-   padding: 0;
+   .win-commandicon;
+   .win-commandring;
+   font-family: 'icomoon';
+   font-style: normal;
+   font-variant: normal;
+   font-weight: normal;
+   line-height: 1;
+   text-transform: none;
+   background: none;
+   background-clip: border-box;
    text-align: center;
-   .border-radius(50%);
-
    width: 32px;
    height: 32px;
-   font-size: 20px;
-   line-height: 32px; /* line-height must match the content box height. */
-   vertical-align: baseline;
-   font-weight: normal;
-   font-family: 'IcoMoon';
-   vertical-align: 24%;
    text-decoration: none;
    outline: 0;
 }
@@ -456,7 +455,30 @@
    right: 0;
 }
 
+#panorama-scroll-prev:hover,
+#panorama-scroll-next:hover {
+   background-color: rgba(255, 255, 255, 0.13);
+   border-color: rgba(255, 255, 255, 0.6);
+}
 
+   #panorama-scroll-prev:before {
+      content: "\e2a4";
+      font-size: 20px;
+      line-height: 32px; /* line-height must match the content box height. */
+      vertical-align: top;
+   }
+   #panorama-scroll-next:before {
+      content: "\e2a0";
+      font-size: 20px;
+      line-height: 32px; /* line-height must match the content box height. */
+      vertical-align: top;
+   }
+
+
+
+
+
+// Responsive Tiles (experimental)
 
 .metro-responsive-tiles {
    .tile {

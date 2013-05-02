@@ -56,10 +56,16 @@
             .height( this.$element.parent().height())
 
 
-         if (!this.options.showscrollbuttons){
-            $('#panorama-scroll-prev').hide()
-            $('#panorama-scroll-next').hide()
+         // Arrange Tiles like Win8 ones
+         if (this.options.arrangetiles){
+            $('.panorama-sections .panorama-section').each(function(index, el){
+
+
+
+
+            });
          }
+
 
          // parallax can be activated only if there is CSS3 transition support
          if (this.options.parallax && $.support.transition){
@@ -79,7 +85,11 @@
                e.preventDefault();
                $this.next()
             });
+         } else {
+            $('#panorama-scroll-prev').hide()
+            $('#panorama-scroll-next').hide()
          }
+
 
          //Enable swiping...
          $(".panorama").swipe( {
@@ -108,6 +118,13 @@
                   $this.next()
             })
          }
+
+
+//         $(window).resize(function() {
+//
+//            // call resize function
+//
+//         });
 
       } // end init
 
@@ -195,7 +212,8 @@
    $.fn.panorama.defaults = {
       parallax: false,
       showscrollbuttons: true,
-      keyboard: true
+      keyboard: true,
+      arrangetiles: true
    }
 
    $.fn.panorama.Constructor = Panorama

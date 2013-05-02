@@ -57,7 +57,11 @@ overflow:hidden;
 .win-commandring, a:active .win-commandring, .win-commandring, button:active .win-commandring {
    border-color: #FFF;
 }
-
+#panorama-scroll-prev,
+#panorama-scroll-next {
+   border-color: #FFF;
+   color: #FFF;
+}
 
 
 #nav-bar {

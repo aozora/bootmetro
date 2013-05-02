@@ -8266,30 +8266,59 @@ Progress control. */
 #panorama-scroll-prev,
 #panorama-scroll-next {
   position: absolute;
-  top: 38px;
+  top: 132px;
   left: 0;
+  display: inline-block;
+  width: 42px;
   width: 32px;
+  height: 42px;
   height: 32px;
+  min-width: 0;
+  min-height: 0;
   padding: 0;
-  font-family: 'IcoMoon';
-  font-size: 20px;
+  font-family: 'icomoon';
+  font-size: 24px;
+  font-style: normal;
   font-weight: normal;
-  line-height: 32px;
+  line-height: 40px !important;
+  line-height: 1;
   text-align: center;
   text-decoration: none;
-  vertical-align: baseline;
-  vertical-align: 24%;
+  text-transform: none;
+  background: none;
   border-style: solid;
   border-width: 2px;
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%;
   outline: 0;
+  background-clip: border-box;
+  font-variant: normal;
 }
 
 #panorama-scroll-next {
   right: 0;
   left: auto;
+}
+
+#panorama-scroll-prev:hover,
+#panorama-scroll-next:hover {
+  background-color: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+#panorama-scroll-prev:before {
+  font-size: 20px;
+  line-height: 32px;
+  vertical-align: top;
+  content: "\e2a4";
+}
+
+#panorama-scroll-next:before {
+  font-size: 20px;
+  line-height: 32px;
+  vertical-align: top;
+  content: "\e2a0";
 }
 
 .metro-responsive-tiles .tile {
