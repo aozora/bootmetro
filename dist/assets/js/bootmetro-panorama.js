@@ -39,14 +39,21 @@
 
    Panorama.prototype = {
 
+      // init panorama workspace
       init: function(){
          var $this = this
-         // arrange the section container
+
+         // arrange the panorama height
+         this.$element.height( this.$element.parent().height() - $('#nav-bar').outerHeight() )
+
+         // arrange the section container width
          var totalWidth = 0
          $('.panorama-sections .panorama-section').each(function(index, el){
             totalWidth += $(el).outerWidth(true)
          });
-         $('.panorama-sections').width(totalWidth)
+         $('.panorama-sections')
+            .width(totalWidth)
+            .height( this.$element.parent().height())
 
 
          if (!this.options.showscrollbuttons){
@@ -54,7 +61,8 @@
             $('#panorama-scroll-next').hide()
          }
 
-         if (this.options.parallax){
+         // parallax can be activated only if there is CSS3 transition support
+         if (this.options.parallax && $.support.transition){
             // add a class to enable css3 transition
             $('body').addClass("panorama-parallax");
          }
@@ -113,7 +121,7 @@
          var targetOffset = $(this.$groups[this.$current]).position().left
 
 
-         if (this.options.parallax)
+         if (this.options.parallax && $.support.transition)
             $('body').css('background-position', (targetOffset / 2) + 'px 0px')
 
          $p.animate({ marginLeft: -targetOffset },
@@ -135,7 +143,7 @@
          var $p = $('.panorama-sections');
          var targetOffset = $(this.$groups[this.$current]).position().left
 
-         if (this.options.parallax)
+         if (this.options.parallax && $.support.transition)
             $('body').css('background-position', (targetOffset / 2) + 'px 0px')
 
          $p.animate({
