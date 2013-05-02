@@ -42,6 +42,55 @@
 
 }
 
+.tile-column {
+   position: relative;
+   float: left;
+   width: auto;
+   height: auto;
+//   margin-right: 75px;
+}
+   .tile-column-span-1 {
+      .tile-column;
+      width: 160px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-2 {
+      .tile-column;
+      width: 320px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-3 {
+      .tile-column;
+      width: 480px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-4 {
+      .tile-column;
+      width: 640px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-5 {
+      .tile-column;
+      width: 640px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-6 {
+      .tile-column;
+      width: 800px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-7 {
+      .tile-column;
+      width: 960px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-8 {
+      .tile-column;
+      width: 1120px;
+      margin-left: 0 !important;
+   }
+
+
 .panorama {
    overflow: hidden;
    position: relative;
@@ -308,13 +357,18 @@
       img {
          max-width: 150px;
          max-height: 150px;
-         max-width: 150px;
-         max-height: 150px;
       }
    }
    .tile.squarepeek {
       width: 150px;
       height: 300px;
+
+      img {
+         width: 150px;
+         height: 150px;
+         max-width: 150px;
+         max-height: 150px;
+      }
       .text-inner {
          width: 110px;
          height: 110px;
@@ -382,6 +436,12 @@
    .tile.wide.image {
       width: 310px;
       height: 150px;
+
+      img {
+         max-width: 310px;
+         max-height: 150px;
+      }
+
       .mini-tiles {
          display: inline-block;
          float: left;

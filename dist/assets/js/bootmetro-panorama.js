@@ -68,7 +68,7 @@
 
 
          // parallax can be activated only if there is CSS3 transition support
-         if (this.options.parallax && $.support.transition){
+         if (this.options.parallax){
             // add a class to enable css3 transition
             $('body').addClass("panorama-parallax");
          }
