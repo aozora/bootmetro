@@ -56,6 +56,20 @@
             .height( this.$element.parent().height())
 
 
+         // setup mousewheel
+         // win8: wheel-down => scroll to right -1 0 -1
+         //       wheel-up   => scroll to left   1 0  1
+         if (this.options.mousewheel){
+            $('.panorama-sections').mousewheel(function(event, delta, deltaX, deltaY) {
+               //e.preventDefault();
+               //console.log(delta, deltaX, deltaY);
+               if (delta > 0)
+                  $this.prev()
+               else
+                  $this.next()
+            });
+         }
+
          // Arrange Tiles like Win8 ones
          if (this.options.arrangetiles){
             $('.panorama-sections .panorama-section').each(function(index, el){
@@ -210,9 +224,10 @@
    }
 
    $.fn.panorama.defaults = {
-      parallax: false,
       showscrollbuttons: true,
+      parallax: false,
       keyboard: true,
+      mousewheel: true,
       arrangetiles: true
    }
 

@@ -51,12 +51,12 @@
 }
    .tile-column-span-1 {
       .tile-column;
-      width: 160px;
+      width: 162px;
       margin-left: 0 !important;
    }
    .tile-column-span-2 {
       .tile-column;
-      width: 320px;
+      width: 324px;
       margin-left: 0 !important;
    }
    .tile-column-span-3 {
@@ -224,6 +224,18 @@
             height: 80px;
             line-height: 80px;
             width: 80px;
+         }
+      }
+
+      .textover-wrapper {
+         position: absolute;
+         bottom: 0;
+//         width: 270px;
+         height: 48px;
+         padding: 2px 20px;
+         background-color: inherit;
+         &.transparent {
+            background-color: rgba(0, 0, 0, 0.7);
          }
       }
 
@@ -424,14 +436,6 @@
          float: left;
          width: 180px;
       }
-      .textover-wrapper {
-         position: absolute;
-         bottom: 0;
-         width: 270px;
-         height: 48px;
-         padding: 2px 20px;
-         background-color: inherit;
-      }
    }
    .tile.wide.image {
       width: 310px;
@@ -439,7 +443,7 @@
 
       img {
          max-width: 310px;
-         max-height: 150px;
+//         max-height: 150px;
       }
 
       .mini-tiles {
@@ -483,6 +487,23 @@
       }
    }
 
+
+
+
+   .tile {
+      &.square,
+      &.squarepeek {
+         .textover-wrapper {
+            width: 130px;
+         }
+      }
+      &.wide,
+      &.widepeek {
+         .textover-wrapper {
+            width: 270px;
+         }
+      }
+   }
 
 
 }

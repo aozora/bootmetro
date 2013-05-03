@@ -7858,7 +7858,7 @@ Progress control. */
   position: relative;
   float: left;
   width: auto;
-  width: 160px;
+  width: 162px;
   height: auto;
   margin-left: 0 !important;
 }
@@ -7867,7 +7867,7 @@ Progress control. */
   position: relative;
   float: left;
   width: auto;
-  width: 320px;
+  width: 324px;
   height: auto;
   margin-left: 0 !important;
 }
@@ -8071,6 +8071,18 @@ Progress control. */
   height: 80px;
   font-size: 80px;
   line-height: 80px;
+}
+
+.metro .tile .textover-wrapper {
+  position: absolute;
+  bottom: 0;
+  height: 48px;
+  padding: 2px 20px;
+  background-color: inherit;
+}
+
+.metro .tile .textover-wrapper.transparent {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .metro .tile .text-header {
@@ -8295,15 +8307,6 @@ Progress control. */
   width: 180px;
 }
 
-.metro .tile.wide.imagetext .textover-wrapper {
-  position: absolute;
-  bottom: 0;
-  width: 270px;
-  height: 48px;
-  padding: 2px 20px;
-  background-color: inherit;
-}
-
 .metro .tile.wide.image {
   width: 310px;
   height: 150px;
@@ -8311,7 +8314,6 @@ Progress control. */
 
 .metro .tile.wide.image img {
   max-width: 310px;
-  max-height: 150px;
 }
 
 .metro .tile.wide.image .mini-tiles {
@@ -8352,6 +8354,16 @@ Progress control. */
 
 .metro .tile.widepeek .tile:hover {
   outline: 0;
+}
+
+.metro .tile.square .textover-wrapper,
+.metro .tile.squarepeek .textover-wrapper {
+  width: 130px;
+}
+
+.metro .tile.wide .textover-wrapper,
+.metro .tile.widepeek .textover-wrapper {
+  width: 270px;
 }
 
 #panorama-scroll-prev,

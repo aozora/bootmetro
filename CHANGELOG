@@ -27,6 +27,10 @@ ListView (backported from 1.0 with changes)
 Pivot view (like WP8) (backported from 1.0)
 Dual license GPL2 + Apache2
 
+Panorama plugin & Hub:
+   - new options
+   - simplified markup
+
 
 
 
