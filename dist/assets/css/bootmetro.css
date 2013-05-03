@@ -8219,7 +8219,7 @@ Progress control. */
 
 .metro .tile.squarepeek {
   width: 150px;
-  height: 300px;
+  height: 312px;
 }
 
 .metro .tile.squarepeek img {
@@ -8358,7 +8358,7 @@ Progress control. */
 #panorama-scroll-next {
   position: absolute;
   top: 132px;
-  left: 0;
+  left: 4px;
   display: inline-block;
   width: 42px;
   width: 32px;
@@ -8388,7 +8388,7 @@ Progress control. */
 }
 
 #panorama-scroll-next {
-  right: 0;
+  right: 4px;
   left: auto;
 }
 
