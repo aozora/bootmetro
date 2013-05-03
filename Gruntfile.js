@@ -9,11 +9,36 @@ module.exports = function(grunt) {
    // - compile gh_pages
 
 
+   grunt.loadNpmTasks('grunt-contrib-watch');
+   grunt.loadNpmTasks('grunt-contrib-concat');
+   grunt.loadNpmTasks('grunt-contrib-copy');
+   grunt.loadNpmTasks('grunt-contrib-jshint');
+   grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
    // Project configuration.
    grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
+
+
+      concat: {
+         dist: {
+            options: {
+               banner: '<%= meta.modules %>\n'
+            },
+            src: [], //src filled in by build task
+            dest: '<%= dist %>/<%= filename %>-<%= pkg.version %>.js'
+         },
+         dist_tpls: {
+            options: {
+               banner: '<%= meta.all %>\n<%= meta.tplmodules %>\n'
+            },
+            src: [], //src filled in by build task
+            dest: '<%= dist %>/<%= filename %>-tpls-<%= pkg.version %>.js'
+         }
+      },
+
+
 
       uglify: {
          options: {
@@ -49,17 +74,33 @@ module.exports = function(grunt) {
                ]
             }
          }
-      }
+      },
 
+      jshint: {
+         files: ['Gruntfile.js','src/**/*.js'],
+         options: {
+            curly: true,
+            immed: true,
+            newcap: true,
+            noarg: true,
+            sub: true,
+            boss: true,
+            eqnull: true,
+            globals: {
+               angular: true
+            }
+         }
+      }
 
 
    });
 
 
-   grunt.loadNpmTasks('grunt-contrib-copy');
-   grunt.loadNpmTasks('grunt-contrib-uglify');
+
 
    // Default task(s).
    grunt.registerTask('default', ['uglify']);
+//   // Default task.
+//   grunt.registerTask('default', ['before-test', 'test', 'after-test']);
 
 };
