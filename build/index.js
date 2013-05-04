@@ -7,9 +7,7 @@ var  hogan = require('hogan.js')
    , prod = process.argv[2] == 'production'
    , title = 'BootMetro'
    , appname = 'BootMetro'
-//   , robots_noindex = '<meta name="robots" content="noindex, nofollow">'
-//   , robots_index = '<meta name="robots" content="index, nofollow">'
-
+   , dest = '/../dist/'
 
 var templates = [__dirname + '/../templates/demo',
                  __dirname + '/../templates/pages']
@@ -72,10 +70,10 @@ templates.forEach(function(templatedir){
 
       var destinationPath
       if ( templatedir.match(/pages$/) ){
-         destinationPath = __dirname + '/../dist/';
+         destinationPath = __dirname + dest;
       } else {
          // demo & docs
-         destinationPath = __dirname + '/../dist/demo-'
+         destinationPath = __dirname + dest + 'demo-'
       }
 
       var fullDestinationPath = destinationPath + name.replace(/mustache$/, 'html');
@@ -155,7 +153,7 @@ docPages.forEach(function (name) {
    docPage = doc_layout.render(docContext, partialsContext)
 
 
-   var destinationPath = __dirname + '/../dist/';
+   var destinationPath = __dirname + dest;
    var fullDestinationPath = destinationPath + name.replace(/mustache$/, 'html');
    console.log('building ' + fullDestinationPath)
 
@@ -169,9 +167,9 @@ docPages.forEach(function (name) {
 
 // compile LESS styles
 // =============================================================
-var lessdir = __dirname  + '/../less'
+var lessdir = __dirname + '/../less'
    ,lesspath = path.join(lessdir, '/bootmetro/bootmetro.less')
-   ,cssdir = __dirname  + '/../dist/assets/css'
+   ,cssdir = __dirname + dest + 'assets/css'
    ,css;
 
 // Compile bootmetro.css
