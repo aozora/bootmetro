@@ -1,5 +1,9 @@
 module.exports = function(grunt) {
 
+   // Nodejs libs.
+   var fs = require('fs');
+   var path = require('path');
+
    // - jshint js
    // - compile less with recess
    // - copy font, *.less, *.js to \dist
@@ -19,18 +23,19 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-contrib-copy');
    grunt.loadNpmTasks('grunt-contrib-jshint');
    grunt.loadNpmTasks('grunt-contrib-uglify');
+   grunt.loadNpmTasks('grunt-recess');
 
 
    // Project configuration.
    grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
 
-//      clean: ["path/to/dir/one", "path/to/dir/two"],
-      clean: {
-        build: {
-          src: ['dist', 'docs']
-        }
-      },
+      clean: ['dist', 'docs'],
+//      clean: {
+//        build: {
+//          src: ['dist', 'docs']
+//        }
+//      },
 
 //      concat: {
 //         dist: {
@@ -72,20 +77,20 @@ module.exports = function(grunt) {
 //         }
 //      },
 //
-//      recess: {
+      recess: {
 //         dist: {
-//            options: {
-//               compile: true,
-//               compress: false
-//            },
-//            files: {
-//               'dist/combined.css': [
-//                  'src/main.css',
-//                  'src/component.css'
-//               ]
-//            }
+            options: {
+               compile: true,
+               compress: false
+            },
+            files: {
+               'dist/css/bootmetro.css': ['less/bootmetro/bootmetro.less'],
+               'dist/css/bootmetro-responsive.css': ['less/bootmetro/responsive.less'],
+               'dist/css/bootmetro-icons.css': ['less/bootmetro/bootmetro-icons.less'],
+               'dist/css/bootmetro-ui-light': ['less/bootmetro/bootmetro-ui-light.less']
+            }
 //         }
-//      },
+      },
 
       jshint: {
          files: ['Gruntfile.js','src/assets/js/bootmetro-*.js'],
@@ -120,49 +125,36 @@ module.exports = function(grunt) {
 
 
    // Default task(s).
-   grunt.registerTask('default', ['prep', 'clean', 'jshint']);
+   grunt.registerTask('default', ['clean', 'recess', 'jshint']);
 
 
 
-   grunt.registerTask('prep', 'Prepare dist & docs directory', function() {
-
-      try {
-
-         if (!grunt.file.exists(__dirname +  '/dist')){
-            grunt.file.mkdir(__dirname +  '/dist', '0777');
-            grunt.log.writeln('   created dir "dist"')
-         }
-
-         if (!grunt.file.exists(__dirname +  '/docs')){
-            grunt.file.mkdir(__dirname +  '/docs', '0777');
-            grunt.log.writeln('   created dir "docs"')
-         }
-
-//         grunt.log.writeln('__dirname: ' + __dirname)
-
-//         grunt.file.recurse(__dirname +  '/dist', function callback(abspath, rootdir, subdir, filename) {
-//           // The full path to the current file, which is nothing more than
-//           // the rootdir + subdir + filename arguments, joined.
-//           grunt.log.writeln('abspath: ' + abspath)
-//           // The root director, as originally specified.
-//           grunt.log.writeln('rootdir: ' + rootdir)
-//           // The current file's directory, relative to rootdir.
-//           grunt.log.writeln('subdir: ' + subdir)
-//           // The filename of the current file, without any directory parts.
-//           grunt.log.writeln('filename: ' + filename)
-//         })
-
-
-
-         return grunt.log.ok();
-
-      } catch (e) {
-         grunt.log.error();
-         grunt.verbose.error(e);
-         return grunt.fail.warn('Mkdir operation failed.');
-      }
-
-   });
+//   grunt.registerTask('prep', 'Prepare dist & docs directory', function() {
+//
+//      try {
+//
+//         if (!grunt.file.exists(__dirname +  '/dist')){
+////            grunt.file.mkdir(__dirname +  '/dist', '0777')
+//            fs.mkdirSync(__dirname +  '/dist', '0777')
+//            grunt.log.writeln('   created dir "dist"')
+//         }
+//
+//         if (!grunt.file.exists(__dirname +  '/docs')){
+//            grunt.file.mkdir(__dirname +  '/docs', '0777')
+//            grunt.log.writeln('   created dir "docs"')
+//         }
+//
+////         grunt.log.writeln('__dirname: ' + __dirname)
+//
+//         return grunt.log.ok();
+//
+//      } catch (e) {
+//         grunt.log.error();
+//         grunt.verbose.error(e);
+//         return grunt.fail.warn('Mkdir operation failed.');
+//      }
+//
+//   });
 
 
 
