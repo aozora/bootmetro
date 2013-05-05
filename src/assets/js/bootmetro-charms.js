@@ -4,7 +4,6 @@
  * Licensed under the MIT license
  */
 
-;
 (function($, window, document, undefined){
 
    // undefined is used here as the undefined global
@@ -58,13 +57,14 @@
       showSection: function(sectionId, width){
          var w = this.options.width;
 
-         if (width != undefined)
+         if (width !== undefined){
             w = width;
-         
+         }
+
          var transition = $.support.transition && $(this.element).hasClass('slide');
 
          if (transition) {
-            $(this.element).eq(0).offsetWidth; // force reflow
+            var ow = $(this.element).eq(0).offsetWidth; // force reflow
          }
 
          $(this.element).addClass('in');

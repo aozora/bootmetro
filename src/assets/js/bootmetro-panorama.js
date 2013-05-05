@@ -20,7 +20,7 @@
 
 !function ($) {
 
-   "use strict"; // jshint ;_;
+   "use strict";
 
 
    /* PIVOT CLASS DEFINITION
@@ -63,10 +63,12 @@
             $('.panorama-sections').mousewheel(function(event, delta, deltaX, deltaY) {
                //e.preventDefault();
                //console.log(delta, deltaX, deltaY);
-               if (delta > 0)
+               if (delta > 0){
                   $this.prev()
-               else
+               }
+               else{
                   $this.next()
+               }
             });
          }
 
@@ -125,11 +127,13 @@
 
          if (this.options.keyboard){
             $(document).on('keyup', function ( e ) {
-               if (e.which == 37) // left-arrow
+               if (e.which == 37) { // left-arrow
                   $this.prev()
+               }
 
-               if (e.which == 39) // right-arrow
+               if (e.which == 39) { // right-arrow
                   $this.next()
+               }
             })
          }
 
@@ -145,15 +149,17 @@
       , next: function () {
          var $this = this
          this.$current++
-         if (this.$current >= this.$groups.length)
+         if (this.$current >= this.$groups.length){
             this.$current = this.$groups.length - 1
+         }
 
          var $p = $('.panorama-sections');
          var targetOffset = $(this.$groups[this.$current]).position().left
 
 
-         if (this.options.parallax && $.support.transition)
+         if (this.options.parallax && $.support.transition){
             $('body').css('background-position', (targetOffset / 2) + 'px 0px')
+         }
 
          $p.animate({ marginLeft: -targetOffset },
             {
@@ -168,14 +174,16 @@
       , prev: function () {
          var $this = this
          this.$current--
-         if (this.$current < 0)
+         if (this.$current < 0){
             this.$current = 0
+         }
 
          var $p = $('.panorama-sections');
          var targetOffset = $(this.$groups[this.$current]).position().left
 
-         if (this.options.parallax && $.support.transition)
+         if (this.options.parallax && $.support.transition){
             $('body').css('background-position', (targetOffset / 2) + 'px 0px')
+         }
 
          $p.animate({
                marginLeft: -targetOffset
@@ -191,18 +199,21 @@
 
       , setButtons: function () {
 
-         if (!this.options.showscrollbuttons)
+         if (!this.options.showscrollbuttons){
             return false;
+         }
 
-            if (this.$current === 0)
+         if (this.$current === 0){
             $("#panorama-scroll-prev").hide();
-         else
+         } else {
             $("#panorama-scroll-prev").show();
+         }
 
-         if (this.$current === this.$groups.length - 1)
+         if (this.$current === this.$groups.length - 1){
             $("#panorama-scroll-next").hide();
-         else
+         } else {
             $("#panorama-scroll-next").show();
+         }
       }
 
    }
@@ -217,9 +228,14 @@
             , data = $this.data('panorama')
             , options = $.extend({}, $.fn.panorama.defaults, typeof option == 'object' && option)
             , action = typeof option == 'string' ? option : options.slide
-         if (!data) $this.data('panorama', (data = new Panorama(this, options)))
+         if (!data) {
+            $this.data('panorama', (data = new Panorama(this, options)))
+         }
 //         if (typeof option == 'number') data.to(option)
-         else if (action) data[action]()
+         else if (action){
+            data[action]()
+         }
+
       })
    }
 

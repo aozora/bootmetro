@@ -7,7 +7,7 @@ var  hogan = require('hogan.js')
    , prod = process.argv[2] == 'production'
    , title = 'BootMetro'
    , appname = 'BootMetro'
-   , dest = '/../dist/'
+   , dest = '/../src/'
 
 var templates = [__dirname + '/../templates/demo',
                  __dirname + '/../templates/pages']
