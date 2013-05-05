@@ -128,15 +128,31 @@ module.exports = function(grunt) {
 
       try {
 
-         if (!grunt.file.exists('dist')){
-            grunt.file.mkdir('dist', 0777);
-            grunt.log.debug('   created dir "dist"')
+         if (!grunt.file.exists(__dirname +  '/dist')){
+            grunt.file.mkdir(__dirname +  '/dist', '0777');
+            grunt.log.writeln('   created dir "dist"')
          }
 
-         if (!grunt.file.exists('docs')){
-            grunt.file.mkdir('docs', 0777);
-            grunt.log.debug('   created dir "docs"')
+         if (!grunt.file.exists(__dirname +  '/docs')){
+            grunt.file.mkdir(__dirname +  '/docs', '0777');
+            grunt.log.writeln('   created dir "docs"')
          }
+
+//         grunt.log.writeln('__dirname: ' + __dirname)
+
+//         grunt.file.recurse(__dirname +  '/dist', function callback(abspath, rootdir, subdir, filename) {
+//           // The full path to the current file, which is nothing more than
+//           // the rootdir + subdir + filename arguments, joined.
+//           grunt.log.writeln('abspath: ' + abspath)
+//           // The root director, as originally specified.
+//           grunt.log.writeln('rootdir: ' + rootdir)
+//           // The current file's directory, relative to rootdir.
+//           grunt.log.writeln('subdir: ' + subdir)
+//           // The filename of the current file, without any directory parts.
+//           grunt.log.writeln('filename: ' + filename)
+//         })
+
+
 
          return grunt.log.ok();
 
