@@ -50,36 +50,6 @@ module.exports = function(grunt) {
       },
 
 
-//      concat: {
-//         dist: {
-//            options: {
-//               banner: '<%= meta.modules %>\n'
-//            },
-//            src: [], //src filled in by build task
-//            dest: '<%= dist %>/<%= filename %>-<%= pkg.version %>.js'
-//         },
-//         dist_tpls: {
-//            options: {
-//               banner: '<%= meta.all %>\n<%= meta.tplmodules %>\n'
-//            },
-//            src: [], //src filled in by build task
-//            dest: '<%= dist %>/<%= filename %>-tpls-<%= pkg.version %>.js'
-//         }
-//      },
-//
-//
-//
-//      copy: {
-//         main: {
-//            files: [
-//               {src: ['path/*'], dest: 'dest/', filter: 'isFile'}, // includes files in path
-//               {src: ['path/**'], dest: 'dest/'}, // includes files in path and its subdirs
-//               {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'}, // makes all src relative to cwd
-//               {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'} // flattens results to a single level
-//            ]
-//         }
-//      },
-//
       recess: {
          dist: {
             options: {
@@ -93,7 +63,7 @@ module.exports = function(grunt) {
                'dist/css/bootmetro-ui-light.css': ['less/bootmetro/bootmetro-ui-light.less']
             }
          },
-         distmin: {
+         min: {
             options: {
                compile: true,
                compress: true
@@ -110,14 +80,64 @@ module.exports = function(grunt) {
 
 
       uglify: {
-         options: {
-            banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+         dist: {
+            options: {
+               banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            },
+            files: {
+               'dist/js/min/bootmetro-charms.min.js':      ['src/assets/js/bootmetro-charms.js'],
+               'dist/js/min/bootmetro-icons-ie7.min.js':   ['src/assets/js/bootmetro-icons-ie7.js'],
+               'dist/js/min/bootmetro-panorama.min.js':    ['src/assets/js/bootmetro-panorama.js'],
+               'dist/js/min/bootmetro-pivot.min.js':       ['src/assets/js/bootmetro-pivot.js']
+            }
          },
-         build: {
-            src: 'src/assets/js/<%= pkg.name %>-*.js',
-            dest: 'dist/js/min/<%= pkg.name %>.min.js'
+         min: {
+            options: {
+               banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            },
+            build: {
+               src: 'src/assets/js/<%= pkg.name %>-*.js',
+               dest: 'dist/js/min/<%= pkg.name %>.min.js'
+            }
+         }
+      },
+
+
+      concat: {
+         dist: {
+//            options: {
+//               banner: '<%= meta.modules %>\n'
+//            },
+            src: [], //src filled in by build task
+            dest: '<%= dist %>/<%= filename %>-<%= pkg.version %>.js'
+         },
+         dist_tpls: {
+            options: {
+               banner: '<%= meta.all %>\n<%= meta.tplmodules %>\n'
+            },
+            src: [], //src filled in by build task
+            dest: '<%= dist %>/<%= filename %>-tpls-<%= pkg.version %>.js'
+         }
+      },
+
+
+      copy: {
+         js: {
+            files: [
+               {expand: true, cwd: 'src/assets/js/', src: ['<%= pkg.name %>-*.js'], dest: 'dist/js/', filter: 'isFile'} // includes bootstrap js
+            ]
+         },
+         vendor: {
+            files: [
+               {expand: true, cwd: 'src/assets/js/', src: ['bootstrap-*.js'], dest: 'dist/js/', filter: 'isFile'}, // includes bootstrap js
+               {expand: true, cwd: 'src/assets/js/', src: ['jquery.touchSwipe.*'], dest: 'dist/js/', filter: 'isFile'}, // includes touchSwipe js
+               {expand: true, cwd: 'src/assets/js/', src: ['jquery-1.8.3.*'], dest: 'dist/js/', filter: 'isFile'}, // includes touchSwipe js
+               {expand: true, cwd: 'src/assets/js/', src: ['modernizr-2.6.2.min.js'], dest: 'dist/js/', filter: 'isFile'}, // includes touchSwipe js
+               {expand: true, cwd: 'src/assets/js/', src: ['jquery.mousewheel.*'], dest: 'dist/js/', filter: 'isFile'} // includes touchSwipe js
+            ]
          }
       }
+
 
 
    });
@@ -126,7 +146,7 @@ module.exports = function(grunt) {
 
 
    // Default task(s).
-   grunt.registerTask('default', ['clean', 'recess:dist', 'recess:distmin', 'uglify', 'jshint']);
+   grunt.registerTask('default', ['clean', 'jshint', 'recess:dist', 'recess:min', 'uglify:dist', 'uglify:min', 'copy:js', 'copy:vendor']);
 
 
 
