@@ -31,11 +31,24 @@ module.exports = function(grunt) {
       pkg: grunt.file.readJSON('package.json'),
 
       clean: ['dist', 'docs'],
-//      clean: {
-//        build: {
-//          src: ['dist', 'docs']
-//        }
-//      },
+
+
+      jshint: {
+         files: ['Gruntfile.js','src/assets/js/bootmetro-*.js'],
+         options: {
+            validthis: true,
+            laxcomma : true,
+            laxbreak : true,
+            browser  : true,
+            eqnull   : true,
+            debug    : true,
+            devel    : true,
+            boss     : true,
+            expr     : true,
+            asi      : true
+         }
+      },
+
 
 //      concat: {
 //         dist: {
@@ -56,16 +69,6 @@ module.exports = function(grunt) {
 //
 //
 //
-//      uglify: {
-//         options: {
-//            banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-//         },
-//         build: {
-//            src: 'src/<%= pkg.name %>.js',
-//            dest: 'build/<%= pkg.name %>.min.js'
-//         }
-//      },
-//
 //      copy: {
 //         main: {
 //            files: [
@@ -78,7 +81,7 @@ module.exports = function(grunt) {
 //      },
 //
       recess: {
-//         dist: {
+         dist: {
             options: {
                compile: true,
                compress: false
@@ -87,34 +90,32 @@ module.exports = function(grunt) {
                'dist/css/bootmetro.css': ['less/bootmetro/bootmetro.less'],
                'dist/css/bootmetro-responsive.css': ['less/bootmetro/responsive.less'],
                'dist/css/bootmetro-icons.css': ['less/bootmetro/bootmetro-icons.less'],
-               'dist/css/bootmetro-ui-light': ['less/bootmetro/bootmetro-ui-light.less']
+               'dist/css/bootmetro-ui-light.css': ['less/bootmetro/bootmetro-ui-light.less']
             }
-//         }
+         },
+         distmin: {
+            options: {
+               compile: true,
+               compress: true
+            },
+            files: {
+               'dist/css/min/bootmetro.min.css': ['less/bootmetro/bootmetro.less'],
+               'dist/css/min/bootmetro-responsive.min.css': ['less/bootmetro/responsive.less'],
+               'dist/css/min/bootmetro-icons.min.css': ['less/bootmetro/bootmetro-icons.less'],
+               'dist/css/min/bootmetro-ui-light.min.css': ['less/bootmetro/bootmetro-ui-light.less']
+            }
+         }
+
       },
 
-      jshint: {
-         files: ['Gruntfile.js','src/assets/js/bootmetro-*.js'],
+
+      uglify: {
          options: {
-//            curly: true,
-//            immed: true,
-//            newcap: true,
-//            noarg: true,
-//            sub: true,
-
-            validthis: true,
-            laxcomma : true,
-            laxbreak : true,
-            browser  : true,
-            eqnull   : true,
-            debug    : true,
-            devel    : true,
-            boss     : true,
-            expr     : true,
-            asi      : true
-
-//            ,globals: {
-//               angular: true
-//            }
+            banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+         },
+         build: {
+            src: 'src/assets/js/<%= pkg.name %>-*.js',
+            dest: 'dist/js/min/<%= pkg.name %>.min.js'
          }
       }
 
@@ -125,7 +126,7 @@ module.exports = function(grunt) {
 
 
    // Default task(s).
-   grunt.registerTask('default', ['clean', 'recess', 'jshint']);
+   grunt.registerTask('default', ['clean', 'recess:dist', 'recess:distmin', 'uglify', 'jshint']);
 
 
 
