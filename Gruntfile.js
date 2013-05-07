@@ -1,8 +1,9 @@
 module.exports = function(grunt) {
 
    // Nodejs libs.
-   var fs = require('fs');
-   var path = require('path');
+   var fs = require('fs')
+      ,path = require('path')
+      ,hogan = require('hogan.js');
 
    // X jshint js
    // X compile less with recess
@@ -133,8 +134,14 @@ module.exports = function(grunt) {
                {expand: true, cwd: 'src/assets/font/', src: '**/*', dest: 'dist/font/', filter: 'isFile'}
             ]
          }
-      }
+      },
 
+
+      buildhogan: {
+         options: {
+
+         }
+      }
 
 
    });
@@ -160,10 +167,15 @@ module.exports = function(grunt) {
 
 
 
-//   grunt.registerTask('prep', 'Prepare dist & docs directory', function() {
-//
-//      try {
-//
+   grunt.registerTask('buildhogan', 'Build hogan templates into html pages', function(template_dir) {
+
+      template_dir.forEach(function(tpath){
+
+      };
+
+
+         try {
+
 //         if (!grunt.file.exists(__dirname +  '/dist')){
 ////            grunt.file.mkdir(__dirname +  '/dist', '0777')
 //            fs.mkdirSync(__dirname +  '/dist', '0777')
@@ -176,16 +188,16 @@ module.exports = function(grunt) {
 //         }
 //
 ////         grunt.log.writeln('__dirname: ' + __dirname)
-//
-//         return grunt.log.ok();
-//
-//      } catch (e) {
-//         grunt.log.error();
-//         grunt.verbose.error(e);
-//         return grunt.fail.warn('Mkdir operation failed.');
-//      }
-//
-//   });
+
+         return grunt.log.ok();
+
+      } catch (e) {
+         grunt.log.error();
+         grunt.verbose.error(e);
+         return grunt.fail.warn('operation failed.');
+      }
+
+   });
 
 
 
