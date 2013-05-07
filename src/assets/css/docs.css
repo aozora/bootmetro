@@ -194,6 +194,16 @@ hr.soften {
 
 
 
+/* Browser support icons
+-------------------------------------------------- */
+#browsers li i {
+   font-size: 32px;
+   font-weight: 300;
+   line-height: 34px;
+   color: #0177DB;
+}
+
+
 
 /* Bootstrap code examples
 -------------------------------------------------- */

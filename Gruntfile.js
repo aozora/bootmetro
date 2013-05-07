@@ -4,13 +4,13 @@ module.exports = function(grunt) {
    var fs = require('fs');
    var path = require('path');
 
-   // - jshint js
-   // - compile less with recess
-   // - copy font, *.less, *.js to \dist
-   // - uglify js
-   // - copy js to \dist
+   // X jshint js
+   // X compile less with recess
+   // X copy font, *.less, *.js to \dist
+   // X uglify js
+   // X copy js to \dist
    // - compile docs, demos
-   // - compile gh_pages
+   // - compile _gh_pages
 
 
    // dist folder: css, font, js
@@ -18,7 +18,6 @@ module.exports = function(grunt) {
    // gh_pages
 
    grunt.loadNpmTasks('grunt-contrib-clean');
-//   grunt.loadNpmTasks('grunt-contrib-watch');
    grunt.loadNpmTasks('grunt-contrib-concat');
    grunt.loadNpmTasks('grunt-contrib-copy');
    grunt.loadNpmTasks('grunt-contrib-jshint');
