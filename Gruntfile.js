@@ -105,18 +105,11 @@ module.exports = function(grunt) {
 
       concat: {
          dist: {
-//            options: {
-//               banner: '<%= meta.modules %>\n'
-//            },
-            src: [], //src filled in by build task
-            dest: '<%= dist %>/<%= filename %>-<%= pkg.version %>.js'
-         },
-         dist_tpls: {
             options: {
-               banner: '<%= meta.all %>\n<%= meta.tplmodules %>\n'
+               banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
-            src: [], //src filled in by build task
-            dest: '<%= dist %>/<%= filename %>-tpls-<%= pkg.version %>.js'
+            src: 'src/assets/js/<%= pkg.name %>-*.js',
+            dest: 'dist/js/<%= pkg.name %>.js'
          }
       },
 
@@ -131,9 +124,14 @@ module.exports = function(grunt) {
             files: [
                {expand: true, cwd: 'src/assets/js/', src: ['bootstrap-*.js'], dest: 'dist/js/', filter: 'isFile'}, // includes bootstrap js
                {expand: true, cwd: 'src/assets/js/', src: ['jquery.touchSwipe.*'], dest: 'dist/js/', filter: 'isFile'}, // includes touchSwipe js
-               {expand: true, cwd: 'src/assets/js/', src: ['jquery-1.8.3.*'], dest: 'dist/js/', filter: 'isFile'}, // includes touchSwipe js
-               {expand: true, cwd: 'src/assets/js/', src: ['modernizr-2.6.2.min.js'], dest: 'dist/js/', filter: 'isFile'}, // includes touchSwipe js
-               {expand: true, cwd: 'src/assets/js/', src: ['jquery.mousewheel.*'], dest: 'dist/js/', filter: 'isFile'} // includes touchSwipe js
+               {expand: true, cwd: 'src/assets/js/', src: ['jquery-1.8.3.*'], dest: 'dist/js/', filter: 'isFile'}, // includes jquery js
+               {expand: true, cwd: 'src/assets/js/', src: ['modernizr-2.6.2.min.js'], dest: 'dist/js/', filter: 'isFile'}, // includes modernizr js
+               {expand: true, cwd: 'src/assets/js/', src: ['jquery.mousewheel.*'], dest: 'dist/js/', filter: 'isFile'} // includes mousewheel js
+            ]
+         },
+         font: {
+            files: [
+               {expand: true, cwd: 'src/assets/font/', src: '**/*', dest: 'dist/font/', filter: 'isFile'}
             ]
          }
       }
@@ -146,7 +144,20 @@ module.exports = function(grunt) {
 
 
    // Default task(s).
-   grunt.registerTask('default', ['clean', 'jshint', 'recess:dist', 'recess:min', 'uglify:dist', 'uglify:min', 'copy:js', 'copy:vendor']);
+   grunt.registerTask('default',
+      [
+         'clean',
+         'jshint',
+         'recess:dist',
+         'recess:min',
+         'uglify:dist',
+         'uglify:min',
+         'copy:js',
+         'copy:vendor',
+         'copy:font',
+         'concat:dist'
+      ]
+   );
 
 
 
