@@ -167,11 +167,19 @@ module.exports = function(grunt) {
 
 
 
-   grunt.registerTask('buildhogan', 'Build hogan templates into html pages', function(template_dir) {
+   grunt.registerTask('buildhogan', 'Build hogan templates into html pages', function(templateDirs, destPath) {
 
-      template_dir.forEach(function(tpath){
+      templateDirs.forEach(function(templatedir){
 
-      };
+         // compile layout template
+         var layout = getCompiledFile(templatedir + '/_layout.mustache')
+         // retrieve pages
+         var pages = fs.readdirSync(templatedir)
+
+
+
+
+      });
 
 
          try {
