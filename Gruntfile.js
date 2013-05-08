@@ -137,9 +137,14 @@ module.exports = function(grunt) {
       },
 
 
-      buildhogan: {
-         options: {
-
+      buildtemplates: {
+         ghpages: {
+            src: 'templates/demo/',
+            dest: '_gh_pages/'
+         },
+         demo: {
+            src: 'templates/pages/',
+            dest: 'dist/demo/'
          }
       }
 
@@ -161,28 +166,32 @@ module.exports = function(grunt) {
          'copy:js',
          'copy:vendor',
          'copy:font',
-         'concat:dist'
+         'concat:dist',
+         'buildtemplates:ghpages',
+         'buildtemplates:demo'
       ]
    );
 
 
 
-   grunt.registerTask('buildhogan', 'Build hogan templates into html pages', function(templateDirs, destPath) {
+   grunt.registerMultiTask('buildtemplates', 'Build hogan templates into html pages', function(/*templateDirs, destPath*/) {
 
-      templateDirs.forEach(function(templatedir){
+      try {
 
-         // compile layout template
-         var layout = getCompiledFile(templatedir + '/_layout.mustache')
-         // retrieve pages
-         var pages = fs.readdirSync(templatedir)
+         var builder = require('./build/page-builder');
 
+         grunt.log.write('\nBuilding ' + this.target + '...');
 
+         this.files.forEach(function(f) {
 
+            grunt.log.writeln('   src = ' + f.src)
+            grunt.log.writeln('   dest = ' + f.dest)
 
-      });
+            builder(f.src, f.dest);
 
+         });
 
-         try {
+         grunt.log.write('OK\n');
 
 //         if (!grunt.file.exists(__dirname +  '/dist')){
 ////            grunt.file.mkdir(__dirname +  '/dist', '0777')

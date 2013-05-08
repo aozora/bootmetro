@@ -237,7 +237,7 @@ recess([path.join(lessdir, '/bootmetro/bootmetro-ui-light.less')], {
 function getCompiledFile(path){
 //console.log('getCompiledFile(\'' + path + '\')')
 
-   layout = fs.readFileSync(path, 'utf-8')
+   var layout = fs.readFileSync(path, 'utf-8')
    layout = hogan.compile(layout, { sectionTags:[ {o:'_i', c:'i'} ] })
    return layout;
 }

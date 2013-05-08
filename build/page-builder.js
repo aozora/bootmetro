@@ -1,3 +1,5 @@
+'use strict';
+
 // Nodejs libs.
 var fs = require('fs')
    ,path = require('path')
@@ -15,7 +17,7 @@ partial_headermenu = getCompiledFile(__dirname + '/../templates/partials/header-
 
 function getCompiledFile(path){
    //console.log('getCompiledFile(\'' + path + '\')')
-   layout = fs.readFileSync(path, 'utf-8')
+   var layout = fs.readFileSync(path, 'utf-8')
    layout = hogan.compile(layout, { sectionTags:[ {o:'_i', c:'i'} ] })
    return layout;
 }
@@ -48,8 +50,8 @@ module.exports = function(templatePaths, destinationPath){
          var context = {}
          context[name.replace(/\.mustache$/, '')] = 'active'
          context._i = true
-         context.production = prod
-         context.appname = appname
+         context.production = 'production'
+         context.appname = 'BootMetro'
          context.title = name.replace(/\.mustache/, '')
                              .replace(/\-.*/, '')
                              .replace(/(.)/, function ($1) {
