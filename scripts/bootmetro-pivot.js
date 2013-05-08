@@ -38,7 +38,7 @@
    Pivot.prototype = {
 
       to: function (pos) {
-         var $active = this.$element.find('.pivot-item.active')
+         var $active = this.$element.find('.pivot-item.active').eq(0)
             , children = $active.parent().children()
             , activePos = children.index($active)
             , that = this
@@ -70,7 +70,7 @@
       }
 
       , slide: function (type, next) {
-         var $active = this.$element.find('.pivot-item.active')
+         var $active = this.$element.find('.pivot-item.active').eq(0)
             , $next = next || $active[type]()
             , direction = type == 'next' ? 'left' : 'right'
             , fallback  = type == 'next' ? 'first' : 'last'

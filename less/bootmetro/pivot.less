@@ -3,10 +3,10 @@
 .pivot {
    position: relative;
 
-   .pivot-headers {
+   > .pivot-headers {
       margin-bottom: 10px;
 
-      a {
+      > a {
          margin: 0 10px 0 0;
          font-weight: 300;
          text-transform: lowercase;
@@ -27,48 +27,48 @@
    }
 
 
-   .pivot-items {
+   > .pivot-items {
       overflow: hidden;
       width: 100%;
       position: relative;
 
 
-      .pivot-item {
+      > .pivot-item {
          display: none;
          position: relative;
          .transition(.4s ease-in-out left);
       }
 
-      .active,
-      .next,
-      .prev { display: block; }
+      > .active,
+      > .next,
+      > .prev { display: block; }
 
-      .active {
+      > .active {
          left: 0;
       }
 
-      .next,
-      .prev {
+      > .next,
+      > .prev {
          position: absolute;
          top: 0;
          width: 100%;
       }
 
-      .next {
+      > .next {
          left: 100%;
       }
-      .prev {
+      > .prev {
          left: -100%;
       }
-      .next.left,
-      .prev.right {
+      > .next.left,
+      > .prev.right {
          left: 0;
       }
 
-      .active.left {
+      > .active.left {
          left: -100%;
       }
-      .active.right {
+      > .active.right {
          left: 100%;
       }
 
