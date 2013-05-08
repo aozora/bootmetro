@@ -26,6 +26,16 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-recess');
 
 
+   // shared partial templates
+   var partial_loggeduser, partial_charms, partial_headermenu;
+
+   // retrieve partials
+   partial_loggeduser = getCompiledFile(__dirname + '/templates/partials/logged-user.mustache');
+   partial_charms = getCompiledFile(__dirname + '/templates/partials/charms.mustache');
+   partial_headermenu = getCompiledFile(__dirname + '/templates/partials/header-menu.mustache');
+
+
+
    // Project configuration.
    grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
@@ -139,11 +149,11 @@ module.exports = function(grunt) {
 
       buildtemplates: {
          ghpages: {
-            src: 'templates/demo/',
+            src: 'templates/pages/',
             dest: '_gh_pages/'
          },
          demo: {
-            src: 'templates/pages/',
+            src: 'templates/demo/',
             dest: 'dist/demo/'
          }
       }
@@ -184,7 +194,67 @@ module.exports = function(grunt) {
             grunt.log.writeln('   src = ' + f.src)
             grunt.log.writeln('   dest = ' + f.dest)
 
-            builder(f.src, f.dest);
+            var destinationPath = __dirname + '/' + f.dest;
+
+            // cycle for each template dir (pages / demo)
+            f.src.forEach(function(src){
+
+               var templatedir = __dirname + '/' + src
+               grunt.log.writeln('   templatedir = ' + templatedir)
+
+               // compile layout template
+               var layout = getCompiledFile(templatedir + '/_layout.mustache')
+               // retrieve pages
+               var pages = fs.readdirSync(templatedir)
+
+
+               // iterate over pages
+               pages.forEach(function (name) {
+
+                  // exclude non mustache files
+                  if (!name.match(/\.mustache$/))
+                     return
+
+                  // exclude files that start with "_"
+                  if (name.substring(0, 1) == '_')
+                     return
+
+                  var context = {}
+                  context[name.replace(/\.mustache$/, '')] = 'active'
+                  context._i = true
+                  context.production = 'production'
+                  context.appname = 'BootMetro'
+                  context.title = name.replace(/\.mustache/, '')
+                                      .replace(/\-.*/, '')
+                                      .replace(/(.)/, function ($1) {
+                                          return $1.toUpperCase()
+                                       })
+
+                  var page = getCompiledFile(templatedir + '/' + name)
+
+                  page = layout.render(context, {
+                     body: page,
+                     charms: partial_charms,
+                     loggeduser: partial_loggeduser,
+                     headermenu: partial_headermenu
+                  })
+
+
+//                  if ( templatedir.match(/pages$/) ){
+//                     destinationPath = __dirname + dest;
+//                  } else {
+//                     // demo & docs
+//                     destinationPath = __dirname + dest + 'demo-'
+//                  }
+
+                  var fullDestinationPath = destinationPath + name.replace(/mustache$/, 'html');
+                  console.log('building ' + fullDestinationPath)
+
+                  //fs.writeFileSync(fullDestinationPath, page, 'utf-8')
+                  grunt.file.write(fullDestinationPath, page, 'utf-8')
+               })
+
+            })
 
          });
 
@@ -201,5 +271,11 @@ module.exports = function(grunt) {
 
 
 
+   function getCompiledFile(path){
+      //console.log('getCompiledFile(\'' + path + '\')')
+      var layout = fs.readFileSync(path, 'utf-8')
+      layout = hogan.compile(layout, { sectionTags:[ {o:'_i', c:'i'} ] })
+      return layout;
+   }
 
 };
