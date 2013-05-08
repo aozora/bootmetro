@@ -8498,11 +8498,11 @@ Progress control. */
   position: relative;
 }
 
-.pivot .pivot-headers {
+.pivot > .pivot-headers {
   margin-bottom: 10px;
 }
 
-.pivot .pivot-headers a {
+.pivot > .pivot-headers > a {
   margin: 0 10px 0 0;
   font-size: 26px;
   font-weight: 300;
@@ -8512,22 +8512,22 @@ Progress control. */
   text-transform: lowercase;
 }
 
-.pivot .pivot-headers a:hover {
+.pivot > .pivot-headers > a:hover {
   color: #222222;
 }
 
-.pivot .pivot-headers a.active {
+.pivot > .pivot-headers > a.active {
   font-weight: 400;
   color: #222222;
 }
 
-.pivot .pivot-items {
+.pivot > .pivot-items {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-.pivot .pivot-items .pivot-item {
+.pivot > .pivot-items > .pivot-item {
   position: relative;
   display: none;
   -webkit-transition: 0.4s ease-in-out left;
@@ -8536,41 +8536,41 @@ Progress control. */
           transition: 0.4s ease-in-out left;
 }
 
-.pivot .pivot-items .active,
-.pivot .pivot-items .next,
-.pivot .pivot-items .prev {
+.pivot > .pivot-items > .active,
+.pivot > .pivot-items > .next,
+.pivot > .pivot-items > .prev {
   display: block;
 }
 
-.pivot .pivot-items .active {
+.pivot > .pivot-items > .active {
   left: 0;
 }
 
-.pivot .pivot-items .next,
-.pivot .pivot-items .prev {
+.pivot > .pivot-items > .next,
+.pivot > .pivot-items > .prev {
   position: absolute;
   top: 0;
   width: 100%;
 }
 
-.pivot .pivot-items .next {
+.pivot > .pivot-items > .next {
   left: 100%;
 }
 
-.pivot .pivot-items .prev {
+.pivot > .pivot-items > .prev {
   left: -100%;
 }
 
-.pivot .pivot-items .next.left,
-.pivot .pivot-items .prev.right {
+.pivot > .pivot-items > .next.left,
+.pivot > .pivot-items > .prev.right {
   left: 0;
 }
 
-.pivot .pivot-items .active.left {
+.pivot > .pivot-items > .active.left {
   left: -100%;
 }
 
-.pivot .pivot-items .active.right {
+.pivot > .pivot-items .active.right {
   left: 100%;
 }
 
