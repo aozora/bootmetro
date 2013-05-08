@@ -177,9 +177,6 @@ module.exports = function(grunt) {
    grunt.registerMultiTask('buildtemplates', 'Build hogan templates into html pages', function(/*templateDirs, destPath*/) {
 
       try {
-
-         var builder = require('./build/page-builder');
-
          grunt.log.write('\nBuilding ' + this.target + '...');
 
          this.files.forEach(function(f) {
@@ -192,20 +189,6 @@ module.exports = function(grunt) {
          });
 
          grunt.log.write('OK\n');
-
-//         if (!grunt.file.exists(__dirname +  '/dist')){
-////            grunt.file.mkdir(__dirname +  '/dist', '0777')
-//            fs.mkdirSync(__dirname +  '/dist', '0777')
-//            grunt.log.writeln('   created dir "dist"')
-//         }
-//
-//         if (!grunt.file.exists(__dirname +  '/docs')){
-//            grunt.file.mkdir(__dirname +  '/docs', '0777')
-//            grunt.log.writeln('   created dir "docs"')
-//         }
-//
-////         grunt.log.writeln('__dirname: ' + __dirname)
-
          return grunt.log.ok();
 
       } catch (e) {
