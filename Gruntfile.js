@@ -149,7 +149,13 @@ module.exports = function(grunt) {
             files: [
                {expand: true, cwd: 'src/', src: 'assets/**/*', dest: '_gh_pages/'}
             ]
+         },
+         docs2dist: {
+            files: [
+               {expand: true, cwd: '_gh_pages/', src: 'docs/**/*', dest: 'dist/'}
+            ]
          }
+
 
       },
 
@@ -166,8 +172,10 @@ module.exports = function(grunt) {
       },
 
       builddocs: {
-         src: 'templates/docs/',
-         dest: '_gh_pages/docs'
+         dist: {
+            src: 'templates/docs/',
+            dest: '_gh_pages/docs/'
+         }
       }
 
 
@@ -193,8 +201,8 @@ module.exports = function(grunt) {
          'buildtemplates:ghpages',
          'copy:ghpages_assets',
          'buildtemplates:demo',
-
-         'builddocs'
+         'builddocs',
+         'docs2dist'
       ]
    );
 
@@ -203,12 +211,12 @@ module.exports = function(grunt) {
    grunt.registerMultiTask('buildtemplates', 'Build hogan templates into html pages', function(/*templateDirs, destPath*/) {
 
       try {
-         grunt.log.write('\nBuilding ' + this.target + '...');
+         grunt.log.writeln('\nBuilding ' + this.target + '...');
 
          this.files.forEach(function(f) {
 
-            grunt.log.writeln('   src = ' + f.src)
-            grunt.log.writeln('   dest = ' + f.dest)
+//            grunt.log.writeln('   src = ' + f.src)
+//            grunt.log.writeln('   dest = ' + f.dest)
 
             var destinationPath = __dirname + '/' + f.dest;
 
@@ -264,7 +272,7 @@ module.exports = function(grunt) {
 //                  }
 
                   var fullDestinationPath = destinationPath + name.replace(/mustache$/, 'html');
-                  console.log('building ' + fullDestinationPath)
+                  grunt.log.writeln('building ' + fullDestinationPath)
 
                   //fs.writeFileSync(fullDestinationPath, page, 'utf-8')
                   grunt.file.write(fullDestinationPath, page, 'utf-8')
@@ -294,75 +302,73 @@ module.exports = function(grunt) {
 
          this.files.forEach(function(f) {
 
-            // retrieve pages
-//            var docTemplateDir = __dirname + '/../templates/docs'
-            var docTemplatePartialDir =  __dirname + f.src + 'partials'
-               ,docTemplateSidebarPartialDir = __dirname + f.src + 'sidebar_partials'
-               ,partial_sidebar
-//               ,docPages = fs.readdirSync(docTemplateDir)
-
-            // compile layout template
-            var doc_layout = getCompiledFile(f.src + '/_layout.mustache')
-
+            var destinationPath = __dirname + '/' + f.dest;
 
             // cycle for each template dir (pages / demo)
             f.src.forEach(function(src){
 
-               var templatedir = __dirname + '/' + src
-//               grunt.log.writeln('   templatedir = ' + templatedir)
+               // retrieve pages
+               var docTemplateDir = __dirname + '/' + f.src
+                  ,docTemplatePartialDir =  __dirname + '/' + f.src + 'partials'
+                  ,docTemplateSidebarPartialDir = __dirname + '/' + f.src + 'sidebar_partials'
+                  ,partial_sidebar
+                  ,docPages = fs.readdirSync(docTemplateDir)
+
+               // compile layout template
+               var doc_layout = getCompiledFile(__dirname + '/' + f.src + '/_layout.mustache')
+
+               // iterate over pages
+               docPages.forEach(function (name) {
+
+                  // exclude non mustache files
+                  if (!name.match(/\.mustache$/))
+                     return
+
+                  // exclude _layout & index
+                  if (name.match(/^_layout/) || name.match(/^index/))
+                     return
 
 
-               // exclude non mustache files
-               if (!src.match(/\.mustache$/))
-                  return
-
-               // exclude _layout & index
-               if (src.match(/^_layout/) || src.match(/^index/))
-                  return
+                  // check if the current page has scripts definex in partial pages
+                  var hasSidebarPartial = fs.existsSync(docTemplateSidebarPartialDir + '/sidebar-' + name)
+                  if (hasSidebarPartial){
+                     partial_sidebar = getCompiledFile(docTemplateSidebarPartialDir + '/sidebar-' + name)
+                  }
 
 
-               // check if the current page has scripts definex in partial pages
-               var hasSidebarPartial = fs.existsSync(docTemplateSidebarPartialDir + '/sidebar-' + src)
-               if (hasSidebarPartial){
-                  partial_sidebar = getCompiledFile(docTemplateSidebarPartialDir + '/sidebar-' + src)
-               }
+                  // put partials into context
+                  var docContext = {}
+                     ,partialsContext = {}
+                     ,files = fs.readdirSync(docTemplatePartialDir)
 
-
-
-               // put partials into context
-               var docContext = {}
-                  ,partialsContext = {}
-                  ,files = fs.readdirSync(docTemplatePartialDir)
-
-               files.forEach(function(name){
-                  var partial = getCompiledFile(docTemplatePartialDir + '/' + name)
-                  Object.defineProperty(partialsContext, name.replace(/\.mustache$/, ''), {value : partial});
-               })
-
-               docContext[src.replace(/\.mustache$/, '')] = 'active'
-               docContext._i = true
-               docContext.production = 'production'
-               docContext.appname = 'BootMetro'
-               docContext.title = name.replace(/\.mustache/, '')
-                  .replace(/\-.*/, '')
-                  .replace(/(.)/, function ($1) {
-                     return $1.toUpperCase()
+                  files.forEach(function(name){
+                     var partial = getCompiledFile(docTemplatePartialDir + '/' + name)
+                     Object.defineProperty(partialsContext, name.replace(/\.mustache$/, ''), {value : partial});
                   })
 
-               var docPage = getCompiledFile(templatedir + '/' + src)
+                  docContext[name.replace(/\.mustache$/, '')] = 'active'
+                  docContext._i = true
+                  docContext.production = 'production'
+                  docContext.appname = 'BootMetro'
+                  docContext.title = name.replace(/\.mustache/, '')
+                     .replace(/\-.*/, '')
+                     .replace(/(.)/, function ($1) {
+                        return $1.toUpperCase()
+                     })
 
-               partialsContext.body = docPage
-               partialsContext.sidebar = partial_sidebar
+                  var docPage = getCompiledFile(docTemplateDir + '/' + name)
 
-               docPage = doc_layout.render(docContext, partialsContext)
+                  partialsContext.body = docPage
+                  partialsContext.sidebar = partial_sidebar
+
+                  docPage = doc_layout.render(docContext, partialsContext)
 
 
-               var destinationPath = __dirname + '/' + f.dest;
-               var fullDestinationPath = destinationPath + name.replace(/mustache$/, 'html');
-               console.log('building ' + fullDestinationPath)
+                  var fullDestinationPath = destinationPath + name.replace(/mustache$/, 'html');
+                  grunt.log.writeln('building ' + fullDestinationPath)
 
-//               fs.writeFileSync(fullDestinationPath, docPage, 'utf-8')
-               grunt.file.write(fullDestinationPath, docPage, 'utf-8')
+                  grunt.file.write(fullDestinationPath, docPage, 'utf-8')
+               })
 
             });
 
