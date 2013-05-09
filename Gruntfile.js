@@ -40,7 +40,7 @@ module.exports = function(grunt) {
    grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
 
-      clean: ['dist', 'docs'],
+      clean: ['dist', 'docs', '_gh_pages'],
 
 
       jshint: {
@@ -67,10 +67,10 @@ module.exports = function(grunt) {
                compress: false
             },
             files: {
-               'dist/css/bootmetro.css': ['less/bootmetro/bootmetro.less'],
-               'dist/css/bootmetro-responsive.css': ['less/bootmetro/responsive.less'],
-               'dist/css/bootmetro-icons.css': ['less/bootmetro/bootmetro-icons.less'],
-               'dist/css/bootmetro-ui-light.css': ['less/bootmetro/bootmetro-ui-light.less']
+               'dist/assets/css/bootmetro.css': ['less/bootmetro/bootmetro.less'],
+               'dist/assets/css/bootmetro-responsive.css': ['less/bootmetro/responsive.less'],
+               'dist/assets/css/bootmetro-icons.css': ['less/bootmetro/bootmetro-icons.less'],
+               'dist/assets/css/bootmetro-ui-light.css': ['less/bootmetro/bootmetro-ui-light.less']
             }
          },
          min: {
@@ -79,10 +79,10 @@ module.exports = function(grunt) {
                compress: true
             },
             files: {
-               'dist/css/min/bootmetro.min.css': ['less/bootmetro/bootmetro.less'],
-               'dist/css/min/bootmetro-responsive.min.css': ['less/bootmetro/responsive.less'],
-               'dist/css/min/bootmetro-icons.min.css': ['less/bootmetro/bootmetro-icons.less'],
-               'dist/css/min/bootmetro-ui-light.min.css': ['less/bootmetro/bootmetro-ui-light.less']
+               'dist/assets/css/min/bootmetro.min.css': ['less/bootmetro/bootmetro.less'],
+               'dist/assets/css/min/bootmetro-responsive.min.css': ['less/bootmetro/responsive.less'],
+               'dist/assets/css/min/bootmetro-icons.min.css': ['less/bootmetro/bootmetro-icons.less'],
+               'dist/assets/css/min/bootmetro-ui-light.min.css': ['less/bootmetro/bootmetro-ui-light.less']
             }
          }
 
@@ -95,10 +95,10 @@ module.exports = function(grunt) {
                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             files: {
-               'dist/js/min/bootmetro-charms.min.js':      ['src/assets/js/bootmetro-charms.js'],
-               'dist/js/min/bootmetro-icons-ie7.min.js':   ['src/assets/js/bootmetro-icons-ie7.js'],
-               'dist/js/min/bootmetro-panorama.min.js':    ['src/assets/js/bootmetro-panorama.js'],
-               'dist/js/min/bootmetro-pivot.min.js':       ['src/assets/js/bootmetro-pivot.js']
+               'dist/assets/js/min/bootmetro-charms.min.js':      ['src/assets/js/bootmetro-charms.js'],
+               'dist/assets/js/min/bootmetro-icons-ie7.min.js':   ['src/assets/js/bootmetro-icons-ie7.js'],
+               'dist/assets/js/min/bootmetro-panorama.min.js':    ['src/assets/js/bootmetro-panorama.js'],
+               'dist/assets/js/min/bootmetro-pivot.min.js':       ['src/assets/js/bootmetro-pivot.js']
             }
          },
          min: {
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
             },
             build: {
                src: 'src/assets/js/<%= pkg.name %>-*.js',
-               dest: 'dist/js/min/<%= pkg.name %>.min.js'
+               dest: 'dist/assets/js/min/<%= pkg.name %>.min.js'
             }
          }
       },
@@ -119,7 +119,7 @@ module.exports = function(grunt) {
                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             src: 'src/assets/js/<%= pkg.name %>-*.js',
-            dest: 'dist/js/<%= pkg.name %>.js'
+            dest: 'dist/assets/js/<%= pkg.name %>.js'
          }
       },
 
@@ -127,23 +127,30 @@ module.exports = function(grunt) {
       copy: {
          js: {
             files: [
-               {expand: true, cwd: 'src/assets/js/', src: ['<%= pkg.name %>-*.js'], dest: 'dist/js/', filter: 'isFile'} // includes bootstrap js
+               {expand: true, cwd: 'src/assets/js/', src: ['<%= pkg.name %>-*.js'], dest: 'dist/assets/js/', filter: 'isFile'} // includes bootstrap js
             ]
          },
          vendor: {
             files: [
-               {expand: true, cwd: 'src/assets/js/', src: ['bootstrap-*.js'], dest: 'dist/js/', filter: 'isFile'}, // includes bootstrap js
-               {expand: true, cwd: 'src/assets/js/', src: ['jquery.touchSwipe.*'], dest: 'dist/js/', filter: 'isFile'}, // includes touchSwipe js
-               {expand: true, cwd: 'src/assets/js/', src: ['jquery-1.8.3.*'], dest: 'dist/js/', filter: 'isFile'}, // includes jquery js
-               {expand: true, cwd: 'src/assets/js/', src: ['modernizr-2.6.2.min.js'], dest: 'dist/js/', filter: 'isFile'}, // includes modernizr js
-               {expand: true, cwd: 'src/assets/js/', src: ['jquery.mousewheel.*'], dest: 'dist/js/', filter: 'isFile'} // includes mousewheel js
+               {expand: true, cwd: 'src/assets/js/', src: ['bootstrap-*.js'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes bootstrap js
+               {expand: true, cwd: 'src/assets/js/', src: ['jquery.touchSwipe.*'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes touchSwipe js
+               {expand: true, cwd: 'src/assets/js/', src: ['jquery-1.8.3.*'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes jquery js
+               {expand: true, cwd: 'src/assets/js/', src: ['modernizr-2.6.2.min.js'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes modernizr js
+               {expand: true, cwd: 'src/assets/js/', src: ['jquery.mousewheel.*'], dest: 'dist/assets/js/', filter: 'isFile'} // includes mousewheel js
             ]
          },
          font: {
             files: [
-               {expand: true, cwd: 'src/assets/font/', src: '**/*', dest: 'dist/font/', filter: 'isFile'}
+               {expand: true, cwd: 'src/assets/font/', src: '**/*', dest: 'dist/assets/font/', filter: 'isFile'}
+            ]
+         },
+
+         ghpages_assets: {
+            files: [
+               {expand: true, cwd: 'src/', src: 'assets/**/*', dest: '_gh_pages/'}
             ]
          }
+
       },
 
 
@@ -156,7 +163,13 @@ module.exports = function(grunt) {
             src: 'templates/demo/',
             dest: 'dist/demo/'
          }
+      },
+
+      builddocs: {
+         src: 'templates/docs/',
+         dest: '_gh_pages/docs'
       }
+
 
 
    });
@@ -178,7 +191,10 @@ module.exports = function(grunt) {
          'copy:font',
          'concat:dist',
          'buildtemplates:ghpages',
-         'buildtemplates:demo'
+         'copy:ghpages_assets',
+         'buildtemplates:demo',
+
+         'builddocs'
       ]
    );
 
@@ -257,6 +273,101 @@ module.exports = function(grunt) {
             })
 
          });
+
+         grunt.log.write('OK\n');
+         return grunt.log.ok();
+
+      } catch (e) {
+         grunt.log.error();
+         grunt.verbose.error(e);
+         return grunt.fail.warn('operation failed.');
+      }
+
+   });
+
+
+
+   grunt.registerMultiTask('builddocs', 'Build documentation html pages', function() {
+
+      try {
+         grunt.log.write('\nBuilding docs...');
+
+         this.files.forEach(function(f) {
+
+            // retrieve pages
+//            var docTemplateDir = __dirname + '/../templates/docs'
+            var docTemplatePartialDir =  __dirname + f.src + 'partials'
+               ,docTemplateSidebarPartialDir = __dirname + f.src + 'sidebar_partials'
+               ,partial_sidebar
+//               ,docPages = fs.readdirSync(docTemplateDir)
+
+            // compile layout template
+            var doc_layout = getCompiledFile(f.src + '/_layout.mustache')
+
+
+            // cycle for each template dir (pages / demo)
+            f.src.forEach(function(src){
+
+               var templatedir = __dirname + '/' + src
+//               grunt.log.writeln('   templatedir = ' + templatedir)
+
+
+               // exclude non mustache files
+               if (!src.match(/\.mustache$/))
+                  return
+
+               // exclude _layout & index
+               if (src.match(/^_layout/) || src.match(/^index/))
+                  return
+
+
+               // check if the current page has scripts definex in partial pages
+               var hasSidebarPartial = fs.existsSync(docTemplateSidebarPartialDir + '/sidebar-' + src)
+               if (hasSidebarPartial){
+                  partial_sidebar = getCompiledFile(docTemplateSidebarPartialDir + '/sidebar-' + src)
+               }
+
+
+
+               // put partials into context
+               var docContext = {}
+                  ,partialsContext = {}
+                  ,files = fs.readdirSync(docTemplatePartialDir)
+
+               files.forEach(function(name){
+                  var partial = getCompiledFile(docTemplatePartialDir + '/' + name)
+                  Object.defineProperty(partialsContext, name.replace(/\.mustache$/, ''), {value : partial});
+               })
+
+               docContext[src.replace(/\.mustache$/, '')] = 'active'
+               docContext._i = true
+               docContext.production = 'production'
+               docContext.appname = 'BootMetro'
+               docContext.title = name.replace(/\.mustache/, '')
+                  .replace(/\-.*/, '')
+                  .replace(/(.)/, function ($1) {
+                     return $1.toUpperCase()
+                  })
+
+               var docPage = getCompiledFile(templatedir + '/' + src)
+
+               partialsContext.body = docPage
+               partialsContext.sidebar = partial_sidebar
+
+               docPage = doc_layout.render(docContext, partialsContext)
+
+
+               var destinationPath = __dirname + '/' + f.dest;
+               var fullDestinationPath = destinationPath + name.replace(/mustache$/, 'html');
+               console.log('building ' + fullDestinationPath)
+
+//               fs.writeFileSync(fullDestinationPath, docPage, 'utf-8')
+               grunt.file.write(fullDestinationPath, docPage, 'utf-8')
+
+            });
+
+         });
+
 
          grunt.log.write('OK\n');
          return grunt.log.ok();
