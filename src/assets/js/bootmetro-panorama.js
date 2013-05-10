@@ -47,14 +47,7 @@
          this.$element.height( this.$element.parent().height() - $('#nav-bar').outerHeight() )
 
          // arrange the section container width
-         var totalWidth = 0
-         $('.panorama-sections .panorama-section').each(function(index, el){
-            totalWidth += $(el).outerWidth(true)
-         });
-         $('.panorama-sections')
-            .width(totalWidth)
-            .height( this.$element.parent().height())
-
+         $this.resize();
 
          // setup mousewheel
          // win8: wheel-down => scroll to right -1 0 -1
@@ -194,6 +187,18 @@
                ,complete: function(){$this.setButtons()}
             }
          );
+
+      }
+
+      , resize: function(){
+         // arrange the section container width
+         var totalWidth = 0
+         $('.panorama-sections .panorama-section').each(function(index, el){
+            totalWidth += $(el).outerWidth(true)
+         });
+         $('.panorama-sections')
+            .width(totalWidth)
+            .height( this.$element.parent().height())
 
       }
 
