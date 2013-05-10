@@ -202,7 +202,7 @@ module.exports = function(grunt) {
          'copy:ghpages_assets',
          'buildtemplates:demo',
          'builddocs',
-         'docs2dist'
+         'copy:docs2dist'
       ]
    );
 

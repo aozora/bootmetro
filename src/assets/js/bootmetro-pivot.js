@@ -8,7 +8,7 @@
 
 !function ($) {
 
-   "use strict";
+   "use strict"; // jshint ;_;
 
 
    /* PIVOT CLASS DEFINITION
@@ -26,7 +26,7 @@
    Pivot.prototype = {
 
       to: function (pos) {
-         var $active = this.$element.find('.pivot-item.active').eq(0)
+         var $active = this.$element.find('> .pivot-items > .pivot-item.active').eq(0)
             , children = $active.parent().children()
             , activePos = children.index($active)
             , that = this
@@ -58,7 +58,7 @@
       }
 
       , slide: function (type, next) {
-         var $active = this.$element.find('.pivot-item.active').eq(0)
+         var $active = this.$element.find('> .pivot-items > .pivot-item.active').eq(0)
             , $next = next || $active[type]()
             , direction = type == 'next' ? 'left' : 'right'
             , fallback  = type == 'next' ? 'first' : 'last'
@@ -67,7 +67,7 @@
 
          this.sliding = true
 
-         $next = $next.length ? $next : this.$element.find('.pivot-item')[fallback]()
+         $next = $next.length ? $next : this.$element.find('> .pivot-items > .pivot-item')[fallback]()
 
          e = $.Event('slide', {
             relatedTarget: $next[0]
@@ -140,7 +140,7 @@
       var $this = $(this), href
          , $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
          , options = $.extend({}, $target.data(), $this.data())
-         , $index = parseInt($this.attr('data-pivot-index'), 10);
+         , $index = parseInt($this.attr('data-pivot-index'));
 
       $('[data-pivot-index].active').removeClass('active')
       $this.addClass('active')
