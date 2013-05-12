@@ -530,6 +530,7 @@
    height: 32px;
    text-decoration: none;
    outline: 0;
+   z-index: 1061;
 }
 #panorama-scroll-next {
    left: auto;
@@ -556,6 +557,26 @@
    }
 
 
+   #panorama-scroll-prev-bkg,
+   #panorama-scroll-next-bkg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 40px;
+      height: 100%;
+      background-color: transparent;
+      z-index: 1060;
+   }
+   #panorama-scroll-next-bkg {
+      left: auto;
+      right: 0;
+   }
+
+   #panorama-scroll-prev-bkg:hover,
+   #panorama-scroll-next-bkg:hover {
+      background-color: rgba(0,0,0, 0.7);
+   }
 
 
 

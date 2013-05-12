@@ -8371,6 +8371,7 @@ Progress control. */
   position: absolute;
   top: 96px;
   left: 4px;
+  z-index: 1061;
   display: inline-block;
   width: 42px;
   width: 32px;
@@ -8422,6 +8423,28 @@ Progress control. */
   line-height: 32px;
   vertical-align: top;
   content: "\e2a0";
+}
+
+#panorama-scroll-prev-bkg,
+#panorama-scroll-next-bkg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: block;
+  width: 40px;
+  height: 100%;
+  background-color: transparent;
+}
+
+#panorama-scroll-next-bkg {
+  right: 0;
+  left: auto;
+}
+
+#panorama-scroll-prev-bkg:hover,
+#panorama-scroll-next-bkg:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .metro-responsive-tiles .tile {
