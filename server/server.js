@@ -46,7 +46,7 @@ app.use(express.logger(':method :url :status'));
 app.use(express.compress());
 
 // serve static files
-app.use(express.static(__dirname + '/../dist/'));
+app.use(express.static(__dirname + '/../_gh_pages/'));
 
 //// express router
 //app.use(app.router);
