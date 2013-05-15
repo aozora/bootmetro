@@ -5,25 +5,15 @@ module.exports = function(grunt) {
       ,path = require('path')
       ,hogan = require('hogan.js');
 
-   // X jshint js
-   // X compile less with recess
-   // X copy font, *.less, *.js to \dist
-   // X uglify js
-   // X copy js to \dist
-   // - compile docs, demos
-   // - compile _gh_pages
-
-
-   // dist folder: css, font, js
-   // docs folder: all
-   // gh_pages
-
+   // load tasks
    grunt.loadNpmTasks('grunt-contrib-clean');
    grunt.loadNpmTasks('grunt-contrib-concat');
    grunt.loadNpmTasks('grunt-contrib-copy');
    grunt.loadNpmTasks('grunt-contrib-jshint');
    grunt.loadNpmTasks('grunt-contrib-uglify');
    grunt.loadNpmTasks('grunt-recess');
+   grunt.loadNpmTasks('grunt-recess');
+//   grunt.loadNpmTasks('grunt-express-server');
 
 
    // shared partial templates
@@ -39,6 +29,7 @@ module.exports = function(grunt) {
    // Project configuration.
    grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
+
 
       clean: ['dist', 'docs', '_gh_pages'],
 
@@ -156,7 +147,6 @@ module.exports = function(grunt) {
             ]
          }
 
-
       },
 
 
@@ -176,7 +166,30 @@ module.exports = function(grunt) {
             src: 'templates/docs/',
             dest: '_gh_pages/docs/'
          }
-      }
+      } //,
+
+
+//      express: {
+//         options: {
+//            // Override defaults here
+//
+//            // Override node env's PORT
+//            port: 8080,
+//
+//            // Setting to `false` will effectively just run `node path/to/server.js`
+//            background: false,
+//
+//            // Called if spawning the server fails
+//            error: function(err, result, code) {
+//               grunt.log.writeln(err);
+//            }
+//         },
+//         dev: {
+//            options: {
+//               script: 'server/server.js'
+//            }
+//         }
+//      }
 
 
 
@@ -201,8 +214,8 @@ module.exports = function(grunt) {
          'buildtemplates:ghpages',
          'copy:ghpages_assets',
          'buildtemplates:demo',
-         'builddocs',
-         'copy:docs2dist'
+         'builddocs' //,
+         //'copy:docs2dist'
       ]
    );
 
