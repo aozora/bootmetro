@@ -94,7 +94,7 @@ label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after {
    border: 2px solid #BABABA;
    background-color: #FFF;
    font-family: 'IcoMoon';
-   content: "\e20c";
+   content: "\e379";
    color: #202020;
    font-size: 16px;
    position: absolute;
@@ -126,5 +126,32 @@ label.checkbox input[type=checkbox]:disabled ~ span.metro-checkbox::after {
 }
 label.checkbox input[type=checkbox]:disabled ~ span.metro-checkbox::after {
    color: #4c4c4c;
+}
+
+
+
+/* RTL support
+-------------------------------------------------- */
+[dir="rtl"] label.checkbox input[type="checkbox"] ~ span.metro-checkbox,
+[dir="rtl"] input[type="radio"] ~ span.metro-radio {
+   padding-right: 36px;
+   padding-left: 0;
+}
+
+//radio
+[dir="rtl"] input[type=radio] ~ span.metro-radio::before {
+   right: -10px;
+//   margin-left: 10px;
+}
+[dir="rtl"] input[type=radio]:checked ~ span.metro-radio::after {
+   right: 6px;
+}
+
+//checkbox
+[dir="rtl"] label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after {
+   right: 0;
+}
+[dir="rtl"] label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
+   right: 0;
 }
 

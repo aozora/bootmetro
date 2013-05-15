@@ -5,6 +5,7 @@
 .nav-header {
    font-size: 14px;
    font-weight: 300;
+   text-shadow: none;
 }
 
 
@@ -30,4 +31,85 @@
 .tabs-left > .nav-tabs > li > a,
 .tabs-right > .nav-tabs > li > a {
    .no-border-radius;
+}
+
+.nav .dropdown-toggle .caret {
+   margin-top: 0;
+}
+
+
+//
+// Metro Nav List
+// --------------------------------------------------
+/* Nav: first level */
+.metro-nav-list {
+   margin: 0 0 25px 0;
+}
+   .metro-nav-list > li {
+      position: relative;
+   }
+
+.metro-nav-list > li > a {
+   display: block;
+   font-size: 18px;
+   padding: 4px 25px;
+   text-shadow: none;
+}
+.metro-nav-list > li > a:hover,
+.metro-nav-list > li > a:focus {
+   text-decoration: none;
+   color: #FFF;
+   background-color: #0177db;
+
+}
+.metro-nav-list > .active > a,
+.metro-nav-list > .active:hover > a,
+.metro-nav-list > .active:focus > a {
+   font-weight: 600;
+}
+
+
+
+/* Section headings for groups of links */
+.metro-nav-list > .nav-header {
+   margin-top: 20px;
+   margin-bottom: 5px;
+   font-size: 14px;
+   font-weight: 500;
+   color: #333;
+}
+
+
+/* Nav: second level (shown on .active) */
+.metro-nav-list .nav {
+   margin-bottom: 5px;
+}
+.metro-nav-list > .active > ul {
+   display: block;
+}
+.metro-nav-list .nav > li > a {
+   border-left: 3px solid #00BFF2;
+   display: inline-block;
+   font-size: 90%;
+   margin-left: 40px;
+   margin-bottom: 2px;
+   padding-left: 10px;
+   padding-top: 2px;
+}
+.metro-nav-list .nav > li > a:hover {
+   background-color: #00BFF2;
+   color: #FFF;
+}
+
+.metro-nav-list .nav > .active > a,
+.metro-nav-list .nav > .active:hover > a,
+.metro-nav-list .nav > .active:focus > a {
+   font-weight: 600;
+   border-left: 3px solid #0177db;
+}
+
+
+/* Nav: third level (shown on .active) */
+.metro-nav-list .nav .nav{
+   margin-left: 20px;
 }

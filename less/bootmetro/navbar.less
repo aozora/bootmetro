@@ -3,6 +3,7 @@
 // --------------------------------------------------
 .navbar-inner {
    background-image: none;
+   background-color: transparent;
    filter: 0;
    .no-box-shadow;
 }
@@ -19,8 +20,45 @@
    }
 }
 
+.navbar .nav li.dropdown .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open .caret,
+.navbar .nav .dropdown-toggle .caret {
+   margin-top: 0;
+}
+
 .navbar-search {
    .search-query {
       .no-border-radius;
    }
 }
+
+
+
+//
+// Metro Top Navbars
+// --------------------------------------------------
+.navbar.metro-navbar .navbar-inner {
+   min-height: 60px;
+   height: 60px;
+   background-color: #EEEEEE;
+}
+
+   .navbar.metro-navbar .nav > li {
+      line-height: 40px;
+   }
+      .navbar.metro-navbar .nav > li > a {
+         text-transform: uppercase;
+         background-color: #DDD;
+         margin-right: 4px;
+         text-shadow: none;
+      }
+
+   .navbar.metro-navbar .nav > li.active > a {
+      background-color: #FFF;
+
+   }
+
+   .navbar.metro-navbar .nav li.dropdown .dropdown-toggle .caret,
+   .navbar.metro-navbar .nav li.dropdown.open .caret {
+      margin-top: 0;
+   }

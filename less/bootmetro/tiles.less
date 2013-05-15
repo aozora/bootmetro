@@ -1,5 +1,5 @@
 .bg-color-orange {
-   background-color: #CD4900 !important;
+   background-color: @orange !important;
 }
 .bg-color-purple {
    background-color: @purple !important;
@@ -28,17 +28,75 @@
 .bg-color-darken {
    background-color: #1c1c1c !important;
 }
+.bg-color-gray {
+   background-color: @gray !important;
+}
+.bg-color-grayLight {
+   background-color: @grayLight !important;
+}
 
+@tile-border-hover: #225a68;
 
 .metro {
    position: relative;
 
 }
 
+.tile-column {
+   position: relative;
+   float: left;
+   width: auto;
+   height: auto;
+//   margin-right: 75px;
+}
+   .tile-column-span-1 {
+      .tile-column;
+      width: 162px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-2 {
+      .tile-column;
+      width: 324px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-3 {
+      .tile-column;
+      width: 480px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-4 {
+      .tile-column;
+      width: 640px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-5 {
+      .tile-column;
+      width: 640px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-6 {
+      .tile-column;
+      width: 800px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-7 {
+      .tile-column;
+      width: 960px;
+      margin-left: 0 !important;
+   }
+   .tile-column-span-8 {
+      .tile-column;
+      width: 1120px;
+      margin-left: 0 !important;
+   }
+
+
 .panorama {
    overflow: hidden;
-   margin: 0 40px;
    position: relative;
+   .box-sizing(border-box);
+   width: 100%;
+   margin: 0 40px;
 
    &.nohidden {
       width: auto;
@@ -50,6 +108,7 @@
       position: relative;
       overflow: hidden;
       width: 10000px;
+      padding-bottom: 24px;
 
       h2 {
          margin-left: 5px;
@@ -115,6 +174,35 @@
       overflow: hidden;
       text-decoration: none;
       background-color: #2C83EF;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+         -moz-background-clip: padding;     /* Firefox 3.6 */
+              background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+
+      &.selected {
+         border: 3px solid @blu1;
+      }
+      &.selected:after {
+         content: "";
+         position: absolute;
+         display: block;
+         right: 0;
+         top: 0;
+         width: 0;
+         height: 0;
+         border-left: 40px solid transparent;
+         border-top: 40px solid @blu1;
+         z-index: 1001;
+      }
+      &.selected:before {
+         position: absolute;
+         top: 0;
+         right: 4px;
+         color: #FFFFFF;
+         content: "\e379";
+         font-family: 'icomoon';
+         z-index: 1002;
+      }
 
       .app-label, .label {
          bottom: 5px;
@@ -136,6 +224,18 @@
             height: 80px;
             line-height: 80px;
             width: 80px;
+         }
+      }
+
+      .textover-wrapper {
+         position: absolute;
+         bottom: 0;
+//         width: 270px;
+         height: 48px;
+         padding: 2px 20px;
+         background-color: inherit;
+         &.transparent {
+            background-color: rgba(0, 0, 0, 0.7);
          }
       }
 
@@ -222,7 +322,7 @@
       }
    }
    .tile:hover {
-      outline: 3px #225a68 solid;
+      outline: 3px @tile-border-hover solid;
    }
 
    .tile.app {
@@ -269,13 +369,18 @@
       img {
          max-width: 150px;
          max-height: 150px;
-         max-width: 150px;
-         max-height: 150px;
       }
    }
    .tile.squarepeek {
       width: 150px;
-      height: 300px;
+      height: 312px;
+
+      img {
+         width: 150px;
+         height: 150px;
+         max-width: 150px;
+         max-height: 150px;
+      }
       .text-inner {
          width: 110px;
          height: 110px;
@@ -331,18 +436,16 @@
          float: left;
          width: 180px;
       }
-      .textover-wrapper {
-         position: absolute;
-         bottom: 0;
-         width: 270px;
-         height: 48px;
-         padding: 2px 20px;
-         background-color: inherit;
-      }
    }
    .tile.wide.image {
       width: 310px;
       height: 150px;
+
+      img {
+         max-width: 310px;
+//         max-height: 150px;
+      }
+
       .mini-tiles {
          display: inline-block;
          float: left;
@@ -375,49 +478,109 @@
    .tile.widepeek {
       width: 310px;
       height: 300px;
+
+      .tile {
+         margin: 0;
+         &:hover {
+            outline: 0;
+         }
+      }
    }
-   .tile.ad.ad125 {
-      width: 125px;
-      height: 125px;
-      padding: 12px 13px 13px 12px;
+
+
+
+
+   .tile {
+      &.square,
+      &.squarepeek {
+         .textover-wrapper {
+            width: 130px;
+         }
+      }
+      &.wide,
+      &.widepeek {
+         .textover-wrapper {
+            width: 270px;
+         }
+      }
    }
-   .tile.wide.ad.ad125 {
-      width: 180px;
-      height: 150px;
-      padding: 0 65px;
-   }
+
+
 }
 
 
 #panorama-scroll-prev,
 #panorama-scroll-next {
    position: absolute;
-   top: 38px;
-   left: 0;
+   top: 96px;
+   left: 4px;
 
-   border-width: 2px;
-   border-style: solid;
-   padding: 0;
+   .win-commandicon;
+   .win-commandring;
+   font-family: 'icomoon';
+   font-style: normal;
+   font-variant: normal;
+   font-weight: normal;
+   line-height: 1;
+   text-transform: none;
+   background: none;
+   background-clip: border-box;
    text-align: center;
-   .border-radius(50%);
-
    width: 32px;
    height: 32px;
-   font-size: 20px;
-   line-height: 32px; /* line-height must match the content box height. */
-   vertical-align: baseline;
-   font-weight: normal;
-   font-family: 'IcoMoon';
-   vertical-align: 24%;
    text-decoration: none;
    outline: 0;
+   z-index: 1061;
 }
 #panorama-scroll-next {
    left: auto;
-   right: 0;
+   right: 4px;
 }
 
+#panorama-scroll-prev:hover,
+#panorama-scroll-next:hover {
+   background-color: rgba(255, 255, 255, 0.13);
+   border-color: rgba(255, 255, 255, 0.6);
+}
 
+   #panorama-scroll-prev:before {
+      content: "\e2a4";
+      font-size: 20px;
+      line-height: 32px; /* line-height must match the content box height. */
+      vertical-align: top;
+   }
+   #panorama-scroll-next:before {
+      content: "\e2a0";
+      font-size: 20px;
+      line-height: 32px; /* line-height must match the content box height. */
+      vertical-align: top;
+   }
+
+
+   #panorama-scroll-prev-bkg,
+   #panorama-scroll-next-bkg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 40px;
+      height: 100%;
+      background-color: transparent;
+      z-index: 1060;
+   }
+   #panorama-scroll-next-bkg {
+      left: auto;
+      right: 0;
+   }
+
+   #panorama-scroll-prev-bkg:hover,
+   #panorama-scroll-next-bkg:hover {
+      background-color: rgba(0,0,0, 0.7);
+   }
+
+
+
+// Responsive Tiles (experimental)
 
 .metro-responsive-tiles {
    .tile {

@@ -1,0 +1,2559 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <!-- Mobile viewport optimized: h5bp.com/viewport -->
+   <meta name="viewport" content="width=device-width">
+
+   <title>BootMetro Documentation - Docs</title>
+
+   <meta name="robots" content="noindex, nofollow">
+   <meta name="description" content="BootMetro : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
+   <meta name="keywords" content="bootmetro, modern ui, modern-ui, metro, metroui, metro-ui, metro ui, windows 8, metro style, bootstrap, framework, web framework, css, html" />
+   <meta name="author" content="AozoraLabs by Marcello Palmitessa"/>
+   
+   <!-- remove or comment this line if you want to use the local fonts -->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro-responsive.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro-icons.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro-ui-light.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/datepicker.css">
+
+   <!--  these two css are to use only for documentation -->
+   <link rel="stylesheet" type="text/css" href="assets/css/docs.css">
+   <link rel="stylesheet" type="text/css" href="assets/js/google-code-prettify/prettify.css" >
+
+   <!-- Le fav and touch icons -->
+   <link rel="shortcut icon" href="assets/ico/favicon.ico">
+   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  
+   <!-- All JavaScript at the bottom, except for Modernizr and Respond.
+      Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+      For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+   <script src="assets/js/modernizr-2.6.2.min.js"></script>
+
+   <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3182578-6']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+   </script>
+</head>
+
+<body class="bs-docs-docs" data-spy="scroll" data-target=".bs-docs-sidebar">
+   <!--[if lt IE 7]>
+   <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+   <![endif]-->
+
+   <!-- Navbar
+     ================================================== -->
+   <div class="navbar metro-navbar navbar-fixed-top">
+      <div class="navbar-inner">
+         <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+            <h1 class="brand"><a href="./index.html">BootMetro</a> <small>documentation</small></h1>
+            <div class="nav-collapse collapse">
+               <ul class="nav">
+                  <li class="">
+                     <a href="./docs-index.html">Home</a>
+                  </li>
+                  <li class="active">
+                     <a href="./docs-css.html">Basic CSS</a>
+                  </li>
+                  <li class="">
+                     <a href="./docs-icons.html">Icons</a>
+                  </li>
+                  <li class="">
+                     <a href="./docs-standard-components.html">Standard Components</a>
+                  </li>
+                  <li class="">
+                     <a href="./docs-advanced-components.html">Advanced Components</a>
+                  </li>
+                  <li class="">
+                     <a href="./docs-javascript.html">Javascript</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div id="alerts-container"></div>
+
+   <div id="doc-container" class="container">
+      <div class="row">
+         <div class="bs-docs-sidebar span3">
+<ul class="nav metro-nav-list bs-docs-sidenav">
+   <!-- CSS -->
+   <li class="active">
+      <a href="#scaffolding">Scaffolding</a>
+      <ul class="nav">
+         <li><a href="#scaffolding-global">Global styles</a></li>
+         <li><a href="#scaffolding-gridSystem">Grid system</a></li>
+         <li><a href="#scaffolding-fluidGridSystem">Fluid grid system</a></li>
+         <li><a href="#scaffolding-layouts">Layouts</a></li>
+         <li><a href="#scaffolding-responsive">Responsive design</a></li>
+      </ul>
+   </li>
+   <li>
+      <a href="#typography" >Typography</a>
+      <ul class="nav">
+         <li><a href="#typography-headings">Headings</a></li>
+         <li><a href="#typography-body-copy">Body copy</a></li>
+         <li><a href="#typography-emphasis">Emphasis</a></li>
+         <li><a href="#typography-abbreviations">Abbreviations</a></li>
+         <li><a href="#typography-addresses">Addresses</a></li>
+         <li><a href="#typography-blockquotes">Blockquotes</a></li>
+         <li><a href="#typography-lists">Lists</a></li>
+      </ul>
+   </li>
+   <li><a href="#code">Code</a></li>
+   <li>
+      <a href="#tables">Tables</a>
+      <ul class="nav">
+         <li><a href="#tables-example">Basic example</a></li>
+         <li><a href="#tables-striped">Zebra striping</a></li>
+         <li><a href="#tables-bordered">Bordered tables</a></li>
+         <li><a href="#tables-hover">Hover rows</a></li>
+         <li><a href="#tables-condensed">Condensed tables</a></li>
+         <li><a href="#tables-row-classes">Contextual row classes</a></li>
+      </ul>
+   </li>
+   <li>
+      <a href="#forms">Forms</a>
+      <ul class="nav">
+         <li><a href="#forms-example">Basic example</a></li>
+         <li><a href="#forms-inline">Inline variation</a></li>
+         <li><a href="#forms-horizontal">Horizontal variation</a></li>
+         <li><a href="#forms-controls">Supported controls</a></li>
+         <li><a href="#forms-input-groups">Input groups</a></li>
+         <li><a href="#forms-control-sizes">Control sizing</a></li>
+         <li><a href="#forms-actions">Form actions</a></li>
+         <li><a href="#forms-help-text">Help text</a></li>
+         <li><a href="#forms-control-states">Control states</a></li>
+      </ul>
+   </li>
+   <li>
+      <a href="#buttons">Buttons</a>
+      <ul class="nav">
+         <li><a href="#buttons-options">Button options</a></li>
+         <li><a href="#buttons-sizes">Sizes</a></li>
+         <li><a href="#buttons-disabled">Disabled</a></li>
+         <li><a href="#buttons-tags">Button tags</a></li>
+      </ul>
+   </li>
+   <li><a href="#images">Images</a></li>
+</ul>
+         </div>
+
+         <div class="bs-docs-container span9">
+
+<!-- this is the old 'scaffolding' file -->
+
+<div id="css" class="bs-docs-section-header">
+   <h1>CSS</h1>
+   <p class="lead">Fundamental HTML elements styled and enhanced with extensible classes.</p>
+</div>
+
+
+<!-- SCAFFOLDING
+     --------------------------------- -->
+<div class="bs-docs-section">
+<div class="page-header">
+   <h1 id="scaffolding">Scaffolding</h1>
+</div>
+<p class="lead">Bootstrap is built on responsive 12-column grids, layouts, and components.</p>
+
+<!-- Global Bootstrap settings
+================================================== -->
+<h1 id="scaffolding-global">Global settings</h1>
+
+<h3>Requires HTML5 doctype</h3>
+<p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  ...
+&lt;/html&gt;
+</pre>
+
+<h3>Typography and links</h3>
+<p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
+<ul>
+   <li>Remove <code>margin</code> on the body</li>
+   <li>Set <code>background-color: white;</code> on the <code>body</code></li>
+   <li>Use the <code>@baseFontFamily</code>, <code>@baseFontSize</code>, and <code>@baseLineHeight</code> attributes as our typographic base</li>
+   <li>Set the global link color via <code>@linkColor</code> and apply link underlines only on <code>:hover</code></li>
+</ul>
+<p>These styles can be found within <strong>scaffolding.less</strong>.</p>
+
+<h3>Reset via Normalize</h3>
+<p>With Bootstrap 2, the old reset block has been dropped in favor of <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> and <a href="http://twitter.com/jon_neal" target="_blank">Jonathan Neal</a> that also powers the <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>. While we use much of Normalize within our <strong>reset.less</strong>, we have removed some elements specifically for Bootstrap.</p>
+
+
+
+<!-- Grid system
+================================================== -->
+<h1 id="scaffolding-gridSystem">Default grid system</h1>
+
+<h2>Live grid example</h2>
+<p>The default Bootstrap grid system utilizes <strong>12 columns</strong>, making for a 940px wide container without <a href="./scaffolding.html#responsive">responsive features</a> enabled. With the responsive CSS file added, the grid adapts to be 724px and 1170px wide depending on your viewport. Below 767px viewports, the columns become fluid and stack vertically.</p>
+<div class="bs-docs-grid">
+   <div class="row show-grid">
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+   </div>
+   <div class="row show-grid">
+      <div class="span1">1</div>
+      <div class="span3">3</div>
+      <div class="span4">4</div>
+   </div>
+   <div class="row show-grid">
+      <div class="span3">3</div>
+      <div class="span5">5</div>
+   </div>
+   <div class="row show-grid">
+      <div class="span8">8</div>
+   </div>
+</div>
+
+<h3>Basic grid HTML</h3>
+<p>For a simple two column layout, create a <code>.row</code> and add the appropriate number of <code>.span*</code> columns. As this is a 12-column grid, each <code>.span*</code> spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent).</p>
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span8"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>Given this example, we have <code>.span4</code> and <code>.span8</code>, making for 12 total columns and a complete row.</p>
+
+<h2>Offsetting columns</h2>
+<p>Move columns to the right using <code>.offset*</code> classes. Each class increases the left margin of a column by a whole column. For example, <code>.offset4</code> moves <code>.span4</code> over four columns.</p>
+<div class="bs-docs-grid">
+   <div class="row show-grid">
+      <div class="span4">4</div>
+      <div class="span3 offset1">3 offset 1</div>
+   </div><!-- /row -->
+   <div class="row show-grid">
+      <div class="span3 offset1">3 offset 1</div>
+      <div class="span2 offset2">2 offset 2</div>
+   </div><!-- /row -->
+   <div class="row show-grid">
+      <div class="span5 offset3">5 offset 3</div>
+   </div><!-- /row -->
+</div>
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span3 offset2"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<h2>Nesting columns</h2>
+<p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column. Nested rows should include a set of columns that add up to the number of columns of its parent.</p>
+<div class="row show-grid">
+   <div class="span8">
+      Level 1 column
+      <div class="row show-grid">
+         <div class="span6">
+            Level 2
+         </div>
+         <div class="span3">
+            Level 2
+         </div>
+      </div>
+   </div>
+</div>
+   <pre class="prettyprint linenums">
+   &lt;div class="row"&gt;
+     &lt;div class="span8"&gt;
+       Level 1 column
+       &lt;div class="row"&gt;
+         &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+         &lt;div class="span3"&gt;Level 2&lt;/div&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+   </pre>
+
+
+
+<!-- Fluid grid system
+================================================== -->
+<h1 id="scaffolding-fluidGridSystem">Fluid grid system</h1>
+
+<h2>Live fluid grid example</h2>
+<p>The fluid grid system uses percents instead of pixels for column widths. It has the same responsive capabilities as our fixed grid system, ensuring proper proportions for key screen resolutions and devices.</p>
+<div class="bs-docs-grid">
+   <div class="row-fluid show-grid">
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+   </div>
+   <div class="row-fluid show-grid">
+      <div class="span4">4</div>
+      <div class="span4">4</div>
+      <div class="span4">4</div>
+   </div>
+   <div class="row-fluid show-grid">
+      <div class="span4">4</div>
+      <div class="span8">8</div>
+   </div>
+   <div class="row-fluid show-grid">
+      <div class="span6">6</div>
+      <div class="span6">6</div>
+   </div>
+   <div class="row-fluid show-grid">
+      <div class="span12">12</div>
+   </div>
+</div>
+
+<h3>Basic fluid grid HTML</h3>
+<p>Make any row "fluid" by changing <code>.row</code> to <code>.row-fluid</code>. The column classes stay the exact same, making it easy to flip between fixed and fluid grids.</p>
+   <pre class="prettyprint linenums">
+   &lt;div class="row-fluid"&gt;
+      &lt;div class="span4"&gt;...&lt;/div&gt;
+      &lt;div class="span8"&gt;...&lt;/div&gt;
+   &lt;/div&gt;
+   </pre>
+
+<h2>Fluid offsetting</h2>
+<p>Operates the same way as the fixed grid system offsetting: add <code>.offset*</code> to any column to offset by that many columns.</p>
+<div class="bs-docs-grid">
+   <div class="row-fluid show-grid">
+      <div class="span4">4</div>
+      <div class="span4 offset4">4 offset 4</div>
+   </div><!-- /row -->
+   <div class="row-fluid show-grid">
+      <div class="span3 offset3">3 offset 3</div>
+      <div class="span3 offset3">3 offset 3</div>
+   </div><!-- /row -->
+   <div class="row-fluid show-grid">
+      <div class="span6 offset6">6 offset 6</div>
+   </div><!-- /row -->
+</div>
+   <pre class="prettyprint linenums">
+   &lt;div class="row-fluid"&gt;
+      &lt;div class="span4"&gt;...&lt;/div&gt;
+      &lt;div class="span4 offset2"&gt;...&lt;/div&gt;
+   &lt;/div&gt;
+   </pre>
+
+<h2>Fluid nesting</h2>
+<p>Fluid grids utilize nesting differently: each nested level of columns should add up to 12 columns. This is because the fluid grid uses percentages, not pixels, for setting widths.</p>
+<div class="row-fluid show-grid">
+   <div class="span12">
+      Fluid 12
+      <div class="row-fluid show-grid">
+         <div class="span6">
+            Fluid 6
+            <div class="row-fluid show-grid">
+               <div class="span6">
+                  Fluid 6
+               </div>
+               <div class="span6">
+                  Fluid 6
+               </div>
+            </div>
+         </div>
+         <div class="span6">
+            Fluid 6
+         </div>
+      </div>
+   </div>
+</div>
+   <pre class="prettyprint linenums">
+   &lt;div class="row-fluid"&gt;
+      &lt;div class="span12"&gt;
+      Fluid 12
+      &lt;div class="row-fluid"&gt;
+      &lt;div class="span6"&gt;
+        Fluid 6
+        &lt;div class="row-fluid"&gt;
+          &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
+          &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   </pre>
+
+
+
+
+
+<!-- Layouts (Default and fluid)
+================================================== -->
+<h1 id="scaffolding-layouts">Layouts</h1>
+
+<h2>Fixed layout</h2>
+<p>Provides a common fixed-width (and optionally responsive) layout with only <code>&lt;div class="container"&gt;</code> required.</p>
+<div class="mini-layout">
+   <div class="mini-layout-body"></div>
+</div>
+   <pre class="prettyprint linenums">
+   &lt;body&gt;
+      &lt;div class="container"&gt;
+      ...
+      &lt;/div&gt;
+   &lt;/body&gt;
+   </pre>
+
+<h2>Fluid layout</h2>
+<p>Create a fluid, two-column page with <code>&lt;div class="container-fluid"&gt;</code>&mdash;great for applications and docs.</p>
+<div class="mini-layout fluid">
+   <div class="mini-layout-sidebar"></div>
+   <div class="mini-layout-body"></div>
+</div>
+   <pre class="prettyprint linenums">
+   &lt;div class="container-fluid"&gt;
+      &lt;div class="row-fluid"&gt;
+      &lt;div class="span2"&gt;
+      &lt;!--Sidebar content--&gt;
+      &lt;/div&gt;
+      &lt;div class="span10"&gt;
+      &lt;!--Body content--&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   </pre>
+
+
+
+
+<!-- Responsive design
+================================================== -->
+<h1 id="scaffolding-responsive">Responsive design</h1>
+
+
+<h2>Enabling responsive features</h2>
+<p>Turn on responsive CSS in your project by including the proper meta tag and additional stylesheet within the <code>&lt;head&gt;</code> of your document. If you've compiled Bootstrap from the Customize page, you need only include the meta tag.</p>
+   <pre class="prettyprint linenums">
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;link href="assets/css/bootstrap-responsive.css" rel="stylesheet"&gt;
+   </pre>
+<p><span class="label label-info">Heads up!</span>  Bootstrap doesn't include responsive features by default at this time as not everything needs to be responsive. Instead of encouraging developers to remove this feature, we figure it best to enable it as needed.</p>
+
+<h2>About responsive Bootstrap</h2>
+<img src="assets/img/responsive-illustrations.png" alt="Responsive devices" style="float: right; margin: 0 0 20px 20px;">
+<p>Media queries allow for custom CSS based on a number of conditions&mdash;ratios, widths, display type, etc&mdash;but usually focuses around <code>min-width</code> and <code>max-width</code>.</p>
+<ul>
+   <li>Modify the width of column in our grid</li>
+   <li>Stack elements instead of float wherever necessary</li>
+   <li>Resize headings and text to be more appropriate for devices</li>
+</ul>
+<p>Use media queries responsibly and only as a start to your mobile audiences. For larger projects, do consider dedicated code bases and not layers of media queries.</p>
+
+<h2>Supported devices</h2>
+<p>Bootstrap supports a handful of media queries in a single file to help make your projects more appropriate on different devices and screen resolutions. Here's what's included:</p>
+<table class="table table-bordered table-striped">
+   <thead>
+   <tr>
+      <th>Label</th>
+      <th>Layout width</th>
+      <th>Column width</th>
+      <th>Gutter width</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+      <td>Large display</td>
+      <td>1200px and up</td>
+      <td>70px</td>
+      <td>30px</td>
+   </tr>
+   <tr>
+      <td>Default</td>
+      <td>980px and up</td>
+      <td>60px</td>
+      <td>20px</td>
+   </tr>
+   <tr>
+      <td>Portrait tablets</td>
+      <td>768px and above</td>
+      <td>42px</td>
+      <td>20px</td>
+   </tr>
+   <tr>
+      <td>Phones to tablets</td>
+      <td>767px and below</td>
+      <td class="muted" colspan="2">Fluid columns, no fixed widths</td>
+   </tr>
+   <tr>
+      <td>Phones</td>
+      <td>480px and below</td>
+      <td class="muted" colspan="2">Fluid columns, no fixed widths</td>
+   </tr>
+   </tbody>
+</table>
+   <pre class="prettyprint linenums">
+   /* Large desktop */
+   @media (min-width: 1200px) { ... }
+
+   /* Portrait tablet to landscape and desktop */
+   @media (min-width: 768px) and (max-width: 979px) { ... }
+
+   /* Landscape phone to portrait tablet */
+   @media (max-width: 767px) { ... }
+
+   /* Landscape phones and down */
+   @media (max-width: 480px) { ... }
+   </pre>
+
+
+<h2>Responsive utility classes</h2>
+<p>For faster mobile-friendly development, use these utility classes for showing and hiding content by device. Below is a table of the available classes and their effect on a given media query layout (labeled by device). They can be found in <code>responsive.less</code>.</p>
+<table class="table table-bordered table-striped responsive-utilities">
+   <thead>
+   <tr>
+      <th>Class</th>
+      <th>Phones <small>767px and below</small></th>
+      <th>Tablets <small>979px to 768px</small></th>
+      <th>Desktops <small>Default</small></th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+      <th><code>.visible-phone</code></th>
+      <td class="is-visible">Visible</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+   </tr>
+   <tr>
+      <th><code>.visible-tablet</code></th>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-hidden">Hidden</td>
+   </tr>
+   <tr>
+      <th><code>.visible-desktop</code></th>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+   </tr>
+   <tr>
+      <th><code>.hidden-phone</code></th>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+   </tr>
+   <tr>
+      <th><code>.hidden-tablet</code></th>
+      <td class="is-visible">Visible</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+   </tr>
+   <tr>
+      <th><code>.hidden-desktop</code></th>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-hidden">Hidden</td>
+   </tr>
+   </tbody>
+</table>
+
+<h3>When to use</h3>
+<p>Use on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation. Responsive utilities should not be used with tables, and as such are not supported.</p>
+
+<h3>Responsive utilities test case</h3>
+<p>Resize your browser or load on different devices to test the above classes.</p>
+<h4>Visible on...</h4>
+<p>Green checkmarks indicate that class is visible in your current viewport.</p>
+<ul class="responsive-utilities-test">
+   <li>Phone<span class="visible-phone">&#10004; Phone</span></li>
+   <li>Tablet<span class="visible-tablet">&#10004; Tablet</span></li>
+   <li>Desktop<span class="visible-desktop">&#10004; Desktop</span></li>
+</ul>
+<h4>Hidden on...</h4>
+<p>Here, green checkmarks indicate that class is hidden in your current viewport.</p>
+<ul class="responsive-utilities-test hidden-on">
+   <li>Phone<span class="hidden-phone">&#10004; Phone</span></li>
+   <li>Tablet<span class="hidden-tablet">&#10004; Tablet</span></li>
+   <li>Desktop<span class="hidden-desktop">&#10004; Desktop</span></li>
+</ul>
+
+
+</div>
+
+
+<!-- Typography
+================================================== -->
+<div class="bs-docs-section">
+<div class="page-header">
+   <h1 id="typography">Typography</h1>
+</div>
+
+<h2 id="typography-headings">Headings</h2>
+<p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available.</p>
+<div class="bs-docs-example">
+   <h1>h1. Heading 1</h1>
+   <h2>h2. Heading 2</h2>
+   <h3>h3. Heading 3</h3>
+   <h4>h4. Heading 4</h4>
+   <h5>h5. Heading 5</h5>
+   <h6>h6. Heading 6</h6>
+</div>
+
+<h2 id="typography-body-copy">Body copy</h2>
+<p>Bootstrap's global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>20px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their line-height (10px by default).</p>
+<div class="bs-docs-example">
+   <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+   <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+   <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+</div>
+<pre class="prettyprint">&lt;p&gt;...&lt;/p&gt;</pre>
+
+<h3>Lead body copy</h3>
+<p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+<div class="bs-docs-example">
+   <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+</div>
+<pre class="prettyprint">&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
+
+<h3>Built with Less</h3>
+<p>The typographic scale is based on two LESS variables in <strong>variables.less</strong>: <code>@baseFontSize</code> and <code>@baseLineHeight</code>. The first is the base font-size used throughout and the second is the base line-height. We use those variables and some simple math to create the margins, paddings, and line-heights of all our type and more. Customize them and Bootstrap adapts.</p>
+
+
+<hr class="bs-docs-separator">
+
+
+<h2 id="typography-emphasis">Emphasis</h2>
+<p>Make use of HTML's default emphasis tags with lightweight styles.</p>
+
+<h3><code>&lt;small&gt;</code></h3>
+<p>For de-emphasizing inline or blocks of text, <small>use the small tag.</small></p>
+<div class="bs-docs-example">
+   <p><small>This line of text is meant to be treated as fine print.</small></p>
+</div>
+   <pre class="prettyprint">
+   &lt;p&gt;
+      &lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;
+   &lt;/p&gt;
+   </pre>
+
+<h3>Bold</h3>
+<p>For emphasizing a snippet of text with a heavier font-weight.</p>
+<div class="bs-docs-example">
+   <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+</div>
+<pre class="prettyprint">&lt;strong&gt;rendered as bold text&lt;/strong&gt;</pre>
+
+<h3>Italics</h3>
+<p>For emphasizing a snippet of text with italics.</p>
+<div class="bs-docs-example">
+   <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+</div>
+<pre class="prettyprint">&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>
+
+<p><span class="label label-info">Heads up!</span> Feel free to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> in HTML5. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
+
+<h3>Alignment classes</h3>
+<p>Easily realign text to components with text alignment classes.</p>
+<div class="bs-docs-example">
+   <p class="text-left">Left aligned text.</p>
+   <p class="text-center">Center aligned text.</p>
+   <p class="text-right">Right aligned text.</p>
+</div>
+   <pre class="prettyprint linenums">
+   &lt;p class="text-left"&gt;Left aligned text.&lt;/p&gt;
+   &lt;p class="text-center"&gt;Center aligned text.&lt;/p&gt;
+   &lt;p class="text-right"&gt;Right aligned text.&lt;/p&gt;
+   </pre>
+
+<h3>Emphasis classes</h3>
+<p>Convey meaning through color with a handful of emphasis utility classes.</p>
+<div class="bs-docs-example">
+   <p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+   <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+   <p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+   <p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
+   <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+</div>
+   <pre class="prettyprint linenums">
+   &lt;p class="muted"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.&lt;/p&gt;
+   &lt;p class="text-warning"&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;
+   &lt;p class="text-error"&gt;Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;
+   &lt;p class="text-info"&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.&lt;/p&gt;
+   &lt;p class="text-success"&gt;Duis mollis, est non commodo luctus, nisi erat porttitor ligula.&lt;/p&gt;
+   </pre>
+
+
+<hr class="bs-docs-separator">
+
+
+<h2 id="typography-abbreviations">Abbreviations</h2>
+<p>Stylized implementation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.</p>
+
+<h3><code>&lt;abbr&gt;</code></h3>
+<p>For expanded text on long hover of an abbreviation, include the <code>title</code> attribute.</p>
+<div class="bs-docs-example">
+   <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+</div>
+<pre class="prettyprint">&lt;abbr title="attribute"&gt;attr&lt;/abbr&gt;</pre>
+
+<h3><code>&lt;abbr class="initialism"&gt;</code></h3>
+<p>Add <code>.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
+<div class="bs-docs-example">
+   <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
+</div>
+<pre class="prettyprint">&lt;abbr title="HyperText Markup Language" class="initialism"&gt;HTML&lt;/abbr&gt;</pre>
+
+
+<hr class="bs-docs-separator">
+
+
+<h2 id="typography-addresses">Addresses</h2>
+<p>Present contact information for the nearest ancestor or the entire body of work.</p>
+
+<h3><code>&lt;address&gt;</code></h3>
+<p>Preserve formatting by ending all lines with <code>&lt;br&gt;</code>.</p>
+<div class="bs-docs-example">
+   <address>
+      <strong>Twitter, Inc.</strong><br>
+      795 Folsom Ave, Suite 600<br>
+      San Francisco, CA 94107<br>
+      <abbr title="Phone">P:</abbr> (123) 456-7890
+   </address>
+   <address>
+      <strong>Full Name</strong><br>
+      <a href="mailto:#">first.last@example.com</a>
+   </address>
+</div>
+   <pre class="prettyprint linenums">
+   &lt;address&gt;
+      &lt;strong&gt;Twitter, Inc.&lt;/strong&gt;&lt;br&gt;
+      795 Folsom Ave, Suite 600&lt;br&gt;
+      San Francisco, CA 94107&lt;br&gt;
+      &lt;abbr title="Phone"&gt;P:&lt;/abbr&gt; (123) 456-7890
+   &lt;/address&gt;
+
+   &lt;address&gt;
+      &lt;strong&gt;Full Name&lt;/strong&gt;&lt;br&gt;
+      &lt;a href="mailto:#"&gt;first.last@example.com&lt;/a&gt;
+   &lt;/address&gt;
+   </pre>
+
+
+<hr class="bs-docs-separator">
+
+
+<h2 id="typography-blockquotes">Blockquotes</h2>
+<p>For quoting blocks of content from another source within your document.</p>
+
+<h3>Default blockquote</h3>
+<p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes we recommend a <code>&lt;p&gt;</code>.</p>
+<div class="bs-docs-example">
+   <blockquote>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+   </blockquote>
+</div>
+   <pre class="prettyprint linenums">
+   &lt;blockquote&gt;
+     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+   &lt;/blockquote&gt;
+   </pre>
+
+<h3>Blockquote options</h3>
+<p>Style and content changes for simple variations on a standard blockquote.</p>
+
+<h4>Naming a source</h4>
+<p>Add <code>&lt;small&gt;</code> tag for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
+<div class="bs-docs-example">
+   <blockquote>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+   </blockquote>
+</div>
+   <pre class="prettyprint linenums">
+   &lt;blockquote&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+      &lt;small&gt;Someone famous &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;&lt;/small&gt;
+   &lt;/blockquote&gt;
+   </pre>
+
+<h4>Alternate displays</h4>
+<p>Use <code>.pull-right</code> for a floated, right-aligned blockquote.</p>
+<div class="bs-docs-example" style="overflow: hidden;">
+   <blockquote class="pull-right">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+   </blockquote>
+</div>
+   <pre class="prettyprint linenums">
+   &lt;blockquote class="pull-right"&gt;
+        ...
+   &lt;/blockquote&gt;
+   </pre>
+
+
+<hr class="bs-docs-separator">
+
+
+<!-- Lists -->
+<h2 id="typography-lists">Lists</h2>
+
+<h3>Unordered</h3>
+<p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+<div class="bs-docs-example">
+   <ul>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit
+         <ul>
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Vestibulum laoreet porttitor sem</li>
+            <li>Ac tristique libero volutpat at</li>
+         </ul>
+      </li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+   </ul>
+</div>
+<pre class="prettyprint linenums">
+&lt;ul&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h3>Ordered</h3>
+<p>A list of items in which the order <em>does</em> explicitly matter.</p>
+<div class="bs-docs-example">
+   <ol>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit</li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+   </ol>
+</div>
+<pre class="prettyprint linenums">
+&lt;ol&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<h3>Unstyled</h3>
+<p>Remove the default <code>list-style</code> and left padding on list items (immediate children only).</p>
+<div class="bs-docs-example">
+   <ul class="unstyled">
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit
+         <ul>
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Vestibulum laoreet porttitor sem</li>
+            <li>Ac tristique libero volutpat at</li>
+         </ul>
+      </li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+   </ul>
+</div>
+<pre class="prettyprint linenums">
+&lt;ul class="unstyled"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h3>Inline</h3>
+<p>Place all list items on a single line with <code>inline</code> and some light padding.</p>
+<div class="bs-docs-example">
+   <ul class="inline">
+      <li>Lorem ipsum</li>
+      <li>Phasellus iaculis</li>
+      <li>Nulla volutpat</li>
+   </ul>
+</div>
+<pre class="prettyprint linenums">
+&lt;ul class="inline"&gt;
+   &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+
+<h3>Inline Links</h3>
+<p>Place all list items on a single line with <code>inline</code> and some light padding.</p>
+<div class="bs-docs-example">
+   <ul class="inline">
+      <li>
+         <a href="#">Lorem ipsum</a>
+      </li>
+      <li>
+         <a href="#">Phasellus iaculis</a>
+      </li>
+      <li>
+         <a href="#">Nulla volutpat</a>
+      </li>
+   </ul>
+</div>
+<pre class="prettyprint linenums">
+&lt;ul class="inline"&gt;
+   &lt;li&gt;
+      &lt;a href="#"&gt;&lt;/a&gt;
+   &lt;/li&gt;
+   ...
+&lt;/ul&gt;
+</pre>
+
+
+
+<h3>Description</h3>
+<p>A list of terms with their associated descriptions.</p>
+<div class="bs-docs-example">
+   <dl>
+      <dt>Description lists</dt>
+      <dd>A description list is perfect for defining terms.</dd>
+      <dt>Euismod</dt>
+      <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+      <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+      <dt>Malesuada porta</dt>
+      <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+   </dl>
+</div>
+<pre class="prettyprint linenums">
+&lt;dl&gt;
+   &lt;dt&gt;...&lt;/dt&gt;
+   &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+
+<h4>Horizontal description</h4>
+<p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side.</p>
+<div class="bs-docs-example">
+   <dl class="dl-horizontal">
+      <dt>Description lists</dt>
+      <dd>A description list is perfect for defining terms.</dd>
+      <dt>Euismod</dt>
+      <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+      <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+      <dt>Malesuada porta</dt>
+      <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+      <dt>Felis euismod semper eget lacinia</dt>
+      <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+   </dl>
+</div>
+<pre class="prettyprint linenums">
+&lt;dl class="dl-horizontal"&gt;
+   &lt;dt&gt;...&lt;/dt&gt;
+   &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+<p>
+   <span class="label label-info">Heads up!</span>
+   Horizontal description lists will truncate terms that are too long to fit in the left column fix <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.
+</p>
+</div>
+
+
+
+<!-- Code
+================================================== -->
+<div class="bs-docs-section">
+   <div class="page-header">
+      <h1 id="code">Code</h1>
+   </div>
+
+   <h2>Inline</h2>
+   <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+   <div class="bs-docs-example">
+      For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+   </div>
+   <pre class="prettyprint linenums">
+   For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped as inline.
+   </pre>
+
+   <h2>Basic block</h2>
+   <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>
+   <div class="bs-docs-example">
+      <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+   </div>
+   <pre class="prettyprint linenums" style="margin-bottom: 9px;">
+   &lt;pre&gt;
+         &amp;lt;p&amp;gt;Sample text here...&amp;lt;/p&amp;gt;
+   &lt;/pre&gt;
+   </pre>
+   <p><span class="label label-info">Heads up!</span> Be sure to keep code within <code>&lt;pre&gt;</code> tags as close to the left as possible; it will render all tabs.</p>
+   <p>You may optionally add the <code>.pre-scrollable</code> class which will set a max-height of 350px and provide a y-axis scrollbar.</p>
+</div>
+
+
+
+<!-- Tables
+================================================== -->
+<div class="bs-docs-section">
+<div class="page-header">
+   <h1 id="tables">Tables</h1>
+</div>
+
+<h2 id="tables-example">Default styles</h2>
+<p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
+<div class="bs-docs-example">
+   <table class="table">
+      <thead>
+      <tr>
+         <th>#</th>
+         <th>First Name</th>
+         <th>Last Name</th>
+         <th>Username</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+         <td>1</td>
+         <td>Mark</td>
+         <td>Otto</td>
+         <td>@mdo</td>
+      </tr>
+      <tr>
+         <td>2</td>
+         <td>Jacob</td>
+         <td>Thornton</td>
+         <td>@fat</td>
+      </tr>
+      <tr>
+         <td>3</td>
+         <td>Larry</td>
+         <td>the Bird</td>
+         <td>@twitter</td>
+      </tr>
+      </tbody>
+   </table>
+</div>
+   <pre class="prettyprint linenums">
+   &lt;table class="table"&gt;
+        …
+   &lt;/table&gt;
+   </pre>
+
+
+<hr class="bs-docs-separator">
+
+
+<h2 id="tables-striped">Optional classes</h2>
+<p>Add any of the following classes to the <code>.table</code> base class.</p>
+
+<h3><code>.table-striped</code></h3>
+<p>Adds zebra-striping to any table row within the <code>&lt;tbody&gt;</code> via the <code>:nth-child</code> CSS selector (not available in IE7-8).</p>
+<div class="bs-docs-example">
+   <table class="table table-striped">
+      <thead>
+      <tr>
+         <th>#</th>
+         <th>First Name</th>
+         <th>Last Name</th>
+         <th>Username</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+         <td>1</td>
+         <td>Mark</td>
+         <td>Otto</td>
+         <td>@mdo</td>
+      </tr>
+      <tr>
+         <td>2</td>
+         <td>Jacob</td>
+         <td>Thornton</td>
+         <td>@fat</td>
+      </tr>
+      <tr>
+         <td>3</td>
+         <td>Larry</td>
+         <td>the Bird</td>
+         <td>@twitter</td>
+      </tr>
+      </tbody>
+   </table>
+</div>
+   <pre class="prettyprint linenums" style="margin-bottom: 18px;">
+   &lt;table class="table table-striped"&gt;
+        …
+   &lt;/table&gt;
+   </pre>
+
+<h3 id="tables-bordered"><code>.table-bordered</code></h3>
+<p>Add borders and rounded corners to the table.</p>
+<div class="bs-docs-example">
+   <table class="table table-bordered">
+      <thead>
+      <tr>
+         <th>#</th>
+         <th>First Name</th>
+         <th>Last Name</th>
+         <th>Username</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+         <td rowspan="2">1</td>
+         <td>Mark</td>
+         <td>Otto</td>
+         <td>@mdo</td>
+      </tr>
+      <tr>
+         <td>Mark</td>
+         <td>Otto</td>
+         <td>@TwBootstrap</td>
+      </tr>
+      <tr>
+         <td>2</td>
+         <td>Jacob</td>
+         <td>Thornton</td>
+         <td>@fat</td>
+      </tr>
+      <tr>
+         <td>3</td>
+         <td colspan="2">Larry the Bird</td>
+         <td>@twitter</td>
+      </tr>
+      </tbody>
+   </table>
+</div>
+   <pre class="prettyprint linenums">
+   &lt;table class="table table-bordered"&gt;
+        …
+   &lt;/table&gt;
+   </pre>
+
+<h3 id="tables-hover"><code>.table-hover</code></h3>
+<p>Enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
+<div class="bs-docs-example">
+   <table class="table table-hover">
+      <thead>
+      <tr>
+         <th>#</th>
+         <th>First Name</th>
+         <th>Last Name</th>
+         <th>Username</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+         <td>1</td>
+         <td>Mark</td>
+         <td>Otto</td>
+         <td>@mdo</td>
+      </tr>
+      <tr>
+         <td>2</td>
+         <td>Jacob</td>
+         <td>Thornton</td>
+         <td>@fat</td>
+      </tr>
+      <tr>
+         <td>3</td>
+         <td colspan="2">Larry the Bird</td>
+         <td>@twitter</td>
+      </tr>
+      </tbody>
+   </table>
+</div>
+      <pre class="prettyprint linenums" style="margin-bottom: 18px;">
+      &lt;table class="table table-hover"&gt;
+        …
+      &lt;/table&gt;
+      </pre>
+
+<h3><code>.table-cell-hover</code></h3>
+<p>Enable a hover state on table cells within a <code>&lt;tbody&gt;</code>.</p>
+<div class="bs-docs-example">
+   <table class="table table-cell-hover">
+      <thead>
+      <tr>
+         <th>#</th>
+         <th>First Name</th>
+         <th>Last Name</th>
+         <th>Username</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+         <td>1</td>
+         <td>Mark</td>
+         <td>Otto</td>
+         <td>@mdo</td>
+      </tr>
+      <tr>
+         <td>2</td>
+         <td>Jacob</td>
+         <td>Thornton</td>
+         <td>@fat</td>
+      </tr>
+      <tr>
+         <td>3</td>
+         <td colspan="2">Larry the Bird</td>
+         <td>@twitter</td>
+      </tr>
+      </tbody>
+   </table>
+</div>
+      <pre class="prettyprint linenums" style="margin-bottom: 18px;">
+      &lt;table class="table table-cell-hover"&gt;
+        …
+      &lt;/table&gt;
+      </pre>
+
+<h3 id="tables-condensed"><code>.table-condensed</code></h3>
+<p>Makes tables more compact by cutting cell padding in half.</p>
+<div class="bs-docs-example">
+   <table class="table table-condensed">
+      <thead>
+      <tr>
+         <th>#</th>
+         <th>First Name</th>
+         <th>Last Name</th>
+         <th>Username</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+         <td>1</td>
+         <td>Mark</td>
+         <td>Otto</td>
+         <td>@mdo</td>
+      </tr>
+      <tr>
+         <td>2</td>
+         <td>Jacob</td>
+         <td>Thornton</td>
+         <td>@fat</td>
+      </tr>
+      <tr>
+         <td>3</td>
+         <td colspan="2">Larry the Bird</td>
+         <td>@twitter</td>
+      </tr>
+      </tbody>
+   </table>
+</div>
+   <pre class="prettyprint linenums" style="margin-bottom: 18px;">
+   &lt;table class="table table-condensed"&gt;
+        …
+   &lt;/table&gt;
+   </pre>
+
+
+<hr class="bs-docs-separator">
+
+
+<h2 id="tables-row-classes">Optional row classes</h2>
+<p>Use contextual classes to color table rows.</p>
+<table class="table table-bordered table-striped">
+   <colgroup>
+      <col class="span1">
+      <col class="span7">
+   </colgroup>
+   <thead>
+   <tr>
+      <th>Class</th>
+      <th>Description</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+      <td>
+         <code>.success</code>
+      </td>
+      <td>Indicates a successful or positive action.</td>
+   </tr>
+   <tr>
+      <td>
+         <code>.error</code>
+      </td>
+      <td>Indicates a dangerous or potentially negative action.</td>
+   </tr>
+   <tr>
+      <td>
+         <code>.warning</code>
+      </td>
+      <td>Indicates a warning that might need attention.</td>
+   </tr>
+   <tr>
+      <td>
+         <code>.info</code>
+      </td>
+      <td>Used as an alternative to the default styles.</td>
+   </tr>
+   </tbody>
+</table>
+<div class="bs-docs-example">
+   <table class="table">
+      <thead>
+      <tr>
+         <th>#</th>
+         <th>Product</th>
+         <th>Payment Taken</th>
+         <th>Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="success">
+         <td>1</td>
+         <td>TB - Monthly</td>
+         <td>01/04/2012</td>
+         <td>Approved</td>
+      </tr>
+      <tr class="error">
+         <td>2</td>
+         <td>TB - Monthly</td>
+         <td>02/04/2012</td>
+         <td>Declined</td>
+      </tr>
+      <tr class="warning">
+         <td>3</td>
+         <td>TB - Monthly</td>
+         <td>03/04/2012</td>
+         <td>Pending</td>
+      </tr>
+      <tr class="info">
+         <td>4</td>
+         <td>TB - Monthly</td>
+         <td>04/04/2012</td>
+         <td>Call in to confirm</td>
+      </tr>
+      </tbody>
+   </table>
+</div>
+      <pre class="prettyprint linenums">
+      ...
+        &lt;tr class="success"&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;TB - Monthly&lt;/td&gt;
+          &lt;td&gt;01/04/2012&lt;/td&gt;
+          &lt;td&gt;Approved&lt;/td&gt;
+        &lt;/tr&gt;
+      ...
+      </pre>
+
+
+<hr class="bs-docs-separator">
+
+
+<h2>Supported table markup</h2>
+<p>List of supported table HTML elements and how they should be used.</p>
+<table class="table table-bordered table-striped">
+   <colgroup>
+      <col class="span1">
+      <col class="span7">
+   </colgroup>
+   <thead>
+   <tr>
+      <th>Tag</th>
+      <th>Description</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+      <td>
+         <code>&lt;table&gt;</code>
+      </td>
+      <td>
+         Wrapping element for displaying data in a tabular format
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <code>&lt;thead&gt;</code>
+      </td>
+      <td>
+         Container element for table header rows (<code>&lt;tr&gt;</code>) to label table columns
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <code>&lt;tbody&gt;</code>
+      </td>
+      <td>
+         Container element for table rows (<code>&lt;tr&gt;</code>) in the body of the table
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <code>&lt;tr&gt;</code>
+      </td>
+      <td>
+         Container element for a set of table cells (<code>&lt;td&gt;</code> or <code>&lt;th&gt;</code>) that appears on a single row
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <code>&lt;td&gt;</code>
+      </td>
+      <td>
+         Default table cell
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <code>&lt;th&gt;</code>
+      </td>
+      <td>
+         Special table cell for column (or row, depending on scope and placement) labels
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <code>&lt;caption&gt;</code>
+      </td>
+      <td>
+         Description or summary of what the table holds, especially useful for screen readers
+      </td>
+   </tr>
+   </tbody>
+</table>
+   <pre class="prettyprint linenums">
+   &lt;table&gt;
+     &lt;caption&gt;...&lt;/caption&gt;
+     &lt;thead&gt;
+       &lt;tr&gt;
+         &lt;th&gt;...&lt;/th&gt;
+         &lt;th&gt;...&lt;/th&gt;
+       &lt;/tr&gt;
+     &lt;/thead&gt;
+     &lt;tbody&gt;
+       &lt;tr&gt;
+         &lt;td&gt;...&lt;/td&gt;
+         &lt;td&gt;...&lt;/td&gt;
+       &lt;/tr&gt;
+     &lt;/tbody&gt;
+   &lt;/table&gt;
+   </pre>
+
+</div>
+
+
+
+<!-- Forms
+================================================== -->
+<div class="bs-docs-section">
+<div class="page-header">
+   <h1 id="forms">Forms</h1>
+</div>
+
+<h2 id="forms-example">Default styles</h2>
+<p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p>
+<form class="bs-docs-example">
+   <fieldset>
+      <legend>Legend</legend>
+      <label>Label name</label>
+      <input type="text" placeholder="Type something…">
+      <span class="help-block">Example block-level help text here.</span>
+      <label class="checkbox">
+         <input type="checkbox"><span class="metro-checkbox">Check me out</span>
+      </label>
+      <button type="submit" class="btn">Submit</button>
+   </fieldset>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;form&gt;
+      &lt;fieldset&gt;
+         &lt;legend&gt;Legend&lt;/legend&gt;
+         &lt;label&gt;Label name&lt;/label&gt;
+         &lt;input type="text" placeholder="Type something…"&gt;
+         &lt;span class="help-block"&gt;Example block-level help text here.&lt;/span&gt;
+         &lt;label class="checkbox"&gt;
+            &lt;input type="checkbox"&gt;&lt;span class="metro-checkbox"&gt;Check me out&lt;/span&gt;
+         &lt;/label&gt;
+         &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
+      &lt;/fieldset&gt;
+   &lt;/form&gt;
+   </pre>
+
+
+<hr class="bs-docs-separator">
+
+
+<h2>Optional layouts</h2>
+<p>Included with Bootstrap are three optional form layouts for common use cases.</p>
+
+<h3>Search form</h3>
+<p>Add <code>.form-search</code> to the form and <code>.search-query</code> to the <code>&lt;input&gt;</code> for an extra-rounded text input.</p>
+<form class="bs-docs-example form-search">
+   <input type="text" class="input-medium search-query">
+   <button type="submit" class="btn">Search</button>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;form class="form-search"&gt;
+      &lt;input type="text" class="input-medium search-query"&gt;
+      &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+   &lt;/form&gt;
+   </pre>
+
+<h3 id="forms-inline">Inline form</h3>
+<p>Add <code>.form-inline</code> for left-aligned labels and inline-block controls for a compact layout.</p>
+<form class="bs-docs-example form-inline">
+   <input type="text" class="input-small" placeholder="Email">
+   <input type="password" class="input-small" placeholder="Password">
+   <label class="checkbox">
+      <input type="checkbox"><span class="metro-checkbox">Remember me</span>
+   </label>
+   <button type="submit" class="btn">Sign in</button>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;form class="form-inline"&gt;
+      &lt;input type="text" class="input-small" placeholder="Email"&gt;
+      &lt;input type="password" class="input-small" placeholder="Password"&gt;
+      &lt;label class="checkbox"&gt;
+         &lt;input type="checkbox"&gt;&lt;span class="metro-checkbox"&gt;Remember me&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+   &lt;/form&gt;
+   </pre>
+
+<h3 id="forms-horizontal">Horizontal form</h3>
+<p>Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p>
+<ul>
+   <li>Add <code>.form-horizontal</code> to the form</li>
+   <li>Wrap labels and controls in <code>.control-group</code></li>
+   <li>Add <code>.control-label</code> to the label</li>
+   <li>Wrap any associated controls in <code>.controls</code> for proper alignment</li>
+</ul>
+<form class="bs-docs-example form-horizontal">
+   <div class="control-group">
+      <label class="control-label" for="inputEmail">Email</label>
+      <div class="controls">
+         <input type="text" id="inputEmail" placeholder="Email">
+      </div>
+   </div>
+   <div class="control-group">
+      <label class="control-label" for="inputPassword">Password</label>
+      <div class="controls">
+         <input type="password" id="inputPassword" placeholder="Password">
+      </div>
+   </div>
+   <div class="control-group">
+      <div class="controls">
+         <label class="checkbox">
+            <input type="checkbox"><span class="metro-checkbox">Remember me</span>
+         </label>
+         <button type="submit" class="btn">Sign in</button>
+      </div>
+   </div>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;form class="form-horizontal"&gt;
+      &lt;div class="control-group"&gt;
+         &lt;label class="control-label" for="inputEmail"&gt;Email&lt;/label&gt;
+         &lt;div class="controls"&gt;
+            &lt;input type="text" id="inputEmail" placeholder="Email"&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="control-group"&gt;
+         &lt;label class="control-label" for="inputPassword"&gt;Password&lt;/label&gt;
+         &lt;div class="controls"&gt;
+            &lt;input type="password" id="inputPassword" placeholder="Password"&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="control-group"&gt;
+         &lt;div class="controls"&gt;
+            &lt;label class="checkbox"&gt;
+               &lt;input type="checkbox"&gt;&lt;span class="metro-checkbox"&gt;Remember me&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/form&gt;
+   </pre>
+
+
+<hr class="bs-docs-separator">
+
+
+<h2 id="forms-controls">Supported form controls</h2>
+<p>Examples of standard form controls supported in an example form layout.</p>
+
+<h3>Inputs</h3>
+<p>Most common form control, text-based input fields. Includes support for all HTML5 types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color.</p>
+<p>Requires the use of a specified <code>type</code> at all times.</p>
+<form class="bs-docs-example form-inline">
+   <input type="text" placeholder="Text input">
+</form>
+      <pre class="prettyprint linenums">
+      &lt;input type="text" placeholder="Text input"&gt;
+      </pre>
+
+<h3>Textarea</h3>
+<p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
+<form class="bs-docs-example form-inline">
+   <textarea rows="3"></textarea>
+</form>
+      <pre class="prettyprint linenums">
+      &lt;textarea rows="3"&gt;&lt;/textarea&gt;
+      </pre>
+
+<h3>Checkboxes and radios</h3>
+<p>Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.</p>
+<h4>Default (stacked)</h4>
+<form class="bs-docs-example">
+   <label class="checkbox">
+      <input type="checkbox" value="">
+      <span class="metro-checkbox">Option one is this and that&mdash;be sure to include why it's great</span>
+   </label>
+   <br>
+   <label class="radio">
+      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+      <span class="metro-radio">Option one is this and that&mdash;be sure to include why it's great</span>
+   </label>
+   <label class="radio">
+      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+      <span class="metro-radio">Option two can be something else and selecting it will deselect option one</span>
+   </label>
+</form>
+<pre class="prettyprint linenums">
+&lt;label class="checkbox"&gt;
+   &lt;input type="checkbox" value=""&gt;
+   &lt;span class="metro-checkbox"&gt;Option one is this and that&mdash;be sure to include why it's great&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class="radio"&gt;
+   &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+   &lt;span class="metro-radio"&gt;Option one is this and that&mdash;be sure to include why it's great&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="radio"&gt;
+   &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+   &lt;span class="metro-radio"&gt;Option two can be something else and selecting it will deselect option one&lt;/span&gt;
+&lt;/label&gt;
+</pre>
+
+<h4>Inline checkboxes</h4>
+<p>Add the <code>.inline</code> class to a series of checkboxes or radios for controls appear on the same line.</p>
+<form class="bs-docs-example">
+   <label class="checkbox inline">
+      <input type="checkbox" id="inlineCheckbox1" value="option1">
+      <span class="metro-checkbox">1</span>
+   </label>
+   <label class="checkbox inline">
+      <input type="checkbox" id="inlineCheckbox2" value="option2">
+      <span class="metro-checkbox">2</span>
+   </label>
+   <label class="checkbox inline">
+      <input type="checkbox" id="inlineCheckbox3" value="option3">
+      <span class="metro-checkbox">3</span>
+   </label>
+</form>
+<pre class="prettyprint linenums">
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox1" value="option1"&gt;
+   &lt;span class="metro-checkbox"&gt;1&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox2" value="option2"&gt;
+   &lt;span class="metro-checkbox"&gt;2&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox3" value="option3"&gt;
+   &lt;span class="metro-checkbox"&gt;3&lt;/span&gt;
+&lt;/label&gt;
+</pre>
+
+
+<h4>Right-To-Left support <span class="badge badge-success">new</span></h4>
+<p>Add the <code>dir="rtl"</code> attribute to a parent element or the body to have checkboxes or radios displayed from right to left.</p>
+<div class="bs-docs-example">
+   <div dir="rtl">
+      <form>
+         <label class="checkbox">
+            <input type="checkbox" value="">
+            <span class="metro-checkbox">Option one is this and that&mdash;be sure to include why it's great</span>
+         </label>
+         <br>
+         <label class="radio">
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+            <span class="metro-radio">Option one is this and that&mdash;be sure to include why it's great</span>
+         </label>
+         <label class="radio">
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            <span class="metro-radio">Option two can be something else and selecting it will deselect option one</span>
+         </label>
+      </form>
+   </div>
+</div>
+<pre class="prettyprint linenums">
+&lt;div dir="rtl"&gt;
+   ...
+      &lt;label class="checkbox"&gt;
+         &lt;input type="checkbox" value=""&gt;
+         &lt;span class="metro-checkbox"&gt;Option one is this and that&mdash;be sure to include why it's great&lt;/span&gt;
+      &lt;/label&gt;
+
+      &lt;label class="radio"&gt;
+         &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+         &lt;span class="metro-radio"&gt;Option one is this and that&mdash;be sure to include why it's great&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;label class="radio"&gt;
+         &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+         &lt;span class="metro-radio"&gt;Option two can be something else and selecting it will deselect option one&lt;/span&gt;
+      &lt;/label&gt;
+   ...
+&lt;/div&gt;
+</pre>
+
+<div class="bs-docs-example">
+   <div dir="rtl">
+      <form>
+         <label class="checkbox inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1">
+            <span class="metro-checkbox">1</span>
+         </label>
+         <label class="checkbox inline">
+            <input type="checkbox" id="inlineCheckbox2" value="option2">
+            <span class="metro-checkbox">2</span>
+         </label>
+         <label class="checkbox inline">
+            <input type="checkbox" id="inlineCheckbox3" value="option3">
+            <span class="metro-checkbox">3</span>
+         </label>
+      </form>
+   </div>
+</div>
+<pre class="prettyprint linenums">
+&lt;div dir="rtl"&gt;
+   ...
+      &lt;label class="checkbox inline"&gt;
+        &lt;input type="checkbox" id="inlineCheckbox1" value="option1"&gt;
+         &lt;span class="metro-checkbox"&gt;1&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;label class="checkbox inline"&gt;
+        &lt;input type="checkbox" id="inlineCheckbox2" value="option2"&gt;
+         &lt;span class="metro-checkbox"&gt;2&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;label class="checkbox inline"&gt;
+        &lt;input type="checkbox" id="inlineCheckbox3" value="option3"&gt;
+         &lt;span class="metro-checkbox"&gt;3&lt;/span&gt;
+      &lt;/label&gt;
+   ...
+&lt;/div&gt;
+</pre>
+
+
+
+<h3>Selects</h3>
+<p>Use the default option or specify a <code>multiple="multiple"</code> to show multiple options at once.</p>
+<form class="bs-docs-example">
+   <select>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+   </select>
+   <br>
+   <select multiple="multiple">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+   </select>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;select&gt;
+     &lt;option&gt;1&lt;/option&gt;
+     &lt;option&gt;2&lt;/option&gt;
+     &lt;option&gt;3&lt;/option&gt;
+     &lt;option&gt;4&lt;/option&gt;
+     &lt;option&gt;5&lt;/option&gt;
+   &lt;/select&gt;
+
+   &lt;select multiple="multiple"&gt;
+     &lt;option&gt;1&lt;/option&gt;
+     &lt;option&gt;2&lt;/option&gt;
+     &lt;option&gt;3&lt;/option&gt;
+     &lt;option&gt;4&lt;/option&gt;
+     &lt;option&gt;5&lt;/option&gt;
+   &lt;/select&gt;
+   </pre>
+
+
+<hr class="bs-docs-separator">
+
+
+<h2 id="forms-input-groups">Extending form controls</h2>
+<p>Adding on top of existing browser controls, Bootstrap includes other useful form components.</p>
+
+<h3>Prepended and appended inputs</h3>
+<p>Add text or buttons before or after any text-based input. Do note that <code>select</code> elements are not supported here.</p>
+
+<h4>Default options</h4>
+<p>Wrap an <code>.add-on</code> and an <code>input</code> with one of two classes to prepend or append text to an input.</p>
+<form class="bs-docs-example">
+   <div class="input-prepend">
+      <span class="add-on">@</span>
+      <input class="span2" id="prependedInput" type="text" placeholder="Username">
+   </div>
+   <br>
+   <div class="input-append">
+      <input class="span2" id="appendedInput" type="text">
+      <span class="add-on">.00</span>
+   </div>
+</form>
+   <pre class="prettyprint linenums">
+      &lt;div class="input-prepend"&gt;
+         &lt;span class="add-on"&gt;@&lt;/span&gt;
+         &lt;input class="span2" id="prependedInput" type="text" placeholder="Username"&gt;
+      &lt;/div&gt;
+      &lt;div class="input-append"&gt;
+         &lt;input class="span2" id="appendedInput" type="text"&gt;
+         &lt;span class="add-on"&gt;.00&lt;/span&gt;
+      &lt;/div&gt;
+   </pre>
+
+<h4>Combined</h4>
+<p>Use both classes and two instances of <code>.add-on</code> to prepend and append an input.</p>
+<form class="bs-docs-example form-inline">
+   <div class="input-prepend input-append">
+      <span class="add-on">$</span>
+      <input class="span2" id="appendedPrependedInput" type="text">
+      <span class="add-on">.00</span>
+   </div>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;div class="input-prepend input-append"&gt;
+     &lt;span class="add-on"&gt;$&lt;/span&gt;
+     &lt;input class="span2" id="appendedPrependedInput" type="text"&gt;
+     &lt;span class="add-on"&gt;.00&lt;/span&gt;
+   &lt;/div&gt;
+   </pre>
+
+<h4>Buttons instead of text</h4>
+<p>Instead of a <code>&lt;span&gt;</code> with text, use a <code>.btn</code> to attach a button (or two) to an input.</p>
+<form class="bs-docs-example">
+   <div class="input-append">
+      <input class="span2" id="appendedInputButton" type="text">
+      <button class="btn" type="button">Go!</button>
+   </div>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;div class="input-append"&gt;
+     &lt;input class="span2" id="appendedInputButton" type="text"&gt;
+     &lt;button class="btn" type="button"&gt;Go!&lt;/button&gt;
+   &lt;/div&gt;
+   </pre>
+<form class="bs-docs-example">
+   <div class="input-append">
+      <input class="span2" id="appendedInputButtons" type="text">
+      <button class="btn" type="button">Search</button>
+      <button class="btn" type="button">Options</button>
+   </div>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;div class="input-append"&gt;
+     &lt;input class="span2" id="appendedInputButtons" type="text"&gt;
+     &lt;button class="btn" type="button"&gt;Search&lt;/button&gt;
+     &lt;button class="btn" type="button"&gt;Options&lt;/button&gt;
+   &lt;/div&gt;
+   </pre>
+
+<h4>Button dropdowns</h4>
+<p></p>
+<form class="bs-docs-example">
+   <div class="input-append">
+      <input class="span2" id="appendedDropdownButton" type="text">
+      <div class="btn-group">
+         <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+         <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+         </ul>
+      </div><!-- /btn-group -->
+   </div><!-- /input-append -->
+</form>
+      <pre class="prettyprint linenums">
+         &lt;div class="input-append"&gt;
+         &lt;input class="span2" id="appendedDropdownButton" type="text"&gt;
+         &lt;div class="btn-group"&gt;
+         &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      Action
+         &lt;span class="caret"&gt;&lt;/span&gt;
+         &lt;/button&gt;
+         &lt;ul class="dropdown-menu"&gt;
+         ...
+         &lt;/ul&gt;
+         &lt;/div&gt;
+   &lt;/div&gt;
+   </pre>
+
+<form class="bs-docs-example">
+   <div class="input-prepend">
+      <div class="btn-group">
+         <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+         <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+         </ul>
+      </div><!-- /btn-group -->
+      <input class="span2" id="prependedDropdownButton" type="text">
+   </div><!-- /input-prepend -->
+</form>
+   <pre class="prettyprint linenums">
+   &lt;div class="input-prepend"&gt;
+     &lt;div class="btn-group"&gt;
+       &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+         Action
+         &lt;span class="caret"&gt;&lt;/span&gt;
+       &lt;/button&gt;
+       &lt;ul class="dropdown-menu"&gt;
+         ...
+       &lt;/ul&gt;
+     &lt;/div&gt;
+     &lt;input class="span2" id="prependedDropdownButton" type="text"&gt;
+   &lt;/div&gt;
+   </pre>
+
+<form class="bs-docs-example">
+   <div class="input-prepend input-append">
+      <div class="btn-group">
+         <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+         <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+         </ul>
+      </div><!-- /btn-group -->
+      <input class="span2" id="appendedPrependedDropdownButton" type="text">
+      <div class="btn-group">
+         <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+         <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+         </ul>
+      </div><!-- /btn-group -->
+   </div><!-- /input-prepend input-append -->
+</form>
+   <pre class="prettyprint linenums">
+   &lt;div class="input-prepend input-append"&gt;
+         &lt;div class="btn-group"&gt;
+         &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      Action
+         &lt;span class="caret"&gt;&lt;/span&gt;
+         &lt;/button&gt;
+         &lt;ul class="dropdown-menu"&gt;
+         ...
+         &lt;/ul&gt;
+         &lt;/div&gt;
+         &lt;input class="span2" id="appendedPrependedDropdownButton" type="text"&gt;
+         &lt;div class="btn-group"&gt;
+         &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      Action
+         &lt;span class="caret"&gt;&lt;/span&gt;
+         &lt;/button&gt;
+         &lt;ul class="dropdown-menu"&gt;
+         ...
+         &lt;/ul&gt;
+         &lt;/div&gt;
+   &lt;/div&gt;
+   </pre>
+
+<h4>Segmented dropdown groups</h4>
+<form class="bs-docs-example">
+   <div class="input-prepend">
+      <div class="btn-group">
+         <button class="btn" tabindex="-1">Action</button>
+         <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+            <span class="caret"></span>
+         </button>
+         <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+         </ul>
+      </div>
+      <input type="text">
+   </div>
+   <div class="input-append">
+      <input type="text">
+      <div class="btn-group">
+         <button class="btn" tabindex="-1">Action</button>
+         <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+            <span class="caret"></span>
+         </button>
+         <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+         </ul>
+      </div>
+   </div>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;form&gt;
+     &lt;div class="input-prepend"&gt;
+       &lt;div class="btn-group"&gt;...&lt;/div&gt;
+       &lt;input type="text"&gt;
+     &lt;/div&gt;
+        &lt;div class="input-append"&gt;
+          &lt;input type="text"&gt;
+          &lt;div class="btn-group"&gt;...&lt;/div&gt;
+        &lt;/div&gt;
+   &lt;/form&gt;
+   </pre>
+
+<h4>Search form</h4>
+<form class="bs-docs-example form-search">
+   <div class="input-append">
+      <input type="text" class="span2 search-query">
+      <button type="submit" class="btn"><i class="icon-search"></i></button>
+   </div>
+   <!--<div class="input-prepend">-->
+   <!--<button type="submit" class="btn"><i class="icon-search"></i></button>-->
+   <!--<input type="text" class="span2 search-query">-->
+   <!--</div>-->
+</form>
+   <pre class="prettyprint linenums">
+   &lt;form class="form-search"&gt;
+      &lt;div class="input-append"&gt;
+      &lt;input type="text" class="span2 search-query"&gt;
+      &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+      &lt;/div&gt;
+   &lt;/form&gt;
+   </pre>
+
+<h3 id="forms-control-sizes">Control sizing</h3>
+<p>Use relative sizing classes like <code>.input-large</code> or match your inputs to the grid column sizes using <code>.span*</code> classes.</p>
+
+<h4>Block level inputs</h4>
+<p>Make any <code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code> element behave like a block level element.</p>
+<form class="bs-docs-example" style="padding-bottom: 15px;">
+   <div class="controls">
+      <input class="input-block-level" type="text" placeholder=".input-block-level">
+   </div>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;input class="input-block-level" type="text" placeholder=".input-block-level"&gt;
+   </pre>
+
+<h4>Relative sizing</h4>
+<form class="bs-docs-example" style="padding-bottom: 15px;">
+   <div class="controls docs-input-sizes">
+      <input class="input-mini" type="text" placeholder=".input-mini">
+      <input class="input-small" type="text" placeholder=".input-small">
+      <input class="input-medium" type="text" placeholder=".input-medium">
+      <input class="input-large" type="text" placeholder=".input-large">
+      <input class="input-xlarge" type="text" placeholder=".input-xlarge">
+      <input class="input-xxlarge" type="text" placeholder=".input-xxlarge">
+   </div>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;input class="input-mini" type="text" placeholder=".input-mini"&gt;
+   &lt;input class="input-small" type="text" placeholder=".input-small"&gt;
+   &lt;input class="input-medium" type="text" placeholder=".input-medium"&gt;
+   &lt;input class="input-large" type="text" placeholder=".input-large"&gt;
+   &lt;input class="input-xlarge" type="text" placeholder=".input-xlarge"&gt;
+   &lt;input class="input-xxlarge" type="text" placeholder=".input-xxlarge"&gt;
+   </pre>
+<p>
+   <span class="label label-info">Heads up!</span> In future versions, we'll be altering the use of these relative input classes to match our button sizes. For example, <code>.input-large</code> will increase the padding and font-size of an input.
+</p>
+
+<h4>Grid sizing</h4>
+<p>Use <code>.span1</code> to <code>.span12</code> for inputs that match the same sizes of the grid columns.</p>
+<form class="bs-docs-example" style="padding-bottom: 15px;">
+   <div class="controls docs-input-sizes">
+      <input class="span1" type="text" placeholder=".span1">
+      <input class="span2" type="text" placeholder=".span2">
+      <input class="span3" type="text" placeholder=".span3">
+      <select class="span1">
+         <option>1</option>
+         <option>2</option>
+         <option>3</option>
+         <option>4</option>
+         <option>5</option>
+      </select>
+      <select class="span2">
+         <option>1</option>
+         <option>2</option>
+         <option>3</option>
+         <option>4</option>
+         <option>5</option>
+      </select>
+      <select class="span3">
+         <option>1</option>
+         <option>2</option>
+         <option>3</option>
+         <option>4</option>
+         <option>5</option>
+      </select>
+   </div>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;input class="span1" type="text" placeholder=".span1"&gt;
+   &lt;input class="span2" type="text" placeholder=".span2"&gt;
+   &lt;input class="span3" type="text" placeholder=".span3"&gt;
+   &lt;select class="span1"&gt;
+        ...
+   &lt;/select&gt;
+   &lt;select class="span2"&gt;
+        ...
+   &lt;/select&gt;
+   &lt;select class="span3"&gt;
+        ...
+   &lt;/select&gt;
+   </pre>
+
+<p>For multiple grid inputs per line, <strong>use the <code>.controls-row</code> modifier class for proper spacing</strong>. It floats the inputs to collapse white-space, sets the proper margins, and clears the float.</p>
+<form class="bs-docs-example" style="padding-bottom: 15px;">
+   <div class="controls">
+      <input class="span5" type="text" placeholder=".span5">
+   </div>
+   <div class="controls controls-row">
+      <input class="span4" type="text" placeholder=".span4">
+      <input class="span1" type="text" placeholder=".span1">
+   </div>
+   <div class="controls controls-row">
+      <input class="span3" type="text" placeholder=".span3">
+      <input class="span2" type="text" placeholder=".span2">
+   </div>
+   <div class="controls controls-row">
+      <input class="span2" type="text" placeholder=".span2">
+      <input class="span3" type="text" placeholder=".span3">
+   </div>
+   <div class="controls controls-row">
+      <input class="span1" type="text" placeholder=".span1">
+      <input class="span4" type="text" placeholder=".span4">
+   </div>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;div class="controls"&gt;
+        &lt;input class="span5" type="text" placeholder=".span5"&gt;
+   &lt;/div&gt;
+   &lt;div class="controls controls-row"&gt;
+        &lt;input class="span4" type="text" placeholder=".span4"&gt;
+        &lt;input class="span1" type="text" placeholder=".span1"&gt;
+   &lt;/div&gt;
+   ...
+   </pre>
+
+<h3>Uneditable inputs</h3>
+<p>Present data in a form that's not editable without using actual form markup.</p>
+<form class="bs-docs-example">
+   <span class="input-xlarge uneditable-input">Some value here</span>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;span class="input-xlarge uneditable-input"&gt;Some value here&lt;/span&gt;
+   </pre>
+
+<h3 id="forms-actions">Form actions</h3>
+<p>End a form with a group of actions (buttons). When placed within a <code>.form-actions</code>, the buttons will automatically indent to line up with the form controls.</p>
+<form class="bs-docs-example">
+   <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Save changes</button>
+      <button type="button" class="btn">Cancel</button>
+   </div>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;div class="form-actions"&gt;
+         &lt;button type="submit" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+         &lt;button type="button" class="btn"&gt;Cancel&lt;/button&gt;
+   &lt;/div&gt;
+   </pre>
+
+<h3 id="forms-help-text">Help text</h3>
+<p>Inline and block level support for help text that appears around form controls.</p>
+<h4>Inline help</h4>
+<form class="bs-docs-example form-inline">
+   <input type="text"> <span class="help-inline">Inline help text</span>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;input type="text"&gt;&lt;span class="help-inline"&gt;Inline help text&lt;/span&gt;
+   </pre>
+
+<h4>Block help</h4>
+<form class="bs-docs-example form-inline">
+   <input type="text">
+   <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;input type="text"&gt;&lt;span class="help-block"&gt;A longer block of help text that breaks onto a new line and may extend beyond one line.&lt;/span&gt;
+   </pre>
+
+
+<hr class="bs-docs-separator">
+
+
+<h2 id="forms-control-states">Form control states</h2>
+<p>Provide feedback to users or visitors with basic feedback states on form controls and labels.</p>
+
+<h3>Input focus</h3>
+<p>We remove the default <code>outline</code> styles on some form controls and apply a <code>box-shadow</code> in its place for <code>:focus</code>.</p>
+<form class="bs-docs-example form-inline">
+   <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused...">
+</form>
+   <pre class="prettyprint linenums">
+   &lt;input class="input-xlarge" id="focusedInput" type="text" value="This is focused..."&gt;
+   </pre>
+
+<h3>Invalid inputs</h3>
+<p>Style inputs via default browser functionality with <code>:invalid</code>. Specify a <code>type</code>, add the <code>required</code> attribute if the field is not optional, and (if applicable) specify a <code>pattern</code>.</p>
+<p>This is not available in versions of Internet Explorer 7-9 due to lack of support for CSS pseudo selectors.</p>
+<form class="bs-docs-example form-inline">
+   <input class="span3" type="email" placeholder="test@example.com" required>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;input class="span3" type="email" required&gt;
+   </pre>
+
+<h3>Disabled inputs</h3>
+<p>Add the <code>disabled</code> attribute on an input to prevent user input and trigger a slightly different look.</p>
+<form class="bs-docs-example form-inline">
+   <input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here..." disabled&gt;
+   </pre>
+
+<h3>Validation states</h3>
+<p>Bootstrap includes validation styles for error, warning, info, and success messages. To use, add the appropriate class to the surrounding <code>.control-group</code>.</p>
+
+<form class="bs-docs-example form-horizontal">
+   <div class="control-group warning">
+      <label class="control-label" for="inputWarning">Input with warning</label>
+      <div class="controls">
+         <input type="text" id="inputWarning">
+         <span class="help-inline">Something may have gone wrong</span>
+      </div>
+   </div>
+   <div class="control-group error">
+      <label class="control-label" for="inputError">Input with error</label>
+      <div class="controls">
+         <input type="text" id="inputError">
+         <span class="help-inline">Please correct the error</span>
+      </div>
+   </div>
+   <div class="control-group info">
+      <label class="control-label" for="inputInfo">Input with info</label>
+      <div class="controls">
+         <input type="text" id="inputInfo">
+         <span class="help-inline">Username is taken</span>
+      </div>
+   </div>
+   <div class="control-group success">
+      <label class="control-label" for="inputSuccess">Input with success</label>
+      <div class="controls">
+         <input type="text" id="inputSuccess">
+         <span class="help-inline">Woohoo!</span>
+      </div>
+   </div>
+</form>
+   <pre class="prettyprint linenums">
+   &lt;div class="control-group warning"&gt;
+         &lt;label class="control-label" for="inputWarning"&gt;Input with warning&lt;/label&gt;
+         &lt;div class="controls"&gt;
+         &lt;input type="text" id="inputWarning"&gt;
+         &lt;span class="help-inline"&gt;Something may have gone wrong&lt;/span&gt;
+         &lt;/div&gt;
+   &lt;/div&gt;
+
+   &lt;div class="control-group error"&gt;
+         &lt;label class="control-label" for="inputError"&gt;Input with error&lt;/label&gt;
+         &lt;div class="controls"&gt;
+         &lt;input type="text" id="inputError"&gt;
+         &lt;span class="help-inline"&gt;Please correct the error&lt;/span&gt;
+         &lt;/div&gt;
+   &lt;/div&gt;
+
+   &lt;div class="control-group info"&gt;
+     &lt;label class="control-label" for="inputInfo"&gt;Input with info&lt;/label&gt;
+     &lt;div class="controls"&gt;
+       &lt;input type="text" id="inputInfo"&gt;
+       &lt;span class="help-inline"&gt;Username is already taken&lt;/span&gt;
+         &lt;/div&gt;
+   &lt;/div&gt;
+
+   &lt;div class="control-group success"&gt;
+         &lt;label class="control-label" for="inputSuccess"&gt;Input with success&lt;/label&gt;
+         &lt;div class="controls"&gt;
+         &lt;input type="text" id="inputSuccess"&gt;
+         &lt;span class="help-inline"&gt;Woohoo!&lt;/span&gt;
+         &lt;/div&gt;
+   &lt;/div&gt;
+   </pre>
+
+</div>
+
+
+
+<!-- Buttons
+================================================== -->
+<div class="bs-docs-section">
+   <div class="page-header">
+      <h1 id="buttons">Buttons</h1>
+   </div>
+
+   <h2 id="buttons-options">Default buttons</h2>
+   <p>Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.</p>
+   <table class="table table-bordered table-striped">
+      <thead>
+      <tr>
+         <th>Button</th>
+         <th>class=""</th>
+         <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+         <td><button type="button" class="btn">Default</button></td>
+         <td><code>btn</code></td>
+         <td>Standard gray button with gradient</td>
+      </tr>
+      <tr>
+         <td><button type="button" class="btn btn-primary">Primary</button></td>
+         <td><code>btn btn-primary</code></td>
+         <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+      </tr>
+      <tr>
+         <td><button type="button" class="btn btn-info">Info</button></td>
+         <td><code>btn btn-info</code></td>
+         <td>Used as an alternative to the default styles</td>
+      </tr>
+      <tr>
+         <td><button type="button" class="btn btn-success">Success</button></td>
+         <td><code>btn btn-success</code></td>
+         <td>Indicates a successful or positive action</td>
+      </tr>
+      <tr>
+         <td><button type="button" class="btn btn-warning">Warning</button></td>
+         <td><code>btn btn-warning</code></td>
+         <td>Indicates caution should be taken with this action</td>
+      </tr>
+      <tr>
+         <td><button type="button" class="btn btn-danger">Danger</button></td>
+         <td><code>btn btn-danger</code></td>
+         <td>Indicates a dangerous or potentially negative action</td>
+      </tr>
+      <tr>
+         <td><button type="button" class="btn btn-inverse">Inverse</button></td>
+         <td><code>btn btn-inverse</code></td>
+         <td>Alternate dark gray button, not tied to a semantic action or use</td>
+      </tr>
+      <tr>
+         <td><button type="button" class="btn btn-link">Link</button></td>
+         <td><code>btn btn-link</code></td>
+         <td>Deemphasize a button by making it look like a link while maintaining button behavior</td>
+      </tr>
+      </tbody>
+   </table>
+
+   <h4>Cross browser compatibility</h4>
+   <p>IE9 doesn't crop background gradients on rounded corners, so we remove it. Related, IE9 jankifies disabled <code>button</code> elements, rendering text gray with a nasty text-shadow that we cannot fix.</p>
+
+
+   <h2 id="buttons-sizes">Button sizes</h2>
+   <p>Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for additional sizes.</p>
+   <div class="bs-docs-example">
+      <p>
+         <button type="button" class="btn btn-large btn-primary">Large button</button>
+         <button type="button" class="btn btn-large">Large button</button>
+      </p>
+      <p>
+         <button type="button" class="btn btn-primary">Default button</button>
+         <button type="button" class="btn">Default button</button>
+      </p>
+      <p>
+         <button type="button" class="btn btn-small btn-primary">Small button</button>
+         <button type="button" class="btn btn-small">Small button</button>
+      </p>
+      <p>
+         <button type="button" class="btn btn-mini btn-primary">Mini button</button>
+         <button type="button" class="btn btn-mini">Mini button</button>
+      </p>
+   </div>
+   <pre class="prettyprint linenums">
+   &lt;p&gt;
+         &lt;button class="btn btn-large btn-primary" type="button"&gt;Large button&lt;/button&gt;
+         &lt;button class="btn btn-large" type="button"&gt;Large button&lt;/button&gt;
+   &lt;/p&gt;
+   &lt;p&gt;
+         &lt;button class="btn btn-primary" type="button"&gt;Default button&lt;/button&gt;
+         &lt;button class="btn" type="button"&gt;Default button&lt;/button&gt;
+   &lt;/p&gt;
+   &lt;p&gt;
+         &lt;button class="btn btn-small btn-primary" type="button"&gt;Small button&lt;/button&gt;
+         &lt;button class="btn btn-small" type="button"&gt;Small button&lt;/button&gt;
+   &lt;/p&gt;
+   &lt;p&gt;
+         &lt;button class="btn btn-mini btn-primary" type="button"&gt;Mini button&lt;/button&gt;
+         &lt;button class="btn btn-mini" type="button"&gt;Mini button&lt;/button&gt;
+   &lt;/p&gt;
+   </pre>
+   <p>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</p>
+   <div class="bs-docs-example">
+      <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
+         <button type="button" class="btn btn-large btn-block btn-primary">Block level button</button>
+         <button type="button" class="btn btn-large btn-block">Block level button</button>
+      </div>
+   </div>
+   <pre class="prettyprint linenums">
+   &lt;button class="btn btn-large btn-block btn-primary" type="button"&gt;Block level button&lt;/button&gt;
+   &lt;button class="btn btn-large btn-block" type="button"&gt;Block level button&lt;/button&gt;
+   </pre>
+
+
+   <h2 id="buttons-disabled">Disabled state</h2>
+   <p>Make buttons look unclickable by fading them back 50%.</p>
+
+   <h3>Anchor element</h3>
+   <p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p>
+   <p class="bs-docs-example">
+      <a href="#" class="btn btn-large btn-primary disabled">Primary link</a>
+      <a href="#" class="btn btn-large disabled">Link</a>
+   </p>
+   <pre class="prettyprint linenums">
+   &lt;a href="#" class="btn btn-large btn-primary disabled"&gt;Primary link&lt;/a&gt;
+   &lt;a href="#" class="btn btn-large disabled"&gt;Link&lt;/a&gt;
+   </pre>
+   <p>
+      <span class="label label-info">Heads up!</span>
+      We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required. Also, this class is only for aesthetic; you must use custom JavaScript to disable links here.
+   </p>
+
+   <h3>Button element</h3>
+   <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
+   <p class="bs-docs-example">
+      <button type="button" class="btn btn-large btn-primary disabled" disabled="disabled">Primary button</button>
+      <button type="button" class="btn btn-large" disabled>Button</button>
+   </p>
+   <pre class="prettyprint linenums">
+   &lt;button type="button" class="btn btn-large btn-primary disabled" disabled="disabled"&gt;Primary button&lt;/button&gt;
+   &lt;button type="button" class="btn btn-large" disabled&gt;Button&lt;/button&gt;
+   </pre>
+
+
+   <h2 id="buttons-tags">One class, multiple tags</h2>
+   <p>Use the <code>.btn</code> class on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+   <form class="bs-docs-example">
+      <a class="btn" href="">Link</a>
+      <button class="btn" type="submit">Button</button>
+      <input class="btn" type="button" value="Input">
+      <input class="btn" type="submit" value="Submit">
+   </form>
+   <pre class="prettyprint linenums">
+   &lt;a class="btn" href=""&gt;Link&lt;/a&gt;
+   &lt;button class="btn" type="submit"&gt;Button&lt;/button&gt;
+   &lt;input class="btn" type="button" value="Input"&gt;
+   &lt;input class="btn" type="submit" value="Submit"&gt;
+   </pre>
+   <p>As a best practice, try to match the element for your context to ensure matching cross-browser rendering. If you have an <code>input</code>, use an <code>&lt;input type="submit"&gt;</code> for your button.</p>
+
+</div>
+
+
+
+<!-- Images
+================================================== -->
+<div id="images" class="bs-docs-section">
+   <div class="page-header">
+      <h1>Images</h1>
+   </div>
+
+   <p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p>
+   <div class="bs-docs-example bs-docs-example-images">
+      <img data-src="holder.js/140x140" class="img-rounded">
+      <img data-src="holder.js/140x140" class="img-circle">
+      <img data-src="holder.js/140x140" class="img-polaroid">
+   </div>
+   <pre class="prettyprint linenums">
+   &lt;img src="..." class="img-rounded"&gt;
+   &lt;img src="..." class="img-circle"&gt;
+   &lt;img src="..." class="img-polaroid"&gt;
+   </pre>
+   <p><span class="label label-info">Heads up!</span> <code>.img-rounded</code> and <code>.img-circle</code> do not work in IE7-8 due to lack of <code>border-radius</code> support.</p>
+
+
+</div>
+
+         </div>
+      </div>
+   </div>
+
+
+   <a class="bs-docs-top affix" href="#welcome">Back to top</a>
+
+   <footer class="bs-docs-footer">
+      <div class="container">
+         <p>Designed and built by <a target="_blank" href="https://twitter.com/aozoralabs">@aozoralabs</a>.</p>
+         <p>Code licensed under <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a> or <a target="_blank" href="http://www.gnu.org/licenses/gpl-2.0.html">GPL2</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+      </div>
+   </footer>
+
+   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script>window.jQuery || document.write("<script src='assets/js/jquery-1.8.3.min.js'>\x3C/script>")</script>
+
+   <!--[if IE 7]>
+   <script type="text/javascript" src="scripts/bootmetro-icons-ie7.js">
+   <![endif]-->
+
+   <script type="text/javascript" src="assets/js/google-code-prettify/prettify.js"></script>
+   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="assets/js/bootmetro-panorama.js"></script>
+   <script type="text/javascript" src="assets/js/bootmetro-pivot.js"></script>
+   <script type="text/javascript" src="assets/js/bootmetro-charms.js"></script>
+   <script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
+   <script type="text/javascript" src="assets/js/holder.js"></script>
+   <script type="text/javascript" src="assets/js/Chart.min.js"></script>
+
+   <script type="text/javascript" src="assets/js/docs.js"></script>
+</body>
+</html>

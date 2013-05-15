@@ -1,0 +1,192 @@
+
+<div class="bs-docs-section-header" id="welcome">
+   <h1>BootMetro Documentation</h1>
+   <p class="lead">This is the right place where to find all the stuff needed to build a Metro web application.</p>
+</div>
+
+<div class="bs-docs-section">
+   <div class="page-header">
+      <h1 id="getting-started">Getting started</h1>
+   </div>
+
+   <p class="lead">
+      There are a few easy ways to quickly get started with BootMetro, please read through.
+   </p>
+
+   <div class="row-fluid">
+      <div class="span6">
+         <h3>
+            Compiled CSS and JS
+         </h3>
+         <p>
+            <strong>The fastest way to get started:</strong> get the compiled and minified versions of our CSS, JavaScript, and fonts. No documentation or original source files are included.
+         </p>
+         <p>
+            <a href="#" class="btn btn-large btn-primary btn-block">
+               Download BootMetro
+               <i class="icon-download-2"></i>
+            </a>
+         </p>
+      </div>
+      <div class="span6">
+         <h3>
+            Latest source code
+         </h3>
+         <p>
+            Get the original files for all CSS and JavaScript, along with a local copy of the docs by downloading the latest version directly from GitHub.
+         </p>
+         <p>
+            <a href="#" class="btn btn-large btn-block">
+               Download BootMetro source
+               <i class="icon-download-2"></i>
+            </a>
+         </p>
+      </div>
+   </div>
+
+   <div class="row-fluid">
+
+      <div class="span6">
+         <h3>
+            Clone or fork via GitHub
+         </h3>
+         <p>
+            Clone the entire project or fork your own version of Bootstrap to make it your own by visiting us on GitHub.
+         </p>
+         <p>
+            <a href="https://github.com/aozora/bootmetro" class="btn btn-info btn-large btn-block">
+               GitHub repository
+               <i class="icon-github"></i>
+            </a>
+         </p>
+      </div>
+      <div class="span6">
+         <h3>
+            View the demo pages
+         </h3>
+         <p>
+            View pages where all different kind of Metro stuff is used, and that you can reuse yourself.
+         </p>
+         <p>
+            <a href="./demo-hub.html" class="btn btn-success btn-large btn-block">
+               Demo Pages
+               <i class="icon-eye-3"></i>
+            </a>
+         </p>
+      </div>
+   </div>
+
+</div>
+
+
+<!-- Browsers
+================================================== -->
+<div class="bs-docs-section">
+   <div class="page-header">
+      <h1 id="browsers">Browsers support</h1>
+   </div>
+
+   <p class="lead">
+      BootMetro support the following browsers:
+      <ul id="browsers" class="inline">
+         <li>
+            <i class="icon-chrome"></i>
+         </li>
+         <li>
+            <i class="icon-firefox"></i>
+         </li>
+         <li>
+            <i class="icon-opera"></i>
+         </li>
+         <li>
+            <i class="icon-safari"></i>
+         </li>
+         <li>
+            <i class="icon-IE"></i> (latest versions)
+         </li>
+      </ul>
+   </p>
+
+</div>
+
+
+
+
+<!-- File structure
+================================================== -->
+<div class="bs-docs-section">
+   <div class="page-header">
+      <h1 id="file-structure">File structure</h1>
+   </div>
+   <p class="lead">Within the download you'll find the following file structure and contents, logically grouping common assets and providing both compiled and minified variations.</p>
+   <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Bootstrap. You'll see something like this:</p>
+<pre class="prettyprint">
+  bootmetro/
+  └── assets/
+        │
+        ├── css/
+        │   ├── bootmetro.css
+        │   ├── bootmetro-icons.css
+        │   ├── bootmetro-responsive.css
+        │   ├── bootmetro-ui-light.css
+        │   ├── bootmetro.min.css
+        │   ├── bootmetro-icons.min.css
+        │   ├── bootmetro-responsive.min.css
+        │   └── bootmetro-ui-light.min.css
+        │
+        ├── font/
+        │   ├── IcoMoon.eot
+        │   ├── IcoMoon.svg
+        │   ├── IcoMoon.ttf
+        │   ├── IcoMoon.woff
+        │   ├── LICENSE.txt
+        │   ├── opensans-bold-webfont.eot
+        │   ├── opensans-bold-webfont.svg
+        │   ├── opensans-bold-webfont.ttf
+        │   ├── opensans-bold-webfont.woff
+        │   ├── opensans-light-webfont.eot
+        │   ├── opensans-light-webfont.svg
+        │   ├── opensans-light-webfont.ttf
+        │   ├── opensans-light-webfont.woff
+        │   ├── opensans-regular-webfont.eot
+        │   ├── opensans-regular-webfont.svg
+        │   ├── opensans-regular-webfont.ttf
+        │   ├── opensans-regular-webfont.woff
+        │   ├── opensans-semibold-webfont.eot
+        │   ├── opensans-semibold-webfont.svg
+        │   ├── opensans-semibold-webfont.ttf
+        │   └── opensans-semibold-webfont.woff
+        │
+        └── js/
+             ├── bootstrap.js
+             ├── bootstrap.min.js
+             ├── bootmetro-panorama.js
+             ├── bootmetro-pivot.js
+             └── bootmetro-icons-ie7.js
+</pre>
+   <p>This is the most basic form of BootMetro: compiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (<code>bootmetro-*.*</code>), as well as compiled and minified CSS and JS (<code>bootmetro.min.*</code>). The image files are compressed using <a href="http://imageoptim.com/">ImageOptim</a>, a Mac app for compressing PNGs.</p>
+   <p>Please note that all JavaScript plugins require jQuery to be included.</p>
+</div>
+
+
+<!-- Build from source
+================================================== -->
+<div class="bs-docs-section">
+   <div class="page-header">
+      <h1 id="howtobuild">Building from source</h1>
+   </div>
+
+   <h2 id="prepare-env">Prepare your environment</h2>
+   <p>
+      <ul>
+         <li>Install <a href="http://nodejs.org/">Node.js</a> and NPM (should come with)</li>
+         <li>Install global dev dependencies: <code>npm install -g grunt-cli karma</code></li>
+         <li>Instal local dev dependencies: <code>npm install</code> while current directory is bootmetro repo</li>
+      </ul>
+   </p>
+
+   <h2 id="build">Build</h2>
+   <p>To build the whole project run <code>grunt</code></p>
+</div>
+
+

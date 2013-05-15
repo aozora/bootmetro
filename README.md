@@ -6,9 +6,9 @@ It is built on top of Twitter Bootstrap and HTML5 Boilerplate.
 
 
 ## Features
-The framework permit to create web applications with the look&feel of the not-yet-released Windows 8 MetroUI style.
+The framework permit to create web applications with the look&feel of Windows 8 "Windows Store App" (ex "MetroUI" style).
 Maybe not ideal for internet web sites, the MetroUI style can be adopted for modern intranet web sites.
-I've choose to use as base the awesome Twitter Bootstrap framework, applying a set of customizations in pure css (but planning to do it in LESS for future version).
+I've choose to use as base the awesome Twitter Bootstrap framework, applying a set of customizations in pure css.
 
 
 The framework integrate and extend the work first done by other great people:
@@ -16,7 +16,15 @@ The framework integrate and extend the work first done by other great people:
    - [Twitter Bootstrap](http://twitter.github.com/bootstrap)
    - [IcoMoon](http://keyamoon.com/icomoon/#toHome)
 
-Early versions of BootMetro was inspired by the work of Sergey Pimenov for his [Metro UI CSS](http://metroui.org.ua/)
+## Build from sources
+
+### Prepare your environment
+* Install Node.js and NPM (should come with)
+* Install global dev dependencies: npm install -g grunt-cli karma
+* Instal local dev dependencies: npm install while current directory is bootmetro repo
+
+### Build
+To build the whole project run 'grunt' in the project directory.
 
 ## Versioning
 
@@ -56,6 +64,8 @@ Early versions of BootMetro was inspired by the work of Sergey Pimenov for his [
 * demo image thumbs selectables
 * demo charms with docs
 
+## License
+BootMetro is dual licensed, GPL-2 and Apache-2; see the LICENSE file.
 
 ## Links
 

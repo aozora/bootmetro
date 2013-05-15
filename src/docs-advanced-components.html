@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <!-- Mobile viewport optimized: h5bp.com/viewport -->
+   <meta name="viewport" content="width=device-width">
+
+   <title>BootMetro Documentation - Docs</title>
+
+   <meta name="robots" content="noindex, nofollow">
+   <meta name="description" content="BootMetro : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
+   <meta name="keywords" content="bootmetro, modern ui, modern-ui, metro, metroui, metro-ui, metro ui, windows 8, metro style, bootstrap, framework, web framework, css, html" />
+   <meta name="author" content="AozoraLabs by Marcello Palmitessa"/>
+   
+   <!-- remove or comment this line if you want to use the local fonts -->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro-responsive.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro-icons.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootmetro-ui-light.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/datepicker.css">
+
+   <!--  these two css are to use only for documentation -->
+   <link rel="stylesheet" type="text/css" href="assets/css/docs.css">
+   <link rel="stylesheet" type="text/css" href="assets/js/google-code-prettify/prettify.css" >
+
+   <!-- Le fav and touch icons -->
+   <link rel="shortcut icon" href="assets/ico/favicon.ico">
+   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  
+   <!-- All JavaScript at the bottom, except for Modernizr and Respond.
+      Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+      For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+   <script src="assets/js/modernizr-2.6.2.min.js"></script>
+
+   <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3182578-6']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+   </script>
+</head>
+
+<body class="bs-docs-docs" data-spy="scroll" data-target=".bs-docs-sidebar">
+   <!--[if lt IE 7]>
+   <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+   <![endif]-->
+
+   <!-- Navbar
+     ================================================== -->
+   <div class="navbar metro-navbar navbar-fixed-top">
+      <div class="navbar-inner">
+         <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+            <h1 class="brand"><a href="./index.html">BootMetro</a> <small>documentation</small></h1>
+            <div class="nav-collapse collapse">
+               <ul class="nav">
+                  <li class="">
+                     <a href="./docs-index.html">Home</a>
+                  </li>
+                  <li class="">
+                     <a href="./docs-css.html">Basic CSS</a>
+                  </li>
+                  <li class="">
+                     <a href="./docs-icons.html">Icons</a>
+                  </li>
+                  <li class="">
+                     <a href="./docs-standard-components.html">Standard Components</a>
+                  </li>
+                  <li class="active">
+                     <a href="./docs-advanced-components.html">Advanced Components</a>
+                  </li>
+                  <li class="">
+                     <a href="./docs-javascript.html">Javascript</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div id="alerts-container"></div>
+
+   <div id="doc-container" class="container">
+      <div class="row">
+         <div class="bs-docs-sidebar span3">
+<ul class="nav metro-nav-list bs-docs-sidenav">
+<!-- Metro Components -->
+   <li>
+      <a href="#metro-components" class="nav-header">Advanced Components</a>
+   </li>
+   <li>
+      <a href="#page-components">Page components</a>
+      <ul class="nav">
+         <li><a href="#type-components-page-header">Page header</a></li>
+         <li><a href="#type-components-metro-page-header1">Page header with back button</a></li>
+         <li><a href="#type-components-metro-page-header2">Page header subtitle &amp; back button</a></li>
+         <li><a href="#type-components-metro-page-header3">Page header with back button &amp; nav menu</a></li>
+         <li><a href="#type-components-hero">Hero</a></li>
+      </ul>
+   </li>
+
+   <li>
+      <a href="#metro-appbar">Application Bar</a>
+      <ul class="nav">
+         <li><a href="#metro-appbar-default">Default style</a></li>
+         <li><a href="#metro-appbar-dark">Dark style</a></li>
+      </ul>
+   </li>
+   <li><a href="#metro-pivot">Pivot</a></li>
+   <li>
+      <a href="#metro-listview">ListView</a>
+      <ul class="nav">
+         <li><a href="#metro-listview-grid">Grid layout</a></li>
+         <li><a href="#metro-listview-list">List layout</a></li>
+         <li><a href="#metro-listview-alt">Alternatives</a></li>
+      </ul>
+   </li>
+   <li>
+      <a href="#metro-tiles">Tiles</a>
+      <ul class="nav">
+         <li>
+            <a href="#metro-tiles-square">Square templates</a>
+            <ul class="nav">
+               <li><a href="#metro-tiles-square-textonly">Text Only Tiles</a></li>
+               <li><a href="#metro-tiles-square-imageonly">Image Only Tiles</a></li>
+               <li><a href="#metro-tiles-square-squarepeek">Square peek templates</a></li>
+            </ul>
+         </li>
+         <li>
+            <a href="#metro-tiles-wide">Wide templates</a>
+            <ul class="nav">
+               <li><a href="#metro-tiles-wide-textonly">Text Only Tiles</a></li>
+               <li><a href="#metro-tiles-wide-imageonly">Image Only Tiles</a></li>
+               <li><a href="#metro-tiles-wide-imagetext">Image &amp; text templates</a></li>
+            </ul>
+         </li>
+         <li>
+            <a href="#metro-tiles-widepeek">Widepeek templates</a>
+            <!--<ul class="nav">-->
+               <!--<li><a href="#metro-tiles-wide-textonly">Text Only Tiles</a></li>-->
+               <!--<li><a href="#metro-tiles-wide-imageonly">Image Only Tiles</a></li>-->
+               <!--<li><a href="#metro-tiles-wide-imagetext">Image &amp; text templates</a></li>-->
+            <!--</ul>-->
+         </li>
+         <li>
+            <a href="#metro-tiles-select">Tiles selection</a>
+         </li>
+         <li>
+            <a href="#metro-tiles-colors">Color alternatives</a>
+         </li>
+      </ul>
+   </li>
+
+</ul>
+         </div>
+
+         <div class="bs-docs-container span9">
+
+<div id="metro-components" class="bs-docs-section-header">
+   <h1>Advanced Components</h1>
+   <p class="lead">Reusable components like the ones used by Windows 8 and Windows Phone 8 or later.</p>
+</div>
+
+
+
+<!-- Page Headers
+================================================== -->
+<div class="bs-docs-section">
+   <div class="page-components">
+      <h1 id="page-headers">Page components <small>basic blocks for standard metro pages</small></h1>
+   </div>
+
+   <h2 id="type-components-page-header">Page header</h2>
+   <p>A simple shell for an <code>h1</code> to appropriately space out and segment sections of content on a page. It can utilize the <code>h1</code>'s default <code>small</code>, element as well most other components (with additional styles).</p>
+   <div class="bs-docs-example">
+      <div class="page-header">
+         <h1>Example page header <small>Subtext for header</small></h1>
+      </div>
+   </div>
+<pre class="prettyprint linenums">
+&lt;div class="page-header"&gt;
+  &lt;h1&gt;Example page header &lt;small&gt;Subtext for header&lt;/small&gt;&lt;/h1&gt;
+&lt;/div&gt;
+</pre>
+
+
+
+   <h2 id="type-components-metro-page-header1">Page header back button</h2>
+   <p>A page header with a left arrow button that should be used to navigate back. It can utilize the <code>h1</code>'s default <code>small</code>, element as well most other components (with additional styles).</p>
+   <div class="bs-docs-example bs-docs-example-metro-page-header">
+      <div id="nav-bar">
+         <div class="row">
+            <div class="span9">
+               <div id="header-container">
+                  <a id="backbutton" class="win-backbutton" href="#"></a>
+                  <div class="dropdown">
+                     <h1 class="header-dropdown accent-color">Title</h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+<pre class="prettyprint linenums">
+&lt;div id="nav-bar"&gt;
+   &lt;div class="row"&gt;
+      &lt;div class="span9"&gt;
+         &lt;div id="header-container"&gt;
+            &lt;a id="backbutton" class="win-backbutton" href="#"&gt;&lt;/a&gt;
+            &lt;div class="dropdown"&gt;
+               &lt;h1 class="header-dropdown accent-color"&gt;Title&lt;/h1&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+
+   <h2 id="type-components-metro-page-header2">Page header with sub-title and back button</h2>
+   <p>A page header with the page title and the application sub-title on top, and with a left arrow button that should be used to navigate back. It can utilize the <code>h1</code>'s default <code>small</code>, element as well most other components (with additional styles).</p>
+   <div class="bs-docs-example bs-docs-example-metro-page-header">
+      <div id="nav-bar">
+         <div class="row">
+            <div class="span9">
+               <div id="header-container">
+                  <a id="backbutton" class="win-backbutton" href="#"></a>
+                  <h5>Application name</h5>
+                  <div class="dropdown">
+                     <a class="header-dropdown accent-color" href="#">
+                        Start
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+<pre class="prettyprint linenums">
+&lt;div id="nav-bar"&gt;
+   &lt;div class="row"&gt;
+      &lt;div class="span9"&gt;
+         &lt;div id="header-container"&gt;
+            &lt;a id="backbutton" class="win-backbutton" href="#"&gt;&lt;/a&gt;
+            &lt;h5&gt;Application name&lt;/h5&gt;
+            &lt;div class="dropdown"&gt;
+               &lt;a class="header-dropdown accent-color" href="#"&gt;
+                  Page Title
+               &lt;/a&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+   <h2 id="type-components-metro-page-header3">Page header with back button and nav dropdown menu</h2>
+   <p>A page header with the page title, the application sub-title on top, the left arrow button that should be used to navigate back, and the dropdown menu for navigation on other pages.</p>
+   <div class="bs-docs-example bs-docs-example-metro-page-header">
+      <div id="nav-bar">
+         <div class="row">
+            <div class="span9">
+               <div id="header-container">
+                  <a id="backbutton" class="win-backbutton" href="#"></a>
+                  <h5>Application name</h5>
+                  <div class="dropdown">
+                     <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                        Title
+                        <b class="caret"></b>
+                     </a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Go to another page</a></li>
+                        <li><a href="#">Go to another page</a></li>
+                        <li><a href="#">Go to another page</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Home</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+<pre class="prettyprint linenums">
+&lt;div id="nav-bar"&gt;
+   &lt;div class="row"&gt;
+      &lt;div class="span9"&gt;
+         &lt;div id="header-container"&gt;
+            &lt;a id="backbutton" class="win-backbutton" href="#"&gt;&lt;/a&gt;
+            &lt;h5&gt;Application name&lt;/h5&gt;
+            &lt;div class="dropdown"&gt;
+               &lt;a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#"&gt;
+                  Title
+                  &lt;b class="caret"&gt;&lt;/b&gt;
+               &lt;/a&gt;
+               &lt;ul class="dropdown-menu"&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Go to another page&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Go to another page&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Go to another page&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class="divider"&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+               &lt;/ul&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+   <h2 id="type-components-hero">Hero unit</h2>
+   <p>A lightweight, flexible component to showcase key content on your site. It works well on marketing and content-heavy sites.</p>
+   <div class="bs-docs-example">
+      <div class="hero-unit">
+         <h1>Hello, world!</h1>
+         <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+         <p><a class="btn btn-primary btn-large">Learn more</a></p>
+      </div>
+   </div>
+<pre class="prettyprint linenums">
+&lt;div class="hero-unit"&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Tagline&lt;/p&gt;
+  &lt;p&gt;
+    &lt;a class="btn btn-primary btn-large"&gt;
+      Learn more
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+
+</div>
+
+
+<!-- AppBar
+================================================== -->
+<div class="bs-docs-section">
+   <div class="page-components">
+      <h1 id="metro-appbar">Application Bar <small></small></h1>
+      <p>A bottom app bar that contains transient access to commands relevant to a particular view</p>
+   </div>
+
+   <h2 id="metro-appbar-default">Default style</h2>
+   <p>To place a separator line add <code>&lt;hr class="win-command" /&gt;</code> element between commands.</p>
+   <div class="bs-docs-example bs-docs-example-appbar">
+      <div class="win-commandlayout">
+            <a class="win-command" href="#">
+               <span class="win-commandicon win-commandring icon-home"></span>
+               <span class="win-label">Home</span>
+            </a>
+
+            <hr class="win-command" />
+
+            <a class="win-command" href="#">
+               <span class="win-commandicon win-commandring icon-plus-5"></span>
+               <span class="win-label">Add</span>
+            </a>
+
+            <a class="win-command" href="#">
+               <span class="win-commandicon win-commandring icon-disk"></span>
+               <span class="win-label">Save</span>
+            </a>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-reload"></span>
+               <span class="win-label">Reload</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-arrow-left-12"></span>
+               <span class="win-label">Previous</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-arrow-right-11"></span>
+               <span class="win-label">Next</span>
+            </button>
+
+            <hr class="win-command" />
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-cog-2"></span>
+               <span class="win-label">Settings</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-download"></span>
+               <span class="win-label">Download</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-upload-2"></span>
+               <span class="win-label">Upload</span>
+            </button>
+
+      </div>
+   </div>
+<pre class="prettyprint linenums">
+&lt;div class="win-commandlayout"&gt;
+      &lt;a class="win-command" href="#"&gt;
+         &lt;span class="win-commandicon win-commandring icon-home"&gt;&lt;/span&gt;
+         &lt;span class="win-label"&gt;Home&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;hr class="win-command" /&gt;
+      ...
+      &lt;button class="win-command"&gt;
+         &lt;span class="win-commandicon win-commandring icon-reload"&gt;&lt;/span&gt;
+         &lt;span class="win-label"&gt;Reload&lt;/span&gt;
+      &lt;/button&gt;
+      ...
+&lt;/div&gt;
+</pre>
+
+
+   <h2 id="metro-appbar-dark">Dark style</h2>
+   <p>To have the bar with a dark background add the <code>win-ui-dark</code>.</p>
+   <div class="bs-docs-example bs-docs-example-appbar">
+      <div class="win-commandlayout win-ui-dark">
+            <a class="win-command" href="#">
+               <span class="win-commandicon win-commandring icon-home"></span>
+               <span class="win-label">Home</span>
+            </a>
+
+            <hr class="win-command" />
+
+            <a class="win-command" href="#">
+               <span class="win-commandicon win-commandring icon-plus-5"></span>
+               <span class="win-label">Add</span>
+            </a>
+
+            <a class="win-command" href="#">
+               <span class="win-commandicon win-commandring icon-disk"></span>
+               <span class="win-label">Save</span>
+            </a>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-reload"></span>
+               <span class="win-label">Reload</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-arrow-left-12"></span>
+               <span class="win-label">Previous</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-arrow-right-11"></span>
+               <span class="win-label">Next</span>
+            </button>
+
+            <hr class="win-command" />
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-cog-2"></span>
+               <span class="win-label">Settings</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-download"></span>
+               <span class="win-label">Download</span>
+            </button>
+
+            <button class="win-command">
+               <span class="win-commandicon win-commandring icon-upload-2"></span>
+               <span class="win-label">Upload</span>
+            </button>
+
+      </div>
+   </div>
+<pre class="prettyprint linenums">
+&lt;div class="win-commandlayout win-ui-dark"&gt;
+      &lt;a class="win-command" href="#"&gt;
+         &lt;span class="win-commandicon win-commandring icon-home"&gt;&lt;/span&gt;
+         &lt;span class="win-label"&gt;Home&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;hr class="win-command" /&gt;
+      ...
+      &lt;button class="win-command"&gt;
+         &lt;span class="win-commandicon win-commandring icon-reload"&gt;&lt;/span&gt;
+         &lt;span class="win-label"&gt;Reload&lt;/span&gt;
+      &lt;/button&gt;
+      ...
+&lt;/div&gt;
+</pre>
+
+
+</div>
+
+
+
+<!-- Pivot
+================================================== -->
+<div class="bs-docs-section">
+   <div class="page-header">
+      <h1 id="metro-pivot">Pivot Control <small></small></h1>
+   </div>
+   <div class="bs-docs-example bs-docs-example-pivot">
+      <div id="pivot" class="pivot slide">
+         <div class="pivot-headers">
+            <a href="#pivot" data-pivot-index="0" class="active">Item 1</a>
+            <a href="#pivot" data-pivot-index="1">Item 2</a>
+            <a href="#pivot" data-pivot-index="2">Item 3</a>
+            <a href="#pivot" data-pivot-index="3">Item 4</a>
+         </div>
+         <div class="pivot-items">
+            <div id="pivot-item-1" class="pivot-item active">
+               <h3>Item 1</h3>
+               <div class="row">
+                  <div class="span5">
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                  </div>
+                  <div class="span3">
+                     <div class="thumbnail">
+                        <img alt="300x200" data-src="holder.js/300x200" style="width: 300px; height: 200px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADICAYAAABS39xVAAAELElEQVR4nO3bMW7iQABA0b3/UXwDDkBP75aaK2QrR7NeO4HskvCtVzwJWQOaZr7Gg/3rdru9ART8+ukJANxLsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgTrQE6n09s0Te8ul8vu2PP5/JSxjxh/c/HK8+XnCdZBbC3+aZrezufzX2PXYftfY+81z/PufKdpertery81X16HYB3A5XJ5X5jzPO9eW19fwjAG5KtjHzFGZbl2vV7fr51Op5eaL69DsA5gCcC40McAjAt1GbvecWxdv3fsXmzGsWOc9nY9463cM+dLl2Ad1Lj4x1usvXOdZfwYnEfGbu3oHt3dbAXrWfOlSbAOZn0+NMZq3AntLeolFo+MXax3enu7rj3rndez50uPYB3MuNNZ3wY9OwDrW8O9Q/QtWztCwWJNsA5qawF/RwC+8kjB+J1xvGCxJlgH9i+L+qsBGL93z+5qL1bfNV9aBOvAfuIQe/0c1EfnVx/F6rvmS4tgxd2zsxgX6tYjEOP1rccE7hl7u/15frb+vJ73GKuP/kF85nzpEawD2DrgHv8tHIPxrAcxx3AuYdg7eB9/97OIeHCUkWAdwPrc6LNbsme86vLZ0+vj+L25jp49X5oE60DWi/S7Xn7e282tvzvP86fvEe4djnv5mdtNsIAQwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjJ+A8sf5ZmmLjF2AAAAAElFTkSuQmCC">
+                        <div class="caption">
+                           <h3>Thumbnail label</h3>
+                           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                           <p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+            <div id="pivot-item-2" class="pivot-item">
+               <h3>Item 2</h3>
+
+               <div id="content-filters" class="row">
+                  <div class="span8">
+                     <ul class="nav nav-pills">
+                        <li class="dropdown">
+                           <a class="dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                              All projects
+                              <b class="caret" href="#"></b>
+                           </a>
+                           <ul id="projects-filter" class="dropdown-menu">
+                              <li><a href="#">All projects</a></li>
+                              <li><a href="#">ACME</a></li>
+                              <li><a href="#">Surface</a></li>
+                              <li><a href="#">OSX</a></li>
+                              <li><a href="#">WinRT</a></li>
+                           </ul>
+                        </li>
+                        <li class="dropdown">
+                           <a class="dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                              All budgets
+                              <b class="caret" href="#"></b>
+                           </a>
+                           <ul id="budget-filter" class="dropdown-menu">
+                              <li><a href="#">All budgets</a></li>
+                              <li><a href="#">Budget &lt; 1.000</a></li>
+                              <li><a href="#">Budget 1.000 - 10.000</a></li>
+                              <li><a href="#">Budget 10.000 - 45.000</a></li>
+                              <li><a href="#">Budget 45.000 - 100.000</a></li>
+                              <li><a href="#">Budget &gt; 100.000</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+
+               <table class="table table-condensed table-hover">
+                  <thead>
+                  <tr>
+                     <th class="span1">Editable<br/>Checkboxes</th>
+                     <th class="span1">Readonly<br/>Checkboxes</th>
+                     <th>Project</th>
+                     <th>Duration</th>
+                     <th class="span2">Contract Value</th>
+                     <th class="span2">Budget Cost</th>
+                     <th class="span2">Cost Variance</th>
+                     <th>Location</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                     <td class="align-center">
+                        <label class="checkbox">
+                           <input type="checkbox"><span class="metro-checkbox"></span>
+                        </label>
+                     </td>
+                     <td class="align-center">
+                        <i class="icon-checkmark-2"></i>
+                     </td>
+                     <td>ACME</td>
+                     <td>440 days</td>
+                     <td class="span2 align-right">70.570,00&#x20AC;</td>
+                     <td class="span2 align-right">70.570,00&#x20AC;</td>
+                     <td class="span2 align-right">+3000,00</td>
+                     <td>Milano</td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="checkbox">
+                           <input type="checkbox"><span class="metro-checkbox"></span>
+                        </label>
+                     </td>
+                     <td class="align-center">
+                        <i class="icon-checkmark-2"></i>
+                     </td>
+                     <td>Surface</td>
+                     <td>140 days</td>
+                     <td class="span2 align-right">70.570,00&#x20AC;</td>
+                     <td class="span2 align-right">70.570,00&#x20AC;</td>
+                     <td class="span2 align-right">+3000,00</td>
+                     <td>Milano</td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="checkbox">
+                           <input type="checkbox"><span class="metro-checkbox"></span>
+                        </label>
+                     </td>
+                     <td class="align-center">
+                        <i class="icon-checkmark-2"></i>
+                     </td>
+                     <td>OSX</td>
+                     <td>440 days</td>
+                     <td class="span2 align-right">70.570,00&#x20AC;</td>
+                     <td class="span2 align-right">70.570,00&#x20AC;</td>
+                     <td class="span2 align-right">+3000,00</td>
+                     <td>Milano</td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="checkbox">
+                           <input type="checkbox"><span class="metro-checkbox"></span>
+                        </label>
+                     </td>
+                     <td class="align-center">
+                        <i class="icon-checkmark-2"></i>
+                     </td>
+                     <td>WinRT</td>
+                     <td>1440 days</td>
+                     <td class="span2 align-right">170.570,00&#x20AC;</td>
+                     <td class="span2 align-right">170.570,00&#x20AC;</td>
+                     <td class="span2 align-right">-43000,00</td>
+                     <td>Milano</td>
+                  </tr>
+                  </tbody>
+               </table>
+
+            </div>
+            <div id="pivot-item-3" class="pivot-item">
+               <h3>Item 3</h3>
+
+               <h4>Some charts <small>thanks to Nick Downie (http://www.chartjs.org/)</small></h4>
+               <div class="row-fluid">
+                  <div class="span10">
+                     <canvas id="myChart" width="500" height="380"></canvas>
+                  </div>
+               </div>
+            </div>
+            <div id="pivot-item-4" class="pivot-item">
+               <h3>Item 4</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <br/>
+
+<pre class="prettyprint linenums">
+&lt;div id="pivot" class="pivot slide"&gt;
+&lt;div class="pivot-headers"&gt;
+   &lt;a href="#pivot" data-target="0" class="active"&gt;Item 1&lt;/a&gt;
+   &lt;a href="#pivot" data-target="1"&gt;Item 2&lt;/a&gt;
+   &lt;a href="#pivot" data-target="2"&gt;Item 3&lt;/a&gt;
+   &lt;a href="#pivot" data-target="3"&gt;Item 4&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="pivot-items"&gt;
+   &lt;div id="pivot-item-1" class="pivot-item active"&gt;
+      &lt;h3&gt;Item 1&lt;/h3&gt;
+      ...
+   &lt;/div&gt;
+   &lt;div id="pivot-item-2" class="pivot-item"&gt;
+      &lt;h3&gt;Item 2&lt;/h3&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div id="pivot-item-3" class="pivot-item"&gt;
+      &lt;h3&gt;Item 3&lt;/h3&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div id="pivot-item-4" class="pivot-item"&gt;
+      &lt;h3&gt;Item 4&lt;/h3&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<hr class="bs-docs-separator">
+
+
+<h2>Usage</h2>
+<p>Include the bootmetro-pivot.js alongside the other JS files.</p>
+
+<h3>Via data attributes</h3>
+<p>Activate a modal without writing JavaScript. Set <code>data-target</code> attribute on every header anchor with the index of the related pivot panel as value.</p>
+
+
+
+
+</div>
+
+
+
+<!-- ListVIew
+================================================== -->
+<div class="bs-docs-section">
+   <div class="page-header">
+      <h1 id="metro-listview">ListView <small></small></h1>
+   </div>
+   <blockquote>
+      The ListView control offers a way to present collections of data, referred to as “items”, to users of your app. You can use ListView to produce various layouts, but it may not necessarily be the best option.
+      <small>Guidelines for ListView controls (Windows 8 User experience guidelines)</small>
+   </blockquote>
+
+   <p>ListView is intended for items that expose multiple pieces of data. If your items are just a set of short strings, consider using the Select control.</p>
+   <p>The ListView comes with two “layouts” built into the control: list layout, and grid layout.</p>
+   <p>To apply the selection check simply add the <code>selected</code> class.</p>
+
+   <h2 id="metro-listview-grid">Grid layout</h2>
+   <p>The grid layout always pans horizontally, and items are laid out following a top-to-bottom, then left-to-right reading order.</p>
+   <div class="bs-docs-example bs-docs-example-listview">
+
+      <div class="listview grid-layout">
+
+         <div class="listview-item bg-color-blue">
+            <div class="pull-left" href="#">
+               <img class="listview-item-object" data-src="holder.js/60x60">
+            </div>
+            <div class="listview-item-body">
+               <h4 class="listview-item-heading">Media heading</h4>
+               <p class="two-lines">Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+           </div>
+         </div>
+
+         <div class="listview-item bg-color-green">
+            <div class="pull-left" href="#">
+               <img class="listview-item-object" data-src="holder.js/60x60">
+            </div>
+            <div class="listview-item-body">
+               <h4 class="listview-item-heading">Media heading</h4>
+               <p>Single line. Lorem ipsum sin ut dolorem</p>
+               <p>Single line. Lorem ipsum sin ut dolorem</p>
+            </div>
+         </div>
+
+         <div class="listview-item bg-color-orange">
+            <div class="pull-left" href="#">
+               <img class="listview-item-object" data-src="holder.js/60x60">
+            </div>
+            <div class="listview-item-body">
+               <p class="three-lines">Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p>
+            </div>
+         </div>
+
+         <div class="listview-item bg-color-grayLight selected">
+            <div class="pull-left" href="#">
+               <img class="listview-item-object" data-src="holder.js/60x60">
+            </div>
+            <div class="listview-item-body">
+               <h4 class="listview-item-heading">Media heading</h4>
+               <p class="two-lines">Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+           </div>
+         </div>
+
+         <div class="listview-item bg-color-blue">
+            <div class="pull-left" href="#">
+               <div class="listview-item-object icon-github"></div>
+            </div>
+            <div class="listview-item-body">
+               <h4 class="listview-item-heading">Media heading</h4>
+               <p class="two-lines">Body text that wraps over two lines, IcoMoon icon on the left.</p>
+           </div>
+         </div>
+
+      </div>
+
+   </div>
+<pre class="prettyprint linenums">
+&lt;div class="listview grid-layout"&gt;
+
+   &lt;div class="listview-item bg-color-blue"&gt;
+      &lt;div class="pull-left" href="#"&gt;
+         &lt;img class="listview-item-object" data-src="holder.js/60x60"&gt;
+      &lt;/div&gt;
+      &lt;div class="listview-item-body"&gt;
+         &lt;h4 class="listview-item-heading"&gt;Media heading&lt;/h4&gt;
+         &lt;p class="two-lines"&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+
+   &lt;div class="listview-item bg-color-green"&gt;
+      &lt;div class="pull-left" href="#"&gt;
+         &lt;img class="listview-item-object" data-src="holder.js/60x60"&gt;
+      &lt;/div&gt;
+      &lt;div class="listview-item-body"&gt;
+         &lt;h4 class="listview-item-heading"&gt;Media heading&lt;/h4&gt;
+         &lt;p&gt;Single line. Lorem ipsum sin ut dolorem&lt;/p&gt;
+         &lt;p&gt;Single line. Lorem ipsum sin ut dolorem&lt;/p&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+
+   &lt;div class="listview-item bg-color-orange"&gt;
+      &lt;div class="pull-left" href="#"&gt;
+         &lt;img class="listview-item-object" data-src="holder.js/60x60"&gt;
+      &lt;/div&gt;
+      &lt;div class="listview-item-body"&gt;
+         &lt;p class="three-lines"&gt;Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula&lt;/p&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+
+   &lt;div class="listview-item bg-color-grayLight selected"&gt;
+      &lt;div class="pull-left" href="#"&gt;
+         &lt;img class="listview-item-object" data-src="holder.js/60x60"&gt;
+      &lt;/div&gt;
+      &lt;div class="listview-item-body"&gt;
+         &lt;h4 class="listview-item-heading"&gt;Media heading&lt;/h4&gt;
+         &lt;p class="two-lines"&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+
+   &lt;div class="listview-item bg-color-blue"&gt;
+      &lt;div class="pull-left" href="#"&gt;
+         &lt;div class="listview-item-object icon-github"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="listview-item-body"&gt;
+         &lt;h4 class="listview-item-heading"&gt;Media heading&lt;/h4&gt;
+         &lt;p class="two-lines"&gt;Body text that wraps over two lines, IcoMoon icon on the left.&lt;/p&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+   <h2 id="metro-listview-list">List layout</h2>
+   <p>List Layouts are single-column only with a top to bottom reading order, and they always pan or scroll vertically.</p>
+   <div class="bs-docs-example bs-docs-example-listview">
+
+      <div class="listview list-layout">
+
+         <div class="listview-item bg-color-blue">
+            <div class="pull-left" href="#">
+               <img class="listview-item-object" data-src="holder.js/60x60">
+            </div>
+            <div class="listview-item-body">
+               <h4 class="listview-item-heading">Media heading</h4>
+               <p class="two-lines">Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+           </div>
+         </div>
+
+         <div class="listview-item bg-color-green">
+            <div class="pull-left" href="#">
+               <img class="listview-item-object" data-src="holder.js/60x60">
+            </div>
+            <div class="listview-item-body">
+               <h4 class="listview-item-heading">Media heading</h4>
+               <p>Single line. Lorem ipsum sin ut dolorem</p>
+               <p>Single line. Lorem ipsum sin ut dolorem</p>
+            </div>
+         </div>
+
+         <div class="listview-item bg-color-orange">
+            <div class="pull-left" href="#">
+               <img class="listview-item-object" data-src="holder.js/60x60">
+            </div>
+            <div class="listview-item-body">
+               <p class="three-lines">Body text that wraps over three lines. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p>
+            </div>
+         </div>
+
+         <div class="listview-item bg-color-grayLight selected">
+            <div class="pull-left" href="#">
+               <img class="listview-item-object" data-src="holder.js/60x60">
+            </div>
+            <div class="listview-item-body">
+               <h4 class="listview-item-heading">Media heading</h4>
+               <p class="two-lines">Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+           </div>
+         </div>
+
+         <div class="listview-item bg-color-blue">
+            <div class="pull-left" href="#">
+               <div class="listview-item-object icon-github"></div>
+            </div>
+            <div class="listview-item-body">
+               <h4 class="listview-item-heading">Media heading</h4>
+               <p class="two-lines">Body text that wraps over two lines, IcoMoon icon on the left.</p>
+           </div>
+         </div>
+
+      </div>
+
+   </div>
+<pre class="prettyprint linenums">
+&lt;div class="listview list-layout"&gt;
+
+   ...
+
+&lt;/div&gt;
+</pre>
+
+
+   <h2 id="metro-listview-alt">Alternatives</h2>
+   <p>Bigger ListViews are available, add the <code>big</code> class to the <code>listview</code> and <code>listview-item</code> elements:</p>
+   <div class="bs-docs-example bs-docs-example-listview">
+
+      <div class="listview list-layout big">
+
+         <div class="listview-item big bg-color-blue">
+            <div class="pull-left" href="#">
+               <img class="listview-item-object" data-src="holder.js/112x112">
+            </div>
+            <div class="listview-item-body">
+               <h4 class="listview-item-heading">Media heading</h4>
+               <h5 class="listview-item-subheading">Subtitle</h5>
+               <p class="two-lines">Body text that wraps over two lines. Vivamus elementum semper nisi.</p>
+           </div>
+         </div>
+
+
+
+         <div class="listview-item big bg-color-green">
+            <div class="pull-left" href="#">
+               <div class="listview-item-object icon-github"></div>
+            </div>
+            <div class="listview-item-body">
+               <h4 class="listview-item-heading">Media heading</h4>
+               <p class="two-lines">Body text that wraps over two lines, IcoMoon icon on the left.</p>
+           </div>
+         </div>
+
+      </div>
+
+   </div>
+<pre class="prettyprint linenums">
+&lt;div class="listview list-layout big"&gt;
+
+   &lt;div class="listview-item big bg-color-blue"&gt;
+      &lt;div class="pull-left" href="#"&gt;
+         &lt;img class="listview-item-object" data-src="holder.js/112x112"&gt;
+      &lt;/div&gt;
+      &lt;div class="listview-item-body"&gt;
+         &lt;h4 class="listview-item-heading"&gt;Media heading&lt;/h4&gt;
+         &lt;h5 class="listview-item-subheading"&gt;Subtitle&lt;/h5&gt;
+         &lt;p class="two-lines"&gt;Body text that wraps over two lines. Vivamus elementum semper nisi.&lt;/p&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+
+
+
+   &lt;div class="listview-item big bg-color-green"&gt;
+      &lt;div class="pull-left" href="#"&gt;
+         &lt;div class="listview-item-object icon-github"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="listview-item-body"&gt;
+         &lt;h4 class="listview-item-heading"&gt;Media heading&lt;/h4&gt;
+         &lt;p class="two-lines"&gt;Body text that wraps over two lines, IcoMoon icon on the left.&lt;/p&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+
+&lt;/div&gt;
+</pre>
+
+
+
+</div>
+
+
+
+
+<!-- Tiles templates -->
+<!-- ListVIew
+================================================== -->
+<div class="bs-docs-section">
+   <div class="page-header">
+      <h1 id="metro-tiles">Tiles templates <small></small></h1>
+   </div>
+
+   <blockquote>
+      Tiles are the representation of your app on the Start screen. Selecting a tile launches its app. The content shown on your tile can, and ideally should, change regularly, especially if your tile can communicate new, real-time information to your user.
+      Tiles can show a combination of text and images, and a badge to show status.
+      <small>Tiles, badges, and notifications (Windows Store apps documentation)</small>
+   </blockquote>
+
+   <p><span class="label label-important">Important</span> All tiles must be contained in a wrap element with <code>metro</code> class.</p>
+
+   <h2 id="metro-tiles-square">Square Tiles Templates</h2>
+
+   <div class="metro">
+
+      <h3>Square App Tile</h3>
+      <table id="apptile" class="table">
+         <thead>
+            <tr>
+               <th>Template Name</th>
+               <th>Description</th>
+               <th>Tile</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><strong>Square App Tile</strong></td>
+               <td></td>
+               <td>
+                  <a class="tile app" href="#">
+                     <div class="image-wrapper">
+                        <img src="assets/img/Windows 8.png" alt=""/>
+                     </div>
+                     <div class="app-label">AppName</div>
+                     <div class="app-count">12</div>
+                  </a>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+
+      <h3 id="metro-tiles-square-textonly">Text Only Tiles</h3>
+      <table id="textonly" class="table">
+         <thead>
+            <tr>
+               <th>Template Name</th>
+               <th>Description</th>
+               <th>Tile</th>
+            </tr>
+         </thead>
+         <tbody class="">
+            <tr>
+               <td><strong>TileSquareBlock</strong></td>
+               <td>One short string of large block text over a single, short line of bold, regular text.</td>
+               <td>
+                  <a class="tile square text tilesquareblock" href="#">
+                     <div class="text-big">22</div>
+                     <div class="text">Text field 2</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileSquareText01</strong></td>
+               <td>One header string in larger text on the first line; three strings of regular text on each of the next three lines. Text does not wrap.</td>
+               <td>
+                  <a class="tile square text" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileSquareText02</strong></td>
+               <td>One header string in larger text on the first line, over one string of regular text wrapped over a maximum of three lines.</td>
+               <td>
+                  <a class="tile square text" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text3">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileSquareText03</strong></td>
+               <td>Four strings of regular text on four lines. Text does not wrap.</td>
+               <td>
+                  <a class="tile square text" href="#">
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                     <div class="text">Text field 4</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileSquareText04</strong></td>
+               <td>One string of regular text wrapped over a maximum of four lines.</td>
+               <td>
+                  <a class="tile square text" href="#">
+                     <div class="text4">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                  </a>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+
+      <h3 id="metro-tiles-square-imageonly">Image Only Tiles</h3>
+      <table id="imageonly" class="table">
+         <thead>
+            <tr>
+               <th>Template Name</th>
+               <th>Description</th>
+               <th>Tile</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><strong>TileSquareImage</strong></td>
+               <td>One square image that fills the entire tile, no text.</td>
+               <td>
+                  <a class="tile square image" href="#">
+                     <img src="holder.js/150x150/#377C89:#FFFFFF" alt=""/>
+                  </a>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+
+
+      <h3 id="metro-tiles-square-squarepeek">Square peek templates</h3>
+      <table id="squarepeek" class="table">
+         <thead>
+            <tr>
+               <th>Template Name</th>
+               <th>Description</th>
+               <th>Tile</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><strong>TileSquarePeekImageAndText01</strong></td>
+               <td>Top: One square image, no text. Bottom: One header string in larger text on the first line, three strings of regular text on each of the next three lines. Text does not wrap.</td>
+               <td>
+                  <a class="tile squarepeek" href="#">
+                     <img src="holder.js/150x150/#377C89:#FFFFFF" alt=""/>
+                     <div class="text-inner">
+                        <div class="text-header">Header</div>
+                        <div class="text">Text field 1</div>
+                        <div class="text">Text field 2</div>
+                        <div class="text">Text field 3</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileSquarePeekImageAndText02</strong></td>
+               <td>Top: Square image, no text. Bottom: One header string in larger text on the first line, over one string of regular text wrapped over a maximum of three lines.</td>
+               <td>
+                  <a class="tile squarepeek" href="#">
+                     <img src="holder.js/150x150/#377C89:#FFFFFF" alt=""/>
+                     <div class="text-inner">
+                        <div class="text-header">Header</div>
+                        <div class="text3">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileSquarePeekImageAndText03</strong></td>
+               <td>Top: Square image, no text. Bottom: Four strings of regular text on four lines. Text does not wrap.</td>
+               <td>
+                  <a class="tile squarepeek" href="#">
+                     <img src="holder.js/150x150/#377C89:#FFFFFF" alt=""/>
+                     <div class="text-inner">
+                        <div class="text">Text field 1</div>
+                        <div class="text">Text field 2</div>
+                        <div class="text">Text field 3</div>
+                        <div class="text">Text field 4</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileSquarePeekImageAndText04</strong></td>
+               <td>Top: Square image, no text. Bottom: One string of regular text wrapped over a maximum of four lines.</td>
+               <td>
+                  <a class="tile squarepeek" href="#">
+                     <img src="holder.js/150x150/#377C89:#FFFFFF" alt=""/>
+                     <div class="text-inner">
+                        <div class="text4">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+
+   </div>
+
+
+   <h2 id="metro-tiles-wide">Wide Tiles Templates</h2>
+
+   <div class="metro">
+
+      <h3>Wide App Tile</h3>
+      <table id="apptile" class="table">
+         <caption><h3>App Tile</h3></caption>
+         <thead>
+            <tr>
+               <th>Template Name</th>
+               <th>Description</th>
+               <th>Tile</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><strong>Wide App Tile</strong></td>
+               <td></td>
+               <td>
+                  <a class="tile wide app" href="#">
+                     <div class="image-wrapper">
+                        <img src="assets/img/Windows 8.png" alt=""/>
+                     </div>
+                     <div class="app-label">AppName</div>
+                     <div class="app-count">12</div>
+                  </a>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+
+      <h3 id="metro-tiles-wide-textonly">Text Only Tiles</h3>
+      <table id="textonly" class="table">
+         <caption><h3>Wide Text Only Tiles</h3></caption>
+         <thead>
+            <tr>
+               <th>Template Name</th>
+               <th>Description</th>
+               <th>Tile</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><strong>TileWideText01</strong></td>
+               <td>One header string in larger text on the first line, four strings of regular text on the next four lines. Text does not wrap.</td>
+               <td>
+                  <a class="tile wide text" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                     <div class="text">Text field 4</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideText02</strong></td>
+               <td>One header string in larger text over eight short strings arranged in two columns of four lines each. Columns are of equal width.</td>
+               <td>
+                  <a class="tile wide text" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="column">
+                        <div class="text">Text field 1</div>
+                        <div class="text">Text field 2</div>
+                        <div class="text">Text field 3</div>
+                        <div class="text">Text field 4</div>
+                     </div>
+                     <div class="column">
+                        <div class="text">Text field 5</div>
+                        <div class="text">Text field 6</div>
+                        <div class="text">Text field 7</div>
+                        <div class="text">Text field 8</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideText03</strong></td>
+               <td>One string of large text wrapped over a maximum of three lines.</td>
+               <td>
+                  <a class="tile wide text" href="#">
+                     <div class="text-header3">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideText04</strong></td>
+               <td>One string of regular text wrapped over a maximum of five lines.</td>
+               <td>
+                  <a class="tile wide text" href="#">
+                     <div class="text5">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideText05</strong></td>
+               <td>Five strings of regular text on five lines. Text does not wrap.</td>
+               <td>
+                  <a class="tile wide text" href="#">
+                     <div class="text">Text field 1 Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</div>
+                     <div class="text">Text field 2 Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</div>
+                     <div class="text">Text field 3 Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</div>
+                     <div class="text">Text field 4 Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</div>
+                     <div class="text">Text field 5 Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideText06</strong></td>
+               <td>Ten short strings of regular text, arranged in two columns of five lines each. Columns are of equal width.</td>
+               <td>
+                  <a class="tile wide text" href="#">
+                     <div class="column">
+                        <div class="text">Text field 1</div>
+                        <div class="text">Text field 2</div>
+                        <div class="text">Text field 3</div>
+                        <div class="text">Text field 4</div>
+                     </div>
+                     <div class="column">
+                        <div class="text">Text field 5</div>
+                        <div class="text">Text field 6</div>
+                        <div class="text">Text field 7</div>
+                        <div class="text">Text field 8</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideText07</strong></td>
+               <td>One header string in larger text over eight short strings of regular text arranged in two columns of four lines each. The column widths are such that the first column acts as a label and the second column as the content. This template is similar to TileWideText10, but the first column is wider.</td>
+               <td>
+                  <a class="tile wide text" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="column2-label">
+                        <div class="text">label 1</div>
+                        <div class="text">label 2</div>
+                        <div class="text">label 3</div>
+                        <div class="text">label 4</div>
+                     </div>
+                     <div class="column2-text">
+                        <div class="text">Vivamus elementum semper nisi</div>
+                        <div class="text">Vivamus elementum semper nisi</div>
+                        <div class="text">Vivamus elementum semper nisi</div>
+                        <div class="text">Vivamus elementum semper nisi</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideText08</strong></td>
+               <td>Ten short strings of regular text arranged in two columns of five lines each. The column widths are such that the first column acts as a label and the second column as the content. This template is similar to TileWideText11, but the first column is wider.</td>
+               <td>
+                  <a class="tile wide text" href="#">
+                     <div class="column2-label">
+                        <div class="text">label 1</div>
+                        <div class="text">label 2</div>
+                        <div class="text">label 3</div>
+                        <div class="text">label 4</div>
+                        <div class="text">label 5</div>
+                     </div>
+                     <div class="column2-text">
+                        <div class="text">Vivamus elementum semper nisi</div>
+                        <div class="text">Vivamus elementum semper nisi</div>
+                        <div class="text">Vivamus elementum semper nisi</div>
+                        <div class="text">Vivamus elementum semper nisi</div>
+                        <div class="text">Vivamus elementum semper nisi</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideText09</strong></td>
+               <td>One header string in larger text over one string of regular text wrapped over a maximum of four lines.</td>
+               <td>
+                  <a class="tile wide text" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text4">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideText10</strong></td>
+               <td>One header string in larger text over eight short strings of regular text arranged in two columns of four lines each. The column widths are such that the first column acts as a label and the second column as the content. This template is similar to TileWideText07, but the first column is narrower.</td>
+               <td>
+                  <a class="tile wide text" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="column3-label">
+                        <div class="text">Viva</div>
+                        <div class="text">Viva</div>
+                        <div class="text">Viva</div>
+                        <div class="text">Viva</div>
+                     </div>
+                     <div class="column3-text">
+                        <div class="text">Vivamus elementum semper nisi</div>
+                        <div class="text">Vivamus elementum semper nisi</div>
+                        <div class="text">Vivamus elementum semper nisi</div>
+                        <div class="text">Vivamus elementum semper nisi</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideText11</strong></td>
+               <td>Ten short strings of regular text arranged in two columns of five lines each. The column widths are such that the first column acts as a label and the second column as the content. This template is similar to TileWideText08, but the first column is narrower.</td>
+               <td>
+                  <a class="tile wide text" href="#">
+                     <div class="column3-label">
+                        <div class="text">Viva</div>
+                        <div class="text">Viva</div>
+                        <div class="text">Viva</div>
+                        <div class="text">Viva</div>
+                     </div>
+                     <div class="column3-text">
+                        <div class="text">Vivamus elementum semper nisi</div>
+                        <div class="text">Vivamus elementum semper nisi</div>
+                        <div class="text">Vivamus elementum semper nisi</div>
+                        <div class="text">Vivamus elementum semper nisi</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+
+      <h3 id="metro-tiles-wide-imageonly">Image Only Tiles</h3>
+      <table id="imageonly" class="table">
+         <caption><h3>Wide Image Only Tiles</h3></caption>
+         <thead>
+            <tr>
+               <th>Template Name</th>
+               <th>Description</th>
+               <th>Tile</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><strong>TileWideImage</strong></td>
+               <td>One wide image that fills the entire tile, no text.</td>
+               <td>
+                  <a class="tile wide image" href="#">
+                     <img src="holder.js/310x150/#377C89:#FFFFFF" alt=""/>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideImageCollection</strong></td>
+               <td>One large square image with four smaller square images to its right, no text.</td>
+               <td>
+                  <a class="tile wide image collection" href="#">
+                     <img class="tile-image-main" src="holder.js/160x150/#377C89:#FFFFFF" alt=""/>
+                     <div class="mini-tiles">
+                        <img src="holder.js/75x75/#339933:#FFFFFF" alt=""/>
+                        <img src="holder.js/75x75/#00bff2:#FFFFFF" alt=""/>
+                        <img src="holder.js/75x75" alt=""/>
+                        <img src="holder.js/75x75/#F09609:#FFFFFF" alt=""/>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+
+         </tbody>
+      </table>
+
+      <h3 id="metro-tiles-wide-imagetext">Image &amp; text templates</h3>
+      <table id="imageandtext" class="table">
+         <caption><h3>Wide image-and-text templates</h3></caption>
+         <thead>
+            <tr>
+               <th>Template Name</th>
+               <th>Description</th>
+               <th>Tile</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><strong>TileWideImageAndText01</strong></td>
+               <td>One wide image over one string of regular text wrapped over a maximum of two lines.</td>
+               <td>
+                  <a class="tile wide imagetext wideimage" href="#">
+                     <img src="holder.js/310x150/#377C89:#FFFFFF" alt=""/>
+                     <div class="textover-wrapper">
+                        <div class="text2">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideImageAndText02</strong></td>
+               <td>One wide image over one string of regular text wrapped over a maximum of two lines.</td>
+               <td>
+                  <a class="tile wide imagetext wideimage" href="#">
+                     <img src="holder.js/310x150/#377C89:#FFFFFF" alt=""/>
+                     <div class="textover-wrapper">
+                        <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                        <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideBlockAndText01</strong></td>
+               <td>Four strings of regular, unwrapped text on the left; large block text over a single, short string of bold, regular text on the right.</td>
+               <td>
+                  <a class="tile wide text" href="#">
+                     <div class="column-text">
+                        <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                        <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                        <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                        <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                     </div>
+                     <div class="column-text-big">
+                        <div class="text-big">22</div>
+                        <div class="text">Aliquam</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideBlockAndText02</strong></td>
+               <td>One string of regular text wrapped over a maximum of four lines on the left; large block text over a single, short string of bold, regular text on the right.</td>
+               <td>
+                  <a class="tile wide text" href="#">
+                     <div class="column-text">
+                        <div class="text4">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                     </div>
+                     <div class="column-text-big">
+                        <div class="text-big">22</div>
+                        <div class="text">Aliquam</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideSmallImageAndText01</strong></td>
+               <td>On the left, one small image; on the right, one string of large text wrapped over a maximum of three lines.</td>
+               <td>
+                  <a class="tile wide imagetext" href="#">
+                     <div class="image-wrapper">
+                        <img src="holder.js/75x75" alt=""/>
+                     </div>
+                     <div class="column-text">
+                        <div class="text-header3">Adipisci velit, sed quia non numquam eius modi tempora.</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideSmallImageAndText02</strong></td>
+               <td>On the left, one small image; on the right, one header string in larger text on the first line over four strings of regular text on the next four lines. Text does not wrap.</td>
+               <td>
+                  <a class="tile wide imagetext" href="#">
+                     <div class="image-wrapper">
+                        <img src="holder.js/75x75" alt=""/>
+                     </div>
+                     <div class="column-text">
+                        <div class="text-header">Adipisci velit, sed quia non numquam eius modi tempora.</div>
+                        <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                        <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                        <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                        <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                    </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideSmallImageAndText03</strong></td>
+               <td>On the left, one small image; on the right, one string of regular text wrapped over a maximum of five lines.</td>
+               <td>
+                  <a class="tile wide imagetext" href="#">
+                     <div class="image-wrapper">
+                        <img src="holder.js/75x75" alt=""/>
+                     </div>
+                     <div class="column-text">
+                        <div class="text5">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                    </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideSmallImageAndText04</strong></td>
+               <td>On the left, one small image; on the right, one header string in larger text on the first line over four strings of regular text on the next four lines. Text does not wrap.</td>
+               <td>
+                  <a class="tile wide imagetext" href="#">
+                     <div class="image-wrapper">
+                        <img src="holder.js/75x75" alt=""/>
+                     </div>
+                     <div class="column-text">
+                        <div class="text-header">Adipisci velit, sed quia non numquam eius modi tempora.</div>
+                        <div class="text4">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                    </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWideSmallImageAndText05</strong></td>
+               <td>On the left, one header string in larger text over one string of regular text wrapped over a maximum of four lines; on the right, one small image.</td>
+               <td>
+                  <a class="tile wide imagetext" href="#">
+                     <div class="column-text">
+                        <div class="text-header">Adipisci velit, sed quia non numquam eius modi tempora.</div>
+                        <div class="text4">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                     </div>
+                     <div class="image-wrapper">
+                        <img src="holder.js/75x75" alt=""/>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+
+         </tbody>
+      </table>
+
+   </div>
+
+
+   <h2 id="metro-tiles-widepeek">Widepeek Tiles Templates</h2>
+   <p>You can combine all the previous tile templates to make a big tile with size of 310 x 300, see some example below:</p>
+   <p>To build the big tile, simply use an element wrapper with <code>tile widepeek</code> classes:</p>
+   <pre class="prettyprint">
+&lt;a href="#" class="tile widepeek"&gt;
+   &lt;div class="tile wide image collection"&gt;
+      ...
+   &lt;/div&gt;
+
+   &lt;div class="tile wide text"&gt;
+      ...
+   &lt;/div&gt;
+&lt;/a&gt;
+   </pre>
+
+   <div class="metro">
+
+      <table class="table">
+         <thead>
+            <tr>
+               <th>Template Name</th>
+               <th>Description</th>
+               <th>Tile</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><strong>TileWidePeekImageCollection01</strong></td>
+               <td>Top: One large square image with four smaller square images to its right, no text. Bottom: One header string in larger text over one string of regular text wrapped over a maximum of four lines.</td>
+               <td>
+                  <a href="#" class="tile widepeek">
+                     <div class="tile wide image collection">
+                        <img class="tile-image-main" src="holder.js/160x150/#377C89:#FFFFFF" alt=""/>
+                        <div class="mini-tiles">
+                           <img src="holder.js/75x75/#339933:#FFFFFF" alt=""/>
+                           <img src="holder.js/75x75/#00bff2:#FFFFFF" alt=""/>
+                           <img src="holder.js/75x75" alt=""/>
+                           <img src="holder.js/75x75/#F09609:#FFFFFF" alt=""/>
+                        </div>
+                     </div>
+                     <div class="tile wide text">
+                        <div class="text-header">Header</div>
+                        <div class="text">Text field 1</div>
+                        <div class="text">Text field 2</div>
+                        <div class="text">Text field 3</div>
+                        <div class="text">Text field 4</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWidePeekImage01</strong></td>
+               <td>Top: One wide image. Bottom: One header string in larger text over one string of regular text that wraps over a maximum of four lines.</td>
+               <td>
+                  <a href="#" class="tile widepeek">
+                     <div class="tile wide image" href="#">
+                        <img src="holder.js/310x150/#377C89:#FFFFFF" alt=""/>
+                     </div>
+                     <div class="tile wide text">
+                        <div class="text5">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td><strong>TileWidePeekImage05</strong></td>
+               <td>Top: One wide image. Bottom: On the left, one small image; on the right, one header string of larger text on the first line over one string of regular text wrapped over a maximum of four lines.</td>
+               <td>
+                  <a href="#" class="tile widepeek">
+                     <div class="tile wide image" href="#">
+                        <img src="holder.js/310x150/#377C89:#FFFFFF" alt=""/>
+                     </div>
+                     <div class="tile wide imagetext">
+                        <div class="image-wrapper">
+                           <img src="holder.js/75x75" alt=""/>
+                        </div>
+                        <div class="column-text">
+                           <div class="text-header">Adipisci velit, sed quia non numquam eius modi tempora.</div>
+                           <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                           <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                           <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                           <div class="text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+                        </div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+
+         </tbody>
+      </table>
+
+   </div>
+
+
+
+   <h2 id="metro-tiles-select">Selecting tiles</h2>
+   <p>To apply the selection check, simply add the <code>selected</code> class.</p>
+   <div class="bs-docs-example bs-docs-example-tiles">
+      <div class="metro">
+         <a class="tile wide text selected" href="#">
+            <div class="text-header">Header</div>
+            <div class="text4">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+         </a>
+
+         <a class="tile square text selected" href="#">
+            <div class="text-header">Header</div>
+            <div class="text">Text field 1</div>
+            <div class="text">Text field 2</div>
+            <div class="text">Text field 3</div>
+         </a>
+      </div>
+   </div>
+
+   <h2 id="metro-tiles-colors">Color alternatives</h2>
+   <p>To apply a different background color to a tile, you can use the following predefined classes, or make the yours.</p>
+
+   <div class="metro">
+      <table class="table table-bordered">
+         <thead>
+         <tr>
+            <th>Class name</th>
+            <th>Example</th>
+         </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <code>bg-color-orange</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-orange" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-purple</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-purple" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-green</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-green" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-greenDark</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-greenDark" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-blue</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-blue" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-blueDark</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-blueDark" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-red</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-red" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-yellow</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-yellow" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-pink</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-pink" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-darken</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-darken" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-gray</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-gray" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>bg-color-grayLight</code>
+               </td>
+               <td>
+                  <a class="tile square text bg-color-grayLight" href="#">
+                     <div class="text-header">Header</div>
+                     <div class="text">Text field 1</div>
+                     <div class="text">Text field 2</div>
+                     <div class="text">Text field 3</div>
+                  </a>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+
+
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+         </div>
+      </div>
+   </div>
+
+
+   <a class="bs-docs-top affix" href="#welcome">Back to top</a>
+
+   <footer class="bs-docs-footer">
+      <div class="container">
+         <p>Designed and built by <a target="_blank" href="https://twitter.com/aozoralabs">@aozoralabs</a>.</p>
+         <p>Code licensed under <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a> or <a target="_blank" href="http://www.gnu.org/licenses/gpl-2.0.html">GPL2</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+      </div>
+   </footer>
+
+   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script>window.jQuery || document.write("<script src='assets/js/jquery-1.8.3.min.js'>\x3C/script>")</script>
+
+   <!--[if IE 7]>
+   <script type="text/javascript" src="scripts/bootmetro-icons-ie7.js">
+   <![endif]-->
+
+   <script type="text/javascript" src="assets/js/google-code-prettify/prettify.js"></script>
+   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="assets/js/bootmetro-panorama.js"></script>
+   <script type="text/javascript" src="assets/js/bootmetro-pivot.js"></script>
+   <script type="text/javascript" src="assets/js/bootmetro-charms.js"></script>
+   <script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
+   <script type="text/javascript" src="assets/js/holder.js"></script>
+   <script type="text/javascript" src="assets/js/Chart.min.js"></script>
+
+   <script type="text/javascript" src="assets/js/docs.js"></script>
+</body>
+</html>

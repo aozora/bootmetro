@@ -18,7 +18,8 @@
 .alert {
    text-shadow: none;
    position: relative;
-
+   z-index: @zindexNotification;
+   
    .close:hover {
       background-color: rgba(255, 255, 255, 0.4);
       color: #FFF;
@@ -29,40 +30,44 @@
 }
 
 
-
 .toast {
    position: relative;
-   .box-sizing(border-box);
-   padding: 13px 60px 13px 15px;
+   .media;
+   width: 400px;
    margin-bottom: 10px;
    border: 2px solid lighten(@linkColor, 10%);
-   width: 380px;
    height: 90px;
    text-shadow: none;
    background-color: @linkColor;
-   .no-border-radius;
    color: @white;
-
-   h4 {
-      display: block;
-      width: 100%;
-      margin: 0;
-      .text-overflow-wrap;
-   }
+   z-index: @zindexNotification;
+}
+.toast-body {
+   .media-body;
+   padding: 13px 60px 13px 15px;
+   height: 64px;
 
    p {
-      display: block;
-      width: 100%;
-      margin: 0;
       .text-overflow-wrap;
+      margin: 0;
    }
+}
 
-   .toast-inner {
-      margin-left: 90px;
+// For images and videos, set to block
+.toast-object {
+   .media-object;
+}
 
-   }
+// Reset margins on headings for tighter default spacing
+.toast-heading {
+   .media-heading;
+   .text-overflow-wrap;
+   margin: 0;
+}
 
 
+
+.toast {
    &.toasttext01 {
       p {
          height: 60px;
@@ -99,33 +104,7 @@
          line-height: 20px;
       }
    }
-
-
-   &.toastimageandtext01 {
-      padding: 0;
-
-      img {
-         display: inline-block;
-         vertical-align: top;
-         max-width: 88px;
-         max-height: 88px;
-         margin: 0;
-      }
-      p {
-         display: inline-block;
-         vertical-align: top;
-         padding: 13px 60px 10px 15px;
-         height: 60px;
-         line-height: 20px;
-      }
-
-   }
-
-
-
 }
-
-
 
 
 
@@ -157,8 +136,8 @@
 .toast .close:after,
 .modal .close:after,
 .alert .close:after {
-   content: "\e131";
-   font-size: 16px;
+   content: "\e37a";
+   font-size: 14px;
 }
 
 .toast {
