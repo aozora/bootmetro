@@ -8,7 +8,7 @@
 
 !function ($) {
 
-   "use strict"; // jshint ;_;
+   "use strict";
 
 
    /* PIVOT CLASS DEFINITION
@@ -140,7 +140,7 @@
       var $this = $(this), href
          , $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
          , options = $.extend({}, $target.data(), $this.data())
-         , $index = parseInt($this.attr('data-pivot-index'));
+         , $index = parseInt($this.attr('data-pivot-index'), 10);
 
       $('[data-pivot-index].active').removeClass('active')
       $this.addClass('active')
