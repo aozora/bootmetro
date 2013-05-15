@@ -29,8 +29,7 @@ To build the whole project run 'grunt' in the project directory.
 ## Versioning
 
 ### Latest Release: v1.0.0 Alpha1
-This release must be considered as a stabilization of v0.6.
-The v2.0 will be completely redone from scratch using as base Twitter Bootstrap v3.
+This release is based on Twitter Bootstrap 2; the v2.0 will be completely redone from scratch using as base Twitter Bootstrap v3.
 
 ####BREAKING CHANGES:
 - Replaced icomoon font with a new icomoon set generated with PUA. Many icon-* class names has changed;
