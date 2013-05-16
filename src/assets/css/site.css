@@ -21,6 +21,13 @@ header h1 {
 }
    header h1 small {font-weight: 300;}
 
+   img.logo {margin-right: 10px;}
+
+
+h2 {
+   font-weight: 400;
+}
+
 
 /* Tweak navbar brand link to be super sleek
 -------------------------------------------------- */
@@ -110,7 +117,7 @@ body > .navbar {
          #hero .btn .text .small {
             font-size: 14px;
             line-height: 14px;
-            color: #DDD;
+            color: #EEE;
          }
 
       #hero .btn [class^="icon-"] {
@@ -207,3 +214,17 @@ body > .navbar {
    color: #339933;
 }
    .list-tile.green:hover .list-tile-icon { color: #339933; }
+
+
+
+/* About
+-------------------------------------------------- */
+
+.with-margin-left {
+   margin-right: 80px;
+}
+
+.with-margin-bottom {
+   margin-bottom: 30px;
+}
+
