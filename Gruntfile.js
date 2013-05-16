@@ -155,42 +155,31 @@ module.exports = function(grunt) {
             src: 'templates/pages/',
             dest: '_gh_pages/'
          },
-         demo: {
+         demo4ghpages: {
+            options: {
+               assetsPath: '../'
+            },
+            src: 'templates/demo/',
+            dest: '_gh_pages/demo/'
+         },
+         demo4dist: {
+            options: {
+               assetsPath: './'
+            },
             src: 'templates/demo/',
             dest: 'dist/demo/'
          }
       },
 
       builddocs: {
+         options: {
+            assetsPath: '../'
+         },
          dist: {
             src: 'templates/docs/',
             dest: '_gh_pages/docs/'
          }
       } //,
-
-
-//      express: {
-//         options: {
-//            // Override defaults here
-//
-//            // Override node env's PORT
-//            port: 8080,
-//
-//            // Setting to `false` will effectively just run `node path/to/server.js`
-//            background: false,
-//
-//            // Called if spawning the server fails
-//            error: function(err, result, code) {
-//               grunt.log.writeln(err);
-//            }
-//         },
-//         dev: {
-//            options: {
-//               script: 'server/server.js'
-//            }
-//         }
-//      }
-
 
 
    });
@@ -213,7 +202,9 @@ module.exports = function(grunt) {
          'concat:dist',
          'buildtemplates:ghpages',
          'copy:ghpages_assets',
-         'buildtemplates:demo',
+
+         'buildtemplates:demo4ghpages',
+         'buildtemplates:demo4dist',
          'builddocs' //,
          //'copy:docs2dist'
       ]
@@ -225,6 +216,12 @@ module.exports = function(grunt) {
 
       try {
          grunt.log.writeln('\nBuilding ' + this.target + '...');
+
+         // merge options with defaults
+         var options = this.options({
+            assetsPath: './'
+         });
+
 
          this.files.forEach(function(f) {
 
@@ -266,6 +263,10 @@ module.exports = function(grunt) {
                                       .replace(/(.)/, function ($1) {
                                           return $1.toUpperCase()
                                        })
+                  var assetsPath = options.assetsPath
+                  //grunt.log.writeln('   assetsPath = ' + assetsPath)
+                  context.assetspath = assetsPath
+
 
                   var page = getCompiledFile(templatedir + '/' + name)
 
@@ -312,6 +313,11 @@ module.exports = function(grunt) {
 
       try {
          grunt.log.write('\nBuilding docs...');
+
+         // merge options with defaults
+         var options = this.options({
+            assetsPath: './'
+         });
 
          this.files.forEach(function(f) {
 
@@ -368,6 +374,9 @@ module.exports = function(grunt) {
                      .replace(/(.)/, function ($1) {
                         return $1.toUpperCase()
                      })
+                  var assetsPath = options.assetsPath
+                  //grunt.log.writeln('   assetsPath = ' + assetsPath)
+                  docContext.assetspath = assetsPath
 
                   var docPage = getCompiledFile(docTemplateDir + '/' + name)
 
