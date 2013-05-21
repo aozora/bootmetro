@@ -104,6 +104,7 @@ module.exports = function(grunt) {
       },
 
 
+      // merge all bootmetro-*.js in bootmetro.js
       concat: {
          dist: {
             options: {
@@ -111,6 +112,13 @@ module.exports = function(grunt) {
             },
             src: 'src/assets/js/<%= pkg.name %>-*.js',
             dest: 'dist/assets/js/<%= pkg.name %>.js'
+         },
+         min: {
+            options: {
+               banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            },
+            src: 'src/assets/js/min/<%= pkg.name %>-*.js',
+            dest: 'dist/assets/js/min/<%= pkg.name %>.min.js'
          }
       },
 
@@ -123,9 +131,11 @@ module.exports = function(grunt) {
          },
          vendor: {
             files: [
-               {expand: true, cwd: 'src/assets/js/', src: ['bootstrap-*.js'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes bootstrap js
+               {expand: true, cwd: 'src/assets/js/', src: ['bootstrap.js'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes bootstrap js
+               {expand: true, cwd: 'src/assets/js/', src: ['bootstrap.min.js'], dest: 'dist/assets/js/min/', filter: 'isFile'}, // includes bootstrap js
+               {expand: true, cwd: 'src/assets/js/', src: ['bootstrap-datepicker.js'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes bootstrap js
                {expand: true, cwd: 'src/assets/js/', src: ['jquery.touchSwipe.*'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes touchSwipe js
-               {expand: true, cwd: 'src/assets/js/', src: ['jquery-1.8.3.*'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes jquery js
+               {expand: true, cwd: 'src/assets/js/', src: ['jquery-1.9.1.*'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes jquery js
                {expand: true, cwd: 'src/assets/js/', src: ['modernizr-2.6.2.min.js'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes modernizr js
                {expand: true, cwd: 'src/assets/js/', src: ['jquery.mousewheel.*'], dest: 'dist/assets/js/', filter: 'isFile'} // includes mousewheel js
             ]
@@ -190,22 +200,23 @@ module.exports = function(grunt) {
    // Default task(s).
    grunt.registerTask('default',
       [
-         'clean',
-         'jshint',
-         'recess:dist',
-         'recess:min',
-         'uglify:dist',
-         'uglify:min',
-         'copy:js',
-         'copy:vendor',
-         'copy:font',
+         'clean',                         // clean folders _gh_pages & dist
+         'jshint',                        // run jshint on bootmetro js files
+         'recess:dist',                   // generate css from less (not minimized)
+         'recess:min',                    // generate css from less (minimized)
+         'uglify:dist',                   // minimize js files
+         'uglify:min',                    // minimize js files
+         'copy:js',                       // copy bootmetro js to dist
+         'copy:vendor',                   // copy vendor js to dist
+         'copy:font',                     // copy fonts to dist
          'concat:dist',
-         'buildtemplates:ghpages',
-         'copy:ghpages_assets',
+         'concat:min',
+         'buildtemplates:ghpages',        // build main site html to _gh_pages
+         'copy:ghpages_assets',           // copy all assets to _gh_pages
 
-         'buildtemplates:demo4ghpages',
-         'buildtemplates:demo4dist',
-         'builddocs' //,
+         'buildtemplates:demo4ghpages',   // build demo pages to _gh_pages
+         'buildtemplates:demo4dist',      // build demo pages to dist
+         'builddocs' //,                  // build docs pages to _gh_pages
          //'copy:docs2dist'
       ]
    );
