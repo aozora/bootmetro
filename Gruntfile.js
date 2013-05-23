@@ -134,6 +134,7 @@ module.exports = function(grunt) {
                {expand: true, cwd: 'src/assets/js/', src: ['bootstrap.js'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes bootstrap js
                {expand: true, cwd: 'src/assets/js/', src: ['bootstrap.min.js'], dest: 'dist/assets/js/min/', filter: 'isFile'}, // includes bootstrap js
                {expand: true, cwd: 'src/assets/js/', src: ['bootstrap-datepicker.js'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes bootstrap js
+               {expand: true, cwd: 'src/assets/css/', src: ['datepicker.css'], dest: 'dist/assets/css/', filter: 'isFile'}, // includes bootstrap js
                {expand: true, cwd: 'src/assets/js/', src: ['jquery.touchSwipe.*'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes touchSwipe js
                {expand: true, cwd: 'src/assets/js/', src: ['jquery-1.9.1.*'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes jquery js
                {expand: true, cwd: 'src/assets/js/', src: ['modernizr-2.6.2.min.js'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes modernizr js
@@ -148,8 +149,14 @@ module.exports = function(grunt) {
 
          ghpages_assets: {
             files: [
-               {expand: true, cwd: 'src/', src: 'assets/**/*', dest: '_gh_pages/'}
-            ]
+               {expand: true, cwd: 'dist/', src: 'assets/**/*', dest: '_gh_pages/', filter: 'isFile'},
+               {expand: true, cwd: 'src/assets/', src: 'img/**/*', dest: '_gh_pages/assets/', filter: 'isFile'},
+               {expand: true, cwd: 'src/assets/css', src: 'demo.css', dest: '_gh_pages/assets/css/', filter: 'isFile'},
+               {expand: true, cwd: 'src/assets/css', src: 'docs.css', dest: '_gh_pages/assets/css/', filter: 'isFile'},
+               {expand: true, cwd: 'src/assets/css', src: 'site.css', dest: '_gh_pages/assets/css/', filter: 'isFile'},
+               {expand: true, cwd: 'src/assets/js/', src: 'google-code-prettify/**/*', dest: '_gh_pages/assets/js/', filter: 'isFile'},
+               {expand: true, cwd: 'src/assets/js', src: 'holder.js', dest: '_gh_pages/assets/js/', filter: 'isFile'},
+               {expand: true, cwd: 'src/assets/js', src: 'demo.js', dest: '_gh_pages/assets/js/', filter: 'isFile'}            ]
          },
          docs2dist: {
             files: [
