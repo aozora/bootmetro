@@ -155,8 +155,11 @@ module.exports = function(grunt) {
                {expand: true, cwd: 'src/assets/css', src: 'docs.css', dest: '_gh_pages/assets/css/', filter: 'isFile'},
                {expand: true, cwd: 'src/assets/css', src: 'site.css', dest: '_gh_pages/assets/css/', filter: 'isFile'},
                {expand: true, cwd: 'src/assets/js/', src: 'google-code-prettify/**/*', dest: '_gh_pages/assets/js/', filter: 'isFile'},
+               {expand: true, cwd: 'src/assets/js', src: 'Chart.min.js', dest: '_gh_pages/assets/js/min/', filter: 'isFile'},
                {expand: true, cwd: 'src/assets/js', src: 'holder.js', dest: '_gh_pages/assets/js/', filter: 'isFile'},
-               {expand: true, cwd: 'src/assets/js', src: 'demo.js', dest: '_gh_pages/assets/js/', filter: 'isFile'}            ]
+               {expand: true, cwd: 'src/assets/js', src: 'docs.js', dest: '_gh_pages/assets/js/', filter: 'isFile'},
+               {expand: true, cwd: 'src/assets/js', src: 'demo.js', dest: '_gh_pages/assets/js/', filter: 'isFile'}
+            ]
          },
          docs2dist: {
             files: [
