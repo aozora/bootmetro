@@ -15,6 +15,9 @@ body {
    margin: 0;
    padding: 0;
 }
+body {
+   padding-top: 62px;
+}
 
 /*.bs-docs-container {*/
 /*}*/
@@ -47,7 +50,7 @@ body {
 #doc-container,
 #doc-container > .row {
    position: relative;
-   margin-top: 90px;
+   margin-top: 20px;
 }
 
 

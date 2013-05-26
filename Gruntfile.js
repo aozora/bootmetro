@@ -134,7 +134,7 @@ module.exports = function(grunt) {
                {expand: true, cwd: 'src/assets/js/', src: ['bootstrap.js'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes bootstrap js
                {expand: true, cwd: 'src/assets/js/', src: ['bootstrap.min.js'], dest: 'dist/assets/js/min/', filter: 'isFile'}, // includes bootstrap js
                {expand: true, cwd: 'src/assets/js/', src: ['bootstrap-datepicker.js'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes bootstrap js
-               {expand: true, cwd: 'src/assets/css/', src: ['datepicker.css'], dest: 'dist/assets/css/', filter: 'isFile'}, // includes bootstrap js
+               {expand: true, cwd: 'src/assets/css/',src: ['datepicker.css'], dest: 'dist/assets/css/', filter: 'isFile'}, // includes bootstrap js
                {expand: true, cwd: 'src/assets/js/', src: ['jquery.touchSwipe.*'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes touchSwipe js
                {expand: true, cwd: 'src/assets/js/', src: ['jquery-1.10.0.*'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes jquery js
                {expand: true, cwd: 'src/assets/js/', src: ['modernizr-2.6.2.min.js'], dest: 'dist/assets/js/', filter: 'isFile'}, // includes modernizr js
