@@ -10,7 +10,8 @@
  * Module dependencies.
  */
 
-var express = require('express')
+var web_path = __dirname + '/../_gh_pages/'
+   ,express = require('express')
    ,http = require('http')
    ,fs = require('fs')
    ,path = require('path');
@@ -46,7 +47,7 @@ app.use(express.logger(':method :url :status'));
 app.use(express.compress());
 
 // serve static files
-app.use(express.static(__dirname + '/../_gh_pages/'));
+app.use(express.static(web_path));
 
 //// express router
 //app.use(app.router);

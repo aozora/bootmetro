@@ -20,7 +20,7 @@ The framework integrate and extend the work first done by other great people:
 
 ### Prepare your environment
 * Install Node.js and NPM (should come with)
-* Install global dev dependencies: npm install -g grunt-cli karma
+* Install global dev dependencies (Windows users should run it as administrator): npm install -g grunt-cli karma
 * Instal local dev dependencies: npm install while current directory is bootmetro repo
 
 ### Build

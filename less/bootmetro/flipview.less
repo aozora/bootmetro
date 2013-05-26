@@ -3,37 +3,58 @@
 // --------------------------------------------------
 
 .carousel.flipview {
+   .carousel-control {
+      display: none;
+      left: 0;
+      width: 60px;
+      height: 40px;
+      border: 0;
+      .no-border-radius;
+      font-size: 20px;
+      line-height: 40px;
+      .opacity(100);
+      background: rgba(255, 255, 255, 0.6);
+      font-family: "IcoMoon";
+      color: @black;
 
-}
+      &.right {
+         left: auto;
+         right: 0;
+      }
 
-// Left/right controls for nav
-// ---------------------------
+      &.right:after {
+         content: "\e12a";
+      }
+      &.left:after {
+         content: "\e127";
+      }
 
-.carousel.flipview .carousel-control {
-   display: none;
-   left: 0;
-   width: 60px;
-   height: 40px;
-   border: 0;
-   .no-border-radius;
-   font-size: 20px;
-   line-height: 40px;
-   .opacity(100);
-   background: rgba(255, 255, 255, 0.6);
-   color: @black;
 
-// Reposition the right one
-   &.right {
-      left: auto;
-      right: 0;
+      // Hover state
+      &:hover {
+         .opacity(90);
+      }
    }
 
-// Hover state
    &:hover {
-      .opacity(90);
+      .carousel-control {
+            display: block;
+      }
    }
+
 }
 
-.carousel.flipview:hover .carousel-control {
-   display: block;
-}
+
+//
+//.carousel.flipview .carousel-control.right {
+//   left: auto;
+//   right: 0;
+//   content: "\e12a";
+//}
+//.carousel.flipview .carousel-control.left {
+//   content: "\e127";
+//}
+//
+//.carousel.flipview:hover .carousel-control {
+//   display: block;
+//}

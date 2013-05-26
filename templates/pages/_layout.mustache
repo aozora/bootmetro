@@ -63,29 +63,26 @@
    {{>charms}}
 
    <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-   <script>window.jQuery || document.write("<script src='assets/js/jquery-1.9.1.min.js'>\x3C/script>")</script>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+   <script>window.jQuery || document.write("<script src='assets/js/jquery-1.10.0.min.js'>\x3C/script>")</script>
 
    <!--[if IE 7]>
    <script type="text/javascript" src="assets/js/bootmetro-icons-ie7.js">
    <![endif]-->
 
    <script type="text/javascript" src="assets/js/google-code-prettify/prettify.js"></script>
-   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="assets/js/min/bootstrap.min.js"></script>
    <script type="text/javascript" src="assets/js/bootmetro-panorama.js"></script>
    <script type="text/javascript" src="assets/js/bootmetro-pivot.js"></script>
    <script type="text/javascript" src="assets/js/bootmetro-charms.js"></script>
    <script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
-   <script type="text/javascript" src="assets/js/demo.js"></script>
-   <script type="text/javascript" src="assets/js/holder.js"></script>
    <script type="text/javascript">
-      $('.panorama').panorama({
-         nicescroll: true,
-         showscrollbuttons: true,
-         keyboard: true
+      $(function(){
+
+         $('#pivot').pivot();
+
       });
 
-      $('#pivot').pivot();
    </script>
 </body>
 </html>
