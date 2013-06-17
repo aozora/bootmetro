@@ -789,6 +789,24 @@ h2 + .row {
 }
 
 
+/* Toasts
+------------------------- */
+
+ #alerts-container {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    padding: 0;
+    z-index: 1100;
+ }
+
+ #alerts-container .toast {
+    /* add a shadow */
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+ }
+
 
 /* Bootstrap code examples
 -------------------------------------------------- */

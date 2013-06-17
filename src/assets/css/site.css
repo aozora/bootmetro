@@ -87,7 +87,7 @@ body > .navbar {
 #hero {
    display: block;
    position: relative;
-   margin: 30px 0 0 0;
+   margin: 30px 0;
 }
    #hero p.lead {
       font-size: 24px;
@@ -136,58 +136,70 @@ body > .navbar {
    margin-top: 60px;
 }
 
-
-.list-tile {
-   -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-           box-sizing: border-box;
-   border-left: 3px solid transparent;
-   color: #FFF;
-   display: inline-block;
-   min-height: 62px;
-   margin-bottom: 10px;
-   padding: 10px;
-   position: relative;
-   vertical-align: top;
+.listview-item .listview-item-heading {
+   font-size: 20px;
 }
 
-   .list-tile.blue {
-      background-color: #2E8BCC;
-      border-color: #2E8BCC;
-   }
-   .list-tile.green {
-      background-color: #339933;
-      border-color: #339933;
-   }
+#donate-list h4 {
+   font-size: 18px;
+   text-align: center;
+}
+#donate-list .donate-form {
+   margin: 0 auto;
+   text-align: center;
+}
 
-   .list-tile h4, .list-tile h5 {
-      display: inline;
-   }
-   .list-tile h4 {
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 40px;
-   }
-   .list-tile h5 {
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 20px;
-      padding-right: 80px;
-   }
+/*.list-tile {*/
+   /*-webkit-box-sizing: border-box;*/
+      /*-moz-box-sizing: border-box;*/
+           /*box-sizing: border-box;*/
+   /*border-left: 3px solid transparent;*/
+   /*color: #FFF;*/
+   /*display: inline-block;*/
+   /*min-height: 62px;*/
+   /*margin-bottom: 10px;*/
+   /*padding: 10px;*/
+   /*position: relative;*/
+   /*vertical-align: top;*/
+/*}*/
 
-   .list-tile .list-tile-icon {
-      color: #FFFFFF;
-      display: block;
-      font-size: 40px;
-      font-weight: 400;
-      height: 100%;
-      line-height: 62px;
-      position: absolute;
-      right: 0;
-      text-align: center;
-      top: 0;
-      width: 80px;
-   }
+   /*.list-tile.blue {*/
+      /*background-color: #2E8BCC;*/
+      /*border-color: #2E8BCC;*/
+   /*}*/
+   /*.list-tile.green {*/
+      /*background-color: #339933;*/
+      /*border-color: #339933;*/
+   /*}*/
+
+   /*.list-tile h4, .list-tile h5 {*/
+      /*display: inline;*/
+   /*}*/
+   /*.list-tile h4 {*/
+      /*font-size: 20px;*/
+      /*font-weight: 400;*/
+      /*line-height: 40px;*/
+   /*}*/
+   /*.list-tile h5 {*/
+      /*font-size: 18px;*/
+      /*font-weight: 400;*/
+      /*line-height: 20px;*/
+      /*padding-right: 80px;*/
+   /*}*/
+
+   /*.list-tile .list-tile-icon {*/
+      /*color: #FFFFFF;*/
+      /*display: block;*/
+      /*font-size: 40px;*/
+      /*font-weight: 400;*/
+      /*height: 100%;*/
+      /*line-height: 62px;*/
+      /*position: absolute;*/
+      /*right: 0;*/
+      /*text-align: center;*/
+      /*top: 0;*/
+      /*width: 80px;*/
+   /*}*/
       /*.list-tile.blue  .list-tile-icon {*/
          /*background-color: #2E8BCC;*/
       /*}*/
@@ -195,25 +207,25 @@ body > .navbar {
          /*background-color: #339933;*/
       /*}*/
 
-.list-tile .donate-form {
-   margin: 10px auto;
-   text-align: center;
-}
+/*.list-tile .donate-form {*/
+   /*margin: 10px auto;*/
+   /*text-align: center;*/
+/*}*/
 
 /* hover */
-.list-tile.blue:hover {
-   text-decoration: none;
-   background-color: #C9E2F3;
-   color: #2E8BCC;
-}
-   .list-tile.blue:hover .list-tile-icon { color: #2E8BCC; }
+/*.list-tile.blue:hover {*/
+   /*text-decoration: none;*/
+   /*background-color: #C9E2F3;*/
+   /*color: #2E8BCC;*/
+/*}*/
+   /*.list-tile.blue:hover .list-tile-icon { color: #2E8BCC; }*/
 
-.list-tile.green:hover {
-   text-decoration: none;
-   background-color: #ABE3AB;
-   color: #339933;
-}
-   .list-tile.green:hover .list-tile-icon { color: #339933; }
+/*.list-tile.green:hover {*/
+   /*text-decoration: none;*/
+   /*background-color: #ABE3AB;*/
+   /*color: #339933;*/
+/*}*/
+   /*.list-tile.green:hover .list-tile-icon { color: #339933; }*/
 
 
 
