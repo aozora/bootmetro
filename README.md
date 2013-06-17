@@ -2,26 +2,52 @@
 
 
 BootMetro provides simple and flexible HTML, CSS, and Javascript for web apps that wants to use the "Windows 8 MetroUI" style, without the need to run on Windows 8.
-It is built on top of Twitter Bootstrap and was originally inspired by the Metro UI CSS by Sergey Pimenov.
+It is built on top of Twitter Bootstrap and HTML5 Boilerplate.
 
 
 ## Features
-The framework permit to create web applications with the look&feel of the not-yet-released Windows 8 MetroUI style.
+The framework permit to create web applications with the look&feel of Windows 8 "Windows Store App" (ex "MetroUI" style).
 Maybe not ideal for internet web sites, the MetroUI style can be adopted for modern intranet web sites.
-I've choosen to use as base the awesome Twitter Bootstrap framework, applying a set of customizations in pure css (but planning to do it in LESS for future version).
+I've choose to use as base the awesome Twitter Bootstrap framework, applying a set of customizations in pure css.
 
 
 The framework integrate and extend the work first done by other great people:
    - [HTML5 Boilerplate](http://html5boilerplate.com/)
    - [Twitter Bootstrap](http://twitter.github.com/bootstrap)
-   - [Metro UI CSS by Sergey Pimenov](http://metroui.org.ua/)
    - [IcoMoon](http://keyamoon.com/icomoon/#toHome)
 
+## Build from sources
+
+### Prepare your environment
+* Install Node.js and NPM (should come with)
+* Install global dev dependencies (Windows users should run it as administrator): npm install -g grunt-cli karma
+* Instal local dev dependencies: npm install while current directory is bootmetro repo
+
+### Build
+To build the whole project run 'grunt' in the project directory.
 
 ## Versioning
 
-### Latest Release: v0.6
+### Latest Release: v1.0
+* BREAKING CHANGES:
+   * icomoon.css is now bootmetro-icons.css and is recomended to have it before bootmetro.css
+   * bootmetro.js is now bootmetro-panorama.js
+      * classes in hub.html to use panorama scroll, are changed from metro* to panorama*
+* moved bootmetro main css files to LESS
+* upgraded to jQuery 1.8.3
+* upgraded to Modernizr 2.6.2
+* integrated HTML5 Boilerplate 4.0.1
+* added metro controls:
+   * new panorama
+   * new pivot
+   * Metro Progress Bars, determinate & indeterminate & ring
+   * Metro styled date picker
+   * FlipView
+   * Toast notifications
+* Metro Layouts
+* use NiceScroll for Hub scrolling with touch support
 
+## v0.6
 * Various bug fixes
 * restored correct use of OpenSans web font
 * upgraded to use Twitter Bootstrap v2.2.1
@@ -31,7 +57,6 @@ The framework integrate and extend the work first done by other great people:
 
 ## ToDo
 
-* fix charms & charms animation like bootstrap plugins
 * check layout guideline on "Understanding the Windows 8 silhouette"
    * make 2 layout grid: h-scroll + v-scroll
 * (almost done) Complete the implementation of the tiles templates (add counter & mini ico)
@@ -39,6 +64,8 @@ The framework integrate and extend the work first done by other great people:
 * demo image thumbs selectables
 * demo charms with docs
 
+## License
+BootMetro is dual licensed, GPL-2 and Apache-2; see the LICENSE file.
 
 ## Links
 

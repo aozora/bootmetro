@@ -1,0 +1,838 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
+/*
+  Bootstrap's documentation styles
+  Special styles for presenting Bootstrap's documentation and examples
+*/
+
+
+
+/* Body and structure
+-------------------------------------------------- */
+html,
+body {
+   position: relative;
+   margin: 0;
+   padding: 0;
+}
+body {
+   padding-top: 62px;
+}
+
+/*.bs-docs-container {*/
+/*}*/
+
+.bs-docs-footer {
+  padding-left:  15px;
+  padding-right: 15px;
+}
+
+/* Back to top link */
+.bs-docs-top {
+  float: left;
+  padding: 7px 15px;
+  font-weight: 500;
+  color: #999;
+  background-color: #eee;
+}
+.bs-docs-top:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #999;
+}
+.bs-docs-top.affix {
+  position: fixed;
+  right:  15px;
+  bottom: 15px;
+}
+
+
+#doc-container,
+#doc-container > .row {
+   position: relative;
+   margin-top: 20px;
+}
+
+
+
+/* Sections
+-------------------------------------------------- */
+
+/* Padding for in-page bookmarks */
+section,
+.bs-docs-section {
+  padding-top: 30px;
+}
+
+
+.bs-docs-section h1, .bs-docs-section h2, .bs-docs-section h3, .bs-docs-section h4, .bs-docs-section h5, .bs-docs-section h6 {
+   margin: 10px 0;
+}
+
+.bs-docs-section-header {
+   background-color: #EEEEEE;
+   border-left: 5px solid #0177DB;
+   color: #444;
+   /*margin-top: 60px;*/
+   padding: 0 10px;
+}
+
+.bs-docs-section-header h1 {
+   font-size: 42pt;
+   line-height: 1;
+}
+
+/* Few stylistic typography tweaks */
+section > .page-header,
+section > .lead {
+  color: #5a5a5a;
+}
+section > ul li {
+  margin-bottom: 5px;
+}
+
+
+
+/* Separators (hr) */
+.bs-docs-separator {
+   margin: 40px 0 39px;
+}
+
+
+/* Faded out hr
+hr.soften {
+   height: 1px;
+   margin: 70px 0;
+   background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+   background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+   background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+   background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+   border: 0;
+}
+*/
+
+
+/* Jumbotrons
+-------------------------------------------------- */
+
+
+
+
+/* Masthead (docs home)
+------------------------- */
+
+
+
+
+/* Special grid styles
+-------------------------------------------------- */
+
+.show-grid {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.show-grid [class*="span"] {
+  background-color: #eee;
+  text-align: center;
+  min-height: 40px;
+  line-height: 40px;
+}
+.show-grid [class*="span"]:hover {
+  background-color: #ddd;
+}
+.show-grid .show-grid {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.show-grid .show-grid [class*="span"] {
+  margin-top: 5px;
+}
+.show-grid [class*="span"] [class*="span"] {
+  background-color: #ccc;
+}
+.show-grid [class*="span"] [class*="span"] [class*="span"] {
+  background-color: #999;
+}
+
+
+/* Documentation Metro Navbar
+-------------------------------------------------- */
+
+.bs-docs-docs .navbar.metro-navbar.navbar-fixed-top {
+   z-index: 1065;
+}
+
+.bs-docs-docs .navbar.metro-navbar .brand {
+   line-height: 20px;
+}
+.bs-docs-docs .navbar.metro-navbar .brand small {
+   font-size: 20px;
+   line-height: 20px;
+   display: block;
+}
+
+
+
+/* Sidenav
+-------------------------------------------------- */
+
+.bs-docs-sidebar {
+   display: block;
+}
+
+.bs-docs-sidenav {
+   position: fixed;
+   width: 228px;
+   height: 80%;
+   margin: 0;
+   padding: 0;
+   background-color: #fff;
+   overflow-y: auto;
+}
+   .bs-docs-sidenav.affix,
+   .bs-docs-sidenav.affix-top,
+   .bs-docs-sidenav.affix-bottom {
+      top: 60px;
+   }
+
+
+
+/* Browser support icons
+-------------------------------------------------- */
+#browsers li i {
+   font-size: 32px;
+   font-weight: 300;
+   line-height: 34px;
+   color: #0177DB;
+}
+
+
+
+/* Bootstrap code examples
+-------------------------------------------------- */
+
+/* Base class */
+.bs-docs-example {
+  position: relative;
+  margin: 15px 0;
+  padding: 39px 19px 14px;
+  *padding-top: 19px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+/* Echo out a label for the example */
+.bs-docs-example:after {
+  content: "Example";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #9da0a4;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+}
+
+/* Tweak display of the examples */
+.bs-docs-example + .prettyprint {
+  margin-top: -20px;
+  padding-top: 15px;
+}
+
+
+/* Tweak content of examples for optimum awesome */
+.bs-docs-example > p:last-child,
+.bs-docs-example > ul:last-child,
+.bs-docs-example > ol:last-child,
+.bs-docs-example > blockquote:last-child,
+.bs-docs-example > input:last-child,
+.bs-docs-example > select:last-child,
+.bs-docs-example > textarea:last-child,
+.bs-docs-example > .table:last-child,
+.bs-docs-example > .jumbotron:last-child,
+.bs-docs-example > .alert:last-child,
+.bs-docs-example > .panel:last-child,
+.bs-docs-example > .list-group:last-child,
+.bs-docs-example > .well:last-child {
+  margin-bottom: 0;
+}
+
+/* Typography */
+.bs-docs-example-type .table td {
+  color: #999;
+  vertical-align: middle;
+  /*border-color: ;*/
+}
+.bs-docs-example-type .table td,
+.bs-docs-example-type .table th {
+  padding: 15px 0;
+  border-color: #eee;
+}
+.bs-docs-example-type .table tr:first-child td,
+.bs-docs-example-type .table tr:first-child th {
+  border-top: 0;
+}
+.bs-docs-example-type h1,
+.bs-docs-example-type h2,
+.bs-docs-example-type h3,
+.bs-docs-example-type h4,
+.bs-docs-example-type h5,
+.bs-docs-example-type h6 {
+  margin: 0;
+}
+
+/* List groups */
+.bs-docs-example > .list-group {
+  max-width: 400px;
+}
+
+/* Navbar examples */
+.bs-navbar-top-example,
+.bs-navbar-bottom-example {
+  z-index: 1;
+  padding: 0;
+  height: 90px;
+  overflow: hidden; /* cut the drop shadows off */
+}
+.bs-navbar-top-example .navbar-fixed-top,
+.bs-navbar-bottom-example .navbar-fixed-bottom {
+  margin-left: 0;
+  margin-right: 0;
+}
+.bs-navbar-top-example {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+.bs-navbar-top-example:after {
+  top: auto;
+  bottom: -1px;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+.bs-navbar-bottom-example {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+.bs-navbar-bottom-example .navbar {
+  margin-bottom: 0;
+}
+
+/* Example modals */
+.bs-docs-example-modal {
+  background-color: #f5f5f5;
+}
+.bs-docs-example-modal .modal {
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  z-index: 1;
+  display: block;
+}
+.bs-docs-example-modal .modal-dialog {
+  left: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Example dropdowns */
+.bs-docs-example > .dropdown > .dropdown-menu,
+.bs-docs-example-submenu > .pull-left > .dropup > .dropdown-menu,
+.bs-docs-example-submenu > .pull-left > .dropdown > .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 5px;
+}
+.bs-docs-example-submenu {
+  min-height: 230px;
+}
+.bs-docs-example-submenu > .pull-left + .pull-left {
+  margin-left: 20px;
+}
+
+/* Example tabbable tabs */
+.bs-docs-example-tabs .nav-tabs {
+  margin-bottom: 15px;
+}
+
+/* Tooltips */
+.bs-docs-tooltip-examples {
+  text-align: center;
+  margin: 0 0 10px;
+  list-style: none;
+}
+.bs-docs-tooltip-examples li {
+  display: inline;
+  padding: 0 10px;
+}
+
+/* Popovers */
+.bs-docs-example-popover {
+  padding-bottom: 24px;
+  background-color: #f9f9f9;
+}
+.bs-docs-example-popover .popover {
+  position: relative;
+  display: block;
+  float: left;
+  width: 260px;
+  margin: 20px;
+}
+
+
+/* Dropdowns */
+.bs-docs-example-submenus {
+  min-height: 180px;
+}
+.bs-docs-example-submenus > .pull-left + .pull-left {
+  margin-left: 20px;
+}
+.bs-docs-example-submenus .dropup > .dropdown-menu,
+.bs-docs-example-submenus .dropdown > .dropdown-menu {
+  display: block;
+  position: static;
+  margin-bottom: 5px;
+  *width: 180px;
+}
+
+
+/* Metro Page Header */
+.bs-docs-example-metro-page-header h1 {
+   margin-top: 4px;
+}
+
+.bs-docs-example-metro-page-header h5 {
+   margin: 0;
+}
+
+/* Toast notifications */
+.bs-docs-example-toasts-demo .toast {
+   display: none;
+}
+
+.bs-docs-example-toasts .toast h4 {
+   margin: 0;
+}
+
+
+/* Pivot */
+.bs-docs-example-pivot {
+   background-color: #FFF;
+}
+
+
+
+/* ListView */
+.bs-docs-example-listview .listview {
+   border: solid 2px rgba(0, 0, 0, 0.13);
+   height: 240px;
+   background-color: #FFF;
+
+}
+.bs-docs-example-listview .listview.list-layout {
+   height: 340px;
+}
+
+.bs-docs-example-listview .listview-item h4,
+.bs-docs-example-listview .listview-item h5{
+   margin: 0;
+}
+
+
+/* Tiles */
+.bs-docs-example-tiles .tile {
+   float: none;
+}
+
+
+
+
+/* Welcome getting started
+-------------------------------------------------- */
+#getting-started .btn.btn-large {
+   line-height: 34px;
+   font-size: 24px;
+}
+   #getting-started .btn.btn-large i {
+      font-size: 32px;
+      line-height: 32px;
+      margin-left: 20px;
+   }
+
+
+
+/* Icons
+-------------------------------------------------- */
+
+#icomoon-container .the-icons.clearfix:before,
+#icomoon-container .the-icons.clearfix:after { content: ""; display: table; }
+#icomoon-container .the-icons.clearfix:after { clear: both; }
+
+#icomoon-container .the-icons {
+  padding-bottom: 1px;
+  margin-left: 0;
+  list-style: none;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#icomoon-container .the-icons .box1 {
+   display: inline-block;
+   vertical-align: top;
+   width: 12em;
+   height: 110px;
+   margin: 0 -1px -1px 0;
+   padding: 10px;
+   border: 1px solid #ddd;
+   font-size: 12px;
+   line-height: 1.25;
+   text-align: center;
+   letter-spacing: normal;
+   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#icomoon-container .the-icons .box1 span {
+  display: block;
+  margin: 5px auto;
+  vertical-align: middle;
+  /*margin-right: 3px;*/
+  font-size: 32px;
+}
+#icomoon-container .the-icons .box1:hover {
+  background-color: rgba(255,0,0,.1);
+}
+
+
+
+/* Responsive docs
+-------------------------------------------------- */
+
+/* Related: responsive utilities tables */
+.table code {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+/* Utility classes table
+------------------------- */
+.responsive-utilities th small {
+  display: block;
+  font-weight: normal;
+  color: #999;
+}
+.responsive-utilities tbody th {
+  font-weight: normal;
+}
+.responsive-utilities td {
+  text-align: center;
+}
+.responsive-utilities td.is-visible {
+  color: #468847;
+  background-color: #dff0d8 !important;
+}
+.responsive-utilities td.is-hidden {
+  color: #ccc;
+  background-color: #f9f9f9 !important;
+}
+
+/* Responsive tests
+------------------------- */
+.responsive-utilities-test {
+  margin-top: 5px;
+  margin-left: 0;
+  list-style: none;
+  overflow: hidden; /* clear floats */
+}
+.responsive-utilities-test li {
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 43px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 43px;
+  color: #999;
+  text-align: center;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+.responsive-utilities-test li + li {
+  margin-left: 10px;
+}
+.responsive-utilities-test span {
+  position: absolute;
+  top:    -1px;
+  left:   -1px;
+  right:  -1px;
+  bottom: -1px;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+.responsive-utilities-test span {
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+}
+
+
+
+/* Footer
+-------------------------------------------------- */
+
+.bs-docs-footer {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 100px;
+  border-top: 1px solid #e5e5e5;
+}
+.bs-docs-footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  display: inline;
+  padding: 0 2px;
+}
+.footer-links li:first-child {
+  padding-left: 0;
+}
+
+/* Social proof buttons from GitHub & Twitter */
+.bs-docs-social {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* Quick links on Home */
+.bs-docs-social-buttons {
+  display: inline-block;
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+}
+.bs-docs-social-buttons li {
+  display: inline-block;
+  padding: 5px 8px;
+  line-height: 1;
+}
+.bs-docs-social-buttons .twitter-follow-button {
+  width: 225px !important;
+}
+.bs-docs-social-buttons .twitter-share-button {
+  width: 98px !important;
+}
+
+
+
+
+/* Misc docs stuff
+-------------------------------------------------- */
+
+/* Pseudo :focus state for showing how it looks in the docs */
+input.focused {
+  border-color: rgba(82,168,236,.8);
+  outline: 0;
+  outline: thin dotted \9; /* IE6-9 */
+  -moz-box-shadow: 0 0 8px rgba(82,168,236,.6);
+       box-shadow: 0 0 8px rgba(82,168,236,.6);
+}
+
+/* Scrollspy demo on fixed height div */
+.scrollspy-example {
+  position: relative;
+  height: 200px;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+.highlight {
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+.highlight pre {
+  padding: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 0;
+}
+.highlight pre code {
+  font-size: inherit;
+  color: #333; /* Effectively the base text color */
+}
+.highlight pre .lineno {
+  display: inline-block;
+  width: 22px;
+  padding-right: 5px;
+  margin-right: 10px;
+  text-align: right;
+  color: #bebec5;
+}
+
+
+
+
+/* Docs gallery
+-------------------------------------------------- */
+
+.bs-docs-gallery .thumbnail {
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+
+
+
+
+
+/* Metro Components
+-------------------------------------------------- */
+
+.win-command.orange .win-commandicon,
+.win-command.orange .win-label {
+   color: #F09609;
+}
+.win-command.orange .win-commandring {
+   border-color: #F09609;
+}
+.win-command.orange:hover .win-commandring {
+   background-color: rgba(240, 150, 9, 0.4);
+}
+
+
+/* Alerts
+----------------- */
+
+#alerts-container {
+   position: fixed;
+   top: 5px;
+   right: 5px;
+   padding: 0;
+   z-index: 1100;
+}
+
+#alerts-container .toast {
+   /* add a shadow */
+   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Responsive variations
+-------------------------------------------------- */
+
+/* Hide code snippets on mobile devices */
+@media screen and (max-width: 480px) {
+  .bs-docs-example {
+    border-radius: 0;
+  }
+  .highlight {
+    display: none;
+  }
+}
+
+/* Tablets and up */
+@media screen and (min-width: 768px) {
+
+  /* Account for fixed navbar (which is static to start) */
+  /*.bs-docs-docs {*/
+    /*padding-left: 260px;*/
+  /*}*/
+
+  /* Undo custom padding */
+  .bs-docs-container,
+  .bs-home-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Show the docs nav */
+  .bs-docs-sidebar {
+    display: block;
+  }
+
+   /* Adjust sidenav width */
+   .bs-docs-sidenav {
+      width: 166px;
+      margin-top: 20px;
+   }
+   .bs-docs-sidenav.affix {
+      top: 60px;
+   }
+
+
+   /* Tweak display of docs jumbotrons */
+  .masthead {
+    padding-top:    100px;
+    padding-bottom: 100px;
+  }
+  .masthead h1 {
+    font-size: 100px;
+  }
+  .masthead p {
+    font-size: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .subhead {
+    padding-top:    60px;
+    padding-bottom: 60px;
+    text-align: left;
+  }
+
+}
+
+/* Tablets/desktops and up */
+@media screen and (min-width: 992px) {
+
+  /*.bs-docs-docs {*/
+    /*padding-left: 280px;*/
+  /*}*/
+
+  /* Icons
+  .the-icons li {
+    width: 12.5%;
+  }*/
+   /* When affixed, space properly */
+   .bs-docs-sidenav {
+      top: 0;
+      width: 218px;
+      margin-top: 30px;
+      margin-right: 0;
+   }
+
+}
+
+/* Large desktops and up */
+@media screen and (min-width: 1200px) {
+  /*.bs-docs-docs {*/
+    /*padding-left: 300px;*/
+  /*}*/
+   .bs-docs-container {
+      max-width: 970px;
+   }
+   .bs-docs-sidenav {
+      width: 258px;
+   }
+   .bs-docs-sidenav > li > a {
+      width: 230px \9; /* Override the previous IE8-9 hack */
+   }
+
+}
+
+

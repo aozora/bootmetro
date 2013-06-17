@@ -1,0 +1,146 @@
+=================================
+v1.0.0 alpha1
+=================================
+This release must be considered as a stabilization of v0.6.
+The v2.0 will be completely redone from scratch using as base Twitter Bootstrap v3.
+
+BREAKING CHANGES:
+   - Replaced icomoon font with a new icomoon set generated with PUA. Many icon-* class names has changed;
+   - internal mapping of char codes has changed, please be patient and check every icon you used.
+   - the static resources in the content folder has been moved to the assets folder
+   - toast markup has changed, now it is conforming to the bootstrap media object model.
+   - listview markup has changed, now it is conforming to the bootstrap media object model.
+   - removed default padding-top: 24px and padding-bottom: 88px (scaffolding.less)
+
+List of changes:
+------------------
+bug fixes for 0.6
+New and revamped documentation pages, separated from demo pages, with all metro widgets & customization integrated with the original bootstrap documentation.
+updated Bootstrap Less files to latest v2.3.1
+new Metro Nav List (like the one used in the doc sidebar)
+new Page Header with back button and various styles
+new RTL support for metro checkboxes & radio buttons
+move CSS to LESS and integrate build with Bootstrap (backported from 1.0)
+complete Tiles templates (backported from 1.0)
+Toast notifications (backported from 1.0 with changes)
+ListView (backported from 1.0 with changes)
+Pivot view (like WP8) (backported from 1.0)
+Dual license GPL2 + Apache2
+
+Panorama plugin & Hub:
+   - new options
+   - simplified markup
+
+
+
+
+=================================
+v1.0 pre (16/12/2012)
+=================================
+The definition of the CSS rule for selector [class^="icon-"],[class*=" icon-"] has changed, now it doesn't have
+anymore the font-size, width, height and line-height rules.
+
+BREAKING CHANGES:
+
+Commands buttons:
+-----------------
+The class .win-commandimage has changed behavior, now it must be used to display pictures inside a .win-command
+Instead you must use the class .win-commandicon to display icons from the webfont IcoMoon.
+See on the new Command Buttons section in the Metro Components Page.
+Use of IcoMoon character code like &#xe03e; in the content is DEPRECATED and is recommended to replace any use of that
+with the equivalent css class defined in bootmetro-icons.css|less.
+NOTE that for the v1.0 final release, the bootmetro-icons.css|less will be subject to change replacing all character codes with new ones
+within the PUA; Css class names will not change!
+
+
+
+=================================
+v1.0 pre (13/12/2012)
+=================================
+Merged with Twitter Bootstrap v2.2.2
+
+
+
+=================================
+v1.0 pre (10/12/2012)
+=================================
+
+Pivot plugin (bootmetro-pivot.js)
+---------------------------------
+Removed registration of click event using the selector '.pivot .pivot-headers > a';
+implemented data-api like bootstrap plugins, which register click event with the selector '[data-pivot-index]' on the document.
+This also frees you to locate the the pivot clickable elements anywhere in the document.
+
+
+IcoMoon web font
+---------------------------------
+There is a temporary fix for the problem reported in Issue #51 'Icons not showing up in chrome', changing the bootmetro-icons css
+to exchange the registration order of the font. However this fix should work only for Chrome, still remains the issue for some Firefox users
+on Windows; the final fix will be available in the next commits with a regeneration of the css for IcoMoon.
+
+
+All pages header markup
+---------------------------------
+I'm refactoring the markup for the header, that have the most problems for lower resolution devices; the work is not yet finished, the committed
+markup may change in net commits.
+
+
+All pages markup
+---------------------------------
+Fixed the case for the DOCTYPE directive to be standard compliant.
+
+
+
+
+=================================
+v1.0 pre (07/12/2012)
+=================================
+
+Pivot plugin (bootmetro-pivot.js)
+---------------------------------
+The markup for the pivot-headers anchors has changed: the attribute data-to has been renamed to data-pivot-index, so now it's name is more semantic, since his value is the index of the item to display.
+Note that the pivot plugin, due to the fact that in reality is the bootstrap-carousel with something less, has a serious issue (see https://github.com/aozora/bootmetro/issues/45 ) that probably  will lead me to rewrite this plugin from zero; I hope in that case to not break anything.
+
+
+Panorama
+---------------------------------
+The markup has changed from:
+
+      <div id="hub" class="metro panorama span12">
+
+            <div class="panorama-sections">
+
+            ...
+            </div>
+      </div>
+      <a id="panorama-scroll-prev" href="#">&#xe05d;</a>
+      <a id="panorama-scroll-next" href="#">&#xe059;</a>
+
+to this:
+
+      <div id="hub" class="metro span12">
+
+         <div class="panorama">
+
+            <div class="panorama-sections">
+
+            ...
+            </div>
+         </div>
+         <a id="panorama-scroll-prev" href="#">&#xe05d;</a>
+         <a id="panorama-scroll-next" href="#">&#xe059;</a>
+      </div>
+
+
+All pages markup:
+---------------------------------
+In all the demo pages I replaced the fluid css classes with the non fluid ones, so "container-fluid" is now, "container", and "row-fluid" is "row".
+
+On the header element <header id="nav-bar"> I have removed the -fluid suffix from his inner div's; the elements <div id="header-container"> and <div id="top-info"> are now contained in the same div with class="span12"; before that row was split within 2 span.
+This change was necessary to improve the responsive design for the header for lower resolutions ( < 798px width).
+
+
+Theme Css Files
+---------------------------------
+the theme css files, metro-ui-light and metro-ui-dark are no longer used. metro-ui-light is renamed bootmetro-ui-light, and it is built with less.
+The dark theme will be rebuilt with less in the next minor release.

@@ -1,0 +1,242 @@
+/* Body and structure
+-------------------------------------------------- */
+html,
+body {
+   position: relative;
+   background: transparent url(../img/bkg-4.png) repeat 0 0;
+   /*background-color: #f2f0e4;*/
+   color: #847d6b;
+   /*padding-top: 40px;*/
+}
+
+.accent-color, header h1, header h2, table th {
+    color: #847d6b;
+}
+
+header h1 {
+   font-size: 50px;
+   font-weight: 300;
+   line-height: 54px;
+   color: #444;
+}
+   header h1 small {font-weight: 300;}
+
+   img.logo {margin-right: 10px;}
+
+
+h2 {
+   font-weight: 400;
+}
+
+
+/* Tweak navbar brand link to be super sleek
+-------------------------------------------------- */
+
+#nav-bar {
+   height: auto;
+}
+
+body > .navbar {
+   font-size: 13px;
+}
+
+#header-nav {
+   position: relative;
+}
+#header-nav .nav.nav-links {
+   *zoom: 1;
+}
+   #header-nav .nav.nav-links:before,
+   #header-nav .nav.nav-links:after {
+      display: table;
+      content: "";
+      line-height: 0;
+   }
+   #header-nav .nav.nav-links:after {
+      clear: both;
+   }
+
+   #header-nav .nav.nav-links {
+      margin-bottom: 10px;
+   }
+      #header-nav .nav.nav-links > li {
+         float: left;
+      }
+         #header-nav .nav.nav-links a {
+            margin: 0 30px 0 0;
+            font-weight: 300;
+            text-transform: lowercase;
+            text-decoration: none;
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 34px;
+            color: #847d6b;
+         }
+            #header-nav .nav.nav-links a:hover {
+               color: #595753;
+               background-color: transparent;
+            }
+            #header-nav .nav.nav-links li.active a {
+               color: #595753;
+               background-color: transparent;
+            }
+
+
+
+
+#hero {
+   display: block;
+   position: relative;
+   margin: 30px 0;
+}
+   #hero p.lead {
+      font-size: 24px;
+      font-weight: 300;
+   }
+
+   #hero .btn {
+      padding: 10px 18px;
+      margin-right: 10px;
+      border: 0;
+      min-height: 46px;
+      color: #fff;
+   }
+      #hero .btn .text {
+         display: inline-block;
+         vertical-align: top;
+      }
+         #hero .btn .text span {
+            display: block;
+         }
+         #hero .btn .text .header {
+            vertical-align: top;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 400;
+         }
+         #hero .btn .text .small {
+            font-size: 14px;
+            line-height: 14px;
+            color: #EEE;
+         }
+
+      #hero .btn [class^="icon-"] {
+         display: inline-block;
+         vertical-align: top;
+         font-size: 38px;
+         line-height: 38px;
+         margin: 0 0 0 10px;
+      }
+
+
+
+
+
+#features-container {
+   margin-top: 60px;
+}
+
+.listview-item .listview-item-heading {
+   font-size: 20px;
+}
+
+#donate-list h4 {
+   font-size: 18px;
+   text-align: center;
+}
+#donate-list .donate-form {
+   margin: 0 auto;
+   text-align: center;
+}
+
+/*.list-tile {*/
+   /*-webkit-box-sizing: border-box;*/
+      /*-moz-box-sizing: border-box;*/
+           /*box-sizing: border-box;*/
+   /*border-left: 3px solid transparent;*/
+   /*color: #FFF;*/
+   /*display: inline-block;*/
+   /*min-height: 62px;*/
+   /*margin-bottom: 10px;*/
+   /*padding: 10px;*/
+   /*position: relative;*/
+   /*vertical-align: top;*/
+/*}*/
+
+   /*.list-tile.blue {*/
+      /*background-color: #2E8BCC;*/
+      /*border-color: #2E8BCC;*/
+   /*}*/
+   /*.list-tile.green {*/
+      /*background-color: #339933;*/
+      /*border-color: #339933;*/
+   /*}*/
+
+   /*.list-tile h4, .list-tile h5 {*/
+      /*display: inline;*/
+   /*}*/
+   /*.list-tile h4 {*/
+      /*font-size: 20px;*/
+      /*font-weight: 400;*/
+      /*line-height: 40px;*/
+   /*}*/
+   /*.list-tile h5 {*/
+      /*font-size: 18px;*/
+      /*font-weight: 400;*/
+      /*line-height: 20px;*/
+      /*padding-right: 80px;*/
+   /*}*/
+
+   /*.list-tile .list-tile-icon {*/
+      /*color: #FFFFFF;*/
+      /*display: block;*/
+      /*font-size: 40px;*/
+      /*font-weight: 400;*/
+      /*height: 100%;*/
+      /*line-height: 62px;*/
+      /*position: absolute;*/
+      /*right: 0;*/
+      /*text-align: center;*/
+      /*top: 0;*/
+      /*width: 80px;*/
+   /*}*/
+      /*.list-tile.blue  .list-tile-icon {*/
+         /*background-color: #2E8BCC;*/
+      /*}*/
+      /*.list-tile.green .list-tile-icon {*/
+         /*background-color: #339933;*/
+      /*}*/
+
+/*.list-tile .donate-form {*/
+   /*margin: 10px auto;*/
+   /*text-align: center;*/
+/*}*/
+
+/* hover */
+/*.list-tile.blue:hover {*/
+   /*text-decoration: none;*/
+   /*background-color: #C9E2F3;*/
+   /*color: #2E8BCC;*/
+/*}*/
+   /*.list-tile.blue:hover .list-tile-icon { color: #2E8BCC; }*/
+
+/*.list-tile.green:hover {*/
+   /*text-decoration: none;*/
+   /*background-color: #ABE3AB;*/
+   /*color: #339933;*/
+/*}*/
+   /*.list-tile.green:hover .list-tile-icon { color: #339933; }*/
+
+
+
+/* About
+-------------------------------------------------- */
+
+.with-margin-left {
+   margin-right: 80px;
+}
+
+.with-margin-bottom {
+   margin-bottom: 30px;
+}
+

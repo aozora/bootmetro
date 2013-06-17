@@ -1,63 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>http://aozora.github.com/bootmetro/</loc>
+      <loc>http://aozora.github.io/bootmetro/</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>http://aozora.github.com/bootmetro/index.html</loc>
+      <loc>http://aozora.github.io/bootmetro/index.html</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>http://aozora.github.com/bootmetro/hub.html</loc>
+      <loc>http://aozora.github.io/bootmetro/about.html</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>http://aozora.github.com/bootmetro/appbar-demo.html</loc>
+      <loc>http://aozora.github.io/bootmetro/demo/hub.html</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>http://aozora.github.com/bootmetro/icons.html</loc>
+      <loc>http://aozora.github.io/bootmetro/docs/docs-index.html</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>http://aozora.github.com/bootmetro/listviews.html</loc>
+      <loc>http://aozora.github.io/bootmetro/docs/docs-css.html</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>http://aozora.github.com/bootmetro/table.html</loc>
+      <loc>http://aozora.github.io/bootmetro/docs/docs-standard-components.html</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>http://aozora.github.com/bootmetro/tiles-templates.html</loc>
+      <loc>http://aozora.github.io/bootmetro/docs/docs-advanced-components.html</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>http://aozora.github.com/bootmetro/wide-tiles-templates.html</loc>
+      <loc>http://aozora.github.io/bootmetro/docs/docs-javascript.html</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>http://aozora.github.com/bootmetro/widepeek-tiles-templates.html</loc>
-      <changefreq>weekly</changefreq>
-   </url>
-   <url>
-      <loc>http://aozora.github.com/bootmetro/square-tiles-templates.html</loc>
-      <changefreq>weekly</changefreq>
-   </url>
-   <url>
-      <loc>http://aozora.github.com/bootmetro/bootstrap-base-css.html</loc>
-      <changefreq>weekly</changefreq>
-   </url>
-   <url>
-      <loc>http://aozora.github.com/bootmetro/bootstrap-scaffolding.html</loc>
-      <changefreq>weekly</changefreq>
-   </url>
-   <url>
-      <loc>http://aozora.github.com/bootmetro/bootstrap-components.html</loc>
-      <changefreq>weekly</changefreq>
-   </url>
-   <url>
-      <loc>http://aozora.github.com/bootmetro/bootstrap-javascript.html</loc>
+      <loc>http://aozora.github.io/bootmetro/docs/docs-icons.html</loc>
       <changefreq>weekly</changefreq>
    </url>
 </urlset>
