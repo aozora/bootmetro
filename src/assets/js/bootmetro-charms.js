@@ -75,6 +75,14 @@
       close: function(){
          $(this.element).removeClass('in');
          return false;
+      },
+
+      toggleSection: function(sectionId, width){
+         if ($(this.element).hasClass('in')){
+            this.close();
+         }else{
+            this.showSection(sectionId, width);
+         }
       }//,
 //
 //      togglePin: function () {
