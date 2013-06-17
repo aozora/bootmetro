@@ -28,6 +28,37 @@ To build the whole project run 'grunt' in the project directory.
 
 ## Versioning
 
+<<<<<<< HEAD
+### Latest Release: v1.0.0 Alpha1
+This release is based on Twitter Bootstrap 2; the v2.0 will be completely redone from scratch using as base Twitter Bootstrap v3.
+
+####BREAKING CHANGES:
+- Replaced icomoon font with a new icomoon set generated with PUA. Many icon-* class names has changed;
+- internal mapping of char codes has changed, please be patient and check every icon you used.
+- the static resources in the content folder has been moved to the assets folder
+- toast markup has changed, now it is conforming to the bootstrap media object model.
+- listview markup has changed, now it is conforming to the bootstrap media object model.
+- removed default padding-top: 24px and padding-bottom: 88px (scaffolding.less)
+
+####List of changes:
+- source files now builds with [GruntJS](http://gruntjs.com/)
+- bug fixes over v0.6
+- New and revamped documentation pages, separated from demo pages, with all metro widgets & customization integrated with the original bootstrap documentation.
+- updated Bootstrap Less files to latest v2.3.1
+- new Metro Nav List (like the one used in the doc sidebar)
+- new Page Header with back button and various styles
+- new RTL support for metro checkboxes & radio buttons
+- move CSS to LESS and integrate build with Bootstrap
+- complete Tiles templates
+- Toast notifications
+- ListView
+- Pivot view (like WP8)
+- Dual license GPL2 + Apache2
+- Panorama plugin & Hub:
+      - new options
+      - simplified markup
+
+=======
 ### Latest Release: v1.0.0 alpha 1
 * BREAKING CHANGES:
    * icomoon.css is now bootmetro-icons.css and is recomended to have it before bootmetro.css
@@ -46,6 +77,7 @@ To build the whole project run 'grunt' in the project directory.
    * Toast notifications
 * Metro Layouts
 * use NiceScroll for Hub scrolling with touch support
+>>>>>>> v1.0.0-alpha1-wip
 
 ## v0.6
 * Various bug fixes
