@@ -11,9 +11,9 @@
       <li>
          <a href="./about.html">about</a>
       </li>
-      <li>
-         <a href="#">downloads</a>
-      </li>
+      <!--<li>-->
+         <!--<a href="#">downloads</a>-->
+      <!--</li>-->
       <li>
          <a href="./demo/hub.html">Demo</a>
       </li>
@@ -25,13 +25,13 @@
 
 <div class="container">
    <div class="row">
-      <div class="span8">
+      <div class="span12">
          <div id="hero">
 
             <p class="lead">
-               simple and flexible web framework<br/>
-               to create elegant and modern <br/>
-               web applications with the same<br/>
+               simple and flexible web framework
+               to create elegant and modern
+               web applications <br/>with the same
                look &amp; feel of Windows 8
             </p>
 
@@ -43,42 +43,63 @@
                <i class="icon-download"></i>
             </a>
 
-            <a class="btn btn-large btn-info" href="./features.html">
+            <!--<span>It's free!</span>-->
+
+            <a class="btn btn-large btn-success bg-color-purple" href="./docs/docs-index.html">
                <div class="text">
-                  <span class="header">View the features</span>
+                  <span class="header">Documentation</span>
                </div>
-               <i class="icon-arrow-right-5"></i>
+               <i class="icon-book"></i>
             </a>
 
+            <!--<a class="btn btn-large btn-info" href="./features.html">-->
+               <!--<div class="text">-->
+                  <!--<span class="header">View the features</span>-->
+               <!--</div>-->
+               <!--<i class="icon-arrow-right-5"></i>-->
+            <!--</a>-->
 
          </div>
-      </div>
 
-      <div class="span3 offset1">
+         <div class="listview grid-layout">
 
-         <div class="row">
-
-            <a class="span3 list-tile green" href="https://github.com/aozora/bootmetro">
-               <h5>View project on GitHub</h5>
-               <span class="list-tile-icon icon-github"></span>
+            <a class="listview-item bg-color-orange" href="https://github.com/aozora/bootmetro">
+               <div class="pull-left">
+                  <div class="listview-item-object icon-github"></div>
+               </div>
+               <div class="listview-item-body">
+                  <h4 class="listview-item-heading">View project on GitHub</h4>
+               </div>
             </a>
 
-            <a class="span3 list-tile blue" href="#">
-               <h4>Follow on twitter</h4>
-               <span class="list-tile-icon icon-twitter"></span>
+            <a class="listview-item bg-color-blue" href="https://twitter.com/aozoralabs">
+               <div class="pull-left">
+                  <div class="listview-item-object icon-twitter"></div>
+               </div>
+               <div class="listview-item-body">
+                  <h4 class="listview-item-heading">Follow on twitter</h4>
+               </div>
             </a>
 
-            <a href="https://plus.google.com/114125863066139159293" class="span3 list-tile blue" rel="publisher">
-               <h4>Google+</h4>
-               <span class="list-tile-icon icon-google-plus"></span>
+            <a class="listview-item bg-color-blueDark" rel="publisher" href="ttps://plus.google.com/114125863066139159293">
+               <div class="pull-left">
+                  <div class="listview-item-object icon-google-plus"></div>
+               </div>
+               <div class="listview-item-body">
+                  <h4 class="listview-item-heading">Follow on Google+</h4>
+               </div>
             </a>
 
-            <a class="span3 list-tile blue" href="#">
-               <h4>Roadmap</h4>
-               <span class="list-tile-icon icon-map"></span>
+            <a class="listview-item bg-color-greenDark" rel="publisher" href="https://github.com/aozora/bootmetro/wiki/Roadmap">
+               <div class="pull-left">
+                  <div class="listview-item-object icon-map"></div>
+               </div>
+               <div class="listview-item-body">
+                  <h4 class="listview-item-heading">Roadmap</h4>
+               </div>
             </a>
 
-            <a class="span3 list-tile blue" href="#">
+            <div id="donate-list" class="listview-item bg-color-red" href="#">
                <h4>Support the project</h4>
                <!--<span class="list-tile-icon icon-paypal"></span>-->
                <form class="donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -87,7 +108,7 @@
                   <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
                   <img alt="" border="0" src="https://www.paypalobjects.com/it_IT/i/scr/pixel.gif" width="1" height="1">
                </form>
-            </a>
+            </div>
 
          </div>
 
@@ -97,48 +118,48 @@
 </div>
 
 
-<div id="features-container" class="container">
-   <h2>Features</h2>
+<!--<div id="features-container" class="container">-->
+   <!--<h2>Features</h2>-->
 
-   <div id="pivot" class="pivot slide">
-      <div class="pivot-headers">
-         <a href="#pivot" data-pivot-index="0" class="active">Layouts</a>
-         <a href="#pivot" data-pivot-index="1">Components</a>
-         <a href="#pivot" data-pivot-index="2">Tiles</a>
-         <a href="#pivot" data-pivot-index="3">Icons</a>
-      </div>
-      <div class="pivot-items">
-         <div id="pivot-item-1" class="pivot-item active">
-            <h3>Hub</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   <!--<div id="pivot" class="pivot slide">-->
+      <!--<div class="pivot-headers">-->
+         <!--<a href="#pivot" data-pivot-index="0" class="active">Layouts</a>-->
+         <!--<a href="#pivot" data-pivot-index="1">Components</a>-->
+         <!--<a href="#pivot" data-pivot-index="2">Tiles</a>-->
+         <!--<a href="#pivot" data-pivot-index="3">Icons</a>-->
+      <!--</div>-->
+      <!--<div class="pivot-items">-->
+         <!--<div id="pivot-item-1" class="pivot-item active">-->
+            <!--<h3>Hub</h3>-->
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
 
-            <h3>Layouts</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-         </div>
+            <!--<h3>Layouts</h3>-->
+            <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>-->
+         <!--</div>-->
 
-         <div id="pivot-item-2" class="pivot-item">
-            <h3>Commands</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         <!--<div id="pivot-item-2" class="pivot-item">-->
+            <!--<h3>Commands</h3>-->
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
 
-            <h3>Messages</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <!--<h3>Messages</h3>-->
+            <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>-->
 
-            <h3>Toasts</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-         </div>
+            <!--<h3>Toasts</h3>-->
+            <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>-->
+         <!--</div>-->
 
-         <div id="pivot-item-3" class="pivot-item">
-            <h3>Tiles Templates</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-         </div>
+         <!--<div id="pivot-item-3" class="pivot-item">-->
+            <!--<h3>Tiles Templates</h3>-->
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+            <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>-->
+         <!--</div>-->
 
-         <div id="pivot-item-4" class="pivot-item">
-            <h3>Icons</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-         </div>
-      </div>
-   </div>
+         <!--<div id="pivot-item-4" class="pivot-item">-->
+            <!--<h3>Icons</h3>-->
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+            <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>-->
+         <!--</div>-->
+      <!--</div>-->
+   <!--</div>-->
 
-</div>
+<!--</div>-->
