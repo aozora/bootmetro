@@ -28,7 +28,7 @@ To build the whole project run 'grunt' in the project directory.
 
 ## Versioning
 
-### Latest Release: v1.0
+### Latest Release: v1.0.0 alpha 1
 * BREAKING CHANGES:
    * icomoon.css is now bootmetro-icons.css and is recomended to have it before bootmetro.css
    * bootmetro.js is now bootmetro-panorama.js
