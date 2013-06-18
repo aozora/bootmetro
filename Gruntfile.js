@@ -151,6 +151,7 @@ module.exports = function(grunt) {
             files: [
                {expand: true, cwd: 'dist/', src: 'assets/**/*', dest: '_gh_pages/', filter: 'isFile'},
                {expand: true, cwd: 'src/assets/', src: 'img/**/*', dest: '_gh_pages/assets/', filter: 'isFile'},
+               {expand: true, cwd: 'src/assets/', src: 'ico/**/*', dest: '_gh_pages/assets/', filter: 'isFile'},
                {expand: true, cwd: 'src/assets/css', src: 'demo.css', dest: '_gh_pages/assets/css/', filter: 'isFile'},
                {expand: true, cwd: 'src/assets/css', src: 'docs.css', dest: '_gh_pages/assets/css/', filter: 'isFile'},
                {expand: true, cwd: 'src/assets/css', src: 'site.css', dest: '_gh_pages/assets/css/', filter: 'isFile'},
