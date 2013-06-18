@@ -1,4 +1,4 @@
-/*! bootmetro 2013-06-17 */
+/*! bootmetro 2013-06-18 */
 /*!
  * jQuery Charms Plugin
  * Original author: @aozora

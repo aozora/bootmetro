@@ -8620,7 +8620,7 @@ Progress control. */
   left: -100%;
 }
 
-.pivot > .pivot-items .active.right {
+.pivot > .pivot-items > .active.right {
   left: 100%;
 }
 
