@@ -9,7 +9,6 @@ _gh_pages
 *.rej
 *.swo
 *.swp
-*.zip
 *.vi
 *~
 *.sass-cache
