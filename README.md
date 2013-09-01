@@ -28,6 +28,7 @@ To build the whole project run 'grunt' in the project directory.
 
 ## Versioning
 
+<<<<<<< HEAD
 ### Latest Release: v1.0.0 Alpha1
 This release is based on Twitter Bootstrap 2; the v2.0 will be completely redone from scratch using as base Twitter Bootstrap v3.
 
@@ -57,6 +58,26 @@ This release is based on Twitter Bootstrap 2; the v2.0 will be completely redone
       - new options
       - simplified markup
 
+=======
+### Latest Release: v1.0.0 alpha 1
+* BREAKING CHANGES:
+   * icomoon.css is now bootmetro-icons.css and is recomended to have it before bootmetro.css
+   * bootmetro.js is now bootmetro-panorama.js
+      * classes in hub.html to use panorama scroll, are changed from metro* to panorama*
+* moved bootmetro main css files to LESS
+* upgraded to jQuery 1.8.3
+* upgraded to Modernizr 2.6.2
+* integrated HTML5 Boilerplate 4.0.1
+* added metro controls:
+   * new panorama
+   * new pivot
+   * Metro Progress Bars, determinate & indeterminate & ring
+   * Metro styled date picker
+   * FlipView
+   * Toast notifications
+* Metro Layouts
+* use NiceScroll for Hub scrolling with touch support
+>>>>>>> v1.0.0-alpha1-wip
 
 ## v0.6
 * Various bug fixes

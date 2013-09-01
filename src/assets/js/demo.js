@@ -50,8 +50,8 @@ $(function(){
       $this.addClass('selected');
    });
 
-   // FlipView demo
-   $('#myFlipview').carousel()
+//   // FlipView demo
+//   $('#myFlipview').carousel()
 
    $('.bs-docs-example-commands .win-command').tooltip();
 });
