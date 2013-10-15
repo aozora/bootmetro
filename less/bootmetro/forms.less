@@ -23,7 +23,7 @@ input, button, select, textarea {
 textarea {
    width: 260px;
    height: auto;
-   padding: 4px 4px 4px 8px;
+   .SwapPadding(4px, 4px, 4px, 8px);
    overflow-y: scroll;
    word-wrap: break-word;
    min-width: 260px;
@@ -50,15 +50,15 @@ input[type=tel], input[type=url], input[type=search], textarea {
 .input-prepend .add-on:first-child,
 .input-prepend .btn:first-child {
    .formBorder;
-   border-width: 2px 0 2px 2px;
+   .Border-width(2px, 0, 2px, 2px);
 }
 .input-append .add-on:last-child,
 .input-append .btn:last-child {
    .formBorder;
-   border-width: 2px 2px 2px 0;
+   .Border-width(2px, 2px, 2px, 0);
 }
 .input-prepend.input-append .add-on:first-child, .input-prepend.input-append .btn:first-child {
-   margin-right: -1px;
+   .MarginLeftOrRight("margin-right",-1px);
 }
 .input-append .btn {
    height: 28px;
@@ -90,7 +90,7 @@ Range control.
 input[type=range] {
    width: 280px;
    height: auto;
-   padding: 17px 0 32px 0;
+   .SwapPadding(17px, 0, 32px, 0);
 }
 
 // Form Search
@@ -115,8 +115,8 @@ input.search-query {
 
 .form-search .input-append button[type="submit"].btn ,
 .form-search .input-append input[type="submit"].btn {
-   border-left: 0;
-   padding-right: 2px;
+   .BorderLeftOrRight("border-left", 0);
+   .PaddingLeftOrRight("padding-right", 2px);
    background-color: transparent;
    color: @grayDark;
 }
@@ -127,7 +127,7 @@ input.search-query {
    }
 
 .form-search .input-append .search-query {
-   border-right: 0;
+   .BorderLeftOrRight("border-right", 0);
 }
    // TODO: this should be moved in theme css
    .form-search .input-append .search-query:focus + button[type="submit"].btn,
@@ -138,8 +138,8 @@ input.search-query {
 
 .form-search .input-prepend button[type="submit"].btn ,
 .form-search .input-prepend input[type="submit"].btn {
-   border-right: 0;
-   padding-left: 2px;
+   .BorderLeftOrRight("border-right", 0);
+   .PaddingLeftOrRight("padding-left", 2px);
    background-color: transparent;
    color: @grayDark;
 }
@@ -150,7 +150,7 @@ input.search-query {
 }
 
 .form-search .input-prepend .search-query {
-   border-left: 0;
+   .BorderLeftOrRight("border-left", 0);
 }
 // TODO: this should be moved in theme css
 .form-search .input-prepend .search-query:focus + button[type="submit"].btn,

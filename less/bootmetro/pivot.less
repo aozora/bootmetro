@@ -44,7 +44,7 @@
       > .prev { display: block; }
 
       > .active {
-         left: 0;
+         .DockItem("left", 0);
       }
 
       > .next,
@@ -55,21 +55,21 @@
       }
 
       > .next {
-         left: 100%;
+         .DockItem("left", 100%);
       }
       > .prev {
-         left: -100%;
+         .DockItem("left", -100%);
       }
       > .next.left,
       > .prev.right {
-         left: 0;
+         .DockItem("left", 0);
       }
 
       > .active.left {
-         left: -100%;
+         .DockItem("left", -100%);
       }
       > .active.right {
-         left: 100%;
+         .DockItem("left", 100%);
       }
 
    }

@@ -18,7 +18,7 @@ label.radio,
 label.checkbox {
    cursor: pointer;
    position: relative;
-   padding-left: 0;
+   .PaddingLeftOrRight("padding-left", 0);
 }
 
 input[type=radio],
@@ -33,7 +33,7 @@ input[type=radio] {
    .opacity(0);
 }
 input[type=radio] ~ span.metro-radio {
-   padding-left: 36px;
+   .PaddingLeftOrRight("padding-left", 36px);
    padding-top: 4px;
 }
 input[type=radio] ~ span.metro-radio::before {
@@ -43,11 +43,11 @@ input[type=radio] ~ span.metro-radio::before {
    border: 2px solid #BABABA;
    background: #FFF;
    position: absolute;
-   left: 0;
+   .DockItem("left", 0);
    top: 2px;
    width: 20px;
    height: 20px;
-   margin-right: 10px;
+   .MarginLeftOrRight("margin-right",10px);
    .border-radius(50%);
 }
 input[type=radio]:checked ~ span.metro-radio::after {
@@ -56,7 +56,7 @@ input[type=radio]:checked ~ span.metro-radio::after {
    content: "\e10b";
    background: #000;
    position: absolute;
-   left: 6px;
+   .DockItem("left", 6px);
    top: 8px;
    width: 12px;
    height: 12px;
@@ -86,7 +86,7 @@ label.checkbox input[type=checkbox] {
    .opacity(0);
 }
 label.checkbox input[type=checkbox] ~ span.metro-checkbox {
-   padding-left: 36px;
+   .PaddingLeftOrRight("padding-left", 36px);
    padding-top: 4px;
 }
 
@@ -99,7 +99,7 @@ label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after {
    font-size: 16px;
    position: absolute;
    top: 2px;
-   left: 0;
+   .DockItem("left", 0);
    width: 18px;
    height: 18px;
    z-index: 999;
@@ -112,7 +112,7 @@ label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
    font-size: 16px;
    position: absolute;
    top: 2px;
-   left: 0;
+   .DockItem("left", 0);
    width: 18px;
    height: 18px;
    z-index: 999;
@@ -134,24 +134,24 @@ label.checkbox input[type=checkbox]:disabled ~ span.metro-checkbox::after {
 -------------------------------------------------- */
 [dir="rtl"] label.checkbox input[type="checkbox"] ~ span.metro-checkbox,
 [dir="rtl"] input[type="radio"] ~ span.metro-radio {
-   padding-right: 36px;
-   padding-left: 0;
+   .PaddingLeftOrRight("padding-right", 36px);
+   .PaddingLeftOrRight("padding-left", 0);
 }
 
 //radio
 [dir="rtl"] input[type=radio] ~ span.metro-radio::before {
-   right: -10px;
-//   margin-left: 10px;
+   .DockItem("right", -10px);
+//   .MarginLeftOrRight("margin-left",10px);
 }
 [dir="rtl"] input[type=radio]:checked ~ span.metro-radio::after {
-   right: 6px;
+   .DockItem("right", 6px);
 }
 
 //checkbox
 [dir="rtl"] label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after {
-   right: 0;
+   .DockItem("right", 0);
 }
 [dir="rtl"] label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
-   right: 0;
+   .DockItem("right", 0);
 }
 

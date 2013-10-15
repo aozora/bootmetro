@@ -96,10 +96,10 @@
 //         border-bottom: 1px solid @tableBorderHover;
       }
 //      tr:hover td:first-child {
-//         border-left: 1px solid @tableBorderHover;
+//         .BorderLeftOrRight("border-left", 1px, @tableBorderHover, solid);
 //      }
 //      tr:hover td:last-child {
-//         border-right: 1px solid @tableBorderHover;
+//         .BorderLeftOrRight("border-right", 1px, @tableBorderHover, solid);
 //      }
    }
 }
@@ -131,7 +131,7 @@ table th label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::afte
 table td label.checkbox input[type=checkbox]:checked ~ span.metro-checkbox::after {
    font-size: 14px;
    top: 0;
-   left: 0;
+   .DockItem("left", 0);
    width: 16px;
    height: 16px;
 }
@@ -139,7 +139,7 @@ table th label.checkbox input[type=checkbox] ~ span.metro-checkbox::after,
 table td label.checkbox input[type=checkbox] ~ span.metro-checkbox::after {
    font-size: 14px;
    top: 0;
-   left: 0;
+   .DockItem("left", 0);
    width: 16px;
    height: 16px;
 }
