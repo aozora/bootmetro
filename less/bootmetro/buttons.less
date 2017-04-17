@@ -26,7 +26,7 @@ input[type=file] {
    width: 340px;
    height: 32px;
    padding: 0;
-   margin: 7px 8px 21px 8px;
+   .SwapMargin(7px, 8px, 21px, 8px);
    background-clip: padding-box;
 }
 
@@ -68,7 +68,7 @@ Back button.
 
 #nav-bar .win-backbutton {
    position: absolute;
-   left: 0;
+   .DockItem("left", 0);
    top: 30px;
 }
 
@@ -161,8 +161,8 @@ button.win-command .win-label {
 //   max-width: 88px; /* 100px button, but allow for 2px margins and 4px padding on each side */
    width: 100%;
    .box-sizing(border-box);
-   padding-left: 4px;  /* 12px between buttons, 6px per side, minus 2px margins */
-   padding-right: 4px;
+   .PaddingLeftOrRight("padding-left", 4px);  /* 12px between buttons, 6px per side, minus 2px margins */
+   .PaddingLeftOrRight("padding-right", 4px);
    overflow: hidden;
    line-height: 15px;
    word-wrap: break-word;
@@ -201,7 +201,7 @@ AppBarCommand separator.
 hr.win-command {
    display: inline-block;
    padding: 0;
-   margin: 14px 29px 34px 30px;
+   .SwapMargin(14px, 29px, 34px, 30px);
    width: 1px;
    height: 40px;
    border: 0;
@@ -216,7 +216,7 @@ AppBar Edgy Container
    border-width: 0;
    width: 100%;
    height: auto;
-   left: 0;
+   .DockItem("left", 0);
    position: fixed;
 }
 
@@ -224,11 +224,11 @@ AppBar Edgy Container
 AppBar control.
 */
 .win-commandlayout {
-   padding-left: 10px;
+   .PaddingLeftOrRight("padding-left", 10px);
    font-size: 0;
    min-height: 88px;
    .win-selection {
-      float: left;
+      .FloatItem("left");
    }
 
    // command button inside appbar

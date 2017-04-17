@@ -3,7 +3,7 @@
    padding: 2px;
 
    .listview-item {
-      margin-right: 24px;
+      .MarginLeftOrRight("margin-right",24px);
    }
 }
 .listview.list-layout {
@@ -43,18 +43,18 @@
       content: "";
       position: absolute;
       display: block;
-      right: 0;
+      .DockItem("right", 0);
       top: 0;
       width: 0;
       height: 0;
-      border-left: 40px solid transparent;
+      .BorderLeftOrRight("border-left", 40px, transparent, solid);
       border-top: 40px solid @blu1;
       z-index: 1001;
    }
    &.selected:before {
       position: absolute;
       top: 0;
-      right: 4px;
+      .DockItem("right", 4px);
       color: #FFFFFF;
       content: "\e379";
    	font-family: 'icomoon';
@@ -88,7 +88,7 @@
    .media-object;
    width: 60px;
    height: 60px;
-   margin-right: 10px;
+   .MarginLeftOrRight("margin-right",10px);
 
    &[class*="icon-"] {
       display: inline-block;
@@ -123,7 +123,7 @@
       .media-object;
       width: 112px;
       height: 112px;
-      margin-right: 10px;
+      .MarginLeftOrRight("margin-right",10px);
 
       &[class*="icon-"] {
          display: inline-block;
@@ -147,7 +147,7 @@ Tile ListView
    .tile-listviewitem {
       position: relative;
       display: block;
-      margin: 0 0 13px 0;
+      .SwapMargin(0, 0, 13px, 0);
       padding: 7px 0;
       height: 113px;
       cursor: pointer;
@@ -159,14 +159,14 @@ Tile ListView
          .box-sizing(border-box);
          display: inline-block;
          vertical-align: top;
-         margin-left: 7px;
+         .MarginLeftOrRight("margin-left",7PX);
          height: 100%;
          width: 100%;
       }
 
       .detail {
-         margin-left: 10px;
-         margin-right: 7px;
+         .MarginLeftOrRight("margin-left",10px);
+         .MarginLeftOrRight("margin-right",7px);
          display: inline-block;
          vertical-align: top;
          height: 113px;
@@ -197,7 +197,7 @@ Tile ListView
 
 
 article.tile-listviewitem-detail {
-   margin-left: 72px;
+   .MarginLeftOrRight("margin-left",72px);
 
    header {
       img {

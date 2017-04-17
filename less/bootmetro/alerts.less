@@ -6,7 +6,7 @@
    position: fixed;
 }
 .notifications.top-right {
-   right: 0;
+   .DockItem("right", 0);
    top: 0;
 }
 .notifications > div {
@@ -44,7 +44,7 @@
 }
 .toast-body {
    .media-body;
-   padding: 13px 60px 13px 15px;
+   .SwapPadding(13px, 60px, 13px, 15px);
    height: 64px;
 
    p {
@@ -58,7 +58,7 @@
    .media-object;
    width: 90px;
    height: 90px;
-//   margin-right: 10px;
+//   .MarginLeftOrRight("margin-right",10px);
 
    &[class*="icon-"] {
       display: inline-block;
@@ -125,7 +125,7 @@
 .alert .close {
    position: absolute;
    top: 0;
-   right: 0;
+   .DockItem("right", 0);
    display: inline-block;
    min-width: 0;
    min-height: 0;

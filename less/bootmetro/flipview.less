@@ -5,7 +5,7 @@
 .carousel.flipview {
    .carousel-control {
       display: none;
-      left: 0;
+      .DockItem("left", 0);
       width: 60px;
       height: 40px;
       border: 0;
@@ -18,8 +18,8 @@
       color: @black;
 
       &.right {
-         left: auto;
-         right: 0;
+         .DockItem("left", auto);
+         .DockItem("right", 0);
       }
 
       &.right:after {
@@ -47,8 +47,8 @@
 
 //
 //.carousel.flipview .carousel-control.right {
-//   left: auto;
-//   right: 0;
+//   .DockItem("left", auto);
+//   .DockItem("right", 0);
 //   content: "\e12a";
 //}
 //.carousel.flipview .carousel-control.left {

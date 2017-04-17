@@ -44,50 +44,50 @@
 
 .tile-column {
    position: relative;
-   float: left;
+   .FloatItem("left");
    width: auto;
    height: auto;
-//   margin-right: 75px;
+//   .MarginLeftOrRight("margin-right",75px);
 }
    .tile-column-span-1 {
       .tile-column;
       width: 162px;
-      margin-left: 0 !important;
+      .MarginLeftOrRight("margin-left",0) !important;
    }
    .tile-column-span-2 {
       .tile-column;
       width: 324px;
-      margin-left: 0 !important;
+      .MarginLeftOrRight("margin-left",0) !important;
    }
    .tile-column-span-3 {
       .tile-column;
       width: 480px;
-      margin-left: 0 !important;
+      .MarginLeftOrRight("margin-left",0) !important;
    }
    .tile-column-span-4 {
       .tile-column;
       width: 640px;
-      margin-left: 0 !important;
+      .MarginLeftOrRight("margin-left",0) !important;
    }
    .tile-column-span-5 {
       .tile-column;
       width: 640px;
-      margin-left: 0 !important;
+      .MarginLeftOrRight("margin-left",0) !important;
    }
    .tile-column-span-6 {
       .tile-column;
       width: 800px;
-      margin-left: 0 !important;
+      .MarginLeftOrRight("margin-left",0) !important;
    }
    .tile-column-span-7 {
       .tile-column;
       width: 960px;
-      margin-left: 0 !important;
+      .MarginLeftOrRight("margin-left",0) !important;
    }
    .tile-column-span-8 {
       .tile-column;
       width: 1120px;
-      margin-left: 0 !important;
+      .MarginLeftOrRight("margin-left",0) !important;
    }
 
 
@@ -111,48 +111,48 @@
       padding-bottom: 24px;
 
       h2 {
-         margin-left: 5px;
+         .MarginLeftOrRight("margin-left",5px);
          font-weight: 300;
          text-transform: lowercase;
       }
 
       .panorama-section {
          position: relative;
-         float: left;
+         .FloatItem("left");
          width: auto;
          height: auto;
-         margin-right: 75px;
+         .MarginLeftOrRight("margin-right",75px);
          &.tile-span-1 {
             width: 160px;
-            margin-left: 0;
+            .MarginLeftOrRight("margin-left",0);
          }
          &.tile-span-2 {
             width: 320px;
-            margin-left: 0;
+            .MarginLeftOrRight("margin-left",0);
          }
          &.tile-span-3 {
             width: 480px;
-            margin-left: 0;
+            .MarginLeftOrRight("margin-left",0);
          }
          &.tile-span-4 {
             width: 640px;
-            margin-left: 0;
+            .MarginLeftOrRight("margin-left",0);
          }
          &.tile-span-5 {
             width: 640px;
-            margin-left: 0;
+            .MarginLeftOrRight("margin-left",0);
          }
          &.tile-span-6 {
             width: 800px;
-            margin-left: 0;
+            .MarginLeftOrRight("margin-left",0);
          }
          &.tile-span-7 {
             width: 960px;
-            margin-left: 0;
+            .MarginLeftOrRight("margin-left",0);
          }
          &.tile-span-8 {
             width: 1120px;
-            margin-left: 0;
+            .MarginLeftOrRight("margin-left",0);
          }
       }
 
@@ -164,7 +164,7 @@
    .tile {
       position: relative;
       display: block;
-      float: left;
+      .FloatItem("left");
       margin: 5px;
       padding: 0;
       width: 150px;
@@ -186,18 +186,18 @@
          content: "";
          position: absolute;
          display: block;
-         right: 0;
+         .DockItem("right", 0);
          top: 0;
          width: 0;
          height: 0;
-         border-left: 40px solid transparent;
+         .BorderLeftOrRight("border-left", 40px, transparent, solid);
          border-top: 40px solid @blu1;
          z-index: 1001;
       }
       &.selected:before {
          position: absolute;
          top: 0;
-         right: 4px;
+         .DockItem("right", 4px);
          color: #FFFFFF;
          content: "\e379";
          font-family: 'icomoon';
@@ -207,12 +207,12 @@
       .app-label, .label {
          bottom: 5px;
          font-size: 12px;
-         left: 20px;
+         .DockItem("left", 20px);
          position: absolute;
       }
       .app-count, .count {
          position: absolute;
-         right: 20px;
+         .DockItem("right", 20px);
          bottom: 5px;
          font-size: 14px;
          font-weight: bold;
@@ -244,35 +244,35 @@
          font-size: 34px;
          line-height: 36px;
          max-height: 36px;
-         text-align: left;
+         .TextAlignTo("left");
          overflow: hidden;
       }
       .text-header3 {
          font-weight: 300;
          font-size: 34px;
          line-height: 36px;
-         text-align: left;
+         .TextAlignTo("left");
          max-height: 110px;
          overflow: hidden;
       }
       .column3-text {
          display: block;
-         float: left;
+         .FloatItem("left");
          width: 200px;
       }
       .column3-label {
          display: block;
-         float: left;
+         .FloatItem("left");
          width: 50px;
       }
       .column2-text {
          display: block;
-         float: left;
+         .FloatItem("left");
          width: 160px;
       }
       .column2-label {
          display: block;
-         float: left;
+         .FloatItem("left");
          width: 90px;
       }
       .text2 {
@@ -281,13 +281,13 @@
          line-height: 20px;
          max-height: 44px;
          overflow: hidden;
-         text-align: left;
+         .TextAlignTo("left");
       }
       .text3 {
          font-size: 15px;
          line-height: 18px;
          font-weight: 300;
-         text-align: left;
+         .TextAlignTo("left");
          max-height: 56px;
          overflow: hidden;
       }
@@ -295,20 +295,20 @@
          font-size: 15px;
          line-height: 18px;
          font-weight: 300;
-         text-align: left;
+         .TextAlignTo("left");
          max-height: 72px;
          overflow: hidden;
       }
       .column {
          display: block;
-         float: left;
+         .FloatItem("left");
          width: 130px;
       }
       .text5 {
          font-size: 15px;
          line-height: 18px;
          font-weight: 300;
-         text-align: left;
+         .TextAlignTo("left");
          max-height: 92px;
          overflow: hidden;
       }
@@ -317,7 +317,7 @@
          line-height: 18px;
          height: 18px;
          font-weight: 300;
-         text-align: left;
+         .TextAlignTo("left");
          overflow: hidden;
       }
    }
@@ -350,7 +350,7 @@
       .text-big {
          font-size: 76px;
          line-height: 76px;
-         text-align: left;
+         .TextAlignTo("left");
          overflow: hidden;
       }
    }
@@ -358,7 +358,7 @@
       .text {
          font-size: 14px;
          font-weight: bold;
-         text-align: left;
+         .TextAlignTo("left");
          overflow: hidden;
       }
    }
@@ -400,19 +400,19 @@
       padding: 20px;
       .column-text-big {
          display: block;
-         float: left;
+         .FloatItem("left");
          width: 80px;
-         margin-left: 10px;
+         .MarginLeftOrRight("margin-left",10px);
          .text-big {
             font-size: 74px;
             line-height: 60px;
-            text-align: right;
+            .TextAlignTo("right");
             overflow: hidden;
          }
       }
       .column-text {
          display: block;
-         float: left;
+         .FloatItem("left");
          width: 180px;
       }
    }
@@ -422,10 +422,10 @@
       padding: 20px;
       .image-wrapper {
          display: block;
-         float: left;
+         .FloatItem("left");
          width: 80px;
          height: 80px;
-         margin-right: 10px;
+         .MarginLeftOrRight("margin-right",10px);
          img {
             max-width: 80px;
             max-height: 80px;
@@ -433,7 +433,7 @@
       }
       .column-text {
          display: block;
-         float: left;
+         .FloatItem("left");
          width: 180px;
       }
    }
@@ -448,15 +448,15 @@
 
       .mini-tiles {
          display: inline-block;
-         float: left;
+         .FloatItem("left");
          width: 152px;
          height: 150px;
          img {
             display: inline-block;
-            float: left;
+            .FloatItem("left");
             max-width: 75px;
             max-height: 75px;
-            border-left: 1px solid #2A2A2A;
+            .BorderLeftOrRight("border-left", 1px, #2A2A2A, solid);
          }
       }
    }
@@ -469,7 +469,7 @@
       img {
          max-width: 158px;
          max-height: 150px;
-         float: left;
+         .FloatItem("left");
       }
    }
 
@@ -513,7 +513,7 @@
 #panorama-scroll-next {
    position: absolute;
    top: 96px;
-   left: 4px;
+   .DockItem("left", 4px);
 
    .win-commandicon;
    .win-commandring;
@@ -533,8 +533,8 @@
    z-index: 1061;
 }
 #panorama-scroll-next {
-   left: auto;
-   right: 4px;
+   .DockItem("left", auto);
+   .DockItem("right", 4px);
 }
 
 #panorama-scroll-prev:hover,
@@ -561,7 +561,7 @@
    #panorama-scroll-next-bkg {
       position: absolute;
       top: 0;
-      left: 0;
+      .DockItem("left", 0);
       display: block;
       width: 40px;
       height: 100%;
@@ -569,8 +569,8 @@
       z-index: 1060;
    }
    #panorama-scroll-next-bkg {
-      left: auto;
-      right: 0;
+      .DockItem("left", auto);
+      .DockItem("right", 0);
    }
 
    #panorama-scroll-prev-bkg:hover,
@@ -586,7 +586,7 @@
    .tile {
       position: relative;
       display: block;
-      float: left;
+      .FloatItem("left");
       margin: 5px;
       padding: 20px;
       .box-sizing(border-box);
@@ -600,7 +600,7 @@
 
       .image-wrapper {
          display: block;
-         float: left;
+         .FloatItem("left");
          height: 80px;
          width: 80px;
          span.icon {
@@ -616,7 +616,7 @@
          font-size: 34px;
          line-height: 36px;
          max-height: 36px;
-         text-align: left;
+         .TextAlignTo("left");
          overflow: hidden;
       }
       .text-header2 {
@@ -624,14 +624,14 @@
          font-size: 30px;
          line-height: 32px;
          max-height: 80px;
-         text-align: left;
+         .TextAlignTo("left");
          overflow: hidden;
       }
 
       .column-text {
          display: block;
-         float: left;
-         padding-left: 10px;
+         .FloatItem("left");
+         .PaddingLeftOrRight("padding-left", 10px);
          width: 180px;
 
          .text-header3 {
@@ -640,7 +640,7 @@
             line-height: 36px;
             max-height: 110px;
             overflow: hidden;
-            text-align: left;
+            .TextAlignTo("left");
          }
       }
 

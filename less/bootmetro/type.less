@@ -87,15 +87,15 @@ abbr, acronym, address, blockquote, cite, dl, dd, li, ol, p, q, td, tr {
 }
 
 blockquote {
-   border-left: 5px solid @light-blu2;
+   .BorderLeftOrRight("border-left", 5px, @light-blu2, solid);
    background-color: @grayLighter;
    padding-bottom: 5px;
    padding-top: 5px;
 
-   // Float right with text-align: right
+   // Float right with .TextAlignTo("right");
    &.pull-right {
-      padding-left: 15px;
-      border-right: 5px solid @light-blu2;
+      .PaddingLeftOrRight("padding-left", 15px);
+      .BorderLeftOrRight("border-right", 5px, @light-blu2, solid);
    }
 }
 

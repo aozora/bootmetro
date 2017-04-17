@@ -43,7 +43,7 @@
 // --------------------------------------------------
 /* Nav: first level */
 .metro-nav-list {
-   margin: 0 0 25px 0;
+   .SwapMargin(0, 0, 25px, 0);
 }
    .metro-nav-list > li {
       position: relative;
@@ -88,12 +88,12 @@
    display: block;
 }
 .metro-nav-list .nav > li > a {
-   border-left: 3px solid #00BFF2;
+   .BorderLeftOrRight("border-left", 3px, #00BFF2, solid);
    display: inline-block;
    font-size: 90%;
-   margin-left: 40px;
+   .MarginLeftOrRight("margin-left",40px);
    margin-bottom: 2px;
-   padding-left: 10px;
+   .PaddingLeftOrRight("padding-left", 10px);
    padding-top: 2px;
 }
 .metro-nav-list .nav > li > a:hover {
@@ -105,11 +105,11 @@
 .metro-nav-list .nav > .active:hover > a,
 .metro-nav-list .nav > .active:focus > a {
    font-weight: 600;
-   border-left: 3px solid #0177db;
+   .BorderLeftOrRight("border-left", 3px, #0177db, solid);
 }
 
 
 /* Nav: third level (shown on .active) */
 .metro-nav-list .nav .nav{
-   margin-left: 20px;
+   .MarginLeftOrRight("margin-left",20px);
 }
