@@ -32,7 +32,7 @@ To build the whole project run 'grunt' in the project directory.
 ### Latest Release: v1.0.0 Alpha1
 This release is based on Twitter Bootstrap 2; the v2.0 will be completely redone from scratch using as base Twitter Bootstrap v3.
 
-####BREAKING CHANGES:
+#### BREAKING CHANGES:
 - Replaced icomoon font with a new icomoon set generated with PUA. Many icon-* class names has changed;
 - internal mapping of char codes has changed, please be patient and check every icon you used.
 - the static resources in the content folder has been moved to the assets folder
@@ -40,7 +40,7 @@ This release is based on Twitter Bootstrap 2; the v2.0 will be completely redone
 - listview markup has changed, now it is conforming to the bootstrap media object model.
 - removed default padding-top: 24px and padding-bottom: 88px (scaffolding.less)
 
-####List of changes:
+#### List of changes:
 - source files now builds with [GruntJS](http://gruntjs.com/)
 - bug fixes over v0.6
 - New and revamped documentation pages, separated from demo pages, with all metro widgets & customization integrated with the original bootstrap documentation.
