@@ -1,5 +1,5 @@
 # BootMetro
-
+> Please pay attention that this project is no longer maintaned.
 
 BootMetro provides simple and flexible HTML, CSS, and Javascript for web apps that wants to use the "Windows 8 MetroUI" style, without the need to run on Windows 8.
 It is built on top of Twitter Bootstrap and HTML5 Boilerplate.
@@ -28,7 +28,6 @@ To build the whole project run 'grunt' in the project directory.
 
 ## Versioning
 
-<<<<<<< HEAD
 ### Latest Release: v1.0.0 Alpha1
 This release is based on Twitter Bootstrap 2; the v2.0 will be completely redone from scratch using as base Twitter Bootstrap v3.
 
@@ -58,7 +57,6 @@ This release is based on Twitter Bootstrap 2; the v2.0 will be completely redone
       - new options
       - simplified markup
 
-=======
 ### Latest Release: v1.0.0 alpha 1
 * BREAKING CHANGES:
    * icomoon.css is now bootmetro-icons.css and is recomended to have it before bootmetro.css
